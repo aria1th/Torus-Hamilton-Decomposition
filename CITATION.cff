@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this editorial revision bundle or its supporting-information scripts, please cite the manuscript."
+title: "Editorial revision bundle for Hamilton decompositions of the directed 3-torus D(m): explicit constructions for all m >= 3"
+type: software
+version: editorial-revision
+repository-code: "https://github.com/aria1th/Torus-Hamilton-Decomposition"
+url: "https://github.com/aria1th/Torus-Hamilton-Decomposition"
+license: MIT
+authors:
+  - family-names: Park
+    given-names: Sanghyun
+    affiliation: Yonsei University, Seoul, Republic of Korea
+abstract: >-
+  Editorial revision bundle containing the manuscript "Hamilton
+  decompositions of the directed 3-torus D(m): explicit constructions for all
+  m >= 3" together with supporting-information scripts and data for the Route
+  E even-case verification and the m = 4 finite witness.
+keywords:
+  - graph theory
+  - directed graph
+  - Hamilton decomposition
+  - directed torus
+  - Cayley digraph
+  - supplementary material
+preferred-citation:
+  type: manuscript
+  title: "Hamilton decompositions of the directed 3-torus D(m): explicit constructions for all m >= 3"
+  authors:
+    - family-names: Park
+      given-names: Sanghyun
+      affiliation: Yonsei University, Seoul, Republic of Korea
+  year: 2026
+  notes: "Editorial revision manuscript with supporting information bundle"
