@@ -1,0 +1,434 @@
+[
+  {
+    "m": 3,
+    "seed": 0,
+    "success": true,
+    "restart_of_success": 5,
+    "step_of_success": 2,
+    "runtime_sec": 3.1192901097238064,
+    "swap_attempts": 12002,
+    "swap_accepted": 4345,
+    "starts_considered": 5,
+    "starts_sign_rejected": 0,
+    "best_obj": 0,
+    "best_cycles": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "m": 3,
+    "seed": 1,
+    "success": true,
+    "restart_of_success": 1,
+    "step_of_success": 4,
+    "runtime_sec": 0.0015815645456314087,
+    "swap_attempts": 4,
+    "swap_accepted": 4,
+    "starts_considered": 1,
+    "starts_sign_rejected": 0,
+    "best_obj": 0,
+    "best_cycles": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "m": 3,
+    "seed": 2,
+    "success": true,
+    "restart_of_success": 2,
+    "step_of_success": 11,
+    "runtime_sec": 0.783564729616046,
+    "swap_attempts": 3011,
+    "swap_accepted": 1237,
+    "starts_considered": 2,
+    "starts_sign_rejected": 0,
+    "best_obj": 0,
+    "best_cycles": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "m": 4,
+    "seed": 0,
+    "success": true,
+    "restart_of_success": 3,
+    "step_of_success": 45,
+    "runtime_sec": 0.029793305322527885,
+    "swap_attempts": 45,
+    "swap_accepted": 17,
+    "starts_considered": 3,
+    "starts_sign_rejected": 2,
+    "best_obj": 0,
+    "best_cycles": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "m": 4,
+    "seed": 1,
+    "success": true,
+    "restart_of_success": 1,
+    "step_of_success": 26,
+    "runtime_sec": 0.016691796481609344,
+    "swap_attempts": 26,
+    "swap_accepted": 14,
+    "starts_considered": 1,
+    "starts_sign_rejected": 0,
+    "best_obj": 0,
+    "best_cycles": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "m": 4,
+    "seed": 2,
+    "success": true,
+    "restart_of_success": 2,
+    "step_of_success": 39,
+    "runtime_sec": 0.02546178549528122,
+    "swap_attempts": 39,
+    "swap_accepted": 20,
+    "starts_considered": 2,
+    "starts_sign_rejected": 1,
+    "best_obj": 0,
+    "best_cycles": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "m": 5,
+    "seed": 0,
+    "success": true,
+    "restart_of_success": 2,
+    "step_of_success": 96,
+    "runtime_sec": 3.47645360045135,
+    "swap_attempts": 3096,
+    "swap_accepted": 777,
+    "starts_considered": 2,
+    "starts_sign_rejected": 0,
+    "best_obj": 0,
+    "best_cycles": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "m": 5,
+    "seed": 1,
+    "success": true,
+    "restart_of_success": 1,
+    "step_of_success": 38,
+    "runtime_sec": 0.04503255523741245,
+    "swap_attempts": 38,
+    "swap_accepted": 15,
+    "starts_considered": 1,
+    "starts_sign_rejected": 0,
+    "best_obj": 0,
+    "best_cycles": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "m": 5,
+    "seed": 2,
+    "success": true,
+    "restart_of_success": 3,
+    "step_of_success": 35,
+    "runtime_sec": 6.775068828836083,
+    "swap_attempts": 6035,
+    "swap_accepted": 1578,
+    "starts_considered": 3,
+    "starts_sign_rejected": 0,
+    "best_obj": 0,
+    "best_cycles": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "m": 6,
+    "seed": 0,
+    "success": true,
+    "restart_of_success": 8,
+    "step_of_success": 437,
+    "runtime_sec": 0.8736427165567875,
+    "swap_attempts": 437,
+    "swap_accepted": 162,
+    "starts_considered": 8,
+    "starts_sign_rejected": 7,
+    "best_obj": 0,
+    "best_cycles": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "m": 6,
+    "seed": 1,
+    "success": true,
+    "restart_of_success": 1,
+    "step_of_success": 18,
+    "runtime_sec": 0.039241230115294456,
+    "swap_attempts": 18,
+    "swap_accepted": 11,
+    "starts_considered": 1,
+    "starts_sign_rejected": 0,
+    "best_obj": 0,
+    "best_cycles": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "m": 6,
+    "seed": 2,
+    "success": true,
+    "restart_of_success": 3,
+    "step_of_success": 200,
+    "runtime_sec": 0.3983407597988844,
+    "swap_attempts": 200,
+    "swap_accepted": 90,
+    "starts_considered": 3,
+    "starts_sign_rejected": 2,
+    "best_obj": 0,
+    "best_cycles": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "m": 7,
+    "seed": 0,
+    "success": true,
+    "restart_of_success": 1,
+    "step_of_success": 987,
+    "runtime_sec": 3.0253086406737566,
+    "swap_attempts": 987,
+    "swap_accepted": 354,
+    "starts_considered": 1,
+    "starts_sign_rejected": 0,
+    "best_obj": 0,
+    "best_cycles": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "m": 7,
+    "seed": 1,
+    "success": true,
+    "restart_of_success": 2,
+    "step_of_success": 74,
+    "runtime_sec": 9.45090782828629,
+    "swap_attempts": 3074,
+    "swap_accepted": 733,
+    "starts_considered": 2,
+    "starts_sign_rejected": 0,
+    "best_obj": 0,
+    "best_cycles": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "m": 7,
+    "seed": 2,
+    "success": true,
+    "restart_of_success": 1,
+    "step_of_success": 30,
+    "runtime_sec": 0.09940456040203571,
+    "swap_attempts": 30,
+    "swap_accepted": 14,
+    "starts_considered": 1,
+    "starts_sign_rejected": 0,
+    "best_obj": 0,
+    "best_cycles": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "m": 8,
+    "seed": 0,
+    "success": true,
+    "restart_of_success": 4,
+    "step_of_success": 230,
+    "runtime_sec": 1.099414188414812,
+    "swap_attempts": 230,
+    "swap_accepted": 75,
+    "starts_considered": 4,
+    "starts_sign_rejected": 3,
+    "best_obj": 0,
+    "best_cycles": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "m": 8,
+    "seed": 1,
+    "success": true,
+    "restart_of_success": 1,
+    "step_of_success": 133,
+    "runtime_sec": 0.6272428389638662,
+    "swap_attempts": 133,
+    "swap_accepted": 49,
+    "starts_considered": 1,
+    "starts_sign_rejected": 0,
+    "best_obj": 0,
+    "best_cycles": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "m": 8,
+    "seed": 2,
+    "success": true,
+    "restart_of_success": 1,
+    "step_of_success": 105,
+    "runtime_sec": 0.4961641915142536,
+    "swap_attempts": 105,
+    "swap_accepted": 52,
+    "starts_considered": 1,
+    "starts_sign_rejected": 0,
+    "best_obj": 0,
+    "best_cycles": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "m": 9,
+    "seed": 0,
+    "success": true,
+    "restart_of_success": 1,
+    "step_of_success": 118,
+    "runtime_sec": 0.7898179087787867,
+    "swap_attempts": 118,
+    "swap_accepted": 42,
+    "starts_considered": 1,
+    "starts_sign_rejected": 0,
+    "best_obj": 0,
+    "best_cycles": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "m": 9,
+    "seed": 1,
+    "success": true,
+    "restart_of_success": 3,
+    "step_of_success": 58,
+    "runtime_sec": 39.62552911415696,
+    "swap_attempts": 6058,
+    "swap_accepted": 1428,
+    "starts_considered": 3,
+    "starts_sign_rejected": 0,
+    "best_obj": 0,
+    "best_cycles": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "m": 9,
+    "seed": 2,
+    "success": true,
+    "restart_of_success": 1,
+    "step_of_success": 116,
+    "runtime_sec": 0.7761839870363474,
+    "swap_attempts": 116,
+    "swap_accepted": 37,
+    "starts_considered": 1,
+    "starts_sign_rejected": 0,
+    "best_obj": 0,
+    "best_cycles": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "m": 10,
+    "seed": 0,
+    "success": true,
+    "restart_of_success": 1,
+    "step_of_success": 149,
+    "runtime_sec": 1.352669671177864,
+    "swap_attempts": 149,
+    "swap_accepted": 44,
+    "starts_considered": 1,
+    "starts_sign_rejected": 0,
+    "best_obj": 0,
+    "best_cycles": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "m": 10,
+    "seed": 1,
+    "success": true,
+    "restart_of_success": 11,
+    "step_of_success": 429,
+    "runtime_sec": 111.66760230250657,
+    "swap_attempts": 12429,
+    "swap_accepted": 3703,
+    "starts_considered": 11,
+    "starts_sign_rejected": 6,
+    "best_obj": 0,
+    "best_cycles": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "m": 10,
+    "seed": 2,
+    "success": true,
+    "restart_of_success": 1,
+    "step_of_success": 136,
+    "runtime_sec": 1.2498845495283604,
+    "swap_attempts": 136,
+    "swap_accepted": 48,
+    "starts_considered": 1,
+    "starts_sign_rejected": 0,
+    "best_obj": 0,
+    "best_cycles": [
+      1,
+      1,
+      1
+    ]
+  }
+]

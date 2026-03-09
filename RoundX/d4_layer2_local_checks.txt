@@ -1,0 +1,69 @@
+Local checks performed in this session
+=====================================
+
+1) Extracted the uploaded bundle:
+   /mnt/data/d4_layer2_gauge_classification_01_bundle.tar.gz
+   together with dependencies from:
+   /mnt/data/d4_hyperplane_fusion_01_bundle.tar.gz
+
+2) Reran the full reduced-family classification script for m=3..10:
+
+   cd /mnt/data/extract_gauge
+   python torus_nd_layer2_gauge_analysis.py --m-list 3,4,5,6,7,8,9,10
+
+   Output:
+   tested m values: [3, 4, 5, 6, 7, 8, 9, 10]
+   reduced family survivors: 4 / 256
+   survivor codes: [[0, 1, 2, 3], [1, 0, 3, 2], [2, 3, 0, 1], [3, 2, 1, 0]]
+   current module matches reduced code: True
+   line-union module matches reduced code: True
+   line-union m=3: PASS
+   line-union m=4: PASS
+   line-union m=5: PASS
+   line-union m=6: PASS
+   line-union m=7: PASS
+   line-union m=8: PASS
+   line-union m=9: PASS
+   line-union m=10: PASS
+
+3) Reran the full reduced-family classification script for m=11..15:
+
+   cd /mnt/data/extract_gauge
+   python torus_nd_layer2_gauge_analysis.py --m-list 11,12,13,14,15
+
+   Output:
+   tested m values: [11, 12, 13, 14, 15]
+   reduced family survivors: 4 / 256
+   survivor codes: [[0, 1, 2, 3], [1, 0, 3, 2], [2, 3, 0, 1], [3, 2, 1, 0]]
+   current module matches reduced code: True
+   line-union module matches reduced code: True
+   line-union m=11: PASS
+   line-union m=12: PASS
+   line-union m=13: PASS
+   line-union m=14: PASS
+   line-union m=15: PASS
+
+4) Independently reran only the line-union formula / odometer verification for m=16..20:
+
+   cd /mnt/data/extract_gauge
+   python - <<'PY'
+   from torus_nd_layer2_gauge_analysis import verify_line_union
+   out = verify_line_union([16,17,18,19,20])
+   for item in out['verification']:
+       ok = all(r['R_formula_verified'] and r['T_formula_verified'] and r['odometer_conjugacy_verified'] and r['Q_cycle_count']==1 for r in item['by_color'])
+       print(item['m'], ok, [r['Q_cycle_lengths'] for r in item['by_color']])
+   PY
+
+   Output:
+   16 True [[256], [256], [256], [256]]
+   17 True [[289], [289], [289], [289]]
+   18 True [[324], [324], [324], [324]]
+   19 True [[361], [361], [361], [361]]
+   20 True [[400], [400], [400], [400]]
+
+Interpretation:
+- The 4-survivor claim was locally rerun for m=3..15.
+- The line-union formula / odometer verification was locally rerun for m=3..20
+  (m=3..15 via the main script, m=16..20 via verify_line_union).
+- The bundle's claim of 4 survivors on m=3..20 was not fully rerun here for m=16..20,
+  but its main line-union formula verification was cross-checked on the full claimed range.

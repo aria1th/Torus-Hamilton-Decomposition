@@ -9,6 +9,7 @@ For submission, upload the `anc/` bundle as a LaTeX supplementary file. The comp
 - `route_e_even.py` - main direct verifier for the Route E construction.
 - `routee_return_formula_tables_check.py` - checks the partition sets, low-layer words, and displayed return-map formulas.
 - `routee_first_return_check.py` - checks the appendix first-return maps and return-time formulas.
+- `routee_large_m_certificate.py` - proof-backed O(1) certificate path for very large even `m`.
 - `m4_witness.json` - machine-readable finite witness for the `m=4` decomposition.
 - `verify_m4_witness.py` - checks the `m=4` witness against the direction table and extracted cycles.
 - `run_even_artifact_suite.py` - convenience runner for the full suite.
@@ -36,6 +37,12 @@ python route_e_even.py 60 --mode p0-check
 python route_e_even.py 30 --mode full-check
 ```
 
+### Large-`m` proof-backed certificates
+
+```bash
+python routee_large_m_certificate.py --m-list 1000,1000000,1000000000
+```
+
 ### Boundary case `m=4`
 
 ```bash
@@ -49,4 +56,5 @@ These artifacts are verification aids only. They are not part of the proofs.
 The bundle separates two roles:
 
 - Route E scripts audit the technically delicate even case `m >= 6`.
+- `routee_large_m_certificate.py` is the post-proof large-`m` path: it evaluates the splice normal forms and return-time identities directly, so the cost per tested `m` is constant.
 - The `m=4` files provide a compact machine-readable finite witness, so the paper no longer needs to print three full 64-cycles inline.

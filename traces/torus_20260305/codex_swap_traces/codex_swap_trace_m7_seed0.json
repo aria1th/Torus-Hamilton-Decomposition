@@ -1,0 +1,1314 @@
+{
+  "m": 7,
+  "seed": 0,
+  "max_steps": 200000,
+  "basic_verify": {
+    "ok": true,
+    "msg": "ok"
+  },
+  "final_cycle_counts": [
+    1,
+    1,
+    1
+  ],
+  "final_signs": [
+    1,
+    1,
+    1
+  ],
+  "final_sign_product": 1,
+  "hamilton_success": true,
+  "accepted_swap_count": 15,
+  "accepted_swaps": [
+    {
+      "accepted_index": 1,
+      "attempt_step": 1,
+      "pair": [
+        1,
+        2
+      ],
+      "tau_cycle_len": 7,
+      "tau_cycle_vertices": [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          6
+        ],
+        [
+          0,
+          4,
+          5
+        ],
+        [
+          0,
+          5,
+          4
+        ],
+        [
+          0,
+          6,
+          3
+        ]
+      ],
+      "objective_before": 144,
+      "objective_after": 132,
+      "cycle_counts_before": [
+        49,
+        49,
+        49
+      ],
+      "cycle_counts_after": [
+        49,
+        43,
+        43
+      ]
+    },
+    {
+      "accepted_index": 2,
+      "attempt_step": 2,
+      "pair": [
+        1,
+        2
+      ],
+      "tau_cycle_len": 7,
+      "tau_cycle_vertices": [
+        [
+          3,
+          0,
+          4
+        ],
+        [
+          3,
+          1,
+          3
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          3,
+          4,
+          0
+        ],
+        [
+          3,
+          5,
+          6
+        ],
+        [
+          3,
+          6,
+          5
+        ]
+      ],
+      "objective_before": 132,
+      "objective_after": 120,
+      "cycle_counts_before": [
+        49,
+        43,
+        43
+      ],
+      "cycle_counts_after": [
+        49,
+        37,
+        37
+      ]
+    },
+    {
+      "accepted_index": 3,
+      "attempt_step": 3,
+      "pair": [
+        1,
+        2
+      ],
+      "tau_cycle_len": 7,
+      "tau_cycle_vertices": [
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          3,
+          2,
+          6
+        ],
+        [
+          3,
+          3,
+          5
+        ],
+        [
+          3,
+          4,
+          4
+        ],
+        [
+          3,
+          5,
+          3
+        ],
+        [
+          3,
+          6,
+          2
+        ]
+      ],
+      "objective_before": 120,
+      "objective_after": 120,
+      "cycle_counts_before": [
+        49,
+        37,
+        37
+      ],
+      "cycle_counts_after": [
+        49,
+        37,
+        37
+      ]
+    },
+    {
+      "accepted_index": 4,
+      "attempt_step": 4,
+      "pair": [
+        2,
+        0
+      ],
+      "tau_cycle_len": 7,
+      "tau_cycle_vertices": [
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          6,
+          3,
+          3
+        ],
+        [
+          5,
+          3,
+          4
+        ],
+        [
+          4,
+          3,
+          5
+        ],
+        [
+          3,
+          3,
+          6
+        ],
+        [
+          2,
+          3,
+          0
+        ],
+        [
+          1,
+          3,
+          1
+        ]
+      ],
+      "objective_before": 120,
+      "objective_after": 108,
+      "cycle_counts_before": [
+        49,
+        37,
+        37
+      ],
+      "cycle_counts_after": [
+        43,
+        37,
+        31
+      ]
+    },
+    {
+      "accepted_index": 5,
+      "attempt_step": 5,
+      "pair": [
+        0,
+        1
+      ],
+      "tau_cycle_len": 49,
+      "tau_cycle_vertices": [
+        [
+          0,
+          0,
+          4
+        ],
+        [
+          1,
+          6,
+          4
+        ],
+        [
+          2,
+          5,
+          4
+        ],
+        [
+          3,
+          5,
+          3
+        ],
+        [
+          4,
+          4,
+          3
+        ],
+        [
+          5,
+          3,
+          3
+        ],
+        [
+          6,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          2,
+          6,
+          3
+        ],
+        [
+          3,
+          6,
+          2
+        ],
+        [
+          4,
+          5,
+          2
+        ],
+        [
+          5,
+          4,
+          2
+        ],
+        [
+          6,
+          3,
+          2
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          4,
+          6,
+          1
+        ],
+        [
+          5,
+          5,
+          1
+        ],
+        [
+          6,
+          4,
+          1
+        ],
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          5,
+          6,
+          0
+        ],
+        [
+          6,
+          5,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          1,
+          3,
+          0
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          3,
+          2,
+          6
+        ],
+        [
+          4,
+          1,
+          6
+        ],
+        [
+          5,
+          0,
+          6
+        ],
+        [
+          6,
+          6,
+          6
+        ],
+        [
+          0,
+          5,
+          6
+        ],
+        [
+          1,
+          4,
+          6
+        ],
+        [
+          2,
+          3,
+          6
+        ],
+        [
+          3,
+          3,
+          5
+        ],
+        [
+          4,
+          2,
+          5
+        ],
+        [
+          5,
+          1,
+          5
+        ],
+        [
+          6,
+          0,
+          5
+        ],
+        [
+          0,
+          6,
+          5
+        ],
+        [
+          1,
+          5,
+          5
+        ],
+        [
+          2,
+          4,
+          5
+        ],
+        [
+          3,
+          4,
+          4
+        ],
+        [
+          4,
+          3,
+          4
+        ],
+        [
+          5,
+          2,
+          4
+        ],
+        [
+          6,
+          1,
+          4
+        ]
+      ],
+      "objective_before": 108,
+      "objective_after": 30,
+      "cycle_counts_before": [
+        43,
+        37,
+        31
+      ],
+      "cycle_counts_after": [
+        1,
+        1,
+        31
+      ]
+    },
+    {
+      "accepted_index": 6,
+      "attempt_step": 6,
+      "pair": [
+        0,
+        1
+      ],
+      "tau_cycle_len": 7,
+      "tau_cycle_vertices": [
+        [
+          0,
+          4,
+          4
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          2,
+          2,
+          4
+        ],
+        [
+          3,
+          1,
+          4
+        ],
+        [
+          4,
+          0,
+          4
+        ],
+        [
+          5,
+          6,
+          4
+        ],
+        [
+          6,
+          5,
+          4
+        ]
+      ],
+      "objective_before": 30,
+      "objective_after": 30,
+      "cycle_counts_before": [
+        1,
+        1,
+        31
+      ],
+      "cycle_counts_after": [
+        1,
+        1,
+        31
+      ]
+    },
+    {
+      "accepted_index": 7,
+      "attempt_step": 7,
+      "pair": [
+        2,
+        0
+      ],
+      "tau_cycle_len": 7,
+      "tau_cycle_vertices": [
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          6,
+          1,
+          6
+        ],
+        [
+          5,
+          1,
+          0
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          1,
+          1,
+          4
+        ]
+      ],
+      "objective_before": 30,
+      "objective_after": 28,
+      "cycle_counts_before": [
+        1,
+        1,
+        31
+      ],
+      "cycle_counts_after": [
+        3,
+        1,
+        27
+      ]
+    },
+    {
+      "accepted_index": 8,
+      "attempt_step": 8,
+      "pair": [
+        0,
+        2
+      ],
+      "tau_cycle_len": 7,
+      "tau_cycle_vertices": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          4,
+          1,
+          6
+        ],
+        [
+          4,
+          2,
+          5
+        ],
+        [
+          4,
+          3,
+          4
+        ],
+        [
+          4,
+          4,
+          3
+        ],
+        [
+          4,
+          5,
+          2
+        ],
+        [
+          4,
+          6,
+          1
+        ]
+      ],
+      "objective_before": 28,
+      "objective_after": 20,
+      "cycle_counts_before": [
+        3,
+        1,
+        27
+      ],
+      "cycle_counts_after": [
+        1,
+        1,
+        21
+      ]
+    },
+    {
+      "accepted_index": 9,
+      "attempt_step": 9,
+      "pair": [
+        2,
+        1
+      ],
+      "tau_cycle_len": 7,
+      "tau_cycle_vertices": [
+        [
+          3,
+          0,
+          6
+        ],
+        [
+          3,
+          6,
+          0
+        ],
+        [
+          3,
+          5,
+          1
+        ],
+        [
+          3,
+          4,
+          2
+        ],
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          3,
+          2,
+          4
+        ],
+        [
+          3,
+          1,
+          5
+        ]
+      ],
+      "objective_before": 20,
+      "objective_after": 20,
+      "cycle_counts_before": [
+        1,
+        1,
+        21
+      ],
+      "cycle_counts_after": [
+        1,
+        1,
+        21
+      ]
+    },
+    {
+      "accepted_index": 10,
+      "attempt_step": 10,
+      "pair": [
+        2,
+        0
+      ],
+      "tau_cycle_len": 7,
+      "tau_cycle_vertices": [
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          6,
+          2,
+          4
+        ],
+        [
+          5,
+          2,
+          5
+        ],
+        [
+          4,
+          2,
+          6
+        ],
+        [
+          3,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ],
+      "objective_before": 20,
+      "objective_after": 16,
+      "cycle_counts_before": [
+        1,
+        1,
+        21
+      ],
+      "cycle_counts_after": [
+        1,
+        1,
+        17
+      ]
+    },
+    {
+      "accepted_index": 11,
+      "attempt_step": 11,
+      "pair": [
+        1,
+        2
+      ],
+      "tau_cycle_len": 7,
+      "tau_cycle_vertices": [
+        [
+          5,
+          0,
+          2
+        ],
+        [
+          5,
+          1,
+          1
+        ],
+        [
+          5,
+          2,
+          0
+        ],
+        [
+          5,
+          3,
+          6
+        ],
+        [
+          5,
+          4,
+          5
+        ],
+        [
+          5,
+          5,
+          4
+        ],
+        [
+          5,
+          6,
+          3
+        ]
+      ],
+      "objective_before": 16,
+      "objective_after": 14,
+      "cycle_counts_before": [
+        1,
+        1,
+        17
+      ],
+      "cycle_counts_after": [
+        1,
+        3,
+        13
+      ]
+    },
+    {
+      "accepted_index": 12,
+      "attempt_step": 12,
+      "pair": [
+        2,
+        0
+      ],
+      "tau_cycle_len": 7,
+      "tau_cycle_vertices": [
+        [
+          6,
+          0,
+          5
+        ],
+        [
+          6,
+          6,
+          6
+        ],
+        [
+          6,
+          5,
+          0
+        ],
+        [
+          6,
+          4,
+          1
+        ],
+        [
+          6,
+          3,
+          2
+        ],
+        [
+          6,
+          2,
+          3
+        ],
+        [
+          6,
+          1,
+          4
+        ]
+      ],
+      "objective_before": 14,
+      "objective_after": 14,
+      "cycle_counts_before": [
+        1,
+        3,
+        13
+      ],
+      "cycle_counts_after": [
+        3,
+        3,
+        11
+      ]
+    },
+    {
+      "accepted_index": 13,
+      "attempt_step": 13,
+      "pair": [
+        2,
+        1
+      ],
+      "tau_cycle_len": 7,
+      "tau_cycle_vertices": [
+        [
+          3,
+          0,
+          4
+        ],
+        [
+          3,
+          1,
+          3
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          3,
+          4,
+          0
+        ],
+        [
+          3,
+          5,
+          6
+        ],
+        [
+          3,
+          6,
+          5
+        ]
+      ],
+      "objective_before": 14,
+      "objective_after": 12,
+      "cycle_counts_before": [
+        3,
+        3,
+        11
+      ],
+      "cycle_counts_after": [
+        3,
+        1,
+        11
+      ]
+    },
+    {
+      "accepted_index": 14,
+      "attempt_step": 14,
+      "pair": [
+        2,
+        1
+      ],
+      "tau_cycle_len": 49,
+      "tau_cycle_vertices": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          6,
+          2
+        ],
+        [
+          0,
+          5,
+          3
+        ],
+        [
+          6,
+          5,
+          4
+        ],
+        [
+          6,
+          4,
+          5
+        ],
+        [
+          6,
+          3,
+          6
+        ],
+        [
+          6,
+          2,
+          0
+        ],
+        [
+          6,
+          1,
+          1
+        ],
+        [
+          6,
+          0,
+          2
+        ],
+        [
+          6,
+          6,
+          3
+        ],
+        [
+          5,
+          6,
+          4
+        ],
+        [
+          5,
+          5,
+          5
+        ],
+        [
+          5,
+          4,
+          6
+        ],
+        [
+          5,
+          3,
+          0
+        ],
+        [
+          5,
+          2,
+          1
+        ],
+        [
+          5,
+          1,
+          2
+        ],
+        [
+          5,
+          0,
+          3
+        ],
+        [
+          4,
+          0,
+          4
+        ],
+        [
+          4,
+          6,
+          5
+        ],
+        [
+          4,
+          5,
+          6
+        ],
+        [
+          4,
+          4,
+          0
+        ],
+        [
+          4,
+          3,
+          1
+        ],
+        [
+          4,
+          2,
+          2
+        ],
+        [
+          4,
+          1,
+          3
+        ],
+        [
+          3,
+          1,
+          4
+        ],
+        [
+          3,
+          0,
+          5
+        ],
+        [
+          3,
+          6,
+          6
+        ],
+        [
+          3,
+          5,
+          0
+        ],
+        [
+          3,
+          4,
+          1
+        ],
+        [
+          3,
+          3,
+          2
+        ],
+        [
+          3,
+          2,
+          3
+        ],
+        [
+          2,
+          2,
+          4
+        ],
+        [
+          2,
+          1,
+          5
+        ],
+        [
+          2,
+          0,
+          6
+        ],
+        [
+          2,
+          6,
+          0
+        ],
+        [
+          2,
+          5,
+          1
+        ],
+        [
+          2,
+          4,
+          2
+        ],
+        [
+          2,
+          3,
+          3
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          1,
+          6
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          6,
+          1
+        ],
+        [
+          1,
+          5,
+          2
+        ],
+        [
+          1,
+          4,
+          3
+        ],
+        [
+          0,
+          4,
+          4
+        ],
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          0,
+          2,
+          6
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "objective_before": 12,
+      "objective_after": 4,
+      "cycle_counts_before": [
+        3,
+        1,
+        11
+      ],
+      "cycle_counts_after": [
+        3,
+        1,
+        3
+      ]
+    },
+    {
+      "accepted_index": 15,
+      "attempt_step": 15,
+      "pair": [
+        2,
+        0
+      ],
+      "tau_cycle_len": 7,
+      "tau_cycle_vertices": [
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          6,
+          0,
+          6
+        ],
+        [
+          5,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          1,
+          0,
+          4
+        ]
+      ],
+      "objective_before": 4,
+      "objective_after": 0,
+      "cycle_counts_before": [
+        3,
+        1,
+        3
+      ],
+      "cycle_counts_after": [
+        1,
+        1,
+        1
+      ]
+    }
+  ]
+}

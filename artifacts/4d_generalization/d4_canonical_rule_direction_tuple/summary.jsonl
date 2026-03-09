@@ -1,0 +1,2 @@
+{"m": 3, "classification": "candidate_fail", "parity": "odd", "m_mod_6": 3, "m_mod_12": 3, "rule_valid": true, "all_hamilton": false, "sign_product": 1, "defect_vertex_count": 0, "low_layer_only": true, "json_path": "artifacts/4d_generalization/d4_canonical_rule_direction_tuple/m3.json"}
+{"m": 4, "classification": "candidate_fail", "parity": "even", "m_mod_6": 4, "m_mod_12": 4, "rule_valid": true, "all_hamilton": false, "sign_product": 1, "defect_vertex_count": 0, "low_layer_only": true, "json_path": "artifacts/4d_generalization/d4_canonical_rule_direction_tuple/m4.json"}

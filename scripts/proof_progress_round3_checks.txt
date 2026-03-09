@@ -1,0 +1,5 @@
+Checking primary geometry on m = 10,16,...,100
+  OK: primary color-1 obstruction and primary color-0 Hamiltonicity
+Checking deleted-extra-family witnesses on m = 10,16,...,250
+  OK: explicit noninjectivity witnesses for colors 1 and 0
+All round-3 checks passed.

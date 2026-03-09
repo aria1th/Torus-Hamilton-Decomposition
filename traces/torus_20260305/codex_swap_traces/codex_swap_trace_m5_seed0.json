@@ -1,0 +1,1672 @@
+{
+  "m": 5,
+  "seed": 0,
+  "max_steps": 200000,
+  "basic_verify": {
+    "ok": true,
+    "msg": "ok"
+  },
+  "final_cycle_counts": [
+    1,
+    1,
+    1
+  ],
+  "final_signs": [
+    1,
+    1,
+    1
+  ],
+  "final_sign_product": 1,
+  "hamilton_success": true,
+  "accepted_swap_count": 26,
+  "accepted_swaps": [
+    {
+      "accepted_index": 1,
+      "attempt_step": 1,
+      "pair": [
+        1,
+        2
+      ],
+      "tau_cycle_len": 5,
+      "tau_cycle_vertices": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          3,
+          3
+        ],
+        [
+          0,
+          4,
+          2
+        ]
+      ],
+      "objective_before": 72,
+      "objective_after": 64,
+      "cycle_counts_before": [
+        25,
+        25,
+        25
+      ],
+      "cycle_counts_after": [
+        25,
+        21,
+        21
+      ]
+    },
+    {
+      "accepted_index": 2,
+      "attempt_step": 2,
+      "pair": [
+        1,
+        2
+      ],
+      "tau_cycle_len": 5,
+      "tau_cycle_vertices": [
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          2,
+          4,
+          3
+        ]
+      ],
+      "objective_before": 64,
+      "objective_after": 56,
+      "cycle_counts_before": [
+        25,
+        21,
+        21
+      ],
+      "cycle_counts_after": [
+        25,
+        17,
+        17
+      ]
+    },
+    {
+      "accepted_index": 3,
+      "attempt_step": 3,
+      "pair": [
+        1,
+        2
+      ],
+      "tau_cycle_len": 5,
+      "tau_cycle_vertices": [
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          2,
+          4
+        ],
+        [
+          2,
+          3,
+          3
+        ],
+        [
+          2,
+          4,
+          2
+        ]
+      ],
+      "objective_before": 56,
+      "objective_after": 56,
+      "cycle_counts_before": [
+        25,
+        17,
+        17
+      ],
+      "cycle_counts_after": [
+        25,
+        17,
+        17
+      ]
+    },
+    {
+      "accepted_index": 4,
+      "attempt_step": 4,
+      "pair": [
+        2,
+        0
+      ],
+      "tau_cycle_len": 5,
+      "tau_cycle_vertices": [
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          4,
+          2,
+          4
+        ],
+        [
+          3,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ],
+      "objective_before": 56,
+      "objective_after": 48,
+      "cycle_counts_before": [
+        25,
+        17,
+        17
+      ],
+      "cycle_counts_after": [
+        21,
+        17,
+        13
+      ]
+    },
+    {
+      "accepted_index": 5,
+      "attempt_step": 5,
+      "pair": [
+        0,
+        1
+      ],
+      "tau_cycle_len": 5,
+      "tau_cycle_vertices": [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          1,
+          4,
+          2
+        ],
+        [
+          2,
+          3,
+          2
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          4,
+          1,
+          2
+        ]
+      ],
+      "objective_before": 48,
+      "objective_after": 40,
+      "cycle_counts_before": [
+        21,
+        17,
+        13
+      ],
+      "cycle_counts_after": [
+        17,
+        13,
+        13
+      ]
+    },
+    {
+      "accepted_index": 6,
+      "attempt_step": 6,
+      "pair": [
+        0,
+        1
+      ],
+      "tau_cycle_len": 5,
+      "tau_cycle_vertices": [
+        [
+          0,
+          4,
+          3
+        ],
+        [
+          1,
+          3,
+          3
+        ],
+        [
+          2,
+          2,
+          3
+        ],
+        [
+          3,
+          1,
+          3
+        ],
+        [
+          4,
+          0,
+          3
+        ]
+      ],
+      "objective_before": 40,
+      "objective_after": 34,
+      "cycle_counts_before": [
+        17,
+        13,
+        13
+      ],
+      "cycle_counts_after": [
+        13,
+        11,
+        13
+      ]
+    },
+    {
+      "accepted_index": 7,
+      "attempt_step": 7,
+      "pair": [
+        2,
+        0
+      ],
+      "tau_cycle_len": 25,
+      "tau_cycle_vertices": [
+        [
+          0,
+          0,
+          4
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          4,
+          1,
+          4
+        ],
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          4,
+          2,
+          3
+        ],
+        [
+          3,
+          2,
+          4
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          1,
+          3,
+          0
+        ],
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          4,
+          3,
+          2
+        ],
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          1,
+          4,
+          4
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          4,
+          4,
+          1
+        ],
+        [
+          3,
+          4,
+          2
+        ],
+        [
+          2,
+          4,
+          3
+        ],
+        [
+          1,
+          0,
+          3
+        ]
+      ],
+      "objective_before": 34,
+      "objective_after": 12,
+      "cycle_counts_before": [
+        13,
+        11,
+        13
+      ],
+      "cycle_counts_after": [
+        3,
+        11,
+        1
+      ]
+    },
+    {
+      "accepted_index": 8,
+      "attempt_step": 8,
+      "pair": [
+        0,
+        2
+      ],
+      "tau_cycle_len": 5,
+      "tau_cycle_vertices": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          4,
+          1,
+          0
+        ]
+      ],
+      "objective_before": 12,
+      "objective_after": 10,
+      "cycle_counts_before": [
+        3,
+        11,
+        1
+      ],
+      "cycle_counts_after": [
+        1,
+        11,
+        1
+      ]
+    },
+    {
+      "accepted_index": 9,
+      "attempt_step": 9,
+      "pair": [
+        1,
+        0
+      ],
+      "tau_cycle_len": 5,
+      "tau_cycle_vertices": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "objective_before": 10,
+      "objective_after": 10,
+      "cycle_counts_before": [
+        1,
+        11,
+        1
+      ],
+      "cycle_counts_after": [
+        3,
+        9,
+        1
+      ]
+    },
+    {
+      "accepted_index": 10,
+      "attempt_step": 10,
+      "pair": [
+        1,
+        2
+      ],
+      "tau_cycle_len": 5,
+      "tau_cycle_vertices": [
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          1,
+          4
+        ],
+        [
+          3,
+          2,
+          3
+        ],
+        [
+          3,
+          3,
+          2
+        ],
+        [
+          3,
+          4,
+          1
+        ]
+      ],
+      "objective_before": 10,
+      "objective_after": 6,
+      "cycle_counts_before": [
+        3,
+        9,
+        1
+      ],
+      "cycle_counts_after": [
+        3,
+        5,
+        1
+      ]
+    },
+    {
+      "accepted_index": 11,
+      "attempt_step": 11,
+      "pair": [
+        2,
+        0
+      ],
+      "tau_cycle_len": 5,
+      "tau_cycle_vertices": [
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          4,
+          4,
+          2
+        ],
+        [
+          3,
+          4,
+          3
+        ],
+        [
+          2,
+          4,
+          4
+        ],
+        [
+          1,
+          4,
+          0
+        ]
+      ],
+      "objective_before": 6,
+      "objective_after": 4,
+      "cycle_counts_before": [
+        3,
+        5,
+        1
+      ],
+      "cycle_counts_after": [
+        1,
+        5,
+        1
+      ]
+    },
+    {
+      "accepted_index": 12,
+      "attempt_step": 12,
+      "pair": [
+        1,
+        2
+      ],
+      "tau_cycle_len": 5,
+      "tau_cycle_vertices": [
+        [
+          2,
+          0,
+          4
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          2,
+          4,
+          0
+        ]
+      ],
+      "objective_before": 4,
+      "objective_after": 6,
+      "cycle_counts_before": [
+        1,
+        5,
+        1
+      ],
+      "cycle_counts_after": [
+        1,
+        7,
+        1
+      ]
+    },
+    {
+      "accepted_index": 13,
+      "attempt_step": 14,
+      "pair": [
+        1,
+        0
+      ],
+      "tau_cycle_len": 5,
+      "tau_cycle_vertices": [
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          3,
+          0
+        ],
+        [
+          1,
+          4,
+          4
+        ]
+      ],
+      "objective_before": 6,
+      "objective_after": 4,
+      "cycle_counts_before": [
+        1,
+        7,
+        1
+      ],
+      "cycle_counts_after": [
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "accepted_index": 14,
+      "attempt_step": 16,
+      "pair": [
+        2,
+        0
+      ],
+      "tau_cycle_len": 25,
+      "tau_cycle_vertices": [
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          4,
+          0,
+          4
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          4,
+          2,
+          2
+        ],
+        [
+          3,
+          2,
+          3
+        ],
+        [
+          2,
+          3,
+          3
+        ],
+        [
+          1,
+          4,
+          3
+        ],
+        [
+          0,
+          4,
+          4
+        ],
+        [
+          4,
+          4,
+          0
+        ],
+        [
+          3,
+          4,
+          1
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          4,
+          1,
+          3
+        ],
+        [
+          3,
+          1,
+          4
+        ],
+        [
+          2,
+          2,
+          4
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          4,
+          3,
+          1
+        ],
+        [
+          3,
+          3,
+          2
+        ],
+        [
+          2,
+          4,
+          2
+        ],
+        [
+          1,
+          0,
+          2
+        ]
+      ],
+      "objective_before": 4,
+      "objective_after": 2,
+      "cycle_counts_before": [
+        3,
+        3,
+        1
+      ],
+      "cycle_counts_after": [
+        1,
+        3,
+        1
+      ]
+    },
+    {
+      "accepted_index": 15,
+      "attempt_step": 18,
+      "pair": [
+        0,
+        1
+      ],
+      "tau_cycle_len": 5,
+      "tau_cycle_vertices": [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          4,
+          1,
+          2
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          2,
+          3,
+          2
+        ],
+        [
+          1,
+          4,
+          2
+        ]
+      ],
+      "objective_before": 2,
+      "objective_after": 4,
+      "cycle_counts_before": [
+        1,
+        3,
+        1
+      ],
+      "cycle_counts_after": [
+        1,
+        5,
+        1
+      ]
+    },
+    {
+      "accepted_index": 16,
+      "attempt_step": 19,
+      "pair": [
+        1,
+        2
+      ],
+      "tau_cycle_len": 5,
+      "tau_cycle_vertices": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          0,
+          3,
+          3
+        ],
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "objective_before": 4,
+      "objective_after": 6,
+      "cycle_counts_before": [
+        1,
+        5,
+        1
+      ],
+      "cycle_counts_after": [
+        1,
+        7,
+        1
+      ]
+    },
+    {
+      "accepted_index": 17,
+      "attempt_step": 22,
+      "pair": [
+        1,
+        0
+      ],
+      "tau_cycle_len": 5,
+      "tau_cycle_vertices": [
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          4,
+          3
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ]
+      ],
+      "objective_before": 6,
+      "objective_after": 8,
+      "cycle_counts_before": [
+        1,
+        7,
+        1
+      ],
+      "cycle_counts_after": [
+        3,
+        7,
+        1
+      ]
+    },
+    {
+      "accepted_index": 18,
+      "attempt_step": 23,
+      "pair": [
+        0,
+        1
+      ],
+      "tau_cycle_len": 5,
+      "tau_cycle_vertices": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "objective_before": 8,
+      "objective_after": 8,
+      "cycle_counts_before": [
+        3,
+        7,
+        1
+      ],
+      "cycle_counts_after": [
+        1,
+        9,
+        1
+      ]
+    },
+    {
+      "accepted_index": 19,
+      "attempt_step": 25,
+      "pair": [
+        2,
+        1
+      ],
+      "tau_cycle_len": 5,
+      "tau_cycle_vertices": [
+        [
+          3,
+          0,
+          3
+        ],
+        [
+          3,
+          4,
+          4
+        ],
+        [
+          3,
+          3,
+          0
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          1,
+          2
+        ]
+      ],
+      "objective_before": 8,
+      "objective_after": 8,
+      "cycle_counts_before": [
+        1,
+        9,
+        1
+      ],
+      "cycle_counts_after": [
+        1,
+        9,
+        1
+      ]
+    },
+    {
+      "accepted_index": 20,
+      "attempt_step": 26,
+      "pair": [
+        0,
+        2
+      ],
+      "tau_cycle_len": 25,
+      "tau_cycle_vertices": [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          4
+        ],
+        [
+          4,
+          0,
+          3
+        ],
+        [
+          4,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          4
+        ],
+        [
+          3,
+          1,
+          3
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          2,
+          2,
+          3
+        ],
+        [
+          2,
+          3,
+          2
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          4,
+          3,
+          0
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          1,
+          3,
+          3
+        ],
+        [
+          1,
+          4,
+          2
+        ],
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          3,
+          4,
+          0
+        ],
+        [
+          4,
+          4,
+          4
+        ],
+        [
+          0,
+          4,
+          3
+        ]
+      ],
+      "objective_before": 8,
+      "objective_after": 8,
+      "cycle_counts_before": [
+        1,
+        9,
+        1
+      ],
+      "cycle_counts_after": [
+        1,
+        9,
+        1
+      ]
+    },
+    {
+      "accepted_index": 21,
+      "attempt_step": 28,
+      "pair": [
+        2,
+        1
+      ],
+      "tau_cycle_len": 5,
+      "tau_cycle_vertices": [
+        [
+          3,
+          0,
+          3
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          3,
+          0
+        ],
+        [
+          3,
+          4,
+          4
+        ]
+      ],
+      "objective_before": 8,
+      "objective_after": 8,
+      "cycle_counts_before": [
+        1,
+        9,
+        1
+      ],
+      "cycle_counts_after": [
+        1,
+        9,
+        1
+      ]
+    },
+    {
+      "accepted_index": 22,
+      "attempt_step": 31,
+      "pair": [
+        1,
+        2
+      ],
+      "tau_cycle_len": 5,
+      "tau_cycle_vertices": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          3,
+          3
+        ],
+        [
+          0,
+          4,
+          2
+        ]
+      ],
+      "objective_before": 8,
+      "objective_after": 6,
+      "cycle_counts_before": [
+        1,
+        9,
+        1
+      ],
+      "cycle_counts_after": [
+        1,
+        5,
+        3
+      ]
+    },
+    {
+      "accepted_index": 23,
+      "attempt_step": 32,
+      "pair": [
+        1,
+        0
+      ],
+      "tau_cycle_len": 5,
+      "tau_cycle_vertices": [
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          4,
+          2
+        ],
+        [
+          2,
+          3,
+          3
+        ],
+        [
+          2,
+          2,
+          4
+        ],
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "objective_before": 6,
+      "objective_after": 6,
+      "cycle_counts_before": [
+        1,
+        5,
+        3
+      ],
+      "cycle_counts_after": [
+        1,
+        5,
+        3
+      ]
+    },
+    {
+      "accepted_index": 24,
+      "attempt_step": 33,
+      "pair": [
+        2,
+        1
+      ],
+      "tau_cycle_len": 25,
+      "tau_cycle_vertices": [
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          1,
+          4,
+          3
+        ],
+        [
+          2,
+          3,
+          3
+        ],
+        [
+          3,
+          3,
+          2
+        ],
+        [
+          4,
+          2,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          2,
+          4,
+          2
+        ],
+        [
+          3,
+          4,
+          1
+        ],
+        [
+          4,
+          3,
+          1
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          4,
+          4,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          3,
+          1,
+          4
+        ],
+        [
+          4,
+          0,
+          4
+        ],
+        [
+          0,
+          4,
+          4
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          2,
+          2,
+          4
+        ],
+        [
+          3,
+          2,
+          3
+        ],
+        [
+          4,
+          1,
+          3
+        ]
+      ],
+      "objective_before": 6,
+      "objective_after": 2,
+      "cycle_counts_before": [
+        1,
+        5,
+        3
+      ],
+      "cycle_counts_after": [
+        1,
+        3,
+        1
+      ]
+    },
+    {
+      "accepted_index": 25,
+      "attempt_step": 34,
+      "pair": [
+        0,
+        2
+      ],
+      "tau_cycle_len": 5,
+      "tau_cycle_vertices": [
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          1,
+          4
+        ],
+        [
+          3,
+          2,
+          3
+        ],
+        [
+          3,
+          3,
+          2
+        ],
+        [
+          3,
+          4,
+          1
+        ]
+      ],
+      "objective_before": 2,
+      "objective_after": 2,
+      "cycle_counts_before": [
+        1,
+        3,
+        1
+      ],
+      "cycle_counts_after": [
+        1,
+        3,
+        1
+      ]
+    },
+    {
+      "accepted_index": 26,
+      "attempt_step": 35,
+      "pair": [
+        1,
+        0
+      ],
+      "tau_cycle_len": 5,
+      "tau_cycle_vertices": [
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          3,
+          2,
+          4
+        ],
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          3,
+          4,
+          2
+        ]
+      ],
+      "objective_before": 2,
+      "objective_after": 0,
+      "cycle_counts_before": [
+        1,
+        3,
+        1
+      ],
+      "cycle_counts_after": [
+        1,
+        1,
+        1
+      ]
+    }
+  ]
+}

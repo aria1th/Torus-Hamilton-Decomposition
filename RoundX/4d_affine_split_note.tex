@@ -1,0 +1,311 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb,mathtools}
+\usepackage{enumitem}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}[lemma]{Proposition}
+\newtheorem{theorem}[lemma]{Theorem}
+\newtheorem{corollary}[lemma]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[lemma]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[lemma]{Remark}
+
+\newcommand{\Zm}{\mathbb Z_m}
+\newcommand{\I}{\mathbf 1}
+
+\title{A Supplementary Note on a 4D Affine-Split Return Map}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Motivated by computational scouting for a four-dimensional analogue of the directed-torus Hamilton-decomposition problem, we analyze a simple low-layer affine-split direction assignment on
+\[
+D_4(m)=\operatorname{Cay}\bigl((\Zm)^4,\{e_0,e_1,e_2,e_3\}\bigr).
+\]
+For every $m\ge 3$, we compute the induced return maps on the section $P_0=\{x_0+x_1+x_2+x_3=0\}$ explicitly and prove that each color map decomposes into exactly $m$ directed cycles of length $m^3$. Thus the construction is not Hamiltonian, but its failure mode is rigid and explicit: each color preserves a codimension-one affine label on $P_0$. This gives a theorem-sized explanation of the experimentally observed $m$-cycle law and isolates the next design target for any future splice construction.
+\end{abstract}
+
+\section{Setup}
+Fix an integer $m\ge 3$, let
+\[
+V=(\Zm)^4,
+\]
+and define the layer function
+\[
+S(x):=x_0+x_1+x_2+x_3 \pmod m.
+\]
+For $t\in \Zm$, write
+\[
+P_t:=\{x\in V:S(x)=t\}.
+\]
+Every legal arc of $D_4(m)$ increases $S$ by $1$, so $P_0$ is a natural return section.
+
+We first record the general return-map principle in dimension $4$.
+
+\begin{lemma}[Return maps on the layer section]\label{lem:return-general}
+Let $f:V\to V$ be a map such that $S(f(x))=S(x)+1$ for every $x\in V$. Set
+\[
+R:=f^m\!\mid_{P_0}:P_0\to P_0.
+\]
+Then the following hold.
+\begin{enumerate}[label=\textup{(\roman*)}]
+    \item If $R$ is bijective, then $f$ is bijective.
+    \item The directed cycles of $f$ are in bijection with the directed cycles of $R$, and the length of a cycle of $f$ is $m$ times the length of the corresponding cycle of $R$.
+\end{enumerate}
+In particular, if every orbit of $R$ has length $L$, then every orbit of $f$ has length $mL$.
+\end{lemma}
+
+\begin{proof}
+Write $g_t:=f\mid_{P_t}:P_t\to P_{t+1}$. Then
+\[
+R=g_{m-1}\circ\cdots\circ g_0.
+\]
+All layers have the same finite size $|P_t|=m^3$. If $R$ is bijective, then it is injective. Hence $g_0$ must be injective, and therefore bijective. Cancelling $g_0$ from the composition shows that $g_{m-1}\circ\cdots\circ g_1$ is again bijective; repeating the argument inductively shows that every $g_t$ is bijective. Therefore $f$ is bijective.
+
+For the cycle statement, observe that each iterate of $f$ increases $S$ by $1$, so every $f$-orbit meets $P_0$ exactly once every $m$ steps. The induced motion on $P_0$ is precisely $R$. Therefore the return points of an $f$-orbit form an $R$-orbit, and conversely every $R$-orbit lifts uniquely to an $f$-orbit by inserting the $m-1$ intermediate layer steps between successive return points. Thus cycles correspond bijectively, with lengths multiplied by $m$.
+\end{proof}
+
+\section{The affine-split direction assignment}
+
+\begin{definition}[4D affine-split rule]\label{def:affine-split}
+Define a direction quadruple
+\[
+\delta(x)=(d_0(x),d_1(x),d_2(x),d_3(x))\in\{0,1,2,3\}^4
+\]
+by
+\[
+\delta(x)=
+\begin{cases}
+(0,1,2,3), & S(x)\neq 0,\\[1mm]
+(3,2,1,0), & S(x)=0 \text{ and } x_0+x_2=0,\\[1mm]
+(1,0,3,2), & S(x)=0 \text{ and } x_0+x_2\neq 0.
+\end{cases}
+\]
+For each color $c\in\{0,1,2,3\}$, define
+\[
+f_c(x):=x+e_{d_c(x)}.
+\]
+At every vertex, the quadruple $\delta(x)$ is a permutation of $(0,1,2,3)$, so the four color maps choose the four outgoing directions exactly once each.
+\end{definition}
+
+We parameterize the return section $P_0$ by
+\[
+\phi(a,b,q):=(a,b,q-a,-q-b), \qquad (a,b,q)\in(\Zm)^3.
+\]
+Then $\phi$ is a bijection onto $P_0$, and in these coordinates
+\[
+q=x_0+x_2.
+\]
+Hence the special affine slice in Definition~\ref{def:affine-split} is exactly $\{q=0\}$.
+
+For each color $c$, define the $m$-step return map
+\[
+R_c:=f_c^m\!\mid_{P_0}:P_0\to P_0.
+\]
+
+\section{Explicit return-map formulas}
+
+\begin{lemma}[Explicit formulas for the return maps]\label{lem:return-formulas}
+In the coordinates $(a,b,q)$ on $P_0$, the return maps $R_c$ are given by
+\[
+R_0(a,b,q)=
+\begin{cases}
+(a-1,b,q-1), & q=0,\\
+(a-1,b+1,q-1), & q\neq 0,
+\end{cases}
+\]
+\[
+R_1(a,b,q)=
+\begin{cases}
+(a,b-1,q+1), & q=0,\\
+(a+1,b-1,q+1), & q\neq 0,
+\end{cases}
+\]
+\[
+R_2(a,b,q)=
+\begin{cases}
+(a,b+1,q-1), & q=0,\\
+(a,b,q-1), & q\neq 0,
+\end{cases}
+\]
+\[
+R_3(a,b,q)=
+\begin{cases}
+(a+1,b,q+1), & q=0,\\
+(a,b,q+1), & q\neq 0.
+\end{cases}
+\]
+All arithmetic is modulo $m$.
+\end{lemma}
+
+\begin{proof}
+Fix $x\in P_0$. On the first step, color $c$ uses the layer-$0$ direction $d_c(x)$. After that first step the orbit lies in layer $1$, and all layers $1,2,\dots,m-1$ are canonical. Therefore, until the orbit returns to $P_0$, color $c$ follows direction $c$ for exactly $m-1$ further steps. Hence
+\[
+R_c(x)=x+e_{d_c(x)}+(m-1)e_c=x+e_{d_c(x)}-e_c.
+\]
+
+Now write $x=\phi(a,b,q)=(a,b,q-a,-q-b)$. By definition of $q$, the layer-$0$ rule is:
+\begin{itemize}
+    \item use $(3,2,1,0)$ when $q=0$;
+    \item use $(1,0,3,2)$ when $q\neq 0$.
+\end{itemize}
+Substituting these two direction quadruples into the formula $R_c(x)=x+e_{d_c(x)}-e_c$ gives
+\[
+R_0(x)=
+\begin{cases}
+x+e_3-e_0, & q=0,\\
+x+e_1-e_0, & q\neq 0,
+\end{cases}
+\qquad
+R_1(x)=
+\begin{cases}
+x+e_2-e_1, & q=0,\\
+x+e_0-e_1, & q\neq 0,
+\end{cases}
+\]
+\[
+R_2(x)=
+\begin{cases}
+x+e_1-e_2, & q=0,\\
+x+e_3-e_2, & q\neq 0,
+\end{cases}
+\qquad
+R_3(x)=
+\begin{cases}
+x+e_0-e_3, & q=0,\\
+x+e_2-e_3, & q\neq 0.
+\end{cases}
+\]
+Rewriting these displacements in $(a,b,q)$-coordinates yields the displayed formulas.
+\end{proof}
+
+The next proposition records the monodromy after one full turn of the $q$-coordinate.
+
+\begin{proposition}[One full $q$-turn]\label{prop:monodromy}
+For every $(a,b,q)\in P_0$,
+\[
+R_0^m(a,b,q)=(a,b-1,q),
+\qquad
+R_1^m(a,b,q)=(a-1,b,q),
+\]
+\[
+R_2^m(a,b,q)=(a,b+1,q),
+\qquad
+R_3^m(a,b,q)=(a+1,b,q).
+\]
+In particular, $R_c^{m^2}=\mathrm{id}_{P_0}$ for every color $c$.
+\end{proposition}
+
+\begin{proof}
+By Lemma~\ref{lem:return-formulas}, each $R_c$ changes $q$ by $\pm 1$ at every step. Hence along any $R_c$-orbit the coordinate $q$ runs through all residues of $\Zm$ exactly once before returning to its starting value.
+
+For $R_0$, the coordinate $a$ decreases by $1$ at every step, while $b$ increases by $1$ exactly when $q\neq 0$. During one full $q$-turn, the value $q=0$ occurs exactly once, so the total change of $b$ is $m-1\equiv -1$. The total change of $a$ is $-m\equiv 0$. Therefore
+\[
+R_0^m(a,b,q)=(a,b-1,q).
+\]
+
+For $R_1$, the coordinate $b$ decreases by $1$ at every step, while $a$ increases by $1$ exactly when $q\neq 0$. Over one full $q$-turn, the total changes are $-m\equiv 0$ in $b$ and $m-1\equiv -1$ in $a$, so
+\[
+R_1^m(a,b,q)=(a-1,b,q).
+\]
+
+For $R_2$, the coordinate $a$ is constant, and $b$ increases by $1$ exactly once per full $q$-turn, namely when $q=0$. Hence
+\[
+R_2^m(a,b,q)=(a,b+1,q).
+\]
+
+For $R_3$, the coordinate $b$ is constant, and $a$ increases by $1$ exactly once per full $q$-turn, namely when $q=0$. Hence
+\[
+R_3^m(a,b,q)=(a+1,b,q).
+\]
+
+Each of the four displayed maps is translation by $\pm 1$ in a single coordinate, so its $m$th power is the identity. Therefore $R_c^{m^2}=\mathrm{id}_{P_0}$ for every $c$.
+\end{proof}
+
+\section{The exact $m$-cycle law}
+
+\begin{theorem}[Exact $m$-cycle law for the affine-split rule]\label{thm:m-cycle-law}
+For every integer $m\ge 3$ and every color $c\in\{0,1,2,3\}$, the return map $R_c$ has exactly $m$ cycles on $P_0$, each of length $m^2$. Consequently the color map $f_c$ has exactly $m$ cycles on $V$, each of length $m^3$.
+\end{theorem}
+
+\begin{proof}
+Fix a color $c$.
+
+First, every orbit of $R_c$ has length divisible by $m$, because Lemma~\ref{lem:return-formulas} shows that $q$ changes by $\pm 1$ at every step, so $q$ must make a full turn before the orbit can close.
+
+Now let $t$ be the period of a point under $R_c$, and write $t=ms$. By Proposition~\ref{prop:monodromy},
+\[
+R_0^{ms}(a,b,q)=(a,b-s,q),
+\qquad
+R_1^{ms}(a,b,q)=(a-s,b,q),
+\]
+\[
+R_2^{ms}(a,b,q)=(a,b+s,q),
+\qquad
+R_3^{ms}(a,b,q)=(a+s,b,q).
+\]
+For any of these maps to fix $(a,b,q)$, one must have $s\equiv 0\pmod m$. Hence every orbit length is divisible by $m^2$.
+
+On the other hand, Proposition~\ref{prop:monodromy} also gives $R_c^{m^2}=\mathrm{id}_{P_0}$, so every orbit length divides $m^2$. Therefore every orbit of $R_c$ has \emph{exactly} length $m^2$.
+
+Since $|P_0|=m^3$, the number of $R_c$-cycles is
+\[
+\frac{|P_0|}{m^2}=\frac{m^3}{m^2}=m.
+\]
+In particular, $R_c$ is bijective. Lemma~\ref{lem:return-general} therefore implies that $f_c$ is bijective on $V$, and that the cycles of $f_c$ correspond to the cycles of $R_c$ with lengths multiplied by $m$. Hence $f_c$ has exactly $m$ cycles on $V$, each of length $m^3$.
+\end{proof}
+
+The theorem already proves that the affine-split candidate is not Hamiltonian. It is also useful to record the affine labels responsible for this rigid failure mode.
+
+\begin{proposition}[Preserved affine labels]\label{prop:labels}
+On $P_0$, the return maps preserve the following affine labels:
+\[
+\lambda_0:=a-q=-x_2,
+\qquad
+\lambda_1:=b+q=-x_3,
+\qquad
+\lambda_2:=a=x_0,
+\qquad
+\lambda_3:=b=x_1.
+\]
+For each color $c$ and each $r\in\Zm$, the slice
+\[
+L_{c,r}:=\{x\in P_0:\lambda_c(x)=r\}
+\]
+is $R_c$-invariant, has size $m^2$, and is a single $R_c$-cycle.
+\end{proposition}
+
+\begin{proof}
+The formulas of Lemma~\ref{lem:return-formulas} show immediately that each $\lambda_c$ is preserved by the corresponding map $R_c$. Hence every $L_{c,r}$ is $R_c$-invariant.
+
+Each condition $\lambda_c=r$ cuts out one affine relation in the $3$-dimensional section $P_0$, so $|L_{c,r}|=m^2$. By Theorem~\ref{thm:m-cycle-law}, every $R_c$-orbit has length $m^2$. Therefore each nonempty invariant slice $L_{c,r}$ must consist of exactly one orbit. Since there are $m$ possible values of $r$, these are precisely the $m$ cycles of $R_c$.
+\end{proof}
+
+\section{Interpretation and the next splice target}
+
+\begin{remark}[Why the affine-split rule stops at $m$ cycles]
+The point of Theorem~\ref{thm:m-cycle-law} is not merely that the affine-split rule fails to produce a Hamilton cycle. The more informative statement is that its failure is completely rigid. For each color, the return map preserves one codimension-one affine label, so the section $P_0$ splits into $m$ invariant cylinders, and the dynamics on each cylinder is just a full $q$-turn followed by primitive translation by $\pm 1$ in one remaining coordinate.
+
+Thus the observed $m$-cycle law is a theorem, not a numerical coincidence.
+\end{remark}
+
+\begin{remark}[What a successful local repair must do]\label{rem:splice-target}
+The preserved labels make the next design target very concrete.
+\begin{itemize}
+    \item For color $0$, the invariant is $\lambda_0=-x_2$. On the layer $P_0$, color $0$ uses direction $e_3$ when $q=0$ and direction $e_1$ when $q\neq 0$, so the coordinate $x_2$ is never changed at the moment the orbit is re-injected into the bulk. Any successful repair for color $0$ must therefore introduce an exceptional use of direction $e_2$ on a sparse subset of $P_0$.
+    \item Cyclically, color $1$ must acquire an exceptional use of $e_3$, color $2$ an exceptional use of $e_0$, and color $3$ an exceptional use of $e_1$.
+\end{itemize}
+A natural next attempt is therefore a transversely localized splice: keep the bulk canonical, keep most of the affine-split rule on $P_0$, but insert a very small exceptional set---ideally concentrated near $q=0$ and a bounded set of boundary values in the remaining coordinates---that changes the frozen coordinate and breaks the invariant cylinder structure.
+\end{remark}
+
+\begin{remark}[Positioning]
+This note should be read as a supplementary theorem about a specific four-dimensional candidate, not as a completed higher-dimensional generalization. The present proof still lives inside a one-affine-form cylinder model on $P_0$. A genuine higher-dimensional Hamilton-decomposition theorem is expected to require new ideas: affine hyperplane arrangements instead of interval-like defect order, multi-variable congruence constraints instead of scalar residue bookkeeping, and splice mechanisms that can interact with several homology directions at once.
+\end{remark}
+
+\end{document}

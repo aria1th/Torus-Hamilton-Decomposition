@@ -1,0 +1,9 @@
+m,classification,parity,m_mod_6,m_mod_12,rule_valid,all_hamilton,sign_product,defect_vertex_count,low_layer_only,json_path
+3,candidate_fail,odd,3,3,True,False,1,27,True,artifacts/4d_generalization/d4_layer0_x0plusx2_affine_split_direction_tuple/m3.json
+4,candidate_fail,even,4,4,True,False,1,64,True,artifacts/4d_generalization/d4_layer0_x0plusx2_affine_split_direction_tuple/m4.json
+5,candidate_fail,odd,5,5,True,False,1,125,True,artifacts/4d_generalization/d4_layer0_x0plusx2_affine_split_direction_tuple/m5.json
+6,candidate_fail,even,0,6,True,False,1,216,True,artifacts/4d_generalization/d4_layer0_x0plusx2_affine_split_direction_tuple/m6.json
+7,candidate_fail,odd,1,7,True,False,1,343,True,artifacts/4d_generalization/d4_layer0_x0plusx2_affine_split_direction_tuple/m7.json
+8,candidate_fail,even,2,8,True,False,1,512,True,artifacts/4d_generalization/d4_layer0_x0plusx2_affine_split_direction_tuple/m8.json
+10,candidate_fail,even,4,10,True,False,1,1000,True,artifacts/4d_generalization/d4_layer0_x0plusx2_affine_split_direction_tuple/m10.json
+12,candidate_fail,even,0,0,True,False,1,1728,True,artifacts/4d_generalization/d4_layer0_x0plusx2_affine_split_direction_tuple/m12.json

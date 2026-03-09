@@ -1,0 +1,302 @@
+{
+  "family": "d4_hyperplane_fusion_low_layer_table_v1",
+  "dim": 4,
+  "m_values": [
+    3,
+    4,
+    5,
+    6
+  ],
+  "noncanonical_row_count": 17,
+  "rows": [
+    {
+      "row_id": 0,
+      "pattern": {
+        "layer": 0,
+        "x0_eq_0": 0,
+        "x1_eq_0": 0,
+        "x2_eq_0": 0,
+        "x3_eq_0": 0,
+        "q_eq_0": 0
+      },
+      "direction_tuple": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "row_id": 1,
+      "pattern": {
+        "layer": 0,
+        "x0_eq_0": 0,
+        "x1_eq_0": 0,
+        "x2_eq_0": 0,
+        "x3_eq_0": 0,
+        "q_eq_0": 1
+      },
+      "direction_tuple": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "row_id": 2,
+      "pattern": {
+        "layer": 0,
+        "x0_eq_0": 0,
+        "x1_eq_0": 0,
+        "x2_eq_0": 0,
+        "x3_eq_0": 1,
+        "q_eq_0": 0
+      },
+      "direction_tuple": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "row_id": 3,
+      "pattern": {
+        "layer": 0,
+        "x0_eq_0": 0,
+        "x1_eq_0": 0,
+        "x2_eq_0": 1,
+        "x3_eq_0": 0,
+        "q_eq_0": 0
+      },
+      "direction_tuple": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "row_id": 4,
+      "pattern": {
+        "layer": 0,
+        "x0_eq_0": 0,
+        "x1_eq_0": 0,
+        "x2_eq_0": 1,
+        "x3_eq_0": 1,
+        "q_eq_0": 0
+      },
+      "direction_tuple": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "row_id": 5,
+      "pattern": {
+        "layer": 0,
+        "x0_eq_0": 0,
+        "x1_eq_0": 1,
+        "x2_eq_0": 0,
+        "x3_eq_0": 0,
+        "q_eq_0": 0
+      },
+      "direction_tuple": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "row_id": 6,
+      "pattern": {
+        "layer": 0,
+        "x0_eq_0": 0,
+        "x1_eq_0": 1,
+        "x2_eq_0": 0,
+        "x3_eq_0": 1,
+        "q_eq_0": 1
+      },
+      "direction_tuple": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "row_id": 7,
+      "pattern": {
+        "layer": 0,
+        "x0_eq_0": 0,
+        "x1_eq_0": 1,
+        "x2_eq_0": 1,
+        "x3_eq_0": 0,
+        "q_eq_0": 0
+      },
+      "direction_tuple": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "row_id": 8,
+      "pattern": {
+        "layer": 0,
+        "x0_eq_0": 1,
+        "x1_eq_0": 0,
+        "x2_eq_0": 0,
+        "x3_eq_0": 0,
+        "q_eq_0": 0
+      },
+      "direction_tuple": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "row_id": 9,
+      "pattern": {
+        "layer": 0,
+        "x0_eq_0": 1,
+        "x1_eq_0": 0,
+        "x2_eq_0": 0,
+        "x3_eq_0": 1,
+        "q_eq_0": 0
+      },
+      "direction_tuple": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "row_id": 10,
+      "pattern": {
+        "layer": 0,
+        "x0_eq_0": 1,
+        "x1_eq_0": 0,
+        "x2_eq_0": 1,
+        "x3_eq_0": 0,
+        "q_eq_0": 1
+      },
+      "direction_tuple": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "row_id": 11,
+      "pattern": {
+        "layer": 0,
+        "x0_eq_0": 1,
+        "x1_eq_0": 1,
+        "x2_eq_0": 0,
+        "x3_eq_0": 0,
+        "q_eq_0": 0
+      },
+      "direction_tuple": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "row_id": 12,
+      "pattern": {
+        "layer": 0,
+        "x0_eq_0": 1,
+        "x1_eq_0": 1,
+        "x2_eq_0": 1,
+        "x3_eq_0": 1,
+        "q_eq_0": 1
+      },
+      "direction_tuple": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "row_id": 32,
+      "pattern": {
+        "layer": 2,
+        "x0_eq_0": 0,
+        "x1_eq_0": 0,
+        "x2_eq_0": 0,
+        "x3_eq_0": 0,
+        "q_eq_0": 1
+      },
+      "direction_tuple": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "row_id": 34,
+      "pattern": {
+        "layer": 2,
+        "x0_eq_0": 0,
+        "x1_eq_0": 0,
+        "x2_eq_0": 0,
+        "x3_eq_0": 1,
+        "q_eq_0": 1
+      },
+      "direction_tuple": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "row_id": 38,
+      "pattern": {
+        "layer": 2,
+        "x0_eq_0": 0,
+        "x1_eq_0": 1,
+        "x2_eq_0": 0,
+        "x3_eq_0": 0,
+        "q_eq_0": 1
+      },
+      "direction_tuple": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "row_id": 45,
+      "pattern": {
+        "layer": 2,
+        "x0_eq_0": 1,
+        "x1_eq_0": 0,
+        "x2_eq_0": 1,
+        "x3_eq_0": 1,
+        "q_eq_0": 1
+      },
+      "direction_tuple": [
+        2,
+        1,
+        0,
+        3
+      ]
+    }
+  ]
+}

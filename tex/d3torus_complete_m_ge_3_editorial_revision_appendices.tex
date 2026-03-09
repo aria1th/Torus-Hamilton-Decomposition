@@ -1,0 +1,1485 @@
+\section{Route~E return maps}\label{app:routeE}
+
+Definition~\ref{def:routeE} appears in Section~\ref{sec:even}.
+This appendix records the closed-form return maps on $P_0$ derived from that definition in Appendix~\ref{app:routeE-derivation} and analyzed in Appendix~\ref{app:routeE-cycle}.
+
+\paragraph{Return maps on $P_0$.}
+Parameterize $P_0=\{S=0\}$ by
+\[
+v(i,k):=(i,-i-k,k),\qquad (i,k)\in\mathbb Z_m^2.
+\]
+For the explicit Route~E direction assignment, define $R_c=f_c^m|_{P_0}$.
+(We write $R_c$ rather than $F_c$ to distinguish the associated $m$-step maps of Route~E from the return maps $F_c$ of the Kempe-swap coloring analyzed in Section~\ref{sec:affine}.)
+The following piecewise formulas are derived directly from Definition~\ref{def:routeE} in Appendix~\ref{app:routeE-derivation}.
+
+\medskip
+\noindent\textbf{Case I: $m\equiv 0,2\pmod 6$.}
+\[
+R_0(i,k)=
+\begin{cases}
+(i-2,\ k) & (i,k)=(0,0),\\
+(i-3,\ k+3) & (i,k)=(1,m-1),\\
+(i-2,\ k+2) & (i,k)=(m-2,0),\\
+(i-1,\ k) & (i,k)=(m-1,1),\\
+(i-3,\ k+2) & i+k\equiv 1\ \text{and}\ (i,k)\neq (1,0),\\
+(i-1,\ k+1) & ((k=0\ \text{and}\ 1\le i\le m-3)\ \text{or}\ (i,k)\in\{(0,m-1),(m-2,1)\}),\\
+(i-2,\ k+1) & \text{otherwise.}
+\end{cases}
+\]
+\[
+R_1(i,k)=
+\begin{cases}
+(i+2,\ k) & \begin{aligned}[t]
+            &\bigl( (i+k\equiv m-1\ \text{and}\ 1\le i\le m-3)\\
+            &\quad\text{or}\ (i,k)\in\{(0,0),(m-2,0),(m-1,m-1)\} \bigr),
+            \end{aligned}\\[2.5ex]
+(i+1,\ k) & \begin{aligned}[t]
+            &\bigl( (i=0\ \text{and}\ 1\le k\le m-2)\\
+            &\quad\text{or}\ (i,k)\in\{(1,m-1),(m-2,1)\} \bigr),
+            \end{aligned}\\[2.5ex]
+(i+1,\ k+1) & \text{otherwise.}
+\end{cases}
+\]
+
+\medskip
+\noindent\textbf{Case II: $m\equiv 4\pmod 6$.}
+\[
+R_0(i,k)=
+\begin{cases}
+(i-2,\ k) & (i,k)=(0,0),\\
+(i-1,\ k) & (i,k)=(m-1,1),\\
+(i-3,\ k+3) & (i,k)\in\{(1,m-1),(2,m-2)\},\\
+(i-2,\ k+2) & \bigl( (i=1\ \text{and}\ 0\le k\le m-3)\ \text{or}\ (i,k)\in\{(2,m-1),(m-2,0)\} \bigr),\\
+(i-3,\ k+2) & i+k\equiv 1\ \text{and}\ (i,k)\notin\{(1,0),(2,m-1)\},\\
+(i-1,\ k+1) & \begin{aligned}[t]
+              &\bigl( (k=0\ \text{and}\ 2\le i\le m-3)\\
+              &\quad\text{or}\ (i,k)\in\{(0,m-1),(1,m-2),(m-2,1)\} \bigr),
+              \end{aligned}\\[2.5ex]
+(i-2,\ k+1) & \text{otherwise.}
+\end{cases}
+\]
+\[
+R_1(i,k)=
+\begin{cases}
+(i+2,\ k) & \begin{aligned}[t]
+            &\bigl( (i+k\equiv m-1\ \text{and}\ 2\le i\le m-3)\\
+            &\quad\text{or}\ (i,k)\in\{(0,0),(1,0),(m-2,0),(m-1,m-1)\} \bigr),
+            \end{aligned}\\[2.5ex]
+(i+1,\ k) & \begin{aligned}[t]
+            &\bigl( (i=0\ \text{and}\ 1\le k\le m-2)\ \text{or}\ (i=1\ \text{and}\ 1\le k\le m-1)\\
+            &\quad\text{or}\ (i,k)\in\{(2,m-2),(2,m-1),(m-2,1)\} \bigr),
+            \end{aligned}\\[2.5ex]
+(i+1,\ k+1) & \text{otherwise.}
+\end{cases}
+\]
+
+\medskip
+\noindent\textbf{Uniform for all even $m\ge 6$.}
+\[
+R_2(i,k)=
+\begin{cases}
+(i+1,\ k-3) & (i,k)=(2,0),\\
+(i+2,\ k-3) & i+k\equiv 1\ \text{and}\ (i,k)\notin\{(1,0),(m-1,2)\},\\
+(i,\ k-1) & ((k\equiv m-1-i\ \text{and}\ i\not\equiv m-1)\ \text{or}\ (i,k)=(m-1,m-1)),\\
+(i,\ k-2) & ((k=0\ \text{and}\ i\notin\{0,2,m-1\})\ \text{or}\ (i,k)=(m-1,1)),\\
+(i+1,\ k-1) & ((i=m-1\ \text{and}\ k\notin\{1,m-1\})\ \text{or}\ (i,k)=(0,0)),\\
+(i+1,\ k-2) & \text{otherwise.}
+\end{cases}
+\]
+
+
+
+\section{Deriving the Route~E return maps from Definition~\ref{def:routeE}}\label{app:routeE-derivation}
+
+In this appendix we derive the return maps recorded in Appendix~\ref{app:routeE} directly from the low-layer Route~E rule.
+The argument does not appeal to the defect-cycle structure; it tracks only the first three layers $S=0,1,2$.
+
+\begin{proposition}\label{prop:routeE-return-formulas}
+For every even $m\ge 6$, the return maps $R_0,R_1,R_2$ induced by Definition~\ref{def:routeE} are exactly the piecewise formulas displayed in Appendix~\ref{app:routeE}.
+\end{proposition}
+
+\begin{proof}
+Parameterize
+\[
+P_0=\{(i,j,k)\in \mathbb Z_m^3:i+j+k\equiv 0\}
+\]
+by
+\[
+v(i,k):=(i,-i-k,k),\qquad (i,k)\in \mathbb Z_m^2.
+\]
+Fix a color $c\in\{0,1,2\}$ and start from $v(i,k)\in P_0$.
+Write the first three color-$c$ directions encountered on the layers $S=0,1,2$ as
+\[
+\omega_c(i,k)=(a_c,b_c,c_c)\in\{0,1,2\}^3.
+\]
+After those three steps the orbit lies on layer $S=3$.
+From there until the next return to $P_0$ all layers are canonical, so the remaining $m-3$ steps are all in direction $c$.
+Hence the whole return map is determined by the low-layer word $\omega_c(i,k)$.
+
+If $N_r(\omega)$ denotes the number of occurrences of direction $r$ in a word $\omega$, then
+\[
+R_0(i,k)=\bigl(i+N_0(\omega_0)-3,\ k+N_2(\omega_0)\bigr),
+\]
+\[
+R_1(i,k)=\bigl(i+N_0(\omega_1),\ k+N_2(\omega_1)\bigr),
+\]
+\[
+R_2(i,k)=\bigl(i+N_0(\omega_2),\ k+N_2(\omega_2)-3\bigr).
+\]
+So it remains only to determine the low-layer words.
+
+From Definition~\ref{def:routeE}:
+\begin{itemize}[leftmargin=2em]
+\item on layer $S=1$, the triple is $(1,0,2)$ if $i=0$, and $(2,0,1)$ if $i\ne 0$;
+\item on layer $S=2$, the triple is $(2,1,0)$ if $j=0$, and $(0,1,2)$ if $j\ne 0$.
+\end{itemize}
+Therefore:
+\begin{itemize}[leftmargin=2em]
+\item for color $0$, the layer-$1$ direction depends on whether the post-step-$1$ $i$-coordinate equals $0$, and the layer-$2$ direction depends on whether the post-step-$2$ $j$-coordinate equals $0$;
+\item for color $1$, the directions on layers $1$ and $2$ are always $0$ and $1$;
+\item for color $2$, the layer-$1$ direction depends on whether the post-step-$1$ $i$-coordinate equals $0$, and the layer-$2$ direction depends on whether the post-step-$2$ $j$-coordinate equals $0$.
+\end{itemize}
+
+\paragraph{Case I: $m\equiv 0,2\pmod 6$.}
+In the $(i,k)$-coordinates on $P_0$, the layer-$0$ direction triples become
+\begin{align*}
+A&:=\{(0,0)\}\cup\{(i,k):i+k\equiv m-1,\ 1\le i\le m-3\}\cup\{(m-1,m-1)\},\\
+B&:=\{(0,m-1)\}\cup\{(i,0):1\le i\le m-3\}\cup\{(m-1,1)\},\\
+C&:=\{(0,k):1\le k\le m-2\}\cup\{(1,m-1)\},\\
+D&:=\{(m-2,1)\},\qquad E:=\{(m-2,0)\},
+\end{align*}
+corresponding respectively to the triples $102,021,210,012,201$, while the remaining points
+\[
+F:=\mathbb Z_m^2\setminus (A\cup B\cup C\cup D\cup E)
+\]
+carry the triple $120$.
+
+\paragraph{Color $1$.}
+On layers $1$ and $2$, color $1$ always uses directions $0$ and $1$.
+So the low-layer word is always of the form $(a,0,1)$, where $a$ is the layer-$0$ color-$1$ direction.
+Thus:
+\begin{itemize}[leftmargin=2em]
+\item if $a=0$, then $\omega_1=001$ and $R_1(i,k)=(i+2,k)$;
+\item if $a=1$, then $\omega_1=101$ and $R_1(i,k)=(i+1,k)$;
+\item if $a=2$, then $\omega_1=201$ and $R_1(i,k)=(i+1,k+1)$.
+\end{itemize}
+Reading off the sets on which the layer-$0$ color-$1$ direction equals $0$, $1$, or $2$ gives exactly the Case~I formula for $R_1$ in Appendix~\ref{app:routeE}.
+
+\paragraph{Color $0$.}
+For color $0$, we determine the word $\omega_0=(a_0,b_0,c_0)$ algebraically.
+Step $1$ goes in direction $a_0$, producing $i_1=i+\mathbf{1}_{a_0=0}$.
+The layer-$1$ rule gives $b_0=1$ if $i_1\equiv 0 \pmod m$, and $2$ otherwise.
+Step $2$ goes in direction $b_0$, producing
+\[
+j_2=j+\mathbf{1}_{a_0=1}+\mathbf{1}_{b_0=1},\qquad j\equiv -i-k \pmod m.
+\]
+The layer-$2$ rule gives $c_0=2$ if $j_2\equiv 0 \pmod m$, and $0$ otherwise.
+Table~\ref{tab:c0_case1} executes this arithmetic trace on each region of $P_0$.
+Grouping the start points by the final displacement yields exactly the displayed Case~I formula for $R_0$.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\caption{Derivation of low-layer words $\omega_0$ for color $0$, Case~I ($m\equiv 0,2\pmod 6$).}
+\label{tab:c0_case1}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}llccccccl@{}}
+\toprule
+Set & Condition / point & $a_0$ & $i_1=i+\mathbf{1}_{a_0=0}$ & $b_0$ & $j_2=j+\mathbf{1}_{a_0=1}+\mathbf{1}_{b_0=1}$ & $c_0$ & $\omega_0$ & Disp. $R_0(i,k)$ \\
+\midrule
+$A$ & $(0,0)$ & $1$ & $0\Rightarrow$ & $1$ & $0+1+1=2\not\equiv 0\Rightarrow$ & $0$ & $110$ & $(i-2,k)$ \\
+& $A\setminus\{(0,0)\}$ & $1$ & $i\not\equiv 0\Rightarrow$ & $2$ & $j+1+0\not\equiv 0\Rightarrow$ & $0$ & $120$ & $(i-2,k+1)$ \\
+\midrule
+$B$ & $(m-1,1)$ & $0$ & $0\Rightarrow$ & $1$ & $0+0+1=1\not\equiv 0\Rightarrow$ & $0$ & $010$ & $(i-1,k)$ \\
+& $B\setminus\{(m-1,1)\}$ & $0$ & $i+1\not\equiv 0\Rightarrow$ & $2$ & $j+0+0=j\not\equiv 0\Rightarrow$ & $0$ & $020$ & $(i-1,k+1)$ \\
+\midrule
+$C$ & $(0,1)$ & $2$ & $0\Rightarrow$ & $1$ & $-1+0+1=0\Rightarrow$ & $2$ & $212$ & $(i-3,k+2)$ \\
+& $(1,m-1)$ & $2$ & $1\not\equiv 0\Rightarrow$ & $2$ & $0+0+0=0\Rightarrow$ & $2$ & $222$ & $(i-3,k+3)$ \\
+& remaining $C$ & $2$ & $0\Rightarrow$ & $1$ & $j+0+1\not\equiv 0\Rightarrow$ & $0$ & $210$ & $(i-2,k+1)$ \\
+\midrule
+$D$ & $(m-2,1)$ & $0$ & $m-1\not\equiv 0\Rightarrow$ & $2$ & $1+0+0=1\not\equiv 0\Rightarrow$ & $0$ & $020$ & $(i-1,k+1)$ \\
+\midrule
+$E$ & $(m-2,0)$ & $2$ & $m-2\not\equiv 0\Rightarrow$ & $2$ & $2+0+0=2\not\equiv 0\Rightarrow$ & $0$ & $220$ & $(i-2,k+2)$ \\
+\midrule
+$F$ & $i+k\equiv 1$ (equiv. $j\equiv -1$) & $1$ & $i\not\equiv 0\Rightarrow$ & $2$ & $-1+1+0=0\Rightarrow$ & $2$ & $122$ & $(i-3,k+2)$ \\
+& otherwise & $1$ & $i\not\equiv 0\Rightarrow$ & $2$ & $j+1+0\not\equiv 0\Rightarrow$ & $0$ & $120$ & $(i-2,k+1)$ \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\paragraph{Color $2$.}
+Similarly, the layer-$1$ rule for color $2$ gives $b_2=2$ if $i_1\equiv 0 \pmod m$, and $1$ otherwise.
+The layer-$2$ rule gives $c_2=0$ if $j_2\equiv 0 \pmod m$, and $2$ otherwise.
+Table~\ref{tab:c2_case1} tracks this arithmetic.
+Grouping by displacement gives exactly the Case~I formula for $R_2$.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\caption{Derivation of low-layer words $\omega_2$ for color $2$, Case~I ($m\equiv 0,2\pmod 6$).}
+\label{tab:c2_case1}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}llccccccl@{}}
+\toprule
+Set & Condition / point & $a_2$ & $i_1=i+\mathbf{1}_{a_2=0}$ & $b_2$ & $j_2=j+\mathbf{1}_{a_2=1}+\mathbf{1}_{b_2=1}$ & $c_2$ & $\omega_2$ & Disp. $R_2(i,k)$ \\
+\midrule
+$A$ & $(0,0)$ & $2$ & $0\Rightarrow$ & $2$ & $0+0+0=0\Rightarrow$ & $0$ & $220$ & $(i+1,k-1)$ \\
+& $A\setminus\{(0,0)\}$ & $2$ & $i\not\equiv 0\Rightarrow$ & $1$ & $j+0+1\not\equiv 0\Rightarrow$ & $2$ & $212$ & $(i,k-1)$ \\
+\midrule
+$B$ & $(0,m-1)$ & $1$ & $0\Rightarrow$ & $2$ & $1+1+0=2\not\equiv 0\Rightarrow$ & $2$ & $122$ & $(i,k-1)$ \\
+& $(2,0)$ & $1$ & $2\not\equiv 0\Rightarrow$ & $1$ & $-2+1+1=0\Rightarrow$ & $0$ & $110$ & $(i+1,k-3)$ \\
+& remaining $B$ & $1$ & $i\not\equiv 0\Rightarrow$ & $1$ & $j+1+1\not\equiv 0\Rightarrow$ & $2$ & $112$ & $(i,k-2)$ \\
+\midrule
+$C$ & $(0,1)$ & $0$ & $1\not\equiv 0\Rightarrow$ & $1$ & $-1+0+1=0\Rightarrow$ & $0$ & $010$ & $(i+2,k-3)$ \\
+& remaining $C$ & $0$ & $i+1\not\equiv 0\Rightarrow$ & $1$ & $j+0+1\not\equiv 0\Rightarrow$ & $2$ & $012$ & $(i+1,k-2)$ \\
+\midrule
+$D$ & $(m-2,1)$ & $2$ & $m-2\not\equiv 0\Rightarrow$ & $1$ & $1+0+1=2\not\equiv 0\Rightarrow$ & $2$ & $212$ & $(i,k-1)$ \\
+\midrule
+$E$ & $(m-2,0)$ & $1$ & $m-2\not\equiv 0\Rightarrow$ & $1$ & $2+1+1=4\not\equiv 0\Rightarrow$ & $2$ & $112$ & $(i,k-2)$ \\
+\midrule
+$F$ & $i=m-1$ & $0$ & $0\Rightarrow$ & $2$ & $j+0+0=j\not\equiv 0\Rightarrow$ & $2$ & $022$ & $(i+1,k-1)$ \\
+& $i+k\equiv 1$ (equiv. $j\equiv -1$) & $0$ & $i+1\not\equiv 0\Rightarrow$ & $1$ & $-1+0+1=0\Rightarrow$ & $0$ & $010$ & $(i+2,k-3)$ \\
+& otherwise & $0$ & $i+1\not\equiv 0\Rightarrow$ & $1$ & $j+0+1\not\equiv 0\Rightarrow$ & $2$ & $012$ & $(i+1,k-2)$ \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\paragraph{Case II: $m\equiv 4\pmod 6$.}
+In the $(i,k)$-coordinates on $P_0$, the layer-$0$ direction triples become
+\begin{align*}
+A&:=\{(0,0)\}\cup\{(i,k):i+k\equiv m-1,\ 2\le i\le m-3\}\cup\{(m-1,m-1)\},\\
+B&:=\{(0,m-1)\}\cup\{(i,0):2\le i\le m-3\}\cup\{(m-1,1)\},\\
+C&:=\{(0,k):1\le k\le m-2\}\cup\{(1,k):1\le k\le m-3\}\cup\{(1,m-1)\}\cup\{(2,m-2),(2,m-1)\},\\
+D&:=\{(1,m-2),(m-2,1)\},\qquad E:=\{(1,0),(m-2,0)\},
+\end{align*}
+corresponding again to the triples $102,021,210,012,201$, with $120$ on the remaining points
+\[
+F:=\mathbb Z_m^2\setminus (A\cup B\cup C\cup D\cup E).
+\]
+
+\paragraph{Color $1$.}
+Exactly the same low-layer argument applies.
+In Case~II the layer-$0$ color-$1$ direction equals $0$ on
+\[
+(i+k\equiv m-1,\ 2\le i\le m-3)\ \text{or}\ (i,k)\in\{(0,0),(1,0),(m-2,0),(m-1,m-1)\},
+\]
+it equals $1$ on
+\[
+(i=0,\ 1\le k\le m-2)\ \text{or}\ (i=1,\ 1\le k\le m-1)\ \text{or}\ (i,k)\in\{(2,m-2),(2,m-1),(m-2,1)\},
+\]
+and it equals $2$ otherwise.
+This is exactly the Case~II formula for $R_1$.
+
+\paragraph{Color $0$.}
+Applying the same coordinate checks over the Case~II partition generates Table~\ref{tab:c0_case2}.
+Using the identical word-to-displacement dictionary from Case~I verifies the displayed Case~II formula for $R_0$.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\caption{Derivation of low-layer words $\omega_0$ for color $0$, Case~II ($m\equiv 4\pmod 6$).}
+\label{tab:c0_case2}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}llccccccl@{}}
+\toprule
+Set & Condition / point & $a_0$ & $i_1=i+\mathbf{1}_{a_0=0}$ & $b_0$ & $j_2=j+\mathbf{1}_{a_0=1}+\mathbf{1}_{b_0=1}$ & $c_0$ & $\omega_0$ & Disp. $R_0(i,k)$ \\
+\midrule
+$A$ & $(0,0)$ & $1$ & $0\Rightarrow$ & $1$ & $0+1+1=2\not\equiv 0\Rightarrow$ & $0$ & $110$ & $(i-2,k)$ \\
+& $A\setminus\{(0,0)\}$ & $1$ & $i\not\equiv 0\Rightarrow$ & $2$ & $j+1+0\not\equiv 0\Rightarrow$ & $0$ & $120$ & $(i-2,k+1)$ \\
+\midrule
+$B$ & $(m-1,1)$ & $0$ & $0\Rightarrow$ & $1$ & $0+0+1=1\not\equiv 0\Rightarrow$ & $0$ & $010$ & $(i-1,k)$ \\
+& $B\setminus\{(m-1,1)\}$ & $0$ & $i+1\not\equiv 0\Rightarrow$ & $2$ & $j+0+0=j\not\equiv 0\Rightarrow$ & $0$ & $020$ & $(i-1,k+1)$ \\
+\midrule
+$C$ & $(0,1)$ & $2$ & $0\Rightarrow$ & $1$ & $-1+0+1=0\Rightarrow$ & $2$ & $212$ & $(i-3,k+2)$ \\
+& $(1,m-1)$, $(2,m-2)$ & $2$ & $i\not\equiv 0\Rightarrow$ & $2$ & $0+0+0=0\Rightarrow$ & $2$ & $222$ & $(i-3,k+3)$ \\
+& $(1,k)$ with $1\le k\le m-3$, and $(2,m-1)$ & $2$ & $i\not\equiv 0\Rightarrow$ & $2$ & $j+0+0=j\not\equiv 0\Rightarrow$ & $0$ & $220$ & $(i-2,k+2)$ \\
+& $(0,k)$ with $2\le k\le m-2$ & $2$ & $0\Rightarrow$ & $1$ & $j+0+1\not\equiv 0\Rightarrow$ & $0$ & $210$ & $(i-2,k+1)$ \\
+\midrule
+$D$ & $(1,m-2)$, $(m-2,1)$ & $0$ & $i+1\not\equiv 0\Rightarrow$ & $2$ & $1+0+0=1\not\equiv 0\Rightarrow$ & $0$ & $020$ & $(i-1,k+1)$ \\
+\midrule
+$E$ & $(1,0)$, $(m-2,0)$ & $2$ & $i\not\equiv 0\Rightarrow$ & $2$ & $j+0+0=j\not\equiv 0\Rightarrow$ & $0$ & $220$ & $(i-2,k+2)$ \\
+\midrule
+$F$ & $i+k\equiv 1$ (equiv. $j\equiv -1$) & $1$ & $i\not\equiv 0\Rightarrow$ & $2$ & $-1+1+0=0\Rightarrow$ & $2$ & $122$ & $(i-3,k+2)$ \\
+& otherwise & $1$ & $i\not\equiv 0\Rightarrow$ & $2$ & $j+1+0\not\equiv 0\Rightarrow$ & $0$ & $120$ & $(i-2,k+1)$ \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\paragraph{Color $2$.}
+The analogous evaluation for color $2$ is tracked in Table~\ref{tab:c2_case2}.
+Grouping the outputs matches the uniform formula for $R_2$ displayed in Appendix~\ref{app:routeE}.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\caption{Derivation of low-layer words $\omega_2$ for color $2$, Case~II ($m\equiv 4\pmod 6$).}
+\label{tab:c2_case2}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}llccccccl@{}}
+\toprule
+Set & Condition / point & $a_2$ & $i_1=i+\mathbf{1}_{a_2=0}$ & $b_2$ & $j_2=j+\mathbf{1}_{a_2=1}+\mathbf{1}_{b_2=1}$ & $c_2$ & $\omega_2$ & Disp. $R_2(i,k)$ \\
+\midrule
+$A$ & $(0,0)$ & $2$ & $0\Rightarrow$ & $2$ & $0+0+0=0\Rightarrow$ & $0$ & $220$ & $(i+1,k-1)$ \\
+& $A\setminus\{(0,0)\}$ & $2$ & $i\not\equiv 0\Rightarrow$ & $1$ & $j+0+1\not\equiv 0\Rightarrow$ & $2$ & $212$ & $(i,k-1)$ \\
+\midrule
+$B$ & $(0,m-1)$ & $1$ & $0\Rightarrow$ & $2$ & $1+1+0=2\not\equiv 0\Rightarrow$ & $2$ & $122$ & $(i,k-1)$ \\
+& $(2,0)$ & $1$ & $2\not\equiv 0\Rightarrow$ & $1$ & $-2+1+1=0\Rightarrow$ & $0$ & $110$ & $(i+1,k-3)$ \\
+& remaining $B$ & $1$ & $i\not\equiv 0\Rightarrow$ & $1$ & $j+1+1\not\equiv 0\Rightarrow$ & $2$ & $112$ & $(i,k-2)$ \\
+\midrule
+$C$ & $(0,1)$, $(2,m-1)$ & $0$ & $i+1\not\equiv 0\Rightarrow$ & $1$ & $-1+0+1=0\Rightarrow$ & $0$ & $010$ & $(i+2,k-3)$ \\
+& remaining $C$ & $0$ & $i+1\not\equiv 0\Rightarrow$ & $1$ & $j+0+1\not\equiv 0\Rightarrow$ & $2$ & $012$ & $(i+1,k-2)$ \\
+\midrule
+$D$ & $(1,m-2)$, $(m-2,1)$ & $2$ & $i\not\equiv 0\Rightarrow$ & $1$ & $1+0+1=2\not\equiv 0\Rightarrow$ & $2$ & $212$ & $(i,k-1)$ \\
+\midrule
+$E$ & $(1,0)$, $(m-2,0)$ & $1$ & $i\not\equiv 0\Rightarrow$ & $1$ & $j+1+1\not\equiv 0\Rightarrow$ & $2$ & $112$ & $(i,k-2)$ \\
+\midrule
+$F$ & $i=m-1$ & $0$ & $0\Rightarrow$ & $2$ & $j+0+0=j\not\equiv 0\Rightarrow$ & $2$ & $022$ & $(i+1,k-1)$ \\
+& $i+k\equiv 1$ (equiv. $j\equiv -1$) & $0$ & $i+1\not\equiv 0\Rightarrow$ & $1$ & $-1+0+1=0\Rightarrow$ & $0$ & $010$ & $(i+2,k-3)$ \\
+& otherwise & $0$ & $i+1\not\equiv 0\Rightarrow$ & $1$ & $j+0+1\not\equiv 0\Rightarrow$ & $2$ & $012$ & $(i+1,k-2)$ \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+This proves all return-map formulas.
+\end{proof}
+
+\section{Hamiltonicity of the Route~E return maps}\label{app:routeE-cycle}
+
+\subsection{Setup}
+
+The first-return framework of Section~\ref{sec:even} applies uniformly to all three colors.
+The main text proves color~$2$ in full; this appendix records the remaining itinerary computations for colors~$1$ and~$0$.
+For color~$1$, Propositions~\ref{prop:R1-caseI} and~\ref{prop:R1-caseII} derive the first-return data; Corollary~\ref{cor:R1-all} establishes Hamiltonicity.
+For color~$0$, Propositions~\ref{prop:R0-caseI-data} and~\ref{prop:R0-caseII-data} do the same, with Corollary~\ref{cor:R0-all} completing the proof.
+The working coordinates and defect geometries for each color are summarized in Table~\ref{tab:routeE-summary}.
+
+The next lemma packages the cycle step that remains after the closed-form formulas for the first-return maps have been derived.
+
+\begin{lemma}[successor on cyclic blocks]\label{lem:cyclic-blocks}
+Let $X$ be a finite set written cyclically as
+\[
+X=(B_1\mid B_2\mid \cdots \mid B_r),
+\]
+where each block $B_j=(x_{j,0},x_{j,1},\dots,x_{j,\ell_j})$ is linearly ordered.
+Assume $T:X\to X$ satisfies
+\[
+T(x_{j,s})=x_{j,s+1}\quad (0\le s<\ell_j),
+\qquad
+T(x_{j,\ell_j})=x_{j+1,0},
+\]
+with the block index $j$ taken cyclically modulo $r$.
+Then $T$ is a single $|X|$-cycle.
+\end{lemma}
+
+\begin{proof}
+The hypotheses say exactly that $T$ moves forward by one step in the cyclic concatenation
+\[
+(x_{1,0},x_{1,1},\dots,x_{1,\ell_1},x_{2,0},\dots,x_{r,\ell_r}).
+\]
+Hence every point lies on the same orbit, and that orbit has length $|X|$.
+\end{proof}
+
+In the propositions below we use Lemma~\ref{lem:cyclic-blocks} to repackage the induced lane maps $T_c$ as successor permutations on cyclic concatenations of a bounded number of long arithmetic runs.
+This does not replace the derivation of the closed-form formulas for $T_c$ and $\rho_c$ or the return-time sums; it only explains why the cycle structure is so simple once those formulas are known.
+When one of the displayed arithmetic runs is empty for the smallest admissible values of $m$, it is omitted from the cyclic concatenation.
+
+\subsection{Color $2$}
+
+The color-$2$ return map is proved in full in the main text (Section~\ref{sec:even-r2}).
+Proposition~\ref{prop:R2-main-data} derives the first-return data, and Corollary~\ref{cor:R2-main} establishes that $R_2$ is a single $m^2$-cycle for all even $m\ge 6$.
+We do not repeat those orbit traces here.
+
+
+\subsection{Color $1$}
+
+By Lemma~\ref{lem:routeE-bulkcoords}, the bulk coordinates for color~$1$ are $\Phi_1(i,k)=(u,t)=(i-k,\,k)$, in which the generic branch is $(u,t)\mapsto(u,t+1)$.
+By Lemma~\ref{lem:routeE-finite-defect}\textup{(i)}, the defect set lies on the affine lines $u+t=0$ and $u+2t=m-1$ (and, in Case~II, also $u+t=1$), together with finitely many isolated points.
+Following the same pattern, it suffices to list the defect components met before first return and sum the lane increments.
+
+We use a first-return analysis on the transversal
+\[
+L_1=\{(x,0):x\in \Zm\}\subseteq P_0.
+\]
+
+Let $\rho_1(x)$ be the first return time of $R_1$ from $(x,0)$ to $L_1$, and define
+\[
+R_1^{\rho_1(x)}(x,0)=(T_1(x),0).
+\]
+
+In the original $(i,k)$-coordinates, $u=i-k$ is the lane coordinate.
+A bulk move $(i,k)\mapsto(i+1,k+1)$ preserves $u$.
+The two defect branches act as stalls: $(i,k)\mapsto(i+1,k)$ increases $u$ by $1$ (defect line $u+t=0$, i.e.\ $i=0$), and $(i,k)\mapsto(i+2,k)$ increases $u$ by $2$ (defect line $u+2t=m-1$, i.e.\ diagonal $i+k=m-1$).
+Starting from $(x,0)$, the net change in $i$ at first return is exactly the total lane increment contributed by the stalls.
+
+\subsubsection{Case I: $m\equiv 0,2\pmod 6$}
+
+\begin{proposition}\label{prop:R1-caseI}
+Assume $m\equiv 0,2\pmod 6$.
+Then the first-return map and return times on $L_1$ are
+\[
+T_1(x)=
+\begin{cases}
+2,&x=0,\\
+x+3,&1\le x\le m-4,\\
+1,&x=m-3,\\
+0,&x=m-2,\\
+3,&x=m-1,
+\end{cases}
+\qquad
+\rho_1(x)=
+\begin{cases}
+1,&x=0\ \text{or}\ x=m-2,\\
+m+2,&1\le x\le m-4,\\
+m+3,&x=m-3\ \text{or}\ x=m-1.
+\end{cases}
+\]
+\end{proposition}
+
+\begin{proof}
+The closed-form map $R_1$ has three types of moves:
+\begin{itemize}[leftmargin=2em]
+\item bulk $(i,k)\mapsto(i+1,k+1)$,
+\item $+1$ stalls on $i=0$ together with $(1,m-1)$ and $(m-2,1)$,
+\item $+2$ stalls on the diagonal $i+k=m-1$ together with $(0,0)$, $(m-2,0)$ and $(m-1,m-1)$.
+\end{itemize}
+
+The immediate cases are read directly from the formula:
+\[
+(0,0)\mapsto(2,0),\qquad (m-2,0)\mapsto(0,0).
+\]
+Hence
+\[
+T_1(0)=2,\quad \rho_1(0)=1,\qquad T_1(m-2)=0,\quad \rho_1(m-2)=1.
+\]
+
+Now fix $1\le x\le m-4$.
+
+\smallskip
+\noindent\textbf{Odd $x$.}
+On the lane $u=x$ one reaches the diagonal $i+k=m-1$ once before $k$ wraps, namely at
+\[
+k_1=\frac{m-1-x}{2},\qquad
+(i,k)=\left(\frac{m-1+x}{2},\frac{m-1-x}{2}\right).
+\]
+That point is in the $+2$ branch, so the lane becomes $x+2$.
+On the new lane $u=x+2$, the next defect before wrap is the vertical point $(0,m-x-2)$, which is a $+1$
+stall, so the lane then becomes $x+3$.
+On that lane there is no diagonal defect before wrap, because the system
+\[
+i-k=x+3,\qquad i+k=m-1
+\]
+would force
+\[
+k=\frac{m-x-4}{2},
+\]
+which is not an integer when $x$ is odd.
+Its vertical defect is at height $m-x-3$, already behind the current value $k=m-x-2$.
+Thus there are exactly two stalls, with total lane increment $2+1=3$.
+Therefore
+\[
+T_1(x)=x+3,\qquad \rho_1(x)=m+2.
+\]
+
+\smallskip
+\noindent\textbf{Even $x$.}
+The lane $u=x$ has no diagonal hit.
+Its first defect is the vertical point $(0,m-x)$, which contributes a $+1$ stall and moves the orbit to
+lane $x+1$.
+That new lane is odd, so before wrap it hits the diagonal once, at
+\[
+k_2=m-\frac{x}{2}-1,
+\]
+and that diagonal hit is a $+2$ stall.
+So the lane becomes $x+3$.
+On lane $x+3$ the vertical defect is at height $m-x-3$, while the diagonal equation
+\[
+i-k=x+3,\qquad i+k=m-1
+\]
+gives the candidate height
+\[
+k=\frac{m-x-4}{2}.
+\]
+Both heights are strictly below the current value $k_2=m-\frac{x}{2}-1$.
+Hence there are no more stalls before return.
+Again the total lane increment is $1+2=3$, and the number of stalls is $2$, giving
+\[
+T_1(x)=x+3,\qquad \rho_1(x)=m+2.
+\]
+
+It remains to treat the two boundary values.
+
+\smallskip
+\noindent\textbf{The point $x=m-3$.}
+The orbit begins
+\[
+(m-3,0)\to (m-2,1)\to (m-1,1)\to (0,2)\to (1,2).
+\]
+Thus it first gets a $+1$ stall at $(m-2,1)$ and then another $+1$ stall at $(0,2)$.
+At that point the orbit lies on the lane $u=i-k\equiv m-1$.
+The unique diagonal defect on this lane before $k$ wraps is
+\[
+\left(\frac m2-1,\frac m2\right),
+\]
+so the orbit continues
+\[
+(1,2)\xrightarrow{\bulk^{\frac m2-2}}\left(\frac m2-1,\frac m2\right)
+\xrightarrow{+2}\left(\frac m2+1,\frac m2\right)
+\xrightarrow{\bulk^{\frac m2}}(1,0).
+\]
+Hence the third stall is this $+2$ diagonal stall, there are exactly three stalls in total, and therefore
+\[
+T_1(m-3)=1,\qquad \rho_1(m-3)=m+3.
+\]
+
+\smallskip
+\noindent\textbf{The point $x=m-1$.}
+The orbit begins
+\[
+(m-1,0)\to (0,1)\to (1,1),
+\]
+so it gets a $+1$ stall at $(0,1)$.
+Later it reaches $(m-1,m-1)$, giving a $+2$ stall, and then $(1,m-1)$, giving the final $+1$ stall.
+At that point the orbit is on lane $3$ with current clock value $k=m-1$.
+The vertical defect on lane $3$ is at height $m-3$, while a diagonal defect on lane $3$ would require
+\[
+k=\frac{m-4}{2},
+\]
+so both possible defect heights lie strictly behind the current value $m-1$.
+Hence there are no more defects before return.
+Therefore the total lane increment is $4$ and the number of stalls is $3$, so
+\[
+T_1(m-1)=3,\qquad \rho_1(m-1)=m+3.
+\]
+
+This proves the stated formulas.
+\end{proof}
+
+\begin{proposition}[splicing of arithmetic runs for color $1$, Case~I]\label{prop:R1-caseI-blocks}
+Assume $m\equiv 0,2\pmod 6$.
+Then $T_1$ is the successor permutation on a cyclic order obtained from three long arithmetic runs together with $O(1)$ bridge vertices.
+More precisely,
+\[
+(0,2,5,\dots,m-3\mid 1,4,7,\dots,m-1\mid 3,6,9,\dots,m-2)
+\]
+when $m\equiv 2\pmod 6$, and
+\[
+(0,2,5,\dots,m-1\mid 3,6,9,\dots,m-3,1\mid 4,7,10,\dots,m-2)
+\]
+when $m\equiv 0\pmod 6$.
+Consequently $T_1$ is a single $m$-cycle.
+\end{proposition}
+
+\begin{proof}
+By Proposition~\ref{prop:R1-caseI},
+\[
+T_1(0)=2,\qquad T_1(x)=x+3\quad (1\le x\le m-4),\qquad T_1(m-3)=1,\qquad T_1(m-2)=0,\qquad T_1(m-1)=3.
+\]
+Hence the generic action is translation by $+3$, and only the endpoint values $m-3,m-2,m-1$ alter the itinerary.
+If $m\equiv 2\pmod 6$, the three $+3$-runs are
+\[
+2,5,\dots,m-3,\qquad 1,4,7,\dots,m-1,\qquad 3,6,9,\dots,m-2,
+\]
+with the special values splicing them in the order
+\[
+0\to 2,\qquad m-3\to 1,\qquad m-1\to 3,\qquad m-2\to 0.
+\]
+If $m\equiv 0\pmod 6$, the same generic rule produces the runs
+\[
+2,5,\dots,m-1,\qquad 3,6,9,\dots,m-3,\qquad 1,4,7,\dots,m-2,
+\]
+and the endpoint values splice them in the order
+\[
+0\to 2,\qquad m-1\to 3,\qquad m-3\to 1,\qquad m-2\to 0.
+\]
+In either congruence class this is exactly the displayed cyclic order, so Lemma~\ref{lem:cyclic-blocks} applies.
+\end{proof}
+
+\begin{corollary}\label{cor:R1-caseI}
+If $m\equiv 0,2\pmod 6$, then $R_1$ is a single $m^2$-cycle.
+\end{corollary}
+
+\begin{proof}
+Proposition~\ref{prop:R1-caseI-blocks} shows that $T_1$ is a single $m$-cycle.
+Also,
+\[
+\sum_{x\in \Zm}\rho_1(x)=2+(m-4)(m+2)+2(m+3)=m^2.
+\]
+Now apply Lemma~\ref{lem:counting}.
+\end{proof}
+
+\subsubsection{Case II: $m\equiv 4\pmod 6$}
+
+\begin{proposition}\label{prop:R1-caseII}
+Assume $m\equiv 4\pmod 6$.
+Then the first-return map and return times on $L_1$ are
+\[
+T_1(x)=
+\begin{cases}
+2,&x=0,\\
+3,&x=1,\\
+5,&x=2,\\
+x+2,&x\text{ even},\ x\notin\{0,2,m-2\},\\
+0,&x=m-2,\\
+x+6,&x\text{ odd},\ x\notin\{1,m-3,m-1\},\\
+4,&x=m-3,\\
+7,&x=m-1,
+\end{cases}
+\]
+and
+\[
+\rho_1(x)=
+\begin{cases}
+1,&x\in\{0,1,m-2\},\\
+m+3,&x=2,\\
+m+2,&x\text{ even},\ x\notin\{0,2,m-2\},\\
+m+4,&x\text{ odd},\ x\notin\{1,m-3,m-1\},\\
+m+6,&x\in\{m-3,m-1\}.
+\end{cases}
+\]
+\end{proposition}
+
+\begin{proof}
+In Case II the closed-form map has
+\begin{itemize}[leftmargin=2em]
+\item bulk $(i,k)\mapsto(i+1,k+1)$,
+\item $+1$ stalls on the lines $i=0$ and $i=1$, together with the special points
+$(2,m-2)$, $(2,m-1)$, $(m-2,1)$,
+\item $+2$ stalls on the diagonal $i+k=m-1$ for $2\le i\le m-3$, together with the special points
+$(0,0)$, $(1,0)$, $(m-2,0)$, $(m-1,m-1)$.
+\end{itemize}
+
+The immediate cases are read directly from the formula:
+\[
+(0,0)\mapsto(2,0),\qquad (1,0)\mapsto(3,0),\qquad (m-2,0)\mapsto(0,0),
+\]
+so
+\[
+T_1(0)=2,\quad T_1(1)=3,\quad T_1(m-2)=0,
+\]
+and all three return times equal $1$.
+
+For $x=2$, the lane $u=2$ has no diagonal defect.
+The orbit runs generically to $(0,m-2)$, then encounters three consecutive $+1$ stalls:
+\[
+(2,0)\xrightarrow{\bulk^{m-2}}(0,m-2)\xrightarrow{+1}(1,m-2)\xrightarrow{+1}(2,m-2)\xrightarrow{+1}(3,m-2).
+\]
+From there two bulk moves return to $L_1$.
+Hence
+\[
+T_1(2)=5,\qquad \rho_1(2)=m+3.
+\]
+
+Now let $x$ be even with $4\le x\le m-4$.
+The lane $u=x$ has no diagonal defect.
+Its first defect is $(0,m-x)$, followed immediately by the $i=1$ defect at the same height:
+\[
+(x,0)\xrightarrow{\bulk^{m-x}}(0,m-x)\xrightarrow{+1}(1,m-x)\xrightarrow{+1}(2,m-x).
+\]
+Because $x\neq 2$, the point $(2,m-x)$ is not one of the special $+1$ points.
+The orbit is now on the even lane $x+2$.
+On that lane there is no diagonal defect before wrap, and the remaining vertical defects occur at heights
+$m-x-2$ and $m-x-1$, both already behind the current value $k=m-x$.
+So no further defect occurs before the return to $L_1$, and therefore
+\[
+T_1(x)=x+2,\qquad \rho_1(x)=m+2.
+\]
+
+Next let $x$ be odd with $3\le x\le m-7$.
+Define
+\[
+d_x=\frac{m-1-x}{2},\qquad e_x=m-x-2,\qquad f_x=m-\frac{x+5}{2}.
+\]
+Because $x$ is odd, the first diagonal defect on lane $u=x$ occurs at height $d_x$, namely at
+\[
+D_1=\left(\frac{m-1+x}{2},\frac{m-1-x}{2}\right).
+\]
+So the orbit first performs one $+2$ stall there.
+It then lies on lane $x+2$, whose next defects are the vertical points
+\[
+V_0=(0,e_x),\qquad V_1=(1,e_x),
+\]
+which contribute two consecutive $+1$ stalls.
+The orbit then lies on the odd lane $x+4$.
+On that lane the lower diagonal height is already behind the current clock value, while the upper diagonal
+height is exactly $f_x$.
+Thus the next defect is the diagonal point
+\[
+D_2=\left(\frac{x+3}{2},\,m-\frac{x+5}{2}\right),
+\]
+which contributes the second $+2$ stall.
+After this move the orbit lies on lane $x+6$.
+On that lane the remaining vertical defect heights are $m-x-6$ and $m-x-5$, and the remaining diagonal
+height before wrap is $m-(x+7)/2$; all of these lie behind the current value $k=f_x$.
+So no further defect occurs before the return to $L_1$.
+In total the orbit has two $+2$ stalls and two $+1$ stalls, hence total lane increment $6$ and return time
+$m+4$:
+\[
+T_1(x)=x+6,\qquad \rho_1(x)=m+4.
+\]
+
+For the endpoint $x=m-5$, the same initial defect pattern occurs: one $+2$ stall on the first diagonal hit,
+then two consecutive $+1$ stalls on the lines $i=0$ and $i=1$, and then one more $+2$ stall on the second
+diagonal hit.
+After that second diagonal stall the orbit lies on lane $1$ at height $m/2$.
+The lower diagonal point on lane $1$ is already behind the current clock value, and the only remaining
+intersection with the diagonal before wrap is $(0,m-1)$.
+This point is not a defect: it is excluded both from the $i=0$ $+1$ branch and from the diagonal $+2$
+branch.
+So the next step is the bulk move
+\[
+(0,m-1)\mapsto(1,0),
+\]
+which is the first return to $L_1$.
+Thus
+\[
+T_1(m-5)=1=(m-5)+6,\qquad \rho_1(m-5)=m+4.
+\]
+
+For $x=m-3$, the orbit is
+\[
+\begin{aligned}
+(m-3,0)&\xrightarrow{\bulk}(m-2,1)\xrightarrow{+1}(m-1,1)\xrightarrow{\bulk}(0,2)\xrightarrow{+1}(1,2)\\
+&\xrightarrow{+1}(2,2)\xrightarrow{\bulk^{m-3}}(m-1,m-1)\xrightarrow{+2}(1,m-1)\\
+&\xrightarrow{+1}(2,m-1)\xrightarrow{+1}(3,m-1)\xrightarrow{\bulk}(4,0).
+\end{aligned}
+\]
+So the lane increment is $1+1+1+2+1+1=7$ and the return time is $m+6$.
+Hence
+\[
+T_1(m-3)=4,\qquad \rho_1(m-3)=m+6.
+\]
+
+For $x=m-1$, the orbit is
+\[
+\begin{aligned}
+(m-1,0)&\xrightarrow{\bulk}(0,1)\xrightarrow{+1}(1,1)\xrightarrow{+1}(2,1)
+\xrightarrow{\bulk^{\frac m2-2}}\left(\frac m2,\frac m2-1\right)\\
+&\xrightarrow{+2}\xrightarrow{\bulk^{\frac m2-2}}(0,m-3)\xrightarrow{+1}(1,m-3)
+\xrightarrow{+1}(2,m-3)\\
+&\xrightarrow{+2}(4,m-3)\xrightarrow{\bulk^3}(7,0).
+\end{aligned}
+\]
+Thus the orbit has four $+1$ stalls and two $+2$ stalls, for total lane increment $8$ and return time
+$m+6$.
+Therefore
+\[
+T_1(m-1)=7,\qquad \rho_1(m-1)=m+6.
+\]
+\end{proof}
+
+\begin{proposition}[splicing of arithmetic runs for color $1$, Case~II]\label{prop:R1-caseII-blocks}
+Assume $m\equiv 4\pmod 6$.
+Then $T_1$ is the successor permutation on a cyclic order obtained from three long arithmetic runs together with $O(1)$ bridge vertices:
+\[
+(0,2,5,11,\dots,m-5,1\mid 3,9,15,\dots,m-1,7,13,\dots,m-3\mid 4,6,8,\dots,m-2).
+\]
+Consequently $T_1$ is a single $m$-cycle.
+\end{proposition}
+
+\begin{proof}
+Proposition~\ref{prop:R1-caseII} shows that, away from the boundary values
+\[
+0,1,2,m-3,m-2,m-1,
+\]
+the map acts by
+\[
+x\mapsto x+2\quad\text{on even residues},\qquad x\mapsto x+6\quad\text{on odd residues}.
+\]
+The special values then splice these generic arithmetic runs as follows:
+\[
+0\to 2\to 5,
+\]
+after which the odd $+6$-run continues through
+\[
+5,11,\dots,m-5
+\]
+and ends at
+\[
+m-5\to 1.
+\]
+Next
+\[
+1\to 3,
+\]
+after which the odd $+6$-rule produces the second odd run
+\[
+3,9,15,\dots,m-1,7,13,\dots,m-3,
+\]
+and the boundary value
+\[
+m-3\to 4
+\]
+enters the even run
+\[
+4,6,8,\dots,m-2.
+\]
+Finally
+\[
+m-2\to 0
+\]
+closes the cycle.
+Thus $T_1$ is exactly the successor map on the displayed cyclic order, so Lemma~\ref{lem:cyclic-blocks} applies.
+\end{proof}
+
+\begin{corollary}\label{cor:R1-caseII}
+If $m\equiv 4\pmod 6$, then $R_1$ is a single $m^2$-cycle.
+\end{corollary}
+
+\begin{proof}
+Proposition~\ref{prop:R1-caseII-blocks} shows that $T_1$ is a single $m$-cycle.
+Also,
+\[
+\sum_{x\in \Zm}\rho_1(x)
+=
+3+(m+3)+\frac{m-6}{2}(m+2)+\frac{m-6}{2}(m+4)+2(m+6)=m^2.
+\]
+Therefore Lemma~\ref{lem:counting} applies.
+\end{proof}
+
+\begin{corollary}\label{cor:R1-all}
+For every even $m\ge 6$, the return map $R_1$ is a single $m^2$-cycle on $P_0$.
+\end{corollary}
+
+
+\subsection{Color $0$}
+
+By Lemma~\ref{lem:routeE-bulkcoords}, the bulk coordinates for color~$0$ are $\Phi_0(i,k)=(u,t)=(i+2k,\,k)$, in which the generic branch is $(u,t)\mapsto(u,t+1)$.
+By Lemma~\ref{lem:routeE-finite-defect}\textup{(iii)}, the defect set lies on the lines $t=0$ and $u=t+1$ (and, in Case~II, also $u=1+2t$), together with finitely many isolated points.
+Since the bulk frame already uses the convenient coordinates $(x,y)=(u,t)=(i+2k,\,k)$, we work directly in this frame.
+
+The transversal is
+\[
+L_0=\{(x,0):x\in \Zm\}.
+\]
+The generic move freezes $x$ and increments $y$, so $y$ is literally a clock while the exceptional branches change only the lane coordinate $x$.
+
+\subsubsection{Case I: $m\equiv 0,2\pmod 6$}
+
+\begin{lemma}\label{lem:R0-caseI-xy}
+Assume $m\equiv 0,2\pmod 6$.
+In the coordinates $(x,y)=(i+2k,k)$, the return map $R_0$ becomes
+\[
+R_0(x,y)=
+\begin{cases}
+(m-2,0),&(x,y)=(0,0),\\
+(2,2),&(x,y)=(m-1,m-1),\\
+(0,2),&(x,y)=(m-2,0),\\
+(0,1),&(x,y)=(1,1),\\
+(x+1,y+2),&x=y+1,\ (x,y)\neq (1,0),\\
+(x+1,y+1),&\bigl(y=0,\ 1\le x\le m-3\bigr)\ \text{or}\ (x,y)\in\{(0,1),(m-2,m-1)\},\\
+(x,y+1),&\text{otherwise}.
+\end{cases}
+\]
+All arithmetic is modulo $m$.
+\end{lemma}
+
+\begin{proof}
+Substitute $i=x-2y$ and $k=y$ into the Case~I formula for $R_0$ in Appendix~\ref{app:routeE} and simplify branch by
+branch.
+The generic move $(i,k)\mapsto(i-2,k+1)$ becomes $(x,y)\mapsto(x,y+1)$, and the six exceptional
+branches transform exactly as displayed.
+\end{proof}
+
+Write
+\[
+G(x,y)=(x,y+1)
+\]
+for the generic branch in Lemma~\ref{lem:R0-caseI-xy}.
+The six exceptional moves will be denoted $P,Q,R,S,A,B$ in the order displayed in the lemma:
+$P$ and $Q$ are isolated-point defects at $(0,0)$ and $(m-1,m-1)$;
+$R$ maps $(m-2,0)$ to $(0,2)$;
+$S$ maps $(1,1)$ to $(0,1)$;
+$A$ is the defect on the line $u=t+1$ (i.e.\ $x=y+1$);
+$B$ is the defect on the line $t=0$ (i.e.\ $y=0$) together with the boundary points $(0,1)$ and $(m-2,m-1)$.
+
+\begin{proposition}\label{prop:R0-caseI-data}
+Assume $m\equiv 0,2\pmod 6$.
+Then the first-return map on $L_0$ is
+\[
+T_0(x)=
+\begin{cases}
+m-2,&x=0,\\
+x+2,&1\le x\le m-5,\\
+m-1,&x=m-4,\\
+2,&x=m-3,\\
+1,&x=m-2,\\
+0,&x=m-1,
+\end{cases}
+\]
+and the return times are
+\[
+\rho_0(x)=
+\begin{cases}
+1,&x=0,\\
+m-1,&1\le x\le m-4\ \text{or}\ x=m-1,\\
+2m-3,&x=m-3,\\
+2m-1,&x=m-2.
+\end{cases}
+\]
+\end{proposition}
+
+\begin{proof}
+Fix $x\in \Zm$ and start from $(x,0)\in L_0$.
+
+\smallskip
+\noindent\textbf{Case $x=0$.}
+By branch $P$,
+\[
+(0,0)\xrightarrow{P}(m-2,0),
+\]
+so $T_0(0)=m-2$ and $\rho_0(0)=1$.
+
+\smallskip
+\noindent\textbf{Case $1\le x\le m-5$.}
+The orbit is
+\[
+(x,0)\xrightarrow{B}(x+1,1)\xrightarrow{G^{x-1}}(x+1,x)\xrightarrow{A}(x+2,x+2)
+\xrightarrow{G^{m-x-2}}(x+2,0).
+\]
+Indeed, on the lane $x+1$ the first defect above $y=1$ is the $A$-point $(x+1,x)$.
+After that jump the orbit lies on lane $x+2$ at height $y=x+2$.
+On this lane the only possible $A$-point is $(x+2,x+1)$, whose height $x+1$ is already behind the current
+clock value.
+The special points $P,Q,R,S$ lie on different lanes, and the $B$-branch occurs only at $y=0$ or at the
+isolated points $(0,1)$ and $(m-2,m-1)$, none of which lies ahead on lane $x+2$.
+Thus every remaining step before $y=0$ is generic.
+Therefore
+\[
+T_0(x)=x+2,\qquad
+\rho_0(x)=1+(x-1)+1+(m-x-2)=m-1.
+\]
+
+\smallskip
+\noindent\textbf{Case $x=m-4$.}
+Here
+\[
+(m-4,0)\xrightarrow{B}(m-3,1)\xrightarrow{G^{m-5}}(m-3,m-4)\xrightarrow{A}(m-2,m-2)
+\xrightarrow{G}(m-2,m-1)\xrightarrow{B}(m-1,0).
+\]
+So
+\[
+T_0(m-4)=m-1,\qquad
+\rho_0(m-4)=1+(m-5)+1+1+1=m-1.
+\]
+
+\smallskip
+\noindent\textbf{Case $x=m-3$.}
+The orbit is
+\[
+(m-3,0)\xrightarrow{B}(m-2,1)\xrightarrow{G^{m-4}}(m-2,m-3)\xrightarrow{A}(m-1,m-1)
+\xrightarrow{Q}(2,2)\xrightarrow{G^{m-2}}(2,0).
+\]
+Hence
+\[
+T_0(m-3)=2,\qquad
+\rho_0(m-3)=1+(m-4)+1+1+(m-2)=2m-3.
+\]
+
+\smallskip
+\noindent\textbf{Case $x=m-2$.}
+The orbit is
+\[
+(m-2,0)\xrightarrow{R}(0,2)\xrightarrow{G^{m-3}}(0,m-1)\xrightarrow{A}(1,1)\xrightarrow{S}(0,1)
+\xrightarrow{B}(1,2)\xrightarrow{G^{m-2}}(1,0).
+\]
+Therefore
+\[
+T_0(m-2)=1,\qquad
+\rho_0(m-2)=1+(m-3)+1+1+1+(m-2)=2m-1.
+\]
+
+\smallskip
+\noindent\textbf{Case $x=m-1$.}
+The orbit is
+\[
+(m-1,0)\xrightarrow{G^{m-2}}(m-1,m-2)\xrightarrow{A}(0,0).
+\]
+So
+\[
+T_0(m-1)=0,\qquad \rho_0(m-1)=m-2+1=m-1.
+\]
+
+These cases exhaust $x\in \Zm$.
+\end{proof}
+
+\begin{proposition}[splicing of arithmetic runs for color $0$, Case~I]\label{prop:R0-caseI-blocks}
+Assume $m\equiv 0,2\pmod 6$.
+Then $T_0$ is the successor permutation on a cyclic order obtained from two long arithmetic runs together with $O(1)$ bridge vertices:
+\[
+(0,m-2\mid 1,3,5,\dots,m-3\mid 2,4,6,\dots,m-4\mid m-1).
+\]
+Consequently $T_0$ is a single $m$-cycle.
+\end{proposition}
+
+\begin{proof}
+Proposition~\ref{prop:R0-caseI-data} gives
+\[
+T_0(0)=m-2,\qquad T_0(x)=x+2\quad (1\le x\le m-5),\qquad T_0(m-4)=m-1,
+\]
+\[
+T_0(m-3)=2,\qquad T_0(m-2)=1,\qquad T_0(m-1)=0.
+\]
+So the generic action is translation by $+2$ on the long odd and even runs
+\[
+1,3,5,\dots,m-3,\qquad 2,4,6,\dots,m-4,
+\]
+while the exceptional values splice them through the two-point block
+\[
+0\to m-2
+\]
+and the one-point tail
+\[
+m-1\to 0.
+\]
+More explicitly,
+\[
+m-2\to 1,\qquad m-3\to 2,\qquad m-4\to m-1,\qquad m-1\to 0,
+\]
+so $T_0$ is the successor map on the displayed cyclic order.
+Lemma~\ref{lem:cyclic-blocks} now applies.
+\end{proof}
+
+\begin{corollary}\label{cor:R0-caseI}
+If $m\equiv 0,2\pmod 6$, then $R_0$ is a single $m^2$-cycle.
+\end{corollary}
+
+\begin{proof}
+Proposition~\ref{prop:R0-caseI-blocks} shows that $T_0$ is a single $m$-cycle.
+Also
+\[
+\sum_{x\in \Zm}\rho_0(x)=1+(m-3)(m-1)+(2m-3)+(2m-1)=m^2.
+\]
+Lemma~\ref{lem:counting} now applies.
+\end{proof}
+
+\subsubsection{Case II: $m\equiv 4\pmod 6$}
+
+\begin{lemma}\label{lem:R0-caseII-xy}
+Assume $m\equiv 4\pmod 6$.
+In the coordinates $(x,y)=(i+2k,k)$, the return map $R_0$ becomes
+\[
+R_0(x,y)=
+\begin{cases}
+(m-2,0),&(x,y)=(0,0),\\
+(x+3,y+3),&(x,y)\in\{(m-1,m-1),(m-2,m-2)\},\\
+(x+2,y+2),&(x,y)=(m-2,0)\ \text{or}\ (x,y)=(0,m-1)\ \text{or}\ x\equiv 1+2y\pmod m,\ 0\le y\le m-3,\\
+(0,1),&(x,y)=(1,1),\\
+(x+1,y+2),&x=y+1,\ (x,y)\notin\{(1,0),(0,m-1)\},\\
+(x+1,y+1),&\bigl(y=0,\ 2\le x\le m-3\bigr)\ \text{or}\ (x,y)\in\{(0,1),(m-3,m-2),(m-2,m-1)\},\\
+(x,y+1),&\text{otherwise}.
+\end{cases}
+\]
+All arithmetic is modulo $m$.
+\end{lemma}
+
+\begin{proof}
+Again substitute $i=x-2y$ and $k=y$ into the Case~II formula from Appendix~\ref{app:routeE}.
+The generic branch becomes $(x,y)\mapsto(x,y+1)$, and the exceptional branches simplify exactly as shown.
+\end{proof}
+
+As before write
+\[
+G(x,y)=(x,y+1)
+\]
+for the generic move.
+For an odd lane $u\in \Zm$ define the two $R$-heights
+\[
+r_-(u)=\frac{u-1}{2},
+\qquad
+r_+(u)=\frac{u-1}{2}+\frac m2.
+\]
+These are exactly the two solutions $y\in \{0,\dots,m-1\}$ of
+\[
+u\equiv 1+2y\pmod m.
+\]
+
+\begin{proposition}\label{prop:R0-caseII-data}
+Assume $m\equiv 4\pmod 6$.
+Then the first-return map on $L_0$ is given by
+\[
+T_0(0)=m-2,\qquad T_0(1)=4,\qquad T_0(2)=6,\qquad T_0(x)=x+4\ \ (3\le x\le m-7),
+\]
+together with
+\[
+T_0(m-6)=3,\quad T_0(m-5)=m-1,\quad T_0(m-4)=0,\quad T_0(m-3)=2,\quad T_0(m-2)=5,\quad T_0(m-1)=1,
+\]
+and the return times are
+\[
+\rho_0(0)=1,\qquad \rho_0(x)=m-2 \quad (\text{for } 1\le x\le m-7 \text{ or } x=m-4),
+\]
+\[
+\rho_0(m-6)=2m-4,\quad \rho_0(m-2)=2m-4,\quad \rho_0(m-5)=m-1,\quad \rho_0(m-1)=m-1,\quad
+\rho_0(m-3)=2m-3.
+\]
+\end{proposition}
+
+\begin{proof}
+Fix $x\in \Zm$ and start from $(x,0)\in L_0$.
+
+\smallskip
+\noindent\textbf{Case $x=0$.}
+By the special point branch,
+\[
+(0,0)\xrightarrow{P}(m-2,0),
+\]
+so $T_0(0)=m-2$ and $\rho_0(0)=1$.
+
+\smallskip
+\noindent\textbf{Case $x=1$.}
+The orbit is
+\[
+(1,0)\xrightarrow{R}(3,2)\xrightarrow{A}(4,4)\xrightarrow{G^{m-4}}(4,0).
+\]
+So
+\[
+T_0(1)=4,\qquad \rho_0(1)=1+1+(m-4)=m-2.
+\]
+
+\smallskip
+\noindent\textbf{Case $x=2$.}
+The orbit is
+\[
+(2,0)\xrightarrow{B}(3,1)\xrightarrow{R}(5,3)\xrightarrow{G}(5,4)\xrightarrow{A}(6,6)
+\xrightarrow{G^{m-6}}(6,0),
+\]
+hence
+\[
+T_0(2)=6,\qquad \rho_0(2)=1+1+1+1+(m-6)=m-2.
+\]
+
+\smallskip
+\noindent\textbf{Case $x$ odd, $3\le x\le m-7$.}
+The first move is
+\[
+(x,0)\xrightarrow{B}(x+1,1),
+\]
+and the lane $x+1$ is even, so there is no $R$-branch on that lane.
+The next defect is the $A$-point $(x+1,x)$.
+Thus
+\[
+(x,0)\xrightarrow{B}(x+1,1)\xrightarrow{G^{x-1}}(x+1,x)\xrightarrow{A}(x+2,x+2).
+\]
+Now the orbit lies on the odd lane $x+2$.
+Since the lower $R$-height
+\[
+r_-(x+2)=\frac{x+1}{2}
+\]
+is already behind the current value $y=x+2$, the next $R$-point is the upper one,
+\[
+r_+(x+2)=\frac{x+1}{2}+\frac m2.
+\]
+Because $x\le m-7$, this lies strictly between $x+2$ and $m$.
+So
+\[
+(x+2,x+2)\xrightarrow{G^{\frac{m-x-3}{2}}}\left(x+2,r_+(x+2)\right)\xrightarrow{R}\left(x+4,r_+(x+2)+2\right).
+\]
+The new lane $x+4$ is even, so there is no further $R$-branch.
+Its only $A$-point is at height $x+3$, already behind the current height $r_+(x+2)+2$.
+The $B$-branch occurs only at $y=0$ or at the isolated points $(0,1)$, $(m-3,m-2)$, $(m-2,m-1)$, none of
+which lies ahead on lane $x+4$.
+Hence every remaining step before the return to $L_0$ is generic, and therefore
+\[
+T_0(x)=x+4.
+\]
+The time is
+\[
+\rho_0(x)
+=
+1+(x-1)+1+\frac{m-x-3}{2}+1+\frac{m-x-5}{2}
+=
+m-2.
+\]
+
+\smallskip
+\noindent\textbf{Case $x$ even, $4\le x\le m-8$.}
+The orbit begins
+\[
+(x,0)\xrightarrow{B}(x+1,1),
+\]
+and now the lane $x+1$ is odd.
+Its next $R$-height is the lower one
+\[
+r_-(x+1)=\frac{x}{2},
+\]
+so
+\[
+(x+1,1)\xrightarrow{G^{\frac{x}{2}-1}}\left(x+1,\frac{x}{2}\right)\xrightarrow{R}\left(x+3,\frac{x}{2}+2\right).
+\]
+The new lane $x+3$ is odd.
+Its lower $R$-height is $x/2+1$, already behind the current height, while the $A$-height is $x+2$ and,
+because $x\le m-8$, this comes before the upper $R$-height.
+Thus
+\[
+\left(x+3,\frac{x}{2}+2\right)\xrightarrow{G^{\frac{x}{2}}}(x+3,x+2)\xrightarrow{A}(x+4,x+4).
+\]
+The lane $x+4$ is even, so there is no $R$-branch on it.
+Its only $A$-point is at height $x+3$, already behind the current height $x+4$, and the $B$-branch occurs
+only at $y=0$ or at the isolated points $(0,1)$, $(m-3,m-2)$, $(m-2,m-1)$, none of which lies ahead on
+lane $x+4$.
+So
+\[
+T_0(x)=x+4,
+\]
+and
+\[
+\rho_0(x)
+=
+1+\left(\frac{x}{2}-1\right)+1+\frac{x}{2}+1+(m-x-4)
+=
+m-2.
+\]
+
+\smallskip
+\noindent\textbf{Case $x=m-6$.}
+Here the orbit is
+\[
+(m-6,0)\xrightarrow{B}(m-5,1)
+\xrightarrow{G^{\frac{m-8}{2}}}\left(m-5,\frac{m-6}{2}\right)\xrightarrow{R}\left(m-3,\frac m2-1\right)
+\xrightarrow{G^{\frac{m-6}{2}}}(m-3,m-4)\xrightarrow{A}(m-2,m-2)
+\]
+\[
+\xrightarrow{Q}(1,1)\xrightarrow{S}(0,1)\xrightarrow{B}(1,2)
+\xrightarrow{G^{\frac{m-4}{2}}}\left(1,\frac m2\right)\xrightarrow{R}\left(3,\frac m2+2\right)
+\xrightarrow{G^{\frac{m-4}{2}}}(3,0).
+\]
+Thus
+\[
+T_0(m-6)=3,
+\]
+and
+\[
+\rho_0(m-6)=
+1+\frac{m-8}{2}+1+\frac{m-6}{2}+1+1+1+1+\frac{m-4}{2}+1+\frac{m-4}{2}
+=
+2m-4.
+\]
+
+\smallskip
+\noindent\textbf{Case $x=m-5$.}
+The orbit is
+\[
+(m-5,0)\xrightarrow{B}(m-4,1)\xrightarrow{G^{m-6}}(m-4,m-5)\xrightarrow{A}(m-3,m-3)
+\xrightarrow{G}(m-3,m-2)\xrightarrow{B}(m-2,m-1)\xrightarrow{B}(m-1,0).
+\]
+Therefore
+\[
+T_0(m-5)=m-1,\qquad
+\rho_0(m-5)=1+(m-6)+1+1+1+1=m-1.
+\]
+
+\smallskip
+\noindent\textbf{Case $x=m-4$.}
+The orbit is
+\[
+(m-4,0)\xrightarrow{B}(m-3,1)\xrightarrow{G^{\frac m2-3}}\left(m-3,\frac{m-4}{2}\right)
+\xrightarrow{R}\left(m-1,\frac m2\right)\xrightarrow{G^{\frac m2-2}}(m-1,m-2)\xrightarrow{A}(0,0).
+\]
+So
+\[
+T_0(m-4)=0,\qquad
+\rho_0(m-4)=1+\left(\frac m2-3\right)+1+\left(\frac m2-2\right)+1=m-2.
+\]
+
+\smallskip
+\noindent\textbf{Case $x=m-3$.}
+The orbit is
+\[
+(m-3,0)\xrightarrow{B}(m-2,1)\xrightarrow{G^{m-4}}(m-2,m-3)\xrightarrow{A}(m-1,m-1)
+\xrightarrow{Q}(2,2)\xrightarrow{G^{m-2}}(2,0).
+\]
+Hence
+\[
+T_0(m-3)=2,\qquad
+\rho_0(m-3)=1+(m-4)+1+1+(m-2)=2m-3.
+\]
+
+\smallskip
+\noindent\textbf{Case $x=m-2$.}
+The orbit is
+\[
+(m-2,0)\xrightarrow{R}(0,2)\xrightarrow{G^{m-3}}(0,m-1)\xrightarrow{R}(2,1)\xrightarrow{A}(3,3)
+\xrightarrow{G^{\frac{m-4}{2}}}\left(3,\frac m2+1\right)\xrightarrow{R}\left(5,\frac m2+3\right)
+\xrightarrow{G^{\frac{m-6}{2}}}(5,0).
+\]
+Therefore
+\[
+T_0(m-2)=5,
+\]
+and
+\[
+\rho_0(m-2)=1+(m-3)+1+1+\frac{m-4}{2}+1+\frac{m-6}{2}=2m-4.
+\]
+
+\smallskip
+\noindent\textbf{Case $x=m-1$.}
+The orbit is
+\[
+(m-1,0)\xrightarrow{G^{\frac m2-1}}\left(m-1,\frac m2-1\right)\xrightarrow{R}\left(1,\frac m2+1\right)
+\xrightarrow{G^{\frac m2-1}}(1,0).
+\]
+Hence
+\[
+T_0(m-1)=1,\qquad
+\rho_0(m-1)=\left(\frac m2-1\right)+1+\left(\frac m2-1\right)=m-1.
+\]
+
+These cases exhaust $x\in \Zm$.
+\end{proof}
+
+\begin{proposition}[splicing of arithmetic runs for color $0$, Case~II]\label{prop:R0-caseII-blocks}
+Assume $m\equiv 4\pmod 6$.
+Then $T_0$ is the successor permutation on a cyclic order obtained from four long arithmetic runs together with $O(1)$ bridge vertices.
+More precisely, when $m\equiv 10\pmod{12}$ one has
+\[
+(0,m-2,5,9,\dots,m-1,1\mid 4,8,\dots,m-6\mid 3,7,\dots,m-3\mid 2,6,\dots,m-4),
+\]
+while when $m\equiv 4\pmod{12}$ one has
+\[
+(0,m-2,5,9,\dots,m-3\mid 2,6,\dots,m-6\mid 3,7,\dots,m-1,1\mid 4,8,\dots,m-4).
+\]
+Consequently $T_0$ is a single $m$-cycle.
+\end{proposition}
+
+\begin{proof}
+Proposition~\ref{prop:R0-caseII-data} shows that, away from the boundary values
+\[
+0,1,2,m-6,m-5,m-4,m-3,m-2,m-1,
+\]
+the map acts by $x\mapsto x+4$.
+Thus the generic behavior is a disjoint union of long arithmetic runs modulo $4$, and the exceptional values determine only how these runs are spliced together.
+
+When $m\equiv 10\pmod{12}$, the endpoint values give
+\[
+0\to m-2\to 5,\qquad m-1\to 1,\qquad m-6\to 3,\qquad m-3\to 2,\qquad m-4\to 0,
+\]
+while the generic rule $x\mapsto x+4$ propagates along the runs
+\[
+5,9,\dots,m-1,\qquad 4,8,\dots,m-6,\qquad 3,7,\dots,m-3,\qquad 2,6,\dots,m-4.
+\]
+This is exactly the first displayed cyclic concatenation.
+
+When $m\equiv 4\pmod{12}$, the endpoint values give
+\[
+0\to m-2\to 5,\qquad m-3\to 2,\qquad m-6\to 3,\qquad m-1\to 1,\qquad m-4\to 0,
+\]
+and the same generic rule $x\mapsto x+4$ propagates along the runs
+\[
+5,9,\dots,m-3,\qquad 2,6,\dots,m-6,\qquad 3,7,\dots,m-1,\qquad 4,8,\dots,m-4.
+\]
+So this time one obtains the second displayed cyclic concatenation.
+
+In either congruence class Lemma~\ref{lem:cyclic-blocks} applies, and $T_0$ is a single $m$-cycle.
+\end{proof}
+
+\begin{corollary}\label{cor:R0-caseII}
+If $m\equiv 4\pmod 6$, then $R_0$ is a single $m^2$-cycle.
+\end{corollary}
+
+\begin{proof}
+Proposition~\ref{prop:R0-caseII-blocks} shows that $T_0$ is a single $m$-cycle.
+Also
+\[
+\sum_{x\in \Zm}\rho_0(x)=1+(m-6)(m-2)+2(2m-4)+2(m-1)+(2m-3)=m^2.
+\]
+Lemma~\ref{lem:counting} finishes the proof.
+\end{proof}
+
+\begin{corollary}\label{cor:R0-all}
+For every even $m\ge 6$, the return map $R_0$ is a single $m^2$-cycle on $P_0$.
+\end{corollary}
+
+\begin{proof}
+Combine Corollaries~\ref{cor:R0-caseI} and \ref{cor:R0-caseII}.
+\end{proof}
+
+
+\section{An explicit decomposition for $m=4$}\label{app:m4}
+
+For $m=4$, define a direction assignment by specifying at each vertex $(i,j,k)\in(\mathbb Z_4)^3$ a direction triple $(d_0,d_1,d_2)\in\{0,1,2\}^3$, where $0,1,2$ correspond respectively to the directions $+i,+j,+k$.
+The entry in the table for fixed $i$ and coordinates $(j,k)$ is the three-digit word $d_0d_1d_2$.
+
+\begin{center}
+\begin{minipage}[t]{0.48\linewidth}\centering\small
+$i=0$\\[2pt]
+\begin{tabular}{c|cccc}
+\diagbox{j}{k} & 0 & 1 & 2 & 3\\\hline
+0 & \texttt{210} & \texttt{012} & \texttt{120} & \texttt{021}\\
+1 & \texttt{201} & \texttt{021} & \texttt{120} & \texttt{210}\\
+2 & \texttt{120} & \texttt{012} & \texttt{201} & \texttt{210}\\
+3 & \texttt{201} & \texttt{201} & \texttt{210} & \texttt{102}\\
+\end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\linewidth}\centering\small
+$i=1$\\[2pt]
+\begin{tabular}{c|cccc}
+\diagbox{j}{k} & 0 & 1 & 2 & 3\\\hline
+0 & \texttt{120} & \texttt{210} & \texttt{120} & \texttt{210}\\
+1 & \texttt{102} & \texttt{021} & \texttt{201} & \texttt{012}\\
+2 & \texttt{021} & \texttt{201} & \texttt{210} & \texttt{120}\\
+3 & \texttt{210} & \texttt{201} & \texttt{012} & \texttt{201}\\
+\end{tabular}
+\end{minipage}
+
+\vspace{1em}
+\begin{minipage}[t]{0.48\linewidth}\centering\small
+$i=2$\\[2pt]
+\begin{tabular}{c|cccc}
+\diagbox{j}{k} & 0 & 1 & 2 & 3\\\hline
+0 & \texttt{021} & \texttt{210} & \texttt{201} & \texttt{021}\\
+1 & \texttt{012} & \texttt{201} & \texttt{120} & \texttt{210}\\
+2 & \texttt{210} & \texttt{120} & \texttt{210} & \texttt{102}\\
+3 & \texttt{102} & \texttt{102} & \texttt{012} & \texttt{210}\\
+\end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\linewidth}\centering\small
+$i=3$\\[2pt]
+\begin{tabular}{c|cccc}
+\diagbox{j}{k} & 0 & 1 & 2 & 3\\\hline
+0 & \texttt{021} & \texttt{201} & \texttt{012} & \texttt{120}\\
+1 & \texttt{210} & \texttt{210} & \texttt{120} & \texttt{021}\\
+2 & \texttt{201} & \texttt{021} & \texttt{201} & \texttt{210}\\
+3 & \texttt{201} & \texttt{120} & \texttt{201} & \texttt{210}\\
+\end{tabular}
+\end{minipage}
+\end{center}
+
+The direction table above is the finite witness.
+Because $D(4)$ has only $64$ vertices, the table alone is sufficient for a complete finite verification: one can follow each color from any starting vertex and check that the orbit has length $64$.
+For convenience, the accompanying file \texttt{m4\_witness.json} records the direction table together with the three color orbits obtained by starting from $(0,0,0)$, and the script \texttt{verify\_m4\_witness.py} automates this finite audit:
+\begin{enumerate}[leftmargin=2.2em]
+\item it checks that every table entry is a permutation of $(0,1,2)$;
+\item it follows each color from $(0,0,0)$ using the table and verifies that the orbit has length $64$ before returning;
+\item it confirms that the stored machine-readable cycle lists agree with those computed directly from the table.
+\end{enumerate}
+This keeps the appendix readable while preserving a complete explicit witness for the boundary case $m=4$.
+
+\section{Verification artifacts}\label{app:verification}
+
+The verification artifacts focus on the even case $m\ge 6$, which involves the longest case analysis.
+The odd construction is given by a short closed form in the main text.
+For the boundary case $m=4$, the same directory includes the finite witness \texttt{m4\_witness.json} and its checker \texttt{verify\_m4\_witness.py}.
+
+The main script \texttt{route\_e\_even.py} checks that, for every even $m$ with $6\le m\le 60$:
+\begin{enumerate}[leftmargin=2.2em]
+\item the resulting direction assignment is a valid coloring (each color is a permutation and the three outgoing arcs at every vertex are distinct);
+\item the return maps on $P_0$ agree with the displayed piecewise formulas;
+\item the induced return maps on $P_0$ are single $m^2$-cycles;
+\item each color permutation is a single Hamilton cycle.
+\end{enumerate}
+Two auxiliary scripts target the most verification-heavy steps in the appendices:
+\begin{enumerate}[leftmargin=2.2em,label=(\alph*)]
+\item \texttt{routee\_return\_formula\_tables\_check.py} checks the partition sets, low-layer words, and return-map formulas of Proposition~\ref{prop:routeE-return-formulas};
+\item \texttt{routee\_first\_return\_check.py} checks the appendix first-return formulas against the actual return-map dynamics on the stated transversals.
+\end{enumerate}
+For larger even $m$, the main script can also validate the construction by checking only the closed-form first-return maps and return-time sums.
+These computations are not part of the proofs in the present paper; they serve as independent verification of the even-case construction and as regression checks for the displayed closed-form formulas.

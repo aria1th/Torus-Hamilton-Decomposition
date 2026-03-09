@@ -1,0 +1,20 @@
+{
+  "dim": 3,
+  "rule_source": "witness:artifacts/4d_generalization/smoke_exact_d3_m3.json",
+  "family_status": "candidate_pass",
+  "results": [
+    {
+      "m": 3,
+      "classification": "candidate_pass",
+      "parity": "odd",
+      "m_mod_6": 3,
+      "m_mod_12": 3,
+      "rule_valid": true,
+      "all_hamilton": true,
+      "sign_product": 1,
+      "defect_vertex_count": 21,
+      "low_layer_only": true,
+      "json_path": "artifacts/4d_generalization/d3_smoke_exact_d3_m3/m3.json"
+    }
+  ]
+}

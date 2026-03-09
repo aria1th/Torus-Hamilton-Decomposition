@@ -1,0 +1,14 @@
+m,classification,parity,m_mod_6,m_mod_12,rule_valid,all_hamilton,sign_product,defect_vertex_count,low_layer_only,json_path
+3,candidate_pass,odd,3,3,True,True,1,34,True,artifacts/4d_generalization/d4_hyperplane_fusion_low_layers_v1_direction_tuple/m3.json
+4,candidate_pass,even,4,4,True,True,1,77,True,artifacts/4d_generalization/d4_hyperplane_fusion_low_layers_v1_direction_tuple/m4.json
+5,candidate_pass,odd,5,5,True,True,1,146,True,artifacts/4d_generalization/d4_hyperplane_fusion_low_layers_v1_direction_tuple/m5.json
+6,candidate_pass,even,0,6,True,True,1,247,True,artifacts/4d_generalization/d4_hyperplane_fusion_low_layers_v1_direction_tuple/m6.json
+7,candidate_pass,odd,1,7,True,True,1,386,True,artifacts/4d_generalization/d4_hyperplane_fusion_low_layers_v1_direction_tuple/m7.json
+8,candidate_pass,even,2,8,True,True,1,569,True,artifacts/4d_generalization/d4_hyperplane_fusion_low_layers_v1_direction_tuple/m8.json
+9,candidate_pass,odd,3,9,True,True,1,802,True,artifacts/4d_generalization/d4_hyperplane_fusion_low_layers_v1_direction_tuple/m9.json
+10,candidate_pass,even,4,10,True,True,1,1091,True,artifacts/4d_generalization/d4_hyperplane_fusion_low_layers_v1_direction_tuple/m10.json
+11,candidate_pass,odd,5,11,True,True,1,1442,True,artifacts/4d_generalization/d4_hyperplane_fusion_low_layers_v1_direction_tuple/m11.json
+12,candidate_pass,even,0,0,True,True,1,1861,True,artifacts/4d_generalization/d4_hyperplane_fusion_low_layers_v1_direction_tuple/m12.json
+13,candidate_pass,odd,1,1,True,True,1,2354,True,artifacts/4d_generalization/d4_hyperplane_fusion_low_layers_v1_direction_tuple/m13.json
+14,candidate_pass,even,2,2,True,True,1,2927,True,artifacts/4d_generalization/d4_hyperplane_fusion_low_layers_v1_direction_tuple/m14.json
+15,candidate_pass,odd,3,3,True,True,1,3586,True,artifacts/4d_generalization/d4_hyperplane_fusion_low_layers_v1_direction_tuple/m15.json

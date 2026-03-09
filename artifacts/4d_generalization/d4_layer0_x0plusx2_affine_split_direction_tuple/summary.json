@@ -1,0 +1,111 @@
+{
+  "dim": 4,
+  "rule_source": "candidates/layer0_x0plusx2_affine_split.py:direction_tuple",
+  "family_status": "candidate_fail",
+  "results": [
+    {
+      "m": 3,
+      "classification": "candidate_fail",
+      "parity": "odd",
+      "m_mod_6": 3,
+      "m_mod_12": 3,
+      "rule_valid": true,
+      "all_hamilton": false,
+      "sign_product": 1,
+      "defect_vertex_count": 27,
+      "low_layer_only": true,
+      "json_path": "artifacts/4d_generalization/d4_layer0_x0plusx2_affine_split_direction_tuple/m3.json"
+    },
+    {
+      "m": 4,
+      "classification": "candidate_fail",
+      "parity": "even",
+      "m_mod_6": 4,
+      "m_mod_12": 4,
+      "rule_valid": true,
+      "all_hamilton": false,
+      "sign_product": 1,
+      "defect_vertex_count": 64,
+      "low_layer_only": true,
+      "json_path": "artifacts/4d_generalization/d4_layer0_x0plusx2_affine_split_direction_tuple/m4.json"
+    },
+    {
+      "m": 5,
+      "classification": "candidate_fail",
+      "parity": "odd",
+      "m_mod_6": 5,
+      "m_mod_12": 5,
+      "rule_valid": true,
+      "all_hamilton": false,
+      "sign_product": 1,
+      "defect_vertex_count": 125,
+      "low_layer_only": true,
+      "json_path": "artifacts/4d_generalization/d4_layer0_x0plusx2_affine_split_direction_tuple/m5.json"
+    },
+    {
+      "m": 6,
+      "classification": "candidate_fail",
+      "parity": "even",
+      "m_mod_6": 0,
+      "m_mod_12": 6,
+      "rule_valid": true,
+      "all_hamilton": false,
+      "sign_product": 1,
+      "defect_vertex_count": 216,
+      "low_layer_only": true,
+      "json_path": "artifacts/4d_generalization/d4_layer0_x0plusx2_affine_split_direction_tuple/m6.json"
+    },
+    {
+      "m": 7,
+      "classification": "candidate_fail",
+      "parity": "odd",
+      "m_mod_6": 1,
+      "m_mod_12": 7,
+      "rule_valid": true,
+      "all_hamilton": false,
+      "sign_product": 1,
+      "defect_vertex_count": 343,
+      "low_layer_only": true,
+      "json_path": "artifacts/4d_generalization/d4_layer0_x0plusx2_affine_split_direction_tuple/m7.json"
+    },
+    {
+      "m": 8,
+      "classification": "candidate_fail",
+      "parity": "even",
+      "m_mod_6": 2,
+      "m_mod_12": 8,
+      "rule_valid": true,
+      "all_hamilton": false,
+      "sign_product": 1,
+      "defect_vertex_count": 512,
+      "low_layer_only": true,
+      "json_path": "artifacts/4d_generalization/d4_layer0_x0plusx2_affine_split_direction_tuple/m8.json"
+    },
+    {
+      "m": 10,
+      "classification": "candidate_fail",
+      "parity": "even",
+      "m_mod_6": 4,
+      "m_mod_12": 10,
+      "rule_valid": true,
+      "all_hamilton": false,
+      "sign_product": 1,
+      "defect_vertex_count": 1000,
+      "low_layer_only": true,
+      "json_path": "artifacts/4d_generalization/d4_layer0_x0plusx2_affine_split_direction_tuple/m10.json"
+    },
+    {
+      "m": 12,
+      "classification": "candidate_fail",
+      "parity": "even",
+      "m_mod_6": 0,
+      "m_mod_12": 0,
+      "rule_valid": true,
+      "all_hamilton": false,
+      "sign_product": 1,
+      "defect_vertex_count": 1728,
+      "low_layer_only": true,
+      "json_path": "artifacts/4d_generalization/d4_layer0_x0plusx2_affine_split_direction_tuple/m12.json"
+    }
+  ]
+}

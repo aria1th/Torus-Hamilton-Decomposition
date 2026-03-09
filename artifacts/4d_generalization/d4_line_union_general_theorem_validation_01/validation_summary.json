@@ -1,0 +1,739 @@
+{
+  "task_id": "D4-LINE-UNION-VALIDATE-01",
+  "candidate_rule": "candidates/hyperplane_fusion_line_union_v1.py",
+  "tested_m_values": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    15,
+    20,
+    25,
+    30,
+    40,
+    50,
+    75,
+    100,
+    200,
+    500,
+    1000,
+    2000,
+    1000000,
+    1000000000
+  ],
+  "mode": "auto",
+  "thresholds": {
+    "exact_max": 12,
+    "formula_max": 30,
+    "odometer_max": 2000
+  },
+  "runtime_sec": 28.652728125452995,
+  "module_matches_line_union_code": true,
+  "results": [
+    {
+      "mode": "exact",
+      "elapsed_sec": 0.00041058845818042755,
+      "all_hamilton": true,
+      "sign_product": 1,
+      "color_cycle_counts": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "m": 3,
+      "ok": true
+    },
+    {
+      "mode": "exact",
+      "elapsed_sec": 0.0011427346616983414,
+      "all_hamilton": true,
+      "sign_product": 1,
+      "color_cycle_counts": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "m": 4,
+      "ok": true
+    },
+    {
+      "mode": "exact",
+      "elapsed_sec": 0.00275333970785141,
+      "all_hamilton": true,
+      "sign_product": 1,
+      "color_cycle_counts": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "m": 5,
+      "ok": true
+    },
+    {
+      "mode": "exact",
+      "elapsed_sec": 0.005510540679097176,
+      "all_hamilton": true,
+      "sign_product": 1,
+      "color_cycle_counts": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "m": 6,
+      "ok": true
+    },
+    {
+      "mode": "exact",
+      "elapsed_sec": 0.010183142498135567,
+      "all_hamilton": true,
+      "sign_product": 1,
+      "color_cycle_counts": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "m": 7,
+      "ok": true
+    },
+    {
+      "mode": "exact",
+      "elapsed_sec": 0.01725291647017002,
+      "all_hamilton": true,
+      "sign_product": 1,
+      "color_cycle_counts": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "m": 8,
+      "ok": true
+    },
+    {
+      "mode": "exact",
+      "elapsed_sec": 0.027173105627298355,
+      "all_hamilton": true,
+      "sign_product": 1,
+      "color_cycle_counts": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "m": 9,
+      "ok": true
+    },
+    {
+      "mode": "exact",
+      "elapsed_sec": 0.042055096477270126,
+      "all_hamilton": true,
+      "sign_product": 1,
+      "color_cycle_counts": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "m": 10,
+      "ok": true
+    },
+    {
+      "mode": "exact",
+      "elapsed_sec": 0.08888174779713154,
+      "all_hamilton": true,
+      "sign_product": 1,
+      "color_cycle_counts": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "m": 12,
+      "ok": true
+    },
+    {
+      "mode": "formula",
+      "elapsed_sec": 0.23528311401605606,
+      "support_formula": "2m - 1",
+      "support_count": 29,
+      "all_formula_checks_pass": true,
+      "by_color": [
+        {
+          "color": 0,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            14
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            225
+          ]
+        },
+        {
+          "color": 1,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            225
+          ]
+        },
+        {
+          "color": 2,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            14
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            225
+          ]
+        },
+        {
+          "color": 3,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            225
+          ]
+        }
+      ],
+      "m": 15,
+      "ok": true
+    },
+    {
+      "mode": "formula",
+      "elapsed_sec": 0.723963025957346,
+      "support_formula": "2m - 1",
+      "support_count": 39,
+      "all_formula_checks_pass": true,
+      "by_color": [
+        {
+          "color": 0,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            19
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            400
+          ]
+        },
+        {
+          "color": 1,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            400
+          ]
+        },
+        {
+          "color": 2,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            19
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            400
+          ]
+        },
+        {
+          "color": 3,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            400
+          ]
+        }
+      ],
+      "m": 20,
+      "ok": true
+    },
+    {
+      "mode": "formula",
+      "elapsed_sec": 1.7213036324828863,
+      "support_formula": "2m - 1",
+      "support_count": 49,
+      "all_formula_checks_pass": true,
+      "by_color": [
+        {
+          "color": 0,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            24
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            625
+          ]
+        },
+        {
+          "color": 1,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            625
+          ]
+        },
+        {
+          "color": 2,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            24
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            625
+          ]
+        },
+        {
+          "color": 3,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            625
+          ]
+        }
+      ],
+      "m": 25,
+      "ok": true
+    },
+    {
+      "mode": "formula",
+      "elapsed_sec": 3.5394340604543686,
+      "support_formula": "2m - 1",
+      "support_count": 59,
+      "all_formula_checks_pass": true,
+      "by_color": [
+        {
+          "color": 0,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            29
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            900
+          ]
+        },
+        {
+          "color": 1,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            900
+          ]
+        },
+        {
+          "color": 2,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            29
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            900
+          ]
+        },
+        {
+          "color": 3,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            900
+          ]
+        }
+      ],
+      "m": 30,
+      "ok": true
+    },
+    {
+      "mode": "odometer",
+      "elapsed_sec": 0.005766388028860092,
+      "support_formula": "2m - 1",
+      "support_count": 79,
+      "all_formula_checks_pass": true,
+      "by_color": [
+        {
+          "color": 0,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 1600,
+          "Q_single_cycle_certified": true
+        },
+        {
+          "color": 1,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 1600,
+          "Q_single_cycle_certified": true
+        },
+        {
+          "color": 2,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 1600,
+          "Q_single_cycle_certified": true
+        },
+        {
+          "color": 3,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 1600,
+          "Q_single_cycle_certified": true
+        }
+      ],
+      "proof_note_dependency": "Assumes the displayed T_c formulas and odometer theorem from RoundX/d4_line_union_proof_note_draft.md",
+      "m": 40,
+      "ok": true
+    },
+    {
+      "mode": "odometer",
+      "elapsed_sec": 0.009024998173117638,
+      "support_formula": "2m - 1",
+      "support_count": 99,
+      "all_formula_checks_pass": true,
+      "by_color": [
+        {
+          "color": 0,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 2500,
+          "Q_single_cycle_certified": true
+        },
+        {
+          "color": 1,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 2500,
+          "Q_single_cycle_certified": true
+        },
+        {
+          "color": 2,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 2500,
+          "Q_single_cycle_certified": true
+        },
+        {
+          "color": 3,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 2500,
+          "Q_single_cycle_certified": true
+        }
+      ],
+      "proof_note_dependency": "Assumes the displayed T_c formulas and odometer theorem from RoundX/d4_line_union_proof_note_draft.md",
+      "m": 50,
+      "ok": true
+    },
+    {
+      "mode": "odometer",
+      "elapsed_sec": 0.020195379853248596,
+      "support_formula": "2m - 1",
+      "support_count": 149,
+      "all_formula_checks_pass": true,
+      "by_color": [
+        {
+          "color": 0,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 5625,
+          "Q_single_cycle_certified": true
+        },
+        {
+          "color": 1,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 5625,
+          "Q_single_cycle_certified": true
+        },
+        {
+          "color": 2,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 5625,
+          "Q_single_cycle_certified": true
+        },
+        {
+          "color": 3,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 5625,
+          "Q_single_cycle_certified": true
+        }
+      ],
+      "proof_note_dependency": "Assumes the displayed T_c formulas and odometer theorem from RoundX/d4_line_union_proof_note_draft.md",
+      "m": 75,
+      "ok": true
+    },
+    {
+      "mode": "odometer",
+      "elapsed_sec": 0.03576570563018322,
+      "support_formula": "2m - 1",
+      "support_count": 199,
+      "all_formula_checks_pass": true,
+      "by_color": [
+        {
+          "color": 0,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 10000,
+          "Q_single_cycle_certified": true
+        },
+        {
+          "color": 1,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 10000,
+          "Q_single_cycle_certified": true
+        },
+        {
+          "color": 2,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 10000,
+          "Q_single_cycle_certified": true
+        },
+        {
+          "color": 3,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 10000,
+          "Q_single_cycle_certified": true
+        }
+      ],
+      "proof_note_dependency": "Assumes the displayed T_c formulas and odometer theorem from RoundX/d4_line_union_proof_note_draft.md",
+      "m": 100,
+      "ok": true
+    },
+    {
+      "mode": "odometer",
+      "elapsed_sec": 0.14331936463713646,
+      "support_formula": "2m - 1",
+      "support_count": 399,
+      "all_formula_checks_pass": true,
+      "by_color": [
+        {
+          "color": 0,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 40000,
+          "Q_single_cycle_certified": true
+        },
+        {
+          "color": 1,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 40000,
+          "Q_single_cycle_certified": true
+        },
+        {
+          "color": 2,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 40000,
+          "Q_single_cycle_certified": true
+        },
+        {
+          "color": 3,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 40000,
+          "Q_single_cycle_certified": true
+        }
+      ],
+      "proof_note_dependency": "Assumes the displayed T_c formulas and odometer theorem from RoundX/d4_line_union_proof_note_draft.md",
+      "m": 200,
+      "ok": true
+    },
+    {
+      "mode": "odometer",
+      "elapsed_sec": 0.9906083475798368,
+      "support_formula": "2m - 1",
+      "support_count": 999,
+      "all_formula_checks_pass": true,
+      "by_color": [
+        {
+          "color": 0,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 250000,
+          "Q_single_cycle_certified": true
+        },
+        {
+          "color": 1,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 250000,
+          "Q_single_cycle_certified": true
+        },
+        {
+          "color": 2,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 250000,
+          "Q_single_cycle_certified": true
+        },
+        {
+          "color": 3,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 250000,
+          "Q_single_cycle_certified": true
+        }
+      ],
+      "proof_note_dependency": "Assumes the displayed T_c formulas and odometer theorem from RoundX/d4_line_union_proof_note_draft.md",
+      "m": 500,
+      "ok": true
+    },
+    {
+      "mode": "odometer",
+      "elapsed_sec": 4.186553495004773,
+      "support_formula": "2m - 1",
+      "support_count": 1999,
+      "all_formula_checks_pass": true,
+      "by_color": [
+        {
+          "color": 0,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 1000000,
+          "Q_single_cycle_certified": true
+        },
+        {
+          "color": 1,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 1000000,
+          "Q_single_cycle_certified": true
+        },
+        {
+          "color": 2,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 1000000,
+          "Q_single_cycle_certified": true
+        },
+        {
+          "color": 3,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 1000000,
+          "Q_single_cycle_certified": true
+        }
+      ],
+      "proof_note_dependency": "Assumes the displayed T_c formulas and odometer theorem from RoundX/d4_line_union_proof_note_draft.md",
+      "m": 1000,
+      "ok": true
+    },
+    {
+      "mode": "odometer",
+      "elapsed_sec": 16.844784311950207,
+      "support_formula": "2m - 1",
+      "support_count": 3999,
+      "all_formula_checks_pass": true,
+      "by_color": [
+        {
+          "color": 0,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 4000000,
+          "Q_single_cycle_certified": true
+        },
+        {
+          "color": 1,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 4000000,
+          "Q_single_cycle_certified": true
+        },
+        {
+          "color": 2,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 4000000,
+          "Q_single_cycle_certified": true
+        },
+        {
+          "color": 3,
+          "odometer_conjugacy_verified": true,
+          "checked_points": 4000000,
+          "Q_single_cycle_certified": true
+        }
+      ],
+      "proof_note_dependency": "Assumes the displayed T_c formulas and odometer theorem from RoundX/d4_line_union_proof_note_draft.md",
+      "m": 2000,
+      "ok": true
+    },
+    {
+      "mode": "certificate",
+      "elapsed_sec": 5.597248673439026e-06,
+      "support_formula": "2m - 1",
+      "support_count": 1999999,
+      "Q_single_cycle_certified": true,
+      "full_hamilton_certified": true,
+      "odometer_conjugacies": {
+        "T0": "(u,v)=(1-b,-a)",
+        "T1": "(u,v)=(-a-1,-b)",
+        "T2": "(u,v)=(b-2,a)",
+        "T3": "(u,v)=(a,b)"
+      },
+      "proof_note_dependency": "Pure proof-backed certificate; no state sweep is performed at this m.",
+      "m": 1000000,
+      "ok": true
+    },
+    {
+      "mode": "certificate",
+      "elapsed_sec": 9.685754776000977e-08,
+      "support_formula": "2m - 1",
+      "support_count": 1999999999,
+      "Q_single_cycle_certified": true,
+      "full_hamilton_certified": true,
+      "odometer_conjugacies": {
+        "T0": "(u,v)=(1-b,-a)",
+        "T1": "(u,v)=(-a-1,-b)",
+        "T2": "(u,v)=(b-2,a)",
+        "T3": "(u,v)=(a,b)"
+      },
+      "proof_note_dependency": "Pure proof-backed certificate; no state sweep is performed at this m.",
+      "m": 1000000000,
+      "ok": true
+    }
+  ]
+}

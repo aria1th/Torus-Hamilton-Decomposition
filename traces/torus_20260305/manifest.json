@@ -1,0 +1,90 @@
+{
+  "created_utc": "2026-03-05T06:39:25Z",
+  "codex_swap_traces": [
+    {
+      "m": 3,
+      "path": "artifacts/torus_20260305/codex_swap_traces/codex_swap_trace_m3_seed0.json",
+      "hamilton_success": true,
+      "accepted_swap_count": 5,
+      "final_cycle_counts": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "m": 5,
+      "path": "artifacts/torus_20260305/codex_swap_traces/codex_swap_trace_m5_seed0.json",
+      "hamilton_success": true,
+      "accepted_swap_count": 26,
+      "final_cycle_counts": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "m": 7,
+      "path": "artifacts/torus_20260305/codex_swap_traces/codex_swap_trace_m7_seed0.json",
+      "hamilton_success": true,
+      "accepted_swap_count": 15,
+      "final_cycle_counts": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "m": 9,
+      "path": "artifacts/torus_20260305/codex_swap_traces/codex_swap_trace_m9_seed0.json",
+      "hamilton_success": true,
+      "accepted_swap_count": 466,
+      "final_cycle_counts": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "hybrid_solutions": [
+    {
+      "m": 4,
+      "path": "artifacts/torus_20260305/hybrid_solutions/hybrid_solution_m4_seed0.json",
+      "hamilton_success": true,
+      "cycle_counts": [
+        1,
+        1,
+        1
+      ],
+      "sign_product": -1
+    },
+    {
+      "m": 6,
+      "path": "artifacts/torus_20260305/hybrid_solutions/hybrid_solution_m6_seed0.json",
+      "hamilton_success": true,
+      "cycle_counts": [
+        1,
+        1,
+        1
+      ],
+      "sign_product": -1
+    },
+    {
+      "m": 9,
+      "path": "artifacts/torus_20260305/hybrid_solutions/hybrid_solution_m9_seed0.json",
+      "hamilton_success": true,
+      "cycle_counts": [
+        1,
+        1,
+        1
+      ],
+      "sign_product": 1
+    }
+  ],
+  "bench": {
+    "summary_json": "artifacts/torus_20260305/bench/hybrid_bench_summary.json",
+    "summary_csv": "artifacts/torus_20260305/bench/hybrid_bench_summary.csv",
+    "summary_md": "artifacts/torus_20260305/bench/hybrid_bench_summary.md",
+    "raw_json": "artifacts/torus_20260305/bench/hybrid_bench_raw.json"
+  }
+}

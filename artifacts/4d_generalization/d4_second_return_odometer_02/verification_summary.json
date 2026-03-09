@@ -1,0 +1,1071 @@
+{
+  "task_id": "D4-SECOND-RETURN-ODOMETER-02",
+  "candidate_rule": "candidates/hyperplane_fusion_low_layers_v1.py",
+  "tested_m_values": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "first_return_formulas": {
+    "R0": "q=0 -> (a-1,b,q-1); q=m-1,b=1 -> (a-2,b+1,q-1); otherwise -> (a-1,b+1,q-1)",
+    "R1": "q=0 -> (a,b-1,q+1); q=m-1,a!=m-1 -> (a+1,b-2,q+1); otherwise -> (a+1,b-1,q+1)",
+    "R2": "q=0 -> (a,b+1,q-1); q=m-1,b=2 -> (a+1,b,q-1); otherwise -> (a,b,q-1)",
+    "R3": "q=0 -> (a+1,b,q+1); q=m-1,a!=0 -> (a,b+1,q+1); otherwise -> (a,b,q+1)"
+  },
+  "second_return_formulas": {
+    "T0": "(a,b) -> (a-1_{b=1}, b-1)",
+    "T1": "(a,b) -> (a-1, b-1+1_{a=m-1})",
+    "T2": "(a,b) -> (a+1_{b=2}, b+1)",
+    "T3": "(a,b) -> (a+1, b+1-1_{a=0})"
+  },
+  "odometer_conjugacies": {
+    "T0": "(u,v)=(1-b,-a)",
+    "T1": "(u,v)=(-a-1,b-a)",
+    "T2": "(u,v)=(b-2,a)",
+    "T3": "(u,v)=(a,a-b)"
+  },
+  "standard_odometer": "(u,v) -> (u+1, v+1_{u=0})",
+  "verification": [
+    {
+      "m": 3,
+      "by_color": [
+        {
+          "color": 0,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            2
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            9
+          ]
+        },
+        {
+          "color": 1,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            9
+          ]
+        },
+        {
+          "color": 2,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            2
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            9
+          ]
+        },
+        {
+          "color": 3,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "m": 4,
+      "by_color": [
+        {
+          "color": 0,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            3
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            16
+          ]
+        },
+        {
+          "color": 1,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            16
+          ]
+        },
+        {
+          "color": 2,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            3
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            16
+          ]
+        },
+        {
+          "color": 3,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "m": 5,
+      "by_color": [
+        {
+          "color": 0,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            4
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            25
+          ]
+        },
+        {
+          "color": 1,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            25
+          ]
+        },
+        {
+          "color": 2,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            4
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            25
+          ]
+        },
+        {
+          "color": 3,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            25
+          ]
+        }
+      ]
+    },
+    {
+      "m": 6,
+      "by_color": [
+        {
+          "color": 0,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            5
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            36
+          ]
+        },
+        {
+          "color": 1,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            36
+          ]
+        },
+        {
+          "color": 2,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            5
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            36
+          ]
+        },
+        {
+          "color": 3,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            36
+          ]
+        }
+      ]
+    },
+    {
+      "m": 7,
+      "by_color": [
+        {
+          "color": 0,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            6
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            49
+          ]
+        },
+        {
+          "color": 1,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            49
+          ]
+        },
+        {
+          "color": 2,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            6
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            49
+          ]
+        },
+        {
+          "color": 3,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            49
+          ]
+        }
+      ]
+    },
+    {
+      "m": 8,
+      "by_color": [
+        {
+          "color": 0,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            7
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            64
+          ]
+        },
+        {
+          "color": 1,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            64
+          ]
+        },
+        {
+          "color": 2,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            7
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            64
+          ]
+        },
+        {
+          "color": 3,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "m": 9,
+      "by_color": [
+        {
+          "color": 0,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            8
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            81
+          ]
+        },
+        {
+          "color": 1,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            81
+          ]
+        },
+        {
+          "color": 2,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            8
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            81
+          ]
+        },
+        {
+          "color": 3,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            81
+          ]
+        }
+      ]
+    },
+    {
+      "m": 10,
+      "by_color": [
+        {
+          "color": 0,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            9
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            100
+          ]
+        },
+        {
+          "color": 1,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            100
+          ]
+        },
+        {
+          "color": 2,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            9
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            100
+          ]
+        },
+        {
+          "color": 3,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            100
+          ]
+        }
+      ]
+    },
+    {
+      "m": 11,
+      "by_color": [
+        {
+          "color": 0,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            10
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            121
+          ]
+        },
+        {
+          "color": 1,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            121
+          ]
+        },
+        {
+          "color": 2,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            10
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            121
+          ]
+        },
+        {
+          "color": 3,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            121
+          ]
+        }
+      ]
+    },
+    {
+      "m": 12,
+      "by_color": [
+        {
+          "color": 0,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            11
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            144
+          ]
+        },
+        {
+          "color": 1,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            144
+          ]
+        },
+        {
+          "color": 2,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            11
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            144
+          ]
+        },
+        {
+          "color": 3,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            144
+          ]
+        }
+      ]
+    },
+    {
+      "m": 13,
+      "by_color": [
+        {
+          "color": 0,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            12
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            169
+          ]
+        },
+        {
+          "color": 1,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            169
+          ]
+        },
+        {
+          "color": 2,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            12
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            169
+          ]
+        },
+        {
+          "color": 3,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            169
+          ]
+        }
+      ]
+    },
+    {
+      "m": 14,
+      "by_color": [
+        {
+          "color": 0,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            13
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            196
+          ]
+        },
+        {
+          "color": 1,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            196
+          ]
+        },
+        {
+          "color": 2,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            13
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            196
+          ]
+        },
+        {
+          "color": 3,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            196
+          ]
+        }
+      ]
+    },
+    {
+      "m": 15,
+      "by_color": [
+        {
+          "color": 0,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            14
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            225
+          ]
+        },
+        {
+          "color": 1,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            225
+          ]
+        },
+        {
+          "color": 2,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            14
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            225
+          ]
+        },
+        {
+          "color": 3,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            225
+          ]
+        }
+      ]
+    },
+    {
+      "m": 16,
+      "by_color": [
+        {
+          "color": 0,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            15
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            256
+          ]
+        },
+        {
+          "color": 1,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            256
+          ]
+        },
+        {
+          "color": 2,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            15
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            256
+          ]
+        },
+        {
+          "color": 3,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            256
+          ]
+        }
+      ]
+    },
+    {
+      "m": 17,
+      "by_color": [
+        {
+          "color": 0,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            16
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            289
+          ]
+        },
+        {
+          "color": 1,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            289
+          ]
+        },
+        {
+          "color": 2,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            16
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            289
+          ]
+        },
+        {
+          "color": 3,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            289
+          ]
+        }
+      ]
+    },
+    {
+      "m": 18,
+      "by_color": [
+        {
+          "color": 0,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            17
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            324
+          ]
+        },
+        {
+          "color": 1,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            324
+          ]
+        },
+        {
+          "color": 2,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            17
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            324
+          ]
+        },
+        {
+          "color": 3,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            324
+          ]
+        }
+      ]
+    },
+    {
+      "m": 19,
+      "by_color": [
+        {
+          "color": 0,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            18
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            361
+          ]
+        },
+        {
+          "color": 1,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            361
+          ]
+        },
+        {
+          "color": 2,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            18
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            361
+          ]
+        },
+        {
+          "color": 3,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            361
+          ]
+        }
+      ]
+    },
+    {
+      "m": 20,
+      "by_color": [
+        {
+          "color": 0,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            19
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            400
+          ]
+        },
+        {
+          "color": 1,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            400
+          ]
+        },
+        {
+          "color": 2,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            19
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            400
+          ]
+        },
+        {
+          "color": 3,
+          "R_formula_verified": true,
+          "T_formula_verified": true,
+          "odometer_conjugacy_verified": true,
+          "q_shift_values": [
+            1
+          ],
+          "Q_cycle_count": 1,
+          "Q_cycle_lengths": [
+            400
+          ]
+        }
+      ]
+    }
+  ]
+}

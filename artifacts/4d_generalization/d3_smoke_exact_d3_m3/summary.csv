@@ -1,0 +1,2 @@
+m,classification,parity,m_mod_6,m_mod_12,rule_valid,all_hamilton,sign_product,defect_vertex_count,low_layer_only,json_path
+3,candidate_pass,odd,3,3,True,True,1,21,True,artifacts/4d_generalization/d3_smoke_exact_d3_m3/m3.json

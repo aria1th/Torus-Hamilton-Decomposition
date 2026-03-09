@@ -1,0 +1,176 @@
+{
+  "dim": 3,
+  "m": 3,
+  "status": "hamilton_witness",
+  "solver_status": "OPTIMAL",
+  "runtime_sec": 0.18458409793674946,
+  "time_limit_sec": 60.0,
+  "iteration_count": 18,
+  "cut_count": 112,
+  "vertex_count": 27,
+  "sign_product": 1,
+  "color_stats": [
+    {
+      "color": 0,
+      "indegree_ok": true,
+      "bad_head": null,
+      "cycle_count": 1,
+      "sign": 1,
+      "is_hamilton": true
+    },
+    {
+      "color": 1,
+      "indegree_ok": true,
+      "bad_head": null,
+      "cycle_count": 1,
+      "sign": 1,
+      "is_hamilton": true
+    },
+    {
+      "color": 2,
+      "indegree_ok": true,
+      "bad_head": null,
+      "cycle_count": 1,
+      "sign": 1,
+      "is_hamilton": true
+    }
+  ],
+  "witness_direction_tuples": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      2,
+      1,
+      0
+    ],
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      2,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      2
+    ],
+    [
+      2,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      2,
+      1
+    ],
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      1,
+      0,
+      2
+    ],
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      2,
+      1
+    ],
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      2,
+      1
+    ],
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      1,
+      0,
+      2
+    ]
+  ],
+  "symmetry_break": "origin fixed to canonical tuple"
+}
