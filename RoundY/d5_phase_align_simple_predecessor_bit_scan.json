@@ -1,0 +1,270 @@
+{
+  "task_id": "D5-PHASE-ALIGN-SIMPLE-PREDBIT-SCAN",
+  "baseline": {
+    "5": {
+      "state_count": 3015,
+      "multi_delta_state_count": 58,
+      "full_nonzero_support_state_count": 0,
+      "total_excess": 70,
+      "max_support": 3
+    },
+    "7": {
+      "state_count": 11497,
+      "multi_delta_state_count": 1829,
+      "full_nonzero_support_state_count": 28,
+      "total_excess": 2673,
+      "max_support": 6
+    },
+    "9": {
+      "state_count": 18408,
+      "multi_delta_state_count": 5509,
+      "full_nonzero_support_state_count": 228,
+      "total_excess": 12707,
+      "max_support": 8
+    }
+  },
+  "candidate_bits": {
+    "pred_sig0_q=-1": {
+      "5": {
+        "state_count": 3019,
+        "multi_delta_state_count": 55,
+        "full_nonzero_support_state_count": 0,
+        "total_excess": 66,
+        "max_support": 3
+      },
+      "7": {
+        "state_count": 11539,
+        "multi_delta_state_count": 1821,
+        "full_nonzero_support_state_count": 27,
+        "total_excess": 2651,
+        "max_support": 6
+      },
+      "9": {
+        "state_count": 18528,
+        "multi_delta_state_count": 5516,
+        "full_nonzero_support_state_count": 225,
+        "total_excess": 12707,
+        "max_support": 8
+      }
+    },
+    "pred_sig0_q+u=1": {
+      "5": {
+        "state_count": 3015,
+        "multi_delta_state_count": 58,
+        "full_nonzero_support_state_count": 0,
+        "total_excess": 70,
+        "max_support": 3
+      },
+      "7": {
+        "state_count": 11497,
+        "multi_delta_state_count": 1829,
+        "full_nonzero_support_state_count": 28,
+        "total_excess": 2673,
+        "max_support": 6
+      },
+      "9": {
+        "state_count": 18408,
+        "multi_delta_state_count": 5509,
+        "full_nonzero_support_state_count": 228,
+        "total_excess": 12707,
+        "max_support": 8
+      }
+    },
+    "pred_sig0_w+u=2": {
+      "5": {
+        "state_count": 3015,
+        "multi_delta_state_count": 58,
+        "full_nonzero_support_state_count": 0,
+        "total_excess": 70,
+        "max_support": 3
+      },
+      "7": {
+        "state_count": 11497,
+        "multi_delta_state_count": 1829,
+        "full_nonzero_support_state_count": 28,
+        "total_excess": 2673,
+        "max_support": 6
+      },
+      "9": {
+        "state_count": 18408,
+        "multi_delta_state_count": 5509,
+        "full_nonzero_support_state_count": 228,
+        "total_excess": 12707,
+        "max_support": 8
+      }
+    },
+    "pred_sig0_q+u=-1": {
+      "5": {
+        "state_count": 3023,
+        "multi_delta_state_count": 56,
+        "full_nonzero_support_state_count": 0,
+        "total_excess": 66,
+        "max_support": 3
+      },
+      "7": {
+        "state_count": 11561,
+        "multi_delta_state_count": 1822,
+        "full_nonzero_support_state_count": 27,
+        "total_excess": 2656,
+        "max_support": 6
+      },
+      "9": {
+        "state_count": 18587,
+        "multi_delta_state_count": 5533,
+        "full_nonzero_support_state_count": 227,
+        "total_excess": 12772,
+        "max_support": 8
+      }
+    },
+    "pred_sig0_u=-1": {
+      "5": {
+        "state_count": 3015,
+        "multi_delta_state_count": 58,
+        "full_nonzero_support_state_count": 0,
+        "total_excess": 70,
+        "max_support": 3
+      },
+      "7": {
+        "state_count": 11497,
+        "multi_delta_state_count": 1829,
+        "full_nonzero_support_state_count": 28,
+        "total_excess": 2673,
+        "max_support": 6
+      },
+      "9": {
+        "state_count": 18408,
+        "multi_delta_state_count": 5509,
+        "full_nonzero_support_state_count": 228,
+        "total_excess": 12707,
+        "max_support": 8
+      }
+    },
+    "pred_sig0_phase_align": {
+      "5": {
+        "state_count": 3029,
+        "multi_delta_state_count": 46,
+        "full_nonzero_support_state_count": 0,
+        "total_excess": 56,
+        "max_support": 3
+      },
+      "7": {
+        "state_count": 11711,
+        "multi_delta_state_count": 1692,
+        "full_nonzero_support_state_count": 23,
+        "total_excess": 2459,
+        "max_support": 6
+      },
+      "9": {
+        "state_count": 18981,
+        "multi_delta_state_count": 5337,
+        "full_nonzero_support_state_count": 180,
+        "total_excess": 12134,
+        "max_support": 8
+      }
+    },
+    "pred_any_phase_align": {
+      "5": {
+        "state_count": 3051,
+        "multi_delta_state_count": 45,
+        "full_nonzero_support_state_count": 0,
+        "total_excess": 52,
+        "max_support": 3
+      },
+      "7": {
+        "state_count": 12234,
+        "multi_delta_state_count": 1645,
+        "full_nonzero_support_state_count": 23,
+        "total_excess": 2346,
+        "max_support": 6
+      },
+      "9": {
+        "state_count": 20376,
+        "multi_delta_state_count": 5844,
+        "full_nonzero_support_state_count": 177,
+        "total_excess": 12863,
+        "max_support": 8
+      }
+    },
+    "pred_sig0_nonzero": {
+      "5": {
+        "state_count": 3027,
+        "multi_delta_state_count": 50,
+        "full_nonzero_support_state_count": 0,
+        "total_excess": 61,
+        "max_support": 3
+      },
+      "7": {
+        "state_count": 11660,
+        "multi_delta_state_count": 1757,
+        "full_nonzero_support_state_count": 23,
+        "total_excess": 2555,
+        "max_support": 6
+      },
+      "9": {
+        "state_count": 18878,
+        "multi_delta_state_count": 5451,
+        "full_nonzero_support_state_count": 192,
+        "total_excess": 12468,
+        "max_support": 8
+      }
+    },
+    "pred_sig1_wu2": {
+      "5": {
+        "state_count": 3037,
+        "multi_delta_state_count": 50,
+        "full_nonzero_support_state_count": 0,
+        "total_excess": 60,
+        "max_support": 3
+      },
+      "7": {
+        "state_count": 12110,
+        "multi_delta_state_count": 1716,
+        "full_nonzero_support_state_count": 20,
+        "total_excess": 2435,
+        "max_support": 6
+      },
+      "9": {
+        "state_count": 20168,
+        "multi_delta_state_count": 5673,
+        "full_nonzero_support_state_count": 217,
+        "total_excess": 12813,
+        "max_support": 8
+      }
+    },
+    "pred_sig4_wu2": {
+      "5": {
+        "state_count": 3033,
+        "multi_delta_state_count": 42,
+        "full_nonzero_support_state_count": 0,
+        "total_excess": 52,
+        "max_support": 3
+      },
+      "7": {
+        "state_count": 11694,
+        "multi_delta_state_count": 1738,
+        "full_nonzero_support_state_count": 27,
+        "total_excess": 2530,
+        "max_support": 6
+      },
+      "9": {
+        "state_count": 18982,
+        "multi_delta_state_count": 5470,
+        "full_nonzero_support_state_count": 222,
+        "total_excess": 12454,
+        "max_support": 8
+      }
+    }
+  },
+  "ranking_by_m7_then_m9_total_excess": [
+    "pred_any_phase_align",
+    "pred_sig1_wu2",
+    "pred_sig0_phase_align",
+    "pred_sig4_wu2",
+    "pred_sig0_nonzero",
+    "pred_sig0_q=-1",
+    "pred_sig0_q+u=-1",
+    "pred_sig0_q+u=1",
+    "pred_sig0_w+u=2",
+    "pred_sig0_u=-1"
+  ]
+}

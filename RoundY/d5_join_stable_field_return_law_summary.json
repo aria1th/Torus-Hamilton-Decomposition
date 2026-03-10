@@ -1,0 +1,51 @@
+{
+  "task": "D5-JOIN-STABLE-FIELD-RETURN-LAW-CHECK",
+  "formula_checked": "R_0(q,w,v,u) = (q+1, w, v+1, u)",
+  "m_results": [
+    {
+      "m": 5,
+      "matches_formula": true,
+      "bad_examples": []
+    },
+    {
+      "m": 7,
+      "matches_formula": true,
+      "bad_examples": []
+    },
+    {
+      "m": 9,
+      "matches_formula": true,
+      "bad_examples": []
+    },
+    {
+      "m": 11,
+      "matches_formula": true,
+      "bad_examples": []
+    },
+    {
+      "m": 13,
+      "matches_formula": true,
+      "bad_examples": []
+    }
+  ],
+  "permutation_palette_by_layer": {
+    "0": {
+      "12340": 1365
+    },
+    "1": {
+      "34012": 1657
+    },
+    "2": {
+      "01234": 1338
+    },
+    "3": {
+      "01234": 1487
+    },
+    "4+": {
+      "01234": 3580
+    }
+  },
+  "implied_return_displacement": "e_{c+1} + e_{c+3} - 2 e_c",
+  "implied_section_return": "U_0 = id on (w,u)",
+  "implied_monodromy": 0
+}

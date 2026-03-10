@@ -1,0 +1,22 @@
+{
+  "schema_A": {
+    "union_state_count_m_5_7_9_11_13": 1005,
+    "rotation_orbit_count": 209,
+    "orbit_size_histogram": {"1": 10, "5": 199}
+  },
+  "schema_B": {
+    "union_state_count_m_5_7_9_11_13": 3805,
+    "rotation_orbit_count": 773,
+    "orbit_size_histogram": {"1": 15, "5": 758}
+  },
+  "joined_schema_AB": {
+    "union_state_count_m_5_7_9_11_13": 9427,
+    "rotation_orbit_count": 1899,
+    "orbit_size_histogram": {"1": 17, "5": 1882},
+    "pilot_predecessor_pattern_counts": {
+      "5": 3125,
+      "7": 15774,
+      "9": 34631
+    }
+  }
+}

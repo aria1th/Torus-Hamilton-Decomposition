@@ -1,0 +1,1818 @@
+{
+  "task_id": "D5-PHASE-ALIGN-COLLISION-PROFILE-001",
+  "per_m": [
+    {
+      "m": 5,
+      "original_multi_delta_state_count": 124,
+      "remaining_multi_delta_state_count_after_phase_align_split": 88,
+      "fraction_remaining": 0.7096774193548387,
+      "full_nonzero_support_state_count": 1,
+      "almost_full_nonzero_support_state_count": 87,
+      "remaining_multi_delta_by_layer": {
+        "0": 20,
+        "1": 12,
+        "2": 29,
+        "3": 11,
+        "4+": 16
+      },
+      "remaining_support_histogram": {
+        "2": 73,
+        "3": 14,
+        "4": 1
+      },
+      "examples": [
+        {
+          "state": {
+            "layer_bucket": 2,
+            "signature": [
+              2,
+              24,
+              0,
+              0,
+              3
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            4
+          ],
+          "example_vertex": [
+            4,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 3,
+            "signature": [
+              2,
+              4,
+              0,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            4
+          ],
+          "example_vertex": [
+            0,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": "4+",
+            "signature": [
+              2,
+              2,
+              0,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            4
+          ],
+          "example_vertex": [
+            1,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 3,
+            "signature": [
+              4,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            4
+          ],
+          "example_vertex": [
+            3,
+            1,
+            0,
+            2,
+            2
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": "4+",
+            "signature": [
+              8,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            4
+          ],
+          "example_vertex": [
+            3,
+            1,
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 0,
+            "signature": [
+              0,
+              0,
+              0,
+              0,
+              4
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            2,
+            3
+          ],
+          "example_vertex": [
+            3,
+            0,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 1,
+            "signature": [
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            4
+          ],
+          "example_vertex": [
+            3,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 2,
+            "signature": [
+              2,
+              0,
+              8,
+              0,
+              2
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            2,
+            3
+          ],
+          "example_vertex": [
+            3,
+            1,
+            0,
+            3,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 3,
+            "signature": [
+              4,
+              0,
+              8,
+              4,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            2,
+            3
+          ],
+          "example_vertex": [
+            2,
+            1,
+            0,
+            3,
+            2
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 0,
+            "signature": [
+              0,
+              0,
+              0,
+              4,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            3
+          ],
+          "example_vertex": [
+            2,
+            0,
+            0,
+            3,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 2,
+            "signature": [
+              2,
+              8,
+              0,
+              2,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            4
+          ],
+          "example_vertex": [
+            3,
+            1,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": "4+",
+            "signature": [
+              0,
+              8,
+              0,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            4
+          ],
+          "example_vertex": [
+            3,
+            1,
+            1,
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "m": 7,
+      "original_multi_delta_state_count": 2338,
+      "remaining_multi_delta_state_count_after_phase_align_split": 2040,
+      "fraction_remaining": 0.8725406330196749,
+      "full_nonzero_support_state_count": 61,
+      "almost_full_nonzero_support_state_count": 242,
+      "remaining_multi_delta_by_layer": {
+        "0": 335,
+        "1": 239,
+        "2": 339,
+        "3": 343,
+        "4+": 784
+      },
+      "remaining_support_histogram": {
+        "2": 1237,
+        "3": 500,
+        "4": 156,
+        "5": 86,
+        "6": 61
+      },
+      "examples": [
+        {
+          "state": {
+            "layer_bucket": 1,
+            "signature": [
+              2,
+              0,
+              2,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            5,
+            6
+          ],
+          "example_vertex": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 1,
+            "signature": [
+              4,
+              0,
+              2,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            2,
+            6
+          ],
+          "example_vertex": [
+            5,
+            1,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 1,
+            "signature": [
+              0,
+              0,
+              2,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            5,
+            6
+          ],
+          "example_vertex": [
+            4,
+            1,
+            0,
+            0,
+            3
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 0,
+            "signature": [
+              0,
+              24,
+              2,
+              0,
+              1
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2
+          ],
+          "example_vertex": [
+            6,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 2,
+            "signature": [
+              2,
+              24,
+              0,
+              0,
+              3
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            4,
+            6
+          ],
+          "example_vertex": [
+            6,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 3,
+            "signature": [
+              2,
+              4,
+              0,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            3,
+            4,
+            6
+          ],
+          "example_vertex": [
+            0,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": "4+",
+            "signature": [
+              2,
+              2,
+              0,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            3,
+            4,
+            6
+          ],
+          "example_vertex": [
+            1,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": "4+",
+            "signature": [
+              2,
+              0,
+              0,
+              4,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "example_vertex": [
+            2,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": "4+",
+            "signature": [
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "example_vertex": [
+            3,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 2,
+            "signature": [
+              0,
+              0,
+              4,
+              2,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            3,
+            4,
+            6
+          ],
+          "example_vertex": [
+            5,
+            1,
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": "4+",
+            "signature": [
+              0,
+              4,
+              4,
+              2,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            3
+          ],
+          "example_vertex": [
+            0,
+            1,
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": "4+",
+            "signature": [
+              0,
+              2,
+              4,
+              2,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2
+          ],
+          "example_vertex": [
+            1,
+            1,
+            0,
+            2,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "m": 9,
+      "original_multi_delta_state_count": 4002,
+      "remaining_multi_delta_state_count_after_phase_align_split": 3892,
+      "fraction_remaining": 0.9725137431284357,
+      "full_nonzero_support_state_count": 331,
+      "almost_full_nonzero_support_state_count": 244,
+      "remaining_multi_delta_by_layer": {
+        "0": 512,
+        "1": 565,
+        "2": 544,
+        "3": 598,
+        "4+": 1673
+      },
+      "remaining_support_histogram": {
+        "2": 934,
+        "3": 1054,
+        "4": 851,
+        "5": 478,
+        "6": 176,
+        "7": 68,
+        "8": 331
+      },
+      "examples": [
+        {
+          "state": {
+            "layer_bucket": 1,
+            "signature": [
+              2,
+              0,
+              2,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            2,
+            5,
+            7,
+            8
+          ],
+          "example_vertex": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 1,
+            "signature": [
+              4,
+              0,
+              2,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            2,
+            4,
+            8
+          ],
+          "example_vertex": [
+            7,
+            1,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 1,
+            "signature": [
+              0,
+              0,
+              2,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            4,
+            5,
+            7,
+            8
+          ],
+          "example_vertex": [
+            6,
+            1,
+            0,
+            0,
+            3
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 0,
+            "signature": [
+              0,
+              24,
+              2,
+              0,
+              1
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            4,
+            7
+          ],
+          "example_vertex": [
+            8,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 2,
+            "signature": [
+              2,
+              24,
+              0,
+              0,
+              3
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            4,
+            6,
+            7,
+            8
+          ],
+          "example_vertex": [
+            8,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 3,
+            "signature": [
+              2,
+              4,
+              0,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "example_vertex": [
+            0,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": "4+",
+            "signature": [
+              2,
+              2,
+              0,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "example_vertex": [
+            1,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": "4+",
+            "signature": [
+              2,
+              0,
+              0,
+              4,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "example_vertex": [
+            2,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": "4+",
+            "signature": [
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "example_vertex": [
+            3,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 2,
+            "signature": [
+              0,
+              0,
+              4,
+              2,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "example_vertex": [
+            7,
+            1,
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": "4+",
+            "signature": [
+              0,
+              4,
+              4,
+              2,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "example_vertex": [
+            0,
+            1,
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": "4+",
+            "signature": [
+              0,
+              2,
+              4,
+              2,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            7
+          ],
+          "example_vertex": [
+            1,
+            1,
+            0,
+            2,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "m": 11,
+      "original_multi_delta_state_count": 4212,
+      "remaining_multi_delta_state_count_after_phase_align_split": 4208,
+      "fraction_remaining": 0.9990503323836657,
+      "full_nonzero_support_state_count": 469,
+      "almost_full_nonzero_support_state_count": 181,
+      "remaining_multi_delta_by_layer": {
+        "0": 548,
+        "1": 636,
+        "2": 548,
+        "3": 609,
+        "4+": 1867
+      },
+      "remaining_support_histogram": {
+        "2": 130,
+        "3": 362,
+        "4": 868,
+        "5": 948,
+        "6": 772,
+        "7": 478,
+        "8": 155,
+        "9": 26,
+        "10": 469
+      },
+      "examples": [
+        {
+          "state": {
+            "layer_bucket": 1,
+            "signature": [
+              2,
+              0,
+              2,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            2,
+            4,
+            5,
+            7,
+            9,
+            10
+          ],
+          "example_vertex": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 1,
+            "signature": [
+              4,
+              0,
+              2,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            2,
+            4,
+            6,
+            9,
+            10
+          ],
+          "example_vertex": [
+            9,
+            1,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 1,
+            "signature": [
+              0,
+              0,
+              2,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10
+          ],
+          "example_vertex": [
+            8,
+            1,
+            0,
+            0,
+            3
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 0,
+            "signature": [
+              0,
+              24,
+              2,
+              0,
+              1
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            4,
+            6,
+            7,
+            9
+          ],
+          "example_vertex": [
+            10,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 2,
+            "signature": [
+              2,
+              24,
+              0,
+              0,
+              3
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "example_vertex": [
+            10,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 3,
+            "signature": [
+              2,
+              4,
+              0,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "example_vertex": [
+            0,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": "4+",
+            "signature": [
+              2,
+              2,
+              0,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "example_vertex": [
+            1,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": "4+",
+            "signature": [
+              2,
+              0,
+              0,
+              4,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "example_vertex": [
+            2,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": "4+",
+            "signature": [
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "example_vertex": [
+            3,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 2,
+            "signature": [
+              0,
+              0,
+              4,
+              2,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "example_vertex": [
+            9,
+            1,
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": "4+",
+            "signature": [
+              0,
+              4,
+              4,
+              2,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "example_vertex": [
+            0,
+            1,
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": "4+",
+            "signature": [
+              0,
+              2,
+              4,
+              2,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9
+          ],
+          "example_vertex": [
+            1,
+            1,
+            0,
+            2,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "m": 13,
+      "original_multi_delta_state_count": 4212,
+      "remaining_multi_delta_state_count_after_phase_align_split": 4212,
+      "fraction_remaining": 1.0,
+      "full_nonzero_support_state_count": 501,
+      "almost_full_nonzero_support_state_count": 150,
+      "remaining_multi_delta_by_layer": {
+        "0": 548,
+        "1": 636,
+        "2": 548,
+        "3": 609,
+        "4+": 1871
+      },
+      "remaining_support_histogram": {
+        "3": 6,
+        "4": 158,
+        "5": 368,
+        "6": 852,
+        "7": 942,
+        "8": 755,
+        "9": 480,
+        "10": 150,
+        "12": 501
+      },
+      "examples": [
+        {
+          "state": {
+            "layer_bucket": 1,
+            "signature": [
+              2,
+              0,
+              2,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            2,
+            4,
+            5,
+            6,
+            7,
+            9,
+            11,
+            12
+          ],
+          "example_vertex": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 1,
+            "signature": [
+              4,
+              0,
+              2,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            2,
+            4,
+            6,
+            8,
+            9,
+            11,
+            12
+          ],
+          "example_vertex": [
+            11,
+            1,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 1,
+            "signature": [
+              0,
+              0,
+              2,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            11,
+            12
+          ],
+          "example_vertex": [
+            10,
+            1,
+            0,
+            0,
+            3
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 0,
+            "signature": [
+              0,
+              24,
+              2,
+              0,
+              1
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            4,
+            6,
+            7,
+            8,
+            9,
+            11
+          ],
+          "example_vertex": [
+            12,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 2,
+            "signature": [
+              2,
+              24,
+              0,
+              0,
+              3
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "example_vertex": [
+            12,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 3,
+            "signature": [
+              2,
+              4,
+              0,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "example_vertex": [
+            0,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": "4+",
+            "signature": [
+              2,
+              2,
+              0,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "example_vertex": [
+            1,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": "4+",
+            "signature": [
+              2,
+              0,
+              0,
+              4,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "example_vertex": [
+            2,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": "4+",
+            "signature": [
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "example_vertex": [
+            3,
+            1,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": 2,
+            "signature": [
+              0,
+              0,
+              4,
+              2,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "example_vertex": [
+            11,
+            1,
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": "4+",
+            "signature": [
+              0,
+              4,
+              4,
+              2,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "example_vertex": [
+            0,
+            1,
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "state": {
+            "layer_bucket": "4+",
+            "signature": [
+              0,
+              2,
+              4,
+              2,
+              0
+            ]
+          },
+          "phase_align": 0,
+          "delta_values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            11
+          ],
+          "example_vertex": [
+            1,
+            1,
+            0,
+            2,
+            1
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,618 @@
+{
+  "task_id": "D5-PHASE-ALIGN-PILOT-GRAMMAR-ANALYSIS",
+  "pilot_realized_state_count": 20879,
+  "layer_counts_on_pilot_realized": {
+    "0": 3161,
+    "1": 3288,
+    "2": 2928,
+    "3": 3387,
+    "4+": 8115
+  },
+  "classes": {
+    "strict_collapse": {
+      "field_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "pilot_realized_disagreement_count": 0,
+      "pilot_realized_disagreement_examples": [],
+      "layer_permutation_histogram_on_pilot_realized": {
+        "layer=0|perm=12340": 3161,
+        "layer=1|perm=34012": 3288,
+        "layer=2|perm=01234": 2928,
+        "layer=3|perm=01234": 3387,
+        "layer=4+|perm=01234": 8115
+      },
+      "pilot_return_displacement_histogram": {
+        "5": {
+          "(1, 0, 1, 0)": 625
+        },
+        "7": {
+          "(1, 0, 1, 0)": 2401
+        },
+        "9": {
+          "(1, 0, 1, 0)": 6561
+        }
+      }
+    },
+    "clean_nonclock": {
+      "field_indices": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pilot_realized_disagreement_count": 0,
+      "pilot_realized_disagreement_examples": [],
+      "layer_permutation_histogram_on_pilot_realized": {
+        "layer=0|perm=34012": 3161,
+        "layer=1|perm=01234": 3288,
+        "layer=2|perm=01234": 2928,
+        "layer=3|perm=01234": 3387,
+        "layer=4+|perm=01234": 8115
+      },
+      "pilot_return_displacement_histogram": {
+        "5": {
+          "(0, 0, 1, 0)": 625
+        },
+        "7": {
+          "(0, 0, 1, 0)": 2401
+        },
+        "9": {
+          "(0, 0, 1, 0)": 6561
+        }
+      }
+    }
+  },
+  "cross_class_pilot_difference_count": 6449,
+  "cross_class_pilot_difference_layer_histogram": {
+    "0": 3161,
+    "1": 3288
+  },
+  "cross_class_pilot_difference_examples": [
+    {
+      "state_id": 0,
+      "state": {
+        "layer_bucket": 0,
+        "signature": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "strict_perm": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ],
+      "clean_perm": [
+        3,
+        4,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "state_id": 1,
+      "state": {
+        "layer_bucket": 0,
+        "signature": [
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "strict_perm": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ],
+      "clean_perm": [
+        3,
+        4,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "state_id": 2,
+      "state": {
+        "layer_bucket": 0,
+        "signature": [
+          0,
+          0,
+          0,
+          0,
+          4
+        ]
+      },
+      "strict_perm": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ],
+      "clean_perm": [
+        3,
+        4,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "state_id": 3,
+      "state": {
+        "layer_bucket": 0,
+        "signature": [
+          0,
+          0,
+          0,
+          0,
+          6
+        ]
+      },
+      "strict_perm": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ],
+      "clean_perm": [
+        3,
+        4,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "state_id": 4,
+      "state": {
+        "layer_bucket": 0,
+        "signature": [
+          0,
+          0,
+          0,
+          0,
+          8
+        ]
+      },
+      "strict_perm": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ],
+      "clean_perm": [
+        3,
+        4,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "state_id": 5,
+      "state": {
+        "layer_bucket": 0,
+        "signature": [
+          0,
+          0,
+          0,
+          0,
+          12
+        ]
+      },
+      "strict_perm": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ],
+      "clean_perm": [
+        3,
+        4,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "state_id": 6,
+      "state": {
+        "layer_bucket": 0,
+        "signature": [
+          0,
+          0,
+          0,
+          0,
+          32
+        ]
+      },
+      "strict_perm": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ],
+      "clean_perm": [
+        3,
+        4,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "state_id": 7,
+      "state": {
+        "layer_bucket": 0,
+        "signature": [
+          0,
+          0,
+          0,
+          0,
+          34
+        ]
+      },
+      "strict_perm": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ],
+      "clean_perm": [
+        3,
+        4,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "state_id": 8,
+      "state": {
+        "layer_bucket": 0,
+        "signature": [
+          0,
+          0,
+          0,
+          0,
+          36
+        ]
+      },
+      "strict_perm": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ],
+      "clean_perm": [
+        3,
+        4,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "state_id": 9,
+      "state": {
+        "layer_bucket": 0,
+        "signature": [
+          0,
+          0,
+          0,
+          0,
+          38
+        ]
+      },
+      "strict_perm": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ],
+      "clean_perm": [
+        3,
+        4,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "state_id": 10,
+      "state": {
+        "layer_bucket": 0,
+        "signature": [
+          0,
+          0,
+          0,
+          0,
+          40
+        ]
+      },
+      "strict_perm": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ],
+      "clean_perm": [
+        3,
+        4,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "state_id": 11,
+      "state": {
+        "layer_bucket": 0,
+        "signature": [
+          0,
+          0,
+          0,
+          0,
+          44
+        ]
+      },
+      "strict_perm": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ],
+      "clean_perm": [
+        3,
+        4,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "state_id": 12,
+      "state": {
+        "layer_bucket": 0,
+        "signature": [
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      },
+      "strict_perm": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ],
+      "clean_perm": [
+        3,
+        4,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "state_id": 13,
+      "state": {
+        "layer_bucket": 0,
+        "signature": [
+          0,
+          0,
+          0,
+          2,
+          2
+        ]
+      },
+      "strict_perm": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ],
+      "clean_perm": [
+        3,
+        4,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "state_id": 14,
+      "state": {
+        "layer_bucket": 0,
+        "signature": [
+          0,
+          0,
+          0,
+          2,
+          4
+        ]
+      },
+      "strict_perm": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ],
+      "clean_perm": [
+        3,
+        4,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "state_id": 15,
+      "state": {
+        "layer_bucket": 0,
+        "signature": [
+          0,
+          0,
+          0,
+          2,
+          6
+        ]
+      },
+      "strict_perm": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ],
+      "clean_perm": [
+        3,
+        4,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "state_id": 16,
+      "state": {
+        "layer_bucket": 0,
+        "signature": [
+          0,
+          0,
+          0,
+          2,
+          8
+        ]
+      },
+      "strict_perm": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ],
+      "clean_perm": [
+        3,
+        4,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "state_id": 17,
+      "state": {
+        "layer_bucket": 0,
+        "signature": [
+          0,
+          0,
+          0,
+          2,
+          12
+        ]
+      },
+      "strict_perm": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ],
+      "clean_perm": [
+        3,
+        4,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "state_id": 18,
+      "state": {
+        "layer_bucket": 0,
+        "signature": [
+          0,
+          0,
+          0,
+          2,
+          32
+        ]
+      },
+      "strict_perm": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ],
+      "clean_perm": [
+        3,
+        4,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "state_id": 20,
+      "state": {
+        "layer_bucket": 0,
+        "signature": [
+          0,
+          0,
+          0,
+          2,
+          36
+        ]
+      },
+      "strict_perm": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ],
+      "clean_perm": [
+        3,
+        4,
+        0,
+        1,
+        2
+      ]
+    }
+  ]
+}

@@ -1,0 +1,431 @@
+{
+  "description": "Pruned 26-move Kempe-valid witness found by greedy continuation on m=5.",
+  "dim": 5,
+  "m_verified": [
+    5
+  ],
+  "cycle_counts_m5": [
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "sequence_length": 26,
+  "moves": [
+    {
+      "step": 1,
+      "pair": [
+        1,
+        3
+      ],
+      "support": [
+        "line1",
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "step": 2,
+      "pair": [
+        2,
+        4
+      ],
+      "support": [
+        "plane",
+        3,
+        null,
+        null
+      ]
+    },
+    {
+      "step": 3,
+      "pair": [
+        0,
+        2
+      ],
+      "support": [
+        "line1",
+        1,
+        4,
+        1
+      ]
+    },
+    {
+      "step": 4,
+      "pair": [
+        2,
+        3
+      ],
+      "support": [
+        "line1",
+        2,
+        0,
+        2
+      ]
+    },
+    {
+      "step": 5,
+      "pair": [
+        1,
+        2
+      ],
+      "support": [
+        "line2",
+        2,
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          4
+        ]
+      ]
+    },
+    {
+      "step": 6,
+      "pair": [
+        2,
+        3
+      ],
+      "support": [
+        "line2",
+        0,
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "step": 7,
+      "pair": [
+        1,
+        3
+      ],
+      "support": [
+        "line1",
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "step": 8,
+      "pair": [
+        3,
+        4
+      ],
+      "support": [
+        "line1",
+        3,
+        0,
+        4
+      ]
+    },
+    {
+      "step": 9,
+      "pair": [
+        0,
+        3
+      ],
+      "support": [
+        "plane",
+        3,
+        null,
+        null
+      ]
+    },
+    {
+      "step": 10,
+      "pair": [
+        3,
+        4
+      ],
+      "support": [
+        "line2",
+        1,
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "step": 11,
+      "pair": [
+        0,
+        4
+      ],
+      "support": [
+        "line1",
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "step": 12,
+      "pair": [
+        1,
+        4
+      ],
+      "support": [
+        "line2",
+        0,
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "step": 13,
+      "pair": [
+        1,
+        4
+      ],
+      "support": [
+        "line1",
+        3,
+        4,
+        2
+      ]
+    },
+    {
+      "step": 14,
+      "pair": [
+        1,
+        3
+      ],
+      "support": [
+        "line1",
+        2,
+        4,
+        4
+      ]
+    },
+    {
+      "step": 15,
+      "pair": [
+        1,
+        4
+      ],
+      "support": [
+        "line1",
+        3,
+        4,
+        0
+      ]
+    },
+    {
+      "step": 16,
+      "pair": [
+        1,
+        3
+      ],
+      "support": [
+        "line2",
+        0,
+        [
+          2,
+          4
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "step": 17,
+      "pair": [
+        0,
+        1
+      ],
+      "support": [
+        "line1",
+        2,
+        4,
+        2
+      ]
+    },
+    {
+      "step": 18,
+      "pair": [
+        1,
+        4
+      ],
+      "support": [
+        "line2",
+        0,
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "step": 19,
+      "pair": [
+        1,
+        2
+      ],
+      "support": [
+        "line2",
+        2,
+        [
+          0,
+          4
+        ],
+        [
+          4,
+          3
+        ]
+      ]
+    },
+    {
+      "step": 20,
+      "pair": [
+        1,
+        2
+      ],
+      "support": [
+        "line1",
+        1,
+        4,
+        3
+      ]
+    },
+    {
+      "step": 21,
+      "pair": [
+        1,
+        2
+      ],
+      "support": [
+        "line1",
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "step": 22,
+      "pair": [
+        0,
+        1
+      ],
+      "support": [
+        "line2",
+        2,
+        [
+          1,
+          4
+        ],
+        [
+          0,
+          4
+        ]
+      ]
+    },
+    {
+      "step": 23,
+      "pair": [
+        1,
+        3
+      ],
+      "support": [
+        "line1",
+        1,
+        0,
+        4
+      ]
+    },
+    {
+      "step": 24,
+      "pair": [
+        1,
+        2
+      ],
+      "support": [
+        "line2",
+        1,
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ]
+    },
+    {
+      "step": 25,
+      "pair": [
+        0,
+        1
+      ],
+      "support": [
+        "line2",
+        2,
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ]
+      ]
+    },
+    {
+      "step": 26,
+      "pair": [
+        1,
+        4
+      ],
+      "support": [
+        "line1",
+        3,
+        4,
+        1
+      ]
+    }
+  ],
+  "same_sequence_m7": {
+    "cycle_counts": [
+      5,
+      433,
+      1,
+      1,
+      3
+    ],
+    "max_cycle_lengths": [
+      5103,
+      12271,
+      16807,
+      16807,
+      10899
+    ]
+  }
+}
