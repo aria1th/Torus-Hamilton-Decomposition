@@ -1,0 +1,198 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb,mathtools}
+\usepackage{enumitem}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\newcommand{\Zm}{\mathbb Z_m}
+\newcommand{\I}{\mathbf 1}
+
+\title{A Clean d=4 Hamilton-Decomposition Proof via the Line-Union Gauge}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{theorem}
+For every integer $m\ge 3$, the directed torus
+\[
+D_4(m)=\operatorname{Cay}\bigl((\Zm)^4,\{e_0,e_1,e_2,e_3\}\bigr)
+\]
+admits a Hamilton decomposition.
+
+More concretely, define a direction tuple $\delta(x)=(d_0(x),d_1(x),d_2(x),d_3(x))$ by the line-union witness below and set
+\[
+f_c(x)=x+e_{d_c(x)}\qquad(c=0,1,2,3).
+\]
+Then each color map $f_c$ is a single cycle of length $m^4$.
+\end{theorem}
+
+\paragraph{Witness.}
+Let
+\[
+S(x)=x_0+x_1+x_2+x_3,\qquad q(x)=x_0+x_2
+\]
+(modulo $m$). Throughout, we identify residues with their standard representatives in $\{0,1,\dots,m-1\}$, so phrases such as $S(x)\ge 3$ and $q(x)=m-1$ are understood in that sense. Define $\delta(x)$ as follows:
+\begin{itemize}
+    \item if $S(x)=0$, use $(3,2,1,0)$ when $q(x)=0$ and $(1,0,3,2)$ otherwise;
+    \item if $S(x)=1$, use $(0,1,2,3)$;
+    \item if $S(x)=2$ and $q(x)=0$, start from $(0,1,2,3)$ and then
+    \begin{itemize}
+        \item swap slots $1\leftrightarrow 3$ when $x_0=0$,
+        \item swap slots $0\leftrightarrow 2$ when $x_3=0$.
+    \end{itemize}
+    If both conditions hold, apply both swaps; they commute because they are disjoint.
+    \item otherwise, use $(0,1,2,3)$.
+\end{itemize}
+Thus on $H=\{S=2,\ q=0\}$ the defect support is exactly
+\[
+\{x_0=0\}\cup\{x_3=0\}.
+\]
+The only tuples used are
+\[
+(3,2,1,0),\ (1,0,3,2),\ (0,1,2,3),\ (0,3,2,1),\ (2,1,0,3),\ (2,3,0,1),
+\]
+all permutations of $(0,1,2,3)$. Hence the four color classes partition the outgoing arcs.
+
+\paragraph{Step 1: first return to $P_0$.}
+Let
+\[
+P_0=\{x\in (\Zm)^4:S(x)=0\}
+\]
+and parameterize it by
+\[
+\phi(a,b,q)=(a,b,q-a,-q-b).
+\]
+Every step increases $S$ by $1$, so the first return of $f_c$ to $P_0$ is
+\[
+R_c=f_c^m\big|_{P_0}.
+\]
+A direct two-step inspection gives:
+\[
+R_0(a,b,q)=
+\begin{cases}
+(a-1,b,q-1), & q=0,\\
+(a-2,b+1,q-1), & q=m-1\text{ and }b=1,\\
+(a-1,b+1,q-1), & \text{otherwise,}
+\end{cases}
+\]
+\[
+R_1(a,b,q)=
+\begin{cases}
+(a,b-1,q+1), & q=0,\\
+(a+1,b-2,q+1), & q=m-1\text{ and }a=m-1,\\
+(a+1,b-1,q+1), & \text{otherwise,}
+\end{cases}
+\]
+\[
+R_2(a,b,q)=
+\begin{cases}
+(a,b+1,q-1), & q=0,\\
+(a+1,b,q-1), & q=m-1\text{ and }b=2,\\
+(a,b,q-1), & \text{otherwise,}
+\end{cases}
+\]
+\[
+R_3(a,b,q)=
+\begin{cases}
+(a+1,b,q+1), & q=0,\\
+(a,b+1,q+1), & q=m-1\text{ and }a=0,\\
+(a,b,q+1), & \text{otherwise.}
+\end{cases}
+\]
+Indeed, when $q=0$, the layer-$0$ tuple is $(3,2,1,0)$ and after two steps the new $q$-value is $1$, so the layer-$2$ splice never fires. When $q\ne 0$, the layer-$0$ tuple is $(1,0,3,2)$ and after two steps the new $q$-value is $q+1$, so only $q=m-1$ can trigger the layer-$2$ splice. For colors $0,1$, the layer-$2$ landing point is
+\[
+y^+(a,b,m-1)=(a+1,b+1,m-1-a,1-b),
+\]
+so the even gate condition is $y^+_3=0\iff 1-b=0\iff b=1$, and the odd gate condition is $y^+_0=0\iff a+1=0\iff a=m-1$. For colors $2,3$, the landing point is
+\[
+y^-(a,b,m-1)=(a,b,m-a,2-b),
+\]
+so the even gate condition is $y^-_3=0\iff 2-b=0\iff b=2$, and the odd gate condition is $y^-_0=0\iff a=0$. This gives exactly the displayed branches.
+
+\paragraph{Step 2: second return to $Q$.}
+Let
+\[
+Q=\{(a,b,q)\in P_0:q=m-1\},
+\qquad
+T_c=R_c^m\big|_Q.
+\]
+Since each application of $R_c$ changes $q$ by $\pm1$, every orbit meets $Q$ once every $m$ applications. Summing the branch increments over one full $q$-turn gives
+\[
+T_0(a,b)=(a-\I_{b=1},b-1),
+\qquad
+T_1(a,b)=(a-1,b-\I_{a=m-1}),
+\]
+\[
+T_2(a,b)=(a+\I_{b=2},b+1),
+\qquad
+T_3(a,b)=(a+1,b+\I_{a=0}).
+\]
+
+\paragraph{Step 3: odometer conjugacy.}
+Let
+\[
+O(u,v)=(u+1,v+\I_{u=0})
+\]
+on $(\Zm)^2$. Then
+\[
+\psi_0(a,b)=(1-b,-a),
+\qquad
+\psi_1(a,b)=(-a-1,-b),
+\qquad
+\psi_2(a,b)=(b-2,a),
+\qquad
+\psi_3(a,b)=(a,b)
+\]
+satisfy
+\[
+\psi_c\circ T_c=O\circ \psi_c
+\qquad(c=0,1,2,3).
+\]
+This is immediate by substitution. For example,
+\[
+\psi_3(T_3(a,b))=(a+1,b+\I_{a=0})=O(a,b)=O(\psi_3(a,b)).
+\]
+
+The odometer $O$ is a single cycle of length $m^2$: in $m$ steps the first coordinate returns while the second increases by $1$, so $O^m(u,v)=(u,v+1)$, and therefore $O^{m^2}=\mathrm{id}$. Conversely, if $O^t(u,v)=(u,v)$, writing $t=km+r$ with $0\le r<m$ forces $r=0$ from the first coordinate and then $k\equiv0\pmod m$ from the second coordinate.
+
+Hence each $T_c$ is a single $m^2$-cycle on $Q$.
+
+\paragraph{Step 4: lift back to $P_0$ and to the full torus.}
+Choose $x_0\in Q$. Let $s_c\in\{+1,-1\}$ be the sign by which $R_c$ changes $q$; this depends only on the color. Along the forward orbit $x_t:=R_c^t(x_0)$ one has
+\[
+q(x_t)=m-1+s_c t \pmod m.
+\]
+Hence $x_t\in Q$ if and only if $t\equiv 0\pmod m$. In particular,
+\[
+R_c^{m^3}(x_0)=T_c^{m^2}(x_0)=x_0,
+\]
+because $T_c$ has period $m^2$.
+
+Conversely, if $R_c^t(x_0)=x_0$, write $t=km+r$ with $0\le r<m$. Returning to $Q$ forces $r=0$, so
+\[
+R_c^{t}(x_0)=R_c^{km}(x_0)=T_c^k(x_0)=x_0.
+\]
+Since $T_c$ is a single $m^2$-cycle on $Q$, its period at $x_0$ is exactly $m^2$, so $k$ is a multiple of $m^2$. Therefore $t$ is a multiple of $m^3$. Thus the $R_c$-orbit of $x_0$ has exact length $m^3$, and since $|P_0|=m^3$ this orbit is all of $P_0$. Hence $R_c$ is a single cycle on $P_0$.
+
+Now choose $y_0\in P_0$. Along the forward orbit $y_t:=f_c^t(y_0)$ one has
+\[
+S(y_t)=t \pmod m,
+\]
+because each application of $f_c$ increases $S$ by $1$. Hence $y_t\in P_0$ if and only if $t\equiv 0\pmod m$. In particular,
+\[
+f_c^{m^4}(y_0)=R_c^{m^3}(y_0)=y_0.
+\]
+Conversely, if $f_c^t(y_0)=y_0$, write $t=km+r$ with $0\le r<m$. Returning to $P_0$ forces $r=0$, so
+\[
+f_c^{t}(y_0)=f_c^{km}(y_0)=R_c^k(y_0)=y_0.
+\]
+Since $R_c$ is a single $m^3$-cycle on $P_0$, its period at $y_0$ is exactly $m^3$, so $k$ is a multiple of $m^3$. Therefore $t$ is a multiple of $m^4$. Thus the $f_c$-orbit of $y_0$ has exact length $m^4$, and since the full torus has size $m^4$ this orbit is all vertices. Hence $f_c$ is a single cycle on $(\Zm)^4$.
+
+This holds for each color $c=0,1,2,3$. Hence the witness yields four arc-disjoint Hamilton cycles covering all outgoing arcs, so it is a Hamilton decomposition of $D_4(m)$ for every $m\ge 3$. \qed
+
+\end{document}
