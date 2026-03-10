@@ -1,0 +1,103 @@
+{
+  "task_id": "D5-DYNAMIC-COLLAPSE-CORE-001",
+  "palette_by_layer": {
+    "0": {
+      "permutation_histogram": {
+        "12340": 1365
+      },
+      "color0_output_histogram": {
+        "1": 1365
+      },
+      "is_constant_permutation": true,
+      "is_constant_color0_output": true,
+      "constant_permutation": "12340",
+      "constant_color0_output": 1
+    },
+    "1": {
+      "permutation_histogram": {
+        "34012": 1657
+      },
+      "color0_output_histogram": {
+        "3": 1657
+      },
+      "is_constant_permutation": true,
+      "is_constant_color0_output": true,
+      "constant_permutation": "34012",
+      "constant_color0_output": 3
+    },
+    "2": {
+      "permutation_histogram": {
+        "01234": 1338
+      },
+      "color0_output_histogram": {
+        "0": 1338
+      },
+      "is_constant_permutation": true,
+      "is_constant_color0_output": true,
+      "constant_permutation": "01234",
+      "constant_color0_output": 0
+    },
+    "3": {
+      "permutation_histogram": {
+        "01234": 1487
+      },
+      "color0_output_histogram": {
+        "0": 1487
+      },
+      "is_constant_permutation": true,
+      "is_constant_color0_output": true,
+      "constant_permutation": "01234",
+      "constant_color0_output": 0
+    },
+    "4+": {
+      "permutation_histogram": {
+        "01234": 3580
+      },
+      "color0_output_histogram": {
+        "0": 3580
+      },
+      "is_constant_permutation": true,
+      "is_constant_color0_output": true,
+      "constant_permutation": "01234",
+      "constant_color0_output": 0
+    }
+  },
+  "canonical_tail_core": {
+    "m": 7,
+    "state_id": 3550,
+    "orbit_id": 623,
+    "state_name": "L=2|sig=20006",
+    "state": {
+      "layer_bucket": 2,
+      "signature": [
+        2,
+        0,
+        0,
+        0,
+        6
+      ]
+    },
+    "delta_values": [
+      0,
+      1,
+      6
+    ],
+    "delta_support_size": 3,
+    "phase_align_bit_split": true,
+    "phase_align_example": [
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "phase_misaligned_example": [
+      4,
+      5,
+      0,
+      4,
+      3
+    ]
+  },
+  "forced_return_law": "R_0(q,w,v,u) = (q+1, w, v+1, u)"
+}

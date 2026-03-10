@@ -1,0 +1,32 @@
+{
+  "formula_checked": "R_0(q,w,v,u) = (q+1, w, v+1, u)",
+  "implied_section_return": "U_0 = id on (w,u)",
+  "implied_monodromy": 0,
+  "m_results": [
+    {
+      "m": 5,
+      "matches_formula": true,
+      "bad_examples": []
+    },
+    {
+      "m": 7,
+      "matches_formula": true,
+      "bad_examples": []
+    },
+    {
+      "m": 9,
+      "matches_formula": true,
+      "bad_examples": []
+    },
+    {
+      "m": 11,
+      "matches_formula": true,
+      "bad_examples": []
+    },
+    {
+      "m": 13,
+      "matches_formula": true,
+      "bad_examples": []
+    }
+  ]
+}

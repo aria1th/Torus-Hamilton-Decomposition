@@ -1,0 +1,8866 @@
+{
+  "task_id": "D5-DYNAMIC-COLLAPSE-CORE-001",
+  "runtime_sec": 13.178227119147778,
+  "environment": {
+    "python_version": "3.10.12",
+    "rich_version": "14.2.0"
+  },
+  "field_json": "artifacts/d5_join_quotient_001/data/best_stable_field.json",
+  "palette_by_layer": {
+    "0": {
+      "permutation_histogram": {
+        "12340": 1365
+      },
+      "color0_output_histogram": {
+        "1": 1365
+      },
+      "is_constant_permutation": true,
+      "is_constant_color0_output": true,
+      "constant_permutation": "12340",
+      "constant_color0_output": 1
+    },
+    "1": {
+      "permutation_histogram": {
+        "34012": 1657
+      },
+      "color0_output_histogram": {
+        "3": 1657
+      },
+      "is_constant_permutation": true,
+      "is_constant_color0_output": true,
+      "constant_permutation": "34012",
+      "constant_color0_output": 3
+    },
+    "2": {
+      "permutation_histogram": {
+        "01234": 1338
+      },
+      "color0_output_histogram": {
+        "0": 1338
+      },
+      "is_constant_permutation": true,
+      "is_constant_color0_output": true,
+      "constant_permutation": "01234",
+      "constant_color0_output": 0
+    },
+    "3": {
+      "permutation_histogram": {
+        "01234": 1487
+      },
+      "color0_output_histogram": {
+        "0": 1487
+      },
+      "is_constant_permutation": true,
+      "is_constant_color0_output": true,
+      "constant_permutation": "01234",
+      "constant_color0_output": 0
+    },
+    "4+": {
+      "permutation_histogram": {
+        "01234": 3580
+      },
+      "color0_output_histogram": {
+        "0": 3580
+      },
+      "is_constant_permutation": true,
+      "is_constant_color0_output": true,
+      "constant_permutation": "01234",
+      "constant_color0_output": 0
+    }
+  },
+  "return_law": {
+    "formula_checked": "R_0(q,w,v,u) = (q+1, w, v+1, u)",
+    "implied_section_return": "U_0 = id on (w,u)",
+    "implied_monodromy": 0,
+    "m_results": [
+      {
+        "m": 5,
+        "matches_formula": true,
+        "bad_examples": []
+      },
+      {
+        "m": 7,
+        "matches_formula": true,
+        "bad_examples": []
+      },
+      {
+        "m": 9,
+        "matches_formula": true,
+        "bad_examples": []
+      },
+      {
+        "m": 11,
+        "matches_formula": true,
+        "bad_examples": []
+      },
+      {
+        "m": 13,
+        "matches_formula": true,
+        "bad_examples": []
+      }
+    ]
+  },
+  "collapse_automaton": {
+    "core_name": "kick-kick-freeze",
+    "motifs": [
+      {
+        "motif_id": "M0_q_kick",
+        "layer_buckets": [
+          0
+        ],
+        "constant_permutation": "12340",
+        "color0_output": 1,
+        "effect_on_qwvu": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "effect_on_delta_v_minus_q": -1,
+        "role": "first exceptional step; increments q"
+      },
+      {
+        "motif_id": "M1_v_kick",
+        "layer_buckets": [
+          1
+        ],
+        "constant_permutation": "34012",
+        "color0_output": 3,
+        "effect_on_qwvu": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "effect_on_delta_v_minus_q": 1,
+        "role": "second exceptional step; increments v and restores delta"
+      },
+      {
+        "motif_id": "M2_freeze_tail",
+        "layer_buckets": [
+          2,
+          3,
+          "4+"
+        ],
+        "constant_permutation": "01234",
+        "color0_output": 0,
+        "effect_on_qwvu": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "effect_on_delta_v_minus_q": 0,
+        "role": "identity tail; preserves q,w,v,u during the remaining steps",
+        "canonical_conflict_state": {
+          "m": 7,
+          "state_id": 3550,
+          "orbit_id": 623,
+          "state_name": "L=2|sig=20006",
+          "state": {
+            "layer_bucket": 2,
+            "signature": [
+              2,
+              0,
+              0,
+              0,
+              6
+            ]
+          },
+          "delta_values": [
+            0,
+            1,
+            6
+          ],
+          "delta_support_size": 3,
+          "phase_align_bit_split": true,
+          "phase_align_example": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "phase_misaligned_example": [
+            4,
+            5,
+            0,
+            4,
+            3
+          ]
+        }
+      }
+    ],
+    "transition_sequence": [
+      {
+        "from": "M0_q_kick",
+        "to": "M1_v_kick"
+      },
+      {
+        "from": "M1_v_kick",
+        "to": "M2_freeze_tail"
+      },
+      {
+        "from": "M2_freeze_tail",
+        "to": "M2_freeze_tail"
+      }
+    ],
+    "forced_return_law": "R_0(q,w,v,u) = (q+1, w, v+1, u)",
+    "forced_hidden_invariant": "delta := v-q is preserved by one full return",
+    "forced_section_return": "U_0 = id on (w,u)",
+    "forced_monodromy": 0
+  },
+  "phase_collision_data": {
+    "candidate_bit": "phase_align := 1_{(v-q) mod m = 0}",
+    "per_m": [
+      {
+        "m": 5,
+        "visited_state_count": 2882,
+        "delta_support_histogram": {
+          "1": 2758,
+          "2": 99,
+          "3": 20,
+          "4": 4,
+          "5": 1
+        },
+        "multi_delta_state_count": 124,
+        "phase_align_split_state_count": 51,
+        "phase_align_split_by_layer": {
+          "0": 10,
+          "1": 6,
+          "2": 18,
+          "3": 5,
+          "4+": 12
+        },
+        "collision_rows": [
+          {
+            "state_id": 4360,
+            "orbit_id": 880,
+            "state_name": "L=3|sig=00000",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "delta_support_size": 5,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              0,
+              0,
+              3,
+              0,
+              0
+            ],
+            "phase_misaligned_example": [
+              2,
+              0,
+              3,
+              3,
+              0
+            ]
+          },
+          {
+            "state_id": 4371,
+            "orbit_id": 882,
+            "state_name": "L=3|sig=00040",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                0,
+                0,
+                4,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              3,
+              4
+            ],
+            "delta_support_size": 3,
+            "phase_align_bit_split": false,
+            "phase_align_example": null,
+            "phase_misaligned_example": [
+              0,
+              0,
+              2,
+              3,
+              3
+            ]
+          },
+          {
+            "state_id": 4412,
+            "orbit_id": 882,
+            "state_name": "L=3|sig=00400",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                0,
+                4,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              3,
+              4
+            ],
+            "delta_support_size": 3,
+            "phase_align_bit_split": false,
+            "phase_align_example": null,
+            "phase_misaligned_example": [
+              0,
+              0,
+              3,
+              3,
+              2
+            ]
+          },
+          {
+            "state_id": 4577,
+            "orbit_id": 882,
+            "state_name": "L=3|sig=04000",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                4,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              4
+            ],
+            "delta_support_size": 3,
+            "phase_align_bit_split": false,
+            "phase_align_example": null,
+            "phase_misaligned_example": [
+              2,
+              3,
+              3,
+              0,
+              0
+            ]
+          },
+          {
+            "state_id": 5146,
+            "orbit_id": 882,
+            "state_name": "L=3|sig=40000",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                4,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              4
+            ],
+            "delta_support_size": 3,
+            "phase_align_bit_split": false,
+            "phase_align_example": null,
+            "phase_misaligned_example": [
+              3,
+              3,
+              2,
+              0,
+              0
+            ]
+          },
+          {
+            "state_id": 5851,
+            "orbit_id": 1183,
+            "state_name": "L=4+|sig=00008",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                8
+              ]
+            },
+            "delta_values": [
+              1,
+              3,
+              4
+            ],
+            "delta_support_size": 3,
+            "phase_align_bit_split": false,
+            "phase_align_example": null,
+            "phase_misaligned_example": [
+              1,
+              0,
+              2,
+              3,
+              3
+            ]
+          },
+          {
+            "state_id": 5871,
+            "orbit_id": 1183,
+            "state_name": "L=4+|sig=00080",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                0,
+                0,
+                8,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              3,
+              4
+            ],
+            "delta_support_size": 3,
+            "phase_align_bit_split": false,
+            "phase_align_example": null,
+            "phase_misaligned_example": [
+              2,
+              0,
+              1,
+              3,
+              3
+            ]
+          },
+          {
+            "state_id": 6155,
+            "orbit_id": 1238,
+            "state_name": "L=4+|sig=02002",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                2,
+                0,
+                0,
+                2
+              ]
+            },
+            "delta_values": [
+              0,
+              2,
+              3
+            ],
+            "delta_support_size": 3,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              1,
+              0,
+              0,
+              0,
+              3
+            ],
+            "phase_misaligned_example": [
+              3,
+              0,
+              3,
+              3,
+              0
+            ]
+          },
+          {
+            "state_id": 6160,
+            "orbit_id": 1238,
+            "state_name": "L=4+|sig=02020",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                2,
+                0,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              2,
+              3
+            ],
+            "delta_support_size": 3,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              3,
+              0,
+              3,
+              0,
+              3
+            ],
+            "phase_misaligned_example": [
+              0,
+              0,
+              1,
+              3,
+              0
+            ]
+          },
+          {
+            "state_id": 6389,
+            "orbit_id": 1183,
+            "state_name": "L=4+|sig=08000",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                8,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              4
+            ],
+            "delta_support_size": 3,
+            "phase_align_bit_split": false,
+            "phase_align_example": null,
+            "phase_misaligned_example": [
+              1,
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          {
+            "state_id": 7158,
+            "orbit_id": 1185,
+            "state_name": "L=4+|sig=20002",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                2,
+                0,
+                0,
+                0,
+                2
+              ]
+            },
+            "delta_values": [
+              0,
+              2,
+              3
+            ],
+            "delta_support_size": 3,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              1,
+              0,
+              2,
+              0,
+              1
+            ],
+            "phase_misaligned_example": [
+              3,
+              0,
+              2,
+              3,
+              1
+            ]
+          },
+          {
+            "state_id": 7163,
+            "orbit_id": 1238,
+            "state_name": "L=4+|sig=20020",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                2,
+                0,
+                0,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              2,
+              3
+            ],
+            "delta_support_size": 3,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              3,
+              0,
+              0,
+              0,
+              1
+            ],
+            "phase_misaligned_example": [
+              0,
+              0,
+              0,
+              3,
+              1
+            ]
+          },
+          {
+            "state_id": 8037,
+            "orbit_id": 1183,
+            "state_name": "L=4+|sig=80000",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                8,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              4
+            ],
+            "delta_support_size": 3,
+            "phase_align_bit_split": false,
+            "phase_align_example": null,
+            "phase_misaligned_example": [
+              3,
+              3,
+              2,
+              0,
+              1
+            ]
+          },
+          {
+            "state_id": 3130,
+            "orbit_id": 637,
+            "state_name": "L=2|sig=010220",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                0,
+                22,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2
+            ],
+            "delta_support_size": 2,
+            "phase_align_bit_split": false,
+            "phase_align_example": null,
+            "phase_misaligned_example": [
+              3,
+              3,
+              4,
+              0,
+              2
+            ]
+          },
+          {
+            "state_id": 3136,
+            "orbit_id": 639,
+            "state_name": "L=2|sig=010280",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                0,
+                28,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              4
+            ],
+            "delta_support_size": 2,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              3,
+              0,
+              4,
+              0,
+              0
+            ],
+            "phase_misaligned_example": [
+              3,
+              3,
+              4,
+              2,
+              0
+            ]
+          },
+          {
+            "state_id": 3332,
+            "orbit_id": 747,
+            "state_name": "L=2|sig=016043",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                16,
+                0,
+                4,
+                3
+              ]
+            },
+            "delta_values": [
+              1,
+              4
+            ],
+            "delta_support_size": 2,
+            "phase_align_bit_split": false,
+            "phase_align_example": null,
+            "phase_misaligned_example": [
+              4,
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          {
+            "state_id": 3333,
+            "orbit_id": 749,
+            "state_name": "L=2|sig=016049",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                16,
+                0,
+                4,
+                9
+              ]
+            },
+            "delta_values": [
+              0,
+              2
+            ],
+            "delta_support_size": 2,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              4,
+              0,
+              3,
+              0,
+              0
+            ],
+            "phase_misaligned_example": [
+              4,
+              3,
+              3,
+              0,
+              2
+            ]
+          },
+          {
+            "state_id": 3172,
+            "orbit_id": 718,
+            "state_name": "L=2|sig=02028",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                2,
+                8
+              ]
+            },
+            "delta_values": [
+              1,
+              4
+            ],
+            "delta_support_size": 2,
+            "phase_align_bit_split": false,
+            "phase_align_example": null,
+            "phase_misaligned_example": [
+              3,
+              2,
+              3,
+              1,
+              3
+            ]
+          },
+          {
+            "state_id": 3396,
+            "orbit_id": 830,
+            "state_name": "L=2|sig=020441",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                20,
+                4,
+                4,
+                1
+              ]
+            },
+            "delta_values": [
+              1,
+              3
+            ],
+            "delta_support_size": 2,
+            "phase_align_bit_split": false,
+            "phase_align_example": null,
+            "phase_misaligned_example": [
+              4,
+              0,
+              3,
+              3,
+              2
+            ]
+          },
+          {
+            "state_id": 3174,
+            "orbit_id": 719,
+            "state_name": "L=2|sig=02082",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                8,
+                2
+              ]
+            },
+            "delta_values": [
+              1,
+              4
+            ],
+            "delta_support_size": 2,
+            "phase_align_bit_split": false,
+            "phase_align_example": null,
+            "phase_misaligned_example": [
+              3,
+              2,
+              3,
+              3,
+              1
+            ]
+          },
+          {
+            "state_id": 3402,
+            "orbit_id": 637,
+            "state_name": "L=2|sig=022001",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                22,
+                0,
+                0,
+                1
+              ]
+            },
+            "delta_values": [
+              1,
+              3
+            ],
+            "delta_support_size": 2,
+            "phase_align_bit_split": false,
+            "phase_align_example": null,
+            "phase_misaligned_example": [
+              4,
+              0,
+              2,
+              3,
+              3
+            ]
+          },
+          {
+            "state_id": 3178,
+            "orbit_id": 721,
+            "state_name": "L=2|sig=02208",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                2,
+                0,
+                8
+              ]
+            },
+            "delta_values": [
+              0,
+              1
+            ],
+            "delta_support_size": 2,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              1,
+              3,
+              0,
+              3,
+              0
+            ],
+            "phase_misaligned_example": [
+              3,
+              0,
+              3,
+              1,
+              0
+            ]
+          },
+          {
+            "state_id": 3407,
+            "orbit_id": 674,
+            "state_name": "L=2|sig=024009",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                24,
+                0,
+                0,
+                9
+              ]
+            },
+            "delta_values": [
+              0,
+              2
+            ],
+            "delta_support_size": 2,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              4,
+              0,
+              0,
+              0,
+              3
+            ],
+            "phase_misaligned_example": [
+              4,
+              3,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "state_id": 3417,
+            "orbit_id": 639,
+            "state_name": "L=2|sig=028001",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                28,
+                0,
+                0,
+                1
+              ]
+            },
+            "delta_values": [
+              1,
+              3
+            ],
+            "delta_support_size": 2,
+            "phase_align_bit_split": false,
+            "phase_align_example": null,
+            "phase_misaligned_example": [
+              4,
+              0,
+              0,
+              3,
+              0
+            ]
+          },
+          {
+            "state_id": 3189,
+            "orbit_id": 718,
+            "state_name": "L=2|sig=02802",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                8,
+                0,
+                2
+              ]
+            },
+            "delta_values": [
+              2,
+              3
+            ],
+            "delta_support_size": 2,
+            "phase_align_bit_split": false,
+            "phase_align_example": null,
+            "phase_misaligned_example": [
+              0,
+              3,
+              1,
+              1,
+              2
+            ]
+          },
+          {
+            "state_id": 3199,
+            "orbit_id": 649,
+            "state_name": "L=2|sig=032240",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                3,
+                2,
+                24,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1
+            ],
+            "delta_support_size": 2,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              2,
+              3,
+              4,
+              3,
+              0
+            ],
+            "phase_misaligned_example": [
+              2,
+              0,
+              4,
+              1,
+              0
+            ]
+          },
+          {
+            "state_id": 3203,
+            "orbit_id": 650,
+            "state_name": "L=2|sig=038180",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                3,
+                8,
+                18,
+                0
+              ]
+            },
+            "delta_values": [
+              2,
+              3
+            ],
+            "delta_support_size": 2,
+            "phase_align_bit_split": false,
+            "phase_align_example": null,
+            "phase_misaligned_example": [
+              2,
+              3,
+              4,
+              1,
+              2
+            ]
+          },
+          {
+            "state_id": 3209,
+            "orbit_id": 742,
+            "state_name": "L=2|sig=04044",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                4,
+                0,
+                4,
+                4
+              ]
+            },
+            "delta_values": [
+              2,
+              3
+            ],
+            "delta_support_size": 2,
+            "phase_align_bit_split": false,
+            "phase_align_example": null,
+            "phase_misaligned_example": [
+              0,
+              0,
+              2,
+              2,
+              3
+            ]
+          },
+          {
+            "state_id": 3220,
+            "orbit_id": 742,
+            "state_name": "L=2|sig=04404",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                4,
+                4,
+                0,
+                4
+              ]
+            },
+            "delta_values": [
+              2,
+              3
+            ],
+            "delta_support_size": 2,
+            "phase_align_bit_split": false,
+            "phase_align_example": null,
+            "phase_misaligned_example": [
+              0,
+              0,
+              3,
+              2,
+              2
+            ]
+          },
+          {
+            "state_id": 3248,
+            "orbit_id": 721,
+            "state_name": "L=2|sig=08022",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                8,
+                0,
+                2,
+                2
+              ]
+            },
+            "delta_values": [
+              0,
+              3
+            ],
+            "delta_support_size": 2,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              1,
+              0,
+              3,
+              0,
+              3
+            ],
+            "phase_misaligned_example": [
+              3,
+              0,
+              1,
+              3,
+              0
+            ]
+          },
+          {
+            "state_id": 3264,
+            "orbit_id": 719,
+            "state_name": "L=2|sig=08202",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                8,
+                2,
+                0,
+                2
+              ]
+            },
+            "delta_values": [
+              0,
+              4
+            ],
+            "delta_support_size": 2,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              3,
+              3,
+              1,
+              3,
+              2
+            ],
+            "phase_misaligned_example": [
+              1,
+              1,
+              3,
+              0,
+              2
+            ]
+          },
+          {
+            "state_id": 3297,
+            "orbit_id": 674,
+            "state_name": "L=2|sig=090240",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                9,
+                0,
+                24,
+                0
+              ]
+            },
+            "delta_values": [
+              2,
+              3
+            ],
+            "delta_support_size": 2,
+            "phase_align_bit_split": false,
+            "phase_align_example": null,
+            "phase_misaligned_example": [
+              0,
+              0,
+              4,
+              3,
+              0
+            ]
+          },
+          {
+            "state_id": 3301,
+            "orbit_id": 675,
+            "state_name": "L=2|sig=092180",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                9,
+                2,
+                18,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              4
+            ],
+            "delta_support_size": 2,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              0,
+              3,
+              4,
+              3,
+              2
+            ],
+            "phase_misaligned_example": [
+              0,
+              1,
+              4,
+              0,
+              2
+            ]
+          },
+          {
+            "state_id": 4100,
+            "orbit_id": 747,
+            "state_name": "L=2|sig=160430",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                16,
+                0,
+                4,
+                3,
+                0
+              ]
+            },
+            "delta_values": [
+              2,
+              4
+            ],
+            "delta_support_size": 2,
+            "phase_align_bit_split": false,
+            "phase_align_example": null,
+            "phase_misaligned_example": [
+              3,
+              3,
+              2,
+              0,
+              4
+            ]
+          },
+          {
+            "state_id": 4101,
+            "orbit_id": 749,
+            "state_name": "L=2|sig=160490",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                16,
+                0,
+                4,
+                9,
+                0
+              ]
+            },
+            "delta_values": [
+              2,
+              4
+            ],
+            "delta_support_size": 2,
+            "phase_align_bit_split": false,
+            "phase_align_example": null,
+            "phase_misaligned_example": [
+              0,
+              3,
+              0,
+              0,
+              4
+            ]
+          },
+          {
+            "state_id": 4242,
+            "orbit_id": 650,
+            "state_name": "L=2|sig=180038",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                18,
+                0,
+                0,
+                3,
+                8
+              ]
+            },
+            "delta_values": [
+              1,
+              4
+            ],
+            "delta_support_size": 2,
+            "phase_align_bit_split": false,
+            "phase_align_example": null,
+            "phase_misaligned_example": [
+              1,
+              2,
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "state_id": 4243,
+            "orbit_id": 675,
+            "state_name": "L=2|sig=180092",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                18,
+                0,
+                0,
+                9,
+                2
+              ]
+            },
+            "delta_values": [
+              1,
+              4
+            ],
+            "delta_support_size": 2,
+            "phase_align_bit_split": false,
+            "phase_align_example": null,
+            "phase_misaligned_example": [
+              3,
+              2,
+              0,
+              3,
+              4
+            ]
+          },
+          {
+            "state_id": 3571,
+            "orbit_id": 719,
+            "state_name": "L=2|sig=20208",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                2,
+                0,
+                2,
+                0,
+                8
+              ]
+            },
+            "delta_values": [
+              0,
+              1
+            ],
+            "delta_support_size": 2,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              1,
+              3,
+              2,
+              3,
+              3
+            ],
+            "phase_misaligned_example": [
+              3,
+              0,
+              2,
+              1,
+              1
+            ]
+          },
+          {
+            "state_id": 3574,
+            "orbit_id": 718,
+            "state_name": "L=2|sig=20280",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                2,
+                0,
+                2,
+                8,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1
+            ],
+            "delta_support_size": 2,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              2,
+              3,
+              1,
+              3,
+              3
+            ],
+            "phase_misaligned_example": [
+              2,
+              0,
+              3,
+              1,
+              1
+            ]
+          },
+          {
+            "state_id": 4281,
+            "orbit_id": 830,
+            "state_name": "L=2|sig=204410",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                20,
+                4,
+                4,
+                1,
+                0
+              ]
+            },
+            "delta_values": [
+              2,
+              4
+            ],
+            "delta_support_size": 2,
+            "phase_align_bit_split": false,
+            "phase_align_example": null,
+            "phase_misaligned_example": [
+              2,
+              3,
+              3,
+              0,
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "m": 7,
+        "visited_state_count": 7609,
+        "delta_support_histogram": {
+          "1": 5271,
+          "2": 1252,
+          "3": 681,
+          "4": 163,
+          "5": 119,
+          "6": 70,
+          "7": 53
+        },
+        "multi_delta_state_count": 2338,
+        "phase_align_split_state_count": 893,
+        "phase_align_split_by_layer": {
+          "0": 155,
+          "1": 107,
+          "2": 144,
+          "3": 136,
+          "4+": 351
+        },
+        "collision_rows": [
+          {
+            "state_id": 3022,
+            "orbit_id": 610,
+            "state_name": "L=2|sig=00000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              4,
+              0,
+              1,
+              0,
+              4
+            ],
+            "phase_misaligned_example": [
+              0,
+              0,
+              5,
+              4,
+              0
+            ]
+          },
+          {
+            "state_id": 3168,
+            "orbit_id": 644,
+            "state_name": "L=2|sig=02002",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                0,
+                2
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              3,
+              5,
+              5,
+              5,
+              5
+            ],
+            "phase_misaligned_example": [
+              5,
+              4,
+              3,
+              3,
+              1
+            ]
+          },
+          {
+            "state_id": 3170,
+            "orbit_id": 644,
+            "state_name": "L=2|sig=02020",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              5,
+              5,
+              3,
+              5,
+              5
+            ],
+            "phase_misaligned_example": [
+              3,
+              4,
+              5,
+              1,
+              3
+            ]
+          },
+          {
+            "state_id": 3548,
+            "orbit_id": 616,
+            "state_name": "L=2|sig=20002",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                2,
+                0,
+                0,
+                0,
+                2
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              3,
+              5,
+              0,
+              5,
+              3
+            ],
+            "phase_misaligned_example": [
+              5,
+              4,
+              0,
+              3,
+              4
+            ]
+          },
+          {
+            "state_id": 3553,
+            "orbit_id": 644,
+            "state_name": "L=2|sig=20020",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                2,
+                0,
+                0,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              5,
+              5,
+              5,
+              5,
+              3
+            ],
+            "phase_misaligned_example": [
+              1,
+              4,
+              4,
+              3,
+              4
+            ]
+          },
+          {
+            "state_id": 4360,
+            "orbit_id": 880,
+            "state_name": "L=3|sig=00000",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              0,
+              0,
+              5,
+              0,
+              5
+            ],
+            "phase_misaligned_example": [
+              2,
+              0,
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "state_id": 4371,
+            "orbit_id": 882,
+            "state_name": "L=3|sig=00040",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                0,
+                0,
+                4,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              0,
+              5,
+              2,
+              5,
+              5
+            ],
+            "phase_misaligned_example": [
+              4,
+              0,
+              5,
+              3,
+              5
+            ]
+          },
+          {
+            "state_id": 4412,
+            "orbit_id": 882,
+            "state_name": "L=3|sig=00400",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                0,
+                4,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              0,
+              5,
+              3,
+              5,
+              4
+            ],
+            "phase_misaligned_example": [
+              5,
+              0,
+              5,
+              5,
+              2
+            ]
+          },
+          {
+            "state_id": 4577,
+            "orbit_id": 882,
+            "state_name": "L=3|sig=04000",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                4,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              4,
+              5,
+              3,
+              5,
+              0
+            ],
+            "phase_misaligned_example": [
+              2,
+              5,
+              5,
+              0,
+              5
+            ]
+          },
+          {
+            "state_id": 5146,
+            "orbit_id": 882,
+            "state_name": "L=3|sig=40000",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                4,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              5,
+              5,
+              2,
+              5,
+              0
+            ],
+            "phase_misaligned_example": [
+              3,
+              5,
+              4,
+              0,
+              5
+            ]
+          },
+          {
+            "state_id": 5847,
+            "orbit_id": 1179,
+            "state_name": "L=4+|sig=00000",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              0,
+              0,
+              5,
+              0,
+              0
+            ],
+            "phase_misaligned_example": [
+              5,
+              0,
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "state_id": 5848,
+            "orbit_id": 1180,
+            "state_name": "L=4+|sig=00002",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              1,
+              0,
+              4,
+              0,
+              0
+            ],
+            "phase_misaligned_example": [
+              5,
+              0,
+              5,
+              3,
+              5
+            ]
+          },
+          {
+            "state_id": 5851,
+            "orbit_id": 1183,
+            "state_name": "L=4+|sig=00008",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                8
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              1,
+              5,
+              2,
+              5,
+              5
+            ],
+            "phase_misaligned_example": [
+              2,
+              0,
+              5,
+              4,
+              0
+            ]
+          },
+          {
+            "state_id": 5853,
+            "orbit_id": 1180,
+            "state_name": "L=4+|sig=00020",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                0,
+                0,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              5,
+              0,
+              5,
+              0,
+              3
+            ],
+            "phase_misaligned_example": [
+              0,
+              0,
+              5,
+              5,
+              3
+            ]
+          },
+          {
+            "state_id": 5859,
+            "orbit_id": 1181,
+            "state_name": "L=4+|sig=00040",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                0,
+                0,
+                4,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              5,
+              0,
+              4,
+              0,
+              3
+            ],
+            "phase_misaligned_example": [
+              4,
+              0,
+              5,
+              3,
+              0
+            ]
+          },
+          {
+            "state_id": 5871,
+            "orbit_id": 1183,
+            "state_name": "L=4+|sig=00080",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                0,
+                0,
+                8,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              0,
+              0,
+              3,
+              0,
+              3
+            ],
+            "phase_misaligned_example": [
+              2,
+              0,
+              3,
+              5,
+              3
+            ]
+          },
+          {
+            "state_id": 5941,
+            "orbit_id": 1181,
+            "state_name": "L=4+|sig=00400",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                0,
+                4,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              5,
+              0,
+              5,
+              0,
+              2
+            ],
+            "phase_misaligned_example": [
+              0,
+              0,
+              5,
+              5,
+              2
+            ]
+          },
+          {
+            "state_id": 5945,
+            "orbit_id": 1265,
+            "state_name": "L=4+|sig=00408",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                0,
+                4,
+                0,
+                8
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              1,
+              5,
+              3,
+              5,
+              4
+            ],
+            "phase_misaligned_example": [
+              2,
+              0,
+              5,
+              4,
+              2
+            ]
+          },
+          {
+            "state_id": 6059,
+            "orbit_id": 1210,
+            "state_name": "L=4+|sig=010160",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                1,
+                0,
+                16,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              5,
+              5,
+              6,
+              5,
+              5
+            ],
+            "phase_misaligned_example": [
+              5,
+              0,
+              6,
+              5,
+              4
+            ]
+          },
+          {
+            "state_id": 6154,
+            "orbit_id": 1180,
+            "state_name": "L=4+|sig=02000",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                2,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              3,
+              0,
+              5,
+              0,
+              5
+            ],
+            "phase_misaligned_example": [
+              3,
+              0,
+              5,
+              4,
+              0
+            ]
+          },
+          {
+            "state_id": 6166,
+            "orbit_id": 1239,
+            "state_name": "L=4+|sig=02080",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                2,
+                0,
+                8,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              5,
+              0,
+              3,
+              0,
+              3
+            ],
+            "phase_misaligned_example": [
+              0,
+              0,
+              1,
+              5,
+              5
+            ]
+          },
+          {
+            "state_id": 6269,
+            "orbit_id": 1181,
+            "state_name": "L=4+|sig=04000",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                4,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              2,
+              0,
+              5,
+              0,
+              5
+            ],
+            "phase_misaligned_example": [
+              5,
+              0,
+              5,
+              4,
+              5
+            ]
+          },
+          {
+            "state_id": 6277,
+            "orbit_id": 1265,
+            "state_name": "L=4+|sig=04080",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                4,
+                0,
+                8,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              4,
+              5,
+              1,
+              5,
+              5
+            ],
+            "phase_misaligned_example": [
+              0,
+              5,
+              4,
+              2,
+              2
+            ]
+          },
+          {
+            "state_id": 6389,
+            "orbit_id": 1183,
+            "state_name": "L=4+|sig=08000",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                8,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              3,
+              0,
+              3,
+              0,
+              0
+            ],
+            "phase_misaligned_example": [
+              2,
+              0,
+              4,
+              5,
+              0
+            ]
+          },
+          {
+            "state_id": 6393,
+            "orbit_id": 1316,
+            "state_name": "L=4+|sig=08008",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                8,
+                0,
+                0,
+                8
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              1,
+              5,
+              5,
+              5,
+              2
+            ],
+            "phase_misaligned_example": [
+              1,
+              0,
+              5,
+              5,
+              0
+            ]
+          },
+          {
+            "state_id": 6395,
+            "orbit_id": 1315,
+            "state_name": "L=4+|sig=08020",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                8,
+                0,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              3,
+              0,
+              3,
+              0,
+              5
+            ],
+            "phase_misaligned_example": [
+              1,
+              0,
+              5,
+              4,
+              3
+            ]
+          },
+          {
+            "state_id": 6401,
+            "orbit_id": 1316,
+            "state_name": "L=4+|sig=08080",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                8,
+                0,
+                8,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              5,
+              0,
+              1,
+              0,
+              5
+            ],
+            "phase_misaligned_example": [
+              3,
+              0,
+              3,
+              4,
+              3
+            ]
+          },
+          {
+            "state_id": 6432,
+            "orbit_id": 1201,
+            "state_name": "L=4+|sig=08400",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                8,
+                4,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              5,
+              5,
+              1,
+              5,
+              4
+            ],
+            "phase_misaligned_example": [
+              1,
+              0,
+              5,
+              4,
+              2
+            ]
+          },
+          {
+            "state_id": 7157,
+            "orbit_id": 1180,
+            "state_name": "L=4+|sig=20000",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                2,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              0,
+              0,
+              4,
+              0,
+              1
+            ],
+            "phase_misaligned_example": [
+              3,
+              0,
+              4,
+              4,
+              1
+            ]
+          },
+          {
+            "state_id": 7623,
+            "orbit_id": 1181,
+            "state_name": "L=4+|sig=40000",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                4,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              3,
+              0,
+              4,
+              0,
+              5
+            ],
+            "phase_misaligned_example": [
+              5,
+              0,
+              5,
+              5,
+              4
+            ]
+          },
+          {
+            "state_id": 8037,
+            "orbit_id": 1183,
+            "state_name": "L=4+|sig=80000",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                8,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              5,
+              5,
+              2,
+              5,
+              1
+            ],
+            "phase_misaligned_example": [
+              3,
+              5,
+              4,
+              0,
+              1
+            ]
+          },
+          {
+            "state_id": 8061,
+            "orbit_id": 1316,
+            "state_name": "L=4+|sig=80080",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                8,
+                0,
+                0,
+                8,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              2,
+              5,
+              5,
+              5,
+              1
+            ],
+            "phase_misaligned_example": [
+              0,
+              5,
+              5,
+              0,
+              1
+            ]
+          },
+          {
+            "state_id": 8231,
+            "orbit_id": 1201,
+            "state_name": "L=4+|sig=84000",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                8,
+                4,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 7,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              4,
+              5,
+              3,
+              5,
+              1
+            ],
+            "phase_misaligned_example": [
+              0,
+              5,
+              4,
+              2,
+              1
+            ]
+          },
+          {
+            "state_id": 3023,
+            "orbit_id": 611,
+            "state_name": "L=2|sig=00002",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "delta_support_size": 6,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              3,
+              5,
+              1,
+              5,
+              2
+            ],
+            "phase_misaligned_example": [
+              1,
+              5,
+              3,
+              0,
+              0
+            ]
+          },
+          {
+            "state_id": 3026,
+            "orbit_id": 614,
+            "state_name": "L=2|sig=00008",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                8
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              1,
+              5,
+              3,
+              5,
+              2
+            ],
+            "phase_misaligned_example": [
+              2,
+              0,
+              5,
+              4,
+              5
+            ]
+          },
+          {
+            "state_id": 3028,
+            "orbit_id": 611,
+            "state_name": "L=2|sig=00020",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "phase_align_bit_split": false,
+            "phase_align_example": null,
+            "phase_misaligned_example": [
+              1,
+              5,
+              3,
+              2,
+              5
+            ]
+          },
+          {
+            "state_id": 3031,
+            "orbit_id": 612,
+            "state_name": "L=2|sig=00040",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                4,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            "delta_support_size": 6,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              4,
+              0,
+              5,
+              0,
+              0
+            ],
+            "phase_misaligned_example": [
+              0,
+              0,
+              2,
+              4,
+              3
+            ]
+          },
+          {
+            "state_id": 3040,
+            "orbit_id": 614,
+            "state_name": "L=2|sig=00080",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                8,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              3,
+              0,
+              2,
+              0,
+              4
+            ],
+            "phase_misaligned_example": [
+              0,
+              0,
+              3,
+              3,
+              3
+            ]
+          },
+          {
+            "state_id": 3071,
+            "orbit_id": 612,
+            "state_name": "L=2|sig=00400",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                4,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            "delta_support_size": 6,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              4,
+              0,
+              3,
+              0,
+              2
+            ],
+            "phase_misaligned_example": [
+              0,
+              0,
+              3,
+              4,
+              2
+            ]
+          },
+          {
+            "state_id": 3325,
+            "orbit_id": 634,
+            "state_name": "L=2|sig=016001",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                16,
+                0,
+                0,
+                1
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              6,
+              5,
+              5,
+              5,
+              2
+            ],
+            "phase_misaligned_example": [
+              6,
+              0,
+              5,
+              5,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "m": 9,
+        "visited_state_count": 8754,
+        "delta_support_histogram": {
+          "1": 4752,
+          "2": 659,
+          "3": 1077,
+          "4": 856,
+          "5": 679,
+          "6": 220,
+          "7": 130,
+          "8": 70,
+          "9": 311
+        },
+        "multi_delta_state_count": 4002,
+        "phase_align_split_state_count": 1843,
+        "phase_align_split_by_layer": {
+          "0": 280,
+          "1": 267,
+          "2": 234,
+          "3": 283,
+          "4+": 779
+        },
+        "collision_rows": [
+          {
+            "state_id": 3022,
+            "orbit_id": 610,
+            "state_name": "L=2|sig=00000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              6,
+              0,
+              7,
+              0,
+              7
+            ],
+            "phase_misaligned_example": [
+              0,
+              0,
+              7,
+              7,
+              6
+            ]
+          },
+          {
+            "state_id": 3023,
+            "orbit_id": 611,
+            "state_name": "L=2|sig=00002",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              3,
+              7,
+              6,
+              7,
+              6
+            ],
+            "phase_misaligned_example": [
+              5,
+              7,
+              7,
+              5,
+              5
+            ]
+          },
+          {
+            "state_id": 3026,
+            "orbit_id": 614,
+            "state_name": "L=2|sig=00008",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                8
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              1,
+              7,
+              5,
+              7,
+              0
+            ],
+            "phase_misaligned_example": [
+              2,
+              0,
+              7,
+              6,
+              5
+            ]
+          },
+          {
+            "state_id": 3046,
+            "orbit_id": 615,
+            "state_name": "L=2|sig=000120",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                12,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              0,
+              6,
+              2,
+              6,
+              6
+            ],
+            "phase_misaligned_example": [
+              6,
+              0,
+              5,
+              6,
+              3
+            ]
+          },
+          {
+            "state_id": 3028,
+            "orbit_id": 611,
+            "state_name": "L=2|sig=00020",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              5,
+              7,
+              4,
+              7,
+              6
+            ],
+            "phase_misaligned_example": [
+              7,
+              7,
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "state_id": 3031,
+            "orbit_id": 612,
+            "state_name": "L=2|sig=00040",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                4,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              4,
+              0,
+              7,
+              0,
+              0
+            ],
+            "phase_misaligned_example": [
+              4,
+              0,
+              7,
+              3,
+              6
+            ]
+          },
+          {
+            "state_id": 3032,
+            "orbit_id": 618,
+            "state_name": "L=2|sig=00042",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                4,
+                2
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              4,
+              6,
+              7,
+              6,
+              6
+            ],
+            "phase_misaligned_example": [
+              4,
+              7,
+              7,
+              6,
+              5
+            ]
+          },
+          {
+            "state_id": 3037,
+            "orbit_id": 613,
+            "state_name": "L=2|sig=00060",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                6,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              7,
+              6,
+              4,
+              6,
+              6
+            ],
+            "phase_misaligned_example": [
+              6,
+              7,
+              5,
+              6,
+              5
+            ]
+          },
+          {
+            "state_id": 3040,
+            "orbit_id": 614,
+            "state_name": "L=2|sig=00080",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                8,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              3,
+              0,
+              4,
+              0,
+              4
+            ],
+            "phase_misaligned_example": [
+              7,
+              0,
+              5,
+              5,
+              3
+            ]
+          },
+          {
+            "state_id": 3071,
+            "orbit_id": 612,
+            "state_name": "L=2|sig=00400",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                4,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              4,
+              0,
+              5,
+              0,
+              2
+            ],
+            "phase_misaligned_example": [
+              7,
+              0,
+              5,
+              6,
+              2
+            ]
+          },
+          {
+            "state_id": 3075,
+            "orbit_id": 618,
+            "state_name": "L=2|sig=00420",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                4,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              7,
+              6,
+              5,
+              6,
+              5
+            ],
+            "phase_misaligned_example": [
+              3,
+              7,
+              6,
+              0,
+              4
+            ]
+          },
+          {
+            "state_id": 3120,
+            "orbit_id": 634,
+            "state_name": "L=2|sig=010160",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                0,
+                16,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              5,
+              0,
+              8,
+              0,
+              7
+            ],
+            "phase_misaligned_example": [
+              7,
+              0,
+              8,
+              7,
+              7
+            ]
+          },
+          {
+            "state_id": 3124,
+            "orbit_id": 635,
+            "state_name": "L=2|sig=010180",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                0,
+                18,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              5,
+              7,
+              8,
+              7,
+              2
+            ],
+            "phase_misaligned_example": [
+              6,
+              7,
+              8,
+              6,
+              2
+            ]
+          },
+          {
+            "state_id": 3132,
+            "orbit_id": 638,
+            "state_name": "L=2|sig=010240",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                0,
+                24,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              7,
+              7,
+              8,
+              7,
+              0
+            ],
+            "phase_misaligned_example": [
+              5,
+              0,
+              8,
+              7,
+              0
+            ]
+          },
+          {
+            "state_id": 3146,
+            "orbit_id": 699,
+            "state_name": "L=2|sig=014162",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                4,
+                16,
+                2
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              4,
+              6,
+              8,
+              6,
+              5
+            ],
+            "phase_misaligned_example": [
+              1,
+              7,
+              8,
+              0,
+              4
+            ]
+          },
+          {
+            "state_id": 3325,
+            "orbit_id": 634,
+            "state_name": "L=2|sig=016001",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                16,
+                0,
+                0,
+                1
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              8,
+              7,
+              7,
+              7,
+              0
+            ],
+            "phase_misaligned_example": [
+              8,
+              0,
+              7,
+              7,
+              7
+            ]
+          },
+          {
+            "state_id": 3331,
+            "orbit_id": 744,
+            "state_name": "L=2|sig=016041",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                16,
+                0,
+                4,
+                1
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              8,
+              6,
+              3,
+              6,
+              6
+            ],
+            "phase_misaligned_example": [
+              8,
+              0,
+              3,
+              6,
+              3
+            ]
+          },
+          {
+            "state_id": 3346,
+            "orbit_id": 680,
+            "state_name": "L=2|sig=016401",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                16,
+                4,
+                0,
+                1
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              8,
+              6,
+              4,
+              6,
+              5
+            ],
+            "phase_misaligned_example": [
+              8,
+              0,
+              5,
+              5,
+              2
+            ]
+          },
+          {
+            "state_id": 3365,
+            "orbit_id": 794,
+            "state_name": "L=2|sig=0170161",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                17,
+                0,
+                16,
+                1
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              8,
+              6,
+              8,
+              6,
+              1
+            ],
+            "phase_misaligned_example": [
+              8,
+              0,
+              8,
+              7,
+              6
+            ]
+          },
+          {
+            "state_id": 3383,
+            "orbit_id": 635,
+            "state_name": "L=2|sig=018001",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                18,
+                0,
+                0,
+                1
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              8,
+              7,
+              2,
+              7,
+              5
+            ],
+            "phase_misaligned_example": [
+              8,
+              0,
+              2,
+              7,
+              3
+            ]
+          },
+          {
+            "state_id": 3167,
+            "orbit_id": 611,
+            "state_name": "L=2|sig=02000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              6,
+              7,
+              4,
+              7,
+              5
+            ],
+            "phase_misaligned_example": [
+              3,
+              0,
+              7,
+              4,
+              6
+            ]
+          },
+          {
+            "state_id": 3168,
+            "orbit_id": 644,
+            "state_name": "L=2|sig=02002",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                0,
+                2
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              3,
+              7,
+              7,
+              7,
+              5
+            ],
+            "phase_misaligned_example": [
+              4,
+              7,
+              6,
+              6,
+              6
+            ]
+          },
+          {
+            "state_id": 3169,
+            "orbit_id": 663,
+            "state_name": "L=2|sig=02008",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                0,
+                8
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              1,
+              7,
+              0,
+              7,
+              5
+            ],
+            "phase_misaligned_example": [
+              3,
+              0,
+              7,
+              5,
+              5
+            ]
+          },
+          {
+            "state_id": 3170,
+            "orbit_id": 644,
+            "state_name": "L=2|sig=02020",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              5,
+              7,
+              5,
+              7,
+              5
+            ],
+            "phase_misaligned_example": [
+              6,
+              7,
+              4,
+              6,
+              6
+            ]
+          },
+          {
+            "state_id": 3173,
+            "orbit_id": 645,
+            "state_name": "L=2|sig=02080",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                8,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              7,
+              7,
+              3,
+              7,
+              5
+            ],
+            "phase_misaligned_example": [
+              5,
+              0,
+              5,
+              7,
+              3
+            ]
+          },
+          {
+            "state_id": 3197,
+            "orbit_id": 648,
+            "state_name": "L=2|sig=030160",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                3,
+                0,
+                16,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              2,
+              7,
+              8,
+              7,
+              5
+            ],
+            "phase_misaligned_example": [
+              2,
+              0,
+              8,
+              5,
+              5
+            ]
+          },
+          {
+            "state_id": 3206,
+            "orbit_id": 612,
+            "state_name": "L=2|sig=04000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                4,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              2,
+              0,
+              5,
+              0,
+              4
+            ],
+            "phase_misaligned_example": [
+              6,
+              0,
+              6,
+              5,
+              3
+            ]
+          },
+          {
+            "state_id": 3208,
+            "orbit_id": 651,
+            "state_name": "L=2|sig=04040",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                4,
+                0,
+                4,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            "phase_misaligned_example": [
+              5,
+              0,
+              6,
+              6,
+              3
+            ]
+          },
+          {
+            "state_id": 3219,
+            "orbit_id": 619,
+            "state_name": "L=2|sig=04400",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                4,
+                4,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              2,
+              0,
+              7,
+              0,
+              2
+            ],
+            "phase_misaligned_example": [
+              5,
+              0,
+              7,
+              6,
+              2
+            ]
+          },
+          {
+            "state_id": 3232,
+            "orbit_id": 613,
+            "state_name": "L=2|sig=06000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                6,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              5,
+              6,
+              5,
+              6,
+              7
+            ],
+            "phase_misaligned_example": [
+              4,
+              0,
+              6,
+              7,
+              3
+            ]
+          },
+          {
+            "state_id": 3241,
+            "orbit_id": 614,
+            "state_name": "L=2|sig=08000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                8,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              4,
+              0,
+              4,
+              0,
+              3
+            ],
+            "phase_misaligned_example": [
+              1,
+              0,
+              7,
+              6,
+              6
+            ]
+          },
+          {
+            "state_id": 3242,
+            "orbit_id": 645,
+            "state_name": "L=2|sig=08002",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                8,
+                0,
+                0,
+                2
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              3,
+              7,
+              5,
+              7,
+              7
+            ],
+            "phase_misaligned_example": [
+              1,
+              7,
+              7,
+              0,
+              5
+            ]
+          },
+          {
+            "state_id": 3247,
+            "orbit_id": 663,
+            "state_name": "L=2|sig=08020",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                8,
+                0,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              5,
+              7,
+              3,
+              7,
+              7
+            ],
+            "phase_misaligned_example": [
+              3,
+              7,
+              5,
+              0,
+              5
+            ]
+          },
+          {
+            "state_id": 3295,
+            "orbit_id": 673,
+            "state_name": "L=2|sig=090160",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                9,
+                0,
+                16,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              0,
+              7,
+              8,
+              7,
+              7
+            ],
+            "phase_misaligned_example": [
+              0,
+              0,
+              8,
+              7,
+              5
+            ]
+          },
+          {
+            "state_id": 4080,
+            "orbit_id": 634,
+            "state_name": "L=2|sig=160010",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                16,
+                0,
+                0,
+                1,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              0,
+              7,
+              7,
+              7,
+              8
+            ],
+            "phase_misaligned_example": [
+              7,
+              7,
+              7,
+              0,
+              8
+            ]
+          },
+          {
+            "state_id": 4081,
+            "orbit_id": 640,
+            "state_name": "L=2|sig=160012",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                16,
+                0,
+                0,
+                1,
+                2
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              3,
+              7,
+              4,
+              7,
+              8
+            ],
+            "phase_misaligned_example": [
+              1,
+              7,
+              4,
+              0,
+              8
+            ]
+          },
+          {
+            "state_id": 4083,
+            "orbit_id": 648,
+            "state_name": "L=2|sig=160030",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                16,
+                0,
+                0,
+                3,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              5,
+              7,
+              2,
+              7,
+              8
+            ],
+            "phase_misaligned_example": [
+              3,
+              7,
+              2,
+              0,
+              8
+            ]
+          },
+          {
+            "state_id": 4116,
+            "orbit_id": 794,
+            "state_name": "L=2|sig=1610170",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                16,
+                1,
+                0,
+                17,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              1,
+              6,
+              8,
+              6,
+              8
+            ],
+            "phase_misaligned_example": [
+              6,
+              7,
+              8,
+              0,
+              8
+            ]
+          },
+          {
+            "state_id": 4137,
+            "orbit_id": 680,
+            "state_name": "L=2|sig=164010",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                16,
+                4,
+                0,
+                1,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              5,
+              6,
+              4,
+              6,
+              8
+            ],
+            "phase_misaligned_example": [
+              2,
+              6,
+              4,
+              0,
+              8
+            ]
+          },
+          {
+            "state_id": 3547,
+            "orbit_id": 611,
+            "state_name": "L=2|sig=20000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                2,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 9,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              6,
+              7,
+              6,
+              7,
+              3
+            ],
+            "phase_misaligned_example": [
+              6,
+              0,
+              6,
+              7,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "m": 11,
+        "visited_state_count": 8899,
+        "delta_support_histogram": {
+          "1": 4687,
+          "2": 40,
+          "3": 278,
+          "4": 644,
+          "5": 984,
+          "6": 772,
+          "7": 674,
+          "8": 233,
+          "9": 92,
+          "10": 28,
+          "11": 467
+        },
+        "multi_delta_state_count": 4212,
+        "phase_align_split_state_count": 2165,
+        "phase_align_split_by_layer": {
+          "0": 336,
+          "1": 320,
+          "2": 283,
+          "3": 313,
+          "4+": 913
+        },
+        "collision_rows": [
+          {
+            "state_id": 3022,
+            "orbit_id": 610,
+            "state_name": "L=2|sig=00000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              6,
+              0,
+              9,
+              0,
+              9
+            ],
+            "phase_misaligned_example": [
+              8,
+              0,
+              9,
+              9,
+              9
+            ]
+          },
+          {
+            "state_id": 3023,
+            "orbit_id": 611,
+            "state_name": "L=2|sig=00002",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              3,
+              9,
+              8,
+              9,
+              6
+            ],
+            "phase_misaligned_example": [
+              5,
+              9,
+              9,
+              7,
+              5
+            ]
+          },
+          {
+            "state_id": 3026,
+            "orbit_id": 614,
+            "state_name": "L=2|sig=00008",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                8
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              1,
+              9,
+              8,
+              9,
+              8
+            ],
+            "phase_misaligned_example": [
+              2,
+              0,
+              9,
+              8,
+              5
+            ]
+          },
+          {
+            "state_id": 3046,
+            "orbit_id": 615,
+            "state_name": "L=2|sig=000120",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                12,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              9,
+              8,
+              4,
+              8,
+              6
+            ],
+            "phase_misaligned_example": [
+              6,
+              0,
+              7,
+              8,
+              3
+            ]
+          },
+          {
+            "state_id": 3028,
+            "orbit_id": 611,
+            "state_name": "L=2|sig=00020",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              5,
+              9,
+              6,
+              9,
+              6
+            ],
+            "phase_misaligned_example": [
+              7,
+              9,
+              7,
+              7,
+              5
+            ]
+          },
+          {
+            "state_id": 3031,
+            "orbit_id": 612,
+            "state_name": "L=2|sig=00040",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                4,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              4,
+              0,
+              9,
+              0,
+              0
+            ],
+            "phase_misaligned_example": [
+              4,
+              0,
+              9,
+              5,
+              6
+            ]
+          },
+          {
+            "state_id": 3032,
+            "orbit_id": 618,
+            "state_name": "L=2|sig=00042",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                4,
+                2
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              4,
+              8,
+              9,
+              8,
+              6
+            ],
+            "phase_misaligned_example": [
+              4,
+              9,
+              9,
+              8,
+              5
+            ]
+          },
+          {
+            "state_id": 3035,
+            "orbit_id": 621,
+            "state_name": "L=2|sig=00048",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                4,
+                8
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              2,
+              8,
+              0,
+              8,
+              6
+            ],
+            "phase_misaligned_example": [
+              4,
+              0,
+              9,
+              6,
+              5
+            ]
+          },
+          {
+            "state_id": 3037,
+            "orbit_id": 613,
+            "state_name": "L=2|sig=00060",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                6,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              7,
+              8,
+              6,
+              8,
+              6
+            ],
+            "phase_misaligned_example": [
+              6,
+              9,
+              7,
+              8,
+              5
+            ]
+          },
+          {
+            "state_id": 3040,
+            "orbit_id": 614,
+            "state_name": "L=2|sig=00080",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                8,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              3,
+              0,
+              6,
+              0,
+              4
+            ],
+            "phase_misaligned_example": [
+              7,
+              0,
+              7,
+              7,
+              3
+            ]
+          },
+          {
+            "state_id": 3071,
+            "orbit_id": 612,
+            "state_name": "L=2|sig=00400",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                4,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              4,
+              0,
+              7,
+              0,
+              2
+            ],
+            "phase_misaligned_example": [
+              7,
+              0,
+              7,
+              8,
+              2
+            ]
+          },
+          {
+            "state_id": 3073,
+            "orbit_id": 652,
+            "state_name": "L=2|sig=00408",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                4,
+                0,
+                8
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              2,
+              8,
+              1,
+              8,
+              5
+            ],
+            "phase_misaligned_example": [
+              2,
+              0,
+              1,
+              8,
+              2
+            ]
+          },
+          {
+            "state_id": 3075,
+            "orbit_id": 618,
+            "state_name": "L=2|sig=00420",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                4,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              7,
+              8,
+              7,
+              8,
+              5
+            ],
+            "phase_misaligned_example": [
+              3,
+              9,
+              8,
+              0,
+              4
+            ]
+          },
+          {
+            "state_id": 3082,
+            "orbit_id": 621,
+            "state_name": "L=2|sig=00480",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                4,
+                8,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              3,
+              0,
+              8,
+              0,
+              2
+            ],
+            "phase_misaligned_example": [
+              6,
+              0,
+              8,
+              8,
+              2
+            ]
+          },
+          {
+            "state_id": 3120,
+            "orbit_id": 634,
+            "state_name": "L=2|sig=010160",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                0,
+                16,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              5,
+              0,
+              10,
+              0,
+              9
+            ],
+            "phase_misaligned_example": [
+              7,
+              0,
+              10,
+              9,
+              9
+            ]
+          },
+          {
+            "state_id": 3122,
+            "orbit_id": 681,
+            "state_name": "L=2|sig=010168",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                0,
+                16,
+                8
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              1,
+              9,
+              10,
+              9,
+              6
+            ],
+            "phase_misaligned_example": [
+              1,
+              0,
+              10,
+              9,
+              4
+            ]
+          },
+          {
+            "state_id": 3124,
+            "orbit_id": 635,
+            "state_name": "L=2|sig=010180",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                0,
+                18,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              5,
+              9,
+              10,
+              9,
+              2
+            ],
+            "phase_misaligned_example": [
+              6,
+              9,
+              10,
+              8,
+              2
+            ]
+          },
+          {
+            "state_id": 3126,
+            "orbit_id": 636,
+            "state_name": "L=2|sig=010200",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                0,
+                20,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              3,
+              8,
+              10,
+              8,
+              6
+            ],
+            "phase_misaligned_example": [
+              3,
+              0,
+              10,
+              6,
+              5
+            ]
+          },
+          {
+            "state_id": 3132,
+            "orbit_id": 638,
+            "state_name": "L=2|sig=010240",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                0,
+                24,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              7,
+              9,
+              10,
+              9,
+              0
+            ],
+            "phase_misaligned_example": [
+              5,
+              0,
+              10,
+              9,
+              0
+            ]
+          },
+          {
+            "state_id": 3310,
+            "orbit_id": 615,
+            "state_name": "L=2|sig=012000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                12,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              2,
+              0,
+              8,
+              0,
+              3
+            ],
+            "phase_misaligned_example": [
+              4,
+              0,
+              6,
+              9,
+              5
+            ]
+          },
+          {
+            "state_id": 3146,
+            "orbit_id": 699,
+            "state_name": "L=2|sig=014162",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                4,
+                16,
+                2
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              4,
+              8,
+              10,
+              8,
+              5
+            ],
+            "phase_misaligned_example": [
+              1,
+              9,
+              10,
+              0,
+              4
+            ]
+          },
+          {
+            "state_id": 3325,
+            "orbit_id": 634,
+            "state_name": "L=2|sig=016001",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                16,
+                0,
+                0,
+                1
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              10,
+              9,
+              9,
+              9,
+              9
+            ],
+            "phase_misaligned_example": [
+              10,
+              0,
+              9,
+              9,
+              7
+            ]
+          },
+          {
+            "state_id": 3331,
+            "orbit_id": 744,
+            "state_name": "L=2|sig=016041",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                16,
+                0,
+                4,
+                1
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              10,
+              8,
+              3,
+              8,
+              6
+            ],
+            "phase_misaligned_example": [
+              10,
+              0,
+              3,
+              8,
+              3
+            ]
+          },
+          {
+            "state_id": 3346,
+            "orbit_id": 680,
+            "state_name": "L=2|sig=016401",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                16,
+                4,
+                0,
+                1
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              10,
+              8,
+              4,
+              8,
+              5
+            ],
+            "phase_misaligned_example": [
+              10,
+              0,
+              7,
+              5,
+              2
+            ]
+          },
+          {
+            "state_id": 3365,
+            "orbit_id": 794,
+            "state_name": "L=2|sig=0170161",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                17,
+                0,
+                16,
+                1
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              10,
+              9,
+              10,
+              9,
+              8
+            ],
+            "phase_misaligned_example": [
+              10,
+              0,
+              10,
+              9,
+              6
+            ]
+          },
+          {
+            "state_id": 3383,
+            "orbit_id": 635,
+            "state_name": "L=2|sig=018001",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                18,
+                0,
+                0,
+                1
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              10,
+              9,
+              2,
+              9,
+              5
+            ],
+            "phase_misaligned_example": [
+              10,
+              0,
+              2,
+              9,
+              3
+            ]
+          },
+          {
+            "state_id": 3167,
+            "orbit_id": 611,
+            "state_name": "L=2|sig=02000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              6,
+              9,
+              6,
+              9,
+              5
+            ],
+            "phase_misaligned_example": [
+              3,
+              0,
+              9,
+              6,
+              6
+            ]
+          },
+          {
+            "state_id": 3168,
+            "orbit_id": 644,
+            "state_name": "L=2|sig=02002",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                0,
+                2
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              3,
+              9,
+              9,
+              9,
+              5
+            ],
+            "phase_misaligned_example": [
+              4,
+              9,
+              8,
+              8,
+              6
+            ]
+          },
+          {
+            "state_id": 3169,
+            "orbit_id": 663,
+            "state_name": "L=2|sig=02008",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                0,
+                8
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              1,
+              9,
+              0,
+              9,
+              5
+            ],
+            "phase_misaligned_example": [
+              3,
+              0,
+              9,
+              7,
+              5
+            ]
+          },
+          {
+            "state_id": 3170,
+            "orbit_id": 644,
+            "state_name": "L=2|sig=02020",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              5,
+              9,
+              7,
+              9,
+              5
+            ],
+            "phase_misaligned_example": [
+              6,
+              9,
+              6,
+              8,
+              6
+            ]
+          },
+          {
+            "state_id": 3173,
+            "orbit_id": 645,
+            "state_name": "L=2|sig=02080",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                8,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              7,
+              9,
+              5,
+              9,
+              5
+            ],
+            "phase_misaligned_example": [
+              5,
+              0,
+              7,
+              9,
+              3
+            ]
+          },
+          {
+            "state_id": 3406,
+            "orbit_id": 638,
+            "state_name": "L=2|sig=024001",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                24,
+                0,
+                0,
+                1
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              10,
+              9,
+              0,
+              9,
+              7
+            ],
+            "phase_misaligned_example": [
+              10,
+              0,
+              0,
+              9,
+              5
+            ]
+          },
+          {
+            "state_id": 3197,
+            "orbit_id": 648,
+            "state_name": "L=2|sig=030160",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                3,
+                0,
+                16,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              2,
+              9,
+              10,
+              9,
+              5
+            ],
+            "phase_misaligned_example": [
+              2,
+              0,
+              10,
+              7,
+              5
+            ]
+          },
+          {
+            "state_id": 3206,
+            "orbit_id": 612,
+            "state_name": "L=2|sig=04000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                4,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              2,
+              0,
+              7,
+              0,
+              4
+            ],
+            "phase_misaligned_example": [
+              6,
+              0,
+              8,
+              7,
+              3
+            ]
+          },
+          {
+            "state_id": 3208,
+            "orbit_id": 651,
+            "state_name": "L=2|sig=04040",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                4,
+                0,
+                4,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            "phase_misaligned_example": [
+              5,
+              0,
+              8,
+              8,
+              3
+            ]
+          },
+          {
+            "state_id": 3219,
+            "orbit_id": 619,
+            "state_name": "L=2|sig=04400",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                4,
+                4,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              2,
+              0,
+              9,
+              0,
+              2
+            ],
+            "phase_misaligned_example": [
+              5,
+              0,
+              9,
+              8,
+              2
+            ]
+          },
+          {
+            "state_id": 3232,
+            "orbit_id": 613,
+            "state_name": "L=2|sig=06000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                6,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              5,
+              8,
+              7,
+              8,
+              7
+            ],
+            "phase_misaligned_example": [
+              4,
+              0,
+              8,
+              9,
+              3
+            ]
+          },
+          {
+            "state_id": 3241,
+            "orbit_id": 614,
+            "state_name": "L=2|sig=08000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                8,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              4,
+              0,
+              6,
+              0,
+              3
+            ],
+            "phase_misaligned_example": [
+              1,
+              0,
+              9,
+              8,
+              6
+            ]
+          },
+          {
+            "state_id": 3242,
+            "orbit_id": 645,
+            "state_name": "L=2|sig=08002",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                8,
+                0,
+                0,
+                2
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              3,
+              9,
+              7,
+              9,
+              7
+            ],
+            "phase_misaligned_example": [
+              1,
+              9,
+              9,
+              0,
+              5
+            ]
+          },
+          {
+            "state_id": 3245,
+            "orbit_id": 664,
+            "state_name": "L=2|sig=08008",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                8,
+                0,
+                0,
+                8
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 11,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              1,
+              9,
+              9,
+              9,
+              7
+            ],
+            "phase_misaligned_example": [
+              1,
+              0,
+              9,
+              9,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "m": 13,
+        "visited_state_count": 8904,
+        "delta_support_histogram": {
+          "1": 4692,
+          "4": 44,
+          "5": 282,
+          "6": 636,
+          "7": 984,
+          "8": 772,
+          "9": 671,
+          "10": 232,
+          "11": 90,
+          "13": 501
+        },
+        "multi_delta_state_count": 4212,
+        "phase_align_split_state_count": 2260,
+        "phase_align_split_by_layer": {
+          "0": 337,
+          "1": 322,
+          "2": 291,
+          "3": 359,
+          "4+": 951
+        },
+        "collision_rows": [
+          {
+            "state_id": 3022,
+            "orbit_id": 610,
+            "state_name": "L=2|sig=00000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              6,
+              0,
+              11,
+              0,
+              11
+            ],
+            "phase_misaligned_example": [
+              8,
+              0,
+              11,
+              11,
+              11
+            ]
+          },
+          {
+            "state_id": 3023,
+            "orbit_id": 611,
+            "state_name": "L=2|sig=00002",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              3,
+              11,
+              10,
+              11,
+              6
+            ],
+            "phase_misaligned_example": [
+              5,
+              11,
+              11,
+              9,
+              5
+            ]
+          },
+          {
+            "state_id": 3026,
+            "orbit_id": 614,
+            "state_name": "L=2|sig=00008",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                8
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              1,
+              11,
+              10,
+              11,
+              8
+            ],
+            "phase_misaligned_example": [
+              2,
+              0,
+              11,
+              10,
+              5
+            ]
+          },
+          {
+            "state_id": 3046,
+            "orbit_id": 615,
+            "state_name": "L=2|sig=000120",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                12,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              9,
+              10,
+              6,
+              10,
+              6
+            ],
+            "phase_misaligned_example": [
+              6,
+              0,
+              9,
+              10,
+              3
+            ]
+          },
+          {
+            "state_id": 3028,
+            "orbit_id": 611,
+            "state_name": "L=2|sig=00020",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              5,
+              11,
+              8,
+              11,
+              6
+            ],
+            "phase_misaligned_example": [
+              7,
+              11,
+              9,
+              9,
+              5
+            ]
+          },
+          {
+            "state_id": 3031,
+            "orbit_id": 612,
+            "state_name": "L=2|sig=00040",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                4,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              4,
+              0,
+              11,
+              0,
+              0
+            ],
+            "phase_misaligned_example": [
+              4,
+              0,
+              11,
+              7,
+              6
+            ]
+          },
+          {
+            "state_id": 3032,
+            "orbit_id": 618,
+            "state_name": "L=2|sig=00042",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                4,
+                2
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              4,
+              10,
+              11,
+              10,
+              6
+            ],
+            "phase_misaligned_example": [
+              4,
+              11,
+              11,
+              10,
+              5
+            ]
+          },
+          {
+            "state_id": 3035,
+            "orbit_id": 621,
+            "state_name": "L=2|sig=00048",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                4,
+                8
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              2,
+              10,
+              0,
+              10,
+              6
+            ],
+            "phase_misaligned_example": [
+              4,
+              0,
+              11,
+              8,
+              5
+            ]
+          },
+          {
+            "state_id": 3037,
+            "orbit_id": 613,
+            "state_name": "L=2|sig=00060",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                6,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              7,
+              10,
+              8,
+              10,
+              6
+            ],
+            "phase_misaligned_example": [
+              6,
+              11,
+              9,
+              10,
+              5
+            ]
+          },
+          {
+            "state_id": 3040,
+            "orbit_id": 614,
+            "state_name": "L=2|sig=00080",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                8,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              3,
+              0,
+              8,
+              0,
+              4
+            ],
+            "phase_misaligned_example": [
+              7,
+              0,
+              9,
+              9,
+              3
+            ]
+          },
+          {
+            "state_id": 3071,
+            "orbit_id": 612,
+            "state_name": "L=2|sig=00400",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                4,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              4,
+              0,
+              9,
+              0,
+              2
+            ],
+            "phase_misaligned_example": [
+              7,
+              0,
+              9,
+              10,
+              2
+            ]
+          },
+          {
+            "state_id": 3073,
+            "orbit_id": 652,
+            "state_name": "L=2|sig=00408",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                4,
+                0,
+                8
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              2,
+              10,
+              1,
+              10,
+              5
+            ],
+            "phase_misaligned_example": [
+              2,
+              0,
+              1,
+              10,
+              2
+            ]
+          },
+          {
+            "state_id": 3075,
+            "orbit_id": 618,
+            "state_name": "L=2|sig=00420",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                4,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              7,
+              10,
+              9,
+              10,
+              5
+            ],
+            "phase_misaligned_example": [
+              3,
+              11,
+              10,
+              0,
+              4
+            ]
+          },
+          {
+            "state_id": 3082,
+            "orbit_id": 621,
+            "state_name": "L=2|sig=00480",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                4,
+                8,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              3,
+              0,
+              10,
+              0,
+              2
+            ],
+            "phase_misaligned_example": [
+              6,
+              0,
+              10,
+              10,
+              2
+            ]
+          },
+          {
+            "state_id": 3120,
+            "orbit_id": 634,
+            "state_name": "L=2|sig=010160",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                0,
+                16,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              5,
+              0,
+              12,
+              0,
+              11
+            ],
+            "phase_misaligned_example": [
+              7,
+              0,
+              12,
+              11,
+              11
+            ]
+          },
+          {
+            "state_id": 3122,
+            "orbit_id": 681,
+            "state_name": "L=2|sig=010168",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                0,
+                16,
+                8
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              1,
+              11,
+              12,
+              11,
+              6
+            ],
+            "phase_misaligned_example": [
+              1,
+              0,
+              12,
+              11,
+              4
+            ]
+          },
+          {
+            "state_id": 3124,
+            "orbit_id": 635,
+            "state_name": "L=2|sig=010180",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                0,
+                18,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              5,
+              11,
+              12,
+              11,
+              2
+            ],
+            "phase_misaligned_example": [
+              6,
+              11,
+              12,
+              10,
+              2
+            ]
+          },
+          {
+            "state_id": 3126,
+            "orbit_id": 636,
+            "state_name": "L=2|sig=010200",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                0,
+                20,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              3,
+              10,
+              12,
+              10,
+              6
+            ],
+            "phase_misaligned_example": [
+              3,
+              0,
+              12,
+              8,
+              5
+            ]
+          },
+          {
+            "state_id": 3132,
+            "orbit_id": 638,
+            "state_name": "L=2|sig=010240",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                0,
+                24,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              7,
+              11,
+              12,
+              11,
+              0
+            ],
+            "phase_misaligned_example": [
+              5,
+              0,
+              12,
+              11,
+              0
+            ]
+          },
+          {
+            "state_id": 3310,
+            "orbit_id": 615,
+            "state_name": "L=2|sig=012000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                12,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              2,
+              0,
+              10,
+              0,
+              3
+            ],
+            "phase_misaligned_example": [
+              4,
+              0,
+              8,
+              11,
+              5
+            ]
+          },
+          {
+            "state_id": 3146,
+            "orbit_id": 699,
+            "state_name": "L=2|sig=014162",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                4,
+                16,
+                2
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              4,
+              10,
+              12,
+              10,
+              5
+            ],
+            "phase_misaligned_example": [
+              1,
+              11,
+              12,
+              0,
+              4
+            ]
+          },
+          {
+            "state_id": 3325,
+            "orbit_id": 634,
+            "state_name": "L=2|sig=016001",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                16,
+                0,
+                0,
+                1
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              12,
+              11,
+              11,
+              11,
+              9
+            ],
+            "phase_misaligned_example": [
+              12,
+              0,
+              11,
+              11,
+              7
+            ]
+          },
+          {
+            "state_id": 3331,
+            "orbit_id": 744,
+            "state_name": "L=2|sig=016041",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                16,
+                0,
+                4,
+                1
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              12,
+              10,
+              3,
+              10,
+              6
+            ],
+            "phase_misaligned_example": [
+              12,
+              0,
+              3,
+              10,
+              3
+            ]
+          },
+          {
+            "state_id": 3346,
+            "orbit_id": 680,
+            "state_name": "L=2|sig=016401",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                16,
+                4,
+                0,
+                1
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              12,
+              10,
+              4,
+              10,
+              5
+            ],
+            "phase_misaligned_example": [
+              12,
+              0,
+              9,
+              5,
+              2
+            ]
+          },
+          {
+            "state_id": 3365,
+            "orbit_id": 794,
+            "state_name": "L=2|sig=0170161",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                17,
+                0,
+                16,
+                1
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              12,
+              11,
+              12,
+              11,
+              8
+            ],
+            "phase_misaligned_example": [
+              12,
+              0,
+              12,
+              11,
+              6
+            ]
+          },
+          {
+            "state_id": 3383,
+            "orbit_id": 635,
+            "state_name": "L=2|sig=018001",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                18,
+                0,
+                0,
+                1
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              12,
+              11,
+              2,
+              11,
+              5
+            ],
+            "phase_misaligned_example": [
+              12,
+              0,
+              2,
+              11,
+              3
+            ]
+          },
+          {
+            "state_id": 3167,
+            "orbit_id": 611,
+            "state_name": "L=2|sig=02000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              6,
+              11,
+              8,
+              11,
+              5
+            ],
+            "phase_misaligned_example": [
+              3,
+              0,
+              11,
+              8,
+              6
+            ]
+          },
+          {
+            "state_id": 3168,
+            "orbit_id": 644,
+            "state_name": "L=2|sig=02002",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                0,
+                2
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              3,
+              11,
+              11,
+              11,
+              5
+            ],
+            "phase_misaligned_example": [
+              4,
+              11,
+              10,
+              10,
+              6
+            ]
+          },
+          {
+            "state_id": 3169,
+            "orbit_id": 663,
+            "state_name": "L=2|sig=02008",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                0,
+                8
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              1,
+              11,
+              0,
+              11,
+              5
+            ],
+            "phase_misaligned_example": [
+              3,
+              0,
+              11,
+              9,
+              5
+            ]
+          },
+          {
+            "state_id": 3170,
+            "orbit_id": 644,
+            "state_name": "L=2|sig=02020",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              5,
+              11,
+              9,
+              11,
+              5
+            ],
+            "phase_misaligned_example": [
+              6,
+              11,
+              8,
+              10,
+              6
+            ]
+          },
+          {
+            "state_id": 3173,
+            "orbit_id": 645,
+            "state_name": "L=2|sig=02080",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                8,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              7,
+              11,
+              7,
+              11,
+              5
+            ],
+            "phase_misaligned_example": [
+              5,
+              0,
+              9,
+              11,
+              3
+            ]
+          },
+          {
+            "state_id": 3406,
+            "orbit_id": 638,
+            "state_name": "L=2|sig=024001",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                24,
+                0,
+                0,
+                1
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              12,
+              11,
+              0,
+              11,
+              7
+            ],
+            "phase_misaligned_example": [
+              12,
+              0,
+              0,
+              11,
+              5
+            ]
+          },
+          {
+            "state_id": 3197,
+            "orbit_id": 648,
+            "state_name": "L=2|sig=030160",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                3,
+                0,
+                16,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              2,
+              11,
+              12,
+              11,
+              5
+            ],
+            "phase_misaligned_example": [
+              2,
+              0,
+              12,
+              9,
+              5
+            ]
+          },
+          {
+            "state_id": 3206,
+            "orbit_id": 612,
+            "state_name": "L=2|sig=04000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                4,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              2,
+              0,
+              9,
+              0,
+              4
+            ],
+            "phase_misaligned_example": [
+              6,
+              0,
+              10,
+              9,
+              3
+            ]
+          },
+          {
+            "state_id": 3208,
+            "orbit_id": 651,
+            "state_name": "L=2|sig=04040",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                4,
+                0,
+                4,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            "phase_misaligned_example": [
+              5,
+              0,
+              10,
+              10,
+              3
+            ]
+          },
+          {
+            "state_id": 3219,
+            "orbit_id": 619,
+            "state_name": "L=2|sig=04400",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                4,
+                4,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              2,
+              0,
+              11,
+              0,
+              2
+            ],
+            "phase_misaligned_example": [
+              5,
+              0,
+              11,
+              10,
+              2
+            ]
+          },
+          {
+            "state_id": 3232,
+            "orbit_id": 613,
+            "state_name": "L=2|sig=06000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                6,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              5,
+              10,
+              9,
+              10,
+              7
+            ],
+            "phase_misaligned_example": [
+              4,
+              0,
+              10,
+              11,
+              3
+            ]
+          },
+          {
+            "state_id": 3241,
+            "orbit_id": 614,
+            "state_name": "L=2|sig=08000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                8,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              4,
+              0,
+              8,
+              0,
+              3
+            ],
+            "phase_misaligned_example": [
+              1,
+              0,
+              11,
+              10,
+              6
+            ]
+          },
+          {
+            "state_id": 3242,
+            "orbit_id": 645,
+            "state_name": "L=2|sig=08002",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                8,
+                0,
+                0,
+                2
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              3,
+              11,
+              9,
+              11,
+              7
+            ],
+            "phase_misaligned_example": [
+              1,
+              11,
+              11,
+              0,
+              5
+            ]
+          },
+          {
+            "state_id": 3245,
+            "orbit_id": 664,
+            "state_name": "L=2|sig=08008",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                8,
+                0,
+                0,
+                8
+              ]
+            },
+            "delta_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 13,
+            "phase_align_bit_split": true,
+            "phase_align_example": [
+              1,
+              11,
+              11,
+              11,
+              7
+            ],
+            "phase_misaligned_example": [
+              1,
+              0,
+              11,
+              11,
+              5
+            ]
+          }
+        ]
+      }
+    ],
+    "canonical_tail_core": {
+      "m": 7,
+      "state_id": 3550,
+      "orbit_id": 623,
+      "state_name": "L=2|sig=20006",
+      "state": {
+        "layer_bucket": 2,
+        "signature": [
+          2,
+          0,
+          0,
+          0,
+          6
+        ]
+      },
+      "delta_values": [
+        0,
+        1,
+        6
+      ],
+      "delta_support_size": 3,
+      "phase_align_bit_split": true,
+      "phase_align_example": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "phase_misaligned_example": [
+        4,
+        5,
+        0,
+        4,
+        3
+      ]
+    },
+    "canonical_background_path": [
+      {
+        "step": 0,
+        "coords": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "state_id": 0,
+        "state_name": "L=0|sig=00000",
+        "state": {
+          "layer_bucket": 0,
+          "signature": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "permutation": [
+          1,
+          2,
+          3,
+          4,
+          0
+        ],
+        "color0_output": 1,
+        "delta": 0,
+        "phase_align": 1
+      },
+      {
+        "step": 1,
+        "coords": [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "state_id": 2062,
+        "state_name": "L=1|sig=20200",
+        "state": {
+          "layer_bucket": 1,
+          "signature": [
+            2,
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        "permutation": [
+          3,
+          4,
+          0,
+          1,
+          2
+        ],
+        "color0_output": 3,
+        "delta": 6,
+        "phase_align": 0
+      },
+      {
+        "step": 2,
+        "coords": [
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "state_id": 3550,
+        "state_name": "L=2|sig=20006",
+        "state": {
+          "layer_bucket": 2,
+          "signature": [
+            2,
+            0,
+            0,
+            0,
+            6
+          ]
+        },
+        "permutation": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "color0_output": 0,
+        "delta": 0,
+        "phase_align": 1
+      },
+      {
+        "step": 3,
+        "coords": [
+          1,
+          1,
+          0,
+          1,
+          0
+        ],
+        "state_id": 5044,
+        "state_name": "L=3|sig=26004",
+        "state": {
+          "layer_bucket": 3,
+          "signature": [
+            2,
+            6,
+            0,
+            0,
+            4
+          ]
+        },
+        "permutation": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "color0_output": 0,
+        "delta": 0,
+        "phase_align": 1
+      },
+      {
+        "step": 4,
+        "coords": [
+          2,
+          1,
+          0,
+          1,
+          0
+        ],
+        "state_id": 7171,
+        "state_name": "L=4+|sig=20044",
+        "state": {
+          "layer_bucket": "4+",
+          "signature": [
+            2,
+            0,
+            0,
+            4,
+            4
+          ]
+        },
+        "permutation": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "color0_output": 0,
+        "delta": 0,
+        "phase_align": 1
+      },
+      {
+        "step": 5,
+        "coords": [
+          3,
+          1,
+          0,
+          1,
+          0
+        ],
+        "state_id": 7159,
+        "state_name": "L=4+|sig=20004",
+        "state": {
+          "layer_bucket": "4+",
+          "signature": [
+            2,
+            0,
+            0,
+            0,
+            4
+          ]
+        },
+        "permutation": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "color0_output": 0,
+        "delta": 0,
+        "phase_align": 1
+      },
+      {
+        "step": 6,
+        "coords": [
+          4,
+          1,
+          0,
+          1,
+          0
+        ],
+        "state_id": 7159,
+        "state_name": "L=4+|sig=20004",
+        "state": {
+          "layer_bucket": "4+",
+          "signature": [
+            2,
+            0,
+            0,
+            0,
+            4
+          ]
+        },
+        "permutation": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "color0_output": 0,
+        "delta": 0,
+        "phase_align": 1
+      }
+    ]
+  },
+  "candidate_refinement": {
+    "bit_name": "phase_align",
+    "relative_formula": "phase_align_c(x) = 1_{(v_c-q_c) mod m = 0}",
+    "coordinate_formula": "phase_align_c(x) = 1_{(x_{c+3}-x_{c+1}) mod m = 0}",
+    "why_this_bit": [
+      "The stable return law preserves delta_c := v_c-q_c, so delta_c is the hidden phase that survives one full first return.",
+      "Theta_AB merges many states with different delta_c values, including aligned and non-aligned phase fibers.",
+      "Splitting phase_align_c is the smallest cyclic-equivariant refinement that separates those conflicting fibers without changing the rest of the grammar."
+    ],
+    "split_statistics": [
+      {
+        "m": 5,
+        "multi_delta_state_count": 124,
+        "phase_align_split_state_count": 51,
+        "phase_align_split_fraction": 0.4112903225806452,
+        "phase_align_split_by_layer": {
+          "0": 10,
+          "1": 6,
+          "2": 18,
+          "3": 5,
+          "4+": 12
+        }
+      },
+      {
+        "m": 7,
+        "multi_delta_state_count": 2338,
+        "phase_align_split_state_count": 893,
+        "phase_align_split_fraction": 0.3819503849443969,
+        "phase_align_split_by_layer": {
+          "0": 155,
+          "1": 107,
+          "2": 144,
+          "3": 136,
+          "4+": 351
+        }
+      },
+      {
+        "m": 9,
+        "multi_delta_state_count": 4002,
+        "phase_align_split_state_count": 1843,
+        "phase_align_split_fraction": 0.460519740129935,
+        "phase_align_split_by_layer": {
+          "0": 280,
+          "1": 267,
+          "2": 234,
+          "3": 283,
+          "4+": 779
+        }
+      },
+      {
+        "m": 11,
+        "multi_delta_state_count": 4212,
+        "phase_align_split_state_count": 2165,
+        "phase_align_split_fraction": 0.5140075973409307,
+        "phase_align_split_by_layer": {
+          "0": 336,
+          "1": 320,
+          "2": 283,
+          "3": 313,
+          "4+": 913
+        }
+      },
+      {
+        "m": 13,
+        "multi_delta_state_count": 4212,
+        "phase_align_split_state_count": 2260,
+        "phase_align_split_fraction": 0.5365622032288699,
+        "phase_align_split_by_layer": {
+          "0": 337,
+          "1": 322,
+          "2": 291,
+          "3": 359,
+          "4+": 951
+        }
+      }
+    ],
+    "canonical_conflict_state": {
+      "m": 7,
+      "state_id": 3550,
+      "orbit_id": 623,
+      "state_name": "L=2|sig=20006",
+      "state": {
+        "layer_bucket": 2,
+        "signature": [
+          2,
+          0,
+          0,
+          0,
+          6
+        ]
+      },
+      "delta_values": [
+        0,
+        1,
+        6
+      ],
+      "delta_support_size": 3,
+      "phase_align_bit_split": true,
+      "phase_align_example": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "phase_misaligned_example": [
+        4,
+        5,
+        0,
+        4,
+        3
+      ]
+    },
+    "ready_for_next_search_rule": {
+      "refined_quotient_name": "Theta_AB_plus_phase_align",
+      "state_definition": "theta_plus(x) = (L(x), (s_c(x), phase_align_c(x))_{c in Z/5Z})",
+      "existing_atoms": [
+        "q_c = -1",
+        "q_c + u_c = 1",
+        "w_c + u_c = 2",
+        "q_c + u_c = -1",
+        "u_c = -1"
+      ],
+      "new_atom": "phase_align_c(x) = 1_{(x_{c+3}-x_{c+1}) mod m = 0}"
+    }
+  }
+}

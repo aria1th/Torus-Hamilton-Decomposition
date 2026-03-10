@@ -1,0 +1,110 @@
+{
+  "core_name": "kick-kick-freeze",
+  "motifs": [
+    {
+      "motif_id": "M0_q_kick",
+      "layer_buckets": [
+        0
+      ],
+      "constant_permutation": "12340",
+      "color0_output": 1,
+      "effect_on_qwvu": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "effect_on_delta_v_minus_q": -1,
+      "role": "first exceptional step; increments q"
+    },
+    {
+      "motif_id": "M1_v_kick",
+      "layer_buckets": [
+        1
+      ],
+      "constant_permutation": "34012",
+      "color0_output": 3,
+      "effect_on_qwvu": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "effect_on_delta_v_minus_q": 1,
+      "role": "second exceptional step; increments v and restores delta"
+    },
+    {
+      "motif_id": "M2_freeze_tail",
+      "layer_buckets": [
+        2,
+        3,
+        "4+"
+      ],
+      "constant_permutation": "01234",
+      "color0_output": 0,
+      "effect_on_qwvu": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "effect_on_delta_v_minus_q": 0,
+      "role": "identity tail; preserves q,w,v,u during the remaining steps",
+      "canonical_conflict_state": {
+        "m": 7,
+        "state_id": 3550,
+        "orbit_id": 623,
+        "state_name": "L=2|sig=20006",
+        "state": {
+          "layer_bucket": 2,
+          "signature": [
+            2,
+            0,
+            0,
+            0,
+            6
+          ]
+        },
+        "delta_values": [
+          0,
+          1,
+          6
+        ],
+        "delta_support_size": 3,
+        "phase_align_bit_split": true,
+        "phase_align_example": [
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "phase_misaligned_example": [
+          4,
+          5,
+          0,
+          4,
+          3
+        ]
+      }
+    }
+  ],
+  "transition_sequence": [
+    {
+      "from": "M0_q_kick",
+      "to": "M1_v_kick"
+    },
+    {
+      "from": "M1_v_kick",
+      "to": "M2_freeze_tail"
+    },
+    {
+      "from": "M2_freeze_tail",
+      "to": "M2_freeze_tail"
+    }
+  ],
+  "forced_return_law": "R_0(q,w,v,u) = (q+1, w, v+1, u)",
+  "forced_hidden_invariant": "delta := v-q is preserved by one full return",
+  "forced_section_return": "U_0 = id on (w,u)",
+  "forced_monodromy": 0
+}

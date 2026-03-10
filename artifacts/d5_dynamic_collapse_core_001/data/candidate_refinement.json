@@ -1,0 +1,126 @@
+{
+  "bit_name": "phase_align",
+  "relative_formula": "phase_align_c(x) = 1_{(v_c-q_c) mod m = 0}",
+  "coordinate_formula": "phase_align_c(x) = 1_{(x_{c+3}-x_{c+1}) mod m = 0}",
+  "why_this_bit": [
+    "The stable return law preserves delta_c := v_c-q_c, so delta_c is the hidden phase that survives one full first return.",
+    "Theta_AB merges many states with different delta_c values, including aligned and non-aligned phase fibers.",
+    "Splitting phase_align_c is the smallest cyclic-equivariant refinement that separates those conflicting fibers without changing the rest of the grammar."
+  ],
+  "split_statistics": [
+    {
+      "m": 5,
+      "multi_delta_state_count": 124,
+      "phase_align_split_state_count": 51,
+      "phase_align_split_fraction": 0.4112903225806452,
+      "phase_align_split_by_layer": {
+        "0": 10,
+        "1": 6,
+        "2": 18,
+        "3": 5,
+        "4+": 12
+      }
+    },
+    {
+      "m": 7,
+      "multi_delta_state_count": 2338,
+      "phase_align_split_state_count": 893,
+      "phase_align_split_fraction": 0.3819503849443969,
+      "phase_align_split_by_layer": {
+        "0": 155,
+        "1": 107,
+        "2": 144,
+        "3": 136,
+        "4+": 351
+      }
+    },
+    {
+      "m": 9,
+      "multi_delta_state_count": 4002,
+      "phase_align_split_state_count": 1843,
+      "phase_align_split_fraction": 0.460519740129935,
+      "phase_align_split_by_layer": {
+        "0": 280,
+        "1": 267,
+        "2": 234,
+        "3": 283,
+        "4+": 779
+      }
+    },
+    {
+      "m": 11,
+      "multi_delta_state_count": 4212,
+      "phase_align_split_state_count": 2165,
+      "phase_align_split_fraction": 0.5140075973409307,
+      "phase_align_split_by_layer": {
+        "0": 336,
+        "1": 320,
+        "2": 283,
+        "3": 313,
+        "4+": 913
+      }
+    },
+    {
+      "m": 13,
+      "multi_delta_state_count": 4212,
+      "phase_align_split_state_count": 2260,
+      "phase_align_split_fraction": 0.5365622032288699,
+      "phase_align_split_by_layer": {
+        "0": 337,
+        "1": 322,
+        "2": 291,
+        "3": 359,
+        "4+": 951
+      }
+    }
+  ],
+  "canonical_conflict_state": {
+    "m": 7,
+    "state_id": 3550,
+    "orbit_id": 623,
+    "state_name": "L=2|sig=20006",
+    "state": {
+      "layer_bucket": 2,
+      "signature": [
+        2,
+        0,
+        0,
+        0,
+        6
+      ]
+    },
+    "delta_values": [
+      0,
+      1,
+      6
+    ],
+    "delta_support_size": 3,
+    "phase_align_bit_split": true,
+    "phase_align_example": [
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "phase_misaligned_example": [
+      4,
+      5,
+      0,
+      4,
+      3
+    ]
+  },
+  "ready_for_next_search_rule": {
+    "refined_quotient_name": "Theta_AB_plus_phase_align",
+    "state_definition": "theta_plus(x) = (L(x), (s_c(x), phase_align_c(x))_{c in Z/5Z})",
+    "existing_atoms": [
+      "q_c = -1",
+      "q_c + u_c = 1",
+      "w_c + u_c = 2",
+      "q_c + u_c = -1",
+      "u_c = -1"
+    ],
+    "new_atom": "phase_align_c(x) = 1_{(x_{c+3}-x_{c+1}) mod m = 0}"
+  }
+}

@@ -1,0 +1,226 @@
+[
+  {
+    "step": 0,
+    "coords": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "state_id": 0,
+    "state_name": "L=0|sig=00000",
+    "state": {
+      "layer_bucket": 0,
+      "signature": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "permutation": [
+      1,
+      2,
+      3,
+      4,
+      0
+    ],
+    "color0_output": 1,
+    "delta": 0,
+    "phase_align": 1
+  },
+  {
+    "step": 1,
+    "coords": [
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "state_id": 2062,
+    "state_name": "L=1|sig=20200",
+    "state": {
+      "layer_bucket": 1,
+      "signature": [
+        2,
+        0,
+        2,
+        0,
+        0
+      ]
+    },
+    "permutation": [
+      3,
+      4,
+      0,
+      1,
+      2
+    ],
+    "color0_output": 3,
+    "delta": 6,
+    "phase_align": 0
+  },
+  {
+    "step": 2,
+    "coords": [
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "state_id": 3550,
+    "state_name": "L=2|sig=20006",
+    "state": {
+      "layer_bucket": 2,
+      "signature": [
+        2,
+        0,
+        0,
+        0,
+        6
+      ]
+    },
+    "permutation": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "color0_output": 0,
+    "delta": 0,
+    "phase_align": 1
+  },
+  {
+    "step": 3,
+    "coords": [
+      1,
+      1,
+      0,
+      1,
+      0
+    ],
+    "state_id": 5044,
+    "state_name": "L=3|sig=26004",
+    "state": {
+      "layer_bucket": 3,
+      "signature": [
+        2,
+        6,
+        0,
+        0,
+        4
+      ]
+    },
+    "permutation": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "color0_output": 0,
+    "delta": 0,
+    "phase_align": 1
+  },
+  {
+    "step": 4,
+    "coords": [
+      2,
+      1,
+      0,
+      1,
+      0
+    ],
+    "state_id": 7171,
+    "state_name": "L=4+|sig=20044",
+    "state": {
+      "layer_bucket": "4+",
+      "signature": [
+        2,
+        0,
+        0,
+        4,
+        4
+      ]
+    },
+    "permutation": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "color0_output": 0,
+    "delta": 0,
+    "phase_align": 1
+  },
+  {
+    "step": 5,
+    "coords": [
+      3,
+      1,
+      0,
+      1,
+      0
+    ],
+    "state_id": 7159,
+    "state_name": "L=4+|sig=20004",
+    "state": {
+      "layer_bucket": "4+",
+      "signature": [
+        2,
+        0,
+        0,
+        0,
+        4
+      ]
+    },
+    "permutation": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "color0_output": 0,
+    "delta": 0,
+    "phase_align": 1
+  },
+  {
+    "step": 6,
+    "coords": [
+      4,
+      1,
+      0,
+      1,
+      0
+    ],
+    "state_id": 7159,
+    "state_name": "L=4+|sig=20004",
+    "state": {
+      "layer_bucket": "4+",
+      "signature": [
+        2,
+        0,
+        0,
+        0,
+        4
+      ]
+    },
+    "permutation": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "color0_output": 0,
+    "delta": 0,
+    "phase_align": 1
+  }
+]

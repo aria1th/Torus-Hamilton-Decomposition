@@ -1,0 +1,341 @@
+{
+  "task_id": "D5-TAIL-AUTOMATON-BIT-EXTRACTION-001",
+  "runtime_sec": 0.5012714099138975,
+  "environment": {
+    "python_version": "3.10.12",
+    "rich_version": "14.2.0"
+  },
+  "m_values": [
+    5,
+    7,
+    9,
+    11,
+    13
+  ],
+  "per_m": [
+    {
+      "m": 5,
+      "vertex_count": 4,
+      "support_size_histogram": {
+        "2": 46,
+        "3": 12
+      },
+      "baseline_total_excess": 70,
+      "hypergraph_optimum": {
+        "unique_mod_complement": true,
+        "optimal_delta_subset": [
+          1,
+          2
+        ],
+        "best_cut_weight": 56,
+        "best_residual_total_excess": 14,
+        "runner_up_cut_gap": 12,
+        "optimal_rows": [
+          {
+            "mask": 3,
+            "delta_subset": [
+              1,
+              2
+            ],
+            "hypergraph_cut_weight": 56,
+            "residual_total_excess": 14,
+            "pair_graph_cut_weight": 68
+          }
+        ]
+      },
+      "pair_graph_optimum": {
+        "optimal_delta_subset": [
+          1,
+          2
+        ],
+        "pair_graph_cut_weight": 68,
+        "hypergraph_cut_weight_under_graph_best": 56,
+        "hypergraph_residual_total_excess_under_graph_best": 14,
+        "matches_hypergraph_optimum": true
+      },
+      "antisymmetric_optimum": {
+        "unique_mod_complement": true,
+        "optimal_delta_subset": [
+          1,
+          2
+        ],
+        "best_cut_weight": 56,
+        "best_residual_total_excess": 14,
+        "runner_up_cut_gap": 12,
+        "matches_hypergraph_optimum": true
+      }
+    },
+    {
+      "m": 7,
+      "vertex_count": 6,
+      "support_size_histogram": {
+        "2": 1320,
+        "3": 288,
+        "4": 135,
+        "5": 58,
+        "6": 28
+      },
+      "baseline_total_excess": 2673,
+      "hypergraph_optimum": {
+        "unique_mod_complement": true,
+        "optimal_delta_subset": [
+          1,
+          3,
+          5
+        ],
+        "best_cut_weight": 1391,
+        "best_residual_total_excess": 1282,
+        "runner_up_cut_gap": 14,
+        "optimal_rows": [
+          {
+            "mask": 21,
+            "delta_subset": [
+              1,
+              3,
+              5
+            ],
+            "hypergraph_cut_weight": 1391,
+            "residual_total_excess": 1282,
+            "pair_graph_cut_weight": 2562
+          }
+        ]
+      },
+      "pair_graph_optimum": {
+        "optimal_delta_subset": [
+          1,
+          3,
+          5
+        ],
+        "pair_graph_cut_weight": 2562,
+        "hypergraph_cut_weight_under_graph_best": 1391,
+        "hypergraph_residual_total_excess_under_graph_best": 1282,
+        "matches_hypergraph_optimum": true
+      },
+      "antisymmetric_optimum": {
+        "unique_mod_complement": true,
+        "optimal_delta_subset": [
+          1,
+          3,
+          5
+        ],
+        "best_cut_weight": 1391,
+        "best_residual_total_excess": 1282,
+        "runner_up_cut_gap": 14,
+        "matches_hypergraph_optimum": true
+      }
+    },
+    {
+      "m": 9,
+      "vertex_count": 8,
+      "support_size_histogram": {
+        "2": 2309,
+        "3": 1318,
+        "4": 948,
+        "5": 342,
+        "6": 230,
+        "7": 134,
+        "8": 228
+      },
+      "baseline_total_excess": 12707,
+      "hypergraph_optimum": {
+        "unique_mod_complement": true,
+        "optimal_delta_subset": [
+          1,
+          2,
+          5,
+          6
+        ],
+        "best_cut_weight": 4557,
+        "best_residual_total_excess": 8150,
+        "runner_up_cut_gap": 28,
+        "optimal_rows": [
+          {
+            "mask": 51,
+            "delta_subset": [
+              1,
+              2,
+              5,
+              6
+            ],
+            "hypergraph_cut_weight": 4557,
+            "residual_total_excess": 8150,
+            "pair_graph_cut_weight": 16805
+          }
+        ]
+      },
+      "pair_graph_optimum": {
+        "optimal_delta_subset": [
+          1,
+          2,
+          5,
+          6
+        ],
+        "pair_graph_cut_weight": 16805,
+        "hypergraph_cut_weight_under_graph_best": 4557,
+        "hypergraph_residual_total_excess_under_graph_best": 8150,
+        "matches_hypergraph_optimum": true
+      },
+      "antisymmetric_optimum": {
+        "unique_mod_complement": true,
+        "optimal_delta_subset": [
+          1,
+          2,
+          5,
+          6
+        ],
+        "best_cut_weight": 4557,
+        "best_residual_total_excess": 8150,
+        "runner_up_cut_gap": 28,
+        "matches_hypergraph_optimum": true
+      }
+    },
+    {
+      "m": 11,
+      "vertex_count": 10,
+      "support_size_histogram": {
+        "2": 1346,
+        "3": 1339,
+        "4": 1650,
+        "5": 934,
+        "6": 773,
+        "7": 383,
+        "8": 310,
+        "9": 160,
+        "10": 492
+      },
+      "baseline_total_excess": 26751,
+      "hypergraph_optimum": {
+        "unique_mod_complement": true,
+        "optimal_delta_subset": [
+          1,
+          2,
+          6,
+          7,
+          8
+        ],
+        "best_cut_weight": 6646,
+        "best_residual_total_excess": 20105,
+        "runner_up_cut_gap": 13,
+        "optimal_rows": [
+          {
+            "mask": 227,
+            "delta_subset": [
+              1,
+              2,
+              6,
+              7,
+              8
+            ],
+            "hypergraph_cut_weight": 6646,
+            "residual_total_excess": 20105,
+            "pair_graph_cut_weight": 46303
+          }
+        ]
+      },
+      "pair_graph_optimum": {
+        "optimal_delta_subset": [
+          1,
+          2,
+          6,
+          7,
+          8
+        ],
+        "pair_graph_cut_weight": 46303,
+        "hypergraph_cut_weight_under_graph_best": 6646,
+        "hypergraph_residual_total_excess_under_graph_best": 20105,
+        "matches_hypergraph_optimum": true
+      },
+      "antisymmetric_optimum": {
+        "unique_mod_complement": true,
+        "optimal_delta_subset": [
+          1,
+          2,
+          6,
+          7,
+          8
+        ],
+        "best_cut_weight": 6646,
+        "best_residual_total_excess": 20105,
+        "runner_up_cut_gap": 13,
+        "matches_hypergraph_optimum": true
+      }
+    },
+    {
+      "m": 13,
+      "vertex_count": 12,
+      "support_size_histogram": {
+        "2": 522,
+        "3": 756,
+        "4": 1215,
+        "5": 1164,
+        "6": 1477,
+        "7": 858,
+        "8": 691,
+        "9": 331,
+        "10": 289,
+        "11": 168,
+        "12": 701
+      },
+      "baseline_total_excess": 42345,
+      "hypergraph_optimum": {
+        "unique_mod_complement": true,
+        "optimal_delta_subset": [
+          1,
+          4,
+          5,
+          7,
+          8,
+          10
+        ],
+        "best_cut_weight": 7800,
+        "best_residual_total_excess": 34545,
+        "runner_up_cut_gap": 1,
+        "optimal_rows": [
+          {
+            "mask": 729,
+            "delta_subset": [
+              1,
+              4,
+              5,
+              7,
+              8,
+              10
+            ],
+            "hypergraph_cut_weight": 7800,
+            "residual_total_excess": 34545,
+            "pair_graph_cut_weight": 89233
+          }
+        ]
+      },
+      "pair_graph_optimum": {
+        "optimal_delta_subset": [
+          1,
+          2,
+          5,
+          6,
+          9,
+          10
+        ],
+        "pair_graph_cut_weight": 89908,
+        "hypergraph_cut_weight_under_graph_best": 7724,
+        "hypergraph_residual_total_excess_under_graph_best": 34621,
+        "matches_hypergraph_optimum": false
+      },
+      "antisymmetric_optimum": {
+        "unique_mod_complement": true,
+        "optimal_delta_subset": [
+          1,
+          3,
+          5,
+          6,
+          9,
+          11
+        ],
+        "best_cut_weight": 7773,
+        "best_residual_total_excess": 34572,
+        "runner_up_cut_gap": 4,
+        "matches_hypergraph_optimum": false
+      }
+    }
+  ]
+}

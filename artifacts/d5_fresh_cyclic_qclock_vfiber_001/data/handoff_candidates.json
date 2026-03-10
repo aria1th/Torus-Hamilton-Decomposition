@@ -1,0 +1,890 @@
+[
+  {
+    "phase": "phase2_mutation",
+    "candidate_name": "L1:d3|L2:d2[q=-1->4;q+u=1->0]|L3:d4",
+    "candidate": {
+      "task_id": "D5-FRESH-CYCLIC-QCLOCK-VFIBER-001",
+      "family": "d5_fresh_cyclic_qclock_vfiber_affine_atoms_v1",
+      "layer0_offset": 1,
+      "layers_ge_4_default_offset": 0,
+      "layers": {
+        "1": {
+          "default_offset": 3,
+          "clauses": []
+        },
+        "2": {
+          "default_offset": 2,
+          "clauses": [
+            {
+              "atom": "q",
+              "residue_label": -1,
+              "output_offset": 4
+            },
+            {
+              "atom": "q+u",
+              "residue_label": 1,
+              "output_offset": 0
+            }
+          ]
+        },
+        "3": {
+          "default_offset": 4,
+          "clauses": []
+        }
+      }
+    },
+    "objective": [
+      3,
+      3,
+      0,
+      -3,
+      0,
+      -2
+    ],
+    "per_m": [
+      {
+        "m": 5,
+        "clean_frame": true,
+        "strict_clock": true,
+        "clock_shift": 1,
+        "v_fiber_clean": true,
+        "U_cycle_count": 1,
+        "U_cycle_lengths": [
+          25
+        ],
+        "U_is_single_cycle": true,
+        "U_cycle_representatives": [
+          0
+        ],
+        "monodromies": [
+          0
+        ],
+        "all_monodromies_unit": false,
+        "unit_monodromy_cycle_count": 0,
+        "R_indegree_histogram": {
+          "1": 125
+        },
+        "R_is_permutation": true,
+        "R_indegree_defect_states": 0,
+        "R_indegree_l1": 0,
+        "R_first_failure_example": null,
+        "U_first_failure_example": null
+      },
+      {
+        "m": 7,
+        "clean_frame": true,
+        "strict_clock": true,
+        "clock_shift": 1,
+        "v_fiber_clean": true,
+        "U_cycle_count": 1,
+        "U_cycle_lengths": [
+          49
+        ],
+        "U_is_single_cycle": true,
+        "U_cycle_representatives": [
+          0
+        ],
+        "monodromies": [
+          0
+        ],
+        "all_monodromies_unit": false,
+        "unit_monodromy_cycle_count": 0,
+        "R_indegree_histogram": {
+          "1": 343
+        },
+        "R_is_permutation": true,
+        "R_indegree_defect_states": 0,
+        "R_indegree_l1": 0,
+        "R_first_failure_example": null,
+        "U_first_failure_example": null
+      },
+      {
+        "m": 9,
+        "clean_frame": true,
+        "strict_clock": true,
+        "clock_shift": 1,
+        "v_fiber_clean": true,
+        "U_cycle_count": 1,
+        "U_cycle_lengths": [
+          81
+        ],
+        "U_is_single_cycle": true,
+        "U_cycle_representatives": [
+          0
+        ],
+        "monodromies": [
+          0
+        ],
+        "all_monodromies_unit": false,
+        "unit_monodromy_cycle_count": 0,
+        "R_indegree_histogram": {
+          "1": 729
+        },
+        "R_is_permutation": true,
+        "R_indegree_defect_states": 0,
+        "R_indegree_l1": 0,
+        "R_first_failure_example": null,
+        "U_first_failure_example": null
+      }
+    ],
+    "total_clauses": 2
+  },
+  {
+    "phase": "phase2_mutation",
+    "candidate_name": "L1:d4[q=0->3;q+w+u=-2->2]|L2:d0|L3:d0",
+    "candidate": {
+      "task_id": "D5-FRESH-CYCLIC-QCLOCK-VFIBER-001",
+      "family": "d5_fresh_cyclic_qclock_vfiber_affine_atoms_v1",
+      "layer0_offset": 1,
+      "layers_ge_4_default_offset": 0,
+      "layers": {
+        "1": {
+          "default_offset": 4,
+          "clauses": [
+            {
+              "atom": "q",
+              "residue_label": 0,
+              "output_offset": 3
+            },
+            {
+              "atom": "q+w+u",
+              "residue_label": -2,
+              "output_offset": 2
+            }
+          ]
+        },
+        "2": {
+          "default_offset": 0,
+          "clauses": []
+        },
+        "3": {
+          "default_offset": 0,
+          "clauses": []
+        }
+      }
+    },
+    "objective": [
+      3,
+      3,
+      0,
+      -3,
+      0,
+      -2
+    ],
+    "per_m": [
+      {
+        "m": 5,
+        "clean_frame": true,
+        "strict_clock": true,
+        "clock_shift": 1,
+        "v_fiber_clean": true,
+        "U_cycle_count": 1,
+        "U_cycle_lengths": [
+          25
+        ],
+        "U_is_single_cycle": true,
+        "U_cycle_representatives": [
+          0
+        ],
+        "monodromies": [
+          0
+        ],
+        "all_monodromies_unit": false,
+        "unit_monodromy_cycle_count": 0,
+        "R_indegree_histogram": {
+          "1": 125
+        },
+        "R_is_permutation": true,
+        "R_indegree_defect_states": 0,
+        "R_indegree_l1": 0,
+        "R_first_failure_example": null,
+        "U_first_failure_example": null
+      },
+      {
+        "m": 7,
+        "clean_frame": true,
+        "strict_clock": true,
+        "clock_shift": 1,
+        "v_fiber_clean": true,
+        "U_cycle_count": 1,
+        "U_cycle_lengths": [
+          49
+        ],
+        "U_is_single_cycle": true,
+        "U_cycle_representatives": [
+          0
+        ],
+        "monodromies": [
+          0
+        ],
+        "all_monodromies_unit": false,
+        "unit_monodromy_cycle_count": 0,
+        "R_indegree_histogram": {
+          "1": 343
+        },
+        "R_is_permutation": true,
+        "R_indegree_defect_states": 0,
+        "R_indegree_l1": 0,
+        "R_first_failure_example": null,
+        "U_first_failure_example": null
+      },
+      {
+        "m": 9,
+        "clean_frame": true,
+        "strict_clock": true,
+        "clock_shift": 1,
+        "v_fiber_clean": true,
+        "U_cycle_count": 1,
+        "U_cycle_lengths": [
+          81
+        ],
+        "U_is_single_cycle": true,
+        "U_cycle_representatives": [
+          0
+        ],
+        "monodromies": [
+          0
+        ],
+        "all_monodromies_unit": false,
+        "unit_monodromy_cycle_count": 0,
+        "R_indegree_histogram": {
+          "1": 729
+        },
+        "R_is_permutation": true,
+        "R_indegree_defect_states": 0,
+        "R_indegree_l1": 0,
+        "R_first_failure_example": null,
+        "U_first_failure_example": null
+      }
+    ],
+    "total_clauses": 2
+  },
+  {
+    "phase": "phase2_mutation",
+    "candidate_name": "L1:d2[q=0->3;w+u=1->4]|L2:d2|L3:d4",
+    "candidate": {
+      "task_id": "D5-FRESH-CYCLIC-QCLOCK-VFIBER-001",
+      "family": "d5_fresh_cyclic_qclock_vfiber_affine_atoms_v1",
+      "layer0_offset": 1,
+      "layers_ge_4_default_offset": 0,
+      "layers": {
+        "1": {
+          "default_offset": 2,
+          "clauses": [
+            {
+              "atom": "q",
+              "residue_label": 0,
+              "output_offset": 3
+            },
+            {
+              "atom": "w+u",
+              "residue_label": 1,
+              "output_offset": 4
+            }
+          ]
+        },
+        "2": {
+          "default_offset": 2,
+          "clauses": []
+        },
+        "3": {
+          "default_offset": 4,
+          "clauses": []
+        }
+      }
+    },
+    "objective": [
+      3,
+      3,
+      0,
+      -3,
+      0,
+      -2
+    ],
+    "per_m": [
+      {
+        "m": 5,
+        "clean_frame": true,
+        "strict_clock": true,
+        "clock_shift": 1,
+        "v_fiber_clean": true,
+        "U_cycle_count": 1,
+        "U_cycle_lengths": [
+          25
+        ],
+        "U_is_single_cycle": true,
+        "U_cycle_representatives": [
+          0
+        ],
+        "monodromies": [
+          0
+        ],
+        "all_monodromies_unit": false,
+        "unit_monodromy_cycle_count": 0,
+        "R_indegree_histogram": {
+          "1": 125
+        },
+        "R_is_permutation": true,
+        "R_indegree_defect_states": 0,
+        "R_indegree_l1": 0,
+        "R_first_failure_example": null,
+        "U_first_failure_example": null
+      },
+      {
+        "m": 7,
+        "clean_frame": true,
+        "strict_clock": true,
+        "clock_shift": 1,
+        "v_fiber_clean": true,
+        "U_cycle_count": 1,
+        "U_cycle_lengths": [
+          49
+        ],
+        "U_is_single_cycle": true,
+        "U_cycle_representatives": [
+          0
+        ],
+        "monodromies": [
+          0
+        ],
+        "all_monodromies_unit": false,
+        "unit_monodromy_cycle_count": 0,
+        "R_indegree_histogram": {
+          "1": 343
+        },
+        "R_is_permutation": true,
+        "R_indegree_defect_states": 0,
+        "R_indegree_l1": 0,
+        "R_first_failure_example": null,
+        "U_first_failure_example": null
+      },
+      {
+        "m": 9,
+        "clean_frame": true,
+        "strict_clock": true,
+        "clock_shift": 1,
+        "v_fiber_clean": true,
+        "U_cycle_count": 1,
+        "U_cycle_lengths": [
+          81
+        ],
+        "U_is_single_cycle": true,
+        "U_cycle_representatives": [
+          0
+        ],
+        "monodromies": [
+          0
+        ],
+        "all_monodromies_unit": false,
+        "unit_monodromy_cycle_count": 0,
+        "R_indegree_histogram": {
+          "1": 729
+        },
+        "R_is_permutation": true,
+        "R_indegree_defect_states": 0,
+        "R_indegree_l1": 0,
+        "R_first_failure_example": null,
+        "U_first_failure_example": null
+      }
+    ],
+    "total_clauses": 2
+  },
+  {
+    "phase": "phase2_mutation",
+    "candidate_name": "L1:d4|L2:d2[w+u=2->4;q+u=-1->3]|L3:d0[u=-1->3]",
+    "candidate": {
+      "task_id": "D5-FRESH-CYCLIC-QCLOCK-VFIBER-001",
+      "family": "d5_fresh_cyclic_qclock_vfiber_affine_atoms_v1",
+      "layer0_offset": 1,
+      "layers_ge_4_default_offset": 0,
+      "layers": {
+        "1": {
+          "default_offset": 4,
+          "clauses": []
+        },
+        "2": {
+          "default_offset": 2,
+          "clauses": [
+            {
+              "atom": "w+u",
+              "residue_label": 2,
+              "output_offset": 4
+            },
+            {
+              "atom": "q+u",
+              "residue_label": -1,
+              "output_offset": 3
+            }
+          ]
+        },
+        "3": {
+          "default_offset": 0,
+          "clauses": [
+            {
+              "atom": "u",
+              "residue_label": -1,
+              "output_offset": 3
+            }
+          ]
+        }
+      }
+    },
+    "objective": [
+      3,
+      0,
+      3,
+      -3,
+      -42,
+      -3
+    ],
+    "per_m": [
+      {
+        "m": 5,
+        "clean_frame": true,
+        "strict_clock": true,
+        "clock_shift": 1,
+        "v_fiber_clean": true,
+        "U_cycle_count": 1,
+        "U_cycle_lengths": [
+          11
+        ],
+        "U_is_single_cycle": false,
+        "U_cycle_representatives": [
+          20
+        ],
+        "monodromies": [
+          1
+        ],
+        "all_monodromies_unit": true,
+        "unit_monodromy_cycle_count": 1,
+        "R_indegree_histogram": {
+          "0": 5,
+          "1": 115,
+          "2": 5
+        },
+        "R_is_permutation": false,
+        "R_indegree_defect_states": 10,
+        "R_indegree_l1": 10,
+        "R_first_failure_example": {
+          "state_index": 19,
+          "indegree": 0,
+          "next_state_index": 45
+        },
+        "U_first_failure_example": {
+          "cycle_lengths": [
+            11
+          ]
+        }
+      },
+      {
+        "m": 7,
+        "clean_frame": true,
+        "strict_clock": true,
+        "clock_shift": 1,
+        "v_fiber_clean": true,
+        "U_cycle_count": 1,
+        "U_cycle_lengths": [
+          19
+        ],
+        "U_is_single_cycle": false,
+        "U_cycle_representatives": [
+          29
+        ],
+        "monodromies": [
+          5
+        ],
+        "all_monodromies_unit": true,
+        "unit_monodromy_cycle_count": 1,
+        "R_indegree_histogram": {
+          "0": 7,
+          "1": 329,
+          "2": 7
+        },
+        "R_is_permutation": false,
+        "R_indegree_defect_states": 14,
+        "R_indegree_l1": 14,
+        "R_first_failure_example": {
+          "state_index": 27,
+          "indegree": 0,
+          "next_state_index": 77
+        },
+        "U_first_failure_example": {
+          "cycle_lengths": [
+            19
+          ]
+        }
+      },
+      {
+        "m": 9,
+        "clean_frame": true,
+        "strict_clock": true,
+        "clock_shift": 1,
+        "v_fiber_clean": true,
+        "U_cycle_count": 1,
+        "U_cycle_lengths": [
+          29
+        ],
+        "U_is_single_cycle": false,
+        "U_cycle_representatives": [
+          38
+        ],
+        "monodromies": [
+          2
+        ],
+        "all_monodromies_unit": true,
+        "unit_monodromy_cycle_count": 1,
+        "R_indegree_histogram": {
+          "0": 9,
+          "1": 711,
+          "2": 9
+        },
+        "R_is_permutation": false,
+        "R_indegree_defect_states": 18,
+        "R_indegree_l1": 18,
+        "R_first_failure_example": {
+          "state_index": 35,
+          "indegree": 0,
+          "next_state_index": 117
+        },
+        "U_first_failure_example": {
+          "cycle_lengths": [
+            29
+          ]
+        }
+      }
+    ],
+    "total_clauses": 3
+  },
+  {
+    "phase": "phase2_mutation",
+    "candidate_name": "L1:d3[q=-2->0]|L2:d2[q+u=2->3;w+u=2->4]|L3:d3",
+    "candidate": {
+      "task_id": "D5-FRESH-CYCLIC-QCLOCK-VFIBER-001",
+      "family": "d5_fresh_cyclic_qclock_vfiber_affine_atoms_v1",
+      "layer0_offset": 1,
+      "layers_ge_4_default_offset": 0,
+      "layers": {
+        "1": {
+          "default_offset": 3,
+          "clauses": [
+            {
+              "atom": "q",
+              "residue_label": -2,
+              "output_offset": 0
+            }
+          ]
+        },
+        "2": {
+          "default_offset": 2,
+          "clauses": [
+            {
+              "atom": "q+u",
+              "residue_label": 2,
+              "output_offset": 3
+            },
+            {
+              "atom": "w+u",
+              "residue_label": 2,
+              "output_offset": 4
+            }
+          ]
+        },
+        "3": {
+          "default_offset": 3,
+          "clauses": []
+        }
+      }
+    },
+    "objective": [
+      3,
+      0,
+      3,
+      -3,
+      -42,
+      -3
+    ],
+    "per_m": [
+      {
+        "m": 5,
+        "clean_frame": true,
+        "strict_clock": true,
+        "clock_shift": 1,
+        "v_fiber_clean": true,
+        "U_cycle_count": 1,
+        "U_cycle_lengths": [
+          13
+        ],
+        "U_is_single_cycle": false,
+        "U_cycle_representatives": [
+          7
+        ],
+        "monodromies": [
+          2
+        ],
+        "all_monodromies_unit": true,
+        "unit_monodromy_cycle_count": 1,
+        "R_indegree_histogram": {
+          "0": 5,
+          "1": 115,
+          "2": 5
+        },
+        "R_is_permutation": false,
+        "R_indegree_defect_states": 10,
+        "R_indegree_l1": 10,
+        "R_first_failure_example": {
+          "state_index": 3,
+          "indegree": 0,
+          "next_state_index": 33
+        },
+        "U_first_failure_example": {
+          "cycle_lengths": [
+            13
+          ]
+        }
+      },
+      {
+        "m": 7,
+        "clean_frame": true,
+        "strict_clock": true,
+        "clock_shift": 1,
+        "v_fiber_clean": true,
+        "U_cycle_count": 1,
+        "U_cycle_lengths": [
+          25
+        ],
+        "U_is_single_cycle": false,
+        "U_cycle_representatives": [
+          10
+        ],
+        "monodromies": [
+          3
+        ],
+        "all_monodromies_unit": true,
+        "unit_monodromy_cycle_count": 1,
+        "R_indegree_histogram": {
+          "0": 7,
+          "1": 329,
+          "2": 7
+        },
+        "R_is_permutation": false,
+        "R_indegree_defect_states": 14,
+        "R_indegree_l1": 14,
+        "R_first_failure_example": {
+          "state_index": 3,
+          "indegree": 0,
+          "next_state_index": 59
+        },
+        "U_first_failure_example": {
+          "cycle_lengths": [
+            25
+          ]
+        }
+      },
+      {
+        "m": 9,
+        "clean_frame": true,
+        "strict_clock": true,
+        "clock_shift": 1,
+        "v_fiber_clean": true,
+        "U_cycle_count": 1,
+        "U_cycle_lengths": [
+          41
+        ],
+        "U_is_single_cycle": false,
+        "U_cycle_representatives": [
+          13
+        ],
+        "monodromies": [
+          4
+        ],
+        "all_monodromies_unit": true,
+        "unit_monodromy_cycle_count": 1,
+        "R_indegree_histogram": {
+          "0": 9,
+          "1": 711,
+          "2": 9
+        },
+        "R_is_permutation": false,
+        "R_indegree_defect_states": 18,
+        "R_indegree_l1": 18,
+        "R_first_failure_example": {
+          "state_index": 3,
+          "indegree": 0,
+          "next_state_index": 93
+        },
+        "U_first_failure_example": {
+          "cycle_lengths": [
+            41
+          ]
+        }
+      }
+    ],
+    "total_clauses": 3
+  },
+  {
+    "phase": "phase2_mutation",
+    "candidate_name": "L1:d3[q=2->2]|L2:d3|L3:d0[q+w+u=1->3;w=1->4]",
+    "candidate": {
+      "task_id": "D5-FRESH-CYCLIC-QCLOCK-VFIBER-001",
+      "family": "d5_fresh_cyclic_qclock_vfiber_affine_atoms_v1",
+      "layer0_offset": 1,
+      "layers_ge_4_default_offset": 0,
+      "layers": {
+        "1": {
+          "default_offset": 3,
+          "clauses": [
+            {
+              "atom": "q",
+              "residue_label": 2,
+              "output_offset": 2
+            }
+          ]
+        },
+        "2": {
+          "default_offset": 3,
+          "clauses": []
+        },
+        "3": {
+          "default_offset": 0,
+          "clauses": [
+            {
+              "atom": "q+w+u",
+              "residue_label": 1,
+              "output_offset": 3
+            },
+            {
+              "atom": "w",
+              "residue_label": 1,
+              "output_offset": 4
+            }
+          ]
+        }
+      }
+    },
+    "objective": [
+      3,
+      0,
+      3,
+      -3,
+      -42,
+      -3
+    ],
+    "per_m": [
+      {
+        "m": 5,
+        "clean_frame": true,
+        "strict_clock": true,
+        "clock_shift": 1,
+        "v_fiber_clean": true,
+        "U_cycle_count": 1,
+        "U_cycle_lengths": [
+          15
+        ],
+        "U_is_single_cycle": false,
+        "U_cycle_representatives": [
+          9
+        ],
+        "monodromies": [
+          2
+        ],
+        "all_monodromies_unit": true,
+        "unit_monodromy_cycle_count": 1,
+        "R_indegree_histogram": {
+          "0": 5,
+          "1": 115,
+          "2": 5
+        },
+        "R_is_permutation": false,
+        "R_indegree_defect_states": 10,
+        "R_indegree_l1": 10,
+        "R_first_failure_example": {
+          "state_index": 5,
+          "indegree": 2,
+          "next_state_index": 31
+        },
+        "U_first_failure_example": {
+          "cycle_lengths": [
+            15
+          ]
+        }
+      },
+      {
+        "m": 7,
+        "clean_frame": true,
+        "strict_clock": true,
+        "clock_shift": 1,
+        "v_fiber_clean": true,
+        "U_cycle_count": 1,
+        "U_cycle_lengths": [
+          28
+        ],
+        "U_is_single_cycle": false,
+        "U_cycle_representatives": [
+          13
+        ],
+        "monodromies": [
+          3
+        ],
+        "all_monodromies_unit": true,
+        "unit_monodromy_cycle_count": 1,
+        "R_indegree_histogram": {
+          "0": 7,
+          "1": 329,
+          "2": 7
+        },
+        "R_is_permutation": false,
+        "R_indegree_defect_states": 14,
+        "R_indegree_l1": 14,
+        "R_first_failure_example": {
+          "state_index": 7,
+          "indegree": 2,
+          "next_state_index": 57
+        },
+        "U_first_failure_example": {
+          "cycle_lengths": [
+            28
+          ]
+        }
+      },
+      {
+        "m": 9,
+        "clean_frame": true,
+        "strict_clock": true,
+        "clock_shift": 1,
+        "v_fiber_clean": true,
+        "U_cycle_count": 1,
+        "U_cycle_lengths": [
+          45
+        ],
+        "U_is_single_cycle": false,
+        "U_cycle_representatives": [
+          17
+        ],
+        "monodromies": [
+          4
+        ],
+        "all_monodromies_unit": true,
+        "unit_monodromy_cycle_count": 1,
+        "R_indegree_histogram": {
+          "0": 9,
+          "1": 711,
+          "2": 9
+        },
+        "R_is_permutation": false,
+        "R_indegree_defect_states": 18,
+        "R_indegree_l1": 18,
+        "R_first_failure_example": {
+          "state_index": 9,
+          "indegree": 2,
+          "next_state_index": 91
+        },
+        "U_first_failure_example": {
+          "cycle_lengths": [
+            45
+          ]
+        }
+      }
+    ],
+    "total_clauses": 3
+  }
+]

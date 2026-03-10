@@ -1,0 +1,395 @@
+[
+  {
+    "m": 5,
+    "traces": [
+      {
+        "start": [
+          0,
+          0
+        ],
+        "orbit_prefix": [
+          {
+            "wu": [
+              0,
+              0
+            ],
+            "fiber_shift": 0,
+            "next": [
+              1,
+              4
+            ]
+          },
+          {
+            "wu": [
+              1,
+              4
+            ],
+            "fiber_shift": 1,
+            "next": [
+              2,
+              4
+            ]
+          },
+          {
+            "wu": [
+              2,
+              4
+            ],
+            "fiber_shift": 0,
+            "next": [
+              3,
+              4
+            ]
+          }
+        ],
+        "cycle_entry_index": 1
+      },
+      {
+        "start": [
+          0,
+          2
+        ],
+        "orbit_prefix": [
+          {
+            "wu": [
+              0,
+              2
+            ],
+            "fiber_shift": 0,
+            "next": [
+              1,
+              0
+            ]
+          },
+          {
+            "wu": [
+              1,
+              0
+            ],
+            "fiber_shift": 0,
+            "next": [
+              2,
+              1
+            ]
+          },
+          {
+            "wu": [
+              2,
+              1
+            ],
+            "fiber_shift": 0,
+            "next": [
+              3,
+              1
+            ]
+          }
+        ],
+        "cycle_entry_index": 1
+      },
+      {
+        "start": [
+          1,
+          1
+        ],
+        "orbit_prefix": [
+          {
+            "wu": [
+              1,
+              1
+            ],
+            "fiber_shift": 0,
+            "next": [
+              2,
+              2
+            ]
+          },
+          {
+            "wu": [
+              2,
+              2
+            ],
+            "fiber_shift": 4,
+            "next": [
+              3,
+              2
+            ]
+          },
+          {
+            "wu": [
+              3,
+              2
+            ],
+            "fiber_shift": 1,
+            "next": [
+              4,
+              2
+            ]
+          }
+        ],
+        "cycle_entry_index": 5
+      }
+    ]
+  },
+  {
+    "m": 7,
+    "traces": [
+      {
+        "start": [
+          0,
+          0
+        ],
+        "orbit_prefix": [
+          {
+            "wu": [
+              0,
+              0
+            ],
+            "fiber_shift": 0,
+            "next": [
+              1,
+              6
+            ]
+          },
+          {
+            "wu": [
+              1,
+              6
+            ],
+            "fiber_shift": 1,
+            "next": [
+              2,
+              6
+            ]
+          },
+          {
+            "wu": [
+              2,
+              6
+            ],
+            "fiber_shift": 0,
+            "next": [
+              3,
+              6
+            ]
+          }
+        ],
+        "cycle_entry_index": 1
+      },
+      {
+        "start": [
+          0,
+          2
+        ],
+        "orbit_prefix": [
+          {
+            "wu": [
+              0,
+              2
+            ],
+            "fiber_shift": 0,
+            "next": [
+              1,
+              0
+            ]
+          },
+          {
+            "wu": [
+              1,
+              0
+            ],
+            "fiber_shift": 0,
+            "next": [
+              2,
+              1
+            ]
+          },
+          {
+            "wu": [
+              2,
+              1
+            ],
+            "fiber_shift": 0,
+            "next": [
+              3,
+              1
+            ]
+          }
+        ],
+        "cycle_entry_index": 1
+      },
+      {
+        "start": [
+          0,
+          4
+        ],
+        "orbit_prefix": [
+          {
+            "wu": [
+              0,
+              4
+            ],
+            "fiber_shift": 0,
+            "next": [
+              1,
+              2
+            ]
+          },
+          {
+            "wu": [
+              1,
+              2
+            ],
+            "fiber_shift": 0,
+            "next": [
+              2,
+              3
+            ]
+          },
+          {
+            "wu": [
+              2,
+              3
+            ],
+            "fiber_shift": 0,
+            "next": [
+              3,
+              3
+            ]
+          }
+        ],
+        "cycle_entry_index": 1
+      }
+    ]
+  },
+  {
+    "m": 9,
+    "traces": [
+      {
+        "start": [
+          0,
+          0
+        ],
+        "orbit_prefix": [
+          {
+            "wu": [
+              0,
+              0
+            ],
+            "fiber_shift": 0,
+            "next": [
+              1,
+              8
+            ]
+          },
+          {
+            "wu": [
+              1,
+              8
+            ],
+            "fiber_shift": 1,
+            "next": [
+              2,
+              8
+            ]
+          },
+          {
+            "wu": [
+              2,
+              8
+            ],
+            "fiber_shift": 0,
+            "next": [
+              3,
+              8
+            ]
+          }
+        ],
+        "cycle_entry_index": 1
+      },
+      {
+        "start": [
+          0,
+          2
+        ],
+        "orbit_prefix": [
+          {
+            "wu": [
+              0,
+              2
+            ],
+            "fiber_shift": 0,
+            "next": [
+              1,
+              0
+            ]
+          },
+          {
+            "wu": [
+              1,
+              0
+            ],
+            "fiber_shift": 0,
+            "next": [
+              2,
+              1
+            ]
+          },
+          {
+            "wu": [
+              2,
+              1
+            ],
+            "fiber_shift": 0,
+            "next": [
+              3,
+              1
+            ]
+          }
+        ],
+        "cycle_entry_index": 1
+      },
+      {
+        "start": [
+          0,
+          4
+        ],
+        "orbit_prefix": [
+          {
+            "wu": [
+              0,
+              4
+            ],
+            "fiber_shift": 0,
+            "next": [
+              1,
+              2
+            ]
+          },
+          {
+            "wu": [
+              1,
+              2
+            ],
+            "fiber_shift": 0,
+            "next": [
+              2,
+              3
+            ]
+          },
+          {
+            "wu": [
+              2,
+              3
+            ],
+            "fiber_shift": 0,
+            "next": [
+              3,
+              3
+            ]
+          }
+        ],
+        "cycle_entry_index": 1
+      }
+    ]
+  }
+]

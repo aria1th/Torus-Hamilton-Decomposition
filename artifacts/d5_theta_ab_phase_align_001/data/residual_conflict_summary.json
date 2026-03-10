@@ -1,0 +1,7865 @@
+{
+  "task_id": "D5-THETA-AB-PHASE-ALIGN-001",
+  "runtime_sec": 16.18083160929382,
+  "environment": {
+    "python_version": "3.10.12",
+    "rich_version": "14.2.0"
+  },
+  "residual_conflict": {
+    "field_classes": {
+      "strict_collapse": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "clean_nonclock": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "other": []
+    },
+    "strict_collapse_field_index": 0,
+    "candidate_next_bit": "predecessor_tail_nonzero_phase",
+    "candidate_next_bit_description": "A second refinement should separate at least one nonzero delta tail class inside phase_align=0, rather than adding more anchor freedom.",
+    "per_m": [
+      {
+        "m": 5,
+        "multi_delta_state_count": 58,
+        "full_nonzero_support_state_count": 0,
+        "support_histogram": {
+          "2": 46,
+          "3": 12
+        },
+        "example_rows": [
+          {
+            "state_name": "L=2|sig=010220",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                0,
+                22,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              3,
+              1,
+              4,
+              2,
+              2
+            ],
+            "example_largest_delta": [
+              3,
+              3,
+              4,
+              0,
+              2
+            ]
+          },
+          {
+            "state_name": "L=2|sig=016043",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                16,
+                0,
+                4,
+                3
+              ]
+            },
+            "delta_values": [
+              1,
+              4
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              4,
+              1,
+              3,
+              2,
+              2
+            ],
+            "example_largest_delta": [
+              4,
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          {
+            "state_name": "L=2|sig=020441",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                20,
+                4,
+                4,
+                1
+              ]
+            },
+            "delta_values": [
+              1,
+              3
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              4,
+              2,
+              3,
+              3,
+              0
+            ],
+            "example_largest_delta": [
+              4,
+              0,
+              3,
+              3,
+              2
+            ]
+          },
+          {
+            "state_name": "L=2|sig=022001",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                22,
+                0,
+                0,
+                1
+              ]
+            },
+            "delta_values": [
+              1,
+              3
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              4,
+              2,
+              2,
+              3,
+              1
+            ],
+            "example_largest_delta": [
+              4,
+              0,
+              2,
+              3,
+              3
+            ]
+          },
+          {
+            "state_name": "L=2|sig=038180",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                3,
+                8,
+                18,
+                0
+              ]
+            },
+            "delta_values": [
+              2,
+              3
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              2,
+              1,
+              4,
+              3,
+              2
+            ],
+            "example_largest_delta": [
+              2,
+              3,
+              4,
+              1,
+              2
+            ]
+          },
+          {
+            "state_name": "L=2|sig=04044",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                4,
+                0,
+                4,
+                4
+              ]
+            },
+            "delta_values": [
+              2,
+              3
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              0,
+              0,
+              2,
+              2,
+              3
+            ],
+            "example_largest_delta": [
+              2,
+              2,
+              0,
+              0,
+              3
+            ]
+          },
+          {
+            "state_name": "L=2|sig=04404",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                4,
+                4,
+                0,
+                4
+              ]
+            },
+            "delta_values": [
+              2,
+              3
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              0,
+              0,
+              3,
+              2,
+              2
+            ],
+            "example_largest_delta": [
+              2,
+              2,
+              3,
+              0,
+              0
+            ]
+          },
+          {
+            "state_name": "L=2|sig=160430",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                16,
+                0,
+                4,
+                3,
+                0
+              ]
+            },
+            "delta_values": [
+              2,
+              4
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              3,
+              3,
+              2,
+              0,
+              4
+            ],
+            "example_largest_delta": [
+              1,
+              3,
+              2,
+              2,
+              4
+            ]
+          },
+          {
+            "state_name": "L=2|sig=180038",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                18,
+                0,
+                0,
+                3,
+                8
+              ]
+            },
+            "delta_values": [
+              1,
+              4
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              1,
+              2,
+              2,
+              3,
+              4
+            ],
+            "example_largest_delta": [
+              3,
+              2,
+              2,
+              1,
+              4
+            ]
+          },
+          {
+            "state_name": "L=2|sig=204410",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                20,
+                4,
+                4,
+                1,
+                0
+              ]
+            },
+            "delta_values": [
+              2,
+              4
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              2,
+              3,
+              3,
+              0,
+              4
+            ],
+            "example_largest_delta": [
+              0,
+              3,
+              3,
+              2,
+              4
+            ]
+          },
+          {
+            "state_name": "L=2|sig=220010",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                22,
+                0,
+                0,
+                1,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              4
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              0,
+              2,
+              3,
+              3,
+              4
+            ],
+            "example_largest_delta": [
+              2,
+              2,
+              3,
+              1,
+              4
+            ]
+          },
+          {
+            "state_name": "L=2|sig=40404",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                4,
+                0,
+                4,
+                0,
+                4
+              ]
+            },
+            "delta_values": [
+              2,
+              3
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              3,
+              0,
+              0,
+              2,
+              2
+            ],
+            "example_largest_delta": [
+              3,
+              2,
+              2,
+              0,
+              0
+            ]
+          },
+          {
+            "state_name": "L=2|sig=40440",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                4,
+                0,
+                4,
+                4,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              3
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              0,
+              2,
+              2,
+              3,
+              0
+            ],
+            "example_largest_delta": [
+              2,
+              0,
+              0,
+              3,
+              2
+            ]
+          },
+          {
+            "state_name": "L=2|sig=410204",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                4,
+                1,
+                0,
+                20,
+                4
+              ]
+            },
+            "delta_values": [
+              2,
+              3
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              3,
+              0,
+              4,
+              2,
+              3
+            ],
+            "example_largest_delta": [
+              3,
+              2,
+              4,
+              0,
+              3
+            ]
+          },
+          {
+            "state_name": "L=2|sig=430160",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                4,
+                3,
+                0,
+                16,
+                0
+              ]
+            },
+            "delta_values": [
+              3,
+              4
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              2,
+              0,
+              4,
+              3,
+              3
+            ],
+            "example_largest_delta": [
+              2,
+              2,
+              4,
+              1,
+              3
+            ]
+          },
+          {
+            "state_name": "L=2|sig=44040",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                4,
+                4,
+                0,
+                4,
+                0
+              ]
+            },
+            "delta_values": [
+              2,
+              4
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              2,
+              3,
+              0,
+              0,
+              2
+            ],
+            "example_largest_delta": [
+              0,
+              3,
+              2,
+              2,
+              0
+            ]
+          },
+          {
+            "state_name": "L=2|sig=818003",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                8,
+                18,
+                0,
+                0,
+                3
+              ]
+            },
+            "delta_values": [
+              1,
+              4
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              4,
+              1,
+              2,
+              2,
+              3
+            ],
+            "example_largest_delta": [
+              4,
+              3,
+              2,
+              2,
+              1
+            ]
+          },
+          {
+            "state_name": "L=3|sig=00040",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                0,
+                0,
+                4,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              3,
+              4
+            ],
+            "delta_support_size": 3,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              0,
+              2,
+              2,
+              3,
+              1
+            ],
+            "example_largest_delta": [
+              2,
+              2,
+              0,
+              1,
+              3
+            ]
+          },
+          {
+            "state_name": "L=3|sig=00400",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                0,
+                4,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              3,
+              4
+            ],
+            "delta_support_size": 3,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              0,
+              2,
+              3,
+              3,
+              0
+            ],
+            "example_largest_delta": [
+              2,
+              2,
+              3,
+              1,
+              0
+            ]
+          },
+          {
+            "state_name": "L=3|sig=04000",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                4,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              4
+            ],
+            "delta_support_size": 3,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              0,
+              1,
+              3,
+              2,
+              2
+            ],
+            "example_largest_delta": [
+              0,
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          {
+            "state_name": "L=3|sig=40000",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                4,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              4
+            ],
+            "delta_support_size": 3,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              3,
+              1,
+              0,
+              2,
+              2
+            ],
+            "example_largest_delta": [
+              1,
+              3,
+              2,
+              2,
+              0
+            ]
+          },
+          {
+            "state_name": "L=3|sig=00004",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                4
+              ]
+            },
+            "delta_values": [
+              2,
+              3
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              3,
+              0,
+              0,
+              2,
+              3
+            ],
+            "example_largest_delta": [
+              3,
+              2,
+              0,
+              0,
+              3
+            ]
+          },
+          {
+            "state_name": "L=3|sig=40408",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                4,
+                0,
+                4,
+                0,
+                8
+              ]
+            },
+            "delta_values": [
+              1,
+              4
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              1,
+              2,
+              2,
+              3,
+              0
+            ],
+            "example_largest_delta": [
+              3,
+              2,
+              2,
+              1,
+              0
+            ]
+          },
+          {
+            "state_name": "L=3|sig=40840",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                4,
+                0,
+                8,
+                4,
+                0
+              ]
+            },
+            "delta_values": [
+              2,
+              3
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              2,
+              1,
+              0,
+              3,
+              2
+            ],
+            "example_largest_delta": [
+              2,
+              3,
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "state_name": "L=3|sig=84040",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                8,
+                4,
+                0,
+                4,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              4
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              0,
+              1,
+              2,
+              2,
+              3
+            ],
+            "example_largest_delta": [
+              0,
+              3,
+              2,
+              2,
+              1
+            ]
+          },
+          {
+            "state_name": "L=4+|sig=00008",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                8
+              ]
+            },
+            "delta_values": [
+              1,
+              3,
+              4
+            ],
+            "delta_support_size": 3,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              1,
+              2,
+              2,
+              3,
+              1
+            ],
+            "example_largest_delta": [
+              3,
+              2,
+              0,
+              1,
+              3
+            ]
+          },
+          {
+            "state_name": "L=4+|sig=00080",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                0,
+                0,
+                8,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              3,
+              4
+            ],
+            "delta_support_size": 3,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              0,
+              2,
+              3,
+              3,
+              1
+            ],
+            "example_largest_delta": [
+              2,
+              2,
+              1,
+              1,
+              3
+            ]
+          },
+          {
+            "state_name": "L=4+|sig=08000",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                8,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              4
+            ],
+            "delta_support_size": 3,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              3,
+              1,
+              1,
+              2,
+              2
+            ],
+            "example_largest_delta": [
+              1,
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          {
+            "state_name": "L=4+|sig=80000",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                8,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              4
+            ],
+            "delta_support_size": 3,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              3,
+              1,
+              0,
+              2,
+              3
+            ],
+            "example_largest_delta": [
+              1,
+              3,
+              2,
+              2,
+              1
+            ]
+          },
+          {
+            "state_name": "L=4+|sig=00800",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                0,
+                8,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              2,
+              3
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              2,
+              1,
+              1,
+              3,
+              2
+            ],
+            "example_largest_delta": [
+              2,
+              3,
+              1,
+              1,
+              2
+            ]
+          },
+          {
+            "state_name": "L=4+|sig=08084",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                8,
+                0,
+                8,
+                4
+              ]
+            },
+            "delta_values": [
+              2,
+              3
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              3,
+              0,
+              1,
+              2,
+              3
+            ],
+            "example_largest_delta": [
+              3,
+              2,
+              1,
+              0,
+              3
+            ]
+          },
+          {
+            "state_name": "L=4+|sig=08408",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                8,
+                4,
+                0,
+                8
+              ]
+            },
+            "delta_values": [
+              1,
+              3
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              1,
+              2,
+              3,
+              3,
+              0
+            ],
+            "example_largest_delta": [
+              1,
+              0,
+              3,
+              3,
+              2
+            ]
+          },
+          {
+            "state_name": "L=4+|sig=84080",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                8,
+                4,
+                0,
+                8,
+                0
+              ]
+            },
+            "delta_values": [
+              2,
+              4
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              2,
+              3,
+              3,
+              0,
+              1
+            ],
+            "example_largest_delta": [
+              0,
+              3,
+              3,
+              2,
+              1
+            ]
+          },
+          {
+            "state_name": "L=1|sig=020032",
+            "state": {
+              "layer_bucket": 1,
+              "signature": [
+                0,
+                2,
+                0,
+                0,
+                32
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              4
+            ],
+            "delta_support_size": 3,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              3,
+              1,
+              3,
+              2,
+              2
+            ],
+            "example_largest_delta": [
+              3,
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          {
+            "state_name": "L=1|sig=032020",
+            "state": {
+              "layer_bucket": 1,
+              "signature": [
+                0,
+                32,
+                0,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              3,
+              4
+            ],
+            "delta_support_size": 3,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              0,
+              2,
+              3,
+              3,
+              3
+            ],
+            "example_largest_delta": [
+              2,
+              2,
+              3,
+              1,
+              3
+            ]
+          },
+          {
+            "state_name": "L=1|sig=00008",
+            "state": {
+              "layer_bucket": 1,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                8
+              ]
+            },
+            "delta_values": [
+              1,
+              4
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              1,
+              2,
+              2,
+              3,
+              3
+            ],
+            "example_largest_delta": [
+              3,
+              2,
+              2,
+              1,
+              3
+            ]
+          },
+          {
+            "state_name": "L=1|sig=003202",
+            "state": {
+              "layer_bucket": 1,
+              "signature": [
+                0,
+                0,
+                32,
+                0,
+                2
+              ]
+            },
+            "delta_values": [
+              1,
+              3
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              3,
+              2,
+              0,
+              3,
+              3
+            ],
+            "example_largest_delta": [
+              3,
+              0,
+              2,
+              3,
+              3
+            ]
+          },
+          {
+            "state_name": "L=1|sig=00800",
+            "state": {
+              "layer_bucket": 1,
+              "signature": [
+                0,
+                0,
+                8,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              2,
+              3
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              2,
+              1,
+              3,
+              3,
+              2
+            ],
+            "example_largest_delta": [
+              2,
+              3,
+              3,
+              1,
+              2
+            ]
+          },
+          {
+            "state_name": "L=1|sig=0236034",
+            "state": {
+              "layer_bucket": 1,
+              "signature": [
+                0,
+                2,
+                36,
+                0,
+                34
+              ]
+            },
+            "delta_values": [
+              1,
+              3
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              3,
+              2,
+              3,
+              3,
+              0
+            ],
+            "example_largest_delta": [
+              3,
+              0,
+              3,
+              3,
+              2
+            ]
+          },
+          {
+            "state_name": "L=1|sig=0340236",
+            "state": {
+              "layer_bucket": 1,
+              "signature": [
+                0,
+                34,
+                0,
+                2,
+                36
+              ]
+            },
+            "delta_values": [
+              2,
+              3
+            ],
+            "delta_support_size": 2,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              3,
+              0,
+              3,
+              2,
+              3
+            ],
+            "example_largest_delta": [
+              3,
+              2,
+              3,
+              0,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "m": 7,
+        "multi_delta_state_count": 1829,
+        "full_nonzero_support_state_count": 28,
+        "support_histogram": {
+          "2": 1320,
+          "3": 288,
+          "4": 135,
+          "5": 58,
+          "6": 28
+        },
+        "example_rows": [
+          {
+            "state_name": "L=2|sig=00000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              3,
+              1,
+              0,
+              2,
+              3
+            ],
+            "example_largest_delta": [
+              3,
+              2,
+              0,
+              1,
+              3
+            ]
+          },
+          {
+            "state_name": "L=3|sig=00000",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              3,
+              1,
+              0,
+              2,
+              4
+            ],
+            "example_largest_delta": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ]
+          },
+          {
+            "state_name": "L=3|sig=000032",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                32
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              0,
+              2,
+              0,
+              3,
+              5
+            ],
+            "example_largest_delta": [
+              2,
+              2,
+              2,
+              1,
+              3
+            ]
+          },
+          {
+            "state_name": "L=3|sig=000320",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                0,
+                0,
+                32,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              2,
+              2,
+              1,
+              3,
+              2
+            ],
+            "example_largest_delta": [
+              4,
+              2,
+              1,
+              1,
+              2
+            ]
+          },
+          {
+            "state_name": "L=3|sig=00040",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                0,
+                0,
+                4,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              2,
+              2,
+              0,
+              3,
+              3
+            ],
+            "example_largest_delta": [
+              2,
+              2,
+              0,
+              1,
+              5
+            ]
+          },
+          {
+            "state_name": "L=3|sig=003200",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                0,
+                32,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              2,
+              1,
+              1,
+              2,
+              4
+            ],
+            "example_largest_delta": [
+              2,
+              3,
+              1,
+              2,
+              2
+            ]
+          },
+          {
+            "state_name": "L=3|sig=032000",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                32,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              3,
+              1,
+              2,
+              2,
+              2
+            ],
+            "example_largest_delta": [
+              5,
+              3,
+              0,
+              2,
+              0
+            ]
+          },
+          {
+            "state_name": "L=3|sig=40000",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                4,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              5,
+              1,
+              0,
+              2,
+              2
+            ],
+            "example_largest_delta": [
+              3,
+              3,
+              0,
+              2,
+              2
+            ]
+          },
+          {
+            "state_name": "L=4+|sig=00000",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              5,
+              1,
+              0,
+              2,
+              3
+            ],
+            "example_largest_delta": [
+              3,
+              2,
+              0,
+              1,
+              5
+            ]
+          },
+          {
+            "state_name": "L=4+|sig=000032",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                32
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              2,
+              2,
+              2,
+              3,
+              3
+            ],
+            "example_largest_delta": [
+              2,
+              2,
+              2,
+              1,
+              5
+            ]
+          },
+          {
+            "state_name": "L=4+|sig=00020",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                0,
+                0,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              0,
+              2,
+              3,
+              3,
+              5
+            ],
+            "example_largest_delta": [
+              2,
+              2,
+              3,
+              1,
+              5
+            ]
+          },
+          {
+            "state_name": "L=4+|sig=000320",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                0,
+                0,
+                32,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              4,
+              2,
+              1,
+              3,
+              2
+            ],
+            "example_largest_delta": [
+              4,
+              2,
+              3,
+              1,
+              2
+            ]
+          },
+          {
+            "state_name": "L=4+|sig=00080",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                0,
+                0,
+                8,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              3,
+              1,
+              2,
+              2,
+              4
+            ],
+            "example_largest_delta": [
+              2,
+              2,
+              1,
+              1,
+              5
+            ]
+          },
+          {
+            "state_name": "L=4+|sig=003200",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                0,
+                32,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              2,
+              1,
+              3,
+              2,
+              4
+            ],
+            "example_largest_delta": [
+              2,
+              3,
+              1,
+              2,
+              4
+            ]
+          },
+          {
+            "state_name": "L=4+|sig=010160",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                1,
+                0,
+                16,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              5,
+              1,
+              6,
+              2,
+              4
+            ],
+            "example_largest_delta": [
+              4,
+              2,
+              6,
+              1,
+              5
+            ]
+          },
+          {
+            "state_name": "L=4+|sig=02000",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                2,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              5,
+              1,
+              3,
+              2,
+              2
+            ],
+            "example_largest_delta": [
+              5,
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          {
+            "state_name": "L=4+|sig=032000",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                32,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              5,
+              1,
+              2,
+              2,
+              2
+            ],
+            "example_largest_delta": [
+              3,
+              3,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "state_name": "L=4+|sig=032080",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                32,
+                0,
+                8,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              0,
+              2,
+              3,
+              3,
+              3
+            ],
+            "example_largest_delta": [
+              2,
+              2,
+              3,
+              1,
+              3
+            ]
+          },
+          {
+            "state_name": "L=4+|sig=08000",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                8,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              5,
+              1,
+              1,
+              2,
+              2
+            ],
+            "example_largest_delta": [
+              4,
+              2,
+              2,
+              1,
+              3
+            ]
+          },
+          {
+            "state_name": "L=4+|sig=080032",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                8,
+                0,
+                0,
+                32
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              3,
+              1,
+              3,
+              2,
+              2
+            ],
+            "example_largest_delta": [
+              3,
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          {
+            "state_name": "L=4+|sig=08080",
+            "state": {
+              "layer_bucket": "4+",
+              "signature": [
+                0,
+                8,
+                0,
+                8,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              1,
+              2,
+              5,
+              3,
+              1
+            ],
+            "example_largest_delta": [
+              1,
+              3,
+              5,
+              2,
+              1
+            ]
+          },
+          {
+            "state_name": "L=1|sig=00000",
+            "state": {
+              "layer_bucket": 1,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              3,
+              3,
+              1,
+              4,
+              4
+            ],
+            "example_largest_delta": [
+              4,
+              4,
+              1,
+              3,
+              3
+            ]
+          },
+          {
+            "state_name": "L=1|sig=000032",
+            "state": {
+              "layer_bucket": 1,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                32
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              5,
+              1,
+              5,
+              2,
+              2
+            ],
+            "example_largest_delta": [
+              2,
+              2,
+              2,
+              1,
+              1
+            ]
+          },
+          {
+            "state_name": "L=1|sig=010160",
+            "state": {
+              "layer_bucket": 1,
+              "signature": [
+                0,
+                1,
+                0,
+                16,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              1,
+              3,
+              6,
+              4,
+              1
+            ],
+            "example_largest_delta": [
+              1,
+              4,
+              6,
+              3,
+              1
+            ]
+          },
+          {
+            "state_name": "L=1|sig=032000",
+            "state": {
+              "layer_bucket": 1,
+              "signature": [
+                0,
+                32,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              1,
+              1,
+              2,
+              2,
+              2
+            ],
+            "example_largest_delta": [
+              2,
+              2,
+              5,
+              1,
+              5
+            ]
+          },
+          {
+            "state_name": "L=0|sig=00000",
+            "state": {
+              "layer_bucket": 0,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              4,
+              2,
+              0,
+              3,
+              5
+            ],
+            "example_largest_delta": [
+              5,
+              3,
+              0,
+              2,
+              4
+            ]
+          },
+          {
+            "state_name": "L=0|sig=000032",
+            "state": {
+              "layer_bucket": 0,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                32
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              2,
+              2,
+              2,
+              3,
+              5
+            ],
+            "example_largest_delta": [
+              2,
+              4,
+              2,
+              3,
+              3
+            ]
+          },
+          {
+            "state_name": "L=0|sig=032000",
+            "state": {
+              "layer_bucket": 0,
+              "signature": [
+                0,
+                32,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 6,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              3,
+              3,
+              2,
+              4,
+              2
+            ],
+            "example_largest_delta": [
+              5,
+              3,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00020",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 5,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              3,
+              5,
+              1,
+              0,
+              0
+            ],
+            "example_largest_delta": [
+              3,
+              3,
+              0,
+              2,
+              1
+            ]
+          },
+          {
+            "state_name": "L=2|sig=000432",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                4,
+                32
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            "delta_support_size": 5,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              1,
+              1,
+              1,
+              2,
+              4
+            ],
+            "example_largest_delta": [
+              1,
+              3,
+              1,
+              2,
+              2
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00400",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                4,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            "delta_support_size": 5,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              1,
+              2,
+              3,
+              3,
+              0
+            ],
+            "example_largest_delta": [
+              4,
+              4,
+              0,
+              3,
+              5
+            ]
+          },
+          {
+            "state_name": "L=2|sig=016001",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                16,
+                0,
+                0,
+                1
+              ]
+            },
+            "delta_values": [
+              1,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 5,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              6,
+              3,
+              1,
+              4,
+              2
+            ],
+            "example_largest_delta": [
+              6,
+              2,
+              4,
+              1,
+              3
+            ]
+          },
+          {
+            "state_name": "L=2|sig=018001",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                18,
+                0,
+                0,
+                1
+              ]
+            },
+            "delta_values": [
+              1,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 5,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              6,
+              3,
+              2,
+              4,
+              1
+            ],
+            "example_largest_delta": [
+              6,
+              2,
+              2,
+              1,
+              5
+            ]
+          },
+          {
+            "state_name": "L=2|sig=02000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "delta_support_size": 5,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              1,
+              2,
+              0,
+              3,
+              3
+            ],
+            "example_largest_delta": [
+              0,
+              0,
+              1,
+              5,
+              3
+            ]
+          },
+          {
+            "state_name": "L=2|sig=04000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                4,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 5,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              5,
+              3,
+              0,
+              4,
+              4
+            ],
+            "example_largest_delta": [
+              0,
+              3,
+              3,
+              2,
+              1
+            ]
+          },
+          {
+            "state_name": "L=2|sig=160010",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                16,
+                0,
+                0,
+                1,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            "delta_support_size": 5,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              3,
+              1,
+              4,
+              2,
+              6
+            ],
+            "example_largest_delta": [
+              2,
+              4,
+              1,
+              3,
+              6
+            ]
+          },
+          {
+            "state_name": "L=2|sig=160030",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                16,
+                0,
+                0,
+                3,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            "delta_support_size": 5,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              5,
+              1,
+              2,
+              2,
+              6
+            ],
+            "example_largest_delta": [
+              1,
+              4,
+              2,
+              3,
+              6
+            ]
+          },
+          {
+            "state_name": "L=2|sig=432000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                4,
+                32,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              3,
+              4,
+              5,
+              6
+            ],
+            "delta_support_size": 5,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              2,
+              2,
+              1,
+              3,
+              1
+            ],
+            "example_largest_delta": [
+              4,
+              2,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00002",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            },
+            "delta_values": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "delta_support_size": 4,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              1,
+              5,
+              3,
+              0,
+              0
+            ],
+            "example_largest_delta": [
+              0,
+              3,
+              3,
+              1,
+              2
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00004",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                4
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              5,
+              6
+            ],
+            "delta_support_size": 4,
+            "all_nonzero": false,
+            "example_smallest_delta": [
+              0,
+              4,
+              4,
+              5,
+              3
+            ],
+            "example_largest_delta": [
+              3,
+              5,
+              4,
+              4,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "m": 9,
+        "multi_delta_state_count": 5509,
+        "full_nonzero_support_state_count": 228,
+        "support_histogram": {
+          "2": 2309,
+          "3": 1318,
+          "4": 948,
+          "5": 342,
+          "6": 230,
+          "7": 134,
+          "8": 228
+        },
+        "example_rows": [
+          {
+            "state_name": "L=2|sig=00000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              5,
+              1,
+              0,
+              2,
+              3
+            ],
+            "example_largest_delta": [
+              5,
+              2,
+              0,
+              1,
+              3
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00002",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              6,
+              3,
+              1,
+              4,
+              6
+            ],
+            "example_largest_delta": [
+              7,
+              4,
+              5,
+              3,
+              1
+            ]
+          },
+          {
+            "state_name": "L=2|sig=000032",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                32
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              3,
+              1,
+              3,
+              2,
+              2
+            ],
+            "example_largest_delta": [
+              2,
+              2,
+              2,
+              1,
+              4
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00008",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                8
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              1,
+              6,
+              5,
+              7,
+              1
+            ],
+            "example_largest_delta": [
+              6,
+              3,
+              3,
+              2,
+              6
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00020",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              7,
+              1,
+              6,
+              2,
+              4
+            ],
+            "example_largest_delta": [
+              5,
+              3,
+              0,
+              2,
+              1
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00040",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                4,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              4,
+              1,
+              7,
+              2,
+              6
+            ],
+            "example_largest_delta": [
+              6,
+              4,
+              5,
+              3,
+              2
+            ]
+          },
+          {
+            "state_name": "L=2|sig=000432",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                4,
+                32
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              1,
+              1,
+              1,
+              2,
+              6
+            ],
+            "example_largest_delta": [
+              1,
+              3,
+              1,
+              2,
+              4
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00080",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                8,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              5,
+              3,
+              2,
+              4,
+              6
+            ],
+            "example_largest_delta": [
+              7,
+              3,
+              2,
+              2,
+              6
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00400",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                4,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              2,
+              2,
+              4,
+              3,
+              0
+            ],
+            "example_largest_delta": [
+              6,
+              4,
+              0,
+              3,
+              7
+            ]
+          },
+          {
+            "state_name": "L=2|sig=010160",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                0,
+                16,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              5,
+              1,
+              8,
+              2,
+              4
+            ],
+            "example_largest_delta": [
+              5,
+              2,
+              8,
+              1,
+              4
+            ]
+          },
+          {
+            "state_name": "L=2|sig=010180",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                0,
+                18,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              7,
+              1,
+              8,
+              2,
+              2
+            ],
+            "example_largest_delta": [
+              5,
+              3,
+              8,
+              2,
+              2
+            ]
+          },
+          {
+            "state_name": "L=2|sig=016001",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                16,
+                0,
+                0,
+                1
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              8,
+              3,
+              1,
+              4,
+              4
+            ],
+            "example_largest_delta": [
+              8,
+              2,
+              4,
+              1,
+              5
+            ]
+          },
+          {
+            "state_name": "L=2|sig=018001",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                18,
+                0,
+                0,
+                1
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              8,
+              4,
+              2,
+              5,
+              1
+            ],
+            "example_largest_delta": [
+              8,
+              2,
+              2,
+              1,
+              7
+            ]
+          },
+          {
+            "state_name": "L=2|sig=02000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              1,
+              2,
+              0,
+              3,
+              5
+            ],
+            "example_largest_delta": [
+              4,
+              2,
+              6,
+              1,
+              7
+            ]
+          },
+          {
+            "state_name": "L=2|sig=02020",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              1,
+              4,
+              0,
+              5,
+              1
+            ],
+            "example_largest_delta": [
+              1,
+              5,
+              0,
+              4,
+              1
+            ]
+          },
+          {
+            "state_name": "L=2|sig=030160",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                3,
+                0,
+                16,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              2,
+              2,
+              8,
+              3,
+              5
+            ],
+            "example_largest_delta": [
+              2,
+              2,
+              8,
+              1,
+              7
+            ]
+          },
+          {
+            "state_name": "L=2|sig=032000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                32,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              4,
+              1,
+              2,
+              2,
+              2
+            ],
+            "example_largest_delta": [
+              2,
+              2,
+              3,
+              1,
+              3
+            ]
+          },
+          {
+            "state_name": "L=2|sig=04000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                4,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              7,
+              3,
+              0,
+              4,
+              6
+            ],
+            "example_largest_delta": [
+              0,
+              3,
+              4,
+              2,
+              2
+            ]
+          },
+          {
+            "state_name": "L=2|sig=04040",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                4,
+                0,
+                4,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              7,
+              3,
+              4,
+              4,
+              2
+            ],
+            "example_largest_delta": [
+              0,
+              3,
+              2,
+              2,
+              4
+            ]
+          },
+          {
+            "state_name": "L=2|sig=08000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                8,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              6,
+              2,
+              2,
+              3,
+              7
+            ],
+            "example_largest_delta": [
+              6,
+              4,
+              2,
+              3,
+              5
+            ]
+          },
+          {
+            "state_name": "L=2|sig=160010",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                16,
+                0,
+                0,
+                1,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              5,
+              1,
+              4,
+              2,
+              8
+            ],
+            "example_largest_delta": [
+              4,
+              4,
+              1,
+              3,
+              8
+            ]
+          },
+          {
+            "state_name": "L=2|sig=160030",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                16,
+                0,
+                0,
+                3,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              7,
+              1,
+              2,
+              2,
+              8
+            ],
+            "example_largest_delta": [
+              1,
+              5,
+              2,
+              4,
+              8
+            ]
+          },
+          {
+            "state_name": "L=2|sig=20000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                2,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              1,
+              3,
+              5,
+              4,
+              7
+            ],
+            "example_largest_delta": [
+              6,
+              4,
+              1,
+              3,
+              6
+            ]
+          },
+          {
+            "state_name": "L=2|sig=40000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                4,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              2,
+              3,
+              5,
+              4,
+              6
+            ],
+            "example_largest_delta": [
+              6,
+              2,
+              7,
+              1,
+              4
+            ]
+          },
+          {
+            "state_name": "L=2|sig=40400",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                4,
+                0,
+                4,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              4,
+              2,
+              2,
+              3,
+              0
+            ],
+            "example_largest_delta": [
+              2,
+              4,
+              4,
+              3,
+              7
+            ]
+          },
+          {
+            "state_name": "L=2|sig=432000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                4,
+                32,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              4,
+              2,
+              1,
+              3,
+              1
+            ],
+            "example_largest_delta": [
+              6,
+              2,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "state_name": "L=2|sig=80000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                8,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              6,
+              2,
+              3,
+              3,
+              6
+            ],
+            "example_largest_delta": [
+              1,
+              7,
+              5,
+              6,
+              1
+            ]
+          },
+          {
+            "state_name": "L=3|sig=00000",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              5,
+              1,
+              0,
+              2,
+              4
+            ],
+            "example_largest_delta": [
+              6,
+              2,
+              0,
+              1,
+              3
+            ]
+          },
+          {
+            "state_name": "L=3|sig=000032",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                32
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              0,
+              2,
+              0,
+              3,
+              7
+            ],
+            "example_largest_delta": [
+              2,
+              2,
+              2,
+              1,
+              5
+            ]
+          },
+          {
+            "state_name": "L=3|sig=00008",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                8
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              6,
+              1,
+              0,
+              2,
+              3
+            ],
+            "example_largest_delta": [
+              5,
+              4,
+              4,
+              3,
+              5
+            ]
+          },
+          {
+            "state_name": "L=3|sig=00020",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                0,
+                0,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              6,
+              2,
+              0,
+              3,
+              1
+            ],
+            "example_largest_delta": [
+              4,
+              4,
+              0,
+              3,
+              1
+            ]
+          },
+          {
+            "state_name": "L=3|sig=000320",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                0,
+                0,
+                32,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              4,
+              2,
+              1,
+              3,
+              2
+            ],
+            "example_largest_delta": [
+              6,
+              2,
+              1,
+              1,
+              2
+            ]
+          },
+          {
+            "state_name": "L=3|sig=00040",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                0,
+                0,
+                4,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              2,
+              2,
+              0,
+              3,
+              5
+            ],
+            "example_largest_delta": [
+              2,
+              2,
+              0,
+              1,
+              7
+            ]
+          },
+          {
+            "state_name": "L=3|sig=003200",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                0,
+                32,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              2,
+              1,
+              1,
+              2,
+              6
+            ],
+            "example_largest_delta": [
+              2,
+              3,
+              1,
+              2,
+              4
+            ]
+          },
+          {
+            "state_name": "L=3|sig=00400",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                0,
+                4,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              4,
+              2,
+              3,
+              3,
+              0
+            ],
+            "example_largest_delta": [
+              6,
+              2,
+              3,
+              1,
+              0
+            ]
+          },
+          {
+            "state_name": "L=3|sig=010160",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                1,
+                0,
+                16,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              5,
+              1,
+              8,
+              2,
+              5
+            ],
+            "example_largest_delta": [
+              6,
+              2,
+              8,
+              1,
+              4
+            ]
+          },
+          {
+            "state_name": "L=3|sig=016001",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                16,
+                0,
+                0,
+                1
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              8,
+              3,
+              4,
+              4,
+              2
+            ],
+            "example_largest_delta": [
+              8,
+              5,
+              4,
+              4,
+              0
+            ]
+          },
+          {
+            "state_name": "L=3|sig=016041",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                16,
+                0,
+                4,
+                1
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              8,
+              4,
+              3,
+              5,
+              1
+            ],
+            "example_largest_delta": [
+              8,
+              5,
+              3,
+              4,
+              1
+            ]
+          },
+          {
+            "state_name": "L=3|sig=016401",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                16,
+                4,
+                0,
+                1
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              8,
+              4,
+              6,
+              5,
+              7
+            ],
+            "example_largest_delta": [
+              8,
+              5,
+              7,
+              4,
+              6
+            ]
+          },
+          {
+            "state_name": "L=3|sig=02000",
+            "state": {
+              "layer_bucket": 3,
+              "signature": [
+                0,
+                2,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "delta_support_size": 8,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              1,
+              3,
+              0,
+              4,
+              4
+            ],
+            "example_largest_delta": [
+              1,
+              3,
+              0,
+              2,
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "m": 11,
+        "multi_delta_state_count": 7387,
+        "full_nonzero_support_state_count": 492,
+        "support_histogram": {
+          "2": 1346,
+          "3": 1339,
+          "4": 1650,
+          "5": 934,
+          "6": 773,
+          "7": 383,
+          "8": 310,
+          "9": 160,
+          "10": 492
+        },
+        "example_rows": [
+          {
+            "state_name": "L=2|sig=00000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              7,
+              1,
+              0,
+              2,
+              3
+            ],
+            "example_largest_delta": [
+              7,
+              2,
+              0,
+              1,
+              3
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00002",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              8,
+              3,
+              1,
+              4,
+              8
+            ],
+            "example_largest_delta": [
+              9,
+              4,
+              5,
+              3,
+              3
+            ]
+          },
+          {
+            "state_name": "L=2|sig=000032",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                32
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              3,
+              1,
+              3,
+              2,
+              4
+            ],
+            "example_largest_delta": [
+              2,
+              2,
+              2,
+              1,
+              6
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00008",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                8
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              6,
+              3,
+              3,
+              4,
+              8
+            ],
+            "example_largest_delta": [
+              8,
+              3,
+              3,
+              2,
+              8
+            ]
+          },
+          {
+            "state_name": "L=2|sig=000120",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                12,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              7,
+              3,
+              6,
+              4,
+              4
+            ],
+            "example_largest_delta": [
+              9,
+              3,
+              4,
+              2,
+              6
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00020",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              9,
+              1,
+              5,
+              2,
+              7
+            ],
+            "example_largest_delta": [
+              7,
+              3,
+              0,
+              2,
+              1
+            ]
+          },
+          {
+            "state_name": "L=2|sig=000232",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                2,
+                32
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              9,
+              1,
+              9,
+              2,
+              3
+            ],
+            "example_largest_delta": [
+              7,
+              3,
+              7,
+              2,
+              5
+            ]
+          },
+          {
+            "state_name": "L=2|sig=000320",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                32,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              5,
+              2,
+              1,
+              3,
+              2
+            ],
+            "example_largest_delta": [
+              7,
+              2,
+              1,
+              1,
+              2
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00040",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                4,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              7,
+              1,
+              6,
+              2,
+              8
+            ],
+            "example_largest_delta": [
+              5,
+              3,
+              8,
+              2,
+              6
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00042",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                4,
+                2
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              8,
+              3,
+              5,
+              4,
+              4
+            ],
+            "example_largest_delta": [
+              8,
+              5,
+              5,
+              4,
+              2
+            ]
+          },
+          {
+            "state_name": "L=2|sig=000432",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                4,
+                32
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              1,
+              1,
+              1,
+              2,
+              8
+            ],
+            "example_largest_delta": [
+              1,
+              3,
+              1,
+              2,
+              6
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00060",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                6,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              9,
+              1,
+              4,
+              2,
+              8
+            ],
+            "example_largest_delta": [
+              8,
+              8,
+              5,
+              7,
+              7
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00080",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                8,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              7,
+              3,
+              2,
+              4,
+              8
+            ],
+            "example_largest_delta": [
+              9,
+              3,
+              2,
+              2,
+              8
+            ]
+          },
+          {
+            "state_name": "L=2|sig=003200",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                32,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              2,
+              1,
+              1,
+              2,
+              7
+            ],
+            "example_largest_delta": [
+              2,
+              3,
+              1,
+              2,
+              5
+            ]
+          },
+          {
+            "state_name": "L=2|sig=003240",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                32,
+                4,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              2,
+              1,
+              0,
+              2,
+              8
+            ],
+            "example_largest_delta": [
+              2,
+              3,
+              0,
+              2,
+              6
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00400",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                4,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              5,
+              2,
+              3,
+              3,
+              0
+            ],
+            "example_largest_delta": [
+              8,
+              4,
+              0,
+              3,
+              9
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00420",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                4,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              1,
+              5,
+              4,
+              6,
+              8
+            ],
+            "example_largest_delta": [
+              5,
+              4,
+              3,
+              3,
+              9
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00480",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                4,
+                8,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              3,
+              5,
+              2,
+              6,
+              8
+            ],
+            "example_largest_delta": [
+              5,
+              5,
+              2,
+              4,
+              8
+            ]
+          },
+          {
+            "state_name": "L=2|sig=010160",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                0,
+                16,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              7,
+              1,
+              10,
+              2,
+              4
+            ],
+            "example_largest_delta": [
+              7,
+              2,
+              10,
+              1,
+              4
+            ]
+          },
+          {
+            "state_name": "L=2|sig=010168",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                0,
+                16,
+                8
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              6,
+              3,
+              10,
+              4,
+              1
+            ],
+            "example_largest_delta": [
+              8,
+              3,
+              10,
+              2,
+              1
+            ]
+          },
+          {
+            "state_name": "L=2|sig=010180",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                0,
+                18,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              9,
+              1,
+              10,
+              2,
+              2
+            ],
+            "example_largest_delta": [
+              7,
+              3,
+              10,
+              2,
+              2
+            ]
+          },
+          {
+            "state_name": "L=2|sig=010200",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                0,
+                20,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              3,
+              1,
+              10,
+              2,
+              8
+            ],
+            "example_largest_delta": [
+              3,
+              3,
+              10,
+              2,
+              6
+            ]
+          },
+          {
+            "state_name": "L=2|sig=010240",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                0,
+                24,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              7,
+              3,
+              10,
+              4,
+              0
+            ],
+            "example_largest_delta": [
+              9,
+              3,
+              10,
+              2,
+              0
+            ]
+          },
+          {
+            "state_name": "L=2|sig=016001",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                16,
+                0,
+                0,
+                1
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              10,
+              3,
+              1,
+              4,
+              6
+            ],
+            "example_largest_delta": [
+              10,
+              2,
+              4,
+              1,
+              7
+            ]
+          },
+          {
+            "state_name": "L=2|sig=016041",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                16,
+                0,
+                4,
+                1
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              10,
+              3,
+              3,
+              4,
+              4
+            ],
+            "example_largest_delta": [
+              10,
+              5,
+              3,
+              4,
+              2
+            ]
+          },
+          {
+            "state_name": "L=2|sig=01701633",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                17,
+                0,
+                16,
+                33
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              10,
+              3,
+              10,
+              4,
+              8
+            ],
+            "example_largest_delta": [
+              10,
+              2,
+              10,
+              1,
+              1
+            ]
+          },
+          {
+            "state_name": "L=2|sig=018001",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                18,
+                0,
+                0,
+                1
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              10,
+              5,
+              2,
+              6,
+              1
+            ],
+            "example_largest_delta": [
+              10,
+              2,
+              2,
+              1,
+              9
+            ]
+          },
+          {
+            "state_name": "L=2|sig=02000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              1,
+              2,
+              0,
+              3,
+              7
+            ],
+            "example_largest_delta": [
+              7,
+              2,
+              5,
+              1,
+              9
+            ]
+          },
+          {
+            "state_name": "L=2|sig=02002",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                0,
+                2
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              8,
+              3,
+              4,
+              4,
+              5
+            ],
+            "example_largest_delta": [
+              9,
+              4,
+              3,
+              3,
+              5
+            ]
+          },
+          {
+            "state_name": "L=2|sig=020032",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                0,
+                32
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              6,
+              4,
+              6,
+              5,
+              3
+            ],
+            "example_largest_delta": [
+              6,
+              2,
+              6,
+              1,
+              9
+            ]
+          },
+          {
+            "state_name": "L=2|sig=02020",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              5,
+              3,
+              7,
+              4,
+              5
+            ],
+            "example_largest_delta": [
+              5,
+              4,
+              7,
+              3,
+              5
+            ]
+          },
+          {
+            "state_name": "L=2|sig=02080",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                8,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              3,
+              5,
+              9,
+              6,
+              1
+            ],
+            "example_largest_delta": [
+              5,
+              5,
+              7,
+              4,
+              3
+            ]
+          },
+          {
+            "state_name": "L=2|sig=024001",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                24,
+                0,
+                0,
+                1
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              10,
+              4,
+              0,
+              5,
+              5
+            ],
+            "example_largest_delta": [
+              10,
+              6,
+              0,
+              5,
+              3
+            ]
+          },
+          {
+            "state_name": "L=2|sig=030160",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                3,
+                0,
+                16,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              2,
+              2,
+              10,
+              3,
+              7
+            ],
+            "example_largest_delta": [
+              2,
+              2,
+              10,
+              1,
+              9
+            ]
+          },
+          {
+            "state_name": "L=2|sig=032000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                32,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              6,
+              1,
+              2,
+              2,
+              2
+            ],
+            "example_largest_delta": [
+              4,
+              2,
+              3,
+              1,
+              3
+            ]
+          },
+          {
+            "state_name": "L=2|sig=032020",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                32,
+                0,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              9,
+              1,
+              6,
+              2,
+              6
+            ],
+            "example_largest_delta": [
+              8,
+              8,
+              6,
+              7,
+              6
+            ]
+          },
+          {
+            "state_name": "L=2|sig=04000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                4,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              9,
+              3,
+              0,
+              4,
+              8
+            ],
+            "example_largest_delta": [
+              0,
+              3,
+              3,
+              2,
+              5
+            ]
+          },
+          {
+            "state_name": "L=2|sig=04040",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                4,
+                0,
+                4,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              8,
+              4,
+              5,
+              5,
+              2
+            ],
+            "example_largest_delta": [
+              0,
+              3,
+              2,
+              2,
+              6
+            ]
+          },
+          {
+            "state_name": "L=2|sig=06000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                6,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              7,
+              5,
+              5,
+              6,
+              1
+            ],
+            "example_largest_delta": [
+              8,
+              6,
+              4,
+              5,
+              1
+            ]
+          },
+          {
+            "state_name": "L=2|sig=08000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                8,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "delta_support_size": 10,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              8,
+              2,
+              2,
+              3,
+              9
+            ],
+            "example_largest_delta": [
+              8,
+              4,
+              2,
+              3,
+              7
+            ]
+          }
+        ]
+      },
+      {
+        "m": 13,
+        "multi_delta_state_count": 8172,
+        "full_nonzero_support_state_count": 701,
+        "support_histogram": {
+          "2": 522,
+          "3": 756,
+          "4": 1215,
+          "5": 1164,
+          "6": 1477,
+          "7": 858,
+          "8": 691,
+          "9": 331,
+          "10": 289,
+          "11": 168,
+          "12": 701
+        },
+        "example_rows": [
+          {
+            "state_name": "L=2|sig=00000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              9,
+              1,
+              0,
+              2,
+              3
+            ],
+            "example_largest_delta": [
+              9,
+              2,
+              0,
+              1,
+              3
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00002",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              10,
+              3,
+              1,
+              4,
+              10
+            ],
+            "example_largest_delta": [
+              11,
+              4,
+              7,
+              3,
+              3
+            ]
+          },
+          {
+            "state_name": "L=2|sig=000032",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                32
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              3,
+              1,
+              3,
+              2,
+              6
+            ],
+            "example_largest_delta": [
+              2,
+              2,
+              2,
+              1,
+              8
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00008",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                0,
+                8
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              8,
+              3,
+              3,
+              4,
+              10
+            ],
+            "example_largest_delta": [
+              10,
+              3,
+              3,
+              2,
+              10
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00020",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              11,
+              1,
+              5,
+              2,
+              9
+            ],
+            "example_largest_delta": [
+              9,
+              3,
+              0,
+              2,
+              1
+            ]
+          },
+          {
+            "state_name": "L=2|sig=000232",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                2,
+                32
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              11,
+              1,
+              11,
+              2,
+              3
+            ],
+            "example_largest_delta": [
+              9,
+              3,
+              9,
+              2,
+              5
+            ]
+          },
+          {
+            "state_name": "L=2|sig=000320",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                32,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              7,
+              2,
+              1,
+              3,
+              2
+            ],
+            "example_largest_delta": [
+              9,
+              2,
+              1,
+              1,
+              2
+            ]
+          },
+          {
+            "state_name": "L=2|sig=000328",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                32,
+                8
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              8,
+              3,
+              10,
+              4,
+              3
+            ],
+            "example_largest_delta": [
+              2,
+              11,
+              7,
+              10,
+              11
+            ]
+          },
+          {
+            "state_name": "L=2|sig=000340",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                34,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              10,
+              8,
+              6,
+              9,
+              8
+            ],
+            "example_largest_delta": [
+              9,
+              3,
+              11,
+              2,
+              3
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00040",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                4,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              9,
+              1,
+              6,
+              2,
+              10
+            ],
+            "example_largest_delta": [
+              6,
+              3,
+              9,
+              2,
+              8
+            ]
+          },
+          {
+            "state_name": "L=2|sig=000400",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                40,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              8,
+              10,
+              2,
+              11,
+              10
+            ],
+            "example_largest_delta": [
+              11,
+              3,
+              9,
+              2,
+              3
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00042",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                4,
+                2
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              10,
+              3,
+              5,
+              4,
+              6
+            ],
+            "example_largest_delta": [
+              11,
+              4,
+              4,
+              3,
+              6
+            ]
+          },
+          {
+            "state_name": "L=2|sig=000432",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                4,
+                32
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              1,
+              1,
+              1,
+              2,
+              10
+            ],
+            "example_largest_delta": [
+              1,
+              3,
+              1,
+              2,
+              8
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00048",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                4,
+                8
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              8,
+              3,
+              7,
+              4,
+              6
+            ],
+            "example_largest_delta": [
+              10,
+              3,
+              5,
+              2,
+              8
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00060",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                6,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              11,
+              1,
+              4,
+              2,
+              10
+            ],
+            "example_largest_delta": [
+              9,
+              3,
+              6,
+              2,
+              8
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00080",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                0,
+                8,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              9,
+              3,
+              2,
+              4,
+              10
+            ],
+            "example_largest_delta": [
+              11,
+              3,
+              2,
+              2,
+              10
+            ]
+          },
+          {
+            "state_name": "L=2|sig=003200",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                32,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              2,
+              1,
+              1,
+              2,
+              9
+            ],
+            "example_largest_delta": [
+              2,
+              3,
+              1,
+              2,
+              7
+            ]
+          },
+          {
+            "state_name": "L=2|sig=003240",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                32,
+                4,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              2,
+              1,
+              0,
+              2,
+              10
+            ],
+            "example_largest_delta": [
+              2,
+              3,
+              0,
+              2,
+              8
+            ]
+          },
+          {
+            "state_name": "L=2|sig=003600",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                36,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              3,
+              2,
+              7,
+              3,
+              0
+            ],
+            "example_largest_delta": [
+              3,
+              4,
+              7,
+              3,
+              11
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00400",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                4,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              7,
+              2,
+              3,
+              3,
+              0
+            ],
+            "example_largest_delta": [
+              10,
+              4,
+              0,
+              3,
+              11
+            ]
+          },
+          {
+            "state_name": "L=2|sig=004032",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                4,
+                0,
+                32
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              5,
+              2,
+              5,
+              3,
+              0
+            ],
+            "example_largest_delta": [
+              5,
+              4,
+              5,
+              3,
+              11
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00408",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                4,
+                0,
+                8
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              3,
+              8,
+              1,
+              9,
+              7
+            ],
+            "example_largest_delta": [
+              8,
+              5,
+              1,
+              4,
+              10
+            ]
+          },
+          {
+            "state_name": "L=2|sig=00420",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                0,
+                4,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              3,
+              5,
+              4,
+              6,
+              10
+            ],
+            "example_largest_delta": [
+              7,
+              4,
+              3,
+              3,
+              11
+            ]
+          },
+          {
+            "state_name": "L=2|sig=010160",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                0,
+                16,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              9,
+              1,
+              12,
+              2,
+              4
+            ],
+            "example_largest_delta": [
+              9,
+              2,
+              12,
+              1,
+              4
+            ]
+          },
+          {
+            "state_name": "L=2|sig=010168",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                0,
+                16,
+                8
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              8,
+              3,
+              12,
+              4,
+              1
+            ],
+            "example_largest_delta": [
+              10,
+              3,
+              12,
+              2,
+              1
+            ]
+          },
+          {
+            "state_name": "L=2|sig=010180",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                0,
+                18,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              11,
+              1,
+              12,
+              2,
+              2
+            ],
+            "example_largest_delta": [
+              9,
+              3,
+              12,
+              2,
+              2
+            ]
+          },
+          {
+            "state_name": "L=2|sig=010200",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                0,
+                20,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              3,
+              1,
+              12,
+              2,
+              10
+            ],
+            "example_largest_delta": [
+              3,
+              3,
+              12,
+              2,
+              8
+            ]
+          },
+          {
+            "state_name": "L=2|sig=010240",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                0,
+                24,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              9,
+              3,
+              12,
+              4,
+              0
+            ],
+            "example_largest_delta": [
+              11,
+              3,
+              12,
+              2,
+              0
+            ]
+          },
+          {
+            "state_name": "L=2|sig=010480",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                0,
+                48,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              4,
+              8,
+              12,
+              9,
+              8
+            ],
+            "example_largest_delta": [
+              5,
+              4,
+              12,
+              3,
+              4
+            ]
+          },
+          {
+            "state_name": "L=2|sig=012000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                12,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              8,
+              6,
+              4,
+              7,
+              3
+            ],
+            "example_largest_delta": [
+              10,
+              6,
+              2,
+              5,
+              5
+            ]
+          },
+          {
+            "state_name": "L=2|sig=0132160",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                1,
+                32,
+                16,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              4,
+              3,
+              12,
+              4,
+              5
+            ],
+            "example_largest_delta": [
+              8,
+              9,
+              12,
+              8,
+              4
+            ]
+          },
+          {
+            "state_name": "L=2|sig=016001",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                16,
+                0,
+                0,
+                1
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              12,
+              3,
+              1,
+              4,
+              8
+            ],
+            "example_largest_delta": [
+              12,
+              2,
+              4,
+              1,
+              9
+            ]
+          },
+          {
+            "state_name": "L=2|sig=016041",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                16,
+                0,
+                4,
+                1
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              12,
+              3,
+              3,
+              4,
+              6
+            ],
+            "example_largest_delta": [
+              12,
+              5,
+              3,
+              4,
+              4
+            ]
+          },
+          {
+            "state_name": "L=2|sig=01701633",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                17,
+                0,
+                16,
+                33
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              12,
+              3,
+              12,
+              4,
+              10
+            ],
+            "example_largest_delta": [
+              12,
+              2,
+              12,
+              1,
+              1
+            ]
+          },
+          {
+            "state_name": "L=2|sig=018001",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                18,
+                0,
+                0,
+                1
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              12,
+              6,
+              2,
+              7,
+              1
+            ],
+            "example_largest_delta": [
+              12,
+              2,
+              2,
+              1,
+              11
+            ]
+          },
+          {
+            "state_name": "L=2|sig=02000",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                0,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              1,
+              2,
+              0,
+              3,
+              9
+            ],
+            "example_largest_delta": [
+              9,
+              2,
+              5,
+              1,
+              11
+            ]
+          },
+          {
+            "state_name": "L=2|sig=02002",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                0,
+                2
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              10,
+              3,
+              4,
+              4,
+              7
+            ],
+            "example_largest_delta": [
+              11,
+              4,
+              3,
+              3,
+              7
+            ]
+          },
+          {
+            "state_name": "L=2|sig=020032",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                0,
+                32
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              7,
+              5,
+              7,
+              6,
+              3
+            ],
+            "example_largest_delta": [
+              7,
+              2,
+              7,
+              1,
+              11
+            ]
+          },
+          {
+            "state_name": "L=2|sig=02008",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                0,
+                8
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              8,
+              3,
+              6,
+              4,
+              7
+            ],
+            "example_largest_delta": [
+              3,
+              10,
+              11,
+              9,
+              8
+            ]
+          },
+          {
+            "state_name": "L=2|sig=02020",
+            "state": {
+              "layer_bucket": 2,
+              "signature": [
+                0,
+                2,
+                0,
+                2,
+                0
+              ]
+            },
+            "delta_values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "delta_support_size": 12,
+            "all_nonzero": true,
+            "example_smallest_delta": [
+              3,
+              5,
+              11,
+              6,
+              3
+            ],
+            "example_largest_delta": [
+              3,
+              6,
+              11,
+              5,
+              3
+            ]
+          }
+        ]
+      }
+    ],
+    "canonical_residual_conflict": {
+      "m": 7,
+      "state_name": "L=2|sig=00000",
+      "state": {
+        "layer_bucket": 2,
+        "signature": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "delta_values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "delta_support_size": 6,
+      "all_nonzero": true,
+      "example_smallest_delta": [
+        3,
+        1,
+        0,
+        2,
+        3
+      ],
+      "example_largest_delta": [
+        3,
+        2,
+        0,
+        1,
+        3
+      ]
+    }
+  }
+}

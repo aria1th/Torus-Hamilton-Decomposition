@@ -1,0 +1,2273 @@
+{
+  "task_id": "D5-MASTER-FIELD-QUOTIENT-001",
+  "runtime_sec": 23.99069111980498,
+  "search_parameters": {
+    "schemas": [
+      "stable_anchor_two_atom",
+      "unit_anchor_three_atom"
+    ],
+    "pilot_m_values": [
+      5,
+      7,
+      9
+    ],
+    "stability_m_values": [
+      11,
+      13
+    ],
+    "max_time_sec": 120.0,
+    "workers": 8,
+    "random_seed": 20260310
+  },
+  "environment": {
+    "python_version": "3.10.12",
+    "rich_version": "14.2.0",
+    "ortools_version": "9.11.4210"
+  },
+  "schema_results": [
+    {
+      "schema": "stable_anchor_two_atom",
+      "schema_description": "Single-cycle / zero-monodromy anchor from the fresh q-clock search",
+      "state_count": 1005,
+      "pilot_m_values": [
+        5,
+        7,
+        9
+      ],
+      "stability_m_values": [
+        11,
+        13
+      ],
+      "pattern_counts": {
+        "5": 2829,
+        "7": 7084,
+        "9": 7764
+      },
+      "solver_status": "INFEASIBLE",
+      "runtime_sec": 7.043132998049259,
+      "objective_value": null,
+      "anchor_baseline": {
+        "5": {
+          "m": 5,
+          "state_count": 1005,
+          "outgoing_permutation_state_count": 0,
+          "outgoing_nonpermutation_state_count": 1005,
+          "outgoing_multiplicity_histogram": {
+            "2,2,1": 80,
+            "3,1,1": 55,
+            "3,2": 55,
+            "4,1": 25,
+            "5": 790
+          },
+          "outgoing_examples": [
+            {
+              "state_id": 0,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 1,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 2,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 3,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  3
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 4,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  1,
+                  0
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 5,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  1,
+                  1
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 6,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  1,
+                  2
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 7,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  1,
+                  3
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 8,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  2,
+                  0
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 9,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  2,
+                  1
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            }
+          ],
+          "incoming_failure_count": 775,
+          "incoming_failure_examples": [
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                0,
+                3
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                1,
+                2
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                1,
+                2
+              ],
+              "color": 3,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                1,
+                2
+              ],
+              "color": 4,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                2,
+                1
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                2,
+                1
+              ],
+              "color": 3,
+              "matching_directions": [
+                0,
+                2
+              ]
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                3,
+                0
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                3,
+                0
+              ],
+              "color": 3,
+              "matching_directions": [
+                2,
+                4
+              ]
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                4,
+                4
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                4,
+                4
+              ],
+              "color": 3,
+              "matching_directions": []
+            }
+          ]
+        },
+        "7": {
+          "m": 7,
+          "state_count": 1005,
+          "outgoing_permutation_state_count": 0,
+          "outgoing_nonpermutation_state_count": 1005,
+          "outgoing_multiplicity_histogram": {
+            "2,2,1": 80,
+            "3,1,1": 55,
+            "3,2": 55,
+            "4,1": 25,
+            "5": 790
+          },
+          "outgoing_examples": [
+            {
+              "state_id": 0,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 1,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 2,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 3,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  3
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 4,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  1,
+                  0
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 5,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  1,
+                  1
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 6,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  1,
+                  2
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 7,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  1,
+                  3
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 8,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  2,
+                  0
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 9,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  2,
+                  1
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            }
+          ],
+          "incoming_failure_count": 2303,
+          "incoming_failure_examples": [
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                0,
+                3
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                1,
+                2
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                1,
+                2
+              ],
+              "color": 3,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                1,
+                2
+              ],
+              "color": 4,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                2,
+                1
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                2,
+                1
+              ],
+              "color": 3,
+              "matching_directions": [
+                0,
+                2
+              ]
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                3,
+                0
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                3,
+                0
+              ],
+              "color": 3,
+              "matching_directions": [
+                2,
+                4
+              ]
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                4,
+                6
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                4,
+                6
+              ],
+              "color": 3,
+              "matching_directions": []
+            }
+          ]
+        },
+        "9": {
+          "m": 9,
+          "state_count": 1005,
+          "outgoing_permutation_state_count": 0,
+          "outgoing_nonpermutation_state_count": 1005,
+          "outgoing_multiplicity_histogram": {
+            "2,2,1": 80,
+            "3,1,1": 55,
+            "3,2": 55,
+            "4,1": 25,
+            "5": 790
+          },
+          "outgoing_examples": [
+            {
+              "state_id": 0,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 1,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 2,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 3,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  3
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 4,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  1,
+                  0
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 5,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  1,
+                  1
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 6,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  1,
+                  2
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 7,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  1,
+                  3
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 8,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  2,
+                  0
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 9,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  2,
+                  1
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            }
+          ],
+          "incoming_failure_count": 5103,
+          "incoming_failure_examples": [
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                0,
+                3
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                1,
+                2
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                1,
+                2
+              ],
+              "color": 3,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                1,
+                2
+              ],
+              "color": 4,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                2,
+                1
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                2,
+                1
+              ],
+              "color": 3,
+              "matching_directions": [
+                0,
+                2
+              ]
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                3,
+                0
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                3,
+                0
+              ],
+              "color": 3,
+              "matching_directions": [
+                2,
+                4
+              ]
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                4,
+                8
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                4,
+                8
+              ],
+              "color": 3,
+              "matching_directions": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "schema": "unit_anchor_three_atom",
+      "schema_description": "Unit-monodromy / fractured-U anchor from the fresh q-clock search",
+      "state_count": 3805,
+      "pilot_m_values": [
+        5,
+        7,
+        9
+      ],
+      "stability_m_values": [
+        11,
+        13
+      ],
+      "pattern_counts": {
+        "5": 3125,
+        "7": 14119,
+        "9": 24585
+      },
+      "solver_status": "INFEASIBLE",
+      "runtime_sec": 14.572598153725266,
+      "objective_value": null,
+      "anchor_baseline": {
+        "5": {
+          "m": 5,
+          "state_count": 3805,
+          "outgoing_permutation_state_count": 0,
+          "outgoing_nonpermutation_state_count": 3805,
+          "outgoing_multiplicity_histogram": {
+            "2,2,1": 140,
+            "3,1,1": 220,
+            "3,2": 535,
+            "4,1": 500,
+            "5": 2410
+          },
+          "outgoing_examples": [
+            {
+              "state_id": 0,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 1,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 2,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 3,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  3
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 4,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  4
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 5,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 6,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  6
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 7,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  7
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 8,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  1,
+                  0
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 9,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  1,
+                  1
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            }
+          ],
+          "incoming_failure_count": 1675,
+          "incoming_failure_examples": [
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                0,
+                3
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                0,
+                3
+              ],
+              "color": 2,
+              "matching_directions": [
+                2,
+                3,
+                4
+              ]
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                0,
+                3
+              ],
+              "color": 4,
+              "matching_directions": [
+                2,
+                3
+              ]
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                0,
+                4
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                0,
+                4
+              ],
+              "color": 4,
+              "matching_directions": [
+                0,
+                3
+              ]
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                1,
+                2
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                1,
+                2
+              ],
+              "color": 2,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                1,
+                3
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                2,
+                2
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                3,
+                0
+              ],
+              "color": 1,
+              "matching_directions": []
+            }
+          ]
+        },
+        "7": {
+          "m": 7,
+          "state_count": 3805,
+          "outgoing_permutation_state_count": 0,
+          "outgoing_nonpermutation_state_count": 3805,
+          "outgoing_multiplicity_histogram": {
+            "2,2,1": 140,
+            "3,1,1": 220,
+            "3,2": 535,
+            "4,1": 500,
+            "5": 2410
+          },
+          "outgoing_examples": [
+            {
+              "state_id": 0,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 1,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 2,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 3,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  3
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 4,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  4
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 5,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 6,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  6
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 7,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  7
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 8,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  1,
+                  0
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 9,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  1,
+                  1
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            }
+          ],
+          "incoming_failure_count": 4851,
+          "incoming_failure_examples": [
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                0,
+                3
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                0,
+                3
+              ],
+              "color": 2,
+              "matching_directions": [
+                2,
+                3,
+                4
+              ]
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                0,
+                3
+              ],
+              "color": 4,
+              "matching_directions": [
+                2,
+                3
+              ]
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                0,
+                4
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                0,
+                4
+              ],
+              "color": 4,
+              "matching_directions": [
+                0,
+                3
+              ]
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                1,
+                2
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                1,
+                2
+              ],
+              "color": 2,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                1,
+                3
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                2,
+                2
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                3,
+                0
+              ],
+              "color": 1,
+              "matching_directions": []
+            }
+          ]
+        },
+        "9": {
+          "m": 9,
+          "state_count": 3805,
+          "outgoing_permutation_state_count": 0,
+          "outgoing_nonpermutation_state_count": 3805,
+          "outgoing_multiplicity_histogram": {
+            "2,2,1": 140,
+            "3,1,1": 220,
+            "3,2": 535,
+            "4,1": 500,
+            "5": 2410
+          },
+          "outgoing_examples": [
+            {
+              "state_id": 0,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 1,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 2,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 3,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  3
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 4,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  4
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 5,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  5
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 6,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  6
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 7,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  7
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 8,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  1,
+                  0
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            },
+            {
+              "state_id": 9,
+              "state": {
+                "layer_bucket": 0,
+                "signature": [
+                  0,
+                  0,
+                  0,
+                  1,
+                  1
+                ]
+              },
+              "tuple": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "multiplicity_pattern": [
+                5
+              ]
+            }
+          ],
+          "incoming_failure_count": 10611,
+          "incoming_failure_examples": [
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                0,
+                3
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                0,
+                3
+              ],
+              "color": 2,
+              "matching_directions": [
+                2,
+                3,
+                4
+              ]
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                0,
+                3
+              ],
+              "color": 4,
+              "matching_directions": [
+                2,
+                3
+              ]
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                0,
+                4
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                0,
+                4
+              ],
+              "color": 4,
+              "matching_directions": [
+                0,
+                3
+              ]
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                1,
+                2
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                1,
+                2
+              ],
+              "color": 2,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                1,
+                3
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                2,
+                2
+              ],
+              "color": 1,
+              "matching_directions": []
+            },
+            {
+              "vertex": [
+                0,
+                0,
+                0,
+                3,
+                0
+              ],
+              "color": 1,
+              "matching_directions": []
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

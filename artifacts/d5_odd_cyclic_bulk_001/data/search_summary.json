@@ -1,0 +1,6000 @@
+{
+  "task_id": "D5-ODD-CYCLIC-BULK-001",
+  "family": {
+    "name": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+    "dim": 5,
+    "layer0_default_q_nonzero": [
+      1,
+      2,
+      3,
+      4,
+      0
+    ],
+    "layers_1_3_default": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "layers_ge_4_default": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "layer0_q0_family": "five_cycle",
+    "layer0_q0_permutation_count": 24,
+    "gate_catalog": [
+      "swap_0_1",
+      "swap_0_2",
+      "swap_0_3",
+      "swap_0_4",
+      "swap_1_2",
+      "swap_1_3",
+      "swap_1_4",
+      "swap_2_3",
+      "swap_2_4",
+      "swap_3_4"
+    ],
+    "gate_description": "for each zero coordinate x_r=0, apply the selected slot-swap after shifting both slots by r"
+  },
+  "search_parameters": {
+    "stage1_m": 3,
+    "later_m_values": [
+      5,
+      7
+    ],
+    "top_k": 50,
+    "random_samples": 50000,
+    "random_seed": 12345,
+    "jobs": 8
+  },
+  "environment": {
+    "rich_version": "14.2.0"
+  },
+  "runtime_sec": 15.555189579725266,
+  "phases": {
+    "exhaustive_single_gate": {
+      "phase": "exhaustive_single_gate",
+      "m": 3,
+      "layer0_family": "five_cycle",
+      "layer0_family_size": 24,
+      "evaluated_count": 31944,
+      "runtime_sec": 5.751249456778169,
+      "full_witness_count": 0,
+      "full_witnesses": [],
+      "best_records": [
+        {
+          "phase": "exhaustive_single_gate",
+          "config_name": "q0=12340|L1:none|L2:none|L3:none",
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [],
+              "3": []
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              27,
+              27,
+              27,
+              27,
+              27
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 135
+          }
+        },
+        {
+          "phase": "exhaustive_single_gate",
+          "config_name": "q0=12340|L1:none|L2:swap_1_4|L3:none",
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": []
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "phase": "exhaustive_single_gate",
+          "config_name": "q0=42013|L1:none|L2:swap_1_4|L3:none",
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": []
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        }
+      ],
+      "top_candidates": [
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": []
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  3,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  2,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  2,
+                  3
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  1,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  1,
+                  3
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  1,
+                  2
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  0,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  0,
+                  3
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  0,
+                  2
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  0,
+                  1
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": []
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  3,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  2,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  2,
+                  3
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  1,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  1,
+                  3
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  1,
+                  2
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  0,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  0,
+                  3
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  0,
+                  2
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  0,
+                  1
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  2,
+                  3
+                ]
+              ],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": []
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              11,
+              15,
+              9,
+              7,
+              7
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 49
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  2,
+                  3
+                ]
+              ],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  3,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              11,
+              15,
+              9,
+              7,
+              7
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 49
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  2,
+                  3
+                ]
+              ],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  2,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              11,
+              15,
+              9,
+              7,
+              7
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 49
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  2,
+                  3
+                ]
+              ],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  2,
+                  3
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              11,
+              15,
+              9,
+              7,
+              7
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 49
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  2,
+                  3
+                ]
+              ],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  1,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              11,
+              15,
+              9,
+              7,
+              7
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 49
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  2,
+                  3
+                ]
+              ],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  1,
+                  3
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              11,
+              15,
+              9,
+              7,
+              7
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 49
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  2,
+                  3
+                ]
+              ],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  1,
+                  2
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              11,
+              15,
+              9,
+              7,
+              7
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 49
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  2,
+                  3
+                ]
+              ],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  0,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              11,
+              15,
+              9,
+              7,
+              7
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 49
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  2,
+                  3
+                ]
+              ],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  0,
+                  3
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              11,
+              15,
+              9,
+              7,
+              7
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 49
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  2,
+                  3
+                ]
+              ],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  0,
+                  2
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              11,
+              15,
+              9,
+              7,
+              7
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 49
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  2,
+                  3
+                ]
+              ],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  0,
+                  1
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              11,
+              15,
+              9,
+              7,
+              7
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 49
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [
+                [
+                  2,
+                  3
+                ]
+              ],
+              "3": []
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              15,
+              12,
+              11,
+              7,
+              8
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 53
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [
+                [
+                  2,
+                  3
+                ]
+              ],
+              "3": [
+                [
+                  3,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              15,
+              12,
+              11,
+              7,
+              8
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 53
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [
+                [
+                  2,
+                  3
+                ]
+              ],
+              "3": [
+                [
+                  2,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              15,
+              12,
+              11,
+              7,
+              8
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 53
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [
+                [
+                  2,
+                  3
+                ]
+              ],
+              "3": [
+                [
+                  2,
+                  3
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              15,
+              12,
+              11,
+              7,
+              8
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 53
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [
+                [
+                  2,
+                  3
+                ]
+              ],
+              "3": [
+                [
+                  1,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              15,
+              12,
+              11,
+              7,
+              8
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 53
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [
+                [
+                  2,
+                  3
+                ]
+              ],
+              "3": [
+                [
+                  1,
+                  3
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              15,
+              12,
+              11,
+              7,
+              8
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 53
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [
+                [
+                  2,
+                  3
+                ]
+              ],
+              "3": [
+                [
+                  1,
+                  2
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              15,
+              12,
+              11,
+              7,
+              8
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 53
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [
+                [
+                  2,
+                  3
+                ]
+              ],
+              "3": [
+                [
+                  0,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              15,
+              12,
+              11,
+              7,
+              8
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 53
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [
+                [
+                  2,
+                  3
+                ]
+              ],
+              "3": [
+                [
+                  0,
+                  3
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              15,
+              12,
+              11,
+              7,
+              8
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 53
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [
+                [
+                  2,
+                  3
+                ]
+              ],
+              "3": [
+                [
+                  0,
+                  2
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              15,
+              12,
+              11,
+              7,
+              8
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 53
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [
+                [
+                  2,
+                  3
+                ]
+              ],
+              "3": [
+                [
+                  0,
+                  1
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              15,
+              12,
+              11,
+              7,
+              8
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 53
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": []
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  3,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  2,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  2,
+                  3
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  1,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  1,
+                  3
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        }
+      ]
+    },
+    "random_double_gate": {
+      "phase": "random_double_gate",
+      "m": 3,
+      "layer0_family": "five_cycle",
+      "layer0_family_size": 24,
+      "sample_count": 50000,
+      "seed": 12345,
+      "evaluated_unique_count": 39336,
+      "runtime_sec": 7.933793982490897,
+      "full_witness_count": 0,
+      "full_witnesses": [],
+      "best_records": [
+        {
+          "phase": "random_double_gate",
+          "config_name": "q0=40123|L1:swap_0_1|L2:swap_1_3|L3:none",
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              0,
+              1,
+              2,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  0,
+                  1
+                ]
+              ],
+              "2": [
+                [
+                  1,
+                  3
+                ]
+              ],
+              "3": []
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              58,
+              79,
+              74,
+              66,
+              56
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 333
+          }
+        },
+        {
+          "phase": "random_double_gate",
+          "config_name": "q0=34012|L1:swap_1_4,swap_2_4|L2:none|L3:none",
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              3,
+              4,
+              0,
+              1,
+              2
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ],
+                [
+                  2,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": []
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              66,
+              69,
+              30,
+              24,
+              61
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 250
+          }
+        },
+        {
+          "phase": "random_double_gate",
+          "config_name": "q0=14023|L1:none|L2:swap_2_4|L3:swap_0_3",
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              4,
+              0,
+              2,
+              3
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  2,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  0,
+                  3
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              23,
+              62,
+              17,
+              57,
+              16
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 175
+          }
+        },
+        {
+          "phase": "random_double_gate",
+          "config_name": "q0=12340|L1:swap_1_3|L2:none|L3:swap_0_3",
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  3
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  0,
+                  3
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              28,
+              32,
+              30,
+              27,
+              29
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 146
+          }
+        },
+        {
+          "phase": "random_double_gate",
+          "config_name": "q0=12340|L1:none|L2:none|L3:swap_0_1,swap_1_3",
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [],
+              "3": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  3
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              27,
+              27,
+              27,
+              27,
+              27
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 135
+          }
+        },
+        {
+          "phase": "random_double_gate",
+          "config_name": "q0=42013|L1:none|L2:none|L3:none",
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [],
+              "3": []
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              9,
+              27,
+              9,
+              9,
+              9
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 63
+          }
+        },
+        {
+          "phase": "random_double_gate",
+          "config_name": "q0=42013|L1:none|L2:swap_1_4|L3:none",
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": []
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        }
+      ],
+      "top_candidates": [
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": []
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  2,
+                  3
+                ],
+                [
+                  0,
+                  2
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  1,
+                  2
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  1,
+                  2
+                ],
+                [
+                  0,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  0,
+                  4
+                ],
+                [
+                  1,
+                  3
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  0,
+                  2
+                ],
+                [
+                  3,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": []
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  3,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  3,
+                  4
+                ],
+                [
+                  0,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  2,
+                  3
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  1,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  1,
+                  3
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  1,
+                  2
+                ],
+                [
+                  2,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  0,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  0,
+                  3
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  0,
+                  2
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  0,
+                  2
+                ],
+                [
+                  2,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  0,
+                  2
+                ],
+                [
+                  1,
+                  2
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  3,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              6,
+              9,
+              3,
+              6,
+              5
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 29
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  2,
+                  3
+                ]
+              ],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  3,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              11,
+              15,
+              9,
+              7,
+              7
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 49
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  2,
+                  3
+                ]
+              ],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  2,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              11,
+              15,
+              9,
+              7,
+              7
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 49
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [
+                [
+                  2,
+                  3
+                ]
+              ],
+              "3": []
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              15,
+              12,
+              11,
+              7,
+              8
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 53
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [
+                [
+                  2,
+                  3
+                ]
+              ],
+              "3": [
+                [
+                  3,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": 1,
+            "color_cycle_counts": [
+              15,
+              12,
+              11,
+              7,
+              8
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 53
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": []
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  3,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  2,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  2,
+                  4
+                ],
+                [
+                  1,
+                  3
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  2,
+                  3
+                ],
+                [
+                  0,
+                  2
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  1,
+                  3
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  1,
+                  3
+                ],
+                [
+                  0,
+                  2
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  1,
+                  2
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  0,
+                  4
+                ],
+                [
+                  0,
+                  3
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  0,
+                  2
+                ],
+                [
+                  0,
+                  3
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  0,
+                  2
+                ],
+                [
+                  0,
+                  1
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  0,
+                  1
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "3": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  3
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": []
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  3,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  3,
+                  4
+                ],
+                [
+                  2,
+                  3
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  2,
+                  3
+                ],
+                [
+                  1,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  2,
+                  3
+                ],
+                [
+                  0,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  2,
+                  3
+                ],
+                [
+                  0,
+                  2
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  1,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  1,
+                  2
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  0,
+                  4
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  0,
+                  3
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  0,
+                  2
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  0,
+                  1
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              1,
+              2,
+              3,
+              4,
+              0
+            ],
+            "layer_gates": {
+              "1": [
+                [
+                  1,
+                  4
+                ]
+              ],
+              "2": [],
+              "3": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  2,
+                  3
+                ]
+              ]
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              14,
+              9,
+              5,
+              11,
+              15
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 54
+          }
+        },
+        {
+          "config": {
+            "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+            "layer0_q0_tuple": [
+              4,
+              2,
+              0,
+              1,
+              3
+            ],
+            "layer_gates": {
+              "1": [],
+              "2": [
+                [
+                  3,
+                  4
+                ]
+              ],
+              "3": []
+            }
+          },
+          "stats": {
+            "m": 3,
+            "all_hamilton": false,
+            "sign_product": -1,
+            "color_cycle_counts": [
+              5,
+              11,
+              18,
+              13,
+              9
+            ],
+            "hamilton_colors": 0,
+            "total_cycle_count": 56
+          }
+        }
+      ]
+    }
+  },
+  "filtered_candidates": [],
+  "selected_config": {
+    "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+    "layer0_q0_tuple": [
+      4,
+      2,
+      0,
+      1,
+      3
+    ],
+    "layer_gates": {
+      "1": [],
+      "2": [
+        [
+          1,
+          4
+        ]
+      ],
+      "3": []
+    }
+  },
+  "selection_reason": "stage1_fallback",
+  "selected_validation": {
+    "task_id": "D5-ODD-CYCLIC-BULK-001",
+    "candidate_name": "q0=42013|L1:none|L2:swap_1_4|L3:none",
+    "config": {
+      "family": "d5_odd_cyclic_bulk_rotating_zero_swaps_v1",
+      "layer0_q0_tuple": [
+        4,
+        2,
+        0,
+        1,
+        3
+      ],
+      "layer_gates": {
+        "1": [],
+        "2": [
+          [
+            1,
+            4
+          ]
+        ],
+        "3": []
+      }
+    },
+    "tested_m_values": [
+      3,
+      5,
+      7
+    ],
+    "runtime_sec": 0.321496794000268,
+    "results": [
+      {
+        "m": 3,
+        "all_hamilton": false,
+        "sign_product": 1,
+        "color_cycle_counts": [
+          6,
+          9,
+          3,
+          6,
+          5
+        ],
+        "max_cycle_lengths": [
+          81,
+          27,
+          108,
+          155,
+          207
+        ],
+        "p0_cycle_counts": [
+          7,
+          9,
+          3,
+          5,
+          5
+        ],
+        "p0_is_hamilton": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "q_section_reports": [
+          {
+            "color": 0,
+            "q_residue": 0,
+            "q_shift_values": [
+              0,
+              1,
+              2
+            ],
+            "uniform_q_shift": false,
+            "q_shift_is_unit": false,
+            "Q_cycle_count": 3,
+            "Q_cycle_lengths": [
+              9,
+              9,
+              9
+            ],
+            "uniform_second_return_length": false,
+            "second_return_lengths": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "color": 1,
+            "q_residue": 0,
+            "q_shift_values": [
+              0,
+              1
+            ],
+            "uniform_q_shift": false,
+            "q_shift_is_unit": false,
+            "Q_cycle_count": 9,
+            "Q_cycle_lengths": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "uniform_second_return_length": false,
+            "second_return_lengths": [
+              1,
+              4
+            ]
+          },
+          {
+            "color": 2,
+            "q_residue": 0,
+            "q_shift_values": [
+              0,
+              1,
+              2
+            ],
+            "uniform_q_shift": false,
+            "q_shift_is_unit": false,
+            "Q_cycle_count": 3,
+            "Q_cycle_lengths": [
+              9,
+              9,
+              9
+            ],
+            "uniform_second_return_length": false,
+            "second_return_lengths": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "color": 3,
+            "q_residue": 0,
+            "q_shift_values": [
+              0,
+              1,
+              2
+            ],
+            "uniform_q_shift": false,
+            "q_shift_is_unit": false,
+            "Q_cycle_count": 5,
+            "Q_cycle_lengths": [
+              1,
+              2,
+              6,
+              9,
+              9
+            ],
+            "uniform_second_return_length": false,
+            "second_return_lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              7
+            ]
+          },
+          {
+            "color": 4,
+            "q_residue": 0,
+            "q_shift_values": [
+              0,
+              1,
+              2
+            ],
+            "uniform_q_shift": false,
+            "q_shift_is_unit": false,
+            "Q_cycle_count": 1,
+            "Q_cycle_lengths": [
+              27
+            ],
+            "uniform_second_return_length": false,
+            "second_return_lengths": [
+              1,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "m": 5,
+        "all_hamilton": false,
+        "sign_product": -1,
+        "color_cycle_counts": [
+          278,
+          25,
+          252,
+          250,
+          287
+        ],
+        "max_cycle_lengths": [
+          586,
+          125,
+          1241,
+          1241,
+          586
+        ],
+        "p0_cycle_counts": [
+          271,
+          25,
+          226,
+          219,
+          181
+        ],
+        "p0_is_hamilton": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "q_section_reports": [
+          {
+            "color": 0,
+            "q_residue": 0,
+            "q_shift_values": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "uniform_q_shift": false,
+            "q_shift_is_unit": false,
+            "Q_cycle_count": 42,
+            "Q_cycle_lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              4,
+              4,
+              6,
+              6,
+              32
+            ],
+            "uniform_second_return_length": false,
+            "second_return_lengths": [
+              1,
+              2,
+              3,
+              5
+            ]
+          },
+          {
+            "color": 1,
+            "q_residue": 0,
+            "q_shift_values": [
+              1,
+              3,
+              4
+            ],
+            "uniform_q_shift": false,
+            "q_shift_is_unit": false,
+            "Q_cycle_count": 25,
+            "Q_cycle_lengths": [
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5
+            ],
+            "uniform_second_return_length": false,
+            "second_return_lengths": [
+              3,
+              4,
+              8,
+              9
+            ]
+          },
+          {
+            "color": 2,
+            "q_residue": 0,
+            "q_shift_values": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "uniform_q_shift": false,
+            "q_shift_is_unit": false,
+            "Q_cycle_count": 53,
+            "Q_cycle_lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              2,
+              2,
+              2,
+              2,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              5,
+              51
+            ],
+            "uniform_second_return_length": false,
+            "second_return_lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          },
+          {
+            "color": 3,
+            "q_residue": 0,
+            "q_shift_values": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "uniform_q_shift": false,
+            "q_shift_is_unit": false,
+            "Q_cycle_count": 49,
+            "Q_cycle_lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              2,
+              3,
+              3,
+              5,
+              6,
+              6,
+              6,
+              53
+            ],
+            "uniform_second_return_length": false,
+            "second_return_lengths": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          },
+          {
+            "color": 4,
+            "q_residue": 0,
+            "q_shift_values": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "uniform_q_shift": false,
+            "q_shift_is_unit": false,
+            "Q_cycle_count": 51,
+            "Q_cycle_lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              3,
+              4,
+              7,
+              9,
+              9,
+              32
+            ],
+            "uniform_second_return_length": false,
+            "second_return_lengths": [
+              1,
+              2,
+              3,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "m": 7,
+        "all_hamilton": false,
+        "sign_product": -1,
+        "color_cycle_counts": [
+          764,
+          49,
+          761,
+          710,
+          642
+        ],
+        "max_cycle_lengths": [
+          5013,
+          343,
+          4530,
+          1730,
+          5353
+        ],
+        "p0_cycle_counts": [
+          865,
+          49,
+          869,
+          850,
+          377
+        ],
+        "p0_is_hamilton": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "q_section_reports": [
+          {
+            "color": 0,
+            "q_residue": 0,
+            "q_shift_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "uniform_q_shift": false,
+            "q_shift_is_unit": false,
+            "Q_cycle_count": 93,
+            "Q_cycle_lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              3,
+              11,
+              17,
+              20,
+              41,
+              153
+            ],
+            "uniform_second_return_length": false,
+            "second_return_lengths": [
+              1,
+              2,
+              4,
+              6,
+              9,
+              12
+            ]
+          },
+          {
+            "color": 1,
+            "q_residue": 0,
+            "q_shift_values": [
+              1,
+              3,
+              4
+            ],
+            "uniform_q_shift": false,
+            "q_shift_is_unit": false,
+            "Q_cycle_count": 49,
+            "Q_cycle_lengths": [
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7
+            ],
+            "uniform_second_return_length": false,
+            "second_return_lengths": [
+              2,
+              5,
+              9,
+              12
+            ]
+          },
+          {
+            "color": 2,
+            "q_residue": 0,
+            "q_shift_values": [
+              0,
+              1,
+              3,
+              4,
+              5,
+              6
+            ],
+            "uniform_q_shift": false,
+            "q_shift_is_unit": false,
+            "Q_cycle_count": 159,
+            "Q_cycle_lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              5,
+              6,
+              7,
+              8,
+              106
+            ],
+            "uniform_second_return_length": false,
+            "second_return_lengths": [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          {
+            "color": 3,
+            "q_residue": 0,
+            "q_shift_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "uniform_q_shift": false,
+            "q_shift_is_unit": false,
+            "Q_cycle_count": 148,
+            "Q_cycle_lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              2,
+              3,
+              4,
+              4,
+              5,
+              5,
+              7,
+              7,
+              7,
+              7,
+              7,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              48,
+              60
+            ],
+            "uniform_second_return_length": false,
+            "second_return_lengths": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ]
+          },
+          {
+            "color": 4,
+            "q_residue": 0,
+            "q_shift_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            "uniform_q_shift": false,
+            "q_shift_is_unit": false,
+            "Q_cycle_count": 57,
+            "Q_cycle_lengths": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              2,
+              3,
+              4,
+              5,
+              7,
+              8,
+              8,
+              9,
+              9,
+              10,
+              18,
+              18,
+              24,
+              57,
+              119
+            ],
+            "uniform_second_return_length": false,
+            "second_return_lengths": [
+              3,
+              4,
+              6,
+              7
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

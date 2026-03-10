@@ -1,0 +1,130 @@
+{
+  "phase": "phase2_mutation",
+  "candidate_name": "L1:d3|L2:d2[q=-1->4;q+u=1->0]|L3:d4",
+  "candidate": {
+    "task_id": "D5-FRESH-CYCLIC-QCLOCK-VFIBER-001",
+    "family": "d5_fresh_cyclic_qclock_vfiber_affine_atoms_v1",
+    "layer0_offset": 1,
+    "layers_ge_4_default_offset": 0,
+    "layers": {
+      "1": {
+        "default_offset": 3,
+        "clauses": []
+      },
+      "2": {
+        "default_offset": 2,
+        "clauses": [
+          {
+            "atom": "q",
+            "residue_label": -1,
+            "output_offset": 4
+          },
+          {
+            "atom": "q+u",
+            "residue_label": 1,
+            "output_offset": 0
+          }
+        ]
+      },
+      "3": {
+        "default_offset": 4,
+        "clauses": []
+      }
+    }
+  },
+  "objective": [
+    3,
+    3,
+    0,
+    -3,
+    0,
+    -2
+  ],
+  "per_m": [
+    {
+      "m": 5,
+      "clean_frame": true,
+      "strict_clock": true,
+      "clock_shift": 1,
+      "v_fiber_clean": true,
+      "U_cycle_count": 1,
+      "U_cycle_lengths": [
+        25
+      ],
+      "U_is_single_cycle": true,
+      "U_cycle_representatives": [
+        0
+      ],
+      "monodromies": [
+        0
+      ],
+      "all_monodromies_unit": false,
+      "unit_monodromy_cycle_count": 0,
+      "R_indegree_histogram": {
+        "1": 125
+      },
+      "R_is_permutation": true,
+      "R_indegree_defect_states": 0,
+      "R_indegree_l1": 0,
+      "R_first_failure_example": null,
+      "U_first_failure_example": null
+    },
+    {
+      "m": 7,
+      "clean_frame": true,
+      "strict_clock": true,
+      "clock_shift": 1,
+      "v_fiber_clean": true,
+      "U_cycle_count": 1,
+      "U_cycle_lengths": [
+        49
+      ],
+      "U_is_single_cycle": true,
+      "U_cycle_representatives": [
+        0
+      ],
+      "monodromies": [
+        0
+      ],
+      "all_monodromies_unit": false,
+      "unit_monodromy_cycle_count": 0,
+      "R_indegree_histogram": {
+        "1": 343
+      },
+      "R_is_permutation": true,
+      "R_indegree_defect_states": 0,
+      "R_indegree_l1": 0,
+      "R_first_failure_example": null,
+      "U_first_failure_example": null
+    },
+    {
+      "m": 9,
+      "clean_frame": true,
+      "strict_clock": true,
+      "clock_shift": 1,
+      "v_fiber_clean": true,
+      "U_cycle_count": 1,
+      "U_cycle_lengths": [
+        81
+      ],
+      "U_is_single_cycle": true,
+      "U_cycle_representatives": [
+        0
+      ],
+      "monodromies": [
+        0
+      ],
+      "all_monodromies_unit": false,
+      "unit_monodromy_cycle_count": 0,
+      "R_indegree_histogram": {
+        "1": 729
+      },
+      "R_is_permutation": true,
+      "R_indegree_defect_states": 0,
+      "R_indegree_l1": 0,
+      "R_first_failure_example": null,
+      "U_first_failure_example": null
+    }
+  ],
+  "total_clauses": 2
+}
