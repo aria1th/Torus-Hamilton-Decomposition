@@ -17,6 +17,7 @@ flowchart LR
     D --> E["3/8–3/9<br>Stage 3–4<br>반복 수정"]
     E --> F["3/9 오전<br>RoundX: 4D 일반화"]
     F --> G["3/9 11:01<br>d=4 완전 증명 완성"]
+    G --> H["3/9 12:00<br>d=3 v6 + d=4 v3<br>교차 검증"]
 ```
 
 ---
@@ -156,6 +157,46 @@ codex_job_request.md (06:55)
 
 ---
 
+## Phase 5: 교차 검증 + d=3 v6 마무리 (3월 9일 12시경)
+
+### d=3 v6 개정 (Round2/stage5/)
+
+레프리 Stage 3–4에서 공통으로 지적된 두 가지 핵심 병목을 직접 겨냥한 개정:
+
+| 변경 | 내용 |
+|---|---|
+| Appendix B 확장 | 압축됐던 derivation 3개 (color 2 Case I, color 0/2 Case II)에 explicit trace table 추가 |
+| Proposition 13 투명화 | 가장 어려운 row (color 0, Case II)에 worked splice derivation 추가 |
+| 홀수 증명 가독성 | F₀ 공식의 유도 과정 (low-layer deviation) 추가 |
+| 증명 vs 검증 명확화 | Appendix B–C = 증명의 일부, 스크립트 = 독립 감사 |
+| 보조 문서 동기화 | anc/ 내 stale 참조 제거 (anc_v3.zip) |
+
+### d=4 증명 v3 — AI 교차 검증
+
+d=4 line-union proof를 GPT 5.4 Pro와 Gemini 3.1 Deep Think가 독립적으로 검토:
+
+| 이슈 | GPT 5.4 Pro | Gemini 3.1 DT | 심각도 |
+|---|---|---|---|
+| S=2, q≠0 witness 미정의 | ✅ | ✅ | 정의 누락 |
+| **Prop 5–6 lifting 논리 갭** | **✅ + 수정안** | ❌ 놓침 | **실질적 갭** |
+| q 변수명 충돌 (t=qm+r) | ❌ | ✅ | 표기 |
+| Swap 교환성 미명시 | 간략 언급 | ✅ | 미학 |
+
+v3에서 모든 이슈 수정 완료. 핵심 수정: Prop 5–6의 counting argument를 **exact orbit-period lifting**으로 교체.
+
+### 핵심 파일
+| 파일 | 내용 |
+|---|---|
+| `Round2/stage5/d3torus_..._v6.tex` | d=3 원고 v6 |
+| `Round2/stage5/REVISION_NOTES_v6.md` | v6 개정 노트 |
+| `RoundX/d4_line_union_general_theorem_proof_v3.tex` | d=4 증명 v3 (수정 완료) |
+| `RoundX/d4_line_union_proof_patch_notes_v3.md` | v3 패치 노트 |
+| `RoundX/routex_gpt5.4_pro_review.md` | GPT 5.4 Pro 리뷰 |
+| `RoundX/routex_gemini31deepthink_review.md` | Gemini 3.1 DT 리뷰 |
+| `RoundX/routex_opus46_opinion.md` | Opus 4.6 비교 의견 |
+
+---
+
 ## 전체 서사 요약
 
 | 날짜 | 사건 | 논문의 상태 변화 |
@@ -165,8 +206,9 @@ codex_job_request.md (06:55)
 | 3/5–7 | Gemini + GPT 5.4 Pro 증명 재구성 3라운드 | orbit 추적 → height comparison → finite splice — **개념 압축** |
 | 3/7–8 | 원고 rework + 다단계 레프리 | 6/10 → 7.5/10 → 8/10 — **deductive surgery 서사** 확립 |
 | 3/9 AM | d=4 일반화 5시간 만에 완성 | line-union gauge + 2중 return map + odometer conjugacy — **D₄(m) 완전 증명** |
+| 3/9 12:00 | d=3 v6 개정 + d=4 v3 교차 검증 | Appendix B/Prop 13 확장, Prop 5–6 논리 갭 수정 — **양쪽 모두 완성** |
 
-**일주일 만에**: d=3 original theorem → 개념적 재구성 → publishable manuscript → d=4 완전 증명까지.
+**일주일 만에**: d=3 original theorem → 개념적 재구성 → publishable manuscript → d=4 완전 증명 → 교차 검증까지.
 
 ---
 
