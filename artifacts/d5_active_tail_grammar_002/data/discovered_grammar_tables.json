@@ -1,0 +1,51 @@
+{
+  "task_id": "D5-ACTIVE-TAIL-GRAMMAR-002",
+  "fields": [
+    {
+      "field_name": "same_preference_divergence",
+      "changed_state_count": 22806,
+      "preference_score": 32176,
+      "layer2_permutation": "12340",
+      "layer3_permutation": "12340",
+      "layer4plus_permutation": "01234",
+      "pilot_old_collapse_law": {
+        "5": false,
+        "7": false,
+        "9": false
+      },
+      "pilot_strict_clock": {
+        "5": false,
+        "7": false,
+        "9": false
+      },
+      "pilot_u_cycle_count": {
+        "5": 0,
+        "7": 0,
+        "9": 0
+      }
+    },
+    {
+      "field_name": "best_divergent_field",
+      "changed_state_count": 22806,
+      "preference_score": 32176,
+      "layer2_permutation": "23401",
+      "layer3_permutation": "34012",
+      "layer4plus_permutation": "01234",
+      "pilot_old_collapse_law": {
+        "5": false,
+        "7": false,
+        "9": false
+      },
+      "pilot_strict_clock": {
+        "5": true,
+        "7": true,
+        "9": true
+      },
+      "pilot_u_cycle_count": {
+        "5": 25,
+        "7": 49,
+        "9": 81
+      }
+    }
+  ]
+}

@@ -1,0 +1,511 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array,booktabs,longtable}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue}
+\setlist[itemize]{topsep=3pt,itemsep=2pt,parsep=0pt,partopsep=0pt}
+\setlist[enumerate]{topsep=3pt,itemsep=2pt,parsep=0pt,partopsep=0pt}
+
+\title{d=5 Hamilton decomposition\\Consolidated progress summary through artifact 007}
+\author{}
+\date{March 11, 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Scope}
+
+This note consolidates the project status through the exact pilot artifact \texttt{D5-LAYER3-ALT2-DECOUPLED-007}. It is a single working summary of:
+\begin{itemize}
+    \item the original problem and master-field setup,
+    \item the pre-Session-21 foundations (Sessions 1--20),
+    \item the exact pilot artifact chain \texttt{001}--\texttt{007},
+    \item the current bottleneck,
+    \item the smallest live next branch.
+\end{itemize}
+
+The summary is compiled from the Session 21 bundle \texttt{RoundY/README.md}, the Session 20 note and summary data, the artifact READMEs and validation summaries for \texttt{001}--\texttt{007}, and direct classifications of validated survivor tables in \texttt{005}, \texttt{006}, and \texttt{007}.
+
+\section*{Problem statement}
+
+Construct a 5-color Hamilton decomposition of
+\[
+D_5(m)=\mathrm{Cay}((\mathbb Z_m)^5,\{e_0,e_1,e_2,e_3,e_4\})
+\]
+for all $m\ge 3$, via a cyclic-equivariant master permutation field
+\[
+\Pi_\theta\in S_5,
+\qquad
+f_c(x)=x+e_{\Pi_{\theta(x)}(c)}.
+\]
+The working program is to build a quotient-state system $\theta$, encode the field by an anchor function, and force outgoing Latin, incoming Latin, and triangular admissibility.
+
+The key reconstruction theorem already proved earlier is the orbit-anchor formula
+\[
+\Pi_\theta(c)=a(\rho^{-c}\theta)+c.
+\]
+So the search is fundamentally a search over anchor rules on quotient states.
+
+\section*{High-level status}
+
+\subsection*{What is already solved structurally}
+
+\begin{enumerate}
+    \item \textbf{Clean frame is no longer the main obstacle.} The master-field program solved the earlier clean-frame deficiency.
+    \item \textbf{Latin feasibility is no longer the main obstacle.} Free-anchor searches on the joined quotient reached Latin-feasible fields.
+    \item \textbf{The obstruction moved inward to return dynamics.} The dominant failure mode became dynamic collapse, then progressively finer return-dynamics degeneracy.
+    \item \textbf{The project has now crossed the $U_0$-trivial boundary.} Exact pilot witnesses with nontrivial $U_0$ now exist.
+\end{enumerate}
+
+\subsection*{What is still missing}
+
+The current frontier is no longer ``find any nontrivial section dynamics.'' It is now:
+
+\begin{quote}
+\textbf{find one clean strict pilot witness that combines both moving $U_0$ cycles and nonzero monodromy in the same return system.}
+\end{quote}
+
+That combined regime has not yet been found in the exact pilot families searched so far.
+
+\section*{Compressed prehistory: Sessions 1--20}
+
+\subsection*{Phase A. Discovery and color-by-color analysis (Sessions 1--10)}
+
+These sessions established the problem landscape and ruled out repairing the original $m=5$ witness as a route to a full theorem.
+
+\begin{itemize}
+    \item Session 1 found an $m=5$ Hamilton decomposition by 26 Kempe swaps.
+    \item Session 2 showed a naive Boolean zero-pattern model is UNSAT, forcing an affine-pinned approach.
+    \item Sessions 3--4 gave strong color-by-color classifications: color 3 Hamilton for all odd $m\ge 5$, color 2 Hamilton iff $\gcd(m,3)=1$, and color 1 non-Hamilton for $m\ge 6$.
+    \item Sessions 5--6 formalized the clean-frame / triangular criterion framework and showed the 26-move witness is not repairable for the unsolved colors.
+    \item Sessions 7--10 pushed color 0 hard, including an exact return formula and an even-$m$ obstruction, then exhausted the G3 cyclic-template surgery branch.
+\end{itemize}
+
+\textbf{Outcome:} the old witness and G3 repair program became a discovery tool, not the final construction.
+
+\subsection*{Phase B. Master permutation field and join quotient (Sessions 11--17)}
+
+This is the start of the present line.
+
+\begin{itemize}
+    \item Session 11 designed the fresh cyclic family with clean frame built in.
+    \item Session 12 established the conditional master-field theorem.
+    \item Session 13 proved the orbit-anchor reconstruction lemma and Schema A/B no-go statements.
+    \item Sessions 14--15 built the free-anchor join quotient $\Theta_{AB}$; Latin became feasible, but all pilot-feasible solutions collapsed dynamically.
+    \item Session 16 identified the exact strict-collapse law:
+    \[
+    R_0(q,w,v,u)=(q+1,w,v+1,u),
+    \qquad U_0=\mathrm{id},
+    \qquad \text{monodromy}=0.
+    \]
+    \item Session 17 added the phase-align bit $\delta=v-q$; helpful, but far from enough.
+\end{itemize}
+
+\textbf{Outcome:} the problem became a fine-grained return-automaton problem rather than a clean-frame or Latin problem.
+
+\subsection*{Phase C. Tail-phase diagnostics (Sessions 18--20)}
+
+These sessions isolated the residual hidden-phase structure.
+
+\begin{itemize}
+    \item \textbf{Session 18.} On $\Theta_{AB}+\texttt{phase\_align}$ there are exactly two rigid pilot grammars: strict-collapse and clean-nonclock. Both freeze layers $2+$ to identity.
+    \item \textbf{Session 19.} One-step lagged copies of existing atoms give only marginal improvement.
+    \item \textbf{Session 20.} Pure $\delta$-partitions beat all affine-mixed predicates. Best pilot cuts are $\{1,2\}$ for $m=5$, $\{1,3,5\}$ for $m=7$, and $\{1,2,5,6\}$ for $m=9$, but the optimal subset drifts with $m$.
+\end{itemize}
+
+\textbf{Outcome:} the next bit had to come from the hidden-phase support automaton / compatibility hypergraph, not from an ad hoc arithmetic predicate.
+
+\section*{Exact pilot artifact chain after Session 20}
+
+The current project state is best understood as the sequence \texttt{001}--\texttt{007}.
+
+\subsection*{\texttt{001} --- exact tail cut and refined quotient rerun}
+
+\textbf{Artifact:} \texttt{D5-TAIL-CUT-QUOTIENT-RERUN-001}
+
+Main exact outcomes:
+\begin{itemize}
+    \item The nonzero hidden-phase incidence-signature quotient is already \textbf{discrete} on $m=5,7,9$.
+    \item Exact pilot \texttt{tail\_cut} lookup bit:
+    \begin{itemize}
+        \item $m=5$: $\{1,2\}$
+        \item $m=7$: $\{1,3,5\}$
+        \item $m=9$: $\{1,2,5,6\}$
+    \end{itemize}
+    \item Post-cut residual excess is $14$, $1282$, and $8150$ respectively.
+    \item Rerunning the free-anchor search on $\Theta_{AB}+\texttt{phase\_align}+\texttt{tail\_cut}$ gives an optimal solution identical to the lifted old strict-collapse representative, with \texttt{changed\_state\_count\_vs\_lifted = 0}.
+\end{itemize}
+
+\textbf{Interpretation at that time:} the exact one-bit tail cut was combinatorially right but dynamically inert inside the then-current passive free-anchor model.
+
+\subsection*{\texttt{002} --- passive divergence and recursive second bit}
+
+\textbf{Artifact:} \texttt{D5-ACTIVE-TAIL-GRAMMAR-002}
+
+This overturned the strongest reading of \texttt{001}.
+
+Main exact outcomes:
+\begin{itemize}
+    \item Same-preference nonlifted witness exists on $m=5,7,9$ with preference score $32176$, changed pilot states $22806$, and status \texttt{OPTIMAL}.
+    \item So the passive refined quotient is \textbf{not} exhausted by the lifted collapse field.
+    \item Exact recursive second bit $b_2$ extracted from post-$b_1$ residual fragments:
+    \begin{itemize}
+        \item $m=5$: $b_2=\{1,3\}$, residual excess $0$
+        \item $m=7$: $b_2=\{1,2,4\}$, residual excess $420$
+        \item $m=9$: $b_2=\{1,3,5,7\}$, residual excess $3354$
+    \end{itemize}
+\end{itemize}
+
+A strict-clock divergent witness also exists, but still with trivial $U_0$.
+
+\textbf{Interpretation:} the passive branch was richer than first thought, and exact $b_2$ became available.
+
+\subsection*{\texttt{003} --- smallest active $(b_1,b_2)$ family around the strict seed}
+
+\textbf{Artifact:} \texttt{D5-ACTIVE-U0-MERGE-003}
+
+Main exact outcomes:
+\begin{itemize}
+    \item Exact family size: $256$ rules.
+    \item Only $1$ rule survives Latin + clean-frame + strict-clock on $m=5,7,9$.
+    \item That unique survivor is exactly the old strict-clock seed.
+    \item Its section dynamics are still trivial:
+    \[
+    U_0 = m^2 \text{ fixed points}, \qquad \text{monodromy } 0.
+    \]
+\end{itemize}
+
+\textbf{Interpretation:} the smallest active two-bit neighborhood around the known seed is exhausted; no nontrivial $U_0$ occurs there.
+
+\subsection*{\texttt{004} --- strict-friendly context-only two-anchor family}
+
+\textbf{Artifact:} \texttt{D5-STRICT-PALETTE-CONTEXT-004}
+
+Main exact outcomes:
+\begin{itemize}
+    \item Search size: $16$ strict-friendly anchor families, $16384$ raw rules total.
+    \item All survivors collapse to exactly $16$ unique constant anchor pairs.
+    \item There are $0$ context-dependent clean survivors, $0$ context-dependent strict survivors, and $0$ nontrivial-$U_0$ survivors.
+    \item All $16$ survivors are full-color Latin, clean-frame, strict-clock, and still $U_0$-trivial.
+\end{itemize}
+
+\textbf{Interpretation:} dependence on $(\texttt{phase\_align},b_1,b_2)$ alone does not survive the clean-frame stage in this two-anchor family.
+
+\subsection*{\texttt{005} --- one old bit clean-survival breakthrough}
+
+\textbf{Artifact:} \texttt{D5-ONE-OLD-BIT-CLEAN-SURVIVAL-005}
+
+This is the first decisive break beyond the $U_0$-trivial regime.
+
+Main exact outcomes:
+\begin{itemize}
+    \item Old bits tested: $q=-1$, $q+u=1$, $w+u=2$, $q+u=-1$, $u=-1$.
+    \item Global counts on $m=5,7,9$:
+    \begin{itemize}
+        \item unique clean survivors: $328$
+        \item unique strict survivors: $328$
+        \item unique context-dependent strict survivors: $248$
+        \item unique strict survivors with nontrivial $U_0$: $240$
+    \end{itemize}
+    \item Exact direct classification of validated survivors shows that \textbf{all} context-dependent survivors ignore \texttt{phase\_align}, $b_1$, and $b_2$, and are actually \textbf{$s$-only} for the added old bit $s$.
+\end{itemize}
+
+Exact survivor taxonomy:
+\begin{itemize}
+    \item $80$ constant on both layers,
+    \item $80$ $s$-only on layer 2, constant on layer 3,
+    \item $80$ constant on layer 2, $s$-only on layer 3,
+    \item $88$ $s$-only on both layers.
+\end{itemize}
+
+Exact dynamical split:
+\begin{itemize}
+    \item $192$ cycle-only strict survivors,
+    \item $48$ monodromy-only strict survivors,
+    \item $0$ witnesses with both nontrivial cycles and nonzero monodromy.
+\end{itemize}
+
+Representative mechanisms:
+\begin{itemize}
+    \item \textbf{Cycle mechanism:} a layer-2 $s$-split such as $2/0$ with layer 3 constant $3$ gives
+    \[
+    U_0 = m \text{ cycles of length } m,
+    \qquad \text{all monodromies } 0.
+    \]
+    \item \textbf{Monodromy mechanism:} a layer-3 $s$-split such as $3/0$ with layer 2 constant $2$ gives fixed points with uniform nonzero monodromy.
+\end{itemize}
+
+\textbf{Interpretation:} one old bit is enough to reach nontrivial $U_0$, but only in separated modes: cycle-only or monodromy-only.
+
+\subsection*{\texttt{006} --- decoupled two-old-bit family with layer-3 alternate $0$}
+
+\textbf{Artifact:} \texttt{D5-TWO-OLD-BIT-CYCLE-MONODROMY-006}
+
+Main exact outcomes:
+\begin{itemize}
+    \item Search size: $300$ rules.
+    \item Clean survivors: $200$.
+    \item Strict survivors: $200$.
+    \item Combined cycle+monodromy survivors: $0$.
+    \item All $200$ survivors are cycle-only.
+\end{itemize}
+
+Extra exact classification of validated survivors:
+\begin{itemize}
+    \item The clean/strict survivor set factors exactly as
+    \[
+    20\ \text{surviving layer-2 patterns} \times 10\ \text{arbitrary layer-3 choices}.
+    \]
+    \item All $200$ survivors have exactly the same pilot return signature:
+    \[
+    U_0 = m \text{ cycles of length } m,
+    \qquad \text{all monodromies } 0.
+    \]
+\end{itemize}
+
+\textbf{Interpretation:} with layer-3 alternate fixed to $0$, the whole decoupled family collapses back to the pure layer-2 cycle mechanism. Layer 3 is dynamically invisible at the pilot return level in this branch.
+
+\subsection*{\texttt{007} --- decoupled two-old-bit family with layer-3 palette $\{0,2\}$}
+
+\textbf{Artifact:} \texttt{D5-LAYER3-ALT2-DECOUPLED-007}
+
+This is the strongest exact structural diagnosis so far.
+
+Main exact outcomes:
+\begin{itemize}
+    \item Search size: $600$ rules.
+    \item Clean survivors: $360$.
+    \item Strict survivors: $360$.
+    \item Combined cycle+monodromy survivors: $0$.
+    \item Cycle-only survivors: $296$.
+    \item Monodromy-only survivors: $32$.
+    \item Trivial survivors: $32$.
+\end{itemize}
+
+Extra exact classification of validated survivors:
+\begin{itemize}
+    \item Clean/strict survivorship factors exactly as
+    \[
+    \mathcal S_{\mathrm{surv}} = \mathcal S_2 \times \mathcal S_3,
+    \qquad |\mathcal S_2|=20,
+    \qquad |\mathcal S_3|=18.
+    \]
+    \item The $20$ surviving layer-2 patterns are exactly the same $20$ as in \texttt{006}.
+    \item The $18$ surviving layer-3 patterns split into:
+    \begin{itemize}
+        \item $10$ alt-$0$ patterns: all $5$ old bits times $2$ orientations,
+        \item $8$ alt-$2$ patterns: only the four-bit pool
+        \[
+        T=\{q=-1,\ q+u=1,\ q+u=-1,\ u=-1\}
+        \]
+        times $2$ orientations,
+        \item there is \textbf{no} clean layer-3 alt-$2$ survivor using $w+u=2$.
+    \end{itemize}
+\end{itemize}
+
+The validated survivors obey an exact trichotomy:
+\begin{enumerate}
+    \item layer 3 uses alt $0$ $\Rightarrow$ always cycle-only,
+    \item layer 3 uses alt $2$ and layer 2 uses alt $0$, with same-sign orientation coupling, $\Rightarrow$ monodromy-only,
+    \item layer 3 uses alt $2$ and layer 2 uses alt $3$, with same-sign orientation coupling, $\Rightarrow$ trivial $U_0$.
+\end{enumerate}
+All remaining surviving combinations are cycle-only.
+
+The monodromy-only regime has exactly two pilot signatures:
+\begin{itemize}
+    \item fixed points with uniform monodromy $+1$,
+    \item fixed points with uniform monodromy $-1$.
+\end{itemize}
+
+The best cycle-only witnesses remain the stronger $w+u=2$, alt-$4$ layer-2 rules already seen earlier. Representative $m=9$ signatures include three cycles of lengths $(22,22,37)$ and three cycles of lengths $(25,25,31)$.
+
+\textbf{Interpretation:} layer 3 already has the right palette $\{0,2\}$, but one old bit on layer 3 is still too coarse. The family realizes three exact pilot regimes---cycle-only, monodromy-only, trivial---but never mixes cycles and monodromy in one witness.
+
+\section*{Bottleneck evolution}
+
+The bottleneck has shifted repeatedly:
+\begin{enumerate}
+    \item \textbf{clean frame absent} $\to$ solved by the master-field design,
+    \item \textbf{Latin infeasibility} $\to$ solved by free-anchor search on the join quotient,
+    \item \textbf{dynamic collapse} $\to$ diagnosed exactly by the strict-collapse return law,
+    \item \textbf{ad hoc phase bits} $\to$ ruled out by the Session 20 tail-phase scan,
+    \item \textbf{passive tail-bit pessimism} $\to$ overturned by \texttt{002},
+    \item \textbf{context-only tail grammar} $\to$ ruled out by \texttt{003} and \texttt{004},
+    \item \textbf{$U_0$-triviality} $\to$ broken by \texttt{005},
+    \item \textbf{single-mechanism separation} $\to$ now the active bottleneck after \texttt{007}.
+\end{enumerate}
+
+The current exact obstruction is not ``no return dynamics.'' It is:
+
+\begin{quote}
+\textbf{the searched families can realize cycles without twist, or twist without cycles, or a trivial cancellation regime, but not cycles and twist together.}
+\end{quote}
+
+\section*{What is now proved / established / ruled out}
+
+\subsection*{Proved or exact-computationally established}
+\begin{itemize}
+    \item The orbit-anchor reconstruction formula.
+    \item The exact strict-collapse return law on the joined quotient pilot branch.
+    \item The discrete hidden-phase incidence-signature quotient on $m=5,7,9$.
+    \item Exact pilot bits $b_1$ and $b_2$ from residual support hypergraphs.
+    \item Existence of same-preference nonlifted passive witnesses.
+    \item Existence of many full-color Latin, clean-frame, strict-clock witnesses with nontrivial $U_0$ in the one-old-bit family.
+    \item Exact existence of separate cycle-only and monodromy-only mechanisms.
+    \item Exact trichotomy for the decoupled layer-3 $\{0,2\}$ family.
+\end{itemize}
+
+\subsection*{Ruled out on the pilot range searched}
+\begin{itemize}
+    \item The claim that the refined passive quotient contains only the lifted collapse field.
+    \item The claim that $(\texttt{phase\_align},b_1,b_2)$ alone can sustain a nonconstant clean two-anchor grammar.
+    \item The minimal active $(b_1,b_2)$ neighborhood around the strict seed.
+    \item The decoupled two-old-bit family with layer-3 alternate $0$ as a route to combined cycle+monodromy.
+    \item The decoupled two-old-bit family with layer-3 palette $\{0,2\}$ as a route to combined cycle+monodromy.
+\end{itemize}
+
+\section*{Current best mechanism picture}
+
+There are now three exact pilot mechanisms.
+
+\subsection*{1. Cycle mechanism}
+
+Driven primarily by a layer-2 old-bit split. In the simplest successful one-old-bit witnesses:
+\begin{itemize}
+    \item layer 2 uses an $s$-dependent split such as $2/0$,
+    \item layer 3 stays constant,
+    \item $U_0$ becomes moving cycles with zero monodromy.
+\end{itemize}
+The strongest currently known cycle regime is still the layer-2 $w+u=2$ split with alternate $4$, which gives notably larger cycles on $m=9$ than the basic $m$ cycles-of-length-$m$ pattern.
+
+\subsection*{2. Monodromy-only mechanism}
+
+Driven by a layer-3 split. In the one-old-bit family this appears with fixed-point $U_0$ and uniform nonzero monodromy. In the decoupled $\{0,2\}$ family it reappears only in a narrow same-sign coupling regime.
+
+\subsection*{3. Cancellation / trivial regime}
+
+The $\{0,2\}$ decoupled family also shows that certain layer-2 / layer-3 couplings force the return map back to fixed points with zero monodromy. So adding a second mechanism can cancel rather than enhance dynamics.
+
+\section*{Current frontier}
+
+The smallest live next branch is:
+
+\begin{quote}
+\textbf{fix one bifurcation-capable layer-2 cycle split, and search a layer-3-only mode-switch family with one extra local flag.}
+\end{quote}
+
+The logic is:
+\begin{itemize}
+    \item Session \texttt{007} shows layer 3 already has the right anchor palette $\{0,2\}$.
+    \item What is missing is not a larger palette but a \textbf{mode switch} that can locally alternate between cycle-preserving behavior and monodromy-producing behavior.
+    \item A single old bit on layer 3 is too coarse to do that.
+\end{itemize}
+
+\subsection*{Recommended next exact task}
+
+Use one fixed layer-2 base from the bifurcation-capable four-bit pool
+\[
+T=\{q=-1,\ q+u=1,\ q+u=-1,\ u=-1\}
+\]
+with alternate $0$ and orientation $0/2$ or $2/0$, and push all new freedom into layer 3.
+
+Suggested family:
+\begin{itemize}
+    \item fix layer 2,
+    \item choose representative old bit $s_3$ on layer 3,
+    \item add one extra layer-3 local flag $p$, initially from the predecessor-style pool:
+    \begin{itemize}
+        \item \texttt{pred\_any\_phase\_align}
+        \item \texttt{pred\_sig0\_phase\_align}
+        \item \texttt{pred\_sig1\_wu2}
+        \item \texttt{pred\_sig4\_wu2}
+    \end{itemize}
+    \item let layer 3 depend on $(s_3,p)$,
+    \item allow layer-3 slice rules drawn from the already validated modes:
+    \begin{itemize}
+        \item $0/3$, $3/0$, $2/3$, $3/2$
+        \item optional constant $3$ as control.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Primary success criterion}
+
+A clean strict pilot witness on $m=5,7,9$ with both:
+\begin{itemize}
+    \item some cycle length $>1$, and
+    \item some nonzero monodromy.
+\end{itemize}
+
+If all one-flag layer-3 families fail, the next escalation should be a two-bit layer-3 local state rather than another broad decoupled two-layer scan.
+
+\section*{Current status ledger}
+
+\subsection*{[P] proved / theorem-level within the project}
+\begin{itemize}
+    \item orbit-anchor reconstruction,
+    \item master-field conditional theorem,
+    \item exact strict-collapse law on the joined-quotient pilot branch,
+    \item earlier color-by-color structural theorems from Sessions 3--7.
+\end{itemize}
+
+\subsection*{[C] exact computationally established on the pilot range}
+\begin{itemize}
+    \item hidden-phase quotient is discrete on nonzero $\delta$ for $m=5,7,9$,
+    \item exact pilot bits $b_1$ and $b_2$,
+    \item same-preference passive divergence,
+    \item one-old-bit family gives many strict clean nontrivial $U_0$ witnesses,
+    \item \texttt{006} and \texttt{007} exact factorization / trichotomy phenomena.
+\end{itemize}
+
+\subsection*{[H] current strongest hypothesis}
+\begin{itemize}
+    \item The missing ingredient is a \textbf{local layer-3 mode switch}, not a new tail-only partition and not a larger decoupled old-bit sweep.
+\end{itemize}
+
+\subsection*{[F] exact failures now known}
+\begin{itemize}
+    \item tail-only context dependence does not survive the clean-frame stage in the strict-friendly two-anchor family,
+    \item decoupled two-old-bit families tested so far do not combine cycles and monodromy.
+\end{itemize}
+
+\subsection*{[O] still open}
+\begin{itemize}
+    \item The full Hamilton decomposition theorem for all $m\ge 3$ remains open.
+\end{itemize}
+
+\section*{Compact milestone table}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.18\textwidth} >{\raggedright\arraybackslash}p{0.32\textwidth} >{\raggedright\arraybackslash}p{0.40\textwidth}}
+\toprule
+Stage & Exact outcome & Takeaway \\
+\midrule
+\endhead
+Sessions 11--17 & clean frame + Latin become manageable; strict-collapse law identified & obstruction moved to return dynamics \\
+Sessions 18--20 & rigid tail grammar, predecessor bits weak, $\delta$-cuts non-arithmetic & need hypergraph-derived hidden-phase information \\
+\texttt{001} & exact \texttt{tail\_cut}, discrete hidden-phase quotient, lifted optimum unchanged & passive one-bit tail cut alone not enough \\
+\texttt{002} & same-preference passive divergence + exact $b_2$ & passive branch richer than first thought \\
+\texttt{003} & smallest active $(b_1,b_2)$ family has unique strict survivor = seed & minimal two-bit seed neighborhood exhausted \\
+\texttt{004} & context-only strict-friendly branch collapses to 16 constants & tail-only context does not survive clean-frame \\
+\texttt{005} & one old bit yields strict clean nontrivial $U_0$ witnesses & first exact cycle-only / monodromy-only mechanisms \\
+\texttt{006} & decoupled two-old-bit with layer-3 alt $0$ gives only cycle-only survivors & layer 3 dynamically invisible there \\
+\texttt{007} & decoupled layer-3 $\{0,2\}$ family gives cycle-only / monodromy-only / trivial, never combined & next step is a layer-3 mode switch \\
+\bottomrule
+\end{longtable}
+
+\section*{Bottom line}
+
+The project has advanced well past the old ``dynamic collapse'' bottleneck. The strongest exact statement supported by the current artifacts is:
+
+\begin{quote}
+\textbf{on the pilot range $m=5,7,9$, the program now has exact clean strict witnesses with nontrivial return dynamics, but the searched families still separate orbit structure from monodromy instead of combining them.}
+\end{quote}
+
+So the next honest step is not a fresh global redesign. It is a small, targeted layer-3 local-state enrichment over a fixed successful layer-2 cycle base.
+
+\end{document}

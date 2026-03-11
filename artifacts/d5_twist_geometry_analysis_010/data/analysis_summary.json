@@ -1,0 +1,6812 @@
+{
+  "task_id": "D5-TWIST-GEOMETRY-ANALYSIS-010",
+  "runtime_sec": 0.3085917290300131,
+  "environment": {
+    "python_version": "3.10.12",
+    "rich_version": "14.2.0"
+  },
+  "inputs": {
+    "session26_validation_json": "artifacts/d5_layer3_mode_switch_008/data/validation_summary.json",
+    "session27_search_json": "artifacts/d5_strong_cycle_mix_009/data/search_summary.json",
+    "session27_validation_json": "artifacts/d5_strong_cycle_mix_009/data/validation_summary.json",
+    "cycle_baseline_json": "artifacts/d5_layer3_alt2_decoupled_007/data/search_summary.json"
+  },
+  "baselines": {
+    "cycle_007": {
+      "source": "artifacts/d5_layer3_alt2_decoupled_007/data/search_summary.json",
+      "rule": {
+        "layer2_bit_name": "w+u=2",
+        "layer2_bit_safe_name": "w_plus_u_eq_2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_bit_safe_name": "q_plus_u_eq_neg1",
+        "layer2_alt": 4,
+        "layer3_alt": 2,
+        "layer2_table": {
+          "s0": 2,
+          "s1": 4
+        },
+        "layer3_table": {
+          "s0": 2,
+          "s1": 3
+        },
+        "layer2_orientation": "2/4",
+        "layer3_orientation": "2/3",
+        "context_dependent": true
+      },
+      "cycle_signature": [
+        {
+          "m": 5,
+          "U_cycle_count": 5,
+          "U_cycle_lengths": [
+            2,
+            2,
+            7,
+            7,
+            7
+          ]
+        },
+        {
+          "m": 7,
+          "U_cycle_count": 7,
+          "U_cycle_lengths": [
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7
+          ]
+        },
+        {
+          "m": 9,
+          "U_cycle_count": 3,
+          "U_cycle_lengths": [
+            22,
+            22,
+            37
+          ]
+        }
+      ]
+    },
+    "mixed_008": {
+      "source": "artifacts/d5_layer3_mode_switch_008/data/validation_summary.json",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "0/2",
+        "layer2_table": {
+          "s0": 0,
+          "s1": 2
+        },
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "simple",
+          "0/2",
+          "pred_sig1_wu2",
+          "0/3",
+          "3/0"
+        ],
+        "predecessor_flag_name": "pred_sig1_wu2",
+        "predecessor_flag_description": "1 iff the color-relative predecessor in direction 1 satisfies w+u=2."
+      },
+      "cycle_signature": [
+        {
+          "m": 5,
+          "U_cycle_count": 5,
+          "U_cycle_lengths": [
+            5,
+            5,
+            5,
+            5,
+            5
+          ]
+        },
+        {
+          "m": 7,
+          "U_cycle_count": 7,
+          "U_cycle_lengths": [
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7
+          ]
+        },
+        {
+          "m": 9,
+          "U_cycle_count": 9,
+          "U_cycle_lengths": [
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9
+          ]
+        }
+      ],
+      "monodromy_signature": [
+        {
+          "m": 5,
+          "monodromies": [
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "m": 7,
+          "monodromies": [
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+          ]
+        },
+        {
+          "m": 9,
+          "monodromies": [
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7
+          ]
+        }
+      ]
+    }
+  },
+  "session26": {
+    "source": "artifacts/d5_layer3_mode_switch_008/data/validation_summary.json",
+    "candidate_count": 34,
+    "mixed_count": 24,
+    "unique_mixed_cycle_signature_count": 1,
+    "mixed_cycle_signatures": [
+      {
+        "signature": [
+          {
+            "m": 5,
+            "U_cycle_count": 5,
+            "U_cycle_lengths": [
+              5,
+              5,
+              5,
+              5,
+              5
+            ]
+          },
+          {
+            "m": 7,
+            "U_cycle_count": 7,
+            "U_cycle_lengths": [
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7
+            ]
+          },
+          {
+            "m": 9,
+            "U_cycle_count": 9,
+            "U_cycle_lengths": [
+              9,
+              9,
+              9,
+              9,
+              9,
+              9,
+              9,
+              9,
+              9
+            ]
+          }
+        ],
+        "row_count": 24,
+        "overall_kinds": {
+          "both": 24
+        },
+        "layer2_seeds": [
+          [
+            "representative_q=-1",
+            "0/2"
+          ],
+          [
+            "representative_q=-1",
+            "2/0"
+          ]
+        ],
+        "layer3_gadgets": [
+          [
+            "q=-1",
+            "pred_sig1_wu2",
+            "0/3",
+            "3/0"
+          ],
+          [
+            "q=-1",
+            "pred_sig1_wu2",
+            "0/3",
+            "3/3"
+          ],
+          [
+            "q=-1",
+            "pred_sig1_wu2",
+            "3/0",
+            "0/3"
+          ],
+          [
+            "q=-1",
+            "pred_sig1_wu2",
+            "3/0",
+            "3/3"
+          ],
+          [
+            "q=-1",
+            "pred_sig1_wu2",
+            "3/3",
+            "0/3"
+          ],
+          [
+            "q=-1",
+            "pred_sig1_wu2",
+            "3/3",
+            "3/0"
+          ],
+          [
+            "q=-1",
+            "pred_sig4_wu2",
+            "0/3",
+            "3/0"
+          ],
+          [
+            "q=-1",
+            "pred_sig4_wu2",
+            "0/3",
+            "3/3"
+          ],
+          [
+            "q=-1",
+            "pred_sig4_wu2",
+            "3/0",
+            "0/3"
+          ],
+          [
+            "q=-1",
+            "pred_sig4_wu2",
+            "3/0",
+            "3/3"
+          ],
+          [
+            "q=-1",
+            "pred_sig4_wu2",
+            "3/3",
+            "0/3"
+          ],
+          [
+            "q=-1",
+            "pred_sig4_wu2",
+            "3/3",
+            "3/0"
+          ]
+        ]
+      }
+    ],
+    "ordered_pair_monodromy_law": [
+      {
+        "ordered_pair": [
+          "0/3",
+          "3/0"
+        ],
+        "row_count": 4,
+        "unique_monodromy_signature_count": 1,
+        "monodromy_signatures": [
+          [
+            {
+              "m": 5,
+              "monodromies": [
+                3,
+                3,
+                3,
+                3,
+                3
+              ]
+            },
+            {
+              "m": 7,
+              "monodromies": [
+                5,
+                5,
+                5,
+                5,
+                5,
+                5,
+                5
+              ]
+            },
+            {
+              "m": 9,
+              "monodromies": [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ]
+            }
+          ]
+        ],
+        "layer2_seeds": [
+          [
+            "representative_q=-1",
+            "0/2"
+          ],
+          [
+            "representative_q=-1",
+            "2/0"
+          ]
+        ],
+        "predecessor_flags": [
+          "pred_sig1_wu2",
+          "pred_sig4_wu2"
+        ],
+        "layer3_bits": [
+          ""
+        ]
+      },
+      {
+        "ordered_pair": [
+          "0/3",
+          "3/3"
+        ],
+        "row_count": 4,
+        "unique_monodromy_signature_count": 1,
+        "monodromy_signatures": [
+          [
+            {
+              "m": 5,
+              "monodromies": [
+                4,
+                4,
+                4,
+                4,
+                4
+              ]
+            },
+            {
+              "m": 7,
+              "monodromies": [
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6
+              ]
+            },
+            {
+              "m": 9,
+              "monodromies": [
+                8,
+                8,
+                8,
+                8,
+                8,
+                8,
+                8,
+                8,
+                8
+              ]
+            }
+          ]
+        ],
+        "layer2_seeds": [
+          [
+            "representative_q=-1",
+            "0/2"
+          ],
+          [
+            "representative_q=-1",
+            "2/0"
+          ]
+        ],
+        "predecessor_flags": [
+          "pred_sig1_wu2",
+          "pred_sig4_wu2"
+        ],
+        "layer3_bits": [
+          ""
+        ]
+      },
+      {
+        "ordered_pair": [
+          "3/0",
+          "0/3"
+        ],
+        "row_count": 4,
+        "unique_monodromy_signature_count": 1,
+        "monodromy_signatures": [
+          [
+            {
+              "m": 5,
+              "monodromies": [
+                2,
+                2,
+                2,
+                2,
+                2
+              ]
+            },
+            {
+              "m": 7,
+              "monodromies": [
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+              ]
+            },
+            {
+              "m": 9,
+              "monodromies": [
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+              ]
+            }
+          ]
+        ],
+        "layer2_seeds": [
+          [
+            "representative_q=-1",
+            "0/2"
+          ],
+          [
+            "representative_q=-1",
+            "2/0"
+          ]
+        ],
+        "predecessor_flags": [
+          "pred_sig1_wu2",
+          "pred_sig4_wu2"
+        ],
+        "layer3_bits": [
+          ""
+        ]
+      },
+      {
+        "ordered_pair": [
+          "3/0",
+          "3/3"
+        ],
+        "row_count": 4,
+        "unique_monodromy_signature_count": 1,
+        "monodromy_signatures": [
+          [
+            {
+              "m": 5,
+              "monodromies": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "m": 7,
+              "monodromies": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "m": 9,
+              "monodromies": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            }
+          ]
+        ],
+        "layer2_seeds": [
+          [
+            "representative_q=-1",
+            "0/2"
+          ],
+          [
+            "representative_q=-1",
+            "2/0"
+          ]
+        ],
+        "predecessor_flags": [
+          "pred_sig1_wu2",
+          "pred_sig4_wu2"
+        ],
+        "layer3_bits": [
+          ""
+        ]
+      },
+      {
+        "ordered_pair": [
+          "3/3",
+          "0/3"
+        ],
+        "row_count": 4,
+        "unique_monodromy_signature_count": 1,
+        "monodromy_signatures": [
+          [
+            {
+              "m": 5,
+              "monodromies": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "m": 7,
+              "monodromies": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "m": 9,
+              "monodromies": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            }
+          ]
+        ],
+        "layer2_seeds": [
+          [
+            "representative_q=-1",
+            "0/2"
+          ],
+          [
+            "representative_q=-1",
+            "2/0"
+          ]
+        ],
+        "predecessor_flags": [
+          "pred_sig1_wu2",
+          "pred_sig4_wu2"
+        ],
+        "layer3_bits": [
+          ""
+        ]
+      },
+      {
+        "ordered_pair": [
+          "3/3",
+          "3/0"
+        ],
+        "row_count": 4,
+        "unique_monodromy_signature_count": 1,
+        "monodromy_signatures": [
+          [
+            {
+              "m": 5,
+              "monodromies": [
+                4,
+                4,
+                4,
+                4,
+                4
+              ]
+            },
+            {
+              "m": 7,
+              "monodromies": [
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6
+              ]
+            },
+            {
+              "m": 9,
+              "monodromies": [
+                8,
+                8,
+                8,
+                8,
+                8,
+                8,
+                8,
+                8,
+                8
+              ]
+            }
+          ]
+        ],
+        "layer2_seeds": [
+          [
+            "representative_q=-1",
+            "0/2"
+          ],
+          [
+            "representative_q=-1",
+            "2/0"
+          ]
+        ],
+        "predecessor_flags": [
+          "pred_sig1_wu2",
+          "pred_sig4_wu2"
+        ],
+        "layer3_bits": [
+          ""
+        ]
+      }
+    ],
+    "flag_counts": {
+      "pred_any_phase_align": 10,
+      "pred_sig1_wu2": 12,
+      "pred_sig4_wu2": 12
+    }
+  },
+  "session27": {
+    "stage1": {
+      "stage_name": "stage1",
+      "clean_strict_count": 240,
+      "mixed_count": 192,
+      "cycle_only_count": 48,
+      "unique_clean_strict_cycle_signature_count": 1,
+      "unique_mixed_cycle_signature_count": 1,
+      "unique_cycle_only_cycle_signature_count": 1,
+      "cycle_signatures_clean_strict": [
+        {
+          "signature": [
+            {
+              "m": 5,
+              "U_cycle_count": 5,
+              "U_cycle_lengths": [
+                5,
+                5,
+                5,
+                5,
+                5
+              ]
+            },
+            {
+              "m": 7,
+              "U_cycle_count": 7,
+              "U_cycle_lengths": [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ]
+            },
+            {
+              "m": 9,
+              "U_cycle_count": 9,
+              "U_cycle_lengths": [
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9
+              ]
+            }
+          ],
+          "row_count": 240,
+          "overall_kinds": {
+            "both": 192,
+            "cycle_only": 48
+          },
+          "layer2_seeds": [
+            [
+              "q+u=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "q+u=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "q+u=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "q+u=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "q+u=1",
+              0,
+              "0/2"
+            ],
+            [
+              "q+u=1",
+              0,
+              "2/0"
+            ],
+            [
+              "q+u=1",
+              3,
+              "2/3"
+            ],
+            [
+              "q+u=1",
+              3,
+              "3/2"
+            ],
+            [
+              "q=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "q=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "q=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "q=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "q=-1",
+              4,
+              "2/4"
+            ],
+            [
+              "q=-1",
+              4,
+              "4/2"
+            ],
+            [
+              "u=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "u=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "u=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "u=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "w+u=2",
+              4,
+              "2/4"
+            ],
+            [
+              "w+u=2",
+              4,
+              "4/2"
+            ]
+          ],
+          "layer3_gadgets": [
+            [
+              "q=-1",
+              "pred_sig1_wu2",
+              "0/3",
+              "3/0"
+            ],
+            [
+              "q=-1",
+              "pred_sig1_wu2",
+              "0/3",
+              "3/3"
+            ],
+            [
+              "q=-1",
+              "pred_sig1_wu2",
+              "3/0",
+              "0/3"
+            ],
+            [
+              "q=-1",
+              "pred_sig1_wu2",
+              "3/0",
+              "3/3"
+            ],
+            [
+              "q=-1",
+              "pred_sig1_wu2",
+              "3/3",
+              "0/3"
+            ],
+            [
+              "q=-1",
+              "pred_sig1_wu2",
+              "3/3",
+              "3/0"
+            ],
+            [
+              "q=-1",
+              "pred_sig4_wu2",
+              "0/3",
+              "3/0"
+            ],
+            [
+              "q=-1",
+              "pred_sig4_wu2",
+              "0/3",
+              "3/3"
+            ],
+            [
+              "q=-1",
+              "pred_sig4_wu2",
+              "3/0",
+              "0/3"
+            ],
+            [
+              "q=-1",
+              "pred_sig4_wu2",
+              "3/0",
+              "3/3"
+            ],
+            [
+              "q=-1",
+              "pred_sig4_wu2",
+              "3/3",
+              "0/3"
+            ],
+            [
+              "q=-1",
+              "pred_sig4_wu2",
+              "3/3",
+              "3/0"
+            ]
+          ]
+        }
+      ],
+      "seed_signature_summary": [
+        {
+          "layer2_seed": [
+            "q+u=-1",
+            0,
+            "0/2"
+          ],
+          "row_count": 12,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 12
+          }
+        },
+        {
+          "layer2_seed": [
+            "q+u=-1",
+            0,
+            "2/0"
+          ],
+          "row_count": 12,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 12
+          }
+        },
+        {
+          "layer2_seed": [
+            "q+u=-1",
+            3,
+            "2/3"
+          ],
+          "row_count": 12,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 12
+          }
+        },
+        {
+          "layer2_seed": [
+            "q+u=-1",
+            3,
+            "3/2"
+          ],
+          "row_count": 12,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 12
+          }
+        },
+        {
+          "layer2_seed": [
+            "q+u=1",
+            0,
+            "0/2"
+          ],
+          "row_count": 12,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 12
+          }
+        },
+        {
+          "layer2_seed": [
+            "q+u=1",
+            0,
+            "2/0"
+          ],
+          "row_count": 12,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 12
+          }
+        },
+        {
+          "layer2_seed": [
+            "q+u=1",
+            3,
+            "2/3"
+          ],
+          "row_count": 12,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 12
+          }
+        },
+        {
+          "layer2_seed": [
+            "q+u=1",
+            3,
+            "3/2"
+          ],
+          "row_count": 12,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 12
+          }
+        },
+        {
+          "layer2_seed": [
+            "q=-1",
+            0,
+            "0/2"
+          ],
+          "row_count": 12,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 12
+          }
+        },
+        {
+          "layer2_seed": [
+            "q=-1",
+            0,
+            "2/0"
+          ],
+          "row_count": 12,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 12
+          }
+        },
+        {
+          "layer2_seed": [
+            "q=-1",
+            3,
+            "2/3"
+          ],
+          "row_count": 12,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 12
+          }
+        },
+        {
+          "layer2_seed": [
+            "q=-1",
+            3,
+            "3/2"
+          ],
+          "row_count": 12,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 12
+          }
+        },
+        {
+          "layer2_seed": [
+            "q=-1",
+            4,
+            "2/4"
+          ],
+          "row_count": 12,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "cycle_only": 12
+          }
+        },
+        {
+          "layer2_seed": [
+            "q=-1",
+            4,
+            "4/2"
+          ],
+          "row_count": 12,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "cycle_only": 12
+          }
+        },
+        {
+          "layer2_seed": [
+            "u=-1",
+            0,
+            "0/2"
+          ],
+          "row_count": 12,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 12
+          }
+        },
+        {
+          "layer2_seed": [
+            "u=-1",
+            0,
+            "2/0"
+          ],
+          "row_count": 12,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 12
+          }
+        },
+        {
+          "layer2_seed": [
+            "u=-1",
+            3,
+            "2/3"
+          ],
+          "row_count": 12,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 12
+          }
+        },
+        {
+          "layer2_seed": [
+            "u=-1",
+            3,
+            "3/2"
+          ],
+          "row_count": 12,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 12
+          }
+        },
+        {
+          "layer2_seed": [
+            "w+u=2",
+            4,
+            "2/4"
+          ],
+          "row_count": 12,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "cycle_only": 12
+          }
+        },
+        {
+          "layer2_seed": [
+            "w+u=2",
+            4,
+            "4/2"
+          ],
+          "row_count": 12,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "cycle_only": 12
+          }
+        }
+      ],
+      "ordered_pair_monodromy_law_mixed": [
+        {
+          "ordered_pair": [
+            "0/3",
+            "3/0"
+          ],
+          "row_count": 32,
+          "unique_monodromy_signature_count": 1,
+          "monodromy_signatures": [
+            [
+              {
+                "m": 5,
+                "monodromies": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ]
+              },
+              {
+                "m": 7,
+                "monodromies": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 9,
+                "monodromies": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              }
+            ]
+          ],
+          "layer2_seeds": [
+            [
+              "q+u=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "q+u=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "q+u=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "q+u=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "q+u=1",
+              0,
+              "0/2"
+            ],
+            [
+              "q+u=1",
+              0,
+              "2/0"
+            ],
+            [
+              "q+u=1",
+              3,
+              "2/3"
+            ],
+            [
+              "q+u=1",
+              3,
+              "3/2"
+            ],
+            [
+              "q=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "q=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "q=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "q=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "u=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "u=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "u=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "u=-1",
+              3,
+              "3/2"
+            ]
+          ],
+          "predecessor_flags": [
+            "pred_sig1_wu2",
+            "pred_sig4_wu2"
+          ],
+          "layer3_bits": [
+            "q=-1"
+          ]
+        },
+        {
+          "ordered_pair": [
+            "0/3",
+            "3/3"
+          ],
+          "row_count": 32,
+          "unique_monodromy_signature_count": 1,
+          "monodromy_signatures": [
+            [
+              {
+                "m": 5,
+                "monodromies": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ]
+              },
+              {
+                "m": 7,
+                "monodromies": [
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6
+                ]
+              },
+              {
+                "m": 9,
+                "monodromies": [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ]
+              }
+            ]
+          ],
+          "layer2_seeds": [
+            [
+              "q+u=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "q+u=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "q+u=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "q+u=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "q+u=1",
+              0,
+              "0/2"
+            ],
+            [
+              "q+u=1",
+              0,
+              "2/0"
+            ],
+            [
+              "q+u=1",
+              3,
+              "2/3"
+            ],
+            [
+              "q+u=1",
+              3,
+              "3/2"
+            ],
+            [
+              "q=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "q=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "q=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "q=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "u=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "u=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "u=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "u=-1",
+              3,
+              "3/2"
+            ]
+          ],
+          "predecessor_flags": [
+            "pred_sig1_wu2",
+            "pred_sig4_wu2"
+          ],
+          "layer3_bits": [
+            "q=-1"
+          ]
+        },
+        {
+          "ordered_pair": [
+            "3/0",
+            "0/3"
+          ],
+          "row_count": 32,
+          "unique_monodromy_signature_count": 1,
+          "monodromy_signatures": [
+            [
+              {
+                "m": 5,
+                "monodromies": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ]
+              },
+              {
+                "m": 7,
+                "monodromies": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ]
+              },
+              {
+                "m": 9,
+                "monodromies": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ]
+              }
+            ]
+          ],
+          "layer2_seeds": [
+            [
+              "q+u=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "q+u=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "q+u=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "q+u=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "q+u=1",
+              0,
+              "0/2"
+            ],
+            [
+              "q+u=1",
+              0,
+              "2/0"
+            ],
+            [
+              "q+u=1",
+              3,
+              "2/3"
+            ],
+            [
+              "q+u=1",
+              3,
+              "3/2"
+            ],
+            [
+              "q=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "q=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "q=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "q=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "u=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "u=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "u=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "u=-1",
+              3,
+              "3/2"
+            ]
+          ],
+          "predecessor_flags": [
+            "pred_sig1_wu2",
+            "pred_sig4_wu2"
+          ],
+          "layer3_bits": [
+            "q=-1"
+          ]
+        },
+        {
+          "ordered_pair": [
+            "3/0",
+            "3/3"
+          ],
+          "row_count": 32,
+          "unique_monodromy_signature_count": 1,
+          "monodromy_signatures": [
+            [
+              {
+                "m": 5,
+                "monodromies": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "m": 7,
+                "monodromies": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "m": 9,
+                "monodromies": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              }
+            ]
+          ],
+          "layer2_seeds": [
+            [
+              "q+u=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "q+u=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "q+u=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "q+u=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "q+u=1",
+              0,
+              "0/2"
+            ],
+            [
+              "q+u=1",
+              0,
+              "2/0"
+            ],
+            [
+              "q+u=1",
+              3,
+              "2/3"
+            ],
+            [
+              "q+u=1",
+              3,
+              "3/2"
+            ],
+            [
+              "q=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "q=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "q=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "q=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "u=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "u=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "u=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "u=-1",
+              3,
+              "3/2"
+            ]
+          ],
+          "predecessor_flags": [
+            "pred_sig1_wu2",
+            "pred_sig4_wu2"
+          ],
+          "layer3_bits": [
+            "q=-1"
+          ]
+        },
+        {
+          "ordered_pair": [
+            "3/3",
+            "0/3"
+          ],
+          "row_count": 32,
+          "unique_monodromy_signature_count": 1,
+          "monodromy_signatures": [
+            [
+              {
+                "m": 5,
+                "monodromies": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "m": 7,
+                "monodromies": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "m": 9,
+                "monodromies": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              }
+            ]
+          ],
+          "layer2_seeds": [
+            [
+              "q+u=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "q+u=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "q+u=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "q+u=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "q+u=1",
+              0,
+              "0/2"
+            ],
+            [
+              "q+u=1",
+              0,
+              "2/0"
+            ],
+            [
+              "q+u=1",
+              3,
+              "2/3"
+            ],
+            [
+              "q+u=1",
+              3,
+              "3/2"
+            ],
+            [
+              "q=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "q=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "q=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "q=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "u=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "u=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "u=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "u=-1",
+              3,
+              "3/2"
+            ]
+          ],
+          "predecessor_flags": [
+            "pred_sig1_wu2",
+            "pred_sig4_wu2"
+          ],
+          "layer3_bits": [
+            "q=-1"
+          ]
+        },
+        {
+          "ordered_pair": [
+            "3/3",
+            "3/0"
+          ],
+          "row_count": 32,
+          "unique_monodromy_signature_count": 1,
+          "monodromy_signatures": [
+            [
+              {
+                "m": 5,
+                "monodromies": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ]
+              },
+              {
+                "m": 7,
+                "monodromies": [
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6
+                ]
+              },
+              {
+                "m": 9,
+                "monodromies": [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ]
+              }
+            ]
+          ],
+          "layer2_seeds": [
+            [
+              "q+u=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "q+u=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "q+u=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "q+u=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "q+u=1",
+              0,
+              "0/2"
+            ],
+            [
+              "q+u=1",
+              0,
+              "2/0"
+            ],
+            [
+              "q+u=1",
+              3,
+              "2/3"
+            ],
+            [
+              "q+u=1",
+              3,
+              "3/2"
+            ],
+            [
+              "q=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "q=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "q=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "q=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "u=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "u=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "u=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "u=-1",
+              3,
+              "3/2"
+            ]
+          ],
+          "predecessor_flags": [
+            "pred_sig1_wu2",
+            "pred_sig4_wu2"
+          ],
+          "layer3_bits": [
+            "q=-1"
+          ]
+        }
+      ],
+      "alt4_rescue_summary": [
+        {
+          "layer2_seed": [
+            "q=-1",
+            4,
+            "2/4"
+          ],
+          "layer3_bit_name": "q=-1",
+          "overall_kinds": {
+            "cycle_only": 12
+          },
+          "cycle_signature": [
+            {
+              "m": 5,
+              "U_cycle_count": 5,
+              "U_cycle_lengths": [
+                5,
+                5,
+                5,
+                5,
+                5
+              ]
+            },
+            {
+              "m": 7,
+              "U_cycle_count": 7,
+              "U_cycle_lengths": [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ]
+            },
+            {
+              "m": 9,
+              "U_cycle_count": 9,
+              "U_cycle_lengths": [
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "layer2_seed": [
+            "q=-1",
+            4,
+            "4/2"
+          ],
+          "layer3_bit_name": "q=-1",
+          "overall_kinds": {
+            "cycle_only": 12
+          },
+          "cycle_signature": [
+            {
+              "m": 5,
+              "U_cycle_count": 5,
+              "U_cycle_lengths": [
+                5,
+                5,
+                5,
+                5,
+                5
+              ]
+            },
+            {
+              "m": 7,
+              "U_cycle_count": 7,
+              "U_cycle_lengths": [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ]
+            },
+            {
+              "m": 9,
+              "U_cycle_count": 9,
+              "U_cycle_lengths": [
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "layer2_seed": [
+            "w+u=2",
+            4,
+            "2/4"
+          ],
+          "layer3_bit_name": "q=-1",
+          "overall_kinds": {
+            "cycle_only": 12
+          },
+          "cycle_signature": [
+            {
+              "m": 5,
+              "U_cycle_count": 5,
+              "U_cycle_lengths": [
+                5,
+                5,
+                5,
+                5,
+                5
+              ]
+            },
+            {
+              "m": 7,
+              "U_cycle_count": 7,
+              "U_cycle_lengths": [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ]
+            },
+            {
+              "m": 9,
+              "U_cycle_count": 9,
+              "U_cycle_lengths": [
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "layer2_seed": [
+            "w+u=2",
+            4,
+            "4/2"
+          ],
+          "layer3_bit_name": "q=-1",
+          "overall_kinds": {
+            "cycle_only": 12
+          },
+          "cycle_signature": [
+            {
+              "m": 5,
+              "U_cycle_count": 5,
+              "U_cycle_lengths": [
+                5,
+                5,
+                5,
+                5,
+                5
+              ]
+            },
+            {
+              "m": 7,
+              "U_cycle_count": 7,
+              "U_cycle_lengths": [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ]
+            },
+            {
+              "m": 9,
+              "U_cycle_count": 9,
+              "U_cycle_lengths": [
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "stage2": {
+      "stage_name": "stage2",
+      "clean_strict_count": 960,
+      "mixed_count": 912,
+      "cycle_only_count": 48,
+      "unique_clean_strict_cycle_signature_count": 1,
+      "unique_mixed_cycle_signature_count": 1,
+      "unique_cycle_only_cycle_signature_count": 1,
+      "cycle_signatures_clean_strict": [
+        {
+          "signature": [
+            {
+              "m": 5,
+              "U_cycle_count": 5,
+              "U_cycle_lengths": [
+                5,
+                5,
+                5,
+                5,
+                5
+              ]
+            },
+            {
+              "m": 7,
+              "U_cycle_count": 7,
+              "U_cycle_lengths": [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ]
+            },
+            {
+              "m": 9,
+              "U_cycle_count": 9,
+              "U_cycle_lengths": [
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9
+              ]
+            }
+          ],
+          "row_count": 960,
+          "overall_kinds": {
+            "both": 912,
+            "cycle_only": 48
+          },
+          "layer2_seeds": [
+            [
+              "q+u=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "q+u=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "q+u=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "q+u=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "q+u=1",
+              0,
+              "0/2"
+            ],
+            [
+              "q+u=1",
+              0,
+              "2/0"
+            ],
+            [
+              "q+u=1",
+              3,
+              "2/3"
+            ],
+            [
+              "q+u=1",
+              3,
+              "3/2"
+            ],
+            [
+              "q=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "q=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "q=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "q=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "q=-1",
+              4,
+              "2/4"
+            ],
+            [
+              "q=-1",
+              4,
+              "4/2"
+            ],
+            [
+              "u=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "u=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "u=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "u=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "w+u=2",
+              4,
+              "2/4"
+            ],
+            [
+              "w+u=2",
+              4,
+              "4/2"
+            ]
+          ],
+          "layer3_gadgets": [
+            [
+              "q+u=-1",
+              "pred_sig1_wu2",
+              "0/3",
+              "3/0"
+            ],
+            [
+              "q+u=-1",
+              "pred_sig1_wu2",
+              "0/3",
+              "3/3"
+            ],
+            [
+              "q+u=-1",
+              "pred_sig1_wu2",
+              "3/0",
+              "0/3"
+            ],
+            [
+              "q+u=-1",
+              "pred_sig1_wu2",
+              "3/0",
+              "3/3"
+            ],
+            [
+              "q+u=-1",
+              "pred_sig1_wu2",
+              "3/3",
+              "0/3"
+            ],
+            [
+              "q+u=-1",
+              "pred_sig1_wu2",
+              "3/3",
+              "3/0"
+            ],
+            [
+              "q+u=-1",
+              "pred_sig4_wu2",
+              "0/3",
+              "3/0"
+            ],
+            [
+              "q+u=-1",
+              "pred_sig4_wu2",
+              "0/3",
+              "3/3"
+            ],
+            [
+              "q+u=-1",
+              "pred_sig4_wu2",
+              "3/0",
+              "0/3"
+            ],
+            [
+              "q+u=-1",
+              "pred_sig4_wu2",
+              "3/0",
+              "3/3"
+            ],
+            [
+              "q+u=-1",
+              "pred_sig4_wu2",
+              "3/3",
+              "0/3"
+            ],
+            [
+              "q+u=-1",
+              "pred_sig4_wu2",
+              "3/3",
+              "3/0"
+            ],
+            [
+              "q+u=1",
+              "pred_sig1_wu2",
+              "0/3",
+              "3/0"
+            ],
+            [
+              "q+u=1",
+              "pred_sig1_wu2",
+              "0/3",
+              "3/3"
+            ],
+            [
+              "q+u=1",
+              "pred_sig1_wu2",
+              "3/0",
+              "0/3"
+            ],
+            [
+              "q+u=1",
+              "pred_sig1_wu2",
+              "3/0",
+              "3/3"
+            ],
+            [
+              "q+u=1",
+              "pred_sig1_wu2",
+              "3/3",
+              "0/3"
+            ],
+            [
+              "q+u=1",
+              "pred_sig1_wu2",
+              "3/3",
+              "3/0"
+            ],
+            [
+              "q+u=1",
+              "pred_sig4_wu2",
+              "0/3",
+              "3/0"
+            ],
+            [
+              "q+u=1",
+              "pred_sig4_wu2",
+              "0/3",
+              "3/3"
+            ],
+            [
+              "q+u=1",
+              "pred_sig4_wu2",
+              "3/0",
+              "0/3"
+            ],
+            [
+              "q+u=1",
+              "pred_sig4_wu2",
+              "3/0",
+              "3/3"
+            ],
+            [
+              "q+u=1",
+              "pred_sig4_wu2",
+              "3/3",
+              "0/3"
+            ],
+            [
+              "q+u=1",
+              "pred_sig4_wu2",
+              "3/3",
+              "3/0"
+            ]
+          ]
+        }
+      ],
+      "seed_signature_summary": [
+        {
+          "layer2_seed": [
+            "q+u=-1",
+            0,
+            "0/2"
+          ],
+          "row_count": 48,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 48
+          }
+        },
+        {
+          "layer2_seed": [
+            "q+u=-1",
+            0,
+            "2/0"
+          ],
+          "row_count": 48,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 48
+          }
+        },
+        {
+          "layer2_seed": [
+            "q+u=-1",
+            3,
+            "2/3"
+          ],
+          "row_count": 48,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 48
+          }
+        },
+        {
+          "layer2_seed": [
+            "q+u=-1",
+            3,
+            "3/2"
+          ],
+          "row_count": 48,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 48
+          }
+        },
+        {
+          "layer2_seed": [
+            "q+u=1",
+            0,
+            "0/2"
+          ],
+          "row_count": 48,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 48
+          }
+        },
+        {
+          "layer2_seed": [
+            "q+u=1",
+            0,
+            "2/0"
+          ],
+          "row_count": 48,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 48
+          }
+        },
+        {
+          "layer2_seed": [
+            "q+u=1",
+            3,
+            "2/3"
+          ],
+          "row_count": 48,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 48
+          }
+        },
+        {
+          "layer2_seed": [
+            "q+u=1",
+            3,
+            "3/2"
+          ],
+          "row_count": 48,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 48
+          }
+        },
+        {
+          "layer2_seed": [
+            "q=-1",
+            0,
+            "0/2"
+          ],
+          "row_count": 48,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 48
+          }
+        },
+        {
+          "layer2_seed": [
+            "q=-1",
+            0,
+            "2/0"
+          ],
+          "row_count": 48,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 48
+          }
+        },
+        {
+          "layer2_seed": [
+            "q=-1",
+            3,
+            "2/3"
+          ],
+          "row_count": 48,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 48
+          }
+        },
+        {
+          "layer2_seed": [
+            "q=-1",
+            3,
+            "3/2"
+          ],
+          "row_count": 48,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 48
+          }
+        },
+        {
+          "layer2_seed": [
+            "q=-1",
+            4,
+            "2/4"
+          ],
+          "row_count": 48,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 36,
+            "cycle_only": 12
+          }
+        },
+        {
+          "layer2_seed": [
+            "q=-1",
+            4,
+            "4/2"
+          ],
+          "row_count": 48,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 36,
+            "cycle_only": 12
+          }
+        },
+        {
+          "layer2_seed": [
+            "u=-1",
+            0,
+            "0/2"
+          ],
+          "row_count": 48,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 48
+          }
+        },
+        {
+          "layer2_seed": [
+            "u=-1",
+            0,
+            "2/0"
+          ],
+          "row_count": 48,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 48
+          }
+        },
+        {
+          "layer2_seed": [
+            "u=-1",
+            3,
+            "2/3"
+          ],
+          "row_count": 48,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 48
+          }
+        },
+        {
+          "layer2_seed": [
+            "u=-1",
+            3,
+            "3/2"
+          ],
+          "row_count": 48,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 48
+          }
+        },
+        {
+          "layer2_seed": [
+            "w+u=2",
+            4,
+            "2/4"
+          ],
+          "row_count": 48,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 36,
+            "cycle_only": 12
+          }
+        },
+        {
+          "layer2_seed": [
+            "w+u=2",
+            4,
+            "4/2"
+          ],
+          "row_count": 48,
+          "unique_cycle_signature_count": 1,
+          "cycle_signatures": [
+            [
+              {
+                "m": 5,
+                "U_cycle_count": 5,
+                "U_cycle_lengths": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 7,
+                "U_cycle_count": 7,
+                "U_cycle_lengths": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              },
+              {
+                "m": 9,
+                "U_cycle_count": 9,
+                "U_cycle_lengths": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              }
+            ]
+          ],
+          "overall_kinds": {
+            "both": 36,
+            "cycle_only": 12
+          }
+        }
+      ],
+      "ordered_pair_monodromy_law_mixed": [
+        {
+          "ordered_pair": [
+            "0/3",
+            "3/0"
+          ],
+          "row_count": 152,
+          "unique_monodromy_signature_count": 1,
+          "monodromy_signatures": [
+            [
+              {
+                "m": 5,
+                "monodromies": [
+                  3,
+                  3,
+                  3,
+                  3,
+                  3
+                ]
+              },
+              {
+                "m": 7,
+                "monodromies": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              },
+              {
+                "m": 9,
+                "monodromies": [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ]
+              }
+            ]
+          ],
+          "layer2_seeds": [
+            [
+              "q+u=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "q+u=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "q+u=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "q+u=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "q+u=1",
+              0,
+              "0/2"
+            ],
+            [
+              "q+u=1",
+              0,
+              "2/0"
+            ],
+            [
+              "q+u=1",
+              3,
+              "2/3"
+            ],
+            [
+              "q+u=1",
+              3,
+              "3/2"
+            ],
+            [
+              "q=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "q=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "q=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "q=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "q=-1",
+              4,
+              "2/4"
+            ],
+            [
+              "q=-1",
+              4,
+              "4/2"
+            ],
+            [
+              "u=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "u=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "u=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "u=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "w+u=2",
+              4,
+              "2/4"
+            ],
+            [
+              "w+u=2",
+              4,
+              "4/2"
+            ]
+          ],
+          "predecessor_flags": [
+            "pred_sig1_wu2",
+            "pred_sig4_wu2"
+          ],
+          "layer3_bits": [
+            "q+u=-1",
+            "q+u=1",
+            "q=-1",
+            "u=-1"
+          ]
+        },
+        {
+          "ordered_pair": [
+            "0/3",
+            "3/3"
+          ],
+          "row_count": 152,
+          "unique_monodromy_signature_count": 1,
+          "monodromy_signatures": [
+            [
+              {
+                "m": 5,
+                "monodromies": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ]
+              },
+              {
+                "m": 7,
+                "monodromies": [
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6
+                ]
+              },
+              {
+                "m": 9,
+                "monodromies": [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ]
+              }
+            ]
+          ],
+          "layer2_seeds": [
+            [
+              "q+u=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "q+u=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "q+u=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "q+u=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "q+u=1",
+              0,
+              "0/2"
+            ],
+            [
+              "q+u=1",
+              0,
+              "2/0"
+            ],
+            [
+              "q+u=1",
+              3,
+              "2/3"
+            ],
+            [
+              "q+u=1",
+              3,
+              "3/2"
+            ],
+            [
+              "q=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "q=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "q=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "q=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "q=-1",
+              4,
+              "2/4"
+            ],
+            [
+              "q=-1",
+              4,
+              "4/2"
+            ],
+            [
+              "u=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "u=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "u=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "u=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "w+u=2",
+              4,
+              "2/4"
+            ],
+            [
+              "w+u=2",
+              4,
+              "4/2"
+            ]
+          ],
+          "predecessor_flags": [
+            "pred_sig1_wu2",
+            "pred_sig4_wu2"
+          ],
+          "layer3_bits": [
+            "q+u=-1",
+            "q+u=1",
+            "q=-1",
+            "u=-1"
+          ]
+        },
+        {
+          "ordered_pair": [
+            "3/0",
+            "0/3"
+          ],
+          "row_count": 152,
+          "unique_monodromy_signature_count": 1,
+          "monodromy_signatures": [
+            [
+              {
+                "m": 5,
+                "monodromies": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ]
+              },
+              {
+                "m": 7,
+                "monodromies": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ]
+              },
+              {
+                "m": 9,
+                "monodromies": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ]
+              }
+            ]
+          ],
+          "layer2_seeds": [
+            [
+              "q+u=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "q+u=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "q+u=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "q+u=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "q+u=1",
+              0,
+              "0/2"
+            ],
+            [
+              "q+u=1",
+              0,
+              "2/0"
+            ],
+            [
+              "q+u=1",
+              3,
+              "2/3"
+            ],
+            [
+              "q+u=1",
+              3,
+              "3/2"
+            ],
+            [
+              "q=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "q=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "q=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "q=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "q=-1",
+              4,
+              "2/4"
+            ],
+            [
+              "q=-1",
+              4,
+              "4/2"
+            ],
+            [
+              "u=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "u=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "u=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "u=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "w+u=2",
+              4,
+              "2/4"
+            ],
+            [
+              "w+u=2",
+              4,
+              "4/2"
+            ]
+          ],
+          "predecessor_flags": [
+            "pred_sig1_wu2",
+            "pred_sig4_wu2"
+          ],
+          "layer3_bits": [
+            "q+u=-1",
+            "q+u=1",
+            "q=-1",
+            "u=-1"
+          ]
+        },
+        {
+          "ordered_pair": [
+            "3/0",
+            "3/3"
+          ],
+          "row_count": 152,
+          "unique_monodromy_signature_count": 1,
+          "monodromy_signatures": [
+            [
+              {
+                "m": 5,
+                "monodromies": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "m": 7,
+                "monodromies": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "m": 9,
+                "monodromies": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              }
+            ]
+          ],
+          "layer2_seeds": [
+            [
+              "q+u=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "q+u=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "q+u=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "q+u=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "q+u=1",
+              0,
+              "0/2"
+            ],
+            [
+              "q+u=1",
+              0,
+              "2/0"
+            ],
+            [
+              "q+u=1",
+              3,
+              "2/3"
+            ],
+            [
+              "q+u=1",
+              3,
+              "3/2"
+            ],
+            [
+              "q=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "q=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "q=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "q=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "q=-1",
+              4,
+              "2/4"
+            ],
+            [
+              "q=-1",
+              4,
+              "4/2"
+            ],
+            [
+              "u=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "u=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "u=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "u=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "w+u=2",
+              4,
+              "2/4"
+            ],
+            [
+              "w+u=2",
+              4,
+              "4/2"
+            ]
+          ],
+          "predecessor_flags": [
+            "pred_sig1_wu2",
+            "pred_sig4_wu2"
+          ],
+          "layer3_bits": [
+            "q+u=-1",
+            "q+u=1",
+            "q=-1",
+            "u=-1"
+          ]
+        },
+        {
+          "ordered_pair": [
+            "3/3",
+            "0/3"
+          ],
+          "row_count": 152,
+          "unique_monodromy_signature_count": 1,
+          "monodromy_signatures": [
+            [
+              {
+                "m": 5,
+                "monodromies": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "m": 7,
+                "monodromies": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "m": 9,
+                "monodromies": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              }
+            ]
+          ],
+          "layer2_seeds": [
+            [
+              "q+u=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "q+u=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "q+u=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "q+u=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "q+u=1",
+              0,
+              "0/2"
+            ],
+            [
+              "q+u=1",
+              0,
+              "2/0"
+            ],
+            [
+              "q+u=1",
+              3,
+              "2/3"
+            ],
+            [
+              "q+u=1",
+              3,
+              "3/2"
+            ],
+            [
+              "q=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "q=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "q=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "q=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "q=-1",
+              4,
+              "2/4"
+            ],
+            [
+              "q=-1",
+              4,
+              "4/2"
+            ],
+            [
+              "u=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "u=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "u=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "u=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "w+u=2",
+              4,
+              "2/4"
+            ],
+            [
+              "w+u=2",
+              4,
+              "4/2"
+            ]
+          ],
+          "predecessor_flags": [
+            "pred_sig1_wu2",
+            "pred_sig4_wu2"
+          ],
+          "layer3_bits": [
+            "q+u=-1",
+            "q+u=1",
+            "q=-1",
+            "u=-1"
+          ]
+        },
+        {
+          "ordered_pair": [
+            "3/3",
+            "3/0"
+          ],
+          "row_count": 152,
+          "unique_monodromy_signature_count": 1,
+          "monodromy_signatures": [
+            [
+              {
+                "m": 5,
+                "monodromies": [
+                  4,
+                  4,
+                  4,
+                  4,
+                  4
+                ]
+              },
+              {
+                "m": 7,
+                "monodromies": [
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6,
+                  6
+                ]
+              },
+              {
+                "m": 9,
+                "monodromies": [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ]
+              }
+            ]
+          ],
+          "layer2_seeds": [
+            [
+              "q+u=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "q+u=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "q+u=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "q+u=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "q+u=1",
+              0,
+              "0/2"
+            ],
+            [
+              "q+u=1",
+              0,
+              "2/0"
+            ],
+            [
+              "q+u=1",
+              3,
+              "2/3"
+            ],
+            [
+              "q+u=1",
+              3,
+              "3/2"
+            ],
+            [
+              "q=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "q=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "q=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "q=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "q=-1",
+              4,
+              "2/4"
+            ],
+            [
+              "q=-1",
+              4,
+              "4/2"
+            ],
+            [
+              "u=-1",
+              0,
+              "0/2"
+            ],
+            [
+              "u=-1",
+              0,
+              "2/0"
+            ],
+            [
+              "u=-1",
+              3,
+              "2/3"
+            ],
+            [
+              "u=-1",
+              3,
+              "3/2"
+            ],
+            [
+              "w+u=2",
+              4,
+              "2/4"
+            ],
+            [
+              "w+u=2",
+              4,
+              "4/2"
+            ]
+          ],
+          "predecessor_flags": [
+            "pred_sig1_wu2",
+            "pred_sig4_wu2"
+          ],
+          "layer3_bits": [
+            "q+u=-1",
+            "q+u=1",
+            "q=-1",
+            "u=-1"
+          ]
+        }
+      ],
+      "alt4_rescue_summary": [
+        {
+          "layer2_seed": [
+            "q=-1",
+            4,
+            "2/4"
+          ],
+          "layer3_bit_name": "q+u=-1",
+          "overall_kinds": {
+            "both": 12
+          },
+          "cycle_signature": [
+            {
+              "m": 5,
+              "U_cycle_count": 5,
+              "U_cycle_lengths": [
+                5,
+                5,
+                5,
+                5,
+                5
+              ]
+            },
+            {
+              "m": 7,
+              "U_cycle_count": 7,
+              "U_cycle_lengths": [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ]
+            },
+            {
+              "m": 9,
+              "U_cycle_count": 9,
+              "U_cycle_lengths": [
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "layer2_seed": [
+            "q=-1",
+            4,
+            "2/4"
+          ],
+          "layer3_bit_name": "q+u=1",
+          "overall_kinds": {
+            "both": 12
+          },
+          "cycle_signature": [
+            {
+              "m": 5,
+              "U_cycle_count": 5,
+              "U_cycle_lengths": [
+                5,
+                5,
+                5,
+                5,
+                5
+              ]
+            },
+            {
+              "m": 7,
+              "U_cycle_count": 7,
+              "U_cycle_lengths": [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ]
+            },
+            {
+              "m": 9,
+              "U_cycle_count": 9,
+              "U_cycle_lengths": [
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "layer2_seed": [
+            "q=-1",
+            4,
+            "2/4"
+          ],
+          "layer3_bit_name": "q=-1",
+          "overall_kinds": {
+            "cycle_only": 12
+          },
+          "cycle_signature": [
+            {
+              "m": 5,
+              "U_cycle_count": 5,
+              "U_cycle_lengths": [
+                5,
+                5,
+                5,
+                5,
+                5
+              ]
+            },
+            {
+              "m": 7,
+              "U_cycle_count": 7,
+              "U_cycle_lengths": [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ]
+            },
+            {
+              "m": 9,
+              "U_cycle_count": 9,
+              "U_cycle_lengths": [
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "layer2_seed": [
+            "q=-1",
+            4,
+            "2/4"
+          ],
+          "layer3_bit_name": "u=-1",
+          "overall_kinds": {
+            "both": 12
+          },
+          "cycle_signature": [
+            {
+              "m": 5,
+              "U_cycle_count": 5,
+              "U_cycle_lengths": [
+                5,
+                5,
+                5,
+                5,
+                5
+              ]
+            },
+            {
+              "m": 7,
+              "U_cycle_count": 7,
+              "U_cycle_lengths": [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ]
+            },
+            {
+              "m": 9,
+              "U_cycle_count": 9,
+              "U_cycle_lengths": [
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "layer2_seed": [
+            "q=-1",
+            4,
+            "4/2"
+          ],
+          "layer3_bit_name": "q+u=-1",
+          "overall_kinds": {
+            "both": 12
+          },
+          "cycle_signature": [
+            {
+              "m": 5,
+              "U_cycle_count": 5,
+              "U_cycle_lengths": [
+                5,
+                5,
+                5,
+                5,
+                5
+              ]
+            },
+            {
+              "m": 7,
+              "U_cycle_count": 7,
+              "U_cycle_lengths": [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ]
+            },
+            {
+              "m": 9,
+              "U_cycle_count": 9,
+              "U_cycle_lengths": [
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "layer2_seed": [
+            "q=-1",
+            4,
+            "4/2"
+          ],
+          "layer3_bit_name": "q+u=1",
+          "overall_kinds": {
+            "both": 12
+          },
+          "cycle_signature": [
+            {
+              "m": 5,
+              "U_cycle_count": 5,
+              "U_cycle_lengths": [
+                5,
+                5,
+                5,
+                5,
+                5
+              ]
+            },
+            {
+              "m": 7,
+              "U_cycle_count": 7,
+              "U_cycle_lengths": [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ]
+            },
+            {
+              "m": 9,
+              "U_cycle_count": 9,
+              "U_cycle_lengths": [
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "layer2_seed": [
+            "q=-1",
+            4,
+            "4/2"
+          ],
+          "layer3_bit_name": "q=-1",
+          "overall_kinds": {
+            "cycle_only": 12
+          },
+          "cycle_signature": [
+            {
+              "m": 5,
+              "U_cycle_count": 5,
+              "U_cycle_lengths": [
+                5,
+                5,
+                5,
+                5,
+                5
+              ]
+            },
+            {
+              "m": 7,
+              "U_cycle_count": 7,
+              "U_cycle_lengths": [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ]
+            },
+            {
+              "m": 9,
+              "U_cycle_count": 9,
+              "U_cycle_lengths": [
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "layer2_seed": [
+            "q=-1",
+            4,
+            "4/2"
+          ],
+          "layer3_bit_name": "u=-1",
+          "overall_kinds": {
+            "both": 12
+          },
+          "cycle_signature": [
+            {
+              "m": 5,
+              "U_cycle_count": 5,
+              "U_cycle_lengths": [
+                5,
+                5,
+                5,
+                5,
+                5
+              ]
+            },
+            {
+              "m": 7,
+              "U_cycle_count": 7,
+              "U_cycle_lengths": [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ]
+            },
+            {
+              "m": 9,
+              "U_cycle_count": 9,
+              "U_cycle_lengths": [
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "layer2_seed": [
+            "w+u=2",
+            4,
+            "2/4"
+          ],
+          "layer3_bit_name": "q+u=-1",
+          "overall_kinds": {
+            "both": 12
+          },
+          "cycle_signature": [
+            {
+              "m": 5,
+              "U_cycle_count": 5,
+              "U_cycle_lengths": [
+                5,
+                5,
+                5,
+                5,
+                5
+              ]
+            },
+            {
+              "m": 7,
+              "U_cycle_count": 7,
+              "U_cycle_lengths": [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ]
+            },
+            {
+              "m": 9,
+              "U_cycle_count": 9,
+              "U_cycle_lengths": [
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "layer2_seed": [
+            "w+u=2",
+            4,
+            "2/4"
+          ],
+          "layer3_bit_name": "q+u=1",
+          "overall_kinds": {
+            "both": 12
+          },
+          "cycle_signature": [
+            {
+              "m": 5,
+              "U_cycle_count": 5,
+              "U_cycle_lengths": [
+                5,
+                5,
+                5,
+                5,
+                5
+              ]
+            },
+            {
+              "m": 7,
+              "U_cycle_count": 7,
+              "U_cycle_lengths": [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ]
+            },
+            {
+              "m": 9,
+              "U_cycle_count": 9,
+              "U_cycle_lengths": [
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "layer2_seed": [
+            "w+u=2",
+            4,
+            "2/4"
+          ],
+          "layer3_bit_name": "q=-1",
+          "overall_kinds": {
+            "cycle_only": 12
+          },
+          "cycle_signature": [
+            {
+              "m": 5,
+              "U_cycle_count": 5,
+              "U_cycle_lengths": [
+                5,
+                5,
+                5,
+                5,
+                5
+              ]
+            },
+            {
+              "m": 7,
+              "U_cycle_count": 7,
+              "U_cycle_lengths": [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ]
+            },
+            {
+              "m": 9,
+              "U_cycle_count": 9,
+              "U_cycle_lengths": [
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "layer2_seed": [
+            "w+u=2",
+            4,
+            "2/4"
+          ],
+          "layer3_bit_name": "u=-1",
+          "overall_kinds": {
+            "both": 12
+          },
+          "cycle_signature": [
+            {
+              "m": 5,
+              "U_cycle_count": 5,
+              "U_cycle_lengths": [
+                5,
+                5,
+                5,
+                5,
+                5
+              ]
+            },
+            {
+              "m": 7,
+              "U_cycle_count": 7,
+              "U_cycle_lengths": [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ]
+            },
+            {
+              "m": 9,
+              "U_cycle_count": 9,
+              "U_cycle_lengths": [
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "layer2_seed": [
+            "w+u=2",
+            4,
+            "4/2"
+          ],
+          "layer3_bit_name": "q+u=-1",
+          "overall_kinds": {
+            "both": 12
+          },
+          "cycle_signature": [
+            {
+              "m": 5,
+              "U_cycle_count": 5,
+              "U_cycle_lengths": [
+                5,
+                5,
+                5,
+                5,
+                5
+              ]
+            },
+            {
+              "m": 7,
+              "U_cycle_count": 7,
+              "U_cycle_lengths": [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ]
+            },
+            {
+              "m": 9,
+              "U_cycle_count": 9,
+              "U_cycle_lengths": [
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "layer2_seed": [
+            "w+u=2",
+            4,
+            "4/2"
+          ],
+          "layer3_bit_name": "q+u=1",
+          "overall_kinds": {
+            "both": 12
+          },
+          "cycle_signature": [
+            {
+              "m": 5,
+              "U_cycle_count": 5,
+              "U_cycle_lengths": [
+                5,
+                5,
+                5,
+                5,
+                5
+              ]
+            },
+            {
+              "m": 7,
+              "U_cycle_count": 7,
+              "U_cycle_lengths": [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ]
+            },
+            {
+              "m": 9,
+              "U_cycle_count": 9,
+              "U_cycle_lengths": [
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "layer2_seed": [
+            "w+u=2",
+            4,
+            "4/2"
+          ],
+          "layer3_bit_name": "q=-1",
+          "overall_kinds": {
+            "cycle_only": 12
+          },
+          "cycle_signature": [
+            {
+              "m": 5,
+              "U_cycle_count": 5,
+              "U_cycle_lengths": [
+                5,
+                5,
+                5,
+                5,
+                5
+              ]
+            },
+            {
+              "m": 7,
+              "U_cycle_count": 7,
+              "U_cycle_lengths": [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ]
+            },
+            {
+              "m": 9,
+              "U_cycle_count": 9,
+              "U_cycle_lengths": [
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "layer2_seed": [
+            "w+u=2",
+            4,
+            "4/2"
+          ],
+          "layer3_bit_name": "u=-1",
+          "overall_kinds": {
+            "both": 12
+          },
+          "cycle_signature": [
+            {
+              "m": 5,
+              "U_cycle_count": 5,
+              "U_cycle_lengths": [
+                5,
+                5,
+                5,
+                5,
+                5
+              ]
+            },
+            {
+              "m": 7,
+              "U_cycle_count": 7,
+              "U_cycle_lengths": [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ]
+            },
+            {
+              "m": 9,
+              "U_cycle_count": 9,
+              "U_cycle_lengths": [
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "stability_spot_checks": {
+      "source": "artifacts/d5_strong_cycle_mix_009/data/validation_summary.json",
+      "spot_check_count": 12,
+      "unique_cycle_signature_count": 1,
+      "unique_monodromy_signature_count": 4,
+      "overall_kinds": {
+        "both": 12
+      },
+      "cycle_signatures": [
+        {
+          "signature": [
+            {
+              "m": 11,
+              "U_cycle_count": 11,
+              "U_cycle_lengths": [
+                11,
+                11,
+                11,
+                11,
+                11,
+                11,
+                11,
+                11,
+                11,
+                11,
+                11
+              ]
+            },
+            {
+              "m": 13,
+              "U_cycle_count": 13,
+              "U_cycle_lengths": [
+                13,
+                13,
+                13,
+                13,
+                13,
+                13,
+                13,
+                13,
+                13,
+                13,
+                13,
+                13,
+                13
+              ]
+            }
+          ],
+          "row_count": 12,
+          "overall_kinds": {
+            "both": 12
+          },
+          "layer2_seeds": [
+            [
+              "q+u=-1",
+              0,
+              "0/2"
+            ]
+          ],
+          "layer3_gadgets": [
+            [
+              "q=-1",
+              "pred_sig1_wu2",
+              "0/3",
+              "3/0"
+            ],
+            [
+              "q=-1",
+              "pred_sig1_wu2",
+              "0/3",
+              "3/3"
+            ],
+            [
+              "q=-1",
+              "pred_sig1_wu2",
+              "3/0",
+              "0/3"
+            ],
+            [
+              "q=-1",
+              "pred_sig1_wu2",
+              "3/0",
+              "3/3"
+            ],
+            [
+              "q=-1",
+              "pred_sig1_wu2",
+              "3/3",
+              "0/3"
+            ],
+            [
+              "q=-1",
+              "pred_sig1_wu2",
+              "3/3",
+              "3/0"
+            ],
+            [
+              "q=-1",
+              "pred_sig4_wu2",
+              "0/3",
+              "3/0"
+            ],
+            [
+              "q=-1",
+              "pred_sig4_wu2",
+              "0/3",
+              "3/3"
+            ],
+            [
+              "q=-1",
+              "pred_sig4_wu2",
+              "3/0",
+              "0/3"
+            ],
+            [
+              "q=-1",
+              "pred_sig4_wu2",
+              "3/0",
+              "3/3"
+            ],
+            [
+              "q=-1",
+              "pred_sig4_wu2",
+              "3/3",
+              "0/3"
+            ],
+            [
+              "q=-1",
+              "pred_sig4_wu2",
+              "3/3",
+              "3/0"
+            ]
+          ]
+        }
+      ],
+      "ordered_pair_monodromy_law": [
+        {
+          "ordered_pair": [
+            "0/3",
+            "3/0"
+          ],
+          "row_count": 2,
+          "unique_monodromy_signature_count": 1,
+          "monodromy_signatures": [
+            [
+              {
+                "m": 11,
+                "monodromies": [
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9,
+                  9
+                ]
+              },
+              {
+                "m": 13,
+                "monodromies": [
+                  11,
+                  11,
+                  11,
+                  11,
+                  11,
+                  11,
+                  11,
+                  11,
+                  11,
+                  11,
+                  11,
+                  11,
+                  11
+                ]
+              }
+            ]
+          ],
+          "layer2_seeds": [
+            [
+              "q+u=-1",
+              0,
+              "0/2"
+            ]
+          ],
+          "predecessor_flags": [
+            "pred_sig1_wu2",
+            "pred_sig4_wu2"
+          ],
+          "layer3_bits": [
+            "q=-1"
+          ]
+        },
+        {
+          "ordered_pair": [
+            "0/3",
+            "3/3"
+          ],
+          "row_count": 2,
+          "unique_monodromy_signature_count": 1,
+          "monodromy_signatures": [
+            [
+              {
+                "m": 11,
+                "monodromies": [
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10
+                ]
+              },
+              {
+                "m": 13,
+                "monodromies": [
+                  12,
+                  12,
+                  12,
+                  12,
+                  12,
+                  12,
+                  12,
+                  12,
+                  12,
+                  12,
+                  12,
+                  12,
+                  12
+                ]
+              }
+            ]
+          ],
+          "layer2_seeds": [
+            [
+              "q+u=-1",
+              0,
+              "0/2"
+            ]
+          ],
+          "predecessor_flags": [
+            "pred_sig1_wu2",
+            "pred_sig4_wu2"
+          ],
+          "layer3_bits": [
+            "q=-1"
+          ]
+        },
+        {
+          "ordered_pair": [
+            "3/0",
+            "0/3"
+          ],
+          "row_count": 2,
+          "unique_monodromy_signature_count": 1,
+          "monodromy_signatures": [
+            [
+              {
+                "m": 11,
+                "monodromies": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ]
+              },
+              {
+                "m": 13,
+                "monodromies": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ]
+              }
+            ]
+          ],
+          "layer2_seeds": [
+            [
+              "q+u=-1",
+              0,
+              "0/2"
+            ]
+          ],
+          "predecessor_flags": [
+            "pred_sig1_wu2",
+            "pred_sig4_wu2"
+          ],
+          "layer3_bits": [
+            "q=-1"
+          ]
+        },
+        {
+          "ordered_pair": [
+            "3/0",
+            "3/3"
+          ],
+          "row_count": 2,
+          "unique_monodromy_signature_count": 1,
+          "monodromy_signatures": [
+            [
+              {
+                "m": 11,
+                "monodromies": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "m": 13,
+                "monodromies": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              }
+            ]
+          ],
+          "layer2_seeds": [
+            [
+              "q+u=-1",
+              0,
+              "0/2"
+            ]
+          ],
+          "predecessor_flags": [
+            "pred_sig1_wu2",
+            "pred_sig4_wu2"
+          ],
+          "layer3_bits": [
+            "q=-1"
+          ]
+        },
+        {
+          "ordered_pair": [
+            "3/3",
+            "0/3"
+          ],
+          "row_count": 2,
+          "unique_monodromy_signature_count": 1,
+          "monodromy_signatures": [
+            [
+              {
+                "m": 11,
+                "monodromies": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "m": 13,
+                "monodromies": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              }
+            ]
+          ],
+          "layer2_seeds": [
+            [
+              "q+u=-1",
+              0,
+              "0/2"
+            ]
+          ],
+          "predecessor_flags": [
+            "pred_sig1_wu2",
+            "pred_sig4_wu2"
+          ],
+          "layer3_bits": [
+            "q=-1"
+          ]
+        },
+        {
+          "ordered_pair": [
+            "3/3",
+            "3/0"
+          ],
+          "row_count": 2,
+          "unique_monodromy_signature_count": 1,
+          "monodromy_signatures": [
+            [
+              {
+                "m": 11,
+                "monodromies": [
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10
+                ]
+              },
+              {
+                "m": 13,
+                "monodromies": [
+                  12,
+                  12,
+                  12,
+                  12,
+                  12,
+                  12,
+                  12,
+                  12,
+                  12,
+                  12,
+                  12,
+                  12,
+                  12
+                ]
+              }
+            ]
+          ],
+          "layer2_seeds": [
+            [
+              "q+u=-1",
+              0,
+              "0/2"
+            ]
+          ],
+          "predecessor_flags": [
+            "pred_sig1_wu2",
+            "pred_sig4_wu2"
+          ],
+          "layer3_bits": [
+            "q=-1"
+          ]
+        }
+      ]
+    }
+  },
+  "interpretation": {
+    "universal_geometry_stage1": true,
+    "universal_geometry_stage2": true,
+    "pair_only_monodromy_stage1": true,
+    "pair_only_monodromy_stage2": true,
+    "stage1_mixed_improvement_count": 0,
+    "stage2_mixed_improvement_count": 0,
+    "diagnosis": "Within the current graft family, cycle geometry rigidifies to the universal m-cycle profile, while the ordered layer-3 slice pair controls the nonzero holonomy."
+  }
+}

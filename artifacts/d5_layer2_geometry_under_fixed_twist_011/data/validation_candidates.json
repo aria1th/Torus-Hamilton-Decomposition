@@ -1,0 +1,2932 @@
+{
+  "candidates": [
+    {
+      "label": "clean_survivor_0",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig1_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:0/2",
+          "bit_name": "q=-1",
+          "orientation": "0/2",
+          "table": {
+            "s0": 0,
+            "s1": 2
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:0/2",
+          "bit_name": "q=-1",
+          "orientation": "0/2",
+          "table": {
+            "s0": 0,
+            "s1": 2
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig1_wu2",
+          "q=-1:0/2",
+          "q=-1:0/2",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_1",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig1_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:0/2",
+          "bit_name": "q=-1",
+          "orientation": "0/2",
+          "table": {
+            "s0": 0,
+            "s1": 2
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:3/2",
+          "bit_name": "q=-1",
+          "orientation": "3/2",
+          "table": {
+            "s0": 3,
+            "s1": 2
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig1_wu2",
+          "q=-1:0/2",
+          "q=-1:3/2",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_2",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig1_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:2/0",
+          "bit_name": "q=-1",
+          "orientation": "2/0",
+          "table": {
+            "s0": 2,
+            "s1": 0
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:2/0",
+          "bit_name": "q=-1",
+          "orientation": "2/0",
+          "table": {
+            "s0": 2,
+            "s1": 0
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig1_wu2",
+          "q=-1:2/0",
+          "q=-1:2/0",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_3",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig1_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:2/0",
+          "bit_name": "q=-1",
+          "orientation": "2/0",
+          "table": {
+            "s0": 2,
+            "s1": 0
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:2/3",
+          "bit_name": "q=-1",
+          "orientation": "2/3",
+          "table": {
+            "s0": 2,
+            "s1": 3
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig1_wu2",
+          "q=-1:2/0",
+          "q=-1:2/3",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_4",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig1_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:2/3",
+          "bit_name": "q=-1",
+          "orientation": "2/3",
+          "table": {
+            "s0": 2,
+            "s1": 3
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:2/0",
+          "bit_name": "q=-1",
+          "orientation": "2/0",
+          "table": {
+            "s0": 2,
+            "s1": 0
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig1_wu2",
+          "q=-1:2/3",
+          "q=-1:2/0",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_5",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig1_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:2/3",
+          "bit_name": "q=-1",
+          "orientation": "2/3",
+          "table": {
+            "s0": 2,
+            "s1": 3
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:2/3",
+          "bit_name": "q=-1",
+          "orientation": "2/3",
+          "table": {
+            "s0": 2,
+            "s1": 3
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig1_wu2",
+          "q=-1:2/3",
+          "q=-1:2/3",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_6",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig1_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:2/4",
+          "bit_name": "q=-1",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:2/4",
+          "bit_name": "q=-1",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig1_wu2",
+          "q=-1:2/4",
+          "q=-1:2/4",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_7",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig1_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:2/4",
+          "bit_name": "q=-1",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "w+u=2:2/4",
+          "bit_name": "w+u=2",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig1_wu2",
+          "q=-1:2/4",
+          "w+u=2:2/4",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_8",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig1_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:3/2",
+          "bit_name": "q=-1",
+          "orientation": "3/2",
+          "table": {
+            "s0": 3,
+            "s1": 2
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:0/2",
+          "bit_name": "q=-1",
+          "orientation": "0/2",
+          "table": {
+            "s0": 0,
+            "s1": 2
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig1_wu2",
+          "q=-1:3/2",
+          "q=-1:0/2",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_9",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig1_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:3/2",
+          "bit_name": "q=-1",
+          "orientation": "3/2",
+          "table": {
+            "s0": 3,
+            "s1": 2
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:3/2",
+          "bit_name": "q=-1",
+          "orientation": "3/2",
+          "table": {
+            "s0": 3,
+            "s1": 2
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig1_wu2",
+          "q=-1:3/2",
+          "q=-1:3/2",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_10",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig1_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:4/2",
+          "bit_name": "q=-1",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:4/2",
+          "bit_name": "q=-1",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig1_wu2",
+          "q=-1:4/2",
+          "q=-1:4/2",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_11",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig1_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:4/2",
+          "bit_name": "q=-1",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "w+u=2:4/2",
+          "bit_name": "w+u=2",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig1_wu2",
+          "q=-1:4/2",
+          "w+u=2:4/2",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_12",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig1_wu2",
+        "layer2_mode_p0": {
+          "name": "w+u=2:2/4",
+          "bit_name": "w+u=2",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "w+u=2:2/4",
+          "bit_name": "w+u=2",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig1_wu2",
+          "w+u=2:2/4",
+          "w+u=2:2/4",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_13",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig1_wu2",
+        "layer2_mode_p0": {
+          "name": "w+u=2:4/2",
+          "bit_name": "w+u=2",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "w+u=2:4/2",
+          "bit_name": "w+u=2",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig1_wu2",
+          "w+u=2:4/2",
+          "w+u=2:4/2",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_14",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig4_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:0/2",
+          "bit_name": "q=-1",
+          "orientation": "0/2",
+          "table": {
+            "s0": 0,
+            "s1": 2
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:0/2",
+          "bit_name": "q=-1",
+          "orientation": "0/2",
+          "table": {
+            "s0": 0,
+            "s1": 2
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig4_wu2",
+          "q=-1:0/2",
+          "q=-1:0/2",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_15",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig4_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:0/2",
+          "bit_name": "q=-1",
+          "orientation": "0/2",
+          "table": {
+            "s0": 0,
+            "s1": 2
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:3/2",
+          "bit_name": "q=-1",
+          "orientation": "3/2",
+          "table": {
+            "s0": 3,
+            "s1": 2
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig4_wu2",
+          "q=-1:0/2",
+          "q=-1:3/2",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_16",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig4_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:2/0",
+          "bit_name": "q=-1",
+          "orientation": "2/0",
+          "table": {
+            "s0": 2,
+            "s1": 0
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:2/0",
+          "bit_name": "q=-1",
+          "orientation": "2/0",
+          "table": {
+            "s0": 2,
+            "s1": 0
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig4_wu2",
+          "q=-1:2/0",
+          "q=-1:2/0",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_17",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig4_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:2/0",
+          "bit_name": "q=-1",
+          "orientation": "2/0",
+          "table": {
+            "s0": 2,
+            "s1": 0
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:2/3",
+          "bit_name": "q=-1",
+          "orientation": "2/3",
+          "table": {
+            "s0": 2,
+            "s1": 3
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig4_wu2",
+          "q=-1:2/0",
+          "q=-1:2/3",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_18",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig4_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:2/3",
+          "bit_name": "q=-1",
+          "orientation": "2/3",
+          "table": {
+            "s0": 2,
+            "s1": 3
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:2/0",
+          "bit_name": "q=-1",
+          "orientation": "2/0",
+          "table": {
+            "s0": 2,
+            "s1": 0
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig4_wu2",
+          "q=-1:2/3",
+          "q=-1:2/0",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_19",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig4_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:2/3",
+          "bit_name": "q=-1",
+          "orientation": "2/3",
+          "table": {
+            "s0": 2,
+            "s1": 3
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:2/3",
+          "bit_name": "q=-1",
+          "orientation": "2/3",
+          "table": {
+            "s0": 2,
+            "s1": 3
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig4_wu2",
+          "q=-1:2/3",
+          "q=-1:2/3",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_20",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig4_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:2/4",
+          "bit_name": "q=-1",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:2/4",
+          "bit_name": "q=-1",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig4_wu2",
+          "q=-1:2/4",
+          "q=-1:2/4",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_21",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig4_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:2/4",
+          "bit_name": "q=-1",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "w+u=2:4/2",
+          "bit_name": "w+u=2",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig4_wu2",
+          "q=-1:2/4",
+          "w+u=2:4/2",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_22",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig4_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:3/2",
+          "bit_name": "q=-1",
+          "orientation": "3/2",
+          "table": {
+            "s0": 3,
+            "s1": 2
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:0/2",
+          "bit_name": "q=-1",
+          "orientation": "0/2",
+          "table": {
+            "s0": 0,
+            "s1": 2
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig4_wu2",
+          "q=-1:3/2",
+          "q=-1:0/2",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_23",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig4_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:3/2",
+          "bit_name": "q=-1",
+          "orientation": "3/2",
+          "table": {
+            "s0": 3,
+            "s1": 2
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:3/2",
+          "bit_name": "q=-1",
+          "orientation": "3/2",
+          "table": {
+            "s0": 3,
+            "s1": 2
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig4_wu2",
+          "q=-1:3/2",
+          "q=-1:3/2",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_24",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig4_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:4/2",
+          "bit_name": "q=-1",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:4/2",
+          "bit_name": "q=-1",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig4_wu2",
+          "q=-1:4/2",
+          "q=-1:4/2",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_25",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig4_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:4/2",
+          "bit_name": "q=-1",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "w+u=2:2/4",
+          "bit_name": "w+u=2",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig4_wu2",
+          "q=-1:4/2",
+          "w+u=2:2/4",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_26",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig4_wu2",
+        "layer2_mode_p0": {
+          "name": "w+u=2:2/4",
+          "bit_name": "w+u=2",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:2/4",
+          "bit_name": "q=-1",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig4_wu2",
+          "w+u=2:2/4",
+          "q=-1:2/4",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_27",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig4_wu2",
+        "layer2_mode_p0": {
+          "name": "w+u=2:2/4",
+          "bit_name": "w+u=2",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:4/2",
+          "bit_name": "q=-1",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig4_wu2",
+          "w+u=2:2/4",
+          "q=-1:4/2",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_28",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig4_wu2",
+        "layer2_mode_p0": {
+          "name": "w+u=2:2/4",
+          "bit_name": "w+u=2",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "w+u=2:2/4",
+          "bit_name": "w+u=2",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig4_wu2",
+          "w+u=2:2/4",
+          "w+u=2:2/4",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_29",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig4_wu2",
+        "layer2_mode_p0": {
+          "name": "w+u=2:2/4",
+          "bit_name": "w+u=2",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "w+u=2:4/2",
+          "bit_name": "w+u=2",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig4_wu2",
+          "w+u=2:2/4",
+          "w+u=2:4/2",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_30",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig4_wu2",
+        "layer2_mode_p0": {
+          "name": "w+u=2:4/2",
+          "bit_name": "w+u=2",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:2/4",
+          "bit_name": "q=-1",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig4_wu2",
+          "w+u=2:4/2",
+          "q=-1:2/4",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_31",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig4_wu2",
+        "layer2_mode_p0": {
+          "name": "w+u=2:4/2",
+          "bit_name": "w+u=2",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:4/2",
+          "bit_name": "q=-1",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig4_wu2",
+          "w+u=2:4/2",
+          "q=-1:4/2",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_32",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig4_wu2",
+        "layer2_mode_p0": {
+          "name": "w+u=2:4/2",
+          "bit_name": "w+u=2",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "w+u=2:2/4",
+          "bit_name": "w+u=2",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig4_wu2",
+          "w+u=2:4/2",
+          "w+u=2:2/4",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_33",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig4_wu2",
+        "layer2_mode_p0": {
+          "name": "w+u=2:4/2",
+          "bit_name": "w+u=2",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "w+u=2:4/2",
+          "bit_name": "w+u=2",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig4_wu2",
+          "w+u=2:4/2",
+          "w+u=2:4/2",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_34",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig1_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:4/2",
+          "bit_name": "q=-1",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:2/4",
+          "bit_name": "q=-1",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig1_wu2",
+          "q=-1:4/2",
+          "q=-1:2/4",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 39,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 37,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_35",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig1_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:4/2",
+          "bit_name": "q=-1",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "w+u=2:2/4",
+          "bit_name": "w+u=2",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig1_wu2",
+          "q=-1:4/2",
+          "w+u=2:2/4",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 39,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 37,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_36",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig1_wu2",
+        "layer2_mode_p0": {
+          "name": "w+u=2:4/2",
+          "bit_name": "w+u=2",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:2/4",
+          "bit_name": "q=-1",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig1_wu2",
+          "w+u=2:4/2",
+          "q=-1:2/4",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 39,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 37,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_37",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig4_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:4/2",
+          "bit_name": "q=-1",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:2/4",
+          "bit_name": "q=-1",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig4_wu2",
+          "q=-1:4/2",
+          "q=-1:2/4",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 39,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 37,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_38",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig4_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:4/2",
+          "bit_name": "q=-1",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "w+u=2:4/2",
+          "bit_name": "w+u=2",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig4_wu2",
+          "q=-1:4/2",
+          "w+u=2:4/2",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 39,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 37,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_39",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig1_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:2/4",
+          "bit_name": "q=-1",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:4/2",
+          "bit_name": "q=-1",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig1_wu2",
+          "q=-1:2/4",
+          "q=-1:4/2",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 39,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 36,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_40",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig1_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:2/4",
+          "bit_name": "q=-1",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "w+u=2:4/2",
+          "bit_name": "w+u=2",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig1_wu2",
+          "q=-1:2/4",
+          "w+u=2:4/2",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 39,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 36,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_41",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig1_wu2",
+        "layer2_mode_p0": {
+          "name": "w+u=2:2/4",
+          "bit_name": "w+u=2",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:4/2",
+          "bit_name": "q=-1",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig1_wu2",
+          "w+u=2:2/4",
+          "q=-1:4/2",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 39,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 36,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_42",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig4_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:2/4",
+          "bit_name": "q=-1",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:4/2",
+          "bit_name": "q=-1",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig4_wu2",
+          "q=-1:2/4",
+          "q=-1:4/2",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 39,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 36,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_43",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig4_wu2",
+        "layer2_mode_p0": {
+          "name": "q=-1:2/4",
+          "bit_name": "q=-1",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "w+u=2:2/4",
+          "bit_name": "w+u=2",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig4_wu2",
+          "q=-1:2/4",
+          "w+u=2:2/4",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 39,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 36,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_44",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig1_wu2",
+        "layer2_mode_p0": {
+          "name": "w+u=2:4/2",
+          "bit_name": "w+u=2",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:4/2",
+          "bit_name": "q=-1",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig1_wu2",
+          "w+u=2:4/2",
+          "q=-1:4/2",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 137,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 127,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_45",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig1_wu2",
+        "layer2_mode_p0": {
+          "name": "w+u=2:2/4",
+          "bit_name": "w+u=2",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "q=-1:2/4",
+          "bit_name": "q=-1",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig1_wu2",
+          "w+u=2:2/4",
+          "q=-1:2/4",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "both",
+        "total_u_cycle_count": 137,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 119,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_46",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig1_wu2",
+        "layer2_mode_p0": {
+          "name": "w+u=2:4/2",
+          "bit_name": "w+u=2",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "w+u=2:2/4",
+          "bit_name": "w+u=2",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig1_wu2",
+          "w+u=2:4/2",
+          "w+u=2:2/4",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "monodromy_only",
+        "total_u_cycle_count": 155,
+        "max_cycle_length": 1,
+        "total_nonzero_monodromies": 143,
+        "improves_mixed_baseline": false
+      }
+    },
+    {
+      "label": "clean_survivor_47",
+      "rule": {
+        "stage": "stage1",
+        "layer2_flag_name": "pred_sig1_wu2",
+        "layer2_mode_p0": {
+          "name": "w+u=2:2/4",
+          "bit_name": "w+u=2",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "layer2_mode_p1": {
+          "name": "w+u=2:4/2",
+          "bit_name": "w+u=2",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "layer3_flag_name": "pred_sig1_wu2",
+        "layer3_bit_name": "q+u=-1",
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "pred_sig1_wu2",
+          "w+u=2:2/4",
+          "w+u=2:4/2",
+          "pred_sig1_wu2",
+          "q+u=-1",
+          "0/3",
+          "3/0"
+        ]
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "profile_kind": "monodromy_only",
+        "total_u_cycle_count": 155,
+        "max_cycle_length": 1,
+        "total_nonzero_monodromies": 134,
+        "improves_mixed_baseline": false
+      }
+    }
+  ]
+}

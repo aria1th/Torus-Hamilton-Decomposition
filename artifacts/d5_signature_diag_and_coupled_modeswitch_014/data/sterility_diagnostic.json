@@ -1,0 +1,984 @@
+{
+  "const_2/4": {
+    "5": {
+      "split_rows": [
+        {
+          "named_mask": 1,
+          "exact_bit_changes_word": false,
+          "exact_bit_changes_increment": false,
+          "rows": [
+            {
+              "named_mask": 1,
+              "exact_bit_value": 0,
+              "representative": [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "three_step_word": [
+                2,
+                3,
+                0
+              ],
+              "three_step_increment": [
+                1,
+                0,
+                1,
+                1,
+                0
+              ]
+            },
+            {
+              "named_mask": 1,
+              "exact_bit_value": 1,
+              "representative": [
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              "three_step_word": [
+                2,
+                3,
+                0
+              ],
+              "three_step_increment": [
+                1,
+                0,
+                1,
+                1,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "named_mask": 5,
+          "exact_bit_changes_word": false,
+          "exact_bit_changes_increment": false,
+          "rows": [
+            {
+              "named_mask": 5,
+              "exact_bit_value": 0,
+              "representative": [
+                0,
+                2,
+                0,
+                3,
+                2
+              ],
+              "three_step_word": [
+                4,
+                0,
+                0
+              ],
+              "three_step_increment": [
+                2,
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "named_mask": 5,
+              "exact_bit_value": 1,
+              "representative": [
+                0,
+                3,
+                0,
+                2,
+                2
+              ],
+              "three_step_word": [
+                4,
+                0,
+                0
+              ],
+              "three_step_increment": [
+                2,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "named_mask": 9,
+          "exact_bit_changes_word": false,
+          "exact_bit_changes_increment": false,
+          "rows": [
+            {
+              "named_mask": 9,
+              "exact_bit_value": 0,
+              "representative": [
+                0,
+                4,
+                0,
+                0,
+                3
+              ],
+              "three_step_word": [
+                2,
+                0,
+                0
+              ],
+              "three_step_increment": [
+                2,
+                0,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "named_mask": 9,
+              "exact_bit_value": 1,
+              "representative": [
+                0,
+                0,
+                0,
+                4,
+                3
+              ],
+              "three_step_word": [
+                2,
+                0,
+                0
+              ],
+              "three_step_increment": [
+                2,
+                0,
+                1,
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "7": {
+      "split_rows": [
+        {
+          "named_mask": 1,
+          "exact_bit_changes_word": false,
+          "exact_bit_changes_increment": false,
+          "rows": [
+            {
+              "named_mask": 1,
+              "exact_bit_value": 0,
+              "representative": [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "three_step_word": [
+                2,
+                3,
+                0
+              ],
+              "three_step_increment": [
+                1,
+                0,
+                1,
+                1,
+                0
+              ]
+            },
+            {
+              "named_mask": 1,
+              "exact_bit_value": 1,
+              "representative": [
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              "three_step_word": [
+                2,
+                3,
+                0
+              ],
+              "three_step_increment": [
+                1,
+                0,
+                1,
+                1,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "named_mask": 5,
+          "exact_bit_changes_word": true,
+          "exact_bit_changes_increment": true,
+          "rows": [
+            {
+              "named_mask": 5,
+              "exact_bit_value": 0,
+              "representative": [
+                0,
+                3,
+                0,
+                4,
+                2
+              ],
+              "three_step_word": [
+                4,
+                3,
+                0
+              ],
+              "three_step_increment": [
+                1,
+                0,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "named_mask": 5,
+              "exact_bit_value": 1,
+              "representative": [
+                0,
+                4,
+                0,
+                3,
+                2
+              ],
+              "three_step_word": [
+                4,
+                0,
+                0
+              ],
+              "three_step_increment": [
+                2,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "named_mask": 9,
+          "exact_bit_changes_word": false,
+          "exact_bit_changes_increment": false,
+          "rows": [
+            {
+              "named_mask": 9,
+              "exact_bit_value": 0,
+              "representative": [
+                0,
+                6,
+                0,
+                0,
+                3
+              ],
+              "three_step_word": [
+                2,
+                0,
+                0
+              ],
+              "three_step_increment": [
+                2,
+                0,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "named_mask": 9,
+              "exact_bit_value": 1,
+              "representative": [
+                0,
+                0,
+                0,
+                6,
+                3
+              ],
+              "three_step_word": [
+                2,
+                0,
+                0
+              ],
+              "three_step_increment": [
+                2,
+                0,
+                1,
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "9": {
+      "split_rows": [
+        {
+          "named_mask": 1,
+          "exact_bit_changes_word": false,
+          "exact_bit_changes_increment": false,
+          "rows": [
+            {
+              "named_mask": 1,
+              "exact_bit_value": 0,
+              "representative": [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "three_step_word": [
+                2,
+                3,
+                0
+              ],
+              "three_step_increment": [
+                1,
+                0,
+                1,
+                1,
+                0
+              ]
+            },
+            {
+              "named_mask": 1,
+              "exact_bit_value": 1,
+              "representative": [
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              "three_step_word": [
+                2,
+                3,
+                0
+              ],
+              "three_step_increment": [
+                1,
+                0,
+                1,
+                1,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "named_mask": 5,
+          "exact_bit_changes_word": true,
+          "exact_bit_changes_increment": true,
+          "rows": [
+            {
+              "named_mask": 5,
+              "exact_bit_value": 0,
+              "representative": [
+                0,
+                4,
+                0,
+                5,
+                2
+              ],
+              "three_step_word": [
+                4,
+                0,
+                0
+              ],
+              "three_step_increment": [
+                2,
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "named_mask": 5,
+              "exact_bit_value": 1,
+              "representative": [
+                0,
+                5,
+                0,
+                4,
+                2
+              ],
+              "three_step_word": [
+                4,
+                3,
+                0
+              ],
+              "three_step_increment": [
+                1,
+                0,
+                0,
+                1,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "named_mask": 9,
+          "exact_bit_changes_word": false,
+          "exact_bit_changes_increment": false,
+          "rows": [
+            {
+              "named_mask": 9,
+              "exact_bit_value": 0,
+              "representative": [
+                0,
+                8,
+                0,
+                0,
+                3
+              ],
+              "three_step_word": [
+                2,
+                0,
+                0
+              ],
+              "three_step_increment": [
+                2,
+                0,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "named_mask": 9,
+              "exact_bit_value": 1,
+              "representative": [
+                0,
+                0,
+                0,
+                8,
+                3
+              ],
+              "three_step_word": [
+                2,
+                0,
+                0
+              ],
+              "three_step_increment": [
+                2,
+                0,
+                1,
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "const_4/2": {
+    "5": {
+      "split_rows": [
+        {
+          "named_mask": 1,
+          "exact_bit_changes_word": false,
+          "exact_bit_changes_increment": false,
+          "rows": [
+            {
+              "named_mask": 1,
+              "exact_bit_value": 0,
+              "representative": [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "three_step_word": [
+                4,
+                3,
+                0
+              ],
+              "three_step_increment": [
+                1,
+                0,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "named_mask": 1,
+              "exact_bit_value": 1,
+              "representative": [
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              "three_step_word": [
+                4,
+                3,
+                0
+              ],
+              "three_step_increment": [
+                1,
+                0,
+                0,
+                1,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "named_mask": 5,
+          "exact_bit_changes_word": true,
+          "exact_bit_changes_increment": true,
+          "rows": [
+            {
+              "named_mask": 5,
+              "exact_bit_value": 0,
+              "representative": [
+                0,
+                2,
+                0,
+                3,
+                2
+              ],
+              "three_step_word": [
+                2,
+                3,
+                0
+              ],
+              "three_step_increment": [
+                1,
+                0,
+                1,
+                1,
+                0
+              ]
+            },
+            {
+              "named_mask": 5,
+              "exact_bit_value": 1,
+              "representative": [
+                0,
+                3,
+                0,
+                2,
+                2
+              ],
+              "three_step_word": [
+                2,
+                0,
+                0
+              ],
+              "three_step_increment": [
+                2,
+                0,
+                1,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "named_mask": 9,
+          "exact_bit_changes_word": true,
+          "exact_bit_changes_increment": true,
+          "rows": [
+            {
+              "named_mask": 9,
+              "exact_bit_value": 0,
+              "representative": [
+                0,
+                4,
+                0,
+                0,
+                3
+              ],
+              "three_step_word": [
+                4,
+                0,
+                0
+              ],
+              "three_step_increment": [
+                2,
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "named_mask": 9,
+              "exact_bit_value": 1,
+              "representative": [
+                0,
+                0,
+                0,
+                4,
+                3
+              ],
+              "three_step_word": [
+                4,
+                3,
+                0
+              ],
+              "three_step_increment": [
+                1,
+                0,
+                0,
+                1,
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "7": {
+      "split_rows": [
+        {
+          "named_mask": 1,
+          "exact_bit_changes_word": false,
+          "exact_bit_changes_increment": false,
+          "rows": [
+            {
+              "named_mask": 1,
+              "exact_bit_value": 0,
+              "representative": [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "three_step_word": [
+                4,
+                3,
+                0
+              ],
+              "three_step_increment": [
+                1,
+                0,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "named_mask": 1,
+              "exact_bit_value": 1,
+              "representative": [
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              "three_step_word": [
+                4,
+                3,
+                0
+              ],
+              "three_step_increment": [
+                1,
+                0,
+                0,
+                1,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "named_mask": 5,
+          "exact_bit_changes_word": true,
+          "exact_bit_changes_increment": true,
+          "rows": [
+            {
+              "named_mask": 5,
+              "exact_bit_value": 0,
+              "representative": [
+                0,
+                3,
+                0,
+                4,
+                2
+              ],
+              "three_step_word": [
+                2,
+                0,
+                0
+              ],
+              "three_step_increment": [
+                2,
+                0,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "named_mask": 5,
+              "exact_bit_value": 1,
+              "representative": [
+                0,
+                4,
+                0,
+                3,
+                2
+              ],
+              "three_step_word": [
+                2,
+                3,
+                0
+              ],
+              "three_step_increment": [
+                1,
+                0,
+                1,
+                1,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "named_mask": 9,
+          "exact_bit_changes_word": false,
+          "exact_bit_changes_increment": false,
+          "rows": [
+            {
+              "named_mask": 9,
+              "exact_bit_value": 0,
+              "representative": [
+                0,
+                6,
+                0,
+                0,
+                3
+              ],
+              "three_step_word": [
+                4,
+                0,
+                0
+              ],
+              "three_step_increment": [
+                2,
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "named_mask": 9,
+              "exact_bit_value": 1,
+              "representative": [
+                0,
+                0,
+                0,
+                6,
+                3
+              ],
+              "three_step_word": [
+                4,
+                0,
+                0
+              ],
+              "three_step_increment": [
+                2,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "9": {
+      "split_rows": [
+        {
+          "named_mask": 1,
+          "exact_bit_changes_word": false,
+          "exact_bit_changes_increment": false,
+          "rows": [
+            {
+              "named_mask": 1,
+              "exact_bit_value": 0,
+              "representative": [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              "three_step_word": [
+                4,
+                3,
+                0
+              ],
+              "three_step_increment": [
+                1,
+                0,
+                0,
+                1,
+                1
+              ]
+            },
+            {
+              "named_mask": 1,
+              "exact_bit_value": 1,
+              "representative": [
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              "three_step_word": [
+                4,
+                3,
+                0
+              ],
+              "three_step_increment": [
+                1,
+                0,
+                0,
+                1,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "named_mask": 5,
+          "exact_bit_changes_word": false,
+          "exact_bit_changes_increment": false,
+          "rows": [
+            {
+              "named_mask": 5,
+              "exact_bit_value": 0,
+              "representative": [
+                0,
+                4,
+                0,
+                5,
+                2
+              ],
+              "three_step_word": [
+                2,
+                0,
+                0
+              ],
+              "three_step_increment": [
+                2,
+                0,
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "named_mask": 5,
+              "exact_bit_value": 1,
+              "representative": [
+                0,
+                5,
+                0,
+                4,
+                2
+              ],
+              "three_step_word": [
+                2,
+                0,
+                0
+              ],
+              "three_step_increment": [
+                2,
+                0,
+                1,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "named_mask": 9,
+          "exact_bit_changes_word": false,
+          "exact_bit_changes_increment": false,
+          "rows": [
+            {
+              "named_mask": 9,
+              "exact_bit_value": 0,
+              "representative": [
+                0,
+                8,
+                0,
+                0,
+                3
+              ],
+              "three_step_word": [
+                4,
+                0,
+                0
+              ],
+              "three_step_increment": [
+                2,
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "named_mask": 9,
+              "exact_bit_value": 1,
+              "representative": [
+                0,
+                0,
+                0,
+                8,
+                3
+              ],
+              "three_step_word": [
+                4,
+                0,
+                0
+              ],
+              "three_step_increment": [
+                2,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

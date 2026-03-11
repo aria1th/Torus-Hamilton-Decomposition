@@ -1,0 +1,114 @@
+{
+  "task_id": "D5-ACTIVE-TAIL-GRAMMAR-002",
+  "runtime_sec": 0.026566464453935623,
+  "environment": {
+    "python_version": "3.10.12",
+    "rich_version": "14.2.0"
+  },
+  "m_values": [
+    5,
+    7,
+    9
+  ],
+  "per_m": [
+    {
+      "m": 5,
+      "b1_subset": [
+        1,
+        2
+      ],
+      "residual_fragment_hyperedge_count": 14,
+      "residual_fragment_support_histogram": {
+        "2": 14
+      },
+      "b2_optimum": {
+        "baseline_total_excess": 14,
+        "optimal_delta_subset": [
+          1,
+          3
+        ],
+        "best_cut_weight": 14,
+        "post_split_total_excess": 0,
+        "runner_up_cut_gap": 7,
+        "unique_mod_complement": false
+      },
+      "b2_lookup": {
+        "1": 1,
+        "2": 0,
+        "3": 1,
+        "4": 0
+      }
+    },
+    {
+      "m": 7,
+      "b1_subset": [
+        1,
+        3,
+        5
+      ],
+      "residual_fragment_hyperedge_count": 1132,
+      "residual_fragment_support_histogram": {
+        "2": 982,
+        "3": 150
+      },
+      "b2_optimum": {
+        "baseline_total_excess": 1282,
+        "optimal_delta_subset": [
+          1,
+          2,
+          4
+        ],
+        "best_cut_weight": 862,
+        "post_split_total_excess": 420,
+        "runner_up_cut_gap": 37,
+        "unique_mod_complement": false
+      },
+      "b2_lookup": {
+        "1": 1,
+        "2": 1,
+        "3": 0,
+        "4": 1,
+        "5": 0,
+        "6": 0
+      }
+    },
+    {
+      "m": 9,
+      "b1_subset": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "residual_fragment_hyperedge_count": 5726,
+      "residual_fragment_support_histogram": {
+        "2": 3942,
+        "3": 1144,
+        "4": 640
+      },
+      "b2_optimum": {
+        "baseline_total_excess": 8150,
+        "optimal_delta_subset": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "best_cut_weight": 4796,
+        "post_split_total_excess": 3354,
+        "runner_up_cut_gap": 230,
+        "unique_mod_complement": false
+      },
+      "b2_lookup": {
+        "1": 1,
+        "2": 0,
+        "3": 1,
+        "4": 0,
+        "5": 1,
+        "6": 0,
+        "7": 1,
+        "8": 0
+      }
+    }
+  ]
+}

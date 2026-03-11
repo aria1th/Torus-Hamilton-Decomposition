@@ -1,0 +1,408 @@
+{
+  "task_id": "D5-TAIL-CUT-QUOTIENT-RERUN-001",
+  "runtime_sec": 0.08162749744951725,
+  "environment": {
+    "python_version": "3.10.12",
+    "rich_version": "14.2.0"
+  },
+  "m_values": [
+    5,
+    7,
+    9
+  ],
+  "per_m": [
+    {
+      "m": 5,
+      "residual_state_count": 58,
+      "unique_support_count": 8,
+      "incidence_signature_class_count": 4,
+      "all_classes_singleton": true,
+      "incidence_signature_classes": [
+        {
+          "class_id": 0,
+          "deltas": [
+            1
+          ],
+          "size": 1,
+          "representative_delta": 1,
+          "signature_hamming_weight": 617
+        },
+        {
+          "class_id": 1,
+          "deltas": [
+            2
+          ],
+          "size": 1,
+          "representative_delta": 2,
+          "signature_hamming_weight": 617
+        },
+        {
+          "class_id": 2,
+          "deltas": [
+            3
+          ],
+          "size": 1,
+          "representative_delta": 3,
+          "signature_hamming_weight": 617
+        },
+        {
+          "class_id": 3,
+          "deltas": [
+            4
+          ],
+          "size": 1,
+          "representative_delta": 4,
+          "signature_hamming_weight": 617
+        }
+      ],
+      "delta_rows": [
+        {
+          "delta": 1,
+          "support_count": 617,
+          "class_id": 0
+        },
+        {
+          "delta": 2,
+          "support_count": 617,
+          "class_id": 1
+        },
+        {
+          "delta": 3,
+          "support_count": 617,
+          "class_id": 2
+        },
+        {
+          "delta": 4,
+          "support_count": 617,
+          "class_id": 3
+        }
+      ],
+      "tail_cut_lookup": {
+        "1": 1,
+        "2": 1,
+        "3": 0,
+        "4": 0
+      },
+      "tail_cut_subset": [
+        1,
+        2
+      ],
+      "post_cut": {
+        "cut_state_count": 56,
+        "post_split_total_excess": 14,
+        "fragment_histogram": {
+          "1": 2440,
+          "2": 14
+        },
+        "residual_fragment_histogram": {
+          "2": 14
+        },
+        "largest_first_residual_histogram": [
+          {
+            "support_size": 2,
+            "count": 14
+          }
+        ]
+      }
+    },
+    {
+      "m": 7,
+      "residual_state_count": 1829,
+      "unique_support_count": 57,
+      "incidence_signature_class_count": 6,
+      "all_classes_singleton": true,
+      "incidence_signature_classes": [
+        {
+          "class_id": 0,
+          "deltas": [
+            1
+          ],
+          "size": 1,
+          "representative_delta": 1,
+          "signature_hamming_weight": 2035
+        },
+        {
+          "class_id": 1,
+          "deltas": [
+            2
+          ],
+          "size": 1,
+          "representative_delta": 2,
+          "signature_hamming_weight": 2071
+        },
+        {
+          "class_id": 2,
+          "deltas": [
+            3
+          ],
+          "size": 1,
+          "representative_delta": 3,
+          "signature_hamming_weight": 1986
+        },
+        {
+          "class_id": 3,
+          "deltas": [
+            4
+          ],
+          "size": 1,
+          "representative_delta": 4,
+          "signature_hamming_weight": 1986
+        },
+        {
+          "class_id": 4,
+          "deltas": [
+            5
+          ],
+          "size": 1,
+          "representative_delta": 5,
+          "signature_hamming_weight": 2071
+        },
+        {
+          "class_id": 5,
+          "deltas": [
+            6
+          ],
+          "size": 1,
+          "representative_delta": 6,
+          "signature_hamming_weight": 2035
+        }
+      ],
+      "delta_rows": [
+        {
+          "delta": 1,
+          "support_count": 2035,
+          "class_id": 0
+        },
+        {
+          "delta": 2,
+          "support_count": 2071,
+          "class_id": 1
+        },
+        {
+          "delta": 3,
+          "support_count": 1986,
+          "class_id": 2
+        },
+        {
+          "delta": 4,
+          "support_count": 1986,
+          "class_id": 3
+        },
+        {
+          "delta": 5,
+          "support_count": 2071,
+          "class_id": 4
+        },
+        {
+          "delta": 6,
+          "support_count": 2035,
+          "class_id": 5
+        }
+      ],
+      "tail_cut_lookup": {
+        "1": 1,
+        "2": 0,
+        "3": 1,
+        "4": 0,
+        "5": 1,
+        "6": 0
+      },
+      "tail_cut_subset": [
+        1,
+        3,
+        5
+      ],
+      "post_cut": {
+        "cut_state_count": 1391,
+        "post_split_total_excess": 1282,
+        "fragment_histogram": {
+          "1": 9770,
+          "2": 982,
+          "3": 150
+        },
+        "residual_fragment_histogram": {
+          "2": 982,
+          "3": 150
+        },
+        "largest_first_residual_histogram": [
+          {
+            "support_size": 3,
+            "count": 150
+          },
+          {
+            "support_size": 2,
+            "count": 982
+          }
+        ]
+      }
+    },
+    {
+      "m": 9,
+      "residual_state_count": 5509,
+      "unique_support_count": 235,
+      "incidence_signature_class_count": 8,
+      "all_classes_singleton": true,
+      "incidence_signature_classes": [
+        {
+          "class_id": 0,
+          "deltas": [
+            1
+          ],
+          "size": 1,
+          "representative_delta": 1,
+          "signature_hamming_weight": 3358
+        },
+        {
+          "class_id": 1,
+          "deltas": [
+            2
+          ],
+          "size": 1,
+          "representative_delta": 2,
+          "signature_hamming_weight": 3627
+        },
+        {
+          "class_id": 2,
+          "deltas": [
+            3
+          ],
+          "size": 1,
+          "representative_delta": 3,
+          "signature_hamming_weight": 3465
+        },
+        {
+          "class_id": 3,
+          "deltas": [
+            4
+          ],
+          "size": 1,
+          "representative_delta": 4,
+          "signature_hamming_weight": 3459
+        },
+        {
+          "class_id": 4,
+          "deltas": [
+            5
+          ],
+          "size": 1,
+          "representative_delta": 5,
+          "signature_hamming_weight": 3459
+        },
+        {
+          "class_id": 5,
+          "deltas": [
+            6
+          ],
+          "size": 1,
+          "representative_delta": 6,
+          "signature_hamming_weight": 3465
+        },
+        {
+          "class_id": 6,
+          "deltas": [
+            7
+          ],
+          "size": 1,
+          "representative_delta": 7,
+          "signature_hamming_weight": 3627
+        },
+        {
+          "class_id": 7,
+          "deltas": [
+            8
+          ],
+          "size": 1,
+          "representative_delta": 8,
+          "signature_hamming_weight": 3358
+        }
+      ],
+      "delta_rows": [
+        {
+          "delta": 1,
+          "support_count": 3358,
+          "class_id": 0
+        },
+        {
+          "delta": 2,
+          "support_count": 3627,
+          "class_id": 1
+        },
+        {
+          "delta": 3,
+          "support_count": 3465,
+          "class_id": 2
+        },
+        {
+          "delta": 4,
+          "support_count": 3459,
+          "class_id": 3
+        },
+        {
+          "delta": 5,
+          "support_count": 3459,
+          "class_id": 4
+        },
+        {
+          "delta": 6,
+          "support_count": 3465,
+          "class_id": 5
+        },
+        {
+          "delta": 7,
+          "support_count": 3627,
+          "class_id": 6
+        },
+        {
+          "delta": 8,
+          "support_count": 3358,
+          "class_id": 7
+        }
+      ],
+      "tail_cut_lookup": {
+        "1": 1,
+        "2": 1,
+        "3": 0,
+        "4": 0,
+        "5": 1,
+        "6": 1,
+        "7": 0,
+        "8": 0
+      },
+      "tail_cut_subset": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "post_cut": {
+        "cut_state_count": 4557,
+        "post_split_total_excess": 8150,
+        "fragment_histogram": {
+          "1": 13942,
+          "2": 3942,
+          "3": 1144,
+          "4": 640
+        },
+        "residual_fragment_histogram": {
+          "2": 3942,
+          "3": 1144,
+          "4": 640
+        },
+        "largest_first_residual_histogram": [
+          {
+            "support_size": 4,
+            "count": 640
+          },
+          {
+            "support_size": 3,
+            "count": 1144
+          },
+          {
+            "support_size": 2,
+            "count": 3942
+          }
+        ]
+      }
+    }
+  ]
+}

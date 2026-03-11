@@ -1,0 +1,1652 @@
+{
+  "rows": [
+    {
+      "rule": {
+        "kind": "stage_a",
+        "exact_bit_name": "pred_sig1_phase_align",
+        "mode_p0": {
+          "name": "q=-1:2/4",
+          "bit_name": "q=-1",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "mode_p1": {
+          "name": "q=-1:2/4",
+          "bit_name": "q=-1",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "effective_key": [
+          "stage_a",
+          "q=-1:2/4",
+          "q=-1:2/4"
+        ]
+      },
+      "latin_color0_all": true,
+      "latin_all": true,
+      "clean_all": true,
+      "strict_all": true,
+      "profile_kind": "both",
+      "total_u_cycle_count": 21,
+      "max_cycle_length": 9,
+      "total_nonzero_monodromies": 21,
+      "improves_mixed_baseline": false,
+      "per_m": {
+        "5": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": true,
+            "strict_clock": true,
+            "U_cycle_count": 5,
+            "U_cycle_lengths": [
+              5,
+              5,
+              5,
+              5,
+              5
+            ],
+            "monodromies": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "nontrivial_u": true
+          },
+          "classification": {
+            "kind": "both",
+            "has_cycle": true,
+            "has_monodromy": true
+          }
+        },
+        "7": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": true,
+            "strict_clock": true,
+            "U_cycle_count": 7,
+            "U_cycle_lengths": [
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7
+            ],
+            "monodromies": [
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5
+            ],
+            "nontrivial_u": true
+          },
+          "classification": {
+            "kind": "both",
+            "has_cycle": true,
+            "has_monodromy": true
+          }
+        },
+        "9": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": true,
+            "strict_clock": true,
+            "U_cycle_count": 9,
+            "U_cycle_lengths": [
+              9,
+              9,
+              9,
+              9,
+              9,
+              9,
+              9,
+              9,
+              9
+            ],
+            "monodromies": [
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7
+            ],
+            "nontrivial_u": true
+          },
+          "classification": {
+            "kind": "both",
+            "has_cycle": true,
+            "has_monodromy": true
+          }
+        }
+      }
+    },
+    {
+      "rule": {
+        "kind": "stage_a",
+        "exact_bit_name": "pred_sig1_phase_align",
+        "mode_p0": {
+          "name": "q=-1:2/4",
+          "bit_name": "q=-1",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "mode_p1": {
+          "name": "q=-1:4/2",
+          "bit_name": "q=-1",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "effective_key": [
+          "stage_a",
+          "q=-1:2/4",
+          "q=-1:4/2"
+        ]
+      },
+      "latin_color0_all": true,
+      "latin_all": true,
+      "clean_all": false,
+      "strict_all": false,
+      "profile_kind": "trivial",
+      "total_u_cycle_count": 0,
+      "max_cycle_length": 0,
+      "total_nonzero_monodromies": 0,
+      "improves_mixed_baseline": false,
+      "per_m": {
+        "5": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        },
+        "7": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        },
+        "9": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        }
+      }
+    },
+    {
+      "rule": {
+        "kind": "stage_a",
+        "exact_bit_name": "pred_sig1_phase_align",
+        "mode_p0": {
+          "name": "q=-1:2/4",
+          "bit_name": "q=-1",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "mode_p1": {
+          "name": "w+u=2:2/4",
+          "bit_name": "w+u=2",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "effective_key": [
+          "stage_a",
+          "q=-1:2/4",
+          "w+u=2:2/4"
+        ]
+      },
+      "latin_color0_all": true,
+      "latin_all": true,
+      "clean_all": false,
+      "strict_all": false,
+      "profile_kind": "trivial",
+      "total_u_cycle_count": 0,
+      "max_cycle_length": 0,
+      "total_nonzero_monodromies": 0,
+      "improves_mixed_baseline": false,
+      "per_m": {
+        "5": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        },
+        "7": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        },
+        "9": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        }
+      }
+    },
+    {
+      "rule": {
+        "kind": "stage_a",
+        "exact_bit_name": "pred_sig1_phase_align",
+        "mode_p0": {
+          "name": "q=-1:2/4",
+          "bit_name": "q=-1",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "mode_p1": {
+          "name": "w+u=2:4/2",
+          "bit_name": "w+u=2",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "effective_key": [
+          "stage_a",
+          "q=-1:2/4",
+          "w+u=2:4/2"
+        ]
+      },
+      "latin_color0_all": true,
+      "latin_all": true,
+      "clean_all": false,
+      "strict_all": false,
+      "profile_kind": "trivial",
+      "total_u_cycle_count": 0,
+      "max_cycle_length": 0,
+      "total_nonzero_monodromies": 0,
+      "improves_mixed_baseline": false,
+      "per_m": {
+        "5": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        },
+        "7": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        },
+        "9": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        }
+      }
+    },
+    {
+      "rule": {
+        "kind": "stage_a",
+        "exact_bit_name": "pred_sig1_phase_align",
+        "mode_p0": {
+          "name": "q=-1:4/2",
+          "bit_name": "q=-1",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "mode_p1": {
+          "name": "q=-1:2/4",
+          "bit_name": "q=-1",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "effective_key": [
+          "stage_a",
+          "q=-1:4/2",
+          "q=-1:2/4"
+        ]
+      },
+      "latin_color0_all": true,
+      "latin_all": true,
+      "clean_all": false,
+      "strict_all": false,
+      "profile_kind": "trivial",
+      "total_u_cycle_count": 0,
+      "max_cycle_length": 0,
+      "total_nonzero_monodromies": 0,
+      "improves_mixed_baseline": false,
+      "per_m": {
+        "5": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        },
+        "7": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        },
+        "9": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        }
+      }
+    },
+    {
+      "rule": {
+        "kind": "stage_a",
+        "exact_bit_name": "pred_sig1_phase_align",
+        "mode_p0": {
+          "name": "q=-1:4/2",
+          "bit_name": "q=-1",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "mode_p1": {
+          "name": "q=-1:4/2",
+          "bit_name": "q=-1",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "effective_key": [
+          "stage_a",
+          "q=-1:4/2",
+          "q=-1:4/2"
+        ]
+      },
+      "latin_color0_all": true,
+      "latin_all": true,
+      "clean_all": true,
+      "strict_all": true,
+      "profile_kind": "both",
+      "total_u_cycle_count": 21,
+      "max_cycle_length": 9,
+      "total_nonzero_monodromies": 21,
+      "improves_mixed_baseline": false,
+      "per_m": {
+        "5": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": true,
+            "strict_clock": true,
+            "U_cycle_count": 5,
+            "U_cycle_lengths": [
+              5,
+              5,
+              5,
+              5,
+              5
+            ],
+            "monodromies": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "nontrivial_u": true
+          },
+          "classification": {
+            "kind": "both",
+            "has_cycle": true,
+            "has_monodromy": true
+          }
+        },
+        "7": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": true,
+            "strict_clock": true,
+            "U_cycle_count": 7,
+            "U_cycle_lengths": [
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7
+            ],
+            "monodromies": [
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5
+            ],
+            "nontrivial_u": true
+          },
+          "classification": {
+            "kind": "both",
+            "has_cycle": true,
+            "has_monodromy": true
+          }
+        },
+        "9": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": true,
+            "strict_clock": true,
+            "U_cycle_count": 9,
+            "U_cycle_lengths": [
+              9,
+              9,
+              9,
+              9,
+              9,
+              9,
+              9,
+              9,
+              9
+            ],
+            "monodromies": [
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7
+            ],
+            "nontrivial_u": true
+          },
+          "classification": {
+            "kind": "both",
+            "has_cycle": true,
+            "has_monodromy": true
+          }
+        }
+      }
+    },
+    {
+      "rule": {
+        "kind": "stage_a",
+        "exact_bit_name": "pred_sig1_phase_align",
+        "mode_p0": {
+          "name": "q=-1:4/2",
+          "bit_name": "q=-1",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "mode_p1": {
+          "name": "w+u=2:2/4",
+          "bit_name": "w+u=2",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "effective_key": [
+          "stage_a",
+          "q=-1:4/2",
+          "w+u=2:2/4"
+        ]
+      },
+      "latin_color0_all": true,
+      "latin_all": true,
+      "clean_all": false,
+      "strict_all": false,
+      "profile_kind": "trivial",
+      "total_u_cycle_count": 0,
+      "max_cycle_length": 0,
+      "total_nonzero_monodromies": 0,
+      "improves_mixed_baseline": false,
+      "per_m": {
+        "5": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        },
+        "7": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        },
+        "9": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        }
+      }
+    },
+    {
+      "rule": {
+        "kind": "stage_a",
+        "exact_bit_name": "pred_sig1_phase_align",
+        "mode_p0": {
+          "name": "q=-1:4/2",
+          "bit_name": "q=-1",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "mode_p1": {
+          "name": "w+u=2:4/2",
+          "bit_name": "w+u=2",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "effective_key": [
+          "stage_a",
+          "q=-1:4/2",
+          "w+u=2:4/2"
+        ]
+      },
+      "latin_color0_all": true,
+      "latin_all": true,
+      "clean_all": false,
+      "strict_all": false,
+      "profile_kind": "trivial",
+      "total_u_cycle_count": 0,
+      "max_cycle_length": 0,
+      "total_nonzero_monodromies": 0,
+      "improves_mixed_baseline": false,
+      "per_m": {
+        "5": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        },
+        "7": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        },
+        "9": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        }
+      }
+    },
+    {
+      "rule": {
+        "kind": "stage_a",
+        "exact_bit_name": "pred_sig1_phase_align",
+        "mode_p0": {
+          "name": "w+u=2:2/4",
+          "bit_name": "w+u=2",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "mode_p1": {
+          "name": "q=-1:2/4",
+          "bit_name": "q=-1",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "effective_key": [
+          "stage_a",
+          "w+u=2:2/4",
+          "q=-1:2/4"
+        ]
+      },
+      "latin_color0_all": true,
+      "latin_all": true,
+      "clean_all": false,
+      "strict_all": false,
+      "profile_kind": "trivial",
+      "total_u_cycle_count": 0,
+      "max_cycle_length": 0,
+      "total_nonzero_monodromies": 0,
+      "improves_mixed_baseline": false,
+      "per_m": {
+        "5": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        },
+        "7": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        },
+        "9": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        }
+      }
+    },
+    {
+      "rule": {
+        "kind": "stage_a",
+        "exact_bit_name": "pred_sig1_phase_align",
+        "mode_p0": {
+          "name": "w+u=2:2/4",
+          "bit_name": "w+u=2",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "mode_p1": {
+          "name": "q=-1:4/2",
+          "bit_name": "q=-1",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "effective_key": [
+          "stage_a",
+          "w+u=2:2/4",
+          "q=-1:4/2"
+        ]
+      },
+      "latin_color0_all": true,
+      "latin_all": true,
+      "clean_all": false,
+      "strict_all": false,
+      "profile_kind": "trivial",
+      "total_u_cycle_count": 0,
+      "max_cycle_length": 0,
+      "total_nonzero_monodromies": 0,
+      "improves_mixed_baseline": false,
+      "per_m": {
+        "5": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        },
+        "7": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        },
+        "9": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        }
+      }
+    },
+    {
+      "rule": {
+        "kind": "stage_a",
+        "exact_bit_name": "pred_sig1_phase_align",
+        "mode_p0": {
+          "name": "w+u=2:2/4",
+          "bit_name": "w+u=2",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "mode_p1": {
+          "name": "w+u=2:2/4",
+          "bit_name": "w+u=2",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "effective_key": [
+          "stage_a",
+          "w+u=2:2/4",
+          "w+u=2:2/4"
+        ]
+      },
+      "latin_color0_all": true,
+      "latin_all": true,
+      "clean_all": true,
+      "strict_all": true,
+      "profile_kind": "both",
+      "total_u_cycle_count": 21,
+      "max_cycle_length": 9,
+      "total_nonzero_monodromies": 21,
+      "improves_mixed_baseline": false,
+      "per_m": {
+        "5": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": true,
+            "strict_clock": true,
+            "U_cycle_count": 5,
+            "U_cycle_lengths": [
+              5,
+              5,
+              5,
+              5,
+              5
+            ],
+            "monodromies": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "nontrivial_u": true
+          },
+          "classification": {
+            "kind": "both",
+            "has_cycle": true,
+            "has_monodromy": true
+          }
+        },
+        "7": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": true,
+            "strict_clock": true,
+            "U_cycle_count": 7,
+            "U_cycle_lengths": [
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7
+            ],
+            "monodromies": [
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5
+            ],
+            "nontrivial_u": true
+          },
+          "classification": {
+            "kind": "both",
+            "has_cycle": true,
+            "has_monodromy": true
+          }
+        },
+        "9": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": true,
+            "strict_clock": true,
+            "U_cycle_count": 9,
+            "U_cycle_lengths": [
+              9,
+              9,
+              9,
+              9,
+              9,
+              9,
+              9,
+              9,
+              9
+            ],
+            "monodromies": [
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7
+            ],
+            "nontrivial_u": true
+          },
+          "classification": {
+            "kind": "both",
+            "has_cycle": true,
+            "has_monodromy": true
+          }
+        }
+      }
+    },
+    {
+      "rule": {
+        "kind": "stage_a",
+        "exact_bit_name": "pred_sig1_phase_align",
+        "mode_p0": {
+          "name": "w+u=2:2/4",
+          "bit_name": "w+u=2",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "mode_p1": {
+          "name": "w+u=2:4/2",
+          "bit_name": "w+u=2",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "effective_key": [
+          "stage_a",
+          "w+u=2:2/4",
+          "w+u=2:4/2"
+        ]
+      },
+      "latin_color0_all": true,
+      "latin_all": true,
+      "clean_all": false,
+      "strict_all": false,
+      "profile_kind": "trivial",
+      "total_u_cycle_count": 0,
+      "max_cycle_length": 0,
+      "total_nonzero_monodromies": 0,
+      "improves_mixed_baseline": false,
+      "per_m": {
+        "5": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        },
+        "7": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        },
+        "9": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        }
+      }
+    },
+    {
+      "rule": {
+        "kind": "stage_a",
+        "exact_bit_name": "pred_sig1_phase_align",
+        "mode_p0": {
+          "name": "w+u=2:4/2",
+          "bit_name": "w+u=2",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "mode_p1": {
+          "name": "q=-1:2/4",
+          "bit_name": "q=-1",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "effective_key": [
+          "stage_a",
+          "w+u=2:4/2",
+          "q=-1:2/4"
+        ]
+      },
+      "latin_color0_all": true,
+      "latin_all": true,
+      "clean_all": false,
+      "strict_all": false,
+      "profile_kind": "trivial",
+      "total_u_cycle_count": 0,
+      "max_cycle_length": 0,
+      "total_nonzero_monodromies": 0,
+      "improves_mixed_baseline": false,
+      "per_m": {
+        "5": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        },
+        "7": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        },
+        "9": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        }
+      }
+    },
+    {
+      "rule": {
+        "kind": "stage_a",
+        "exact_bit_name": "pred_sig1_phase_align",
+        "mode_p0": {
+          "name": "w+u=2:4/2",
+          "bit_name": "w+u=2",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "mode_p1": {
+          "name": "q=-1:4/2",
+          "bit_name": "q=-1",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "effective_key": [
+          "stage_a",
+          "w+u=2:4/2",
+          "q=-1:4/2"
+        ]
+      },
+      "latin_color0_all": true,
+      "latin_all": true,
+      "clean_all": false,
+      "strict_all": false,
+      "profile_kind": "trivial",
+      "total_u_cycle_count": 0,
+      "max_cycle_length": 0,
+      "total_nonzero_monodromies": 0,
+      "improves_mixed_baseline": false,
+      "per_m": {
+        "5": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        },
+        "7": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        },
+        "9": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        }
+      }
+    },
+    {
+      "rule": {
+        "kind": "stage_a",
+        "exact_bit_name": "pred_sig1_phase_align",
+        "mode_p0": {
+          "name": "w+u=2:4/2",
+          "bit_name": "w+u=2",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "mode_p1": {
+          "name": "w+u=2:2/4",
+          "bit_name": "w+u=2",
+          "orientation": "2/4",
+          "table": {
+            "s0": 2,
+            "s1": 4
+          }
+        },
+        "effective_key": [
+          "stage_a",
+          "w+u=2:4/2",
+          "w+u=2:2/4"
+        ]
+      },
+      "latin_color0_all": true,
+      "latin_all": true,
+      "clean_all": false,
+      "strict_all": false,
+      "profile_kind": "trivial",
+      "total_u_cycle_count": 0,
+      "max_cycle_length": 0,
+      "total_nonzero_monodromies": 0,
+      "improves_mixed_baseline": false,
+      "per_m": {
+        "5": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        },
+        "7": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        },
+        "9": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": false,
+            "strict_clock": false,
+            "U_cycle_count": 0,
+            "U_cycle_lengths": [],
+            "monodromies": [],
+            "nontrivial_u": false
+          },
+          "classification": {
+            "kind": "trivial",
+            "has_cycle": false,
+            "has_monodromy": false
+          }
+        }
+      }
+    },
+    {
+      "rule": {
+        "kind": "stage_a",
+        "exact_bit_name": "pred_sig1_phase_align",
+        "mode_p0": {
+          "name": "w+u=2:4/2",
+          "bit_name": "w+u=2",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "mode_p1": {
+          "name": "w+u=2:4/2",
+          "bit_name": "w+u=2",
+          "orientation": "4/2",
+          "table": {
+            "s0": 4,
+            "s1": 2
+          }
+        },
+        "effective_key": [
+          "stage_a",
+          "w+u=2:4/2",
+          "w+u=2:4/2"
+        ]
+      },
+      "latin_color0_all": true,
+      "latin_all": true,
+      "clean_all": true,
+      "strict_all": true,
+      "profile_kind": "both",
+      "total_u_cycle_count": 21,
+      "max_cycle_length": 9,
+      "total_nonzero_monodromies": 21,
+      "improves_mixed_baseline": false,
+      "per_m": {
+        "5": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": true,
+            "strict_clock": true,
+            "U_cycle_count": 5,
+            "U_cycle_lengths": [
+              5,
+              5,
+              5,
+              5,
+              5
+            ],
+            "monodromies": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ],
+            "nontrivial_u": true
+          },
+          "classification": {
+            "kind": "both",
+            "has_cycle": true,
+            "has_monodromy": true
+          }
+        },
+        "7": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": true,
+            "strict_clock": true,
+            "U_cycle_count": 7,
+            "U_cycle_lengths": [
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7
+            ],
+            "monodromies": [
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5
+            ],
+            "nontrivial_u": true
+          },
+          "classification": {
+            "kind": "both",
+            "has_cycle": true,
+            "has_monodromy": true
+          }
+        },
+        "9": {
+          "latin_color0": true,
+          "latin_all_colors": true,
+          "color0_return": {
+            "clean_frame": true,
+            "strict_clock": true,
+            "U_cycle_count": 9,
+            "U_cycle_lengths": [
+              9,
+              9,
+              9,
+              9,
+              9,
+              9,
+              9,
+              9,
+              9
+            ],
+            "monodromies": [
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7
+            ],
+            "nontrivial_u": true
+          },
+          "classification": {
+            "kind": "both",
+            "has_cycle": true,
+            "has_monodromy": true
+          }
+        }
+      }
+    }
+  ]
+}

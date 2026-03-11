@@ -25,6 +25,7 @@ class SchemaSpec:
     description: str
     atom_names: Tuple[str, ...]
     include_phase_align: bool = False
+    include_tail_cut: bool = False
 
 
 SCHEMA_A = SchemaSpec(
@@ -52,7 +53,21 @@ SCHEMA_PHASE_ALIGN = SchemaSpec(
     include_phase_align=True,
 )
 
-SCHEMA_BY_NAME = {schema.name: schema for schema in (SCHEMA_A, SCHEMA_B, SCHEMA_JOIN, SCHEMA_PHASE_ALIGN)}
+SCHEMA_PHASE_ALIGN_TAIL_CUT = SchemaSpec(
+    name="joined_anchor_five_atom_phase_align_tail_cut",
+    description=(
+        "Refined Theta_AB quotient with phase_align and the exact hypergraph-derived pilot tail_cut bit "
+        "tail_cut_c=1_{(x_{c+3}-x_{c+1}) mod m in A_m}"
+    ),
+    atom_names=("q=-1", "q+u=1", "w+u=2", "q+u=-1", "u=-1"),
+    include_phase_align=True,
+    include_tail_cut=True,
+)
+
+SCHEMA_BY_NAME = {
+    schema.name: schema
+    for schema in (SCHEMA_A, SCHEMA_B, SCHEMA_JOIN, SCHEMA_PHASE_ALIGN, SCHEMA_PHASE_ALIGN_TAIL_CUT)
+}
 
 ATOM_INDEX = {
     "q=-1": 0,
@@ -60,6 +75,14 @@ ATOM_INDEX = {
     "w+u=2": 2,
     "q+u=-1": 3,
     "u=-1": 4,
+}
+
+TAIL_CUT_LOOKUP = {
+    5: frozenset((1, 2)),
+    7: frozenset((1, 3, 5)),
+    9: frozenset((1, 2, 5, 6)),
+    11: frozenset((1, 2, 6, 7, 8)),
+    13: frozenset((1, 4, 5, 7, 8, 10)),
 }
 
 
@@ -105,7 +128,23 @@ def phase_align_value(coords: Sequence[int], color: int, m: int) -> int:
     return int((v - q) % m == 0)
 
 
-def signature_value(schema: SchemaSpec, q: int, w: int, u: int, m: int, *, phase_align: int = 0) -> int:
+def tail_cut_value(coords: Sequence[int], color: int, m: int) -> int:
+    q = coords[(color + 1) % DIM]
+    v = coords[(color + 3) % DIM]
+    delta = (v - q) % m
+    return int(delta in TAIL_CUT_LOOKUP.get(m, ()))
+
+
+def signature_value(
+    schema: SchemaSpec,
+    q: int,
+    w: int,
+    u: int,
+    m: int,
+    *,
+    phase_align: int = 0,
+    tail_cut: int = 0,
+) -> int:
     truths = atom_truths(q, w, u, m)
     value = 0
     for bit, atom_name in enumerate(schema.atom_names):
@@ -113,6 +152,8 @@ def signature_value(schema: SchemaSpec, q: int, w: int, u: int, m: int, *, phase
             value |= 1 << bit
     if schema.include_phase_align and phase_align:
         value |= 1 << len(schema.atom_names)
+    if schema.include_tail_cut and tail_cut:
+        value |= 1 << (len(schema.atom_names) + int(schema.include_phase_align))
     return value
 
 
@@ -124,6 +165,7 @@ def state_for_vertex(coords: Sequence[int], m: int, schema: SchemaSpec) -> State
             *color_relative_coordinates(coords, color),
             m,
             phase_align=phase_align_value(coords, color, m),
+            tail_cut=tail_cut_value(coords, color, m),
         )
         for color in range(DIM)
     )

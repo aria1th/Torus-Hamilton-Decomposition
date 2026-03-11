@@ -1,0 +1,970 @@
+{
+  "task_id": "D5-STRICT-PALETTE-CONTEXT-004",
+  "pilot_m_values": [
+    5,
+    7,
+    9
+  ],
+  "candidates": [
+    {
+      "label": "family_best_clean_a0_b0",
+      "rule": {
+        "layer2_alt": 0,
+        "layer3_alt": 0,
+        "layer2_bits": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layer3_bits": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layer2_table": {
+          "phase_align": 0,
+          "00": 0,
+          "01": 0,
+          "10": 0,
+          "11": 0
+        },
+        "layer3_table": {
+          "phase_align": 0,
+          "00": 0,
+          "01": 0,
+          "10": 0,
+          "11": 0
+        },
+        "context_dependent": false,
+        "effective_key": {
+          "layer2_anchors": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "layer3_anchors": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "search_metrics": {
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "any_nontrivial_u": false,
+        "total_u_cycle_count": 155,
+        "total_nonzero_monodromies": 0
+      }
+    },
+    {
+      "label": "family_best_clean_a0_b2",
+      "rule": {
+        "layer2_alt": 0,
+        "layer3_alt": 2,
+        "layer2_bits": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layer3_bits": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layer2_table": {
+          "phase_align": 0,
+          "00": 0,
+          "01": 0,
+          "10": 0,
+          "11": 0
+        },
+        "layer3_table": {
+          "phase_align": 2,
+          "00": 2,
+          "01": 2,
+          "10": 2,
+          "11": 2
+        },
+        "context_dependent": false,
+        "effective_key": {
+          "layer2_anchors": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "layer3_anchors": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      },
+      "search_metrics": {
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "any_nontrivial_u": false,
+        "total_u_cycle_count": 155,
+        "total_nonzero_monodromies": 0
+      }
+    },
+    {
+      "label": "family_best_clean_a0_b3",
+      "rule": {
+        "layer2_alt": 0,
+        "layer3_alt": 3,
+        "layer2_bits": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layer3_bits": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "layer2_table": {
+          "phase_align": 0,
+          "00": 0,
+          "01": 0,
+          "10": 0,
+          "11": 0
+        },
+        "layer3_table": {
+          "phase_align": 3,
+          "00": 3,
+          "01": 3,
+          "10": 3,
+          "11": 3
+        },
+        "context_dependent": false,
+        "effective_key": {
+          "layer2_anchors": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "layer3_anchors": [
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        }
+      },
+      "search_metrics": {
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "any_nontrivial_u": false,
+        "total_u_cycle_count": 155,
+        "total_nonzero_monodromies": 0
+      }
+    },
+    {
+      "label": "family_best_clean_a2_b0",
+      "rule": {
+        "layer2_alt": 2,
+        "layer3_alt": 0,
+        "layer2_bits": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "layer3_bits": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layer2_table": {
+          "phase_align": 2,
+          "00": 2,
+          "01": 2,
+          "10": 2,
+          "11": 2
+        },
+        "layer3_table": {
+          "phase_align": 0,
+          "00": 0,
+          "01": 0,
+          "10": 0,
+          "11": 0
+        },
+        "context_dependent": false,
+        "effective_key": {
+          "layer2_anchors": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "layer3_anchors": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "search_metrics": {
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "any_nontrivial_u": false,
+        "total_u_cycle_count": 155,
+        "total_nonzero_monodromies": 0
+      }
+    },
+    {
+      "label": "family_best_clean_a2_b2",
+      "rule": {
+        "layer2_alt": 2,
+        "layer3_alt": 2,
+        "layer2_bits": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "layer3_bits": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layer2_table": {
+          "phase_align": 2,
+          "00": 2,
+          "01": 2,
+          "10": 2,
+          "11": 2
+        },
+        "layer3_table": {
+          "phase_align": 2,
+          "00": 2,
+          "01": 2,
+          "10": 2,
+          "11": 2
+        },
+        "context_dependent": false,
+        "effective_key": {
+          "layer2_anchors": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "layer3_anchors": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      },
+      "search_metrics": {
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "any_nontrivial_u": false,
+        "total_u_cycle_count": 155,
+        "total_nonzero_monodromies": 0
+      }
+    },
+    {
+      "label": "family_best_clean_a2_b3",
+      "rule": {
+        "layer2_alt": 2,
+        "layer3_alt": 3,
+        "layer2_bits": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "layer3_bits": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "layer2_table": {
+          "phase_align": 2,
+          "00": 2,
+          "01": 2,
+          "10": 2,
+          "11": 2
+        },
+        "layer3_table": {
+          "phase_align": 3,
+          "00": 3,
+          "01": 3,
+          "10": 3,
+          "11": 3
+        },
+        "context_dependent": false,
+        "effective_key": {
+          "layer2_anchors": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "layer3_anchors": [
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        }
+      },
+      "search_metrics": {
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "any_nontrivial_u": false,
+        "total_u_cycle_count": 155,
+        "total_nonzero_monodromies": 0
+      }
+    },
+    {
+      "label": "unique_clean_3",
+      "rule": {
+        "layer2_alt": 0,
+        "layer3_alt": 4,
+        "layer2_bits": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layer3_bits": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layer2_table": {
+          "phase_align": 0,
+          "00": 0,
+          "01": 0,
+          "10": 0,
+          "11": 0
+        },
+        "layer3_table": {
+          "phase_align": 4,
+          "00": 4,
+          "01": 4,
+          "10": 4,
+          "11": 4
+        },
+        "context_dependent": false,
+        "effective_key": {
+          "layer2_anchors": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "layer3_anchors": [
+            4,
+            4,
+            4,
+            4,
+            4
+          ]
+        }
+      },
+      "search_metrics": {
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "any_nontrivial_u": false,
+        "total_u_cycle_count": 155,
+        "total_nonzero_monodromies": 0
+      }
+    },
+    {
+      "label": "unique_clean_7",
+      "rule": {
+        "layer2_alt": 0,
+        "layer3_alt": 4,
+        "layer2_bits": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "layer3_bits": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layer2_table": {
+          "phase_align": 2,
+          "00": 2,
+          "01": 2,
+          "10": 2,
+          "11": 2
+        },
+        "layer3_table": {
+          "phase_align": 4,
+          "00": 4,
+          "01": 4,
+          "10": 4,
+          "11": 4
+        },
+        "context_dependent": false,
+        "effective_key": {
+          "layer2_anchors": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "layer3_anchors": [
+            4,
+            4,
+            4,
+            4,
+            4
+          ]
+        }
+      },
+      "search_metrics": {
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "any_nontrivial_u": false,
+        "total_u_cycle_count": 155,
+        "total_nonzero_monodromies": 0
+      }
+    },
+    {
+      "label": "unique_clean_8",
+      "rule": {
+        "layer2_alt": 3,
+        "layer3_alt": 0,
+        "layer2_bits": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layer3_bits": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layer2_table": {
+          "phase_align": 3,
+          "00": 3,
+          "01": 3,
+          "10": 3,
+          "11": 3
+        },
+        "layer3_table": {
+          "phase_align": 0,
+          "00": 0,
+          "01": 0,
+          "10": 0,
+          "11": 0
+        },
+        "context_dependent": false,
+        "effective_key": {
+          "layer2_anchors": [
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "layer3_anchors": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "search_metrics": {
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "any_nontrivial_u": false,
+        "total_u_cycle_count": 155,
+        "total_nonzero_monodromies": 0
+      }
+    },
+    {
+      "label": "unique_clean_9",
+      "rule": {
+        "layer2_alt": 3,
+        "layer3_alt": 2,
+        "layer2_bits": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layer3_bits": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layer2_table": {
+          "phase_align": 3,
+          "00": 3,
+          "01": 3,
+          "10": 3,
+          "11": 3
+        },
+        "layer3_table": {
+          "phase_align": 2,
+          "00": 2,
+          "01": 2,
+          "10": 2,
+          "11": 2
+        },
+        "context_dependent": false,
+        "effective_key": {
+          "layer2_anchors": [
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "layer3_anchors": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      },
+      "search_metrics": {
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "any_nontrivial_u": false,
+        "total_u_cycle_count": 155,
+        "total_nonzero_monodromies": 0
+      }
+    },
+    {
+      "label": "unique_clean_10",
+      "rule": {
+        "layer2_alt": 3,
+        "layer3_alt": 0,
+        "layer2_bits": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layer3_bits": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "layer2_table": {
+          "phase_align": 3,
+          "00": 3,
+          "01": 3,
+          "10": 3,
+          "11": 3
+        },
+        "layer3_table": {
+          "phase_align": 3,
+          "00": 3,
+          "01": 3,
+          "10": 3,
+          "11": 3
+        },
+        "context_dependent": false,
+        "effective_key": {
+          "layer2_anchors": [
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "layer3_anchors": [
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        }
+      },
+      "search_metrics": {
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "any_nontrivial_u": false,
+        "total_u_cycle_count": 155,
+        "total_nonzero_monodromies": 0
+      }
+    },
+    {
+      "label": "unique_clean_11",
+      "rule": {
+        "layer2_alt": 3,
+        "layer3_alt": 4,
+        "layer2_bits": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layer3_bits": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layer2_table": {
+          "phase_align": 3,
+          "00": 3,
+          "01": 3,
+          "10": 3,
+          "11": 3
+        },
+        "layer3_table": {
+          "phase_align": 4,
+          "00": 4,
+          "01": 4,
+          "10": 4,
+          "11": 4
+        },
+        "context_dependent": false,
+        "effective_key": {
+          "layer2_anchors": [
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "layer3_anchors": [
+            4,
+            4,
+            4,
+            4,
+            4
+          ]
+        }
+      },
+      "search_metrics": {
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "any_nontrivial_u": false,
+        "total_u_cycle_count": 155,
+        "total_nonzero_monodromies": 0
+      }
+    },
+    {
+      "label": "unique_clean_12",
+      "rule": {
+        "layer2_alt": 4,
+        "layer3_alt": 0,
+        "layer2_bits": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layer3_bits": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layer2_table": {
+          "phase_align": 4,
+          "00": 4,
+          "01": 4,
+          "10": 4,
+          "11": 4
+        },
+        "layer3_table": {
+          "phase_align": 0,
+          "00": 0,
+          "01": 0,
+          "10": 0,
+          "11": 0
+        },
+        "context_dependent": false,
+        "effective_key": {
+          "layer2_anchors": [
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "layer3_anchors": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "search_metrics": {
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "any_nontrivial_u": false,
+        "total_u_cycle_count": 155,
+        "total_nonzero_monodromies": 0
+      }
+    },
+    {
+      "label": "unique_clean_13",
+      "rule": {
+        "layer2_alt": 4,
+        "layer3_alt": 2,
+        "layer2_bits": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layer3_bits": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layer2_table": {
+          "phase_align": 4,
+          "00": 4,
+          "01": 4,
+          "10": 4,
+          "11": 4
+        },
+        "layer3_table": {
+          "phase_align": 2,
+          "00": 2,
+          "01": 2,
+          "10": 2,
+          "11": 2
+        },
+        "context_dependent": false,
+        "effective_key": {
+          "layer2_anchors": [
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "layer3_anchors": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      },
+      "search_metrics": {
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "any_nontrivial_u": false,
+        "total_u_cycle_count": 155,
+        "total_nonzero_monodromies": 0
+      }
+    },
+    {
+      "label": "unique_clean_14",
+      "rule": {
+        "layer2_alt": 4,
+        "layer3_alt": 0,
+        "layer2_bits": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layer3_bits": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "layer2_table": {
+          "phase_align": 4,
+          "00": 4,
+          "01": 4,
+          "10": 4,
+          "11": 4
+        },
+        "layer3_table": {
+          "phase_align": 3,
+          "00": 3,
+          "01": 3,
+          "10": 3,
+          "11": 3
+        },
+        "context_dependent": false,
+        "effective_key": {
+          "layer2_anchors": [
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "layer3_anchors": [
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        }
+      },
+      "search_metrics": {
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "any_nontrivial_u": false,
+        "total_u_cycle_count": 155,
+        "total_nonzero_monodromies": 0
+      }
+    },
+    {
+      "label": "unique_clean_15",
+      "rule": {
+        "layer2_alt": 4,
+        "layer3_alt": 4,
+        "layer2_bits": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layer3_bits": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layer2_table": {
+          "phase_align": 4,
+          "00": 4,
+          "01": 4,
+          "10": 4,
+          "11": 4
+        },
+        "layer3_table": {
+          "phase_align": 4,
+          "00": 4,
+          "01": 4,
+          "10": 4,
+          "11": 4
+        },
+        "context_dependent": false,
+        "effective_key": {
+          "layer2_anchors": [
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "layer3_anchors": [
+            4,
+            4,
+            4,
+            4,
+            4
+          ]
+        }
+      },
+      "search_metrics": {
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "any_nontrivial_u": false,
+        "total_u_cycle_count": 155,
+        "total_nonzero_monodromies": 0
+      }
+    }
+  ]
+}

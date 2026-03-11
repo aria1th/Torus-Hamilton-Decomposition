@@ -1,0 +1,1588 @@
+{
+  "task_id": "D5-LAYER3-MODE-SWITCH-008",
+  "pilot_m_values": [
+    5,
+    7,
+    9
+  ],
+  "candidates": [
+    {
+      "label": "clean_survivor_0",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "0/2",
+        "layer2_table": {
+          "s0": 0,
+          "s1": 2
+        },
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "simple",
+          "0/2",
+          "pred_sig1_wu2",
+          "0/3",
+          "3/0"
+        ],
+        "predecessor_flag_name": "pred_sig1_wu2",
+        "predecessor_flag_description": "1 iff the color-relative predecessor in direction 1 satisfies w+u=2."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "both",
+        "has_cycle": true,
+        "has_monodromy": true,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21
+      }
+    },
+    {
+      "label": "clean_survivor_1",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "0/2",
+        "layer2_table": {
+          "s0": 0,
+          "s1": 2
+        },
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "simple",
+          "0/2",
+          "pred_sig4_wu2",
+          "0/3",
+          "3/0"
+        ],
+        "predecessor_flag_name": "pred_sig4_wu2",
+        "predecessor_flag_description": "1 iff the color-relative predecessor in direction 4 satisfies w+u=2."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "both",
+        "has_cycle": true,
+        "has_monodromy": true,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21
+      }
+    },
+    {
+      "label": "clean_survivor_2",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "0/2",
+        "layer2_table": {
+          "s0": 0,
+          "s1": 2
+        },
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/3",
+          "table": {
+            "s0": 3,
+            "s1": 3
+          }
+        },
+        "effective_key": [
+          "simple",
+          "0/2",
+          "pred_sig1_wu2",
+          "0/3",
+          "3/3"
+        ],
+        "predecessor_flag_name": "pred_sig1_wu2",
+        "predecessor_flag_description": "1 iff the color-relative predecessor in direction 1 satisfies w+u=2."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "both",
+        "has_cycle": true,
+        "has_monodromy": true,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21
+      }
+    },
+    {
+      "label": "clean_survivor_3",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "0/2",
+        "layer2_table": {
+          "s0": 0,
+          "s1": 2
+        },
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/3",
+          "table": {
+            "s0": 3,
+            "s1": 3
+          }
+        },
+        "effective_key": [
+          "simple",
+          "0/2",
+          "pred_sig4_wu2",
+          "0/3",
+          "3/3"
+        ],
+        "predecessor_flag_name": "pred_sig4_wu2",
+        "predecessor_flag_description": "1 iff the color-relative predecessor in direction 4 satisfies w+u=2."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "both",
+        "has_cycle": true,
+        "has_monodromy": true,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21
+      }
+    },
+    {
+      "label": "clean_survivor_4",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "0/2",
+        "layer2_table": {
+          "s0": 0,
+          "s1": 2
+        },
+        "layer3_mode_p0": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "effective_key": [
+          "simple",
+          "0/2",
+          "pred_sig1_wu2",
+          "3/0",
+          "0/3"
+        ],
+        "predecessor_flag_name": "pred_sig1_wu2",
+        "predecessor_flag_description": "1 iff the color-relative predecessor in direction 1 satisfies w+u=2."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "both",
+        "has_cycle": true,
+        "has_monodromy": true,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21
+      }
+    },
+    {
+      "label": "clean_survivor_5",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "0/2",
+        "layer2_table": {
+          "s0": 0,
+          "s1": 2
+        },
+        "layer3_mode_p0": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "effective_key": [
+          "simple",
+          "0/2",
+          "pred_sig4_wu2",
+          "3/0",
+          "0/3"
+        ],
+        "predecessor_flag_name": "pred_sig4_wu2",
+        "predecessor_flag_description": "1 iff the color-relative predecessor in direction 4 satisfies w+u=2."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "both",
+        "has_cycle": true,
+        "has_monodromy": true,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21
+      }
+    },
+    {
+      "label": "clean_survivor_6",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "0/2",
+        "layer2_table": {
+          "s0": 0,
+          "s1": 2
+        },
+        "layer3_mode_p0": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/3",
+          "table": {
+            "s0": 3,
+            "s1": 3
+          }
+        },
+        "effective_key": [
+          "simple",
+          "0/2",
+          "pred_sig1_wu2",
+          "3/0",
+          "3/3"
+        ],
+        "predecessor_flag_name": "pred_sig1_wu2",
+        "predecessor_flag_description": "1 iff the color-relative predecessor in direction 1 satisfies w+u=2."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "both",
+        "has_cycle": true,
+        "has_monodromy": true,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21
+      }
+    },
+    {
+      "label": "clean_survivor_7",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "0/2",
+        "layer2_table": {
+          "s0": 0,
+          "s1": 2
+        },
+        "layer3_mode_p0": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/3",
+          "table": {
+            "s0": 3,
+            "s1": 3
+          }
+        },
+        "effective_key": [
+          "simple",
+          "0/2",
+          "pred_sig4_wu2",
+          "3/0",
+          "3/3"
+        ],
+        "predecessor_flag_name": "pred_sig4_wu2",
+        "predecessor_flag_description": "1 iff the color-relative predecessor in direction 4 satisfies w+u=2."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "both",
+        "has_cycle": true,
+        "has_monodromy": true,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21
+      }
+    },
+    {
+      "label": "clean_survivor_8",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "0/2",
+        "layer2_table": {
+          "s0": 0,
+          "s1": 2
+        },
+        "layer3_mode_p0": {
+          "name": "3/3",
+          "table": {
+            "s0": 3,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "effective_key": [
+          "simple",
+          "0/2",
+          "pred_sig1_wu2",
+          "3/3",
+          "0/3"
+        ],
+        "predecessor_flag_name": "pred_sig1_wu2",
+        "predecessor_flag_description": "1 iff the color-relative predecessor in direction 1 satisfies w+u=2."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "both",
+        "has_cycle": true,
+        "has_monodromy": true,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21
+      }
+    },
+    {
+      "label": "clean_survivor_9",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "0/2",
+        "layer2_table": {
+          "s0": 0,
+          "s1": 2
+        },
+        "layer3_mode_p0": {
+          "name": "3/3",
+          "table": {
+            "s0": 3,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "effective_key": [
+          "simple",
+          "0/2",
+          "pred_sig4_wu2",
+          "3/3",
+          "0/3"
+        ],
+        "predecessor_flag_name": "pred_sig4_wu2",
+        "predecessor_flag_description": "1 iff the color-relative predecessor in direction 4 satisfies w+u=2."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "both",
+        "has_cycle": true,
+        "has_monodromy": true,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21
+      }
+    },
+    {
+      "label": "clean_survivor_10",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "0/2",
+        "layer2_table": {
+          "s0": 0,
+          "s1": 2
+        },
+        "layer3_mode_p0": {
+          "name": "3/3",
+          "table": {
+            "s0": 3,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "simple",
+          "0/2",
+          "pred_sig1_wu2",
+          "3/3",
+          "3/0"
+        ],
+        "predecessor_flag_name": "pred_sig1_wu2",
+        "predecessor_flag_description": "1 iff the color-relative predecessor in direction 1 satisfies w+u=2."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "both",
+        "has_cycle": true,
+        "has_monodromy": true,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21
+      }
+    },
+    {
+      "label": "clean_survivor_11",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "0/2",
+        "layer2_table": {
+          "s0": 0,
+          "s1": 2
+        },
+        "layer3_mode_p0": {
+          "name": "3/3",
+          "table": {
+            "s0": 3,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "simple",
+          "0/2",
+          "pred_sig4_wu2",
+          "3/3",
+          "3/0"
+        ],
+        "predecessor_flag_name": "pred_sig4_wu2",
+        "predecessor_flag_description": "1 iff the color-relative predecessor in direction 4 satisfies w+u=2."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "both",
+        "has_cycle": true,
+        "has_monodromy": true,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21
+      }
+    },
+    {
+      "label": "clean_survivor_12",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "2/0",
+        "layer2_table": {
+          "s0": 2,
+          "s1": 0
+        },
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "simple",
+          "2/0",
+          "pred_sig1_wu2",
+          "0/3",
+          "3/0"
+        ],
+        "predecessor_flag_name": "pred_sig1_wu2",
+        "predecessor_flag_description": "1 iff the color-relative predecessor in direction 1 satisfies w+u=2."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "both",
+        "has_cycle": true,
+        "has_monodromy": true,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21
+      }
+    },
+    {
+      "label": "clean_survivor_13",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "2/0",
+        "layer2_table": {
+          "s0": 2,
+          "s1": 0
+        },
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "simple",
+          "2/0",
+          "pred_sig4_wu2",
+          "0/3",
+          "3/0"
+        ],
+        "predecessor_flag_name": "pred_sig4_wu2",
+        "predecessor_flag_description": "1 iff the color-relative predecessor in direction 4 satisfies w+u=2."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "both",
+        "has_cycle": true,
+        "has_monodromy": true,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21
+      }
+    },
+    {
+      "label": "clean_survivor_14",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "2/0",
+        "layer2_table": {
+          "s0": 2,
+          "s1": 0
+        },
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/3",
+          "table": {
+            "s0": 3,
+            "s1": 3
+          }
+        },
+        "effective_key": [
+          "simple",
+          "2/0",
+          "pred_sig1_wu2",
+          "0/3",
+          "3/3"
+        ],
+        "predecessor_flag_name": "pred_sig1_wu2",
+        "predecessor_flag_description": "1 iff the color-relative predecessor in direction 1 satisfies w+u=2."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "both",
+        "has_cycle": true,
+        "has_monodromy": true,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21
+      }
+    },
+    {
+      "label": "clean_survivor_15",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "2/0",
+        "layer2_table": {
+          "s0": 2,
+          "s1": 0
+        },
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/3",
+          "table": {
+            "s0": 3,
+            "s1": 3
+          }
+        },
+        "effective_key": [
+          "simple",
+          "2/0",
+          "pred_sig4_wu2",
+          "0/3",
+          "3/3"
+        ],
+        "predecessor_flag_name": "pred_sig4_wu2",
+        "predecessor_flag_description": "1 iff the color-relative predecessor in direction 4 satisfies w+u=2."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "both",
+        "has_cycle": true,
+        "has_monodromy": true,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21
+      }
+    },
+    {
+      "label": "clean_survivor_16",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "2/0",
+        "layer2_table": {
+          "s0": 2,
+          "s1": 0
+        },
+        "layer3_mode_p0": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "effective_key": [
+          "simple",
+          "2/0",
+          "pred_sig1_wu2",
+          "3/0",
+          "0/3"
+        ],
+        "predecessor_flag_name": "pred_sig1_wu2",
+        "predecessor_flag_description": "1 iff the color-relative predecessor in direction 1 satisfies w+u=2."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "both",
+        "has_cycle": true,
+        "has_monodromy": true,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21
+      }
+    },
+    {
+      "label": "clean_survivor_17",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "2/0",
+        "layer2_table": {
+          "s0": 2,
+          "s1": 0
+        },
+        "layer3_mode_p0": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "effective_key": [
+          "simple",
+          "2/0",
+          "pred_sig4_wu2",
+          "3/0",
+          "0/3"
+        ],
+        "predecessor_flag_name": "pred_sig4_wu2",
+        "predecessor_flag_description": "1 iff the color-relative predecessor in direction 4 satisfies w+u=2."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "both",
+        "has_cycle": true,
+        "has_monodromy": true,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21
+      }
+    },
+    {
+      "label": "clean_survivor_18",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "2/0",
+        "layer2_table": {
+          "s0": 2,
+          "s1": 0
+        },
+        "layer3_mode_p0": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/3",
+          "table": {
+            "s0": 3,
+            "s1": 3
+          }
+        },
+        "effective_key": [
+          "simple",
+          "2/0",
+          "pred_sig1_wu2",
+          "3/0",
+          "3/3"
+        ],
+        "predecessor_flag_name": "pred_sig1_wu2",
+        "predecessor_flag_description": "1 iff the color-relative predecessor in direction 1 satisfies w+u=2."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "both",
+        "has_cycle": true,
+        "has_monodromy": true,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21
+      }
+    },
+    {
+      "label": "clean_survivor_19",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "2/0",
+        "layer2_table": {
+          "s0": 2,
+          "s1": 0
+        },
+        "layer3_mode_p0": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/3",
+          "table": {
+            "s0": 3,
+            "s1": 3
+          }
+        },
+        "effective_key": [
+          "simple",
+          "2/0",
+          "pred_sig4_wu2",
+          "3/0",
+          "3/3"
+        ],
+        "predecessor_flag_name": "pred_sig4_wu2",
+        "predecessor_flag_description": "1 iff the color-relative predecessor in direction 4 satisfies w+u=2."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "both",
+        "has_cycle": true,
+        "has_monodromy": true,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21
+      }
+    },
+    {
+      "label": "clean_survivor_20",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "2/0",
+        "layer2_table": {
+          "s0": 2,
+          "s1": 0
+        },
+        "layer3_mode_p0": {
+          "name": "3/3",
+          "table": {
+            "s0": 3,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "effective_key": [
+          "simple",
+          "2/0",
+          "pred_sig1_wu2",
+          "3/3",
+          "0/3"
+        ],
+        "predecessor_flag_name": "pred_sig1_wu2",
+        "predecessor_flag_description": "1 iff the color-relative predecessor in direction 1 satisfies w+u=2."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "both",
+        "has_cycle": true,
+        "has_monodromy": true,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21
+      }
+    },
+    {
+      "label": "clean_survivor_21",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "2/0",
+        "layer2_table": {
+          "s0": 2,
+          "s1": 0
+        },
+        "layer3_mode_p0": {
+          "name": "3/3",
+          "table": {
+            "s0": 3,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "effective_key": [
+          "simple",
+          "2/0",
+          "pred_sig4_wu2",
+          "3/3",
+          "0/3"
+        ],
+        "predecessor_flag_name": "pred_sig4_wu2",
+        "predecessor_flag_description": "1 iff the color-relative predecessor in direction 4 satisfies w+u=2."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "both",
+        "has_cycle": true,
+        "has_monodromy": true,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21
+      }
+    },
+    {
+      "label": "clean_survivor_22",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "2/0",
+        "layer2_table": {
+          "s0": 2,
+          "s1": 0
+        },
+        "layer3_mode_p0": {
+          "name": "3/3",
+          "table": {
+            "s0": 3,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "simple",
+          "2/0",
+          "pred_sig1_wu2",
+          "3/3",
+          "3/0"
+        ],
+        "predecessor_flag_name": "pred_sig1_wu2",
+        "predecessor_flag_description": "1 iff the color-relative predecessor in direction 1 satisfies w+u=2."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "both",
+        "has_cycle": true,
+        "has_monodromy": true,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21
+      }
+    },
+    {
+      "label": "clean_survivor_23",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "2/0",
+        "layer2_table": {
+          "s0": 2,
+          "s1": 0
+        },
+        "layer3_mode_p0": {
+          "name": "3/3",
+          "table": {
+            "s0": 3,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "simple",
+          "2/0",
+          "pred_sig4_wu2",
+          "3/3",
+          "3/0"
+        ],
+        "predecessor_flag_name": "pred_sig4_wu2",
+        "predecessor_flag_description": "1 iff the color-relative predecessor in direction 4 satisfies w+u=2."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "both",
+        "has_cycle": true,
+        "has_monodromy": true,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 21
+      }
+    },
+    {
+      "label": "clean_survivor_24",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "0/2",
+        "layer2_table": {
+          "s0": 0,
+          "s1": 2
+        },
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "effective_key": [
+          "constant",
+          "0/2",
+          "0/3"
+        ],
+        "predecessor_flag_name": "pred_any_phase_align",
+        "predecessor_flag_description": "1 iff at least one of the five color-relative predecessors has phase_align=1."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "cycle_only",
+        "has_cycle": true,
+        "has_monodromy": false,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 0
+      }
+    },
+    {
+      "label": "clean_survivor_25",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "0/2",
+        "layer2_table": {
+          "s0": 0,
+          "s1": 2
+        },
+        "layer3_mode_p0": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "constant",
+          "0/2",
+          "3/0"
+        ],
+        "predecessor_flag_name": "pred_any_phase_align",
+        "predecessor_flag_description": "1 iff at least one of the five color-relative predecessors has phase_align=1."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "cycle_only",
+        "has_cycle": true,
+        "has_monodromy": false,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 0
+      }
+    },
+    {
+      "label": "clean_survivor_26",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "0/2",
+        "layer2_table": {
+          "s0": 0,
+          "s1": 2
+        },
+        "layer3_mode_p0": {
+          "name": "3/2",
+          "table": {
+            "s0": 3,
+            "s1": 2
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/2",
+          "table": {
+            "s0": 3,
+            "s1": 2
+          }
+        },
+        "effective_key": [
+          "constant",
+          "0/2",
+          "3/2"
+        ],
+        "predecessor_flag_name": "pred_any_phase_align",
+        "predecessor_flag_description": "1 iff at least one of the five color-relative predecessors has phase_align=1."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "cycle_only",
+        "has_cycle": true,
+        "has_monodromy": false,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 0
+      }
+    },
+    {
+      "label": "clean_survivor_27",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "0/2",
+        "layer2_table": {
+          "s0": 0,
+          "s1": 2
+        },
+        "layer3_mode_p0": {
+          "name": "3/3",
+          "table": {
+            "s0": 3,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/3",
+          "table": {
+            "s0": 3,
+            "s1": 3
+          }
+        },
+        "effective_key": [
+          "constant",
+          "0/2",
+          "3/3"
+        ],
+        "predecessor_flag_name": "pred_any_phase_align",
+        "predecessor_flag_description": "1 iff at least one of the five color-relative predecessors has phase_align=1."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "cycle_only",
+        "has_cycle": true,
+        "has_monodromy": false,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 0
+      }
+    },
+    {
+      "label": "clean_survivor_28",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "2/0",
+        "layer2_table": {
+          "s0": 2,
+          "s1": 0
+        },
+        "layer3_mode_p0": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "0/3",
+          "table": {
+            "s0": 0,
+            "s1": 3
+          }
+        },
+        "effective_key": [
+          "constant",
+          "2/0",
+          "0/3"
+        ],
+        "predecessor_flag_name": "pred_any_phase_align",
+        "predecessor_flag_description": "1 iff at least one of the five color-relative predecessors has phase_align=1."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "cycle_only",
+        "has_cycle": true,
+        "has_monodromy": false,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 0
+      }
+    },
+    {
+      "label": "clean_survivor_29",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "2/0",
+        "layer2_table": {
+          "s0": 2,
+          "s1": 0
+        },
+        "layer3_mode_p0": {
+          "name": "2/3",
+          "table": {
+            "s0": 2,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "2/3",
+          "table": {
+            "s0": 2,
+            "s1": 3
+          }
+        },
+        "effective_key": [
+          "constant",
+          "2/0",
+          "2/3"
+        ],
+        "predecessor_flag_name": "pred_any_phase_align",
+        "predecessor_flag_description": "1 iff at least one of the five color-relative predecessors has phase_align=1."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "cycle_only",
+        "has_cycle": true,
+        "has_monodromy": false,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 0
+      }
+    },
+    {
+      "label": "clean_survivor_30",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "2/0",
+        "layer2_table": {
+          "s0": 2,
+          "s1": 0
+        },
+        "layer3_mode_p0": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/0",
+          "table": {
+            "s0": 3,
+            "s1": 0
+          }
+        },
+        "effective_key": [
+          "constant",
+          "2/0",
+          "3/0"
+        ],
+        "predecessor_flag_name": "pred_any_phase_align",
+        "predecessor_flag_description": "1 iff at least one of the five color-relative predecessors has phase_align=1."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "cycle_only",
+        "has_cycle": true,
+        "has_monodromy": false,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 0
+      }
+    },
+    {
+      "label": "clean_survivor_31",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "2/0",
+        "layer2_table": {
+          "s0": 2,
+          "s1": 0
+        },
+        "layer3_mode_p0": {
+          "name": "3/3",
+          "table": {
+            "s0": 3,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/3",
+          "table": {
+            "s0": 3,
+            "s1": 3
+          }
+        },
+        "effective_key": [
+          "constant",
+          "2/0",
+          "3/3"
+        ],
+        "predecessor_flag_name": "pred_any_phase_align",
+        "predecessor_flag_description": "1 iff at least one of the five color-relative predecessors has phase_align=1."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "cycle_only",
+        "has_cycle": true,
+        "has_monodromy": false,
+        "total_u_cycle_count": 21,
+        "max_cycle_length": 9,
+        "total_nonzero_monodromies": 0
+      }
+    },
+    {
+      "label": "clean_survivor_32",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "0/2",
+        "layer2_table": {
+          "s0": 0,
+          "s1": 2
+        },
+        "layer3_mode_p0": {
+          "name": "2/3",
+          "table": {
+            "s0": 2,
+            "s1": 3
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "2/3",
+          "table": {
+            "s0": 2,
+            "s1": 3
+          }
+        },
+        "effective_key": [
+          "constant",
+          "0/2",
+          "2/3"
+        ],
+        "predecessor_flag_name": "pred_any_phase_align",
+        "predecessor_flag_description": "1 iff at least one of the five color-relative predecessors has phase_align=1."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "monodromy_only",
+        "has_cycle": false,
+        "has_monodromy": true,
+        "total_u_cycle_count": 155,
+        "max_cycle_length": 1,
+        "total_nonzero_monodromies": 155
+      }
+    },
+    {
+      "label": "clean_survivor_33",
+      "rule": {
+        "family": "simple",
+        "representative_old_bit_name": "q=-1",
+        "layer2_orientation": "2/0",
+        "layer2_table": {
+          "s0": 2,
+          "s1": 0
+        },
+        "layer3_mode_p0": {
+          "name": "3/2",
+          "table": {
+            "s0": 3,
+            "s1": 2
+          }
+        },
+        "layer3_mode_p1": {
+          "name": "3/2",
+          "table": {
+            "s0": 3,
+            "s1": 2
+          }
+        },
+        "effective_key": [
+          "constant",
+          "2/0",
+          "3/2"
+        ],
+        "predecessor_flag_name": "pred_any_phase_align",
+        "predecessor_flag_description": "1 iff at least one of the five color-relative predecessors has phase_align=1."
+      },
+      "search_metrics": {
+        "latin_color0_all": true,
+        "latin_all": true,
+        "clean_all": true,
+        "strict_all": true,
+        "overall_kind": "monodromy_only",
+        "has_cycle": false,
+        "has_monodromy": true,
+        "total_u_cycle_count": 155,
+        "max_cycle_length": 1,
+        "total_nonzero_monodromies": 155
+      }
+    }
+  ]
+}
