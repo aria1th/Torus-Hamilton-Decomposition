@@ -27,6 +27,34 @@ the remaining structural object is now explicit: grouped base plus carry sheet
 plus binary anticipation cover, with the first carry-only admissible catalogs
 now ruled out and the carry bit exposed as a future-transition event.
 
+## Current proof strategy
+
+The current proof attempt is no longer trying to invent a new mixed witness.
+That part is already done. The live theorem strategy is:
+
+1. fix the reduced perturbation target from `025`, where the grouped dynamics
+   already have the right single-orbit shape;
+2. use `044` to package the active best-seed branch as the checked normal form
+   `B <- B+c <- B+c+d`, where
+   `B = (s,u,v,layer,family)`,
+   `c = 1_{q=m-1}`,
+   and `d = 1_{next carry u >= m-3}`;
+3. use `045` and `046` to sharpen the remaining gap:
+   the missing ingredient is not more controller logic, but an admissible way
+   to code the carry event already visible as
+   `B + flat-run length + first nonflat dn`;
+4. once that carry event is realized in the intended local/admissible class,
+   the trigger logic should descend to the reduced model cleanly, while `d`
+   stays on the theorem side as a structural finite-cover coordinate.
+
+So the proof is currently split into two coordinated branches:
+
+- local branch:
+  find an admissible surrogate for the exact future-transition carry event;
+- theorem branch:
+  package `044`, `045`, and `046` as the checked normal-form chain behind the
+  D5 mechanism.
+
 ## Barrier evolution
 
 The real story of RoundY is the bottleneck moving inward:
@@ -331,6 +359,9 @@ The strongest supported D5 picture so far is:
 12. The carry slice is the smallest verified trigger lift, but the structural
     reduced object is a tiny finite cover over the grouped base, with fiber
     size at most `3` on the checked range.
+13. The first carry-only admissible catalogs are also exhausted exactly.
+14. The carry sheet is already the first exact future grouped-transition
+    event, not an unspecified deeper lift.
 
 So the current question is not:
 
@@ -340,22 +371,27 @@ So the current question is not:
 
 It is:
 
-**what is the smallest admissible lifted sheet over the grouped base that
-exposes and closes the raw control logic already identified?**
+**what is the smallest admissible coding of the exact future-transition
+signature
+`B + flat-run length + first nonflat dn`
+that exposes and closes the raw control logic already identified?**
 
 ## Current next branch
 
-After `042`, the honest next branch is:
+After `046`, the honest next branch is:
 
-1. search for an admissible realization of the **carry-slice lift** if
-   trigger-level control is enough, or
-2. extract / realize the **tiny finite-sheet cover** over the grouped base if
-   a closed odometer-style dynamics is the real target, or
-3. only then open genuinely new observable families that are not lifts of the
-   same simple `038` row.
+1. search for an admissible surrogate for
+   `B + flat-run length + first nonflat dn`,
+   still targeting only the carry bit `c = 1_{q=m-1}`;
+2. package `044`, `045`, and `046` as one theorem chain:
+   grouped base, carry sheet, binary anticipation cover, first carry-catalog
+   no-go, and exact future-transition carry event;
+3. only then ask whether the future signature itself compresses further or
+   whether a smaller equivalent admissible coding exists.
 
 What is not recommended now:
 
+- reopening the first carry-only catalogs already killed by `045`,
 - broader one-bit scans,
 - generic `2`-state / `3`-state transducer widening on the same alphabet,
 - reopening static endpoint-word families without a phase-aware ingredient.
@@ -371,11 +407,35 @@ Use these together:
 - [`RoundY/instruction_for_codex.md`](./instruction_for_codex.md)
   for the short Codex-oriented reading order and thinking patterns
 - [`DOCUMENT_FOR_EXTERNAL_REVIEW.md`](../DOCUMENT_FOR_EXTERNAL_REVIEW.md)
-  for the branch decisions `D17` through `D33`
-- [`RoundY/autonomous/d5_autonomous_perturbation_note_v17.md`](./autonomous/d5_autonomous_perturbation_note_v17.md)
+  for the branch decisions `D17` through `D39`
+- [`RoundY/autonomous/d5_autonomous_perturbation_note_v21.md`](./autonomous/d5_autonomous_perturbation_note_v21.md)
   for the latest local-branch summary
+- [`RoundY/routeY_status_summary_045.md`](./routeY_status_summary_045.md)
+  for the compact branch-status freeze at the start of the carry-only search
+- [`RoundY/d5_carry_transition_horizon_followup_045.md`](./d5_carry_transition_horizon_followup_045.md)
+  for the short note explaining why the `046` branch sharpened from a vague
+  “deeper sheet” to an exact future-transition event
 - [`formal/README-D5.md`](../formal/README-D5.md)
   for the Lean / formalization side of the extracted D5 model
+
+## Working files
+
+RoundY now keeps active D5 support files inside `RoundY/`, not `tmp/`.
+
+- root `RoundY/`:
+  session summaries and short branch notes such as
+  `codex_work_s59.md`,
+  `codex_work_s60.md`,
+  `routeY_status_summary_045.md`,
+  and `d5_carry_transition_horizon_followup_045.md`
+- [`RoundY/specs/`](./specs/):
+  executable specs and work templates for artifact branches
+- [`RoundY/checks/`](./checks/):
+  small JSON prep checks and follow-up machine summaries
+- [`RoundY/theorem/`](./theorem/):
+  theorem-packaging notes and manuscript snippets
+
+These files are research assets for the D5 branch, not transient scratch.
 
 ## Recent artifact chain
 

@@ -49,6 +49,13 @@ If producing a new research note or work spec, use:
 1. [../docs/template_to_use.md](../docs/template_to_use.md)
 2. [../docs/suggested_workflow.md](../docs/suggested_workflow.md)
 
+For D5 support files inside this repo, use this layout:
+
+- `RoundY/specs/` for executable specs and work templates
+- `RoundY/checks/` for small JSON prep checks and follow-up summaries
+- `RoundY/theorem/` for theorem-shaping notes and snippets
+- root `RoundY/` for short session summaries such as `codex_work_s59.md`
+
 ## Real current problem
 
 Do not frame the problem as:

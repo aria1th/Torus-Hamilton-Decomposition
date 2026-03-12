@@ -14,8 +14,17 @@ Use it together with:
 - [README.md](./README.md)
 - [d5_progress_master_summary.md](./d5_progress_master_summary.md)
 - [d5_autonomous_perturbation_note_v21.md](./autonomous/d5_autonomous_perturbation_note_v21.md)
+- [routeY_status_summary_045.md](./routeY_status_summary_045.md)
+- [d5_carry_transition_horizon_followup_045.md](./d5_carry_transition_horizon_followup_045.md)
 - [DOCUMENT_FOR_EXTERNAL_REVIEW.md](../DOCUMENT_FOR_EXTERNAL_REVIEW.md)
 - [formal/README-D5.md](../formal/README-D5.md)
+
+RoundY D5 support files now live in:
+
+- `RoundY/specs/` for executable specs and work templates
+- `RoundY/checks/` for small JSON prep checks and follow-up summaries
+- `RoundY/theorem/` for theorem-shaping notes and snippets
+- root `RoundY/` for session summaries such as `codex_work_s59.md`
 
 ## Current real problem
 
@@ -123,6 +132,19 @@ In practice, that means:
   alphabet
 - do not widen static endpoint-word families unless a phase-aware ingredient is
   added
+
+The guiding proof picture is now:
+
+- theorem branch:
+  the active best-seed mechanism is already cleanly described by
+  `B <- B+c <- B+c+d`;
+- local branch:
+  the remaining work is to code the carry event admissibly, not to invent a
+  new reduced controller;
+- bridge:
+  once the carry event is local, the reduced trigger logic should slot into the
+  existing `025` grouped target and the finite-cover theorem becomes the clean
+  structural wrapper around it.
 
 The first honest next moves are:
 
