@@ -23,7 +23,7 @@ That is the right d5 language now.
 
 I also wrote the next-spec draft here:
 
-[044 carry + finite-cover spec](sandbox:/mnt/data/d5_carry_and_finite_cover_044_spec.md)
+[044 carry + finite-cover spec](./specs/d5_carry_and_finite_cover_044_spec.md)
 
 ## What 043 really changed
 

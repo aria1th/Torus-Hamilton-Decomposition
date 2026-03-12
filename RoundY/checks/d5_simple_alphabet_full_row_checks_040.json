@@ -1,0 +1,136 @@
+{
+  "scope": "Self-check against 038/036 artifacts using the full simple current+pred+succ phase_align/wu2 row, not just size<=5 projections.",
+  "source_entry_global_isolation": {
+    "5": {
+      "full24": {
+        "source": {"isolates": false, "collision_count": 105},
+        "entry": {"isolates": false, "collision_count": 80},
+        "source_exc": {"isolates": true, "collision_count": 0},
+        "entry_exc": {"isolates": false, "collision_count": 5}
+      },
+      "curpred14": {
+        "source": {"isolates": false, "collision_count": 105},
+        "entry": {"isolates": false, "collision_count": 105},
+        "source_exc": {"isolates": true, "collision_count": 0},
+        "entry_exc": {"isolates": false, "collision_count": 5}
+      },
+      "pred10": {
+        "source": {"isolates": false, "collision_count": 3105},
+        "entry": {"isolates": false, "collision_count": 3105},
+        "source_exc": {"isolates": true, "collision_count": 0},
+        "entry_exc": {"isolates": false, "collision_count": 5}
+      }
+    },
+    "7": {
+      "full24": {
+        "source": {"isolates": false, "collision_count": 301},
+        "entry": {"isolates": false, "collision_count": 252},
+        "source_exc": {"isolates": true, "collision_count": 0},
+        "entry_exc": {"isolates": false, "collision_count": 21}
+      },
+      "curpred14": {
+        "source": {"isolates": false, "collision_count": 301},
+        "entry": {"isolates": false, "collision_count": 301},
+        "source_exc": {"isolates": true, "collision_count": 0},
+        "entry_exc": {"isolates": false, "collision_count": 21}
+      },
+      "pred10": {
+        "source": {"isolates": false, "collision_count": 16765},
+        "entry": {"isolates": false, "collision_count": 16765},
+        "source_exc": {"isolates": true, "collision_count": 0},
+        "entry_exc": {"isolates": false, "collision_count": 21}
+      }
+    },
+    "9": {
+      "full24": {
+        "source": {"isolates": false, "collision_count": 657},
+        "entry": {"isolates": false, "collision_count": 576},
+        "source_exc": {"isolates": true, "collision_count": 0},
+        "entry_exc": {"isolates": false, "collision_count": 45}
+      },
+      "curpred14": {
+        "source": {"isolates": false, "collision_count": 657},
+        "entry": {"isolates": false, "collision_count": 657},
+        "source_exc": {"isolates": true, "collision_count": 0},
+        "entry_exc": {"isolates": false, "collision_count": 45}
+      },
+      "pred10": {
+        "source": {"isolates": false, "collision_count": 58977},
+        "entry": {"isolates": false, "collision_count": 58977},
+        "source_exc": {"isolates": true, "collision_count": 0},
+        "entry_exc": {"isolates": false, "collision_count": 45}
+      }
+    },
+    "11": {
+      "full24": {
+        "source": {"isolates": false, "collision_count": 1221},
+        "entry": {"isolates": false, "collision_count": 1100},
+        "source_exc": {"isolates": true, "collision_count": 0},
+        "entry_exc": {"isolates": false, "collision_count": 77}
+      },
+      "curpred14": {
+        "source": {"isolates": false, "collision_count": 1221},
+        "entry": {"isolates": false, "collision_count": 1221},
+        "source_exc": {"isolates": true, "collision_count": 0},
+        "entry_exc": {"isolates": false, "collision_count": 77}
+      },
+      "pred10": {
+        "source": {"isolates": false, "collision_count": 160941},
+        "entry": {"isolates": false, "collision_count": 160941},
+        "source_exc": {"isolates": true, "collision_count": 0},
+        "entry_exc": {"isolates": false, "collision_count": 77}
+      }
+    }
+  },
+  "active_target_visibility_within_representative_traces": {
+    "5": {
+      "regular": {
+        "full24_target_unique_within_trace": true,
+        "curpred14_target_unique_within_trace": true,
+        "pred10_target_unique_within_trace": true
+      },
+      "exceptional": {
+        "full24_target_unique_within_trace": false,
+        "curpred14_target_unique_within_trace": false,
+        "pred10_target_unique_within_trace": false
+      }
+    },
+    "7": {
+      "regular": {
+        "full24_target_unique_within_trace": true,
+        "curpred14_target_unique_within_trace": true,
+        "pred10_target_unique_within_trace": false
+      },
+      "exceptional": {
+        "full24_target_unique_within_trace": false,
+        "curpred14_target_unique_within_trace": false,
+        "pred10_target_unique_within_trace": false
+      }
+    },
+    "9": {
+      "regular": {
+        "full24_target_unique_within_trace": false,
+        "curpred14_target_unique_within_trace": false,
+        "pred10_target_unique_within_trace": false
+      },
+      "exceptional": {
+        "full24_target_unique_within_trace": false,
+        "curpred14_target_unique_within_trace": false,
+        "pred10_target_unique_within_trace": false
+      }
+    },
+    "11": {
+      "regular": {
+        "full24_target_unique_within_trace": false,
+        "curpred14_target_unique_within_trace": false,
+        "pred10_target_unique_within_trace": false
+      },
+      "exceptional": {
+        "full24_target_unique_within_trace": false,
+        "curpred14_target_unique_within_trace": false,
+        "pred10_target_unique_within_trace": false
+      }
+    }
+  },
+  "conclusion": "The simple 038 neighborhood bit family should not be the next search alphabet for either birth isolation or stable target triggering. 040 should move to a richer observable family while freezing the raw 3-state carrier logic from 037/039."
+}

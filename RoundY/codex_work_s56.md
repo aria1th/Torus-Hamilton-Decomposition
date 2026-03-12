@@ -125,7 +125,7 @@ where
 
 I also drafted the next spec in that language:
 
-[043 finite-cover / admissibility spec](sandbox:/mnt/data/d5_finite_cover_admissibility_043_spec.md)
+[043 finite-cover / admissibility spec](./specs/d5_finite_cover_admissibility_043_spec.md)
 
 My advice on compute budget: I would **not** spend GPU or huge generic search effort yet. The best next work is still exact combinatorial extraction:
 

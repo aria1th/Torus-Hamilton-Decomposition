@@ -1,0 +1,67 @@
+{
+  "task": "prep-check for D5-RAW-BIRTH-MARKER-TRANSPORT-039",
+  "formulae": {
+    "source": "layer=1, q=m-1, w=0, u!=0",
+    "exceptional_source": "layer=1, q=m-1, w=0, u=3",
+    "entry": "layer=2, q=m-1, w=1, u!=0",
+    "exceptional_entry": "layer=2, q=m-1, w=1, u=3"
+  },
+  "per_m": {
+    "5": {
+      "source_count": 20,
+      "source_formula_count": 20,
+      "source_formula_exact": true,
+      "exceptional_source_count": 5,
+      "exceptional_source_formula_count": 5,
+      "exceptional_source_formula_exact": true,
+      "entry_count": 20,
+      "entry_formula_count": 20,
+      "entry_formula_exact": true,
+      "exceptional_entry_count": 5,
+      "exceptional_entry_formula_count": 5,
+      "exceptional_entry_formula_exact": true
+    },
+    "7": {
+      "source_count": 42,
+      "source_formula_count": 42,
+      "source_formula_exact": true,
+      "exceptional_source_count": 7,
+      "exceptional_source_formula_count": 7,
+      "exceptional_source_formula_exact": true,
+      "entry_count": 42,
+      "entry_formula_count": 42,
+      "entry_formula_exact": true,
+      "exceptional_entry_count": 7,
+      "exceptional_entry_formula_count": 7,
+      "exceptional_entry_formula_exact": true
+    },
+    "9": {
+      "source_count": 72,
+      "source_formula_count": 72,
+      "source_formula_exact": true,
+      "exceptional_source_count": 9,
+      "exceptional_source_formula_count": 9,
+      "exceptional_source_formula_exact": true,
+      "entry_count": 72,
+      "entry_formula_count": 72,
+      "entry_formula_exact": true,
+      "exceptional_entry_count": 9,
+      "exceptional_entry_formula_count": 9,
+      "exceptional_entry_formula_exact": true
+    },
+    "11": {
+      "source_count": 110,
+      "source_formula_count": 110,
+      "source_formula_exact": true,
+      "exceptional_source_count": 11,
+      "exceptional_source_formula_count": 11,
+      "exceptional_source_formula_exact": true,
+      "entry_count": 110,
+      "entry_formula_count": 110,
+      "entry_formula_exact": true,
+      "exceptional_entry_count": 11,
+      "exceptional_entry_formula_count": 11,
+      "exceptional_entry_formula_exact": true
+    }
+  }
+}

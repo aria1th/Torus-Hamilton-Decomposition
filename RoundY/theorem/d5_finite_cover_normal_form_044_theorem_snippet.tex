@@ -1,0 +1,65 @@
+% D5 finite-cover normal form 044: theorem and lemma snippet
+
+\begin{theorem}[Checked finite-cover normal form for the best-seed D5 active branch]
+Fix the best seed pair
+\[
+L=[2,2,1],\qquad R=[1,4,4],
+\]
+and let $A_m$ be the extracted active branch of the unresolved channel
+\[
+R1 \to H_{L1}
+\]
+for a checked modulus $m\in\{5,7,9,11\}$. For $x\in A_m$, define
+\[
+B(x)=(s(x),u(x),v(x),\lambda(x),f(x)),
+\qquad
+c(x)=\mathbf 1_{\{q(x)=m-1\}},
+\]
+where $\lambda=\mathrm{layer}$ and $f\in\{\mathrm{regular},\mathrm{exceptional}\}$ is the carried family bit. Let
+\[
+\tau(x)=\min\{t\ge 0: c(F_m^t x)=1\},
+\qquad
+U^+(x)=u(F_m^{\tau(x)}x),
+\]
+and set
+\[
+d(x)=\mathbf 1_{\{U^+(x)\ge m-3\}}.
+\]
+Then the checked active branch admits the normal form
+\[
+B \leftarrow B+c \leftarrow B+c+d,
+\]
+with the following properties:
+\begin{enumerate}
+\item the exceptional fire predicate is a function of $B$;
+\item the regular fire predicate is not a function of $B$, but it is a function of $B+c$;
+\item every $(B+c)$-fiber with $c=1$ is a singleton;
+\item every non-singleton $(B+c)$-fiber lies on the regular noncarry region;
+\item the checked residual $2$-sheet cover over $B+c$ is realized by the binary anticipation bit $d$;
+\item the active transition law is deterministic on $B+c+d$.
+\end{enumerate}
+\end{theorem}
+
+\begin{lemma}[Future-carry low/high dichotomy on the ambiguous support]
+For each checked modulus $m\in\{5,7,9,11\}$, if $x$ lies in a non-singleton $(B+c)$-fiber, then
+\[
+U^+(x)\in\{0,1,m-3,m-2\},
+\]
+with the expected degeneracy at $m=5$. In particular, the threshold bit
+\[
+\mathbf 1_{\{U^+(x)\ge m-3\}}
+\]
+produces a binary separation of every checked ambiguous $(B+c)$-fiber.
+\end{lemma}
+
+\begin{corollary}[Trigger-level vs structure-level lift]
+On the checked active branch, the exact trigger-level missing lift is
+\[
+c=\mathbf 1_{\{q=m-1\}},
+\]
+while the residual structure-level lift is the binary anticipation sheet
+\[
+d=\mathbf 1_{\{U^+\ge m-3\}}.
+\]
+Thus the local realization frontier remains the carry sheet, not the full residual cover.
+\end{corollary}

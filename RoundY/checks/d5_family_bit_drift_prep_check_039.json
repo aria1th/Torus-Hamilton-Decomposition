@@ -1,0 +1,142 @@
+{
+  "task": "prep-check for D5-RAW-BIRTH-MARKER-TRANSPORT-039",
+  "note": "Representative regular and exceptional 036 traces show current u drifting through all residues.",
+  "per_m": {
+    "5": {
+      "regular": {
+        "source_u": 1,
+        "trace_length": 50,
+        "u_values_seen": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "num_u_values_seen": 5,
+        "all_residues_seen": true
+      },
+      "exceptional": {
+        "source_u": 3,
+        "trace_length": 70,
+        "u_values_seen": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "num_u_values_seen": 5,
+        "all_residues_seen": true
+      }
+    },
+    "7": {
+      "regular": {
+        "source_u": 1,
+        "trace_length": 196,
+        "u_values_seen": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "num_u_values_seen": 7,
+        "all_residues_seen": true
+      },
+      "exceptional": {
+        "source_u": 3,
+        "trace_length": 238,
+        "u_values_seen": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "num_u_values_seen": 7,
+        "all_residues_seen": true
+      }
+    },
+    "9": {
+      "regular": {
+        "source_u": 1,
+        "trace_length": 486,
+        "u_values_seen": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "num_u_values_seen": 9,
+        "all_residues_seen": true
+      },
+      "exceptional": {
+        "source_u": 3,
+        "trace_length": 558,
+        "u_values_seen": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "num_u_values_seen": 9,
+        "all_residues_seen": true
+      }
+    },
+    "11": {
+      "regular": {
+        "source_u": 1,
+        "trace_length": 968,
+        "u_values_seen": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "num_u_values_seen": 11,
+        "all_residues_seen": true
+      },
+      "exceptional": {
+        "source_u": 3,
+        "trace_length": 1078,
+        "u_values_seen": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "num_u_values_seen": 11,
+        "all_residues_seen": true
+      }
+    }
+  }
+}
