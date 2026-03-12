@@ -14,8 +14,8 @@ Read in this order:
 2. [current-frontier-and-approach.md](./current-frontier-and-approach.md)
 3. [../DOCUMENT_FOR_EXTERNAL_REVIEW.md](../DOCUMENT_FOR_EXTERNAL_REVIEW.md)
    Focus on `D23`, `D24`, `D25`, `D26`, `D27`, `D28`, `D29`, `D30`, `D31`,
-   `D32`, `D33`, `D34`, `D35`.
-4. [autonomous/d5_autonomous_perturbation_note_v19.md](./autonomous/d5_autonomous_perturbation_note_v19.md)
+   `D32`, `D33`, `D34`, `D35`, `D37`, `D38`.
+4. [autonomous/d5_autonomous_perturbation_note_v21.md](./autonomous/d5_autonomous_perturbation_note_v21.md)
 
 Then read the key artifact READMEs in this order:
 
@@ -36,6 +36,8 @@ Then read the key artifact READMEs in this order:
 15. [../artifacts/d5_carry_slice_cover_042/README.md](../artifacts/d5_carry_slice_cover_042/README.md)
 16. [../artifacts/d5_finite_cover_admissibility_043/README.md](../artifacts/d5_finite_cover_admissibility_043/README.md)
 17. [../artifacts/d5_carry_and_finite_cover_044/README.md](../artifacts/d5_carry_and_finite_cover_044/README.md)
+18. [../artifacts/d5_carry_admissibility_search_045/README.md](../artifacts/d5_carry_admissibility_search_045/README.md)
+19. [../artifacts/d5_deep_transition_carry_sheet_046/README.md](../artifacts/d5_deep_transition_carry_sheet_046/README.md)
 
 If working on Lean / formalization, then also read:
 
@@ -55,11 +57,12 @@ Do not frame the problem as:
 - “find a better one-bit separator”
 - “try a slightly larger tiny transducer”
 
-The real frontier after `044` is:
+The real frontier after `046` is:
 
-**find the smallest admissible realization of the carry sheet, now that the
-structural theorem branch is explicit and the residual sheet has a canonical
-binary anticipation form**
+**find an admissible coding of the first exact future grouped-transition event
+for the carry sheet, now that the structural theorem branch is explicit, the
+first carry-only admissible catalogs are dead, and the future horizon is
+already extracted**
 
 `R1 -> H_L1`
 
@@ -149,9 +152,25 @@ Treat these as current working facts unless you are explicitly revisiting them.
    `B <- B+c <- B+c+d`,
    with `d` a binary anticipation sheet and carry states singleton over `B+c`.
 
+16. `045`
+   The first carry-only admissible catalogs are already pruned exactly:
+   `0` exact candidates across the checked
+   current-edge / label / delta core catalog up to size `5`,
+   low-cardinality gauge-transition catalog up to size `5`,
+   and targeted point-defect catalog up to size `4`.
+   Full `B -> B_next` and `B -> B_next -> B_next2` grouped transition classes
+   still fail.
+
+17. `046`
+   The carry sheet is already an exact future-transition event on the checked
+   active grouped base.
+   The minimal exact future `dn` horizon is `m-3`, the minimal exact future
+   grouped-state horizon is `m-2`, and the exact future window compresses to
+   current `B` plus `flat-run length + first nonflat dn`.
+
 So the branch is now:
 
-**projected phase known, raw odometer known, raw control logic explicit, grouped-state descent exhausted, carry lift identified, binary anticipation cover explicit, admissible carry realization still open**
+**projected phase known, raw odometer known, raw control logic explicit, grouped-state descent exhausted, carry lift identified, binary anticipation cover explicit, first carry-only catalogs exhausted, future-transition carry sheet extracted**
 
 ## Patterns to think in first
 

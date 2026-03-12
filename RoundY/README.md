@@ -5,7 +5,7 @@ Hamilton decomposition of the directed `5`-torus
 `D_5(m) = Cay((Z_m)^5, {e_0, e_1, e_2, e_3, e_4})`.
 
 **Status:** `[O]` open.  
-**Current frontier:** after artifact `044`, grouped-state-descending admissible families are pruned, the smallest verified trigger lift is identified, and the structural theorem branch now has a clean checked normal form. Raw current coordinates still close the reduced control logic, `w` already descends as `s-u`, exceptional fire already descends to `B = (s,u,v,layer,family)`, regular fire descends to `B` plus the carry-slice bit `1_{q=m-1}`, and the residual sheet can now be taken as the binary anticipation bit `1_{next carry u >= m-3}`. It is now: **realize the carry lift admissibly; the theorem branch is grouped base + carry sheet + binary anticipation cover.**
+**Current frontier:** after artifact `046`, grouped-state-descending admissible families are pruned, the structural theorem branch has a clean checked normal form, the first carry-only admissible catalogs are dead, and the carry sheet is now identified exactly as a future grouped-transition event. On `m=5,7,9,11`, the minimal exact future grouped-delta horizon is `m-3`, the minimal exact future grouped-state horizon is `m-2`, and the exact future window compresses to `B` plus `initial flat-run length + first nonflat dn`. It is now: **seek an admissible coding of that exact future-transition event, not a generic broader gauge.**
 
 This README is the current top-level map. It replaces the older Session-20-only
 snapshot and is organized around the actual D5 branch progression through the
@@ -24,7 +24,8 @@ frontier is now a **tiny lifted-sheet admissibility obstruction** on the best
 endpoint seed: the lifted phase is already visible on raw `(q,w,layer)`, the
 raw control logic is already exact, the carry-slice trigger lift is known, and
 the remaining structural object is now explicit: grouped base plus carry sheet
-plus binary anticipation cover.
+plus binary anticipation cover, with the first carry-only admissible catalogs
+now ruled out and the carry bit exposed as a future-transition event.
 
 ## Barrier evolution
 
@@ -41,11 +42,13 @@ The real story of RoundY is the bottleneck moving inward:
 9. `lifted corridor state visible on raw current coordinates`
 10. `coordinate exposure / admissibility`
 11. `carry-slice trigger lift identified`
-12. `current frontier: carry realization over an explicit binary anticipation cover`
+12. `first carry-only admissible catalogs pruned`
+13. `carry sheet identified as first exact future-transition event`
+14. `current frontier: admissible coding of that future event`
 
 In short:
 
-`clean frame -> Latin -> return dynamics -> reduced normal form -> local realization -> orbit phase -> lifted-coordinate admissibility -> tiny finite-sheet cover`
+`clean frame -> Latin -> return dynamics -> reduced normal form -> local realization -> orbit phase -> lifted-coordinate admissibility -> tiny finite-sheet cover -> carry-only admissibility no-go -> future-transition carry sheet`
 
 ## High-level progress map
 
@@ -158,7 +161,7 @@ Main outcome:
 - endpoint orientation is necessary,
 - but fixed static endpoint words are still not enough.
 
-### `032–044`: best endpoint seed, defect quotient, corridor phase, static gate no-go, phase clarification, carrier target, birth-local split, exact raw birth formulas, realization boundary, first admissibility no-go, carry-slice / finite-cover extraction
+### `032–046`: best endpoint seed, defect quotient, corridor phase, static gate no-go, phase clarification, carrier target, birth-local split, exact raw birth formulas, realization boundary, first admissibility no-go, carry-slice / finite-cover extraction, first carry-only no-go, deep future-transition carry sheet
 
 This is the current live branch.
 
@@ -250,6 +253,29 @@ This is the current live branch.
   `d = 1_{next carry u >= m-3}`.
   Carry states are singleton over `B+c`, and `d` is needed only on regular
   noncarry states.
+- `045`:
+  the first carry-only admissible catalogs are exhausted exactly.
+  Across `69,994` candidates on `m=5,7,9,11`, there are `0` exact carry
+  realizations in:
+  current-edge / label / delta cores up to size `5`,
+  low-cardinality `025`-style gauge-transition families up to size `5`,
+  and targeted point-defect families up to size `4`.
+  Full `B -> B_next` and `B -> B_next -> B_next2` grouped transition classes
+  also fail.
+  The best surviving negatives are driven by `next_dn` and `dn + next_dn`,
+  which are exact on `m=5` but miss only regular carry `B`-states on
+  `m=7,9,11`.
+- `046`:
+  the carry bit is already an exact future-transition event on the checked
+  active grouped base.
+  The minimal exact future `dn` horizon is `m-3` on `m=5,7,9,11`, and the
+  minimal exact future grouped-state horizon is `m-2`.
+  The exact future window compresses to:
+  current `B` plus
+  `initial flat-run length where dn=(0,0,0,1)` plus
+  `first nonflat dn`.
+  Flat-run length alone is not exact, and the `H-1` ambiguity is confined to
+  regular carry `B`-states.
 
 Main outcome:
 
@@ -271,10 +297,14 @@ Main outcome:
 - Regular fire descends to `B` plus the carry slice `1_{q=m-1}`.
 - The structural lift is no longer vague:
   it is now grouped base plus carry sheet plus binary anticipation cover.
-- The remaining live local branch is carry realization.
+- The first carry-only admissible families are now pruned too.
+- The carry sheet is no longer an amorphous deeper lift.
+- It is already the first exact future grouped-transition event.
+- The remaining live local branch is admissible coding of that future event.
 - But the closed structural lift is still not just the carry bit.
 - So the missing admissibility ingredient is the smallest finite lifted sheet
-  over the grouped base in the intended local mechanism class.
+  over the grouped base beyond current edge / `1`-step / `2`-step /
+  low-cardinality anchored-gauge data.
 
 ## Current picture
 
@@ -370,6 +400,8 @@ Use these together:
 | `042` | carry slice is the smallest trigger lift; structural object = tiny finite cover over grouped base |
 | `043` | minimal deterministic cover over `B+c` is `2`-sheet on `m=5,7,9,11`; residual sheet not any short future-carry window; time-to-next-carry coordinatizes it |
 | `044` | **normal form confirmed**: `B <- B+c <- B+c+d` with `d = 1_{next carry u >= m-3}`; carry states singleton over `B+c`; `d` needed only on regular noncarry; carry realization: **open** |
+| `045` | **first carry-only admissibility no-go**: `0` exact candidates across `69,994` first catalog families; `B`, `B->B_next`, and `B->B_next->B_next2` classes all fail; next missing datum = broader lifted gauge or deeper-than-`2`-step transition sheet |
+| `046` | **future-transition carry sheet extracted**: minimal exact future `dn` horizon = `m-3`, minimal exact future grouped-state horizon = `m-2`; exact compression = `B + flat-run length + first nonflat dn`; next branch = admissible coding of that event |
 
 ## Claim labels
 
@@ -405,5 +437,5 @@ The d=5 theorem narrative:
 
 Next branches:
 
-1. **044A (local):** realize `c = 1_{q=m-1}` admissibly.
-2. **044B (structural):** extract `d` intrinsically; prove carry events reset `d`-fibers.
+1. **046A (local):** search an admissible surrogate for `B + flat-run length + first nonflat dn` that still targets only `c = 1_{q=m-1}`.
+2. **046B (proof):** formalize the `044` normal form, the `045` first-catalog no-go, and the `046` future-transition theorem cleanly.

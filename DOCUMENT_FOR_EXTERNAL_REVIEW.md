@@ -1561,3 +1561,255 @@ Rollout / acceptance:
 - Update the RoundY docs so the current message is:
   theorem branch explicit, carry realization still open.
 - Keep the next autonomous local branch focused on the carry sheet.
+
+## D37) D5 next-branch scope after the first carry-only admissibility no-go
+
+**Decision:** After `045`, stop widening the first carry-only admissible
+catalogs built from current edge / label / delta data, `1`-step and `2`-step
+grouped transition signatures, and low-cardinality `025`-style anchored gauge
+bits. The next honest local branch is a broader lifted gauge or a
+deeper-than-`2`-step transition sheet, still targeting only the carry bit
+`c = 1_{q=m-1}`.
+
+Options:
+1. Keep widening the same first carry-only catalogs with more combinations of
+   current-edge, `1`-step, `2`-step, and low-cardinality anchored-gauge data.
+2. Treat `045` as the first carry-specific admissibility no-go and move to the
+   next lifted datum: broader lifted gauge or deeper transition sheet.
+3. Skip the carry branch and reopen local realization of the residual
+   anticipation sheet `d`.
+
+Recommendation:
+- Option 2.
+- `045` verifies on `m = 5,7,9,11` that:
+  - `69,994` exact carry-family candidates were tested in the first carry-only
+    catalogs,
+  - there are `0` exact positives,
+  - full `B`, `B -> B_next`, and `B -> B_next -> B_next2` grouped transition
+    classes all still fail,
+  - the best negatives are `next_dn` and `dn + next_dn`, which are exact on
+    `m=5` but miss only regular carry `B`-states on `m=7,9,11`,
+  - adding the first low-cardinality anchored-gauge bits does not improve that
+    boundary.
+- So the right next move is no longer “try more of the same carry features.”
+  It is “identify the next lifted admissibility datum beyond those first
+  catalogs.”
+
+Risks / mitigations:
+- `045` is still a checked active-union result -> phrase it as a first
+  carry-catalog no-go, not as a theorem that no carry observable exists.
+- A broader lifted gauge or deeper transition sheet may still be too broad if
+  opened carelessly -> keep the next branch carry-specific and exact, not a
+  generic transducer reopening.
+- The theorem branch could get neglected while local search pivots ->
+  keep `044` proof work in parallel because it is already theorem-shaped.
+
+Open questions:
+- What is the smallest lifted datum beyond current edge / `1`-step / `2`-step
+  / low-cardinality anchored-gauge data that realizes `c`?
+- Can the `045` first-catalog no-go be upgraded from computation to theorem?
+- Is the next live object better thought of as a richer anchored gauge, a
+  deeper transition signature, or a small finite-state cover over the carry
+  branch?
+
+Rollout / acceptance:
+- Save `045` as the first carry-only admissibility no-go artifact.
+- Update the RoundY docs so the current message is:
+  theorem branch explicit, first carry-only catalogs dead, next local target =
+  broader lifted gauge or deeper transition sheet for `c`.
+- Keep the next autonomous local branch on the carry sheet only; do not reopen
+  residual-sheet realization as the main branch.
+
+## D38) D5 next-branch scope after the deep future-transition carry-sheet extraction
+
+**Decision:** After `046`, stop describing the next carry branch as a vague
+“broader lifted gauge or deeper transition sheet.” The carry bit is already an
+exact future grouped-transition event on the checked active base, so the next
+honest local branch is admissible coding of that event:
+current `B` plus
+`initial flat-run length + first nonflat dn`.
+
+Options:
+1. Keep the next branch phrased loosely as a broader lifted gauge or deeper
+   transition sheet.
+2. Treat `046` as the structural target and search for an admissible surrogate
+   for the exact future-transition signature.
+3. Stop local search and move only to proof work on `044/045/046`.
+
+Recommendation:
+- Option 2.
+- `046` verifies on `m = 5,7,9,11` that:
+  - the minimal exact future `dn` horizon is `m-3`,
+  - the minimal exact future grouped-state horizon is `m-2`,
+  - the exact future window compresses to current `B` plus
+    `initial flat-run length + first nonflat dn`,
+  - flat-run length alone is not exact,
+  - the `H-1` ambiguity is confined to regular carry `B`-states.
+- So the next object is no longer unknown in kind. It is known exactly at the
+  reduced future-transition level.
+
+Risks / mitigations:
+- `046` is still a checked active-union extraction -> keep it as a structural
+  target, not yet a theorem for all odd `m`.
+- “Admissible coding” could be overread as a promise that a simple observable
+  exists -> keep the next local branch exact and narrow, and allow a no-go if
+  the first codings fail.
+- The theorem branch could drift behind -> keep `044/045/046` proof packaging
+  in parallel because the structural story is now much cleaner.
+
+Open questions:
+- Can the `m-3` future `dn` horizon be proved symbolically for all odd `m`?
+- What is the smallest admissible surrogate for
+  `B + flat-run length + first nonflat dn`?
+- Does the exact future signature admit a smaller equivalent coding, or is
+  this already minimal in a theorem-friendly sense?
+
+Rollout / acceptance:
+- Save `046` as the deep future-transition carry-sheet artifact.
+- Update the RoundY docs so the current message is:
+  future-transition carry sheet extracted; next local target = admissible
+  coding of that event.
+- Keep the next autonomous local branch on carry-only admissibility, not on
+  residual-sheet realization or generic controller search.
+
+## D36) D3 odometer Lean rewrite strategy
+
+**Decision:** Keep the finished `formal/TorusD3Even` development as the checked baseline, and prototype the odometer-oriented D3 rewrite in a parallel module tree rather than refactoring the live completed files in place.
+
+Options:
+1. Rewrite `formal/TorusD3Even` in place so the current Route-E proofs are replaced directly by the odometer narrative.
+2. Create a parallel D3 odometer tree that reuses the current finished theorems as acceptance targets, then swap over only after the new structure is theorem-complete.
+3. Leave the current Lean exactly as-is and use the odometer rewrite only in the tex exposition.
+
+Recommendation:
+- Option 2.
+- The current `formal/TorusD3Even` tree is now complete and valuable as a checked reference point, so it should not be destabilized during an architectural rewrite.
+- The main cleanup opportunity is real, but it is narrower than “reuse the D4 theorem verbatim”:
+  - D4’s `psi2Equiv` / `cycleOn_T2` live on the two-dimensional `QCoord` lane map.
+  - D3-even color `2` already has its own one-dimensional odometer-style conjugacy in `formal/TorusD3Even/Color2.lean` via `psiT2Equiv`, `psiT2_conj`, and `cycleOn_T2`.
+  - The hard part in D3-even is not the final cycle theorem anymore; it is the derivation of the first-return data `T_c`, `rho_c`, and the no-early-return facts from the finite-defect return maps on `P_0`.
+- So the right odometer rewrite target is:
+  1. a shared full-map-to-section lifting layer for D3, analogous to `formal/TorusD3Odd/FullCycles.lean` and `formal/TorusD4/Lifts.lean`;
+  2. a finite-defect odometer normal-form layer on `P_0`;
+  3. a reusable first-return / splice layer that derives the one-dimensional lane maps from that normal form.
+
+Risks / mitigations:
+- The rewrite could duplicate a lot of completed code without actually shrinking the proof burden ->
+  start with color `2` only and require theorem parity with the current `cycleOn_color2` before touching colors `1/0`.
+- The D4 odometer API could be overfit to the wrong state space ->
+  keep explicit notes that D3-even uses a one-dimensional first-return map on the lane transversal, not D4’s two-dimensional `T2`.
+- Refactoring in place could break the already-complete development ->
+  keep the current files untouched except for optional wrapper theorems until the new tree is complete.
+
+Open questions:
+- How much of the current `Color2.lean` orbit-trace layer can actually be replaced by a generic finite-defect lemma, rather than moved around?
+- Whether the best experimental tree is `formal/TorusD3Odometer/` or a parallel `formal/TorusD3EvenOdometer/` subdirectory.
+- Whether the eventual clean endpoint should unify odd and even D3 under one return-map API, or only repackage the even proof.
+
+Rollout / acceptance:
+- First milestone: a parallel color-`2` odometer file that proves the same endpoint as
+  `formal/TorusD3Even/Color2.lean` and still builds with `lake build TorusD3Even`.
+- Second milestone: add the D3 full lifting theorem from the `P_0` cycle to the full `m^3` cycle, mirroring the odd-case pattern.
+- Final acceptance: the odometer tree reproduces the current D3-even theorems with less case-local duplication, and the old `formal/TorusD3Even` tree can remain as a baseline until the replacement is clearly superior.
+
+Current checkpoint:
+- The parallel tree now exists and builds with `lake build TorusD3Odometer`.
+- New files:
+  - `formal/TorusD3Odometer/Basic.lean`
+  - `formal/TorusD3Odometer/Lift.lean`
+  - `formal/TorusD3Odometer/Color2.lean`
+  - `formal/TorusD3Odometer/Color2Full.lean`
+  - root import file `formal/TorusD3Odometer.lean`
+- `Basic.lean` contains the shared D3 full-coordinate geometry and a generic transport
+  `liftPointMap` through `splitPointEquiv`.
+- `Lift.lean` contains the generic slice-to-full cycle theorem
+  `cycleOn_full_of_cycleOn_slice` and the `P_0` specialization
+  `cycleOn_full_of_cycleOn_p0`.
+- `Color2.lean` already exposes the odometer-facing wrappers for the finished even
+  color-`2` section theory, plus the specialization
+  `cycleOn_full_of_color2_return`:
+  if a future full D3-even color-`2` map is shown to advance the slice coordinate by `+1`
+  and to return after `m` steps by `R2xy`, the full `m^3` cycle follows immediately.
+- `Color2Full.lean` now defines that actual parallel full color-`2` map,
+  proves the `m`-step return theorem
+  `iterate_m_fullMap2XY_slice_zero`,
+  proves the full `m^3` cycle theorem
+  `cycleOn_fullMap2XY`,
+  and is imported by `formal/TorusD3Odometer.lean`.
+- Wrapper-level acceptance modules for the finished splice proofs now also live in the
+  odometer tree:
+  - `formal/TorusD3Odometer/Color1.lean`
+  - `formal/TorusD3Odometer/Color0.lean`
+- These expose the checked lane-cycle theorems for all verified color-`1/0`
+  congruence families without introducing new full-map rewrites.
+
+Next exact target:
+- The color-`2` milestone is now complete.
+- The next live issue is no longer a local proof bug in the color-`2` branch.
+  It is the scope decision recorded in `D39`: whether colors `1/0`
+  should enter the odometer tree only as wrapper-level acceptance targets over the
+  finished splice proofs, or as genuine new full-map rewrites.
+
+## D39) D3 odometer tree scope after the color-2 full-map milestone
+
+**Decision:** After the completed parallel color-`2` full-map proof, do not immediately commit to the full explicit color-`1/0` full-map rewrites; first decide whether the parallel tree is meant to be a wrapper/staging layer or a full replacement path.
+
+Options:
+1. Stop the odometer tree at color `2` and keep colors `1/0` only in `formal/TorusD3Even`.
+2. Add colors `1/0` to `formal/TorusD3Odometer` first as wrapper-level acceptance targets over the finished splice-cycle theorems in `formal/TorusD3Even/Color1.lean` and `formal/TorusD3Even/Color0.lean`, and postpone any new full-map rewrites.
+3. Continue directly to genuine parallel rewrites for colors `1/0`, including explicit full maps and `m`-step return theorems in each congruence family.
+
+Recommendation:
+- Option 2.
+- Color `2` is the honest odometer/full-map prototype because its section return is already a clean one-dimensional odometer-like map.
+- Colors `1/0` are structurally different: the current verified objects are splice-normal-form lane maps with congruence-family splits, not a single uniform full-map normal form.
+- A wrapper layer gives the parallel tree a complete lane-cycle API without forcing immediate duplication of the largest case split in the finished baseline.
+
+Risks / mitigations:
+- Option 2 could degenerate into a thin alias layer with little mathematical compression ->
+  keep it explicitly as a staging path and record which theorems are wrappers versus genuine rewrites.
+- Option 3 may still be the right end state ->
+  revisit only after the wrapper layer is in place and after checking whether a shared color-`1/0`
+  full-map schema exists that is materially smaller than the current baseline transcription.
+- Stopping at Option 1 would waste the successful color-`2` prototype ->
+  keep the current imported `Color2Full.lean` as the minimum accepted rewrite artifact.
+
+Open questions:
+- For the manuscript cleanup, is it enough that the odometer tree reproduces the lane-cycle theorems for colors `1/0`, or is a full-map `m^3` rewrite also required?
+- Is there a shared full-map schema for colors `1/0` analogous to `Color2Full.lean`,
+  or do the splice-family splits make that unrealistic?
+
+Rollout / acceptance:
+- Keep `formal/TorusD3Odometer/Color2Full.lean` imported and building.
+- If Option 2 is taken, the next code milestone is wrapper modules for colors `1/0`
+  that expose the finished splice-cycle theorems inside the odometer tree.
+- If Option 3 is taken later, do it one congruence family at a time and compare code size / theorem shape directly against the current finished baseline.
+
+Current checkpoint after decision:
+- Option 2 is now implemented at the wrapper level.
+- `formal/TorusD3Odometer/Color1.lean` exports:
+  - `cycleOn_laneMap1_caseI_mod_two`
+  - `cycleOn_laneMap1_caseI_mod_zero`
+  - `cycleOn_laneMap1_caseII_mod_four`
+- `formal/TorusD3Odometer/Color0.lean` exports:
+  - `cycleOn_laneMap0_caseI_mod_zeroTwo`
+  - `cycleOn_laneMap0_caseII_mod_ten`
+  - `cycleOn_laneMap0_caseII_mod_four`
+- `formal/TorusD3Odometer.lean` imports those wrappers, and
+  `lake build TorusD3Odometer` succeeds.
+- The wrapper layer is now compressed into canonical residue-dispatch APIs:
+  - `formal/TorusD3Odometer/Color1.lean` defines `laneMap1` and proves
+    `cycleOn_laneMap1` under `Even m` and `Fact (9 < m)`.
+  - `formal/TorusD3Odometer/Color0.lean` defines `laneMap0` and proves
+    `cycleOn_laneMap0` under `Even m` and `Fact (9 < m)`.
+- So the odometer tree now exposes one wrapper theorem per color for the lane-cycle
+  endpoint, rather than only residue-local theorem names.
+
+Next exact target:
+- The unified congruence-dispatch API for colors `1/0` is now implemented.
+- The next real design choice is whether the odometer tree should stop here as a
+  wrapper/staging layer with a genuine full rewrite only for color `2`, or whether to
+  attempt new full-map `m^3` rewrites for colors `1/0` as well.
+- If that later rewrite path is attempted, the first serious candidate is not blind
+  case transcription but a shared full-map schema strong enough to recover the current
+  splice-cycle theorems by an `m`-step return argument.

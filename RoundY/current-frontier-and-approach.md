@@ -13,13 +13,13 @@ Use it together with:
 
 - [README.md](./README.md)
 - [d5_progress_master_summary.md](./d5_progress_master_summary.md)
-- [d5_autonomous_perturbation_note_v19.md](./autonomous/d5_autonomous_perturbation_note_v19.md)
+- [d5_autonomous_perturbation_note_v21.md](./autonomous/d5_autonomous_perturbation_note_v21.md)
 - [DOCUMENT_FOR_EXTERNAL_REVIEW.md](../DOCUMENT_FOR_EXTERNAL_REVIEW.md)
 - [formal/README-D5.md](../formal/README-D5.md)
 
 ## Current real problem
 
-After artifacts `017–044`, the live D5 obstruction is no longer:
+After artifacts `017–046`, the live D5 obstruction is no longer:
 
 - missing clean frame
 - missing Latin feasibility
@@ -29,9 +29,10 @@ After artifacts `017–044`, the live D5 obstruction is no longer:
 
 The actual frontier is:
 
-**find the smallest admissible realization of the carry sheet, now that the
-structural theorem branch is explicit and the residual sheet has a canonical
-binary anticipation form**
+**find an admissible coding of the first exact future grouped-transition event
+for the carry sheet, now that the structural theorem branch is explicit, the
+first carry-only admissible catalogs are dead, and the future horizon is
+already extracted**
 
 `R1 -> H_L1`
 
@@ -81,11 +82,31 @@ What is already known:
   so the checked active branch factors as
   `B <- B+c <- B+c+d`
   with `d` a binary anticipation sheet
+- `045`: the first carry-only admissible catalogs are pruned exactly:
+  `0` exact candidates across the checked
+  current-edge / label / delta core catalog up to size `5`,
+  low-cardinality `025`-style gauge-transition catalog up to size `5`,
+  and targeted point-defect catalog up to size `4`.
+  Full `B -> B_next` and `B -> B_next -> B_next2` grouped transition classes
+  also fail.
+  The best negatives are `next_dn` and `dn + next_dn`, exact on `m=5` but
+  missing only regular carry `B`-states on `m=7,9,11`.
+- `046`: the carry sheet is already an exact future-transition event on the
+  checked active grouped base.
+  The minimal exact future `dn` horizon is `m-3` on `m=5,7,9,11`, the minimal
+  exact future grouped-state horizon is `m-2`, and the exact future window
+  compresses to
+  current `B` plus
+  `initial flat-run length where dn=(0,0,0,1)` plus
+  `first nonflat dn`.
+  Flat-run length alone is not exact, and the `H-1` ambiguity is confined to
+  regular carry `B`-states.
 
 So the next branch should be read as:
 
-**admissible realization of the carry sheet, now that the structural theorem
-branch is explicit**.
+**admissible coding of the first exact future grouped-transition event for the
+carry sheet, now that the structural theorem branch is explicit and the first
+carry-only catalogs are already exhausted**.
 
 ## What the current approach should be
 
@@ -110,7 +131,10 @@ The first honest next moves are:
 3. treat the structural object as
    `B <- B+c <- B+c+d`
    with `d = 1_{next carry u >= m-3}` a binary anticipation sheet
-4. only then open genuinely new observable families, not lifts of the same
+4. do not reopen the first carry-only catalogs already killed by `045`
+5. do not describe the next object as an amorphous broader gauge when `046`
+   already gives an exact future-transition signature
+6. only then open genuinely new observable families, not lifts of the same
    simple `038` row
 
 ## Brief explanation of `docs/suggested_workflow.md`
@@ -253,32 +277,47 @@ These are the theorem-shaped objects worth seeking now.
    and it can be chosen as
    `d = 1_{next carry u >= m-3}`.
 
-11. **Localized-carrier theorem**
+11. **First carry-family no-go theorem**
+   Formalize the `045` boundary:
+   no exact carry realization appears in the first admissible
+   current-edge / `1`-step / `2`-step / low-cardinality anchored-gauge
+   catalogs, and the full `B -> B_next` and `B -> B_next -> B_next2` grouped
+   transition classes still fail.
+
+12. **Deep-transition carry-sheet theorem**
+   Formalize the `046` extraction:
+   the minimal exact future `dn` horizon is `m-3`,
+   the minimal exact future grouped-state horizon is `m-2`,
+   and the exact future window compresses to
+   current `B` plus
+   `initial flat-run length + first nonflat dn`.
+
+13. **Localized-carrier theorem**
    Identify the smallest local mechanism that can create and preserve a marker
    on the intended corridor while using the visible raw odometer phase to fire
    at the right target.
 
-12. **Carry-priority local theorem**
+14. **Carry-priority local theorem**
    Show that the next honest local target is still the carry sheet `c`,
    not the full anticipation sheet `d`.
 
-13. **Residual-sheet no-go / coordinatization theorem**
+15. **Residual-sheet no-go / coordinatization theorem**
    Prove either:
    - the anticipation sheet `d` is not any small current observable in the
      intended local class, or
    - the smallest admissible observable that realizes it.
 
-14. **Visible-phase no-go theorem**
+16. **Visible-phase no-go theorem**
    Strengthen the computational `033/034/035/036/037` obstruction into a real
    statement: visible raw phase alone is insufficient without corridor
    localization.
 
-15. **Local-to-reduced realization theorem**
+17. **Local-to-reduced realization theorem**
    Show that if a local mechanism realizes the extracted phase target while
    preserving the reduced `025` structure to first order, then the grouped
    orbit target follows.
 
-16. **Bridge-to-full-D5 theorem**
+18. **Bridge-to-full-D5 theorem**
    Convert the right reduced/local realization into the full Hamilton
    decomposition statement for D5.
 
