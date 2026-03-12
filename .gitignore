@@ -13,3 +13,4 @@
 __pycache__/
 *.pyc
 *.pyo
+artifacts/*/data/rule_rows/
