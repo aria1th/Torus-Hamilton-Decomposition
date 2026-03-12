@@ -1,0 +1,491 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{tabularx}
+
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\Zm}{\mathbb Z_m}
+\newcommand{\I}{\mathbf 1}
+\newcommand{\Pzero}{P_0}
+\newcommand{\Qslice}{Q}
+
+\title{The $d=4$ Line-Union Witness:\\
+a nested-return odometer proof and its Lean formalization}
+\author{}
+\date{12 March 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We prove that for every integer $m \ge 3$, the directed $4$-torus
+\[
+D_4(m)=\operatorname{Cay}\bigl((\Zm)^4,\{e_0,e_1,e_2,e_3\}\bigr)
+\]
+admits a decomposition into four arc-disjoint directed Hamilton cycles.
+
+The proof is organized around nested return maps. Every legal step increases the
+layer function $S=x_0+x_1+x_2+x_3$ by $1$, so the first return to
+\[
+\Pzero=\{S=0\}
+\]
+produces maps $R_c$ on a section of size $m^3$. For the line-union witness, the
+only noncanonical layer-$2$ behavior is supported on two lines in
+\[
+H=\{S=2,\ q=0\}, \qquad q=x_0+x_2.
+\]
+After one more return to
+\[
+\Qslice=\{q=m-1\}\subset \Pzero,
+\]
+the maps become explicit affine copies of the standard odometer
+\[
+O(u,v)=(u+1,\ v+\I_{u=0}).
+\]
+This reduces Hamiltonicity to a clock-and-carry statement on $(\Zm)^2$, after
+which two routine lifting arguments recover single cycles on $\Pzero$ and then on
+the full torus.
+
+The same proof architecture is formalized in Lean in the directory
+\texttt{formal/TorusD4}. In particular, the witness, the first and second return
+maps, the odometer conjugacies, and both lifting steps are all checked there.
+\end{abstract}
+
+\section{Introduction}
+
+Fix $m \ge 3$ and write $V=(\Zm)^4$. We view
+\[
+D_4(m)=\operatorname{Cay}(V,\{e_0,e_1,e_2,e_3\})
+\]
+as the directed graph in which every vertex has one outgoing edge in each
+coordinate direction. A Hamilton decomposition is a partition of these $4m^4$
+arcs into four directed Hamilton cycles.
+
+The proof has the same clock-and-carry flavor as the odometer exposition in the
+$d=3$ note, but here the carry is exposed one level later. The first return to
+$\Pzero$ removes the forced layer drift coming from $S$. The second return to
+$\Qslice$ removes the uniform drift in the $q$-coordinate. What remains is the
+standard two-dimensional odometer. The line-union witness is designed so that
+this second reduction is exact.
+
+\begin{theorem}\label{thm:main}
+For every integer $m \ge 3$, the directed torus $D_4(m)$ admits a Hamilton
+decomposition.
+
+More concretely, if the direction tuple
+\[
+\delta(x)=(d_0(x),d_1(x),d_2(x),d_3(x))
+\]
+is defined by the line-union rule in Section~\ref{sec:witness} and
+\[
+f_c(x)=x+e_{d_c(x)} \qquad (c=0,1,2,3),
+\]
+then each color map $f_c$ is a single cycle of length $m^4$.
+\end{theorem}
+
+\begin{remark}[Paper notation versus Lean notation]\label{rem:zmod}
+For readability we identify residues with their standard representatives in
+$\{0,1,\dots,m-1\}$ when writing conditions such as $q=m-1$. The Lean
+formalization works intrinsically in \texttt{ZMod m}, so the same slice appears
+there as $q=-1$.
+\end{remark}
+
+\begin{table}[t]
+\centering
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+\toprule
+notation & role in the proof \\
+\midrule
+$S(x)=x_0+x_1+x_2+x_3$ & layer function; every color step increases $S$ by $1$ \\
+$q(x)=x_0+x_2$ & slow coordinate on $\Pzero$; the second return is taken at $q=m-1$ \\
+$\Pzero=\{S=0\}$ & first return section, parameterized by $(a,b,q)$ \\
+$\Qslice=\{q=m-1\}\subset \Pzero$ & second return section, parameterized by $(a,b)$ \\
+$f_c$ & global color-$c$ map on the full torus \\
+$R_c=f_c^m|_{\Pzero}$ & first return map on $\Pzero$ \\
+$T_c=R_c^m|_{\Qslice}$ & second return map on $\Qslice$ \\
+$O(u,v)=(u+1,v+\I_{u=0})$ & standard odometer; the final normal form of the proof \\
+$\psi_c$ & affine conjugacy sending $T_c$ to $O$ \\
+\bottomrule
+\end{tabularx}
+\caption{Core objects in the nested-return proof.}
+\label{tab:notation}
+\end{table}
+
+\section{The Line-Union Witness}\label{sec:witness}
+
+Let
+\[
+S(x)=x_0+x_1+x_2+x_3,
+\qquad
+q(x)=x_0+x_2
+\]
+in $\Zm$. Define the direction tuple $\delta(x)$ as follows.
+\begin{itemize}[leftmargin=2em]
+\item If $S(x)=0$, use $(3,2,1,0)$ when $q(x)=0$ and use $(1,0,3,2)$ otherwise.
+\item If $S(x)=1$, use the canonical tuple $(0,1,2,3)$.
+\item If $S(x)=2$ and $q(x)=0$, start from $(0,1,2,3)$ and then
+  \begin{itemize}[leftmargin=2em]
+  \item swap slots $1 \leftrightarrow 3$ when $x_0=0$,
+  \item swap slots $0 \leftrightarrow 2$ when $x_3=0$.
+  \end{itemize}
+  If both conditions hold, apply both swaps. They commute because they act on
+  disjoint pairs of slots.
+\item In all other cases, use the canonical tuple $(0,1,2,3)$.
+\end{itemize}
+
+Thus the noncanonical part of the layer-$2$ rule is supported exactly on
+\[
+H=\{S=2,\ q=0\},
+\]
+and inside $H$ it lives on the union of two lines
+\[
+\{x_0=0\} \cup \{x_3=0\}.
+\]
+This is why we call it the \emph{line-union gauge}.
+
+\begin{proposition}\label{prop:tuples}
+The only direction tuples that ever occur are
+\[
+(3,2,1,0),\ (1,0,3,2),\ (0,1,2,3),\ (0,3,2,1),\ (2,1,0,3),\ (2,3,0,1),
+\]
+all permutations of $(0,1,2,3)$. Hence the four color classes partition the
+outgoing arcs of $D_4(m)$.
+\end{proposition}
+
+\begin{proof}
+Each tuple in the definition is visibly a permutation of $(0,1,2,3)$, and the
+two layer-$2$ transpositions preserve that property. Therefore at each vertex the
+four colors use the four outgoing directions exactly once.
+\end{proof}
+
+\begin{remark}[Why this gauge is useful]
+On the raw layer-$2$ slice the witness looks like a small local surgery. After
+passing to return maps, however, that surgery is seen only through delayed carry
+conditions on the slice $\Qslice$. This is the conceptual reason the proof closes
+by an odometer argument.
+\end{remark}
+
+\section{First Return to \texorpdfstring{$\Pzero$}{P0}}\label{sec:first-return}
+
+Parameterize $\Pzero=\{S=0\}$ by
+\[
+\phi(a,b,q)=(a,b,q-a,-q-b).
+\]
+Then $q=x_0+x_2$ in these coordinates, and every point of $\Pzero$ appears once.
+Since each step increases $S$ by $1$, the first return of $f_c$ to $\Pzero$ is
+\[
+R_c=f_c^m\big|_{\Pzero}.
+\]
+
+\begin{proposition}[Explicit first-return formulas]\label{prop:R}
+For $x=\phi(a,b,q)\in \Pzero$,
+\[
+R_0(a,b,q)=
+\begin{cases}
+(a-1,b,q-1), & q=0,\\
+(a-2,b+1,q-1), & q=m-1 \text{ and } b=1,\\
+(a-1,b+1,q-1), & \text{otherwise,}
+\end{cases}
+\]
+\[
+R_1(a,b,q)=
+\begin{cases}
+(a,b-1,q+1), & q=0,\\
+(a+1,b-2,q+1), & q=m-1 \text{ and } a=m-1,\\
+(a+1,b-1,q+1), & \text{otherwise,}
+\end{cases}
+\]
+\[
+R_2(a,b,q)=
+\begin{cases}
+(a,b+1,q-1), & q=0,\\
+(a+1,b,q-1), & q=m-1 \text{ and } b=2,\\
+(a,b,q-1), & \text{otherwise,}
+\end{cases}
+\]
+\[
+R_3(a,b,q)=
+\begin{cases}
+(a+1,b,q+1), & q=0,\\
+(a,b+1,q+1), & q=m-1 \text{ and } a=0,\\
+(a,b,q+1), & \text{otherwise.}
+\end{cases}
+\]
+\end{proposition}
+
+\begin{proof}
+Fix $x=\phi(a,b,q)=(a,b,q-a,-q-b)$.
+
+If $q=0$, then the layer-$0$ tuple is $(3,2,1,0)$. After one step we are in
+layer $1$, where the witness is canonical. After two steps we are in layer $2$,
+but the new $q$-value is $1$, so the line-union patch does not fire. The
+remaining $m-2$ steps are canonical. This gives exactly the $q=0$ branches.
+
+Now assume $q \neq 0$. Then the layer-$0$ tuple is $(1,0,3,2)$. After two steps,
+colors $0$ and $1$ land at
+\[
+y^+(a,b,q)=(a+1,b+1,q-a,-q-b),
+\]
+while colors $2$ and $3$ land at
+\[
+y^-(a,b,q)=(a,b,q-a+1,-q-b+1).
+\]
+In both cases the new $q$-value is $q+1$, so the layer-$2$ patch can be active
+only when $q=m-1$.
+
+For colors $0$ and $1$, the landing point at $q=m-1$ is
+\[
+y^+(a,b,m-1)=(a+1,b+1,m-1-a,1-b).
+\]
+Here the line $x_3=0$ becomes $1-b=0$, i.e.\ $b=1$, and the line $x_0=0$ becomes
+$a+1=0$, i.e.\ $a=m-1$. The even swap therefore changes only color $0$ when
+$b=1$, and the odd swap changes only color $1$ when $a=m-1$.
+
+For colors $2$ and $3$, the landing point at $q=m-1$ is
+\[
+y^-(a,b,m-1)=(a,b,m-a,2-b).
+\]
+Now $x_3=0$ becomes $2-b=0$, i.e.\ $b=2$, and $x_0=0$ becomes $a=0$. The even
+swap therefore changes only color $2$ when $b=2$, and the odd swap changes only
+color $3$ when $a=0$.
+
+These are exactly the displayed formulas.
+\end{proof}
+
+\section{Second Return and the Odometer}\label{sec:second-return}
+
+Let
+\[
+\Qslice=\{(a,b,q)\in \Pzero : q=m-1\}.
+\]
+Under every $R_c$ the $q$-coordinate changes by a fixed sign $\pm 1$ depending
+only on the color, so every orbit meets $\Qslice$ once every $m$ iterates. Define
+the second return by
+\[
+T_c=R_c^m\big|_{\Qslice}.
+\]
+
+\begin{proposition}[Explicit second-return formulas]\label{prop:T}
+On $\Qslice \cong (\Zm)^2$,
+\[
+T_0(a,b)=(a-\I_{b=1},b-1),
+\qquad
+T_1(a,b)=(a-1,b-\I_{a=m-1}),
+\]
+\[
+T_2(a,b)=(a+\I_{b=2},b+1),
+\qquad
+T_3(a,b)=(a+1,b+\I_{a=0}).
+\]
+\end{proposition}
+
+\begin{proof}
+For colors $0$ and $2$, the $q$-coordinate decreases by $1$ under each
+application of $R_c$. Starting from $\Qslice$, one therefore sees the $q=m-1$
+branch once, then $m-2$ generic branches, and finally the $q=0$ branch once.
+Summing the corresponding increments gives
+\[
+T_0(a,b)=(a-\I_{b=1},b-1),
+\qquad
+T_2(a,b)=(a+\I_{b=2},b+1).
+\]
+
+For colors $1$ and $3$, the $q$-coordinate increases by $1$. Starting from
+$\Qslice$, one sees the $q=m-1$ branch once, then the $q=0$ branch once, and
+then $m-2$ generic branches. Summing those increments gives
+\[
+T_1(a,b)=(a-1,b-\I_{a=m-1}),
+\qquad
+T_3(a,b)=(a+1,b+\I_{a=0}).
+\]
+\end{proof}
+
+The model map is the standard odometer
+\[
+O(u,v)=(u+1,\ v+\I_{u=0})
+\]
+on $(\Zm)^2$.
+
+\begin{proposition}[Affine conjugacy to the odometer]\label{prop:odometer-conj}
+Define
+\[
+\psi_0(a,b)=(1-b,-a),
+\qquad
+\psi_1(a,b)=(-a-1,-b),
+\]
+\[
+\psi_2(a,b)=(b-2,a),
+\qquad
+\psi_3(a,b)=(a,b).
+\]
+Then each $\psi_c$ is an affine bijection of $(\Zm)^2$ and
+\[
+\psi_c \circ T_c = O \circ \psi_c
+\qquad
+(c=0,1,2,3).
+\]
+\end{proposition}
+
+\begin{proof}
+The inverse maps are
+\[
+\psi_0^{-1}(u,v)=(-v,1-u),\qquad
+\psi_1^{-1}(u,v)=(-u-1,-v),
+\]
+\[
+\psi_2^{-1}(u,v)=(v,u+2),\qquad
+\psi_3^{-1}(u,v)=(u,v),
+\]
+so each $\psi_c$ is bijective. The conjugacy identities are immediate from the
+formulas in Proposition~\ref{prop:T}. For example,
+\[
+\psi_3(T_3(a,b))=(a+1,b+\I_{a=0})=O(a,b)=O(\psi_3(a,b)).
+\]
+The other three cases are the same substitution.
+\end{proof}
+
+\begin{lemma}[The odometer is a single cycle]\label{lem:odometer}
+The map $O$ is a single cycle of length $m^2$ on $(\Zm)^2$.
+\end{lemma}
+
+\begin{proof}
+In $m$ steps the first coordinate returns to its starting value and the second
+coordinate increases by $1$, so
+\[
+O^m(u,v)=(u,v+1).
+\]
+Hence $O^{m^2}=\mathrm{id}$. Conversely, if $O^t(u,v)=(u,v)$, write $t=km+r$ with
+$0 \le r < m$. Looking at the first coordinate forces $r=0$, and then looking at
+the second forces $k \equiv 0 \pmod m$. Thus $t$ is a multiple of $m^2$.
+\end{proof}
+
+\begin{corollary}\label{cor:T-cycle}
+Each $T_c$ is a single cycle of length $m^2$ on $\Qslice$.
+\end{corollary}
+
+\begin{proof}
+By Proposition~\ref{prop:odometer-conj}, each $T_c$ is affine-conjugate to $O$.
+Now apply Lemma~\ref{lem:odometer}.
+\end{proof}
+
+\section{Lifting Back to \texorpdfstring{$\Pzero$}{P0} and to the Full Torus}\label{sec:lifts}
+
+\begin{proposition}[Cycle lift from $\Qslice$ to $\Pzero$]\label{prop:lift-p0}
+For each color $c$, the map $R_c$ is a single cycle of length $m^3$ on $\Pzero$.
+\end{proposition}
+
+\begin{proof}
+Fix a color $c$ and let $s_c \in \{+1,-1\}$ be the sign by which $R_c$ changes
+the $q$-coordinate. Starting from any $x \in \Qslice$, the points
+\[
+R_c^r(x), \qquad 0 \le r < m,
+\]
+have pairwise distinct $q$-values, so every $R_c$-orbit meets $\Qslice$ exactly
+once every $m$ steps.
+
+Now choose $x_0 \in \Qslice$. Since $T_c$ is a single $m^2$-cycle on $\Qslice$,
+the points
+\[
+R_c^r(T_c^t(x_0)),
+\qquad
+0 \le r < m,\quad 0 \le t < m^2,
+\]
+are all distinct: different $r$ give different $q$-values, and when $r$ agrees we
+are comparing different points of the $T_c$-cycle. There are exactly
+$m \cdot m^2 = m^3$ such points, which is the size of $\Pzero$. Hence the
+$R_c$-orbit of $x_0$ is all of $\Pzero$.
+\end{proof}
+
+\begin{proposition}[Cycle lift from $\Pzero$ to the full torus]\label{prop:lift-full}
+For each color $c$, the global map $f_c$ is a single cycle of length $m^4$ on
+$V=(\Zm)^4$.
+\end{proposition}
+
+\begin{proof}
+Every application of $f_c$ increases $S$ by $1$, so every orbit meets $\Pzero$
+exactly once every $m$ steps. Choose $y_0 \in \Pzero$. Since $R_c$ is a single
+$m^3$-cycle on $\Pzero$, the points
+\[
+f_c^r(R_c^t(y_0)),
+\qquad
+0 \le r < m,\quad 0 \le t < m^3,
+\]
+are all distinct: different $r$ have different $S$-values, and when $r$ agrees we
+are comparing different points of the $R_c$-cycle. There are
+$m \cdot m^3 = m^4$ such points, which is the size of the whole torus. So the
+$f_c$-orbit of $y_0$ is all of $V$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Proposition~\ref{prop:tuples} shows that the witness assigns a permutation of the
+four directions at every vertex, so the four colors are arc-disjoint and cover all
+outgoing arcs. By Proposition~\ref{prop:lift-full}, each color map $f_c$ is a
+single Hamilton cycle on $V$. Therefore the four color classes form a Hamilton
+decomposition of $D_4(m)$.
+\end{proof}
+
+\section{How the Proof is Leaned}\label{sec:lean}
+
+The exposition above is not merely inspired by the Lean development; it follows
+the same decomposition almost verbatim. Lean keeps everything in \texttt{ZMod m},
+so the slice $\Qslice=\{q=m-1\}$ is implemented as the slice $q=-1$, but the
+mathematics is the same.
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\textwidth}{@{}l>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\toprule
+paper step & Lean module & main definitions / theorems \\
+\midrule
+define the witness and the full color maps & \texttt{Basic.lean} & \texttt{witness}, \texttt{colorMap}, \texttt{phi} \\
+split the full torus into $(\Pzero,\ S)$ coordinates & \texttt{FullCoordinates.lean} & \texttt{phiLayer}, \texttt{splitPointEquiv}, \texttt{S\_colorMap} \\
+compute the first return $f_c^m|_{\Pzero}$ & \texttt{FirstReturn.lean} & \texttt{firstReturn\_eq\_RMap} \\
+package the explicit $R_c$, $T_c$, and $\psi_c$ formulas & \texttt{ReturnMaps.lean} and \texttt{ReturnDynamics.lean} & \texttt{R0}, \texttt{R1}, \texttt{R2}, \texttt{R3}, \texttt{T0}, \texttt{T1}, \texttt{T2}, \texttt{T3}, \texttt{odometer}, \texttt{psi0\_conj}, \dots, \texttt{psi3\_conj} \\
+identify the second return on $\Qslice$ & \texttt{SecondReturn.lean} & \shortstack[l]{\texttt{iterate\_m\_sliceQ\_eq\_} \\ \texttt{sliceQ\_TMap} \\ \texttt{secondReturnOfRMap\_eq\_TMap}} \\
+prove the odometer and the $T_c$ cycle statements & \texttt{Cycles.lean} & \shortstack[l]{\texttt{cycleOn\_odometer} \\ \texttt{cycleOn\_T0}, \dots, \texttt{cycleOn\_T3}} \\
+lift cycles from $\Qslice$ to $\Pzero$ & \texttt{ReturnLifts.lean} and \texttt{P0Cycles.lean} & \shortstack[l]{\texttt{iterate\_mul\_RMap\_sliceQ\_eq\_} \\ \texttt{sliceQ\_TMap\_iterate} \\ \texttt{cycleOn\_RMap\_of\_} \\ \texttt{cycleOn\_TMap} \\ \texttt{hasCycle\_RMap\_cube}} \\
+lift cycles from $\Pzero$ to the full torus & \texttt{FullCycles.lean} & \shortstack[l]{\texttt{iterate\_m\_pairColorMap\_} \\ \texttt{slicePoint\_zero} \\ \texttt{hasCycle\_colorMap} \\ \texttt{all\_colors\_haveCycle}} \\
+\bottomrule
+\end{tabularx}
+\caption{How the human proof matches the Lean development in \texttt{formal/TorusD4}.}
+\label{tab:lean-map}
+\end{table}
+
+Two coordinate equivalences are especially important in the formal proof. The map
+\texttt{splitPoint}\allowbreak\texttt{Equiv} identifies a full torus point with
+its $(\Pzero,\ S)$ coordinates, which is the Lean version of the statement
+``every orbit meets $\Pzero$ once every $m$ steps.'' The map
+\texttt{splitP0}\allowbreak\texttt{Equiv} identifies a point of $\Pzero$ with
+its $(\Qslice,\ q)$ coordinates, which is the Lean version of the statement
+``every $R_c$-orbit meets $\Qslice$ once every $m$ steps.'' The two lifting
+propositions in Section~\ref{sec:lifts} are formalized by iterating these
+equivalences together with the relevant return maps.
+
+At the top level, \texttt{formal/TorusD4.lean} imports the full chain of modules.
+The final theorem used in practice is \texttt{all\_colors\_haveCycle}: for every
+$m \ge 3$ and every color $c$, the map \texttt{colorMap c} has a cycle of length
+$m^4$, hence is Hamiltonian.
+
+\begin{remark}[Conceptual summary]
+What looks locally like a small layer-$2$ patch is globally a nested odometer.
+The first return exposes the delayed carry; the second return turns that carry
+into the standard clock-and-carry map; the two lift steps then recover the full
+Hamilton cycles. That structure is not only the cleanest human proof, but also the
+reason the argument formalizes cleanly in Lean.
+\end{remark}
+
+\end{document}
