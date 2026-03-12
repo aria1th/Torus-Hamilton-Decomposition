@@ -24,4 +24,7 @@ name = "TorusD3Odd"
 name = "TorusD3Even"
 
 [[lean_lib]]
+name = "TorusD3Odometer"
+
+[[lean_lib]]
 name = "TorusD5"
