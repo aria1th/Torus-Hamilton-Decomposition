@@ -170,3 +170,44 @@ useful as a theorem inventory, but the verified source of truth is the
    `FullCycles.lean`) now or defer that until after a review pass.
 3. If the `d=4` result is accepted as stable, extract the reusable slice/return
    pattern into a more abstract lemma before touching `d=3`.
+
+## D3 odd status
+
+- `TorusD3Odd/*` now covers the full odd-case chain, not just the return maps.
+  `Cycles.lean` proves the three affine conjugacies and the exact `m^2` cycles
+  for `F0`, `F1`, and `F2`.
+- `FullCycles.lean` adds the full-coordinate model for `d=3` odd:
+  `KMap`, `pairColorMap`, the explicit two-step formulas on the low layers,
+  the canonical-tail lemma from layer `S = 2`, the first-return theorem
+  `((colorMap c)^[m]) (phiLayer u 0) = phiLayer (FMap c u) 0`, and the final
+  lift to exact `m^3` cycles on the full torus.
+- The practical proof pattern for `d=3` odd is simpler than `d=4`:
+  do the low-layer work explicitly for the first two steps, then switch to a
+  uniform canonical map `KMap` for the remaining `m - 2` steps.
+- One recurring Lean issue in this file was that the final theorem
+  `point_eq_phiLayer_of_splitPointEquiv_eq` wants the coordinate value
+  `(u, s)` directly. Do not convert that back into
+  `splitPointEquiv (phiLayer u s)` unless you really need the conjugacy form;
+  ending the calc chain at `slicePoint s u` is usually the cleaner target.
+
+## D3 even color-2 status
+
+- `TorusD3Even/Counting.lean` now contains a reusable first-return counting
+  theorem on finite types. The useful proof pattern is:
+  define recursive block times, prove the block-time iterate theorem, prove a
+  minimal-return contradiction by locating any putative early return inside one
+  block interval, then package the final cycle with `cycleOn_of_period_card`.
+- `TorusD3Even/Color2.lean` now has the verified one-dimensional lane map
+  `T2`, its conjugacy `psiT2` to `x ↦ x + 1`, the exact `m`-cycle theorem for
+  `T2`, the closed-form two-dimensional map `R2xy`, the return-time function
+  `rho2`, and the easy `x = 0` first-return lemma.
+- Important boundary lesson: the closed-form `R2xy` branch proofs must be
+  stated under the real even-theorem regime `m ≥ 6` (or at least with explicit
+  lower bounds strong enough to keep `-1`, `-2`, `2`, `3`, ... distinct in
+  `ZMod m`). Several naive “obvious” step lemmas become false or change branch
+  behavior at small moduli like `m = 3` or `m = 4`.
+- Practical consequence: do not prove the `x = 1` / `x = 2` boundary traces by
+  ad hoc `simp` under a weak assumption like `2 < m`. First set the correct
+  lower-bound hypotheses, then build a small helper layer for nat-cast
+  nonvanishing (`3 ≠ 0`, `4 ≠ 0`, casted `m - 1`, casted `m - 2`, etc.) and
+  only after that prove the long generic `G`-segment lemmas.

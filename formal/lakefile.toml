@@ -1,7 +1,7 @@
 name = "TorusD4"
 version = "0.1.0"
 keywords = ["math"]
-defaultTargets = ["TorusD4"]
+defaultTargets = ["TorusD4", "TorusD3Odd"]
 
 [leanOptions]
 pp.unicode.fun = true # pretty-prints `fun a ↦ b`
@@ -16,3 +16,12 @@ rev = "v4.28.0"
 
 [[lean_lib]]
 name = "TorusD4"
+
+[[lean_lib]]
+name = "TorusD3Odd"
+
+[[lean_lib]]
+name = "TorusD3Even"
+
+[[lean_lib]]
+name = "TorusD5"

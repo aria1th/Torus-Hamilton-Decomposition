@@ -1,7 +1,13 @@
-# TorusD4 Lean Formalization
+# Torus Lean Formalization
 
-This directory is a standalone Lean 4 + mathlib project for the `d=4`
-Hamilton decomposition proof.
+This directory is a standalone Lean 4 + mathlib project.
+
+Its current verified core is the `d=4` Hamilton decomposition proof.
+
+For the current `d=5` frontier and the recommended Lean role after artifact
+`D5-RETURN-MAP-MODEL-017`, see:
+
+- `README-D5.md`
 
 ## Current scope
 
