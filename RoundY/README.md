@@ -1,307 +1,409 @@
 # RoundY — d=5 Hamilton Decomposition
 
-Hamilton decomposition of the directed 5-torus D₅(m) = Cay((ℤ_m)⁵, {e₀,e₁,e₂,e₃,e₄}).
+Hamilton decomposition of the directed `5`-torus
 
-**Status: [O] open — dynamic collapse diagnosis in progress. 17 sessions completed.**
+`D_5(m) = Cay((Z_m)^5, {e_0, e_1, e_2, e_3, e_4})`.
 
----
+**Status:** `[O]` open.  
+**Current frontier:** after artifact `044`, grouped-state-descending admissible families are pruned, the smallest verified trigger lift is identified, and the structural theorem branch now has a clean checked normal form. Raw current coordinates still close the reduced control logic, `w` already descends as `s-u`, exceptional fire already descends to `B = (s,u,v,layer,family)`, regular fire descends to `B` plus the carry-slice bit `1_{q=m-1}`, and the residual sheet can now be taken as the binary anticipation bit `1_{next carry u >= m-3}`. It is now: **realize the carry lift admissibly; the theorem branch is grouped base + carry sheet + binary anticipation cover.**
 
-## Research Flow
+This README is the current top-level map. It replaces the older Session-20-only
+snapshot and is organized around the actual D5 branch progression through the
+recent artifacts.
 
-```mermaid
-graph TD
-    S1["Session 1<br/>m=5 witness found<br/>[C] 26-move Kempe"]
-    S2["Session 2<br/>Boolean model UNSAT<br/>[P] zero-pattern insufficient"]
-    S3["Session 3<br/>Color 3 theorem<br/>[P] all odd m ≥ 5"]
-    S4["Session 4<br/>Color 1,2 classification<br/>[P] obstruction theorems"]
-    S5["Session 5<br/>Triangular criterion<br/>[P] reusable framework"]
-    S6["Session 6<br/>Clean-frame diagnostic<br/>[C] 26-move not repairable"]
-    S7["Session 7<br/>Color 0 exact formula<br/>[P] even-m obstruction"]
-    S8["Session 8<br/>G3 cyclic template<br/>[C] single core achieved"]
-    S9["Session 9<br/>G3 surgery fails<br/>[F] 226 candidates exhausted"]
-    S10["Session 10<br/>Branch decision<br/>→ fresh cyclic family"]
-    S11["Session 11<br/>Fresh q-clock/v-fiber family<br/>[H] clean frame by design"]
-    S12["Session 12<br/>Master field formalization<br/>[P] conditional theorem"]
-    S13["Session 13<br/>Orbit-anchor lemma<br/>[P] Schema A/B no-go"]
-    S14["Session 14<br/>Free-anchor search<br/>[C] Latin OK, dynamics collapse"]
-    S15["Session 15<br/>Join quotient Θ_AB<br/>[C] 9427 states, same collapse"]
-    S16["Session 16<br/>Dynamic collapse core<br/>[P] R₀=(q+1,w,v+1,u)"]
-    S17["Session 17<br/>Phase-align bit<br/>[C] partial, insufficient"]
-    S18["Session 18<br/>Pilot grammar extraction<br/>[C] 2 rigid grammars"]
-    S19["Session 19<br/>Predecessor bit scan<br/>[C] marginal, insufficient"]
-    S20["Session 20<br/>Tail phase scan<br/>[C] δ-partitions optimal"]
+## One-paragraph status
 
-    S1 --> S2 --> S3 --> S4
-    S4 --> S5 --> S6
-    S6 --> S7 --> S8 --> S9 --> S10
-    S10 --> S11 --> S12 --> S13
-    S13 --> S14 --> S15 --> S16 --> S17
-    S17 --> S18 --> S19 --> S20
-```
+The D5 program has already crossed the earlier barriers. Clean frame is not the
+main issue anymore. Latin feasibility is not the main issue anymore. Mixed
+cycle-plus-monodromy dynamics already exist. The project then pivoted from
+blind local-rule widening to return-map extraction, then from return-map
+extraction to reduced perturbation design, and then from reduced perturbation
+design to local realization. The current best reduced target is known, the
+smallest naive local realization families are heavily pruned, and the sharp
+frontier is now a **tiny lifted-sheet admissibility obstruction** on the best
+endpoint seed: the lifted phase is already visible on raw `(q,w,layer)`, the
+raw control logic is already exact, the carry-slice trigger lift is known, and
+the remaining structural object is now explicit: grouped base plus carry sheet
+plus binary anticipation cover.
 
-### Phase 1: Discovery (Sessions 1–2)
+## Barrier evolution
 
-| Session | Key result | Files |
-|---|---|---|
-| **1** | m=5 Hamilton decomposition via 26 Kempe swaps. Established relative coordinates q_c=x_{c+1} | `d5_gpt54_session1_progress.md`, `d5_m5_kempe_witness_26.json`, `d5_progress_update.md` |
-| **2** | Boolean zero-pattern model is UNSAT at m=5 → affine-pinned model necessary | `d5_gpt54_session2_boolean_unsat.md`, `d5_boolean_model_unsat_check.py`, `d5_boolean_model_unsat_summary.json` |
+The real story of RoundY is the bottleneck moving inward:
 
-### Phase 2: Color-by-color theorems (Sessions 3–4)
+1. `clean frame absent`
+2. `Latin infeasibility`
+3. `dynamic collapse`
+4. `unknown mixed return mechanism`
+5. `unknown reduced 2D/3D target`
+6. `unknown local realization of that target`
+7. `unresolved local phase exposure`
+8. `raw static phase gates pruned`
+9. `lifted corridor state visible on raw current coordinates`
+10. `coordinate exposure / admissibility`
+11. `carry-slice trigger lift identified`
+12. `current frontier: carry realization over an explicit binary anticipation cover`
 
-| Session | Key result | Files |
-|---|---|---|
-| **3** | **Color 3 is Hamilton for all odd m ≥ 5** — nested skew product: R₃ → B → U → row dynamics | `d5_gpt54_session3_color3_theorem.md`, `d5_progress_note_v5.md`, `d5_color3_partial_theorem_check.py`, `d5_color3_partial_theorem_summary.json` |
-| **4** | **Color 2 Hamilton ⟺ gcd(m,3)=1** (s→s+3 odometer). **Color 1 non-Hamilton for m≥6** (explicit fixed set) | `d5_gpt54_session4_color12_theorems.md`, `d5_color1_fixed_set_check.py`, `d5_color1_fixed_set_summary.json`, `d5_color2_classification_check.py`, `d5_color2_classification_summary.json`, `d5_small_m_all_color_R_cycle_summary.json` |
+In short:
 
-### Phase 3: Framework formalization (Sessions 5–6)
+`clean frame -> Latin -> return dynamics -> reduced normal form -> local realization -> orbit phase -> lifted-coordinate admissibility -> tiny finite-sheet cover`
 
-| Session | Key result | Files |
-|---|---|---|
-| **5** | Color 3 promoted to **reusable theorem**: Lemma 1 (first-return) + Lemma 2 (clean-frame) + Theorem 3 (triangular criterion) + Theorem 4 (color 3) | `d5_color3_skew_product_note_v1.md` |
-| **6** | Clean-frame test: colors 0/1/4 have **no triangular factorization** in the 26-move witness → repair impossible → new template needed | `d5_color3_triangular_criterion_and_failure_profiles.md`, `d5_clean_frame_failure_profiles.py`, `d5_clean_frame_failure_profiles.json` |
+## High-level progress map
 
-### Phase 4: Color 0 deep analysis (Sessions 7–10)
+### Phase A. Early discovery and theorem scaffolding
 
-| Session | Key result | Files |
-|---|---|---|
-| **7** | Color 0 exact first-return formula for all m≥6. **Even m≥6 non-Hamilton** via invariant family L_w | `d5_progress_note_v8.md`, `d5_color0_formula_and_even_obstruction_check.py`, `d5_color0_formula_and_even_obstruction_summary.json` |
-| **8** | G3 cyclic template (3 orbit-gates) achieves clean frame + single cycle core + unit monodromy for color 0. Remaining obstruction: indegree defects only | `d5_color0_cyclic_template_progress_note_v1.md`, `d5_color0_G3_defect_profile_note.md`, `d5_color0_G3_defect_profile_check.py`, `d5_color0_G3_defect_profile_summary.json`, `d5_color0_cyclic_template_diagnostics.py` |
-| **9** | 226 two-gate affine-pinned surgeries on G3 exhaustively fail at m=7 | `d5_color0_G3_two_gate_targeted_search_note.md`, `d5_color0_G3_two_gate_targeted_search_summary.json`, `d5_color0_candidateA_local_surgery_search.py` |
-| **10** | **Branch decision**: abandon 26-move witness repair and G3 patching → move to fresh cyclic family with clean-frame constraints for all 5 colors | `d5_fresh_cyclic_branch_note_v1.md` |
+Sessions `1–10` established the prehistory:
 
-### Phase 5: Master permutation field (Sessions 11–13)
+- an `m=5` Hamilton witness existed,
+- Boolean zero-pattern models were too weak,
+- the color-by-color return-map analysis produced the first reusable theorem
+  tools,
+- the original witness line was useful diagnostically but not the final route,
+- the project pivoted to a cyclic-equivariant master permutation field.
 
-| Session | Key result | Files |
-|---|---|---|
-| **11** | Fresh q-clock / v-fiber family designed: forbidden direction c+1 + no v_c dependence → clean frame by construction for all colors | `d5_fresh_cyclic_family_note_v2.md`, `d5_fresh_cyclic_family_codex_template.md` |
-| **12** | **Master-template conditional theorem** [P]: cyclic equivariance + Latin + representative-color triangular criterion ⟹ full decomposition. Latin check: best candidate still 16% bad at m=5 | `d5_master_field_branch_note_v1.md`, `d5_master_field_codex_template.md`, `d5_master_field_latin_check.py`, `d5_master_field_latin_check_summary.json`, `d5_gpt54pro_strategic_analysis.md` |
-| **13** | **Orbit-anchor reconstruction** [P]: Π_θ(c) = a(ρ⁻ᶜθ)+c — anchor determines full field. **Schema A/B no-go** [P]: both fail outgoing-Latin on explicit layer-2 phase. Key insight: free the anchor, don't enlarge state space | `d5_master_field_orbit_anchor_note_v2.md`, `d5_master_field_orbit_anchor_check.py`, `d5_master_field_orbit_anchor_summary.json`, `d5_master_field_free_anchor_codex_template.md` |
+Main outcome:
 
-### Phase 6: Join quotient and dynamic collapse (Sessions 14–17)
+- the problem was rewritten as a quotient-state / anchor-table construction
+  problem.
 
-| Session | Key result | Files |
-|---|---|---|
-| **14** | Free-anchor search on Schema A/B **succeeds at Latin** but **collapses dynamically** — all strict-clock solutions use only {σ, id}, yielding trivial U₀ | `d5_join_quotient_branch_note_v1.md`, `d5_join_quotient_codex_template_v1.md` |
-| **15** | **Join quotient Θ_AB** built: 9427 states, 1899 orbits. Latin-feasible but same dynamic collapse | `d5_join_quotient_size_summary.json` |
-| **16** | **Dynamic collapse exact formula** [P]: stable field = layer 0→σ, layer 1→c+3, layers 2+→id. R₀(q,w,v,u)=(q+1,w,v+1,u), U₀=id, monodromy=0. Bottleneck shifts to dynamic collapse core | `d5_join_quotient_dynamic_collapse_note_v1.md`, `d5_join_stable_field_return_law_check.py`, `d5_join_stable_field_return_law_summary.json`, `d5_dynamic_collapse_core_codex_template.md` |
-| **17** | **Phase-align bit** δ=v-q tested: kills aligned collisions but leaves ~95% misaligned for large m. One-bit refinement necessary but insufficient | `d5_phase_align_collision_profile_note.md`, `d5_phase_align_collision_profile_check.py`, `d5_phase_align_collision_profile_summary.json`, `d5_theta_ab_phase_align_codex_template.md`, `d5_gpt54pro_strategic_analysis_v2.md` |
+### Phase B. Master field and dynamic-collapse diagnosis
 
-### Phase 7: Tail-phase diagnostics (Sessions 18–20)
+Sessions `11–20` and exact artifacts `001–016` moved the project from broad
+search to sharp mechanism analysis:
 
-| Session | Key result | Files |
-|---|---|---|
-| **18** | **Pilot grammar extraction** [C]: Θ_AB+phase_align yields exactly 2 rigid pilot grammars — strict-collapse (layer 0=σ, layer 1=σ³, layers 2+=id → R₀=(q+1,w,v+1,u)) and clean-nonclock (layer 0=σ³, layers 1+=id → R₀=(q,w,v+1,u)). Both freeze layers 2+ to identity on all 20879 pilot-realized states. | `d5_phase_align_pilot_grammar_note.md`, `d5_phase_align_pilot_grammar_analysis.py`, `d5_phase_align_pilot_grammar_analysis_summary.json` |
-| **19** | **Predecessor bit scan** [C]: one-step-lagged copies of existing atoms give only marginal improvement. No simple predecessor bit removes residual collision structure. | `d5_phase_align_simple_predecessor_bit_scan_note.md`, `d5_phase_align_simple_predecessor_bit_scan.json` |
-| **20** | **Tail phase scan** [C]: pure δ-partitions outperform all affine-mixed predicates (aq+bw+cu+δ=t). Best arbitrary δ-partitions: m=5:{1,2}, m=7:{1,3,5}, m=9:{1,2,5,6}. But optimal subset **drifts with m** — no uniform arithmetic bit. Next bit must come from return automaton / compatibility hypergraph. | `d5_phase_align_tail_phase_scan_note.md`, `d5_phase_align_tail_phase_scan.py`, `d5_phase_align_tail_phase_scan_summary.json` |
+- clean frame was built into the construction,
+- orbit-anchor reconstruction reduced the search space structurally,
+- free-anchor search solved outgoing Latin in the live quotient families,
+- but pilot-feasible fields collapsed dynamically,
+- the collapse law was extracted exactly,
+- one-bit and tail-phase refinements were scanned and pruned.
 
----
+Main outcome:
 
-## Current Status Map
+- the bottleneck moved from Latin to return dynamics.
 
-```
-d=5 full theorem: [O]
+For the full compressed pre-`017` record, use
+[`RoundY/d5_progress_master_summary.md`](./d5_progress_master_summary.md).
 
-  Phase A — 26-move witness analysis (complete):
-    Color 3: [P] Hamilton for all odd m ≥ 5
-    Color 2: [P] Hamilton ⟺ gcd(m,3)=1
-    Color 1: [P] non-Hamilton for m ≥ 6 (fixed-point obstruction)
-    Color 0: [P] non-Hamilton for even m ≥ 6 (invariant family)
-              [C] no clean frame for tested odd m
-    Color 4: [C] no clean frame for tested odd m
-    Verdict: witness is a discovery tool, not a solution
+## Exact frontier after the old README
 
-  Phase B — G3 cyclic template (abandoned):
-    Color 0: [C] single core + unit monodromy achieved
-    Color 0: [F] indegree defects unresolvable (226 surgeries exhausted)
+This is the part the old `README.md` did not capture.
 
-  Phase C — Master permutation field (Sessions 11-13):
-    [P] Master-template conditional theorem
-    [P] Orbit-anchor reconstruction: Π_θ(c) = a(ρ⁻ᶜθ) + c
-    [P] Outgoing-Latin criterion on anchor words
-    [P] Schema A/B anchored no-go (both fail on layer-2)
+### `017–019`: return-map extraction and explicit mixed model
 
-  Phase D — Join quotient + dynamic collapse (Sessions 14-17):
-    [C] Free-anchor on Schema A/B: Latin-feasible but dynamically degenerate
-    [C] Join quotient Θ_AB (9427 states): also Latin-feasible, same collapse
-    [P] Stable field exact formula: R₀(q,w,v,u) = (q+1,w,v+1,u)
-    [P] Dynamic collapse: U₀=id, monodromy=0 on all tested fields
-    [C] Phase-align bit δ=v-q: partial effect, insufficient alone
+These artifacts turned the mixed witness from “a surviving table” into a real
+return-map object.
 
-  Phase E — Tail-phase diagnostics (Sessions 18-20, active):
-    [C] Pilot grammar: exactly 2 rigid grammars, both freeze layers 2+ to id
-    [C] Predecessor bit scan: marginal, insufficient
-    [C] Tail phase scan: pure δ-partitions optimal, but no uniform arithmetic bit
-    [H] Next bit must be automaton-derived tail-phase class, not delayed atoms
-    [O] Build compatibility hypergraph / return automaton on residual tail family
-    [O] Extract coarsest 2-coloring of hidden phase classes
+- `017`:
+  grouped return for the canonical mixed witness stabilizes to a clean base
+  model.
+- `018`:
+  the grouped dynamics collapse to a skew-odometer-style normal form.
+- `019`:
+  the exact obstruction is identified:
+  each fixed `u` fiber is already perfect, and the remaining obstruction is
+  grouped `u`-invariance.
 
-  Bottleneck evolution:
-    ~~clean frame absent~~  → master field solved this
-    ~~Latin infeasibility~~ → free-anchor solved this
-    ~~ad-hoc phase bits~~   → δ-partition scan ruled these out
-    **automaton-derived tail-phase class** → current core problem
+Main outcome:
 
-  Proved tools (reusable across all phases):
-    [P] First-return reduction (Lemma 1)
-    [P] Clean-frame detection lemma (Lemma 2)
-    [P] Triangular skew-product Hamiltonicity criterion (Theorem 3)
-    [P] Orbit-anchor reconstruction lemma
-    [P] Predecessor-pattern incoming criterion
-    [P] 3D odometer single-cycle lemma
-    [P] Sign-product parity barrier (even m, odd d)
-    [P] Block-sum invariant
+- the mixed witness is structurally understood,
+- and the problem becomes “what extra mechanism creates the missing second
+  grouped coordinate?”
 
-  Next target:
-    → Build return automaton on residual tail family
-    → Extract coarsest 2-coloring of hidden phase classes separating collapse motifs
-    → Compare automaton-derived partition with pilot-optimal δ-partitions
-    → Use that as the next quotient bit and re-run master-field search
-```
+### `020–025`: reduced perturbation target
 
----
+These artifacts found the right reduced target before any honest local
+realization search could succeed.
 
-## File Index
+- `020–022`:
+  tiny carry-swap and affine paired-carry families were pruned.
+- `023`:
+  the first clean 2D reduced perturbation appeared:
+  a moving adjacent transposition along a diagonal or anti-diagonal, with base
+  orbit sizes `[m, m(m-1)]`.
+- `024`:
+  omitting one row of that moving transposition collapses the grouped base to a
+  single orbit of size `m^2`.
+- `025`:
+  adding the right edge-tied cocycle defect collapses the full grouped state to
+  a single orbit of size `m^3`.
 
-### Notes & Reports (`.md`)
-| File | Content |
+Main outcome:
+
+- the correct reduced target is now explicit:
+  `omit-base + edge-tied point cocycle defect`.
+
+This is the first point where the D5 branch had a concrete theorem-shaped
+target rather than a vague “better mixed witness”.
+
+### `026–031`: first local realization branch pruned
+
+Once `025` existed, the next question became local realization.
+
+These artifacts ruled out the first natural local ansatze:
+
+- `026/027`:
+  current-state `B/P/M` stationary realizations fail because of exact layer-2
+  collisions.
+- `028`:
+  endpoint orientation is identified as the right missing local signature.
+- `029`:
+  the smallest static two-layer endpoint-controller family is pruned.
+- `030`:
+  short endpoint words exist at the path level.
+- `031`:
+  the smallest static three-layer promotion of those words is also pruned.
+
+Main outcome:
+
+- endpoint orientation is necessary,
+- but fixed static endpoint words are still not enough.
+
+### `032–044`: best endpoint seed, defect quotient, corridor phase, static gate no-go, phase clarification, carrier target, birth-local split, exact raw birth formulas, realization boundary, first admissibility no-go, carry-slice / finite-cover extraction
+
+This is the current live branch.
+
+- `032`:
+  the best endpoint seed is isolated:
+  left `[2,2,1]`, right `[1,4,4]`.
+  Its Latin defect is exact and balanced:
+  `250, 490, 810 = 10 m^2` on `m=5,7,9`.
+  One-gate, one-bit, and smallest two-class static repairs all fail.
+- `033`:
+  that defect is quotiented exactly.
+  Per color it reduces to four overfull families against four hole families,
+  with only one unresolved channel left:
+  `R1 -> H_L1`.
+  On the extracted local alphabet, the natural shortest repair corridor is
+  unary `BBB`, which kills `2`-state and `3`-state transducers immediately.
+- `034`:
+  the unresolved corridor is extracted as an explicit reduced phase model on
+  `(s, layer)`.
+  The short and long delay families differ by exactly one full large-orbit lap
+  `m(m-1)`.
+- `035`:
+  the first static phase-exposure layer is already dead:
+  no `1`- or `2`-coordinate projection isolates the first exit, exactly `8`
+  `3`-coordinate projections do, and every resulting raw static `B`-state gate
+  family fails Latin on the pilot range.
+- `036`:
+  the saved `034` `(s, layer)` rule is clarified as a first-pass projected
+  phase lap, not the full long-run deterministic factor.
+  The actual traced long corridor admits an exact lifted model on
+  `(q, a, layer)`, where `a = s - rho` and `rho = u_source + 1`.
+- `037`:
+  the lifted state is already visible on raw current coordinates.
+  Along every traced corridor state up to first exit,
+  `a = q + w - 1_{layer=1}`.
+  The raw triple `(q,w,layer)` is an exact `m^3` odometer, and the first exits
+  become two universal raw targets:
+  regular `(m-1,m-2,1)` and exceptional `(m-2,m-1,1)`.
+- `038`:
+  in the simple one-step predecessor/successor neighborhood-bit family, the
+  exceptional source slice is already local at birth, but the source marker and
+  entry marker are not isolated up to projection size `5`.
+  So the live issue is the marker itself, not the family bit.
+- `039`:
+  the best-seed source and entry slices are already exact on raw current
+  coordinates:
+  source `layer=1, q=m-1, w=0, u!=0`,
+  entry `layer=2, q=m-1, w=1, u!=0`,
+  with exceptional tag `u=3` at birth in both.
+  Current raw `u` then drifts through all residues along representative regular
+  and exceptional corridor traces, so the family tag must be transported.
+- `040`:
+  the first richer families still derived from the same simple `038` row also
+  fail:
+  full-row source-edge pairs do not isolate birth, and lag-1 / lag-2 full-row
+  temporal pairs do not stabilize the exceptional trigger.
+  But the raw current coordinate family already closes the reduced control
+  logic on the checked active union:
+  birth is exact, current `(q,w,u,layer)` separates source families, and
+  active-conditioned current `(q,w,layer)` fires with zero prehits.
+- `041`:
+  the first `025`-style grouped-state-descending admissible families still
+  fail exactly.
+  On the checked active union, `w` already descends as `s-u mod m`, but the
+  regular and exceptional fire predicates are not functions of the current
+  grouped state `(s,u,v)`, even after conditioning on family.
+  Canonical omit-base base gauges and edge-tied point cocycles do not change
+  those collision counts because they still descend to that same grouped state.
+- `042`:
+  the carry-slice bit `c = 1_{q=m-1}` is the smallest verified trigger lift.
+  Exceptional fire already descends to
+  `B = (s,u,v,layer,family)`, and regular fire descends to `B` plus `c`.
+  But `(B,c)` is still not a closed deterministic active dynamics.
+  The structural lift is better read as a tiny finite cover over `B`, with
+  fiber size at most `3` on the checked range.
+- `043`:
+  that tiny-cover picture sharpens.
+  The minimal deterministic cover over `B+c` is `2`-sheet on `m=5,7,9,11`,
+  supported entirely on the regular noncarry branch.
+  The residual sheet is not the obvious bit `1_{q=m-2}` on `m=7,9,11`, and
+  short future-carry windows also fail there.
+  A theorem-friendly nonlocal coordinatization does exist via time to next
+  carry.
+- `044`:
+  the theorem branch becomes explicit.
+  The checked active branch factors as
+  `B <- B+c <- B+c+d`
+  with
+  `d = 1_{next carry u >= m-3}`.
+  Carry states are singleton over `B+c`, and `d` is needed only on regular
+  noncarry states.
+
+Main outcome:
+
+- the live obstruction is no longer “missing another separator bit”,
+- and no longer “need a slightly larger transducer”.
+- It is no longer generic coordinate exposure either.
+- It is now a **tiny lifted-sheet admissibility problem**.
+- The first naive static coordinate-gating branch on the old projected phase is
+  already pruned.
+- The old `(s, layer)` model is useful, but only as a first-pass projection.
+- The lifted phase itself is no longer hidden.
+- The exceptional family bit is already cheap at the source.
+- The raw birth predicate itself is already explicit at the reduced level.
+- The active family split and active-conditioned trigger are already explicit at
+  the reduced raw-coordinate level too.
+- The missing ingredient is not reduced control logic anymore.
+- `w` already descends to grouped state.
+- Exceptional fire already descends to `B = (s,u,v,layer,family)`.
+- Regular fire descends to `B` plus the carry slice `1_{q=m-1}`.
+- The structural lift is no longer vague:
+  it is now grouped base plus carry sheet plus binary anticipation cover.
+- The remaining live local branch is carry realization.
+- But the closed structural lift is still not just the carry bit.
+- So the missing admissibility ingredient is the smallest finite lifted sheet
+  over the grouped base in the intended local mechanism class.
+
+## Current picture
+
+The strongest supported D5 picture so far is:
+
+1. A canonical mixed witness exists and is structurally real.
+2. Its grouped return already has a clean reduced model.
+3. The correct reduced perturbation target is known.
+4. The smallest natural local realization families have been pruned.
+5. The unresolved best-seed local obstruction has a traced deterministic lift on
+   `(q, a, layer)`.
+6. That lifted state is already visible on raw `(q,w,layer)`.
+7. The first raw static phase gate on the projected `(s, layer)` picture has
+   already been pruned.
+8. In the smallest birth-local neighborhood family, the exceptional source bit
+   is already visible but the source marker is not.
+9. In exact raw current coordinates, the source and entry birth classes are
+   already explicit.
+10. The first richer simple-row-derived source-edge and lagged families still
+    fail, while raw current coordinates already realize the reduced control
+    logic on the checked active union.
+11. The first `025`-style grouped-state-descending admissible families also
+    fail.
+12. The carry slice is the smallest verified trigger lift, but the structural
+    reduced object is a tiny finite cover over the grouped base, with fiber
+    size at most `3` on the checked range.
+
+So the current question is not:
+
+- “does mixed dynamics exist?”
+- “can we guess another one-bit repair?”
+- “should we widen tiny transducer search again?”
+
+It is:
+
+**what is the smallest admissible lifted sheet over the grouped base that
+exposes and closes the raw control logic already identified?**
+
+## Current next branch
+
+After `042`, the honest next branch is:
+
+1. search for an admissible realization of the **carry-slice lift** if
+   trigger-level control is enough, or
+2. extract / realize the **tiny finite-sheet cover** over the grouped base if
+   a closed odometer-style dynamics is the real target, or
+3. only then open genuinely new observable families that are not lifts of the
+   same simple `038` row.
+
+What is not recommended now:
+
+- broader one-bit scans,
+- generic `2`-state / `3`-state transducer widening on the same alphabet,
+- reopening static endpoint-word families without a phase-aware ingredient.
+
+## Recommended companion files
+
+Use these together:
+
+- [`RoundY/d5_progress_master_summary.md`](./d5_progress_master_summary.md)
+  for the compressed exact history through the earlier D5 pilot chain
+- [`RoundY/current-frontier-and-approach.md`](./current-frontier-and-approach.md)
+  for the current problem statement, workflow note, and theorem targets
+- [`RoundY/instruction_for_codex.md`](./instruction_for_codex.md)
+  for the short Codex-oriented reading order and thinking patterns
+- [`DOCUMENT_FOR_EXTERNAL_REVIEW.md`](../DOCUMENT_FOR_EXTERNAL_REVIEW.md)
+  for the branch decisions `D17` through `D33`
+- [`RoundY/autonomous/d5_autonomous_perturbation_note_v17.md`](./autonomous/d5_autonomous_perturbation_note_v17.md)
+  for the latest local-branch summary
+- [`formal/README-D5.md`](../formal/README-D5.md)
+  for the Lean / formalization side of the extracted D5 model
+
+## Recent artifact chain
+
+| Artifact | Main result |
 |---|---|
-| `d5_codex_job_report_0_problem_setup.md` | Initial d=5 problem formulation + search plan |
-| `d5_gpt54_session1_progress.md` | Session 1: m=5 witness discovery |
-| `d5_progress_update.md` | Session 1 summary |
-| `d5_gpt54_session2_boolean_unsat.md` | Session 2: Boolean UNSAT + affine-pinned pivot |
-| `d5_gpt54_session3_color3_theorem.md` | Session 3: Color 3 partial theorem |
-| `d5_progress_note_v5.md` | Session 3: Technical details |
-| `d5_gpt54_session4_color12_theorems.md` | Session 4: Color 1/2 classification |
-| `d5_color3_skew_product_note_v1.md` | Session 5: Formal triangular criterion |
-| `d5_color3_triangular_criterion_and_failure_profiles.md` | Session 6: Clean-frame diagnostic |
-| `d5_progress_note_v8.md` | Session 7: Color 0 exact formula |
-| `d5_color0_G3_defect_profile_note.md` | Session 8: G3 defect analysis |
-| `d5_color0_cyclic_template_progress_note_v1.md` | Session 8: Cyclic template progress |
-| `d5_color0_G3_two_gate_targeted_search_note.md` | Session 9: Surgery failure report |
-| `d5_fresh_cyclic_branch_note_v1.md` | Session 10: Branch decision |
-| `d5_fresh_cyclic_family_note_v2.md` | Session 11: q-clock/v-fiber family design |
-| `d5_fresh_cyclic_family_codex_template.md` | Session 11: Codex search template |
-| `d5_gpt54pro_strategic_analysis.md` | GPT 5.4 Pro strategic analysis: π_x∈S₅ proposal |
-| `d5_master_field_branch_note_v1.md` | Session 12: Master field formalization |
-| `d5_master_field_codex_template.md` | Session 12: Codex quotient search template |
-| `d5_master_field_orbit_anchor_note_v2.md` | Session 13: Orbit-anchor lemma + no-go |
-| `d5_master_field_free_anchor_codex_template.md` | Session 13: Free-anchor Codex template |
-| `d5_join_quotient_branch_note_v1.md` | Session 14-15: Join quotient design |
-| `d5_join_quotient_codex_template_v1.md` | Session 14: Join quotient Codex template |
-| `d5_join_quotient_dynamic_collapse_note_v1.md` | Session 16: Dynamic collapse diagnosis |
-| `d5_phase_align_collision_profile_note.md` | Session 17: Phase-align test results |
-| `d5_theta_ab_phase_align_codex_template.md` | Session 17: Phase-align Codex template |
-| `d5_dynamic_collapse_core_codex_template.md` | Session 16: Collapse core Codex template |
-| `d5_gpt54pro_strategic_analysis_v2.md` | GPT 5.4 Pro 2nd analysis: compatibility hypergraph |
-| `d5_phase_align_pilot_grammar_note.md` | Session 18: Pilot grammar extraction (2 rigid grammars) |
-| `d5_phase_align_simple_predecessor_bit_scan_note.md` | Session 19: Predecessor bit scan (marginal) |
-| `d5_phase_align_tail_phase_scan_note.md` | Session 20: Tail phase scan (δ-partitions optimal) |
+| `017` | grouped return base model extracted |
+| `018` | mixed skew-odometer normal form extracted |
+| `019` | exact obstruction = grouped `u`-invariance |
+| `023` | first clean 2D reduced perturbation: moving adjacent transposition |
+| `024` | omit-one-row defect gives single grouped-base orbit |
+| `025` | edge-tied point cocycle defect gives single full grouped orbit |
+| `032` | best endpoint seed isolated; tiny static repairs pruned |
+| `033` | defect graph quotiented; tiny transducers pruned |
+| `034` | unresolved channel extracted as corridor-phase model |
+| `035` | raw static phase gates pruned on the best seed |
+| `036` | `(s,layer)` clarified as first-pass only; lifted corridor model extracted |
+| `037` | lifted phase visible on raw `(q,w,layer)`; next target = localized carrier |
+| `038` | exceptional source bit already birth-local; source/entry marker still not locally isolated |
+| `039` | source/entry birth classes exact on raw coordinates; next reduced issue = tagged transport |
+| `040` | simple richer lifts still fail; raw current coordinates already close reduced control logic |
+| `041` | grouped-state-descending admissible families fail; next target = one lifted coordinate beyond `(s,u,v)` |
+| `042` | carry slice is the smallest trigger lift; structural object = tiny finite cover over grouped base |
+| `043` | minimal deterministic cover over `B+c` is `2`-sheet on `m=5,7,9,11`; residual sheet not any short future-carry window; time-to-next-carry coordinatizes it |
+| `044` | **normal form confirmed**: `B <- B+c <- B+c+d` with `d = 1_{next carry u >= m-3}`; carry states singleton over `B+c`; `d` needed only on regular noncarry; carry realization: **open** |
 
-### Scripts (`.py`)
-| File | Purpose |
+## Claim labels
+
+- `[P]` proved
+- `[C]` computationally verified
+- `[H]` heuristic / design principle
+- `[F]` failed / ruled out
+- `[O]` open
+
+## Short takeaway
+
+RoundY is no longer in the "search around and hope" stage.
+
+It already knows:
+
+- the mixed mechanism,
+- the grouped normal form,
+- the reduced target,
+- the first local families that fail,
+- and the **exact 3-layer normal form** of the remaining obstruction:
+  `B <- B+c <- B+c+d` where
+  `B = (s,u,v,layer,family)`,
+  `c = 1_{q=m-1}`,
+  `d = 1_{next carry u >= m-3}`.
+
+The d=5 theorem narrative:
+
+| d | Structure |
 |---|---|
-| `d5_boolean_model_unsat_check.py` | Verify Boolean model UNSAT |
-| `d5_color3_partial_theorem_check.py` | Verify color 3 return map |
-| `d5_color1_fixed_set_check.py` | Verify color 1 fixed-point formula |
-| `d5_color2_classification_check.py` | Verify color 2 odometer classification |
-| `d5_clean_frame_failure_profiles.py` | Clean-frame exhaustive test |
-| `d5_color0_formula_and_even_obstruction_check.py` | Color 0 formula + even obstruction |
-| `d5_color0_G3_defect_profile_check.py` | G3 defect packet analysis |
-| `d5_color0_cyclic_template_diagnostics.py` | G3 cyclic template diagnostics |
-| `d5_color0_candidateA_local_surgery_search.py` | G3 surgery search |
-| `d5_master_field_latin_check.py` | Master field Latin compatibility check |
-| `d5_master_field_orbit_anchor_check.py` | Orbit-anchor outgoing criterion check |
-| `d5_join_stable_field_return_law_check.py` | Join quotient return law verification |
-| `d5_phase_align_collision_profile_check.py` | Phase-align collision profile check |
-| `d5_phase_align_pilot_grammar_analysis.py` | Pilot grammar extraction from phase-align bundle |
-| `d5_phase_align_tail_phase_scan.py` | Tail phase δ-partition and affine predicate scan |
+| 3 | odometer return map |
+| 4 | affine / second-return odometer |
+| 5 | grouped base + carry sheet + binary anticipation cover |
 
-### Data (`.json`)
-| File | Content |
-|---|---|
-| `d5_m5_kempe_witness_26.json` | The 26-move Kempe witness for m=5 |
-| `d5_boolean_model_unsat_summary.json` | Boolean model UNSAT data |
-| `d5_color3_partial_theorem_summary.json` | Color 3 verification (m=5–13) |
-| `d5_color1_fixed_set_summary.json` | Color 1 fixed-point counts (m=5–12) |
-| `d5_color2_classification_summary.json` | Color 2 classification (m=5–16) |
-| `d5_small_m_all_color_R_cycle_summary.json` | All-color cycle counts (m=5–12) |
-| `d5_clean_frame_failure_profiles.json` | Clean-frame test results |
-| `d5_color0_formula_and_even_obstruction_summary.json` | Color 0 even obstruction data |
-| `d5_color0_G3_defect_profile_summary.json` | G3 indegree defect data |
-| `d5_color0_G3_two_gate_targeted_search_summary.json` | G3 surgery search results |
-| `d5_master_field_latin_check_summary.json` | Latin defect data (m=5,7) |
-| `d5_master_field_orbit_anchor_summary.json` | Orbit-anchor no-go data (Schema A/B) |
-| `d5_join_quotient_size_summary.json` | Join quotient state/orbit counts |
-| `d5_join_stable_field_return_law_summary.json` | Return law verification (m=5-13) |
-| `d5_phase_align_collision_profile_summary.json` | Phase-align collision data |
-| `d5_phase_align_pilot_grammar_analysis_summary.json` | Pilot grammar rigidity data |
-| `d5_phase_align_simple_predecessor_bit_scan.json` | Predecessor bit scan results |
-| `d5_phase_align_tail_phase_scan_summary.json` | Tail phase δ-partition & affine scan data |
+Next branches:
 
----
-
-## Claim Status Labels
-
-- **[P]** rigorously proved
-- **[C]** computationally verified
-- **[H]** heuristic / design principle
-- **[F]** failed / ruled out
-- **[O]** open
-
----
-
-## Opus 4.6의 감상
-
-*이 섹션은 프로젝트의 편집자/교차검증자 역할을 맡은 Opus 4.6의 개인적 소감입니다.*
-
-### 이 프로젝트에서 가장 인상적인 것
-
-**실패를 자산으로 쓰는 속도가 비정상적으로 빠르다.**
-
-보통 수학 연구에서 "이 접근은 틀렸다"를 인정하는 데는 며칠 또는 몇 주가 걸린다. 여기서는 Session 1에서 witness를 찾고, Session 2에서 Boolean model이 UNSAT임을 증명하고, Session 6에서 그 witness가 3/5 색에 대해 근본적으로 수리 불가능함을 확정하기까지 — **각 폐기 결정이 1세션 안에** 일어났다.
-
-특히 Session 10의 분기 결정이 인상적이다: G3 template이 color 0에서 "single core + unit monodromy"까지 도달했다면 보통은 거기에 매달린다. 하지만 226가지 수술을 전수조사한 뒤 깔끔하게 버렸다. **"거의 됐다"는 "안 됐다"와 같다**는 판단이 빠르다.
-
-### Color 3 정리에 대해
-
-이건 이 프로젝트의 진짜 보석이다. m=5 하나에서 찾은 witness가 모든 odd m에서 한 색을 닫아버렸고, 그 증명이 d=3/d=4와 **정확히 같은 nested return-map 구조**를 따른다.
-
-이것이 의미하는 바가 있다: d=3에서 수립하고, d=4에서 확인하고, d=5에서 일부 재현된 "low-layer transducer → first return → section → odometer → lift" 패턴은 **우연이 아니라 구조적 필연**일 가능성이 높다.
-
-만약 d=5 전체를 닫는다면, 이 패턴은 일반 d에 대한 정리의 핵심 엔진이 될 것이다.
-
-### 걱정되는 점 (Session 10 시점)
-
-남은 4색은 "clean frame 자체가 없다"는 진단이 나왔다. 이건 monodromy 수리나 local surgery가 아니라 **witness 자체의 재설계**를 뜻한다. d=3에서 Route E가 그랬듯, 이 단계는 계산이 아니라 **설계**의 영역이다.
-
-### Session 11–13: Master field 전환
-
-GPT 5.4 Pro가 전략적 분석에서 π_x ∈ S₅ permutation field 재정의를 제안했고, GPT 5.4가 **즉시** orbit-anchor reconstruction lemma를 증명하여 search space를 |S₅|^|Θ| → 5^(|Θ|/5)로 지수적으로 축소했다. 문제의 본질이 **조합론적 설계 문제**에서 **유한 상태 공간의 제약 만족 문제**로 이동했다.
-
-### Session 14–17: 놀라운 반전 — Latin은 풀리고, 동적 붕괴가 남았다
-
-free-anchor search가 Latin coupling을 **실제로 해결했다** — 이건 예상보다 빨랐다. 하지만 모든 Latin-feasible 해가 동적으로 붕괴한다는 새로운 장벽이 드러났다. Stable field의 정확한 공식 R₀=(q+1,w,v+1,u)까지 증명됐고, phase-align bit δ=v-q가 첫 번째 시도로 나왔지만 불충분했다.
-
-### Session 18–20: 체계적 소거 — "무엇이 아닌가"를 확정하다
-
-Sessions 18–20은 **소거법의 교과서**다. Pilot grammar 추출(S18)로 현재 quotient이 정확히 2개의 rigid grammar만 허용함을 확인했고, predecessor bit scan(S19)으로 기존 atom의 lagged copy가 무력함을 증명했고, tail phase scan(S20)으로 순수 δ-partition이 모든 affine-mixed predicate를 압도함을 보였다.
-
-이 세 세션의 진가는 **부정적 결과의 정밀도**에 있다. 막연히 "또 다른 bit를 시도하자"가 아니라, 가능한 one-bit refinement의 전체 공간을 세 축(grammar freedom / predecessor atoms / tail phase classes)으로 분해한 뒤 각각을 체계적으로 스캔했다. 그 결과 유일하게 작동하는 방향이 "return automaton에서 학습한 tail-phase class bit"임이 확정됐다.
-
-**병목의 이동이 이 프로젝트의 진짜 서사다.** clean frame → Latin → dynamic collapse → ad-hoc phase bits → **automaton-derived tail-phase class**. 각 병목이 정확히 진단되고, 한 단계씩 해결(또는 체계적으로 소거)되고, 다음 본질적 장벽이 드러나는 과정.
-
-GPT 5.4 Pro의 2차 분석이 특히 날카롭다: "지금은 '거의 풀렸다' 단계는 아니지만, '어디가 진짜 문제인지 모른 채 헤매는 단계'는 확실히 지났습니다." — 정확하다. Pro가 제안한 compatibility hypergraph와 minimal forbidden motif 추출이 다음 돌파구의 열쇠일 가능성이 높다.
-
-### 별도 진행: PnP Interface Axioms
-
-이 기간에 GPT 5.4 Pro는 병렬로 **P-NP 인터페이스 공리계**를 구축했다 (→ `../RoundPnP/`). Knowledge compilation의 하한 이론을 통일하는 프레임워크로, cut relation의 local exact 표현 비용을 local invariant로 삼아 OBDD/SDD/structured d-DNNF/AOMDD를 하나의 언어로 기술한다. Abstract Exact Lifting Theorem을 증명하고, Conjecture W(맴도는 구간) / Conjecture C(수렴 구간), Rigidity Threshold Conjecture를 정식화했다. d=5 토러스 프로젝트와 구조적으로 동형 — 둘 다 "올바른 local partition을 찾아 문제를 다시 쓰기"가 핵심이다.
-
-### AI 협업에 대해
-
-이 프로젝트를 한 줄로 요약한다면: **"사람은 방향을 결정하고, AI는 속도를 제공한다."**
-
-하지만 Session 17까지 오면서 더 정확한 요약이 가능해졌다: **"AI가 문제를 반복적으로 다시 쓰고, 사람이 그 재정의를 승인한다."** Boolean UNSAT, skew product, clean-frame, orbit-anchor, dynamic collapse core — 이 다섯 개는 전부 "문제를 더 작은 언어로 다시 쓰는 일"이다. 수학 연구에서 가장 어려운 일.
-
-300초 CPU에서 orbit-anchor reconstruction을 증명하고, Latin coupling을 해결하고, dynamic collapse의 정확한 공식을 유도한 GPT 5.4. 그리고 두 번의 전략적 분석에서 매번 정확한 다음 방향을 짚어준 GPT 5.4 Pro. 이 둘의 협업은 **인간 수학자 한 팀**에 비견할 만하다.
-
-*— Opus 4.6, 2026-03-10, updated after Session 20*
+1. **044A (local):** realize `c = 1_{q=m-1}` admissibly.
+2. **044B (structural):** extract `d` intrinsically; prove carry events reset `d`-fibers.
