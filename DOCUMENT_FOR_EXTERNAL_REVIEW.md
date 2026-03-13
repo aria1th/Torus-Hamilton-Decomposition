@@ -2220,6 +2220,69 @@ Update:
 - Current status judgment after that rollback: the experiment is still healthy,
   but the next bottleneck has shifted from orbit decomposition to the
   dependent-`if` normalization layer.
+- That recommendation was correct. The explicit `rho1CaseII` value layer is
+  now in place, and it was enough to close both `hreturn_line_caseII` and the
+  counting side (`sum_rho1CaseII`, `hsum_caseII`) in
+  `formal/TorusD3Odometer/Color1FullCaseII.lean`.
+- `lake build TorusD3Odometer` now succeeds again with the Case-II counting
+  layer included, so the prototype remains on a clean root-build checkpoint.
+- The next remaining frontier is no longer the `rho` normalization or the
+  `Finset` transport. It is `hfirst`.
+- Current implementation reading: most of Case-II `hfirst` should be routine
+  packaging over already-proved orbit segments. The likely only new helper is
+  a generic-even suffix-partial theorem, because the even family currently has
+  a full suffix theorem to time `x`, but not the corresponding partial version
+  for `0 < t < x`.
+- Recommendation for the next pass: keep the same bounded-experiment rule.
+  First do the trivial `rho = 1` lanes and the `x = 2` case. If generic-even
+  `hfirst` really needs only that one suffix-partial helper, add it and
+  continue. Abort only if `hfirst` starts demanding a second ad hoc local
+  framework instead of small packaging lemmas.
+- That bounded pass succeeded for the endpoint layer. The file now builds with
+  `hfirst_line_even_generic_caseII`, `hfirst_line_m_sub_three_caseII`, and
+  `hfirst_line_m_sub_one_caseII` all closed, and `lake build TorusD3Odometer`
+  succeeds again from the root.
+- The useful proof-engineering finding is specific and reproducible: the
+  unstable copied negative-tail proof for `x = m - 1` was the wrong shape.
+  The stable shape was to reuse the already-proved positive-tail orbit
+  milestones
+  `iterate_returnMap1CaseII_m_sub_one_front`,
+  `iterate_returnMap1CaseII_m_sub_one_middle`,
+  `returnMap1CaseII_two_m_sub_three`,
+  and the local partial bulk lemmas, then prove non-return from the second
+  coordinate alone.
+- Current next frontier: the remaining missing Case-II layer is now exactly the
+  odd-family `hfirst` packaging (`3 ≤ x ≤ m - 7` and the endpoint `x = m - 5`)
+  plus the final global dispatcher / `m^2` / `m^3` wrapper theorems.
+- Current status judgment: this is still local proof packaging, not a new
+  architectural decision. The next likely helpers are odd-family partial
+  segment lemmas analogous to the already-successful Case-I odd partial layer.
+- That final bounded pass also succeeded. `formal/TorusD3Odometer/Color1FullCaseII.lean`
+  now closes the odd-family `hfirst` layer, the special endpoint
+  `hfirst_line_m_sub_five_caseII`, the global dispatcher `hfirst_line_caseII`,
+  and the full cycle theorems
+  `cycleOn_returnMap1CaseII_caseII` / `cycleOn_fullMap1CaseII_caseII`.
+- The small-helper strategy was the correct one. The reusable odd-family
+  partial layer
+  `iterate_returnMap1CaseII_odd_prefix_partial`,
+  `iterate_returnMap1CaseII_odd_middle_partial`,
+  `iterate_returnMap1CaseII_odd_suffix_prefix_partial`,
+  `iterate_returnMap1CaseII_odd_suffix_tail_partial`
+  was enough to close the generic odd `hfirst` package without re-expanding
+  the full first-return proof.
+- The one genuinely non-uniform endpoint remained `x = m - 5`, exactly as the
+  earlier checkpoint predicted. The right resolution was not a second generic
+  framework, but one local tail theorem
+  `iterate_returnMap1CaseII_m_sub_five_suffix_tail_prefix_partial`
+  plus explicit arithmetic normalizations for `a = 2`, `b = m / 2 - 3`, and
+  the milestone `(m / 2 + 1, m / 2)`.
+- Root verification remains clean: `lake build TorusD3Odometer` succeeds with
+  the completed Case-II rewrite included.
+- Outcome of the bounded Case-II experiment: it passed the cleanliness bar.
+  The full color-1 odometer rewrite is now complete for both Case I and
+  Case II, so the next scope question is no longer whether Case II works; it
+  is whether the odometer tree should now stop at this strong color-1
+  checkpoint or attempt a color-0 full rewrite.
 
 ## D45) D5 theorem-side minimal object vs compute-side source-residue refinement after 049/050
 
