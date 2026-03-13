@@ -3585,4 +3585,2769 @@ def rho1CaseII [Fact (9 < m)] (x : Fin m) : ℕ :=
   else
     m + 2
 
+theorem rho1CaseII_eq_one_of_val_eq_zero [Fact (9 < m)] {x : Fin m} (hx : x.1 = 0) :
+    rho1CaseII (m := m) x = 1 := by
+  simp [rho1CaseII, hx]
+
+theorem rho1CaseII_eq_one_of_val_eq_one [Fact (9 < m)] {x : Fin m} (hx : x.1 = 1) :
+    rho1CaseII (m := m) x = 1 := by
+  have hx0 : x.1 ≠ 0 := by omega
+  simp [rho1CaseII, hx0, hx]
+
+theorem rho1CaseII_eq_m_add_three_of_val_eq_two [Fact (9 < m)] {x : Fin m} (hx : x.1 = 2) :
+    rho1CaseII (m := m) x = m + 3 := by
+  have hx0 : x.1 ≠ 0 := by omega
+  have hx1 : x.1 ≠ 1 := by omega
+  simp [rho1CaseII, hx0, hx1, hx]
+
+theorem rho1CaseII_eq_m_add_four_of_val_eq_m_sub_five [Fact (9 < m)] {x : Fin m}
+    (hx : x.1 = m - 5) :
+    rho1CaseII (m := m) x = m + 4 := by
+  have hm9 : 9 < m := Fact.out
+  have hm50 : m - 5 ≠ 0 := by omega
+  have hm51 : m - 5 ≠ 1 := by omega
+  have hm52 : m - 5 ≠ 2 := by omega
+  simpa [hx] using (show rho1CaseII (m := m) x = m + 4 by
+    simp [rho1CaseII, hx, hm50, hm51, hm52])
+
+theorem rho1CaseII_eq_m_add_six_of_val_eq_m_sub_three [Fact (9 < m)] {x : Fin m}
+    (hx : x.1 = m - 3) :
+    rho1CaseII (m := m) x = m + 6 := by
+  have hm9 : 9 < m := Fact.out
+  have hm30 : m - 3 ≠ 0 := by omega
+  have hm31 : m - 3 ≠ 1 := by omega
+  have hm32 : m - 3 ≠ 2 := by omega
+  have hm35 : m - 3 ≠ m - 5 := by omega
+  simpa [hx] using (show rho1CaseII (m := m) x = m + 6 by
+    simp [rho1CaseII, hx, hm30, hm31, hm32, hm35])
+
+theorem rho1CaseII_eq_one_of_val_eq_m_sub_two [Fact (9 < m)] {x : Fin m}
+    (hx : x.1 = m - 2) :
+    rho1CaseII (m := m) x = 1 := by
+  have hm9 : 9 < m := Fact.out
+  have hm20 : m - 2 ≠ 0 := by omega
+  have hm21 : m - 2 ≠ 1 := by omega
+  have hm22 : m - 2 ≠ 2 := by omega
+  have hm25 : m - 2 ≠ m - 5 := by omega
+  have hm23 : m - 2 ≠ m - 3 := by omega
+  simpa [hx] using (show rho1CaseII (m := m) x = 1 by
+    simp [rho1CaseII, hx, hm20, hm21, hm22, hm25, hm23])
+
+theorem rho1CaseII_eq_m_add_six_of_val_eq_m_sub_one [Fact (9 < m)] {x : Fin m}
+    (hx : x.1 = m - 1) :
+    rho1CaseII (m := m) x = m + 6 := by
+  have hm9 : 9 < m := Fact.out
+  have hm10 : m - 1 ≠ 0 := by omega
+  have hm11 : m - 1 ≠ 1 := by omega
+  have hm12 : m - 1 ≠ 2 := by omega
+  have hm15 : m - 1 ≠ m - 5 := by omega
+  have hm13 : m - 1 ≠ m - 3 := by omega
+  have hm12' : m - 1 ≠ m - 2 := by omega
+  simpa [hx] using (show rho1CaseII (m := m) x = m + 6 by
+    simp [rho1CaseII, hx, hm10, hm11, hm12, hm15, hm13, hm12'])
+
+theorem rho1CaseII_eq_m_add_four_of_odd_ne_special [Fact (9 < m)] {x : Fin m}
+    (hx0 : x.1 ≠ 0) (hx1 : x.1 ≠ 1) (hx2 : x.1 ≠ 2)
+    (hxm5 : x.1 ≠ m - 5) (hxm3 : x.1 ≠ m - 3) (hxm2 : x.1 ≠ m - 2) (hxm1 : x.1 ≠ m - 1)
+    (hodd : x.1 % 2 = 1) :
+    rho1CaseII (m := m) x = m + 4 := by
+  simp [rho1CaseII, hx0, hx1, hx2, hxm5, hxm3, hxm2, hxm1, hodd]
+
+theorem rho1CaseII_eq_m_add_two_of_even_ne_special [Fact (9 < m)] {x : Fin m}
+    (hx0 : x.1 ≠ 0) (hx1 : x.1 ≠ 1) (hx2 : x.1 ≠ 2)
+    (hxm5 : x.1 ≠ m - 5) (hxm3 : x.1 ≠ m - 3) (hxm2 : x.1 ≠ m - 2) (hxm1 : x.1 ≠ m - 1)
+    (heven : x.1 % 2 = 0) :
+    rho1CaseII (m := m) x = m + 2 := by
+  have hodd : x.1 % 2 ≠ 1 := by omega
+  simp [rho1CaseII, hx0, hx1, hx2, hxm5, hxm3, hxm2, hxm1, hodd, heven]
+
+theorem hreturn_line_caseII [Fact (9 < m)] (hm : m % 6 = 4) (x : Fin m) :
+    ((returnMap1CaseII (m := m)^[rho1CaseII (m := m) x]) (linePoint1 (m := m) x)) =
+      linePoint1 (m := m) (TorusD3Even.T1CaseII (m := m) hm x) := by
+  by_cases hx0 : x.1 = 0
+  · have hx' : x = 0 := Fin.ext hx0
+    calc
+      ((returnMap1CaseII (m := m)^[rho1CaseII (m := m) x]) (linePoint1 (m := m) x))
+          = ((returnMap1CaseII (m := m)^[1]) (linePoint1 (m := m) x)) := by
+              rw [rho1CaseII_eq_one_of_val_eq_zero (m := m) hx0]
+      _ = returnMap1CaseII (m := m) (linePoint1 (m := m) x) := by simp [Function.iterate_one]
+      _ = linePoint1 (m := m) (TorusD3Even.T1CaseII (m := m) hm x) := by
+            simpa [hx'] using returnMap1CaseII_line_zero (m := m) hm
+  by_cases hx1 : x.1 = 1
+  · have hm9 : 9 < m := Fact.out
+    have h1val : ((1 : Fin m)).1 = 1 := by
+      show 1 % m = 1
+      exact Nat.mod_eq_of_lt (by omega)
+    have hx' : x = (1 : Fin m) := Fin.ext (hx1.trans h1val.symm)
+    calc
+      ((returnMap1CaseII (m := m)^[rho1CaseII (m := m) x]) (linePoint1 (m := m) x))
+          = ((returnMap1CaseII (m := m)^[1]) (linePoint1 (m := m) x)) := by
+              rw [rho1CaseII_eq_one_of_val_eq_one (m := m) hx1]
+      _ = returnMap1CaseII (m := m) (linePoint1 (m := m) x) := by simp [Function.iterate_one]
+      _ = linePoint1 (m := m) (TorusD3Even.T1CaseII (m := m) hm x) := by
+            simpa [hx'] using returnMap1CaseII_line_one (m := m) hm
+  by_cases hx2 : x.1 = 2
+  · have hm9 : 9 < m := Fact.out
+    have h2val : ((2 : Fin m)).1 = 2 := by
+      show 2 % m = 2
+      exact Nat.mod_eq_of_lt (by omega)
+    have hx' : x = (2 : Fin m) := Fin.ext (hx2.trans h2val.symm)
+    calc
+      ((returnMap1CaseII (m := m)^[rho1CaseII (m := m) x]) (linePoint1 (m := m) x))
+          = ((returnMap1CaseII (m := m)^[m + 3]) (linePoint1 (m := m) x)) := by
+              rw [rho1CaseII_eq_m_add_three_of_val_eq_two (m := m) hx2]
+      _ = linePoint1 (m := m) (TorusD3Even.T1CaseII (m := m) hm x) := by
+            simpa [hx'] using firstReturn_line_two (m := m) hm
+  by_cases hxm5 : x.1 = m - 5
+  · have hm9 : 9 < m := Fact.out
+    let x0 : Fin m := ⟨m - 5, by omega⟩
+    have hx' : x = x0 := Fin.ext hxm5
+    calc
+      ((returnMap1CaseII (m := m)^[rho1CaseII (m := m) x]) (linePoint1 (m := m) x))
+          = ((returnMap1CaseII (m := m)^[m + 4]) (linePoint1 (m := m) x)) := by
+              rw [rho1CaseII_eq_m_add_four_of_val_eq_m_sub_five (m := m) hxm5]
+      _ = linePoint1 (m := m) (TorusD3Even.T1CaseII (m := m) hm x) := by
+            simpa [x0, hx'] using firstReturn_line_m_sub_five_caseII (m := m) hm
+  by_cases hxm3 : x.1 = m - 3
+  · have hm9 : 9 < m := Fact.out
+    let x0 : Fin m := ⟨m - 3, by omega⟩
+    have hx' : x = x0 := Fin.ext hxm3
+    calc
+      ((returnMap1CaseII (m := m)^[rho1CaseII (m := m) x]) (linePoint1 (m := m) x))
+          = ((returnMap1CaseII (m := m)^[m + 6]) (linePoint1 (m := m) x)) := by
+              rw [rho1CaseII_eq_m_add_six_of_val_eq_m_sub_three (m := m) hxm3]
+      _ = linePoint1 (m := m) (TorusD3Even.T1CaseII (m := m) hm x) := by
+            simpa [x0, hx'] using firstReturn_line_m_sub_three_caseII (m := m) hm
+  by_cases hxm2 : x.1 = m - 2
+  · have hm9 : 9 < m := Fact.out
+    let x0 : Fin m := ⟨m - 2, by omega⟩
+    have hx' : x = x0 := Fin.ext hxm2
+    calc
+      ((returnMap1CaseII (m := m)^[rho1CaseII (m := m) x]) (linePoint1 (m := m) x))
+          = ((returnMap1CaseII (m := m)^[1]) (linePoint1 (m := m) x)) := by
+              rw [rho1CaseII_eq_one_of_val_eq_m_sub_two (m := m) hxm2]
+      _ = returnMap1CaseII (m := m) (linePoint1 (m := m) x) := by simp [Function.iterate_one]
+      _ = linePoint1 (m := m) (TorusD3Even.T1CaseII (m := m) hm x) := by
+            simpa [x0, hx'] using returnMap1CaseII_line_m_sub_two (m := m) hm
+  by_cases hxm1 : x.1 = m - 1
+  · have hm9 : 9 < m := Fact.out
+    let x0 : Fin m := ⟨m - 1, by omega⟩
+    have hx' : x = x0 := Fin.ext hxm1
+    calc
+      ((returnMap1CaseII (m := m)^[rho1CaseII (m := m) x]) (linePoint1 (m := m) x))
+          = ((returnMap1CaseII (m := m)^[m + 6]) (linePoint1 (m := m) x)) := by
+              rw [rho1CaseII_eq_m_add_six_of_val_eq_m_sub_one (m := m) hxm1]
+      _ = linePoint1 (m := m) (TorusD3Even.T1CaseII (m := m) hm x) := by
+            simpa [x0, hx'] using firstReturn_line_m_sub_one_caseII (m := m) hm
+  have hmEven : Even m := even_of_mod_six_eq_four (m := m) hm
+  rcases Nat.even_or_odd x.1 with hxeven | hxodd
+  · have hx4 : 4 ≤ x.1 := by
+      rcases hxeven with ⟨k, hk⟩
+      omega
+    have hxle : x.1 ≤ m - 4 := by
+      rcases hxeven with ⟨k, hk⟩
+      rcases hmEven with ⟨r, hr⟩
+      omega
+    have heven : x.1 % 2 = 0 := by
+      rcases hxeven with ⟨k, hk⟩
+      omega
+    calc
+      ((returnMap1CaseII (m := m)^[rho1CaseII (m := m) x]) (linePoint1 (m := m) x))
+          = ((returnMap1CaseII (m := m)^[m + 2]) (linePoint1 (m := m) x)) := by
+              rw [rho1CaseII_eq_m_add_two_of_even_ne_special (m := m)
+                hx0 hx1 hx2 hxm5 hxm3 hxm2 hxm1 heven]
+      _ = linePoint1 (m := m) (TorusD3Even.T1CaseII (m := m) hm x) := by
+            simpa using firstReturn_line_even_generic_caseII (m := m) hm (x := x.1) hx4 hxle hxeven
+  · have hx3 : 3 ≤ x.1 := by
+      rcases hxodd with ⟨k, hk⟩
+      omega
+    have hxle : x.1 ≤ m - 7 := by
+      rcases hxodd with ⟨k, hk⟩
+      rcases hmEven with ⟨r, hr⟩
+      omega
+    have hodd : x.1 % 2 = 1 := by
+      rcases hxodd with ⟨k, hk⟩
+      omega
+    calc
+      ((returnMap1CaseII (m := m)^[rho1CaseII (m := m) x]) (linePoint1 (m := m) x))
+          = ((returnMap1CaseII (m := m)^[m + 4]) (linePoint1 (m := m) x)) := by
+              rw [rho1CaseII_eq_m_add_four_of_odd_ne_special (m := m)
+                hx0 hx1 hx2 hxm5 hxm3 hxm2 hxm1 hodd]
+      _ = linePoint1 (m := m) (TorusD3Even.T1CaseII (m := m) hm x) := by
+            simpa using firstReturn_line_odd_generic_caseII (m := m) hm (x := x.1) hx3 hxle hxodd
+
+theorem rho1CaseII_zero [Fact (9 < m)] :
+    rho1CaseII (m := m) (0 : Fin m) = 1 := by
+  exact rho1CaseII_eq_one_of_val_eq_zero (m := m) rfl
+
+theorem rho1CaseII_one [Fact (9 < m)] :
+    rho1CaseII (m := m) (1 : Fin m) = 1 := by
+  have hm9 : 9 < m := Fact.out
+  have h1val : ((1 : Fin m)).1 = 1 := by
+    show 1 % m = 1
+    exact Nat.mod_eq_of_lt (by omega)
+  exact rho1CaseII_eq_one_of_val_eq_one (m := m) h1val
+
+theorem rho1CaseII_two [Fact (9 < m)] :
+    rho1CaseII (m := m) (2 : Fin m) = m + 3 := by
+  have hm9 : 9 < m := Fact.out
+  have h2val : ((2 : Fin m)).1 = 2 := by
+    show 2 % m = 2
+    exact Nat.mod_eq_of_lt (by omega)
+  exact rho1CaseII_eq_m_add_three_of_val_eq_two (m := m) h2val
+
+theorem rho1CaseII_m_sub_five [Fact (9 < m)] :
+    rho1CaseII (m := m)
+      (⟨m - 5, by
+        have hm9 : 9 < m := Fact.out
+        omega⟩ : Fin m) = m + 4 := by
+  exact rho1CaseII_eq_m_add_four_of_val_eq_m_sub_five (m := m) rfl
+
+theorem rho1CaseII_m_sub_four [Fact (9 < m)] (hm : m % 6 = 4) :
+    rho1CaseII (m := m)
+      (⟨m - 4, by
+        have hm9 : 9 < m := Fact.out
+        omega⟩ : Fin m) = m + 2 := by
+  have hm9 : 9 < m := Fact.out
+  have hm40 : m - 4 ≠ 0 := by omega
+  have hm41 : m - 4 ≠ 1 := by omega
+  have hm42 : m - 4 ≠ 2 := by omega
+  have hm45 : m - 4 ≠ m - 5 := by omega
+  have hm43 : m - 4 ≠ m - 3 := by omega
+  have hm4m2 : m - 4 ≠ m - 2 := by omega
+  have hm4m1 : m - 4 ≠ m - 1 := by omega
+  have heven : (m - 4) % 2 = 0 := by
+    have hmEven : Even m := even_of_mod_six_eq_four (m := m) hm
+    rcases hmEven with ⟨r, hr⟩
+    omega
+  exact rho1CaseII_eq_m_add_two_of_even_ne_special (m := m)
+    hm40 hm41 hm42 hm45 hm43 hm4m2 hm4m1 heven
+
+theorem rho1CaseII_m_sub_three [Fact (9 < m)] :
+    rho1CaseII (m := m)
+      (⟨m - 3, by
+        have hm9 : 9 < m := Fact.out
+        omega⟩ : Fin m) = m + 6 := by
+  exact rho1CaseII_eq_m_add_six_of_val_eq_m_sub_three (m := m) rfl
+
+theorem rho1CaseII_m_sub_two [Fact (9 < m)] :
+    rho1CaseII (m := m)
+      (⟨m - 2, by
+        have hm9 : 9 < m := Fact.out
+        omega⟩ : Fin m) = 1 := by
+  exact rho1CaseII_eq_one_of_val_eq_m_sub_two (m := m) rfl
+
+theorem rho1CaseII_m_sub_one [Fact (9 < m)] :
+    rho1CaseII (m := m)
+      (⟨m - 1, by
+        have hm9 : 9 < m := Fact.out
+        omega⟩ : Fin m) = m + 6 := by
+  exact rho1CaseII_eq_m_add_six_of_val_eq_m_sub_one (m := m) rfl
+
+theorem rho1CaseII_mid_value [Fact (9 < m)] (hm : m % 6 = 4) {x : ℕ}
+    (hx3 : 3 ≤ x) (hxlt : x < m - 5) :
+    rho1CaseII (m := m) (⟨x, by omega⟩ : Fin m) =
+      if x % 2 = 1 then m + 4 else m + 2 := by
+  by_cases hodd : x % 2 = 1
+  · have hx0 : x ≠ 0 := by omega
+    have hx1 : x ≠ 1 := by omega
+    have hx2 : x ≠ 2 := by omega
+    have hxm5 : x ≠ m - 5 := by omega
+    have hxm3 : x ≠ m - 3 := by omega
+    have hxm2 : x ≠ m - 2 := by omega
+    have hxm1 : x ≠ m - 1 := by omega
+    rw [if_pos hodd]
+    exact rho1CaseII_eq_m_add_four_of_odd_ne_special (m := m)
+      hx0 hx1 hx2 hxm5 hxm3 hxm2 hxm1 hodd
+  · have heven : x % 2 = 0 := by omega
+    have hx0 : x ≠ 0 := by omega
+    have hx1 : x ≠ 1 := by omega
+    have hx2 : x ≠ 2 := by omega
+    have hxm5 : x ≠ m - 5 := by omega
+    have hxm3 : x ≠ m - 3 := by omega
+    have hxm2 : x ≠ m - 2 := by omega
+    have hxm1 : x ≠ m - 1 := by omega
+    rw [if_neg hodd]
+    exact rho1CaseII_eq_m_add_two_of_even_ne_special (m := m)
+      hx0 hx1 hx2 hxm5 hxm3 hxm2 hxm1 heven
+
+private theorem sum_range_caseII_mid_pattern (N : ℕ) :
+    Finset.sum (Finset.range (2 * N))
+        (fun t : ℕ => if (3 + t) % 2 = 1 then m + 4 else m + 2) =
+      N * ((m + 4) + (m + 2)) := by
+  induction N with
+  | zero =>
+      simp
+  | succ N ih =>
+      rw [show 2 * (N + 1) = 2 * N + 2 by omega]
+      rw [Finset.sum_range_succ, Finset.sum_range_succ, ih]
+      have hodd : (3 + 2 * N) % 2 = 1 := by omega
+      have heven : (3 + (2 * N + 1)) % 2 = 0 := by omega
+      simp [hodd, heven]
+      ring_nf
+
+theorem sum_rho1CaseII [Fact (9 < m)] (hm : m % 6 = 4) :
+    (∑ x : Fin m, rho1CaseII (m := m) x) = m ^ 2 := by
+  have hm0 : 0 < m := by
+    have hm9 : 9 < m := Fact.out
+    omega
+  let g : ℕ → ℕ := fun k =>
+    if hk : k < m then rho1CaseII (m := m) (⟨k, hk⟩ : Fin m) else 0
+  have hsumRange :
+      (∑ x : Fin m, rho1CaseII (m := m) x) = Finset.sum (Finset.range m) g := by
+    simpa [g] using (Fin.sum_univ_eq_sum_range g m)
+  have hhead : Finset.sum (Finset.range 3) g = m + 5 := by
+    have h1lt : 1 < m := by
+      have hm9 : 9 < m := Fact.out
+      omega
+    have h2lt : 2 < m := by
+      have hm9 : 9 < m := Fact.out
+      omega
+    have hρ1 :
+        rho1CaseII (m := m) (⟨1, h1lt⟩ : Fin m) = 1 :=
+      rho1CaseII_eq_one_of_val_eq_one (m := m) rfl
+    have hρ2 :
+        rho1CaseII (m := m) (⟨2, h2lt⟩ : Fin m) = m + 3 :=
+      rho1CaseII_eq_m_add_three_of_val_eq_two (m := m) rfl
+    rw [Finset.sum_range_succ, Finset.sum_range_succ, Finset.sum_range_succ, Finset.sum_range_zero]
+    simp [hm0, h1lt, h2lt, rho1CaseII_zero, hρ1, hρ2]
+    ring_nf
+  have hmid :
+      Finset.sum (Finset.Ico 3 (m - 5)) g = (m - 8) * (m + 3) := by
+    rcases TorusD3Even.eq_six_mul_add_four_of_mod_six_eq_four (m := m) hm with ⟨q, hq⟩
+    rw [Finset.sum_Ico_eq_sum_range]
+    have hlen : (m - 5) - 3 = 2 * (3 * q - 2) := by
+      rw [hq]
+      omega
+    rw [hlen]
+    calc
+      Finset.sum (Finset.range (2 * (3 * q - 2))) (fun t => g (3 + t))
+          =
+            Finset.sum (Finset.range (2 * (3 * q - 2)))
+              (fun t : ℕ => if (3 + t) % 2 = 1 then m + 4 else m + 2) := by
+                apply Finset.sum_congr rfl
+                intro t ht
+                have htt : t < 2 * (3 * q - 2) := Finset.mem_range.mp ht
+                have hx3 : 3 ≤ 3 + t := by omega
+                have hxlt : 3 + t < m - 5 := by
+                  rw [hq]
+                  omega
+                have htm : 3 + t < m := by omega
+                simpa [g, htm] using rho1CaseII_mid_value (m := m) hm hx3 hxlt
+      _ = (3 * q - 2) * ((m + 4) + (m + 2)) := by
+            simpa using sum_range_caseII_mid_pattern (m := m) (N := 3 * q - 2)
+      _ = (m - 8) * (m + 3) := by
+            have hm9 : 9 < m := Fact.out
+            have hq1 : 1 ≤ q := by
+              rw [hq] at hm9
+              omega
+            let r : ℕ := q - 1
+            have hq' : q = r + 1 := by
+              dsimp [r]
+              omega
+            rw [hq, hq']
+            have hsub : 6 * (r + 1) + 4 - 8 = 6 * r + 2 := by omega
+            have hlin : 3 * (r + 1) - 2 = 3 * r + 1 := by omega
+            rw [hsub, hlin]
+            ring_nf
+  have hsuffix :
+      Finset.sum (Finset.Ico (m - 5) m) g = 4 * m + 19 := by
+    rw [Finset.sum_Ico_eq_sum_range]
+    have hm9 : 9 < m := Fact.out
+    have hlen : m - (m - 5) = 5 := by omega
+    rw [hlen, Finset.sum_range_succ, Finset.sum_range_succ, Finset.sum_range_succ,
+      Finset.sum_range_succ, Finset.sum_range_succ, Finset.sum_range_zero]
+    rw [show m - 5 + 0 = m - 5 by omega,
+      show m - 5 + 1 = m - 4 by omega,
+      show m - 5 + 2 = m - 3 by omega,
+      show m - 5 + 3 = m - 2 by omega,
+      show m - 5 + 4 = m - 1 by omega]
+    have hm5lt : m - 5 < m := by omega
+    have hm4lt : m - 4 < m := by omega
+    have hm3lt : m - 3 < m := by omega
+    have hm2lt : m - 2 < m := by omega
+    have hm1lt : m - 1 < m := by omega
+    simp [g, hm5lt, hm4lt, hm3lt, hm2lt, hm1lt, rho1CaseII_m_sub_five,
+      rho1CaseII_m_sub_four, rho1CaseII_m_sub_three, rho1CaseII_m_sub_two,
+      rho1CaseII_m_sub_one, add_assoc, add_left_comm, add_comm, hm]
+    ring_nf
+  have hm5le : m - 5 ≤ m := by omega
+  have h3le : 3 ≤ m - 5 := by
+    have hm9 : 9 < m := Fact.out
+    omega
+  calc
+    (∑ x : Fin m, rho1CaseII (m := m) x) = Finset.sum (Finset.range m) g := hsumRange
+    _ = Finset.sum (Finset.range (m - 5)) g + Finset.sum (Finset.Ico (m - 5) m) g := by
+          symm
+          exact Finset.sum_range_add_sum_Ico g hm5le
+    _ = (Finset.sum (Finset.range 3) g + Finset.sum (Finset.Ico 3 (m - 5)) g)
+          + Finset.sum (Finset.Ico (m - 5) m) g := by
+            rw [show Finset.sum (Finset.range (m - 5)) g =
+              Finset.sum (Finset.range 3) g + Finset.sum (Finset.Ico 3 (m - 5)) g by
+                symm
+                exact Finset.sum_range_add_sum_Ico g h3le]
+    _ = (m + 5 + (m - 8) * (m + 3)) + (4 * m + 19) := by
+          rw [hhead, hmid, hsuffix]
+    _ = m ^ 2 := by
+          rcases TorusD3Even.eq_six_mul_add_four_of_mod_six_eq_four (m := m) hm with ⟨q, hq⟩
+          have hm9 : 9 < m := Fact.out
+          have hq1 : 1 ≤ q := by
+            rw [hq] at hm9
+            omega
+          let r : ℕ := q - 1
+          have hq' : q = r + 1 := by
+            dsimp [r]
+            omega
+          rw [hq, hq', pow_two]
+          have hsub : 6 * (r + 1) + 4 - 8 = 6 * r + 2 := by omega
+          rw [hsub]
+          ring_nf
+
+theorem hsum_caseII [Fact (9 < m)] (hm : m % 6 = 4) :
+    TorusD3Even.blockTime
+        (TorusD3Even.T1CaseII (m := m) hm)
+        (rho1CaseII (m := m))
+        ⟨0, by
+          have hm0 : 0 < m := by
+            have hm9 : 9 < m := Fact.out
+            omega
+          exact hm0⟩
+        m = m ^ 2 := by
+  have hm0 : 0 < m := by
+    have hm9 : 9 < m := Fact.out
+    omega
+  let x0 : Fin m := ⟨0, hm0⟩
+  let e : Fin m ≃ Fin m :=
+    Equiv.ofBijective
+      (fun i : Fin m => (((TorusD3Even.T1CaseII (m := m) hm)^[i.1]) x0))
+      (cycleOn_laneMap1_caseII_mod_four (m := m) hm).1
+  calc
+    TorusD3Even.blockTime
+        (TorusD3Even.T1CaseII (m := m) hm)
+        (rho1CaseII (m := m))
+        x0
+        m
+        = Finset.sum (Finset.range m) (fun i =>
+            rho1CaseII (m := m) ((((TorusD3Even.T1CaseII (m := m) hm)^[i]) x0))) := by
+            simpa using
+              blockTime_eq_sum_range
+                (TorusD3Even.T1CaseII (m := m) hm)
+                (rho1CaseII (m := m))
+                x0
+                m
+    _ = ∑ i : Fin m, rho1CaseII (m := m) (e i) := by
+          rw [← Fin.sum_univ_eq_sum_range]
+          rfl
+    _ = ∑ x : Fin m, rho1CaseII (m := m) x := by
+          exact Equiv.sum_comp e (fun x : Fin m => rho1CaseII (m := m) x)
+    _ = m ^ 2 := sum_rho1CaseII (m := m) hm
+
+theorem hfirst_line_zero_caseII [Fact (9 < m)] :
+    ∀ n, 0 < n →
+      n < rho1CaseII (m := m) (0 : Fin m) →
+        (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) (0 : Fin m)) ∉
+          Set.range (linePoint1 (m := m)) := by
+  intro n hn0 hnlt
+  have : False := by
+    rw [rho1CaseII_zero (m := m)] at hnlt
+    omega
+  exact False.elim this
+
+theorem hfirst_line_one_caseII [Fact (9 < m)] :
+    ∀ n, 0 < n →
+      n < rho1CaseII (m := m) (1 : Fin m) →
+        (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) (1 : Fin m)) ∉
+          Set.range (linePoint1 (m := m)) := by
+  intro n hn0 hnlt
+  have : False := by
+    rw [rho1CaseII_one (m := m)] at hnlt
+    omega
+  exact False.elim this
+
+theorem hfirst_line_m_sub_two_caseII [Fact (9 < m)] :
+    ∀ n, 0 < n →
+      n <
+        rho1CaseII (m := m)
+          (⟨m - 2, by
+            have hm9 : 9 < m := Fact.out
+            omega⟩ : Fin m) →
+        (returnMap1CaseII (m := m)^[n])
+            (linePoint1 (m := m)
+              (⟨m - 2, by
+                have hm9 : 9 < m := Fact.out
+                omega⟩ : Fin m)) ∉
+          Set.range (linePoint1 (m := m)) := by
+  intro n hn0 hnlt
+  have : False := by
+    rw [rho1CaseII_m_sub_two (m := m)] at hnlt
+    omega
+  exact False.elim this
+
+theorem hfirst_line_two_caseII [Fact (9 < m)] (hm : m % 6 = 4) :
+    ∀ n, 0 < n →
+      n < rho1CaseII (m := m) (2 : Fin m) →
+        (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) (2 : Fin m)) ∉
+          Set.range (linePoint1 (m := m)) := by
+  intro n hn0 hnlt
+  have hm0 : 0 < m := by
+    have hm9 : 9 < m := Fact.out
+    omega
+  letI : Fact (0 < m) := ⟨hm0⟩
+  have hm9 : 9 < m := Fact.out
+  have hm5 : 5 < m := by omega
+  letI : Fact (5 < m) := ⟨hm5⟩
+  have hm2 : 2 ≤ m := by omega
+  have hrho : rho1CaseII (m := m) (2 : Fin m) = m + 3 := rho1CaseII_two (m := m)
+  have hnm : n < m + 3 := by
+    rwa [hrho] at hnlt
+  have hprefixEnd :
+      (returnMap1CaseII (m := m)^[m - 2]) (linePoint1 (m := m) (2 : Fin m)) =
+        ((0 : ZMod m), (-2 : ZMod m)) := by
+    have h := iterate_returnMap1CaseII_two_prefix (m := m) hm (t := m - 2) le_rfl
+    simpa [Nat.cast_add, ZMod.natCast_self, zero_add, cast_sub_two_eq_neg_two (m := m) hm2] using h
+  have hstep1 :
+      (returnMap1CaseII (m := m)^[m - 1]) (linePoint1 (m := m) (2 : Fin m)) =
+        ((1 : ZMod m), (-2 : ZMod m)) := by
+    have haux :
+        (returnMap1CaseII (m := m)^[1 + (m - 2)]) (linePoint1 (m := m) (2 : Fin m)) =
+          ((1 : ZMod m), (-2 : ZMod m)) := by
+      rw [Function.iterate_add_apply]
+      rw [hprefixEnd]
+      simpa [Function.iterate_one] using returnMap1CaseII_zero_neg_two (m := m)
+    have hmNat : m - 1 = 1 + (m - 2) := by omega
+    have haux' := haux
+    rwa [← hmNat] at haux'
+  have hstep2 :
+      (returnMap1CaseII (m := m)^[m]) (linePoint1 (m := m) (2 : Fin m)) =
+        ((2 : ZMod m), (-2 : ZMod m)) := by
+    have haux :
+        (returnMap1CaseII (m := m)^[1 + (m - 1)]) (linePoint1 (m := m) (2 : Fin m)) =
+          ((2 : ZMod m), (-2 : ZMod m)) := by
+      rw [Function.iterate_add_apply]
+      rw [hstep1]
+      simpa [Function.iterate_one] using returnMap1CaseII_one_neg_two (m := m)
+    have hmNat : m = 1 + (m - 1) := by omega
+    have haux' := haux
+    rwa [← hmNat] at haux'
+  have hstep3 :
+      (returnMap1CaseII (m := m)^[m + 1]) (linePoint1 (m := m) (2 : Fin m)) =
+        ((3 : ZMod m), (-2 : ZMod m)) := by
+    have haux :
+        (returnMap1CaseII (m := m)^[1 + m]) (linePoint1 (m := m) (2 : Fin m)) =
+          ((3 : ZMod m), (-2 : ZMod m)) := by
+      rw [Function.iterate_add_apply]
+      rw [hstep2]
+      simpa [Function.iterate_one] using returnMap1CaseII_two_neg_two (m := m)
+    have hmNat : m + 1 = 1 + m := by omega
+    have haux' := haux
+    rwa [← hmNat] at haux'
+  have hstep4 :
+      (returnMap1CaseII (m := m)^[m + 2]) (linePoint1 (m := m) (2 : Fin m)) =
+        ((4 : ZMod m), (-1 : ZMod m)) := by
+    have haux :
+        (returnMap1CaseII (m := m)^[1 + (m + 1)]) (linePoint1 (m := m) (2 : Fin m)) =
+          ((4 : ZMod m), (-1 : ZMod m)) := by
+      rw [Function.iterate_add_apply]
+      rw [hstep3]
+      simpa [Function.iterate_one] using returnMap1CaseII_three_neg_two (m := m)
+    have hmNat : m + 2 = 1 + (m + 1) := by omega
+    have haux' := haux
+    rwa [← hmNat] at haux'
+  by_cases hprefix : n ≤ m - 2
+  · have hiter := iterate_returnMap1CaseII_two_prefix (m := m) hm (t := n) hprefix
+    apply not_mem_range_linePoint1_of_snd_ne_zero
+    rw [hiter]
+    exact natCast_ne_zero_of_pos_lt (m := m) (n := n) hn0 (by omega)
+  · by_cases hm1 : n = m - 1
+    · have hiter :
+          (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) (2 : Fin m)) =
+            ((1 : ZMod m), (-2 : ZMod m)) := by
+        simpa [hm1] using hstep1
+      apply not_mem_range_linePoint1_of_snd_ne_zero
+      rw [hiter]
+      exact neg_ne_zero.mpr (two_ne_zero (m := m))
+    · by_cases hm0' : n = m
+      · have hiter :
+            (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) (2 : Fin m)) =
+              ((2 : ZMod m), (-2 : ZMod m)) := by
+          simpa [hm0'] using hstep2
+        apply not_mem_range_linePoint1_of_snd_ne_zero
+        rw [hiter]
+        exact neg_ne_zero.mpr (two_ne_zero (m := m))
+      · by_cases hp1 : n = m + 1
+        · have hiter :
+              (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) (2 : Fin m)) =
+                ((3 : ZMod m), (-2 : ZMod m)) := by
+            simpa [hp1] using hstep3
+          apply not_mem_range_linePoint1_of_snd_ne_zero
+          rw [hiter]
+          exact neg_ne_zero.mpr (two_ne_zero (m := m))
+        · by_cases hp2 : n = m + 2
+          · have hiter :
+                (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) (2 : Fin m)) =
+                  ((4 : ZMod m), (-1 : ZMod m)) := by
+              simpa [hp2] using hstep4
+            apply not_mem_range_linePoint1_of_snd_ne_zero
+            rw [hiter]
+            exact neg_ne_zero.mpr (one_ne_zero (m := m))
+          · have : False := by
+              have hge : m - 1 ≤ n := by omega
+              omega
+            exact False.elim this
+
+theorem iterate_returnMap1CaseII_even_prefix_partial [Fact (9 < m)] (hm : m % 6 = 4)
+    {x t : ℕ} (hx4 : 4 ≤ x) (hxle : x ≤ m - 4) (hxeven : Even x)
+    (ht : t ≤ m - x) :
+    let xFin : Fin m := ⟨x, by omega⟩
+    ((returnMap1CaseII (m := m)^[t]) (linePoint1 (m := m) xFin)) =
+      ((((x + t : ℕ) : ZMod m)), (((t : ℕ) : ZMod m))) := by
+  let xFin : Fin m := ⟨x, by omega⟩
+  have hm9 : 9 < m := Fact.out
+  have hm5 : 5 < m := by omega
+  letI : Fact (5 < m) := ⟨hm5⟩
+  have hmEven : Even m := even_of_mod_six_eq_four (m := m) hm
+  calc
+    ((returnMap1CaseII (m := m)^[t]) (linePoint1 (m := m) xFin))
+        = ((bulkMap1CaseI (m := m)^[t]) (linePoint1 (m := m) xFin)) := by
+            refine iterate_eq_iterate_of_eq_on_prefix
+              (F := returnMap1CaseII (m := m)) (G := bulkMap1CaseI (m := m))
+              (z := linePoint1 (m := m) xFin) t ?_
+            intro s hs
+            rw [iterate_bulkMap1CaseI (m := m) s (linePoint1 (m := m) xFin)]
+            have hi_pos : 0 < x + s := by omega
+            have hi_lt : x + s < m := by omega
+            have hk_lt : s < m := by omega
+            have hk_ne_neg_one : (((s : ℕ) : ZMod m)) ≠ (-1 : ZMod m) := by
+              exact natCast_ne_neg_one_of_lt (m := m) (n := s) (by omega)
+            have hi_ne_zero : (((x + s : ℕ) : ZMod m)) ≠ 0 := by
+              exact natCast_ne_zero_of_pos_lt (m := m) (n := x + s) hi_pos hi_lt
+            have hi_ne_one : (((x + s : ℕ) : ZMod m)) ≠ 1 := by
+              exact natCast_ne_one_of_two_le_lt (m := m) (n := x + s) (by omega) hi_lt
+            have hi_ne_two : (((x + s : ℕ) : ZMod m)) ≠ 2 := by
+              exact natCast_ne_natCast_of_lt (m := m) (a := x + s) (b := 2) hi_lt (by omega) (by omega)
+            have h00 : ¬ ((((x + s : ℕ) : ZMod m)) = 0 ∧ (((s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              exact hi_ne_zero h.1
+            have hdiag :
+                ¬ ((((x + s : ℕ) : ZMod m)) + (((s : ℕ) : ZMod m)) = (-1 : ZMod m) ∧
+                    (((x + s : ℕ) : ZMod m)) ≠ 0 ∧
+                    (((x + s : ℕ) : ZMod m)) ≠ (1 : ZMod m) ∧
+                    (((x + s : ℕ) : ZMod m)) ≠ (-2 : ZMod m) ∧
+                    (((x + s : ℕ) : ZMod m)) ≠ (-1 : ZMod m)) := by
+              intro h
+              have hsumEven : Even (x + 2 * s) := by
+                rcases hxeven with ⟨r, hr⟩
+                refine ⟨r + s, ?_⟩
+                rw [hr]
+                ring
+              have hsum_ne : (((x + 2 * s : ℕ) : ZMod m)) ≠ (-1 : ZMod m) := by
+                exact natCast_ne_neg_one_of_even (m := m) hmEven hsumEven
+              apply hsum_ne
+              have hsumEq :
+                  ((((x + s : ℕ) : ZMod m)) + (((s : ℕ) : ZMod m))) =
+                    (((x + 2 * s : ℕ) : ZMod m)) := by
+                simpa [Nat.cast_add, add_assoc, add_left_comm, add_comm] using
+                  congrArg (fun n : ℕ => ((n : ℕ) : ZMod m)) (by omega : x + s + s = x + 2 * s)
+              exact hsumEq.symm.trans h.1
+            have h10 : ¬ ((((x + s : ℕ) : ZMod m)) = (1 : ZMod m) ∧ (((s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              exact hi_ne_one h.1
+            have hneg20 : ¬ ((((x + s : ℕ) : ZMod m)) = (-2 : ZMod m) ∧ (((s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              have hs0 : s = 0 := by
+                have hmod := (ZMod.natCast_eq_natCast_iff' s 0 m).1 (by simpa using h.2)
+                rw [Nat.mod_eq_of_lt hk_lt, Nat.zero_mod] at hmod
+                exact hmod
+              subst hs0
+              have hx_ne_neg_two : (((x : ℕ) : ZMod m)) ≠ (-2 : ZMod m) := by
+                exact natCast_ne_neg_two_of_lt (m := m) (n := x) (by omega)
+              exact hx_ne_neg_two h.1
+            have hneg1neg1 :
+                ¬ ((((x + s : ℕ) : ZMod m)) = (-1 : ZMod m) ∧ (((s : ℕ) : ZMod m)) = (-1 : ZMod m)) := by
+              intro h
+              exact hk_ne_neg_one h.2
+            have h0line :
+                ¬ ((((x + s : ℕ) : ZMod m)) = 0 ∧
+                    (((s : ℕ) : ZMod m)) ≠ 0 ∧
+                    (((s : ℕ) : ZMod m)) ≠ (-1 : ZMod m)) := by
+              intro h
+              exact hi_ne_zero h.1
+            have h1line :
+                ¬ ((((x + s : ℕ) : ZMod m)) = (1 : ZMod m) ∧
+                    (((s : ℕ) : ZMod m)) ≠ 0) := by
+              intro h
+              exact hi_ne_one h.1
+            have h2neg2 :
+                ¬ ((((x + s : ℕ) : ZMod m)) = (2 : ZMod m) ∧ (((s : ℕ) : ZMod m)) = (-2 : ZMod m)) := by
+              intro h
+              exact hi_ne_two h.1
+            have h2neg1 :
+                ¬ ((((x + s : ℕ) : ZMod m)) = (2 : ZMod m) ∧ (((s : ℕ) : ZMod m)) = (-1 : ZMod m)) := by
+              intro h
+              exact hi_ne_two h.1
+            have hneg2one :
+                ¬ ((((x + s : ℕ) : ZMod m)) = (-2 : ZMod m) ∧ (((s : ℕ) : ZMod m)) = (1 : ZMod m)) := by
+              intro h
+              have hs1 : s = 1 := by
+                have hmod := (ZMod.natCast_eq_natCast_iff' s 1 m).1 (by simpa using h.2)
+                rw [Nat.mod_eq_of_lt hk_lt, Nat.mod_eq_of_lt (by omega)] at hmod
+                exact hmod
+              subst hs1
+              have hx1_ne_neg_two : (((x + 1 : ℕ) : ZMod m)) ≠ (-2 : ZMod m) := by
+                exact natCast_ne_neg_two_of_lt (m := m) (n := x + 1) (by omega)
+              exact hx1_ne_neg_two h.1
+            simpa [linePoint1, xFin] using
+              returnMap1CaseII_eq_bulk_of_not_special (m := m)
+                (i := (((x + s : ℕ) : ZMod m))) (k := (((s : ℕ) : ZMod m)))
+                h00 hdiag h10 hneg20 hneg1neg1 h0line h1line h2neg2 h2neg1 hneg2one
+    _ = ((((x + t : ℕ) : ZMod m)), (((t : ℕ) : ZMod m))) := by
+          rw [iterate_bulkMap1CaseI (m := m) t (linePoint1 (m := m) xFin)]
+          simp [linePoint1, xFin, Nat.cast_add, add_assoc, add_left_comm, add_comm]
+
+theorem iterate_returnMap1CaseII_even_suffix_partial [Fact (9 < m)] (hm : m % 6 = 4)
+    {x t : ℕ} (hx4 : 4 ≤ x) (hxle : x ≤ m - 4) (hxeven : Even x)
+    (ht : t ≤ x) :
+    ((returnMap1CaseII (m := m)^[t]) ((2 : ZMod m), (((m - x : ℕ) : ZMod m)))) =
+      ((((2 + t : ℕ) : ZMod m)), ((((m - x) + t : ℕ) : ZMod m))) := by
+  have hm9 : 9 < m := Fact.out
+  have hm5 : 5 < m := by omega
+  letI : Fact (5 < m) := ⟨hm5⟩
+  have hmEven : Even m := even_of_mod_six_eq_four (m := m) hm
+  calc
+    ((returnMap1CaseII (m := m)^[t]) ((2 : ZMod m), (((m - x : ℕ) : ZMod m))))
+        = ((bulkMap1CaseI (m := m)^[t]) ((2 : ZMod m), (((m - x : ℕ) : ZMod m)))) := by
+            refine iterate_eq_iterate_of_eq_on_prefix
+              (F := returnMap1CaseII (m := m)) (G := bulkMap1CaseI (m := m))
+              (z := ((2 : ZMod m), (((m - x : ℕ) : ZMod m)))) t ?_
+            intro s hs
+            rw [iterate_bulkMap1CaseI (m := m) s ((2 : ZMod m), (((m - x : ℕ) : ZMod m)))]
+            have hi_pos : 0 < 2 + s := by omega
+            have hi_lt : 2 + s < m := by omega
+            have hk_pos : 0 < (m - x) + s := by omega
+            have hk_lt : (m - x) + s < m := by omega
+            have hi_ne_zero : (((2 + s : ℕ) : ZMod m)) ≠ 0 := by
+              exact natCast_ne_zero_of_pos_lt (m := m) (n := 2 + s) hi_pos hi_lt
+            have hi_ne_one : (((2 + s : ℕ) : ZMod m)) ≠ 1 := by
+              exact natCast_ne_one_of_two_le_lt (m := m) (n := 2 + s) (by omega) hi_lt
+            have hi_ne_neg_two : (((2 + s : ℕ) : ZMod m)) ≠ (-2 : ZMod m) := by
+              exact natCast_ne_neg_two_of_lt (m := m) (n := 2 + s) (by omega)
+            have hi_ne_neg_one : (((2 + s : ℕ) : ZMod m)) ≠ (-1 : ZMod m) := by
+              exact natCast_ne_neg_one_of_lt (m := m) (n := 2 + s) (by omega)
+            have h00 : ¬ ((((2 + s : ℕ) : ZMod m)) = 0 ∧ ((((m - x) + s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              exact hi_ne_zero h.1
+            have hdiag :
+                ¬ ((((2 + s : ℕ) : ZMod m)) + ((((m - x) + s : ℕ) : ZMod m)) = (-1 : ZMod m) ∧
+                    (((2 + s : ℕ) : ZMod m)) ≠ 0 ∧
+                    (((2 + s : ℕ) : ZMod m)) ≠ (1 : ZMod m) ∧
+                    (((2 + s : ℕ) : ZMod m)) ≠ (-2 : ZMod m) ∧
+                    (((2 + s : ℕ) : ZMod m)) ≠ (-1 : ZMod m)) := by
+              intro h
+              have hsumEven : Even (m - x + 2 + 2 * s) := by
+                rcases hmEven with ⟨q, hq⟩
+                rcases hxeven with ⟨r, hr⟩
+                rw [hq, hr]
+                refine ⟨q - r + 1 + s, ?_⟩
+                omega
+              have hsum_ne : (((m - x + 2 + 2 * s : ℕ) : ZMod m)) ≠ (-1 : ZMod m) := by
+                exact natCast_ne_neg_one_of_even (m := m) hmEven hsumEven
+              apply hsum_ne
+              have hsumEq :
+                  ((((2 + s : ℕ) : ZMod m)) + ((((m - x) + s : ℕ) : ZMod m))) =
+                    (((m - x + 2 + 2 * s : ℕ) : ZMod m)) := by
+                have hnat : 2 + s + ((m - x) + s) = m - x + 2 + 2 * s := by omega
+                simpa [Nat.cast_add, add_assoc, add_left_comm, add_comm] using
+                  congrArg (fun n : ℕ => ((n : ℕ) : ZMod m)) hnat
+              exact hsumEq.symm.trans h.1
+            have h10 :
+                ¬ ((((2 + s : ℕ) : ZMod m)) = (1 : ZMod m) ∧ ((((m - x) + s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              exact hi_ne_one h.1
+            have hneg20 :
+                ¬ ((((2 + s : ℕ) : ZMod m)) = (-2 : ZMod m) ∧ ((((m - x) + s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              exact natCast_ne_zero_of_pos_lt (m := m) (n := (m - x) + s) hk_pos hk_lt h.2
+            have hneg1neg1 :
+                ¬ ((((2 + s : ℕ) : ZMod m)) = (-1 : ZMod m) ∧ ((((m - x) + s : ℕ) : ZMod m)) = (-1 : ZMod m)) := by
+              intro h
+              exact hi_ne_neg_one h.1
+            have h0line :
+                ¬ ((((2 + s : ℕ) : ZMod m)) = 0 ∧
+                    ((((m - x) + s : ℕ) : ZMod m)) ≠ 0 ∧
+                    ((((m - x) + s : ℕ) : ZMod m)) ≠ (-1 : ZMod m)) := by
+              intro h
+              exact hi_ne_zero h.1
+            have h1line :
+                ¬ ((((2 + s : ℕ) : ZMod m)) = (1 : ZMod m) ∧
+                    ((((m - x) + s : ℕ) : ZMod m)) ≠ 0) := by
+              intro h
+              exact hi_ne_one h.1
+            have h2neg2 :
+                ¬ ((((2 + s : ℕ) : ZMod m)) = (2 : ZMod m) ∧ ((((m - x) + s : ℕ) : ZMod m)) = (-2 : ZMod m)) := by
+              intro h
+              have hs0 : s = 0 := by
+                have hmod := (ZMod.natCast_eq_natCast_iff' (2 + s) 2 m).1 (by simpa using h.1)
+                rw [Nat.mod_eq_of_lt hi_lt, Nat.mod_eq_of_lt (by omega)] at hmod
+                omega
+              subst hs0
+              have hk_ne : (((m - x : ℕ) : ZMod m)) ≠ (-2 : ZMod m) := by
+                exact natCast_ne_neg_two_of_lt (m := m) (n := m - x) (by omega)
+              exact hk_ne h.2
+            have h2neg1 :
+                ¬ ((((2 + s : ℕ) : ZMod m)) = (2 : ZMod m) ∧ ((((m - x) + s : ℕ) : ZMod m)) = (-1 : ZMod m)) := by
+              intro h
+              have hs0 : s = 0 := by
+                have hmod := (ZMod.natCast_eq_natCast_iff' (2 + s) 2 m).1 (by simpa using h.1)
+                rw [Nat.mod_eq_of_lt hi_lt, Nat.mod_eq_of_lt (by omega)] at hmod
+                omega
+              subst hs0
+              have hk_ne : (((m - x : ℕ) : ZMod m)) ≠ (-1 : ZMod m) := by
+                exact natCast_ne_neg_one_of_lt (m := m) (n := m - x) (by omega)
+              exact hk_ne h.2
+            have hneg2one :
+                ¬ ((((2 + s : ℕ) : ZMod m)) = (-2 : ZMod m) ∧ ((((m - x) + s : ℕ) : ZMod m)) = (1 : ZMod m)) := by
+              intro h
+              exact hi_ne_neg_two h.1
+            simpa [Nat.cast_add, add_assoc, add_left_comm, add_comm] using
+              returnMap1CaseII_eq_bulk_of_not_special (m := m)
+                (i := (((2 + s : ℕ) : ZMod m))) (k := ((((m - x) + s : ℕ) : ZMod m)))
+                h00 hdiag h10 hneg20 hneg1neg1 h0line h1line h2neg2 h2neg1 hneg2one
+    _ = ((((2 + t : ℕ) : ZMod m)), ((((m - x) + t : ℕ) : ZMod m))) := by
+          rw [iterate_bulkMap1CaseI (m := m) t ((2 : ZMod m), (((m - x : ℕ) : ZMod m)))]
+          simp [Nat.cast_add, add_assoc, add_left_comm, add_comm]
+
+theorem hfirst_line_even_generic_caseII [Fact (9 < m)] (hm : m % 6 = 4)
+    {x : ℕ} (hx4 : 4 ≤ x) (hxle : x ≤ m - 4) (hxeven : Even x) :
+    ∀ n, 0 < n →
+      n < rho1CaseII (m := m) (⟨x, by omega⟩ : Fin m) →
+        (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) (⟨x, by omega⟩ : Fin m)) ∉
+          Set.range (linePoint1 (m := m)) := by
+  let xFin : Fin m := ⟨x, by omega⟩
+  intro n hn0 hnlt
+  have hm0 : 0 < m := by
+    have hm9 : 9 < m := Fact.out
+    omega
+  letI : Fact (0 < m) := ⟨hm0⟩
+  have hmEven : Even m := even_of_mod_six_eq_four (m := m) hm
+  have hx0 : xFin.1 ≠ 0 := by
+    simp [xFin]
+    omega
+  have hx1 : xFin.1 ≠ 1 := by
+    simp [xFin]
+    omega
+  have hx2 : xFin.1 ≠ 2 := by
+    simp [xFin]
+    omega
+  have hxm5 : xFin.1 ≠ m - 5 := by
+    rcases hmEven with ⟨q, hq⟩
+    rcases hxeven with ⟨r, hr⟩
+    simp [xFin, hq, hr]
+    omega
+  have hxm3 : xFin.1 ≠ m - 3 := by
+    rcases hmEven with ⟨q, hq⟩
+    rcases hxeven with ⟨r, hr⟩
+    simp [xFin, hq, hr]
+    omega
+  have hxm2 : xFin.1 ≠ m - 2 := by
+    simp [xFin]
+    omega
+  have hxm1 : xFin.1 ≠ m - 1 := by
+    rcases hmEven with ⟨q, hq⟩
+    rcases hxeven with ⟨r, hr⟩
+    simp [xFin, hq, hr]
+    omega
+  have hrho : rho1CaseII (m := m) xFin = m + 2 := by
+    have heven : xFin.1 % 2 = 0 := by
+      rcases hxeven with ⟨r, hr⟩
+      simpa [xFin, hr] using (show (r + r) % 2 = 0 by omega)
+    exact rho1CaseII_eq_m_add_two_of_even_ne_special (m := m)
+      hx0 hx1 hx2 hxm5 hxm3 hxm2 hxm1 heven
+  have hnm : n < m + 2 := by
+    simpa [xFin, hrho] using hnlt
+  by_cases hprefix : n ≤ m - x
+  · have hiter :
+        (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) xFin) =
+          ((((x + n : ℕ) : ZMod m)), (((n : ℕ) : ZMod m))) := by
+      simpa [xFin] using
+        iterate_returnMap1CaseII_even_prefix_partial (m := m) hm (x := x) (t := n)
+          hx4 hxle hxeven hprefix
+    apply not_mem_range_linePoint1_of_snd_ne_zero
+    rw [hiter]
+    exact natCast_ne_zero_of_pos_lt (m := m) (n := n) hn0 (by omega)
+  · by_cases hvert : n = m - x + 1
+    · have hiter :
+          (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) xFin) =
+            ((1 : ZMod m), (((m - x : ℕ) : ZMod m))) := by
+        rw [hvert]
+        rw [show m - x + 1 = 1 + (m - x) by omega, Function.iterate_add_apply]
+        rw [show (returnMap1CaseII (m := m)^[m - x]) (linePoint1 (m := m) xFin) =
+          ((0 : ZMod m), (((m - x : ℕ) : ZMod m))) by
+            simpa [xFin] using iterate_returnMap1CaseII_even_prefix (m := m) hm hx4 hxle hxeven]
+        simpa [Function.iterate_one] using returnMap1CaseII_even_vertical_zero (m := m) hx4 hxle
+      apply not_mem_range_linePoint1_of_snd_ne_zero
+      rw [hiter]
+      exact natCast_ne_zero_of_pos_lt (m := m) (n := m - x) (by omega) (by omega)
+    · let t : ℕ := n - (m - x + 2)
+      have hge : m - x + 2 ≤ n := by omega
+      have ht : t < x := by
+        dsimp [t]
+        have hnx : n - (m - x + 2) < x := by omega
+        exact hnx
+      have ht' : t ≤ x := Nat.le_of_lt_succ (by omega : t < x + 1)
+      have hnEq : n = m - x + 2 + t := by
+        dsimp [t]
+        omega
+      have hmid1 :
+          (returnMap1CaseII (m := m)^[m - x + 2]) (linePoint1 (m := m) xFin) =
+            ((2 : ZMod m), (((m - x : ℕ) : ZMod m))) := by
+        rw [show m - x + 2 = 1 + (m - x + 1) by omega, Function.iterate_add_apply]
+        have hmid0 :
+            (returnMap1CaseII (m := m)^[m - x + 1]) (linePoint1 (m := m) xFin) =
+              ((1 : ZMod m), (((m - x : ℕ) : ZMod m))) := by
+          rw [show m - x + 1 = 1 + (m - x) by omega, Function.iterate_add_apply]
+          rw [show (returnMap1CaseII (m := m)^[m - x]) (linePoint1 (m := m) xFin) =
+            ((0 : ZMod m), (((m - x : ℕ) : ZMod m))) by
+              simpa [xFin] using iterate_returnMap1CaseII_even_prefix (m := m) hm hx4 hxle hxeven]
+          simpa [Function.iterate_one] using returnMap1CaseII_even_vertical_zero (m := m) hx4 hxle
+        rw [hmid0]
+        simpa [Function.iterate_one] using returnMap1CaseII_even_vertical_one (m := m) hx4 hxle
+      have hiter :
+          (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) xFin) =
+            ((((2 + t : ℕ) : ZMod m)), ((((m - x) + t : ℕ) : ZMod m))) := by
+        rw [hnEq]
+        rw [show m - x + 2 + t = t + (m - x + 2) by omega, Function.iterate_add_apply]
+        rw [hmid1]
+        exact iterate_returnMap1CaseII_even_suffix_partial (m := m) hm
+          (x := x) (t := t) hx4 hxle hxeven ht'
+      apply not_mem_range_linePoint1_of_snd_ne_zero
+      rw [hiter]
+      exact natCast_ne_zero_of_pos_lt (m := m) (n := (m - x) + t) (by omega) (by omega)
+
+theorem hfirst_line_m_sub_three_caseII [Fact (9 < m)] (hm : m % 6 = 4) {x : Fin m}
+    (hx : x.1 = m - 3) :
+    ∀ n, 0 < n →
+      n < rho1CaseII (m := m) x →
+        (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) ∉ Set.range (linePoint1 (m := m)) := by
+  intro n hn0 hnlt
+  have hm0 : 0 < m := by
+    have hm9 : 9 < m := Fact.out
+    omega
+  letI : Fact (0 < m) := ⟨hm0⟩
+  have hm5 : 5 < m := by
+    have hm9 : 9 < m := Fact.out
+    omega
+  letI : Fact (5 < m) := ⟨hm5⟩
+  have hrho : rho1CaseII (m := m) x = m + 6 := by
+    exact rho1CaseII_eq_m_add_six_of_val_eq_m_sub_three (m := m) hx
+  have hnm : n < m + 6 := by
+    rwa [hrho] at hnlt
+  let x0 : Fin m := ⟨m - 3, by
+    have hm9 : 9 < m := Fact.out
+    omega⟩
+  have hx' : x = x0 := Fin.ext hx
+  by_cases h1 : n = 1
+  · have hiter :
+        (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) =
+          ((((m - 2 : ℕ) : ZMod m)), (1 : ZMod m)) := by
+      rw [h1]
+      simpa [hx', Function.iterate_one] using returnMap1CaseII_m_sub_three_zero (m := m)
+    apply not_mem_range_linePoint1_of_snd_ne_zero
+    rw [hiter]
+    exact one_ne_zero (m := m)
+  · by_cases h2 : n = 2
+    · have hiter :
+          (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) = ((-1 : ZMod m), (1 : ZMod m)) := by
+        rw [h2]
+        rw [show (2 : ℕ) = 1 + 1 by norm_num, Function.iterate_add_apply]
+        rw [show (returnMap1CaseII (m := m)^[1]) (linePoint1 (m := m) x) =
+          ((((m - 2 : ℕ) : ZMod m)), (1 : ZMod m)) by
+            simpa [hx', Function.iterate_one] using returnMap1CaseII_m_sub_three_zero (m := m)]
+        have hm2 : 2 ≤ m := by omega
+        simpa [Function.iterate_one, cast_sub_two_eq_neg_two (m := m) hm2] using
+          returnMap1CaseII_neg_two_one (m := m)
+      apply not_mem_range_linePoint1_of_snd_ne_zero
+      rw [hiter]
+      exact one_ne_zero (m := m)
+    · by_cases h3 : n = 3
+      · have hiter :
+            (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) = ((0 : ZMod m), (2 : ZMod m)) := by
+          rw [h3]
+          rw [show (3 : ℕ) = 1 + 2 by norm_num, Function.iterate_add_apply]
+          rw [show (returnMap1CaseII (m := m)^[2]) (linePoint1 (m := m) x) =
+            ((-1 : ZMod m), (1 : ZMod m)) by
+              rw [show (2 : ℕ) = 1 + 1 by norm_num, Function.iterate_add_apply]
+              rw [show (returnMap1CaseII (m := m)^[1]) (linePoint1 (m := m) x) =
+                ((((m - 2 : ℕ) : ZMod m)), (1 : ZMod m)) by
+                  simpa [hx', Function.iterate_one] using returnMap1CaseII_m_sub_three_zero (m := m)]
+              have hm2 : 2 ≤ m := by omega
+              simpa [Function.iterate_one, cast_sub_two_eq_neg_two (m := m) hm2] using
+                returnMap1CaseII_neg_two_one (m := m)]
+          simpa [Function.iterate_one] using returnMap1CaseII_neg_one_one (m := m)
+        apply not_mem_range_linePoint1_of_snd_ne_zero
+        rw [hiter]
+        exact two_ne_zero (m := m)
+      · by_cases h4 : n = 4
+        · have hiter :
+              (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) = ((1 : ZMod m), (2 : ZMod m)) := by
+            rw [h4]
+            rw [show (4 : ℕ) = 1 + 3 by norm_num, Function.iterate_add_apply]
+            rw [show (returnMap1CaseII (m := m)^[3]) (linePoint1 (m := m) x) =
+              ((0 : ZMod m), (2 : ZMod m)) by
+                rw [show (3 : ℕ) = 1 + 2 by norm_num, Function.iterate_add_apply]
+                rw [show (returnMap1CaseII (m := m)^[2]) (linePoint1 (m := m) x) =
+                  ((-1 : ZMod m), (1 : ZMod m)) by
+                    rw [show (2 : ℕ) = 1 + 1 by norm_num, Function.iterate_add_apply]
+                    rw [show (returnMap1CaseII (m := m)^[1]) (linePoint1 (m := m) x) =
+                      ((((m - 2 : ℕ) : ZMod m)), (1 : ZMod m)) by
+                        simpa [hx', Function.iterate_one] using returnMap1CaseII_m_sub_three_zero (m := m)]
+                    have hm2 : 2 ≤ m := by omega
+                    simpa [Function.iterate_one, cast_sub_two_eq_neg_two (m := m) hm2] using
+                      returnMap1CaseII_neg_two_one (m := m)]
+                simpa [Function.iterate_one] using returnMap1CaseII_neg_one_one (m := m)]
+            simpa [Function.iterate_one] using returnMap1CaseII_zero_two (m := m)
+          apply not_mem_range_linePoint1_of_snd_ne_zero
+          rw [hiter]
+          exact two_ne_zero (m := m)
+        · by_cases h5 : n = 5
+          · have hiter :
+                (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) = ((2 : ZMod m), (2 : ZMod m)) := by
+              simpa [hx', h5] using iterate_returnMap1CaseII_m_sub_three_front (m := m)
+            apply not_mem_range_linePoint1_of_snd_ne_zero
+            rw [hiter]
+            exact two_ne_zero (m := m)
+          · by_cases hmid : n ≤ m + 2
+            · let t : ℕ := n - 5
+              have ht : t ≤ m - 3 := by
+                dsimp [t]
+                omega
+              have hnEq : n = 5 + t := by
+                dsimp [t]
+                omega
+              have hiter :
+                  (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) =
+                    ((((2 + t : ℕ) : ZMod m)), (((2 + t : ℕ) : ZMod m))) := by
+                rw [hnEq]
+                rw [show 5 + t = t + 5 by omega, Function.iterate_add_apply]
+                rw [show (returnMap1CaseII (m := m)^[5]) (linePoint1 (m := m) x) =
+                  ((2 : ZMod m), (2 : ZMod m)) by
+                    simpa [hx'] using iterate_returnMap1CaseII_m_sub_three_front (m := m)]
+                exact iterate_returnMap1CaseII_two_two_prefix (m := m) hm ht
+              apply not_mem_range_linePoint1_of_snd_ne_zero
+              rw [hiter]
+              exact natCast_ne_zero_of_pos_lt (m := m) (n := 2 + t) (by omega) (by omega)
+            · have hfront :
+                  (returnMap1CaseII (m := m)^[5]) (linePoint1 (m := m) x) =
+                    ((2 : ZMod m), (2 : ZMod m)) := by
+                simpa [hx'] using iterate_returnMap1CaseII_m_sub_three_front (m := m)
+              have hmidEnd :
+                  (returnMap1CaseII (m := m)^[m + 2]) (linePoint1 (m := m) x) = ((-1 : ZMod m), (-1 : ZMod m)) := by
+                calc
+                  (returnMap1CaseII (m := m)^[m + 2]) (linePoint1 (m := m) x)
+                      = (returnMap1CaseII (m := m)^[(m - 3) + 5]) (linePoint1 (m := m) x) := by
+                          congr 1
+                          omega
+                  _ = (returnMap1CaseII (m := m)^[m - 3])
+                        ((returnMap1CaseII (m := m)^[5]) (linePoint1 (m := m) x)) := by
+                          rw [Function.iterate_add_apply]
+                  _ = (returnMap1CaseII (m := m)^[m - 3]) ((2 : ZMod m), (2 : ZMod m)) := by
+                        rw [hfront]
+                  _ = ((-1 : ZMod m), (-1 : ZMod m)) := by
+                        exact iterate_returnMap1CaseII_m_sub_three_middle (m := m) hm
+              by_cases hm3 : n = m + 3
+              · have hiter :
+                    (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) =
+                      ((1 : ZMod m), (-1 : ZMod m)) := by
+                  rw [hm3]
+                  rw [show m + 3 = 1 + (m + 2) by omega, Function.iterate_add_apply]
+                  rw [hmidEnd]
+                  simpa [Function.iterate_one] using returnMap1CaseII_neg_one_neg_one (m := m)
+                apply not_mem_range_linePoint1_of_snd_ne_zero
+                rw [hiter]
+                exact neg_ne_zero.mpr (one_ne_zero (m := m))
+              · by_cases hm4 : n = m + 4
+                · have hstep :
+                      (returnMap1CaseII (m := m)^[m + 3]) (linePoint1 (m := m) x) =
+                        ((1 : ZMod m), (-1 : ZMod m)) := by
+                    rw [show m + 3 = 1 + (m + 2) by omega, Function.iterate_add_apply]
+                    rw [hmidEnd]
+                    simpa [Function.iterate_one] using returnMap1CaseII_neg_one_neg_one (m := m)
+                  have hiter :
+                      (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) =
+                        ((2 : ZMod m), (-1 : ZMod m)) := by
+                    rw [hm4]
+                    rw [show m + 4 = 1 + (m + 3) by omega, Function.iterate_add_apply]
+                    rw [hstep]
+                    simpa [Function.iterate_one] using returnMap1CaseII_one_neg_one (m := m)
+                  apply not_mem_range_linePoint1_of_snd_ne_zero
+                  rw [hiter]
+                  exact neg_ne_zero.mpr (one_ne_zero (m := m))
+                · have hm5' : n = m + 5 := by
+                    omega
+                  have hstep :
+                      (returnMap1CaseII (m := m)^[m + 4]) (linePoint1 (m := m) x) =
+                        ((2 : ZMod m), (-1 : ZMod m)) := by
+                    rw [show m + 4 = 1 + (m + 3) by omega, Function.iterate_add_apply]
+                    rw [show (returnMap1CaseII (m := m)^[m + 3]) (linePoint1 (m := m) x) =
+                      ((1 : ZMod m), (-1 : ZMod m)) by
+                        rw [show m + 3 = 1 + (m + 2) by omega, Function.iterate_add_apply]
+                        rw [hmidEnd]
+                        simpa [Function.iterate_one] using returnMap1CaseII_neg_one_neg_one (m := m)]
+                    simpa [Function.iterate_one] using returnMap1CaseII_one_neg_one (m := m)
+                  have hiter :
+                      (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) =
+                        ((3 : ZMod m), (-1 : ZMod m)) := by
+                    rw [hm5']
+                    rw [show m + 5 = 1 + (m + 4) by omega, Function.iterate_add_apply]
+                    rw [hstep]
+                    simpa [Function.iterate_one] using returnMap1CaseII_two_neg_one (m := m)
+                  apply not_mem_range_linePoint1_of_snd_ne_zero
+                  rw [hiter]
+                  exact neg_ne_zero.mpr (one_ne_zero (m := m))
+
+theorem iterate_returnMap1CaseII_two_one_prefix_partial [Fact (9 < m)] {t : ℕ}
+    (ht : t ≤ m / 2 - 2) :
+    ((returnMap1CaseII (m := m)^[t]) ((2 : ZMod m), (1 : ZMod m))) =
+      ((((2 + t : ℕ) : ZMod m)), (((1 + t : ℕ) : ZMod m))) := by
+  calc
+    ((returnMap1CaseII (m := m)^[t]) ((2 : ZMod m), (1 : ZMod m)))
+        = ((bulkMap1CaseI (m := m)^[t]) ((2 : ZMod m), (1 : ZMod m))) := by
+            refine iterate_eq_iterate_of_eq_on_prefix
+              (F := returnMap1CaseII (m := m)) (G := bulkMap1CaseI (m := m))
+              (z := ((2 : ZMod m), (1 : ZMod m))) t ?_
+            intro s hs
+            rw [iterate_bulkMap1CaseI (m := m) s ((2 : ZMod m), (1 : ZMod m))]
+            have hi_pos : 0 < 2 + s := by
+              have hm9 : 9 < m := Fact.out
+              omega
+            have hi_lt : 2 + s < m := by
+              have hm9 : 9 < m := Fact.out
+              omega
+            have hk_pos : 0 < 1 + s := by
+              have hm9 : 9 < m := Fact.out
+              omega
+            have hk_lt : 1 + s < m := by
+              have hm9 : 9 < m := Fact.out
+              omega
+            have hi_ne_zero : (((2 + s : ℕ) : ZMod m)) ≠ 0 := by
+              exact natCast_ne_zero_of_pos_lt (m := m) (n := 2 + s) hi_pos hi_lt
+            have hi_ne_one : (((2 + s : ℕ) : ZMod m)) ≠ 1 := by
+              exact natCast_ne_one_of_two_le_lt (m := m) (n := 2 + s) (by omega) hi_lt
+            have hi_ne_neg_one : (((2 + s : ℕ) : ZMod m)) ≠ (-1 : ZMod m) := by
+              exact natCast_ne_neg_one_of_lt (m := m) (n := 2 + s) (by
+                have hm9 : 9 < m := Fact.out
+                omega)
+            have h00 : ¬ ((((2 + s : ℕ) : ZMod m)) = 0 ∧ (((1 + s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              exact hi_ne_zero h.1
+            have hdiag :
+                ¬ ((((2 + s : ℕ) : ZMod m)) + (((1 + s : ℕ) : ZMod m)) = (-1 : ZMod m) ∧
+                    (((2 + s : ℕ) : ZMod m)) ≠ 0 ∧
+                    (((2 + s : ℕ) : ZMod m)) ≠ (1 : ZMod m) ∧
+                    (((2 + s : ℕ) : ZMod m)) ≠ (-2 : ZMod m) ∧
+                    (((2 + s : ℕ) : ZMod m)) ≠ (-1 : ZMod m)) := by
+              intro h
+              have hsum_ne : (((3 + 2 * s : ℕ) : ZMod m)) ≠ (-1 : ZMod m) := by
+                exact natCast_ne_neg_one_of_lt (m := m) (n := 3 + 2 * s) (by
+                  have hm9 : 9 < m := Fact.out
+                  omega)
+              apply hsum_ne
+              have hnat : 2 + s + (1 + s) = 3 + 2 * s := by
+                omega
+              have hsum_eq :
+                  ((((2 + s : ℕ) : ZMod m)) + (((1 + s : ℕ) : ZMod m))) =
+                    (((3 + 2 * s : ℕ) : ZMod m)) := by
+                calc
+                  ((((2 + s : ℕ) : ZMod m)) + (((1 + s : ℕ) : ZMod m))) =
+                      ((((2 + s) + (1 + s) : ℕ) : ZMod m)) := by
+                        simp [Nat.cast_add]
+                  _ = (((3 + 2 * s : ℕ) : ZMod m)) := by
+                        simp [hnat]
+              exact hsum_eq.symm.trans h.1
+            have h10 : ¬ ((((2 + s : ℕ) : ZMod m)) = (1 : ZMod m) ∧ (((1 + s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              exact hi_ne_one h.1
+            have hneg20 :
+                ¬ ((((2 + s : ℕ) : ZMod m)) = (-2 : ZMod m) ∧ (((1 + s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              exact natCast_ne_zero_of_pos_lt (m := m) (n := 1 + s) hk_pos hk_lt h.2
+            have hneg1neg1 :
+                ¬ ((((2 + s : ℕ) : ZMod m)) = (-1 : ZMod m) ∧ (((1 + s : ℕ) : ZMod m)) = (-1 : ZMod m)) := by
+              intro h
+              exact hi_ne_neg_one h.1
+            have h0line :
+                ¬ ((((2 + s : ℕ) : ZMod m)) = 0 ∧
+                    (((1 + s : ℕ) : ZMod m)) ≠ 0 ∧
+                    (((1 + s : ℕ) : ZMod m)) ≠ (-1 : ZMod m)) := by
+              intro h
+              exact hi_ne_zero h.1
+            have h1line :
+                ¬ ((((2 + s : ℕ) : ZMod m)) = (1 : ZMod m) ∧
+                    (((1 + s : ℕ) : ZMod m)) ≠ 0) := by
+              intro h
+              exact hi_ne_one h.1
+            have h2neg2 :
+                ¬ ((((2 + s : ℕ) : ZMod m)) = (2 : ZMod m) ∧ (((1 + s : ℕ) : ZMod m)) = (-2 : ZMod m)) := by
+              intro h
+              have hs0 : s = 0 := by
+                have hmod := (ZMod.natCast_eq_natCast_iff' (2 + s) 2 m).1 (by simpa using h.1)
+                rw [Nat.mod_eq_of_lt hi_lt, Nat.mod_eq_of_lt (by omega)] at hmod
+                omega
+              subst hs0
+              have h1neg2 : (1 : ZMod m) ≠ (-2 : ZMod m) := by
+                simpa using natCast_ne_neg_two_of_lt (m := m) (n := 1) (by
+                  have hm9 : 9 < m := Fact.out
+                  omega)
+              exact h1neg2 (by simpa using h.2)
+            have h2neg1 :
+                ¬ ((((2 + s : ℕ) : ZMod m)) = (2 : ZMod m) ∧ (((1 + s : ℕ) : ZMod m)) = (-1 : ZMod m)) := by
+              intro h
+              have hs0 : s = 0 := by
+                have hmod := (ZMod.natCast_eq_natCast_iff' (2 + s) 2 m).1 (by simpa using h.1)
+                rw [Nat.mod_eq_of_lt hi_lt, Nat.mod_eq_of_lt (by omega)] at hmod
+                omega
+              subst hs0
+              exact one_ne_neg_one (m := m) (by simpa using h.2)
+            have hneg2one :
+                ¬ ((((2 + s : ℕ) : ZMod m)) = (-2 : ZMod m) ∧ (((1 + s : ℕ) : ZMod m)) = (1 : ZMod m)) := by
+              intro h
+              have h2neg2 : (((2 + s : ℕ) : ZMod m)) ≠ (-2 : ZMod m) := by
+                exact natCast_ne_neg_two_of_lt (m := m) (n := 2 + s) (by
+                  have hm9 : 9 < m := Fact.out
+                  omega)
+              exact h2neg2 h.1
+            simpa [Nat.cast_add, add_assoc, add_left_comm, add_comm] using
+              returnMap1CaseII_eq_bulk_of_not_special (m := m)
+                (i := (((2 + s : ℕ) : ZMod m))) (k := (((1 + s : ℕ) : ZMod m)))
+                h00 hdiag h10 hneg20 hneg1neg1 h0line h1line h2neg2 h2neg1 hneg2one
+    _ = ((((2 + t : ℕ) : ZMod m)), (((1 + t : ℕ) : ZMod m))) := by
+          rw [iterate_bulkMap1CaseI (m := m) t ((2 : ZMod m), (1 : ZMod m))]
+          simp [Nat.cast_add, add_assoc, add_left_comm, add_comm]
+
+theorem iterate_returnMap1CaseII_half_plus_two_prefix_partial [Fact (9 < m)] (hm : m % 6 = 4)
+    {t : ℕ} (ht : t ≤ m / 2 - 2) :
+    ((returnMap1CaseII (m := m)^[t])
+      ((((m / 2 + 2 : ℕ) : ZMod m)), (((m / 2 - 1 : ℕ) : ZMod m)))) =
+      ((((m / 2 + 2 + t : ℕ) : ZMod m)), (((m / 2 - 1 + t : ℕ) : ZMod m))) := by
+  have hmEven : Even m := even_of_mod_six_eq_four (m := m) hm
+  calc
+    ((returnMap1CaseII (m := m)^[t])
+      ((((m / 2 + 2 : ℕ) : ZMod m)), (((m / 2 - 1 : ℕ) : ZMod m))))
+        = ((bulkMap1CaseI (m := m)^[t])
+          ((((m / 2 + 2 : ℕ) : ZMod m)), (((m / 2 - 1 : ℕ) : ZMod m)))) := by
+            refine iterate_eq_iterate_of_eq_on_prefix
+              (F := returnMap1CaseII (m := m)) (G := bulkMap1CaseI (m := m))
+              (z := ((((m / 2 + 2 : ℕ) : ZMod m)), (((m / 2 - 1 : ℕ) : ZMod m)))) t ?_
+            intro s hs
+            rw [iterate_bulkMap1CaseI (m := m) s
+              ((((m / 2 + 2 : ℕ) : ZMod m)), (((m / 2 - 1 : ℕ) : ZMod m)))]
+            have hi_pos : 0 < m / 2 + 2 + s := by
+              have hm9 : 9 < m := Fact.out
+              omega
+            have hi_lt : m / 2 + 2 + s < m := by
+              have hm9 : 9 < m := Fact.out
+              omega
+            have hk_pos : 0 < m / 2 - 1 + s := by
+              have hm9 : 9 < m := Fact.out
+              omega
+            have hk_lt : m / 2 - 1 + s < m := by
+              have hm9 : 9 < m := Fact.out
+              omega
+            have hi_ne_zero : (((m / 2 + 2 + s : ℕ) : ZMod m)) ≠ 0 := by
+              exact natCast_ne_zero_of_pos_lt (m := m) (n := m / 2 + 2 + s) hi_pos hi_lt
+            have hi_ne_one : (((m / 2 + 2 + s : ℕ) : ZMod m)) ≠ 1 := by
+              exact natCast_ne_one_of_two_le_lt (m := m) (n := m / 2 + 2 + s) (by
+                have hm9 : 9 < m := Fact.out
+                omega) hi_lt
+            have hk_ne_zero : (((m / 2 - 1 + s : ℕ) : ZMod m)) ≠ 0 := by
+              exact natCast_ne_zero_of_pos_lt (m := m) (n := m / 2 - 1 + s) hk_pos hk_lt
+            have hk_ne_one : (((m / 2 - 1 + s : ℕ) : ZMod m)) ≠ 1 := by
+              exact natCast_ne_one_of_two_le_lt (m := m) (n := m / 2 - 1 + s) (by
+                have hm9 : 9 < m := Fact.out
+                omega) hk_lt
+            have hk_ne_neg_one : (((m / 2 - 1 + s : ℕ) : ZMod m)) ≠ (-1 : ZMod m) := by
+              exact natCast_ne_neg_one_of_lt (m := m) (n := m / 2 - 1 + s) (by
+                have hm9 : 9 < m := Fact.out
+                omega)
+            have hi_ne_two : (((m / 2 + 2 + s : ℕ) : ZMod m)) ≠ (2 : ZMod m) := by
+              exact natCast_ne_natCast_of_lt (m := m) (a := m / 2 + 2 + s) (b := 2) hi_lt (by
+                have hm9 : 9 < m := Fact.out
+                omega) (by
+                have hm9 : 9 < m := Fact.out
+                omega)
+            have h00 :
+                ¬ ((((m / 2 + 2 + s : ℕ) : ZMod m)) = 0 ∧
+                    (((m / 2 - 1 + s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              exact hi_ne_zero h.1
+            have hdiag :
+                ¬ ((((m / 2 + 2 + s : ℕ) : ZMod m)) + (((m / 2 - 1 + s : ℕ) : ZMod m)) = (-1 : ZMod m) ∧
+                    (((m / 2 + 2 + s : ℕ) : ZMod m)) ≠ 0 ∧
+                    (((m / 2 + 2 + s : ℕ) : ZMod m)) ≠ (1 : ZMod m) ∧
+                    (((m / 2 + 2 + s : ℕ) : ZMod m)) ≠ (-2 : ZMod m) ∧
+                    (((m / 2 + 2 + s : ℕ) : ZMod m)) ≠ (-1 : ZMod m)) := by
+              intro h
+              have hsum_ne : (((1 + 2 * s : ℕ) : ZMod m)) ≠ (-1 : ZMod m) := by
+                exact natCast_ne_neg_one_of_lt (m := m) (n := 1 + 2 * s) (by
+                  have hm9 : 9 < m := Fact.out
+                  omega)
+              apply hsum_ne
+              have hnat : m / 2 + 2 + s + (m / 2 - 1 + s) = m + (1 + 2 * s) := by
+                rcases hmEven with ⟨q, hq⟩
+                rw [hq]
+                omega
+              have hsum_eq :
+                  ((((m / 2 + 2 + s : ℕ) : ZMod m)) + (((m / 2 - 1 + s : ℕ) : ZMod m))) =
+                    (((1 + 2 * s : ℕ) : ZMod m)) := by
+                calc
+                  ((((m / 2 + 2 + s : ℕ) : ZMod m)) + (((m / 2 - 1 + s : ℕ) : ZMod m))) =
+                      (((m + (1 + 2 * s) : ℕ) : ZMod m)) := by
+                        simpa [Nat.cast_add, add_assoc, add_left_comm, add_comm] using
+                          congrArg (fun n : ℕ => ((n : ℕ) : ZMod m)) hnat
+                  _ = (((1 + 2 * s : ℕ) : ZMod m)) := by
+                        simp
+              exact hsum_eq.symm.trans h.1
+            have h10 :
+                ¬ ((((m / 2 + 2 + s : ℕ) : ZMod m)) = (1 : ZMod m) ∧
+                    (((m / 2 - 1 + s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              exact hi_ne_one h.1
+            have hneg20 :
+                ¬ ((((m / 2 + 2 + s : ℕ) : ZMod m)) = (-2 : ZMod m) ∧
+                    (((m / 2 - 1 + s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              exact hk_ne_zero h.2
+            have hneg1neg1 :
+                ¬ ((((m / 2 + 2 + s : ℕ) : ZMod m)) = (-1 : ZMod m) ∧
+                    (((m / 2 - 1 + s : ℕ) : ZMod m)) = (-1 : ZMod m)) := by
+              intro h
+              exact hk_ne_neg_one h.2
+            have h0line :
+                ¬ ((((m / 2 + 2 + s : ℕ) : ZMod m)) = 0 ∧
+                    (((m / 2 - 1 + s : ℕ) : ZMod m)) ≠ 0 ∧
+                    (((m / 2 - 1 + s : ℕ) : ZMod m)) ≠ (-1 : ZMod m)) := by
+              intro h
+              exact hi_ne_zero h.1
+            have h1line :
+                ¬ ((((m / 2 + 2 + s : ℕ) : ZMod m)) = (1 : ZMod m) ∧
+                    (((m / 2 - 1 + s : ℕ) : ZMod m)) ≠ 0) := by
+              intro h
+              exact hi_ne_one h.1
+            have h2neg2 :
+                ¬ ((((m / 2 + 2 + s : ℕ) : ZMod m)) = (2 : ZMod m) ∧
+                    (((m / 2 - 1 + s : ℕ) : ZMod m)) = (-2 : ZMod m)) := by
+              intro h
+              exact hi_ne_two h.1
+            have h2neg1 :
+                ¬ ((((m / 2 + 2 + s : ℕ) : ZMod m)) = (2 : ZMod m) ∧
+                    (((m / 2 - 1 + s : ℕ) : ZMod m)) = (-1 : ZMod m)) := by
+              intro h
+              exact hi_ne_two h.1
+            have hneg2one :
+                ¬ ((((m / 2 + 2 + s : ℕ) : ZMod m)) = (-2 : ZMod m) ∧
+                    (((m / 2 - 1 + s : ℕ) : ZMod m)) = (1 : ZMod m)) := by
+              intro h
+              exact hk_ne_one h.2
+            simpa [Nat.cast_add, add_assoc, add_left_comm, add_comm] using
+              returnMap1CaseII_eq_bulk_of_not_special (m := m)
+                (i := (((m / 2 + 2 + s : ℕ) : ZMod m))) (k := (((m / 2 - 1 + s : ℕ) : ZMod m)))
+                h00 hdiag h10 hneg20 hneg1neg1 h0line h1line h2neg2 h2neg1 hneg2one
+    _ = ((((m / 2 + 2 + t : ℕ) : ZMod m)), (((m / 2 - 1 + t : ℕ) : ZMod m))) := by
+          rw [iterate_bulkMap1CaseI (m := m) t
+            ((((m / 2 + 2 : ℕ) : ZMod m)), (((m / 2 - 1 : ℕ) : ZMod m)))]
+          simp [Nat.cast_add, add_assoc, add_left_comm, add_comm]
+
+theorem iterate_returnMap1CaseII_four_m_sub_three_tail_partial [Fact (9 < m)] {t : ℕ}
+    (ht : t ≤ 2) :
+    ((returnMap1CaseII (m := m)^[t]) ((4 : ZMod m), (((m - 3 : ℕ) : ZMod m)))) =
+      ((((4 + t : ℕ) : ZMod m)), ((((m - 3) + t : ℕ) : ZMod m))) := by
+  calc
+    ((returnMap1CaseII (m := m)^[t]) ((4 : ZMod m), (((m - 3 : ℕ) : ZMod m))))
+        = ((bulkMap1CaseI (m := m)^[t]) ((4 : ZMod m), (((m - 3 : ℕ) : ZMod m)))) := by
+            refine iterate_eq_iterate_of_eq_on_prefix
+              (F := returnMap1CaseII (m := m)) (G := bulkMap1CaseI (m := m))
+              (z := ((4 : ZMod m), (((m - 3 : ℕ) : ZMod m)))) t ?_
+            intro s hs
+            rw [iterate_bulkMap1CaseI (m := m) s ((4 : ZMod m), (((m - 3 : ℕ) : ZMod m)))]
+            have hi_pos : 0 < 4 + s := by
+              have hm9 : 9 < m := Fact.out
+              omega
+            have hi_lt : 4 + s < m := by
+              have hm9 : 9 < m := Fact.out
+              omega
+            have hk_pos : 0 < (m - 3) + s := by
+              have hm9 : 9 < m := Fact.out
+              omega
+            have hk_lt : (m - 3) + s < m := by
+              have hm9 : 9 < m := Fact.out
+              omega
+            have hi_ne_zero : (((4 + s : ℕ) : ZMod m)) ≠ 0 := by
+              exact natCast_ne_zero_of_pos_lt (m := m) (n := 4 + s) hi_pos hi_lt
+            have hi_ne_one : (((4 + s : ℕ) : ZMod m)) ≠ 1 := by
+              exact natCast_ne_one_of_two_le_lt (m := m) (n := 4 + s) (by
+                have hm9 : 9 < m := Fact.out
+                omega) hi_lt
+            have hi_ne_two : (((4 + s : ℕ) : ZMod m)) ≠ (2 : ZMod m) := by
+              exact natCast_ne_natCast_of_lt (m := m) (a := 4 + s) (b := 2) hi_lt (by
+                have hm9 : 9 < m := Fact.out
+                omega) (by omega)
+            have hi_ne_neg_one : (((4 + s : ℕ) : ZMod m)) ≠ (-1 : ZMod m) := by
+              exact natCast_ne_neg_one_of_lt (m := m) (n := 4 + s) (by
+                have hm9 : 9 < m := Fact.out
+                omega)
+            have hi_ne_neg_two : (((4 + s : ℕ) : ZMod m)) ≠ (-2 : ZMod m) := by
+              exact natCast_ne_neg_two_of_lt (m := m) (n := 4 + s) (by
+                have hm9 : 9 < m := Fact.out
+                omega)
+            have hk_ne_zero : ((((m - 3) + s : ℕ) : ZMod m)) ≠ 0 := by
+              exact natCast_ne_zero_of_pos_lt (m := m) (n := (m - 3) + s) hk_pos hk_lt
+            have h00 :
+                ¬ ((((4 + s : ℕ) : ZMod m)) = 0 ∧ ((((m - 3) + s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              exact hi_ne_zero h.1
+            have hdiag :
+                ¬ ((((4 + s : ℕ) : ZMod m)) + ((((m - 3) + s : ℕ) : ZMod m)) = (-1 : ZMod m) ∧
+                    (((4 + s : ℕ) : ZMod m)) ≠ 0 ∧
+                    (((4 + s : ℕ) : ZMod m)) ≠ (1 : ZMod m) ∧
+                    (((4 + s : ℕ) : ZMod m)) ≠ (-2 : ZMod m) ∧
+                    (((4 + s : ℕ) : ZMod m)) ≠ (-1 : ZMod m)) := by
+              intro h
+              have hsum_ne : (((1 + 2 * s : ℕ) : ZMod m)) ≠ (-1 : ZMod m) := by
+                exact natCast_ne_neg_one_of_lt (m := m) (n := 1 + 2 * s) (by
+                  have hm9 : 9 < m := Fact.out
+                  omega)
+              apply hsum_ne
+              have hnat : 4 + s + ((m - 3) + s) = m + (1 + 2 * s) := by
+                omega
+              have hsum_eq :
+                  ((((4 + s : ℕ) : ZMod m)) + ((((m - 3) + s : ℕ) : ZMod m))) =
+                    (((1 + 2 * s : ℕ) : ZMod m)) := by
+                calc
+                  ((((4 + s : ℕ) : ZMod m)) + ((((m - 3) + s : ℕ) : ZMod m))) =
+                      (((m + (1 + 2 * s) : ℕ) : ZMod m)) := by
+                        simpa [Nat.cast_add, add_assoc, add_left_comm, add_comm] using
+                          congrArg (fun n : ℕ => ((n : ℕ) : ZMod m)) hnat
+                  _ = (((1 + 2 * s : ℕ) : ZMod m)) := by
+                        simp
+              exact hsum_eq.symm.trans h.1
+            have h10 :
+                ¬ ((((4 + s : ℕ) : ZMod m)) = (1 : ZMod m) ∧ ((((m - 3) + s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              exact hi_ne_one h.1
+            have hneg20 :
+                ¬ ((((4 + s : ℕ) : ZMod m)) = (-2 : ZMod m) ∧ ((((m - 3) + s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              exact hk_ne_zero h.2
+            have hneg1neg1 :
+                ¬ ((((4 + s : ℕ) : ZMod m)) = (-1 : ZMod m) ∧ ((((m - 3) + s : ℕ) : ZMod m)) = (-1 : ZMod m)) := by
+              intro h
+              exact hi_ne_neg_one h.1
+            have h0line :
+                ¬ ((((4 + s : ℕ) : ZMod m)) = 0 ∧
+                    ((((m - 3) + s : ℕ) : ZMod m)) ≠ 0 ∧
+                    ((((m - 3) + s : ℕ) : ZMod m)) ≠ (-1 : ZMod m)) := by
+              intro h
+              exact hi_ne_zero h.1
+            have h1line :
+                ¬ ((((4 + s : ℕ) : ZMod m)) = (1 : ZMod m) ∧
+                    ((((m - 3) + s : ℕ) : ZMod m)) ≠ 0) := by
+              intro h
+              exact hi_ne_one h.1
+            have h2neg2 :
+                ¬ ((((4 + s : ℕ) : ZMod m)) = (2 : ZMod m) ∧ ((((m - 3) + s : ℕ) : ZMod m)) = (-2 : ZMod m)) := by
+              intro h
+              exact hi_ne_two h.1
+            have h2neg1 :
+                ¬ ((((4 + s : ℕ) : ZMod m)) = (2 : ZMod m) ∧ ((((m - 3) + s : ℕ) : ZMod m)) = (-1 : ZMod m)) := by
+              intro h
+              exact hi_ne_two h.1
+            have hneg2one :
+                ¬ ((((4 + s : ℕ) : ZMod m)) = (-2 : ZMod m) ∧ ((((m - 3) + s : ℕ) : ZMod m)) = (1 : ZMod m)) := by
+              intro h
+              exact hi_ne_neg_two h.1
+            simpa [Nat.cast_add, add_assoc, add_left_comm, add_comm] using
+              returnMap1CaseII_eq_bulk_of_not_special (m := m)
+                (i := (((4 + s : ℕ) : ZMod m))) (k := ((((m - 3) + s : ℕ) : ZMod m)))
+                h00 hdiag h10 hneg20 hneg1neg1 h0line h1line h2neg2 h2neg1 hneg2one
+    _ = ((((4 + t : ℕ) : ZMod m)), ((((m - 3) + t : ℕ) : ZMod m))) := by
+          rw [iterate_bulkMap1CaseI (m := m) t ((4 : ZMod m), (((m - 3 : ℕ) : ZMod m)))]
+          simp [Nat.cast_add, add_assoc, add_left_comm, add_comm]
+
+theorem hfirst_line_m_sub_one_caseII [Fact (9 < m)] (hm : m % 6 = 4) {x : Fin m}
+    (hx : x.1 = m - 1) :
+    ∀ n, 0 < n →
+      n < rho1CaseII (m := m) x →
+        (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) ∉ Set.range (linePoint1 (m := m)) := by
+  intro n hn0 hnlt
+  have hm0 : 0 < m := by
+    have hm9 : 9 < m := Fact.out
+    omega
+  letI : Fact (0 < m) := ⟨hm0⟩
+  have hm5 : 5 < m := by
+    have hm9 : 9 < m := Fact.out
+    omega
+  letI : Fact (5 < m) := ⟨hm5⟩
+  have hrho : rho1CaseII (m := m) x = m + 6 := by
+    exact rho1CaseII_eq_m_add_six_of_val_eq_m_sub_one (m := m) hx
+  have hnm : n < m + 6 := by
+    rwa [hrho] at hnlt
+  let x0 : Fin m := ⟨m - 1, by
+    have hm9 : 9 < m := Fact.out
+    omega⟩
+  have hx' : x = x0 := Fin.ext hx
+  have hline :
+      linePoint1 (m := m) x = ((-1 : ZMod m), (0 : ZMod m)) := by
+    rw [hx', linePoint1]
+    ext
+    · simpa using cast_sub_one_eq_neg_one (m := m) (by omega)
+    · rfl
+  have hstep1 :
+      (returnMap1CaseII (m := m)^[1]) (linePoint1 (m := m) x) = ((0 : ZMod m), (1 : ZMod m)) := by
+    rw [Function.iterate_one, hline]
+    simpa using returnMap1CaseII_neg_one_zero (m := m)
+  have hstep2 :
+      (returnMap1CaseII (m := m)^[2]) (linePoint1 (m := m) x) = ((1 : ZMod m), (1 : ZMod m)) := by
+    rw [show (2 : ℕ) = 1 + 1 by norm_num, Function.iterate_add_apply]
+    rw [hstep1]
+    simpa [Function.iterate_one] using
+      returnMap1CaseII_eq_add_one_of_i_zero (m := m) (k := (1 : ZMod m))
+        (one_ne_zero (m := m)) (one_ne_neg_one (m := m))
+  have hstep3 :
+      (returnMap1CaseII (m := m)^[3]) (linePoint1 (m := m) x) = ((2 : ZMod m), (1 : ZMod m)) := by
+    simpa [hx'] using iterate_returnMap1CaseII_m_sub_one_front (m := m)
+  have hprefixEnd :
+      (returnMap1CaseII (m := m)^[m / 2 + 1]) (linePoint1 (m := m) x) =
+        ((((m / 2 : ℕ) : ZMod m)), (((m / 2 - 1 : ℕ) : ZMod m))) := by
+    rw [show m / 2 + 1 = (m / 2 - 2) + 3 by omega, Function.iterate_add_apply]
+    rw [hstep3]
+    exact iterate_returnMap1CaseII_two_one_prefix (m := m)
+  have hdiagStart :
+      (returnMap1CaseII (m := m)^[m / 2 + 2]) (linePoint1 (m := m) x) =
+        ((((m / 2 + 2 : ℕ) : ZMod m)), (((m / 2 - 1 : ℕ) : ZMod m))) := by
+    rw [show m / 2 + 2 = 1 + (m / 2 + 1) by omega, Function.iterate_add_apply]
+    rw [hprefixEnd]
+    convert (returnMap1CaseII_half_diag (m := m) hm) using 1
+    ext <;> norm_num [Nat.cast_add, add_assoc, add_left_comm, add_comm]
+  have hmid0 :
+      (returnMap1CaseII (m := m)^[m]) (linePoint1 (m := m) x) =
+        ((0 : ZMod m), (((m - 3 : ℕ) : ZMod m))) := by
+    simpa [hx'] using iterate_returnMap1CaseII_m_sub_one_middle (m := m) hm
+  have hk0 : (((m - 3 : ℕ) : ZMod m)) ≠ 0 := by
+    exact natCast_ne_zero_of_pos_lt (m := m) (n := m - 3) (by omega) (by omega)
+  have hkneg1 : (((m - 3 : ℕ) : ZMod m)) ≠ (-1 : ZMod m) := by
+    exact natCast_ne_neg_one_of_lt (m := m) (n := m - 3) (by omega)
+  have hstepm1 :
+      (returnMap1CaseII (m := m)^[m + 1]) (linePoint1 (m := m) x) =
+        ((1 : ZMod m), (((m - 3 : ℕ) : ZMod m))) := by
+    rw [show m + 1 = 1 + m by omega, Function.iterate_add_apply]
+    rw [hmid0]
+    simpa [Function.iterate_one] using
+      returnMap1CaseII_eq_add_one_of_i_zero (m := m) (k := (((m - 3 : ℕ) : ZMod m))) hk0 hkneg1
+  have hstepm2 :
+      (returnMap1CaseII (m := m)^[m + 2]) (linePoint1 (m := m) x) =
+        ((2 : ZMod m), (((m - 3 : ℕ) : ZMod m))) := by
+    rw [show m + 2 = 1 + (m + 1) by omega, Function.iterate_add_apply]
+    rw [hstepm1]
+    simpa [Function.iterate_one] using
+      returnMap1CaseII_eq_add_one_of_i_one (m := m) (k := (((m - 3 : ℕ) : ZMod m))) hk0
+  have hstepm3 :
+      (returnMap1CaseII (m := m)^[m + 3]) (linePoint1 (m := m) x) =
+        ((4 : ZMod m), (((m - 3 : ℕ) : ZMod m))) := by
+    rw [show m + 3 = 1 + (m + 2) by omega, Function.iterate_add_apply]
+    rw [hstepm2]
+    simpa [Function.iterate_one] using returnMap1CaseII_two_m_sub_three (m := m)
+  by_cases h1 : n = 1
+  · have hiter :
+        (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) = ((0 : ZMod m), (1 : ZMod m)) := by
+      rw [h1]
+      simpa using hstep1
+    apply not_mem_range_linePoint1_of_snd_ne_zero
+    rw [hiter]
+    exact one_ne_zero (m := m)
+  · by_cases h2 : n = 2
+    · have hiter :
+          (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) = ((1 : ZMod m), (1 : ZMod m)) := by
+        rw [h2]
+        simpa using hstep2
+      apply not_mem_range_linePoint1_of_snd_ne_zero
+      rw [hiter]
+      exact one_ne_zero (m := m)
+    · by_cases h3 : n = 3
+      · have hiter :
+          (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) = ((2 : ZMod m), (1 : ZMod m)) := by
+          rw [h3]
+          simpa using hstep3
+        apply not_mem_range_linePoint1_of_snd_ne_zero
+        rw [hiter]
+        exact one_ne_zero (m := m)
+      · by_cases hprefix : n ≤ m / 2 + 1
+        · let t : ℕ := n - 3
+          have ht : t ≤ m / 2 - 2 := by
+            dsimp [t]
+            omega
+          have hnEq : n = 3 + t := by
+            dsimp [t]
+            omega
+          have hiter :
+              (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) =
+                ((((2 + t : ℕ) : ZMod m)), (((1 + t : ℕ) : ZMod m))) := by
+            rw [hnEq]
+            rw [show 3 + t = t + 3 by omega, Function.iterate_add_apply]
+            rw [show (returnMap1CaseII (m := m)^[3]) (linePoint1 (m := m) x) =
+              ((2 : ZMod m), (1 : ZMod m)) by
+                simpa [hx'] using iterate_returnMap1CaseII_m_sub_one_front (m := m)]
+            exact iterate_returnMap1CaseII_two_one_prefix_partial (m := m) ht
+          apply not_mem_range_linePoint1_of_snd_ne_zero
+          rw [hiter]
+          exact natCast_ne_zero_of_pos_lt (m := m) (n := 1 + t) (by omega) (by omega)
+        · by_cases hdiag : n = m / 2 + 2
+          · have hprefixEnd :
+                (returnMap1CaseII (m := m)^[m / 2 + 1]) (linePoint1 (m := m) x) =
+                  ((((m / 2 : ℕ) : ZMod m)), (((m / 2 - 1 : ℕ) : ZMod m))) := hprefixEnd
+            have hiter :
+                (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) =
+                  ((((m / 2 + 2 : ℕ) : ZMod m)), (((m / 2 - 1 : ℕ) : ZMod m))) := by
+              rw [hdiag]
+              rw [show m / 2 + 2 = 1 + (m / 2 + 1) by omega, Function.iterate_add_apply]
+              rw [hprefixEnd]
+              convert (returnMap1CaseII_half_diag (m := m) hm) using 1
+              ext <;> norm_num [Nat.cast_add, add_assoc, add_left_comm, add_comm]
+            apply not_mem_range_linePoint1_of_snd_ne_zero
+            rw [hiter]
+            exact natCast_ne_zero_of_pos_lt (m := m) (n := m / 2 - 1) (by omega) (by omega)
+          · by_cases hmid : n ≤ m
+            · let t : ℕ := n - (m / 2 + 2)
+              have ht : t ≤ m / 2 - 2 := by
+                dsimp [t]
+                omega
+              have hnEq : n = m / 2 + 2 + t := by
+                dsimp [t]
+                omega
+              have hiter :
+                  (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) =
+                    ((((m / 2 + 2 + t : ℕ) : ZMod m)), (((m / 2 - 1 + t : ℕ) : ZMod m))) := by
+                rw [hnEq]
+                rw [show m / 2 + 2 + t = t + (m / 2 + 2) by omega, Function.iterate_add_apply]
+                rw [hdiagStart]
+                simpa [Nat.cast_add, add_assoc, add_left_comm, add_comm] using
+                  iterate_returnMap1CaseII_half_plus_two_prefix_partial (m := m) hm ht
+              apply not_mem_range_linePoint1_of_snd_ne_zero
+              rw [hiter]
+              exact natCast_ne_zero_of_pos_lt (m := m) (n := m / 2 - 1 + t) (by omega) (by omega)
+            · by_cases hm1 : n = m + 1
+              ·
+                have hiter :
+                    (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) =
+                      ((1 : ZMod m), (((m - 3 : ℕ) : ZMod m))) := by
+                  rw [hm1]
+                  simpa using hstepm1
+                apply not_mem_range_linePoint1_of_snd_ne_zero
+                rw [hiter]
+                exact natCast_ne_zero_of_pos_lt (m := m) (n := m - 3) (by omega) (by omega)
+              · by_cases hm2 : n = m + 2
+                · have hiter :
+                      (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) =
+                        ((2 : ZMod m), (((m - 3 : ℕ) : ZMod m))) := by
+                    rw [hm2]
+                    simpa using hstepm2
+                  apply not_mem_range_linePoint1_of_snd_ne_zero
+                  rw [hiter]
+                  exact natCast_ne_zero_of_pos_lt (m := m) (n := m - 3) (by omega) (by omega)
+                · by_cases hm3 : n = m + 3
+                  · have hstep :
+                        (returnMap1CaseII (m := m)^[m + 2]) (linePoint1 (m := m) x) =
+                          ((2 : ZMod m), (((m - 3 : ℕ) : ZMod m))) := hstepm2
+                    have hiter :
+                        (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) =
+                          ((4 : ZMod m), (((m - 3 : ℕ) : ZMod m))) := by
+                      rw [hm3]
+                      simpa using hstepm3
+                    apply not_mem_range_linePoint1_of_snd_ne_zero
+                    rw [hiter]
+                    exact natCast_ne_zero_of_pos_lt (m := m) (n := m - 3) (by omega) (by omega)
+                  · let t : ℕ := n - (m + 3)
+                    have ht : t ≤ 2 := by
+                      dsimp [t]
+                      omega
+                    have hnEq : n = m + 3 + t := by
+                      dsimp [t]
+                      omega
+                    have hiter :
+                        (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) =
+                          ((((4 + t : ℕ) : ZMod m)), ((((m - 3) + t : ℕ) : ZMod m))) := by
+                      rw [hnEq]
+                      rw [show m + 3 + t = t + (m + 3) by omega, Function.iterate_add_apply]
+                      rw [hstepm3]
+                      exact iterate_returnMap1CaseII_four_m_sub_three_tail_partial (m := m) ht
+                    apply not_mem_range_linePoint1_of_snd_ne_zero
+                    rw [hiter]
+                    exact natCast_ne_zero_of_pos_lt (m := m) (n := (m - 3) + t) (by omega) (by omega)
+
+theorem iterate_returnMap1CaseII_odd_prefix_partial [Fact (9 < m)] (hm : m % 6 = 4)
+    {x t : ℕ} (hx3 : 3 ≤ x) (hxle : x ≤ m - 5) (hxodd : Odd x)
+    (ht : t ≤ (m - 1 - x) / 2) :
+    let xFin : Fin m := ⟨x, by omega⟩
+    ((returnMap1CaseII (m := m)^[t]) (linePoint1 (m := m) xFin)) =
+      ((((x + t : ℕ) : ZMod m)), (((t : ℕ) : ZMod m))) := by
+  let xFin : Fin m := ⟨x, by omega⟩
+  calc
+    ((returnMap1CaseII (m := m)^[t]) (linePoint1 (m := m) xFin))
+        = ((bulkMap1CaseI (m := m)^[t]) (linePoint1 (m := m) xFin)) := by
+            refine iterate_eq_iterate_of_eq_on_prefix
+              (F := returnMap1CaseII (m := m)) (G := bulkMap1CaseI (m := m))
+              (z := linePoint1 (m := m) xFin) t ?_
+            intro s hs
+            rw [iterate_bulkMap1CaseI (m := m) s (linePoint1 (m := m) xFin)]
+            have hi_pos : 0 < x + s := by omega
+            have hi_lt : x + s < m := by omega
+            have hi_ne_zero : (((x + s : ℕ) : ZMod m)) ≠ 0 := by
+              exact natCast_ne_zero_of_pos_lt (m := m) (n := x + s) hi_pos hi_lt
+            have hi_ne_one : (((x + s : ℕ) : ZMod m)) ≠ 1 := by
+              exact natCast_ne_one_of_two_le_lt (m := m) (n := x + s) (by omega) hi_lt
+            have hi_ne_two : (((x + s : ℕ) : ZMod m)) ≠ 2 := by
+              exact natCast_ne_natCast_of_lt (m := m) (a := x + s) (b := 2) hi_lt (by omega)
+                (by omega)
+            have hi_ne_neg_two : (((x + s : ℕ) : ZMod m)) ≠ (-2 : ZMod m) := by
+              exact natCast_ne_neg_two_of_lt (m := m) (n := x + s) (by omega)
+            have hi_ne_neg_one : (((x + s : ℕ) : ZMod m)) ≠ (-1 : ZMod m) := by
+              exact natCast_ne_neg_one_of_lt (m := m) (n := x + s) (by omega)
+            have hk_ne_neg_one : (((s : ℕ) : ZMod m)) ≠ (-1 : ZMod m) := by
+              exact natCast_ne_neg_one_of_lt (m := m) (n := s) (by omega)
+            have h00 : ¬ ((((x + s : ℕ) : ZMod m)) = 0 ∧ (((s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              exact hi_ne_zero h.1
+            have hdiag :
+                ¬ ((((x + s : ℕ) : ZMod m)) + (((s : ℕ) : ZMod m)) = (-1 : ZMod m) ∧
+                    (((x + s : ℕ) : ZMod m)) ≠ 0 ∧
+                    (((x + s : ℕ) : ZMod m)) ≠ (1 : ZMod m) ∧
+                    (((x + s : ℕ) : ZMod m)) ≠ (-2 : ZMod m) ∧
+                    (((x + s : ℕ) : ZMod m)) ≠ (-1 : ZMod m)) := by
+              intro h
+              have hsum_ne : (((x + 2 * s : ℕ) : ZMod m)) ≠ (-1 : ZMod m) := by
+                exact natCast_ne_neg_one_of_lt (m := m) (n := x + 2 * s) (by omega)
+              apply hsum_ne
+              simpa [Nat.cast_add, add_assoc, add_left_comm, add_comm, two_mul] using h.1
+            have h10 :
+                ¬ ((((x + s : ℕ) : ZMod m)) = (1 : ZMod m) ∧ (((s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              exact hi_ne_one h.1
+            have hneg20 :
+                ¬ ((((x + s : ℕ) : ZMod m)) = (-2 : ZMod m) ∧ (((s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              exact hi_ne_neg_two h.1
+            have hneg1neg1 :
+                ¬ ((((x + s : ℕ) : ZMod m)) = (-1 : ZMod m) ∧ (((s : ℕ) : ZMod m)) = (-1 : ZMod m)) := by
+              intro h
+              exact hi_ne_neg_one h.1
+            have h0line :
+                ¬ ((((x + s : ℕ) : ZMod m)) = 0 ∧
+                    (((s : ℕ) : ZMod m)) ≠ 0 ∧
+                    (((s : ℕ) : ZMod m)) ≠ (-1 : ZMod m)) := by
+              intro h
+              exact hi_ne_zero h.1
+            have h1line :
+                ¬ ((((x + s : ℕ) : ZMod m)) = (1 : ZMod m) ∧
+                    (((s : ℕ) : ZMod m)) ≠ 0) := by
+              intro h
+              exact hi_ne_one h.1
+            have h2neg2 :
+                ¬ ((((x + s : ℕ) : ZMod m)) = (2 : ZMod m) ∧ (((s : ℕ) : ZMod m)) = (-2 : ZMod m)) := by
+              intro h
+              exact hi_ne_two h.1
+            have h2neg1 :
+                ¬ ((((x + s : ℕ) : ZMod m)) = (2 : ZMod m) ∧ (((s : ℕ) : ZMod m)) = (-1 : ZMod m)) := by
+              intro h
+              exact hi_ne_two h.1
+            have hneg2one :
+                ¬ ((((x + s : ℕ) : ZMod m)) = (-2 : ZMod m) ∧ (((s : ℕ) : ZMod m)) = (1 : ZMod m)) := by
+              intro h
+              exact hi_ne_neg_two h.1
+            simpa [linePoint1, xFin] using
+              returnMap1CaseII_eq_bulk_of_not_special (m := m)
+                (i := (((x + s : ℕ) : ZMod m))) (k := (((s : ℕ) : ZMod m)))
+                h00 hdiag h10 hneg20 hneg1neg1 h0line h1line h2neg2 h2neg1 hneg2one
+    _ = ((((x : ℕ) : ZMod m) + (((t : ℕ) : ZMod m))), (((t : ℕ) : ZMod m))) := by
+          rw [iterate_bulkMap1CaseI (m := m) t (linePoint1 (m := m) xFin)]
+          simp [linePoint1, xFin]
+    _ = ((((x + t : ℕ) : ZMod m)), (((t : ℕ) : ZMod m))) := by
+          rw [Nat.cast_add]
+
+theorem iterate_returnMap1CaseII_odd_middle_partial [Fact (9 < m)] (hm : m % 6 = 4)
+    {x t : ℕ} (hx3 : 3 ≤ x) (hxle : x ≤ m - 5) (hxodd : Odd x)
+    (ht : t ≤ (m - 1 - x) / 2 - 1) :
+    let a : ℕ := (m - 1 - x) / 2
+    ((returnMap1CaseII (m := m)^[t]) ((((x + a + 2 : ℕ) : ZMod m)), (((a : ℕ) : ZMod m)))) =
+      ((((x + a + 2 + t : ℕ) : ZMod m)), (((a + t : ℕ) : ZMod m))) := by
+  let a : ℕ := (m - 1 - x) / 2
+  have hxa : x + 2 * a = m - 1 := by
+    simpa [a] using odd_caseII_half_eq (m := m) hm hx3 hxle hxodd
+  calc
+    ((returnMap1CaseII (m := m)^[t]) ((((x + a + 2 : ℕ) : ZMod m)), (((a : ℕ) : ZMod m))))
+        = ((bulkMap1CaseI (m := m)^[t]) ((((x + a + 2 : ℕ) : ZMod m)), (((a : ℕ) : ZMod m)))) := by
+            refine iterate_eq_iterate_of_eq_on_prefix
+              (F := returnMap1CaseII (m := m)) (G := bulkMap1CaseI (m := m))
+              (z := ((((x + a + 2 : ℕ) : ZMod m)), (((a : ℕ) : ZMod m)))) t ?_
+            intro s hs
+            rw [iterate_bulkMap1CaseI (m := m) s ((((x + a + 2 : ℕ) : ZMod m)), (((a : ℕ) : ZMod m)))]
+            have hi_pos : 0 < x + a + 2 + s := by omega
+            have hi_lt : x + a + 2 + s < m := by omega
+            have hk_pos : 0 < a + s := by omega
+            have hk_lt : a + s < m := by omega
+            have hi_ne_zero : (((x + a + 2 + s : ℕ) : ZMod m)) ≠ 0 := by
+              exact natCast_ne_zero_of_pos_lt (m := m) (n := x + a + 2 + s) hi_pos hi_lt
+            have hi_ne_one : (((x + a + 2 + s : ℕ) : ZMod m)) ≠ 1 := by
+              exact natCast_ne_one_of_two_le_lt (m := m) (n := x + a + 2 + s) (by omega) hi_lt
+            have hi_ne_two : (((x + a + 2 + s : ℕ) : ZMod m)) ≠ 2 := by
+              exact natCast_ne_natCast_of_lt (m := m) (a := x + a + 2 + s) (b := 2) hi_lt
+                (by omega) (by omega)
+            have hk_ne_zero : (((a + s : ℕ) : ZMod m)) ≠ 0 := by
+              exact natCast_ne_zero_of_pos_lt (m := m) (n := a + s) hk_pos hk_lt
+            have hk_ne_one : (((a + s : ℕ) : ZMod m)) ≠ 1 := by
+              exact natCast_ne_one_of_two_le_lt (m := m) (n := a + s) (by omega) hk_lt
+            have hk_ne_neg_one : (((a + s : ℕ) : ZMod m)) ≠ (-1 : ZMod m) := by
+              exact natCast_ne_neg_one_of_lt (m := m) (n := a + s) (by omega)
+            have h00 :
+                ¬ ((((x + a + 2 + s : ℕ) : ZMod m)) = 0 ∧ (((a + s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              exact hi_ne_zero h.1
+            have hdiag :
+                ¬ ((((x + a + 2 + s : ℕ) : ZMod m)) + (((a + s : ℕ) : ZMod m)) = (-1 : ZMod m) ∧
+                    (((x + a + 2 + s : ℕ) : ZMod m)) ≠ 0 ∧
+                    (((x + a + 2 + s : ℕ) : ZMod m)) ≠ (1 : ZMod m) ∧
+                    (((x + a + 2 + s : ℕ) : ZMod m)) ≠ (-2 : ZMod m) ∧
+                    (((x + a + 2 + s : ℕ) : ZMod m)) ≠ (-1 : ZMod m)) := by
+              intro h
+              have hsum_ne : (((1 + 2 * s : ℕ) : ZMod m)) ≠ (-1 : ZMod m) := by
+                exact natCast_ne_neg_one_of_lt (m := m) (n := 1 + 2 * s) (by omega)
+              apply hsum_ne
+              have hsumEq :
+                  (((x + a + 2 + s + (a + s) : ℕ) : ZMod m)) =
+                    (((1 + 2 * s : ℕ) : ZMod m)) := by
+                rw [show x + a + 2 + s + (a + s) = x + 2 * a + (2 * s + 2) by omega, hxa]
+                have hm1 : (((m - 1 : ℕ) : ZMod m)) = (-1 : ZMod m) := by
+                  exact cast_sub_one_eq_neg_one (m := m) (by
+                    have hm9 : 9 < m := Fact.out
+                    omega)
+                rw [Nat.cast_add, Nat.cast_add, hm1]
+                have hz :
+                    (-1 : ZMod m) + (2 + 2 * ((s : ℕ) : ZMod m)) =
+                      (1 : ZMod m) + 2 * ((s : ℕ) : ZMod m) := by
+                  ring
+                simpa [Nat.cast_add, add_assoc, add_left_comm, add_comm] using hz
+              have hsumLeft :
+                  ((((x + a + 2 + s : ℕ) : ZMod m)) + (((a + s : ℕ) : ZMod m))) =
+                    (((1 + 2 * s : ℕ) : ZMod m)) := by
+                simpa [Nat.cast_add, add_assoc, add_left_comm, add_comm] using hsumEq
+              exact hsumLeft.symm.trans h.1
+            have h10 :
+                ¬ ((((x + a + 2 + s : ℕ) : ZMod m)) = (1 : ZMod m) ∧ (((a + s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              exact hi_ne_one h.1
+            have hneg20 :
+                ¬ ((((x + a + 2 + s : ℕ) : ZMod m)) = (-2 : ZMod m) ∧ (((a + s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              exact hk_ne_zero h.2
+            have hneg1neg1 :
+                ¬ ((((x + a + 2 + s : ℕ) : ZMod m)) = (-1 : ZMod m) ∧ (((a + s : ℕ) : ZMod m)) = (-1 : ZMod m)) := by
+              intro h
+              exact hk_ne_neg_one h.2
+            have h0line :
+                ¬ ((((x + a + 2 + s : ℕ) : ZMod m)) = 0 ∧
+                    (((a + s : ℕ) : ZMod m)) ≠ 0 ∧
+                    (((a + s : ℕ) : ZMod m)) ≠ (-1 : ZMod m)) := by
+              intro h
+              exact hi_ne_zero h.1
+            have h1line :
+                ¬ ((((x + a + 2 + s : ℕ) : ZMod m)) = (1 : ZMod m) ∧
+                    (((a + s : ℕ) : ZMod m)) ≠ 0) := by
+              intro h
+              exact hi_ne_one h.1
+            have h2neg2 :
+                ¬ ((((x + a + 2 + s : ℕ) : ZMod m)) = (2 : ZMod m) ∧ (((a + s : ℕ) : ZMod m)) = (-2 : ZMod m)) := by
+              intro h
+              exact hi_ne_two h.1
+            have h2neg1 :
+                ¬ ((((x + a + 2 + s : ℕ) : ZMod m)) = (2 : ZMod m) ∧ (((a + s : ℕ) : ZMod m)) = (-1 : ZMod m)) := by
+              intro h
+              exact hi_ne_two h.1
+            have hneg2one :
+                ¬ ((((x + a + 2 + s : ℕ) : ZMod m)) = (-2 : ZMod m) ∧ (((a + s : ℕ) : ZMod m)) = (1 : ZMod m)) := by
+              intro h
+              exact hk_ne_one h.2
+            simpa [Nat.cast_add, add_assoc, add_left_comm, add_comm] using
+              returnMap1CaseII_eq_bulk_of_not_special (m := m)
+                (i := (((x + a + 2 + s : ℕ) : ZMod m))) (k := (((a + s : ℕ) : ZMod m)))
+                h00 hdiag h10 hneg20 hneg1neg1 h0line h1line h2neg2 h2neg1 hneg2one
+    _ = ((((x + a + 2 + t : ℕ) : ZMod m)), (((a + t : ℕ) : ZMod m))) := by
+          rw [iterate_bulkMap1CaseI (m := m) t ((((x + a + 2 : ℕ) : ZMod m)), (((a : ℕ) : ZMod m)))]
+          simp [Nat.cast_add, add_assoc, add_left_comm, add_comm]
+
+theorem iterate_returnMap1CaseII_odd_suffix_prefix_partial [Fact (9 < m)] (hm : m % 6 = 4)
+    {x t : ℕ} (hx3 : 3 ≤ x) (hxle : x ≤ m - 5) (hxodd : Odd x)
+    (ht : t ≤ (x - 1) / 2) :
+    ((returnMap1CaseII (m := m)^[t]) ((2 : ZMod m), (((m - x - 2 : ℕ) : ZMod m)))) =
+      ((((2 + t : ℕ) : ZMod m)), ((((m - x - 2) + t : ℕ) : ZMod m))) := by
+  calc
+    ((returnMap1CaseII (m := m)^[t]) ((2 : ZMod m), (((m - x - 2 : ℕ) : ZMod m))))
+        = ((bulkMap1CaseI (m := m)^[t]) ((2 : ZMod m), (((m - x - 2 : ℕ) : ZMod m)))) := by
+            refine iterate_eq_iterate_of_eq_on_prefix
+              (F := returnMap1CaseII (m := m)) (G := bulkMap1CaseI (m := m))
+              (z := ((2 : ZMod m), (((m - x - 2 : ℕ) : ZMod m)))) t ?_
+            intro s hs
+            rw [iterate_bulkMap1CaseI (m := m) s ((2 : ZMod m), (((m - x - 2 : ℕ) : ZMod m)))]
+            have hi_pos : 0 < 2 + s := by omega
+            have hi_lt : 2 + s < m := by omega
+            have hk_pos : 0 < (m - x - 2) + s := by omega
+            have hk_lt : (m - x - 2) + s < m := by omega
+            have hi_ne_zero : (((2 + s : ℕ) : ZMod m)) ≠ 0 := by
+              exact natCast_ne_zero_of_pos_lt (m := m) (n := 2 + s) hi_pos hi_lt
+            have hi_ne_one : (((2 + s : ℕ) : ZMod m)) ≠ 1 := by
+              exact natCast_ne_one_of_two_le_lt (m := m) (n := 2 + s) (by omega) hi_lt
+            have hi_ne_neg_two : (((2 + s : ℕ) : ZMod m)) ≠ (-2 : ZMod m) := by
+              exact natCast_ne_neg_two_of_lt (m := m) (n := 2 + s) (by omega)
+            have hi_ne_neg_one : (((2 + s : ℕ) : ZMod m)) ≠ (-1 : ZMod m) := by
+              exact natCast_ne_neg_one_of_lt (m := m) (n := 2 + s) (by omega)
+            have h00 : ¬ ((((2 + s : ℕ) : ZMod m)) = 0 ∧ ((((m - x - 2) + s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              exact hi_ne_zero h.1
+            have hdiag :
+                ¬ ((((2 + s : ℕ) : ZMod m)) + ((((m - x - 2) + s : ℕ) : ZMod m)) = (-1 : ZMod m) ∧
+                    (((2 + s : ℕ) : ZMod m)) ≠ 0 ∧
+                    (((2 + s : ℕ) : ZMod m)) ≠ (1 : ZMod m) ∧
+                    (((2 + s : ℕ) : ZMod m)) ≠ (-2 : ZMod m) ∧
+                    (((2 + s : ℕ) : ZMod m)) ≠ (-1 : ZMod m)) := by
+              intro h
+              have hsum_ne : (((m - x + 2 * s : ℕ) : ZMod m)) ≠ (-1 : ZMod m) := by
+                exact natCast_ne_neg_one_of_lt (m := m) (n := m - x + 2 * s) (by omega)
+              apply hsum_ne
+              have hsumEq :
+                  ((((2 + s : ℕ) : ZMod m)) + ((((m - x - 2) + s : ℕ) : ZMod m))) =
+                    (((m - x + 2 * s : ℕ) : ZMod m)) := by
+                have hnat : 2 + s + ((m - x - 2) + s) = m - x + 2 * s := by omega
+                simpa [Nat.cast_add, add_assoc, add_left_comm, add_comm] using
+                  congrArg (fun n : ℕ => ((n : ℕ) : ZMod m)) hnat
+              exact hsumEq.symm.trans h.1
+            have h10 :
+                ¬ ((((2 + s : ℕ) : ZMod m)) = (1 : ZMod m) ∧ ((((m - x - 2) + s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              exact hi_ne_one h.1
+            have hneg20 :
+                ¬ ((((2 + s : ℕ) : ZMod m)) = (-2 : ZMod m) ∧ ((((m - x - 2) + s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              exact hi_ne_neg_two h.1
+            have hneg1neg1 :
+                ¬ ((((2 + s : ℕ) : ZMod m)) = (-1 : ZMod m) ∧ ((((m - x - 2) + s : ℕ) : ZMod m)) = (-1 : ZMod m)) := by
+              intro h
+              exact hi_ne_neg_one h.1
+            have h0line :
+                ¬ ((((2 + s : ℕ) : ZMod m)) = 0 ∧
+                    ((((m - x - 2) + s : ℕ) : ZMod m)) ≠ 0 ∧
+                    ((((m - x - 2) + s : ℕ) : ZMod m)) ≠ (-1 : ZMod m)) := by
+              intro h
+              exact hi_ne_zero h.1
+            have h1line :
+                ¬ ((((2 + s : ℕ) : ZMod m)) = (1 : ZMod m) ∧
+                    ((((m - x - 2) + s : ℕ) : ZMod m)) ≠ 0) := by
+              intro h
+              exact hi_ne_one h.1
+            have h2neg2 :
+                ¬ ((((2 + s : ℕ) : ZMod m)) = (2 : ZMod m) ∧ ((((m - x - 2) + s : ℕ) : ZMod m)) = (-2 : ZMod m)) := by
+              intro h
+              have hs0 : s = 0 := by
+                have hmod := (ZMod.natCast_eq_natCast_iff' (2 + s) 2 m).1 (by simpa using h.1)
+                rw [Nat.mod_eq_of_lt hi_lt, Nat.mod_eq_of_lt (by omega)] at hmod
+                omega
+              subst hs0
+              have hk_ne : (((m - x - 2 : ℕ) : ZMod m)) ≠ (-2 : ZMod m) := by
+                exact natCast_ne_neg_two_of_lt (m := m) (n := m - x - 2) (by omega)
+              exact hk_ne h.2
+            have h2neg1 :
+                ¬ ((((2 + s : ℕ) : ZMod m)) = (2 : ZMod m) ∧ ((((m - x - 2) + s : ℕ) : ZMod m)) = (-1 : ZMod m)) := by
+              intro h
+              have hs0 : s = 0 := by
+                have hmod := (ZMod.natCast_eq_natCast_iff' (2 + s) 2 m).1 (by simpa using h.1)
+                rw [Nat.mod_eq_of_lt hi_lt, Nat.mod_eq_of_lt (by omega)] at hmod
+                omega
+              subst hs0
+              have hk_ne : (((m - x - 2 : ℕ) : ZMod m)) ≠ (-1 : ZMod m) := by
+                exact natCast_ne_neg_one_of_lt (m := m) (n := m - x - 2) (by omega)
+              exact hk_ne h.2
+            have hneg2one :
+                ¬ ((((2 + s : ℕ) : ZMod m)) = (-2 : ZMod m) ∧ ((((m - x - 2) + s : ℕ) : ZMod m)) = (1 : ZMod m)) := by
+              intro h
+              exact hi_ne_neg_two h.1
+            simpa [Nat.cast_add, add_assoc, add_left_comm, add_comm] using
+              returnMap1CaseII_eq_bulk_of_not_special (m := m)
+                (i := (((2 + s : ℕ) : ZMod m))) (k := ((((m - x - 2) + s : ℕ) : ZMod m)))
+                h00 hdiag h10 hneg20 hneg1neg1 h0line h1line h2neg2 h2neg1 hneg2one
+    _ = ((((2 + t : ℕ) : ZMod m)), ((((m - x - 2) + t : ℕ) : ZMod m))) := by
+          rw [iterate_bulkMap1CaseI (m := m) t ((2 : ZMod m), (((m - x - 2 : ℕ) : ZMod m)))]
+          simp [Nat.cast_add, add_assoc, add_left_comm, add_comm]
+
+theorem iterate_returnMap1CaseII_odd_suffix_tail_partial [Fact (9 < m)] (hm : m % 6 = 4)
+    {x t : ℕ} (hx3 : 3 ≤ x) (hxle : x ≤ m - 7) (hxodd : Odd x)
+    (ht : t ≤ (x - 1) / 2 + 3) :
+    let b : ℕ := (x - 1) / 2
+    ((returnMap1CaseII (m := m)^[t])
+      ((((4 + b : ℕ) : ZMod m)), ((((m - x - 2) + b : ℕ) : ZMod m)))) =
+      ((((4 + b + t : ℕ) : ZMod m)), ((((m - x - 2) + b + t : ℕ) : ZMod m))) := by
+  let b : ℕ := (x - 1) / 2
+  let c : ℕ := b + 3
+  calc
+    ((returnMap1CaseII (m := m)^[t])
+      ((((4 + b : ℕ) : ZMod m)), ((((m - x - 2) + b : ℕ) : ZMod m))))
+        = ((bulkMap1CaseI (m := m)^[t])
+          ((((4 + b : ℕ) : ZMod m)), ((((m - x - 2) + b : ℕ) : ZMod m)))) := by
+            refine iterate_eq_iterate_of_eq_on_prefix
+              (F := returnMap1CaseII (m := m)) (G := bulkMap1CaseI (m := m))
+              (z := ((((4 + b : ℕ) : ZMod m)), ((((m - x - 2) + b : ℕ) : ZMod m)))) t ?_
+            intro s hs
+            rw [iterate_bulkMap1CaseI (m := m) s ((((4 + b : ℕ) : ZMod m)), ((((m - x - 2) + b : ℕ) : ZMod m)))]
+            have hi_pos : 0 < 4 + b + s := by
+              dsimp [b, c] at hs ht ⊢
+              omega
+            have hi_lt : 4 + b + s < m := by
+              dsimp [b, c] at hs ht ⊢
+              omega
+            have hk_pos : 0 < (m - x - 2) + b + s := by
+              dsimp [b, c] at hs ht ⊢
+              omega
+            have hk_lt : (m - x - 2) + b + s < m := by
+              dsimp [b, c] at hs ht ⊢
+              omega
+            have hi_ne_zero : (((4 + b + s : ℕ) : ZMod m)) ≠ 0 := by
+              exact natCast_ne_zero_of_pos_lt (m := m) (n := 4 + b + s) hi_pos hi_lt
+            have hi_ne_one : (((4 + b + s : ℕ) : ZMod m)) ≠ 1 := by
+              exact natCast_ne_one_of_two_le_lt (m := m) (n := 4 + b + s) (by omega) hi_lt
+            have hi_ne_two : (((4 + b + s : ℕ) : ZMod m)) ≠ 2 := by
+              exact natCast_ne_natCast_of_lt (m := m) (a := 4 + b + s) (b := 2) hi_lt (by omega)
+                (by omega)
+            have hi_ne_neg_one : (((4 + b + s : ℕ) : ZMod m)) ≠ (-1 : ZMod m) := by
+              exact natCast_ne_neg_one_of_lt (m := m) (n := 4 + b + s) (by omega)
+            have hk_ne_zero : ((((m - x - 2) + b + s : ℕ) : ZMod m)) ≠ 0 := by
+              exact natCast_ne_zero_of_pos_lt (m := m) (n := (m - x - 2) + b + s) hk_pos hk_lt
+            have hk_ne_one : ((((m - x - 2) + b + s : ℕ) : ZMod m)) ≠ 1 := by
+              exact natCast_ne_one_of_two_le_lt (m := m) (n := (m - x - 2) + b + s) (by omega) hk_lt
+            have h00 :
+                ¬ ((((4 + b + s : ℕ) : ZMod m)) = 0 ∧
+                    ((((m - x - 2) + b + s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              exact hi_ne_zero h.1
+            have hdiag :
+                ¬ ((((4 + b + s : ℕ) : ZMod m)) + ((((m - x - 2) + b + s : ℕ) : ZMod m)) = (-1 : ZMod m) ∧
+                    (((4 + b + s : ℕ) : ZMod m)) ≠ 0 ∧
+                    (((4 + b + s : ℕ) : ZMod m)) ≠ (1 : ZMod m) ∧
+                    (((4 + b + s : ℕ) : ZMod m)) ≠ (-2 : ZMod m) ∧
+                    (((4 + b + s : ℕ) : ZMod m)) ≠ (-1 : ZMod m)) := by
+              intro h
+              have hsum_ne : (((1 + 2 * s : ℕ) : ZMod m)) ≠ (-1 : ZMod m) := by
+                exact natCast_ne_neg_one_of_lt (m := m) (n := 1 + 2 * s) (by omega)
+              apply hsum_ne
+              have hsumEq :
+                  ((((4 + b + s : ℕ) : ZMod m)) + ((((m - x - 2) + b + s : ℕ) : ZMod m))) =
+                    (((1 + 2 * s : ℕ) : ZMod m)) := by
+                have hxb : x = 1 + 2 * b := by
+                  dsimp [b]
+                  rcases hxodd with ⟨r, hr⟩
+                  rw [hr]
+                  omega
+                have hnat : 4 + b + s + ((m - x - 2) + b + s) = m + (1 + 2 * s) := by
+                  rw [hxb]
+                  omega
+                have hcast :
+                    (((4 + b + s : ℕ) : ZMod m)) + ((((m - x - 2) + b + s : ℕ) : ZMod m)) =
+                      (((m + (1 + 2 * s) : ℕ) : ZMod m)) := by
+                  simpa [Nat.cast_add, add_assoc, add_left_comm, add_comm] using
+                    congrArg (fun n : ℕ => ((n : ℕ) : ZMod m)) hnat
+                simpa [Nat.cast_add, ZMod.natCast_self, zero_add] using hcast
+              exact hsumEq.symm.trans h.1
+            have h10 :
+                ¬ ((((4 + b + s : ℕ) : ZMod m)) = (1 : ZMod m) ∧
+                    ((((m - x - 2) + b + s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              exact hi_ne_one h.1
+            have hneg20 :
+                ¬ ((((4 + b + s : ℕ) : ZMod m)) = (-2 : ZMod m) ∧
+                    ((((m - x - 2) + b + s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              exact hk_ne_zero h.2
+            have hneg1neg1 :
+                ¬ ((((4 + b + s : ℕ) : ZMod m)) = (-1 : ZMod m) ∧
+                    ((((m - x - 2) + b + s : ℕ) : ZMod m)) = (-1 : ZMod m)) := by
+              intro h
+              exact hi_ne_neg_one h.1
+            have h0line :
+                ¬ ((((4 + b + s : ℕ) : ZMod m)) = 0 ∧
+                    ((((m - x - 2) + b + s : ℕ) : ZMod m)) ≠ 0 ∧
+                    ((((m - x - 2) + b + s : ℕ) : ZMod m)) ≠ (-1 : ZMod m)) := by
+              intro h
+              exact hi_ne_zero h.1
+            have h1line :
+                ¬ ((((4 + b + s : ℕ) : ZMod m)) = (1 : ZMod m) ∧
+                    ((((m - x - 2) + b + s : ℕ) : ZMod m)) ≠ 0) := by
+              intro h
+              exact hi_ne_one h.1
+            have h2neg2 :
+                ¬ ((((4 + b + s : ℕ) : ZMod m)) = (2 : ZMod m) ∧
+                    ((((m - x - 2) + b + s : ℕ) : ZMod m)) = (-2 : ZMod m)) := by
+              intro h
+              exact hi_ne_two h.1
+            have h2neg1 :
+                ¬ ((((4 + b + s : ℕ) : ZMod m)) = (2 : ZMod m) ∧
+                    ((((m - x - 2) + b + s : ℕ) : ZMod m)) = (-1 : ZMod m)) := by
+              intro h
+              exact hi_ne_two h.1
+            have hneg2one :
+                ¬ ((((4 + b + s : ℕ) : ZMod m)) = (-2 : ZMod m) ∧
+                    ((((m - x - 2) + b + s : ℕ) : ZMod m)) = (1 : ZMod m)) := by
+              intro h
+              exact hk_ne_one h.2
+            simpa [Nat.cast_add, add_assoc, add_left_comm, add_comm] using
+              returnMap1CaseII_eq_bulk_of_not_special (m := m)
+                (i := (((4 + b + s : ℕ) : ZMod m)))
+                (k := ((((m - x - 2) + b + s : ℕ) : ZMod m)))
+                h00 hdiag h10 hneg20 hneg1neg1 h0line h1line h2neg2 h2neg1 hneg2one
+    _ = ((((4 + b + t : ℕ) : ZMod m)), ((((m - x - 2) + b + t : ℕ) : ZMod m))) := by
+          rw [iterate_bulkMap1CaseI (m := m) t
+            ((((4 + b : ℕ) : ZMod m)), ((((m - x - 2) + b : ℕ) : ZMod m)))]
+          simp [Nat.cast_add, add_assoc, add_left_comm, add_comm]
+
+theorem hfirst_line_odd_generic_caseII [Fact (9 < m)] (hm : m % 6 = 4)
+    {x : ℕ} (hx3 : 3 ≤ x) (hxle : x ≤ m - 7) (hxodd : Odd x) :
+    ∀ n, 0 < n →
+      n < rho1CaseII (m := m) (⟨x, by omega⟩ : Fin m) →
+        (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) (⟨x, by omega⟩ : Fin m)) ∉
+          Set.range (linePoint1 (m := m)) := by
+  let xFin : Fin m := ⟨x, by omega⟩
+  intro n hn0 hnlt
+  have hm0 : 0 < m := by
+    have hm9 : 9 < m := Fact.out
+    omega
+  letI : Fact (0 < m) := ⟨hm0⟩
+  let a : ℕ := (m - 1 - x) / 2
+  let b : ℕ := (x - 1) / 2
+  let c : ℕ := b + 3
+  have hxle5 : x ≤ m - 5 := by omega
+  have hx0 : xFin.1 ≠ 0 := by
+    simp [xFin]
+    omega
+  have hx1 : xFin.1 ≠ 1 := by
+    simp [xFin]
+    omega
+  have hx2 : xFin.1 ≠ 2 := by
+    simp [xFin]
+    omega
+  have hxm5 : xFin.1 ≠ m - 5 := by
+    simp [xFin]
+    omega
+  have hxm3 : xFin.1 ≠ m - 3 := by
+    simp [xFin]
+    omega
+  have hxm2 : xFin.1 ≠ m - 2 := by
+    simp [xFin]
+    omega
+  have hxm1 : xFin.1 ≠ m - 1 := by
+    simp [xFin]
+    omega
+  have hodd : xFin.1 % 2 = 1 := by
+    rcases hxodd with ⟨r, hr⟩
+    simpa [xFin, hr] using (show (r + r + 1) % 2 = 1 by omega)
+  have hrho : rho1CaseII (m := m) xFin = m + 4 := by
+    exact rho1CaseII_eq_m_add_four_of_odd_ne_special (m := m)
+      hx0 hx1 hx2 hxm5 hxm3 hxm2 hxm1 hodd
+  have hnm : n < m + 4 := by
+    simpa [xFin, hrho] using hnlt
+  have ha1 : 1 ≤ a := by
+    dsimp [a]
+    omega
+  have hprefixEnd :
+      (returnMap1CaseII (m := m)^[a]) (linePoint1 (m := m) xFin) =
+        ((((x + a : ℕ) : ZMod m)), (((a : ℕ) : ZMod m))) := by
+    simpa [xFin, a] using iterate_returnMap1CaseII_odd_prefix (m := m) hm hx3 hxle5 hxodd
+  have hdiagStart :
+      (returnMap1CaseII (m := m)^[a + 1]) (linePoint1 (m := m) xFin) =
+        ((((x + a + 2 : ℕ) : ZMod m)), (((a : ℕ) : ZMod m))) := by
+    rw [show a + 1 = 1 + a by omega, Function.iterate_add_apply]
+    rw [hprefixEnd]
+    simpa [a] using returnMap1CaseII_odd_diag (m := m) hm hx3 hxle5 hxodd
+  have hmidEnd :
+      (returnMap1CaseII (m := m)^[2 * a]) (linePoint1 (m := m) xFin) =
+        ((0 : ZMod m), (((m - x - 2 : ℕ) : ZMod m))) := by
+    rw [show 2 * a = (a - 1) + (a + 1) by omega, Function.iterate_add_apply]
+    rw [hdiagStart]
+    simpa [a] using iterate_returnMap1CaseII_odd_middle (m := m) hm hx3 hxle5 hxodd
+  have hvert0 :
+      (returnMap1CaseII (m := m)^[2 * a + 1]) (linePoint1 (m := m) xFin) =
+        ((1 : ZMod m), (((m - x - 2 : ℕ) : ZMod m))) := by
+    rw [show 2 * a + 1 = 1 + 2 * a by omega, Function.iterate_add_apply]
+    rw [hmidEnd]
+    simpa [Function.iterate_one] using returnMap1CaseII_odd_vertical_zero (m := m) hx3 hxle5
+  have hvert1 :
+      (returnMap1CaseII (m := m)^[2 * a + 2]) (linePoint1 (m := m) xFin) =
+        ((2 : ZMod m), (((m - x - 2 : ℕ) : ZMod m))) := by
+    rw [show 2 * a + 2 = 1 + (2 * a + 1) by omega, Function.iterate_add_apply]
+    rw [hvert0]
+    simpa [Function.iterate_one] using returnMap1CaseII_odd_vertical_one (m := m) hx3 hxle5
+  have hsuffixEnd :
+      (returnMap1CaseII (m := m)^[2 * a + 2 + b]) (linePoint1 (m := m) xFin) =
+        ((((2 + b : ℕ) : ZMod m)), ((((m - x - 2) + b : ℕ) : ZMod m))) := by
+    rw [show 2 * a + 2 + b = b + (2 * a + 2) by omega, Function.iterate_add_apply]
+    rw [hvert1]
+    simpa [b] using
+      iterate_returnMap1CaseII_odd_suffix_prefix (m := m) hm hx3 hxle5 hxodd
+  have hdiag2 :
+      (returnMap1CaseII (m := m)^[2 * a + 3 + b]) (linePoint1 (m := m) xFin) =
+        ((((4 + b : ℕ) : ZMod m)), ((((m - x - 2) + b : ℕ) : ZMod m))) := by
+    rw [show 2 * a + 3 + b = 1 + (2 * a + 2 + b) by omega, Function.iterate_add_apply]
+    rw [hsuffixEnd]
+    simpa [b] using returnMap1CaseII_odd_suffix_diag (m := m) hm hx3 hxle5 hxodd
+  by_cases hprefix : n ≤ a
+  · have hiter :
+        (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) xFin) =
+          ((((x + n : ℕ) : ZMod m)), (((n : ℕ) : ZMod m))) := by
+      simpa [xFin, a] using
+        iterate_returnMap1CaseII_odd_prefix_partial (m := m) hm (x := x) (t := n)
+          hx3 hxle5 hxodd hprefix
+    apply not_mem_range_linePoint1_of_snd_ne_zero
+    rw [hiter]
+    exact natCast_ne_zero_of_pos_lt (m := m) (n := n) hn0 (by omega)
+  · by_cases hdiag1 : n = a + 1
+    · have hiter :
+          (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) xFin) =
+            ((((x + a + 2 : ℕ) : ZMod m)), (((a : ℕ) : ZMod m))) := by
+        simpa [hdiag1] using hdiagStart
+      apply not_mem_range_linePoint1_of_snd_ne_zero
+      rw [hiter]
+      exact natCast_ne_zero_of_pos_lt (m := m) (n := a) ha1 (by omega)
+    · by_cases hmiddle : n ≤ 2 * a
+      · let t : ℕ := n - (a + 1)
+        have ht : t ≤ a - 1 := by
+          dsimp [t]
+          omega
+        have hnEq : n = a + 1 + t := by
+          dsimp [t]
+          omega
+        have hiter :
+            (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) xFin) =
+              ((((x + a + 2 + t : ℕ) : ZMod m)), (((a + t : ℕ) : ZMod m))) := by
+          rw [hnEq]
+          rw [show a + 1 + t = t + (a + 1) by omega, Function.iterate_add_apply]
+          rw [hdiagStart]
+          simpa [a] using
+            iterate_returnMap1CaseII_odd_middle_partial (m := m) hm
+              (x := x) (t := t) hx3 hxle5 hxodd ht
+        apply not_mem_range_linePoint1_of_snd_ne_zero
+        rw [hiter]
+        exact natCast_ne_zero_of_pos_lt (m := m) (n := a + t) (by omega) (by omega)
+      · by_cases hvert0' : n = 2 * a + 1
+        · have hiter :
+              (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) xFin) =
+                ((1 : ZMod m), (((m - x - 2 : ℕ) : ZMod m))) := by
+            simpa [hvert0'] using hvert0
+          apply not_mem_range_linePoint1_of_snd_ne_zero
+          rw [hiter]
+          exact natCast_ne_zero_of_pos_lt (m := m) (n := m - x - 2) (by omega) (by omega)
+        · by_cases hvert1' : n = 2 * a + 2
+          · have hiter :
+                (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) xFin) =
+                  ((2 : ZMod m), (((m - x - 2 : ℕ) : ZMod m))) := by
+              simpa [hvert1'] using hvert1
+            apply not_mem_range_linePoint1_of_snd_ne_zero
+            rw [hiter]
+            exact natCast_ne_zero_of_pos_lt (m := m) (n := m - x - 2) (by omega) (by omega)
+          · by_cases hsuffix : n ≤ 2 * a + 2 + b
+            · let t : ℕ := n - (2 * a + 2)
+              have ht : t ≤ b := by
+                dsimp [t, b]
+                omega
+              have hnEq : n = 2 * a + 2 + t := by
+                dsimp [t]
+                omega
+              have hiter :
+                  (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) xFin) =
+                    ((((2 + t : ℕ) : ZMod m)), ((((m - x - 2) + t : ℕ) : ZMod m))) := by
+                rw [hnEq]
+                rw [show 2 * a + 2 + t = t + (2 * a + 2) by omega, Function.iterate_add_apply]
+                rw [hvert1]
+                simpa [b] using
+                  iterate_returnMap1CaseII_odd_suffix_prefix_partial (m := m) hm
+                    (x := x) (t := t) hx3 hxle5 hxodd ht
+              apply not_mem_range_linePoint1_of_snd_ne_zero
+              rw [hiter]
+              exact natCast_ne_zero_of_pos_lt (m := m) (n := (m - x - 2) + t) (by omega) (by omega)
+            · by_cases hdiag2' : n = 2 * a + 3 + b
+              · have hiter :
+                    (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) xFin) =
+                      ((((4 + b : ℕ) : ZMod m)), ((((m - x - 2) + b : ℕ) : ZMod m))) := by
+                  simpa [hdiag2'] using hdiag2
+                apply not_mem_range_linePoint1_of_snd_ne_zero
+                rw [hiter]
+                exact natCast_ne_zero_of_pos_lt (m := m) (n := (m - x - 2) + b) (by omega) (by omega)
+              · let t : ℕ := n - (2 * a + 3 + b)
+                have hsum : m + 4 = 2 * a + 3 + b + c := by
+                  dsimp [a, b, c]
+                  rcases even_of_mod_six_eq_four (m := m) hm with ⟨q, hq⟩
+                  rcases hxodd with ⟨r, hr⟩
+                  rw [hq, hr]
+                  omega
+                have htlt : t < c := by
+                  dsimp [t]
+                  rw [hsum] at hnm
+                  omega
+                have ht : t ≤ c := Nat.le_of_lt htlt
+                have hnEq : n = 2 * a + 3 + b + t := by
+                  dsimp [t]
+                  omega
+                have hiter :
+                    (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) xFin) =
+                      ((((4 + b + t : ℕ) : ZMod m)), ((((m - x - 2) + b + t : ℕ) : ZMod m))) := by
+                  rw [hnEq]
+                  rw [show 2 * a + 3 + b + t = t + (2 * a + 3 + b) by omega,
+                    Function.iterate_add_apply]
+                  rw [hdiag2]
+                  simpa [b, c] using
+                    iterate_returnMap1CaseII_odd_suffix_tail_partial (m := m) hm
+                      (x := x) (t := t) hx3 hxle hxodd ht
+                apply not_mem_range_linePoint1_of_snd_ne_zero
+                rw [hiter]
+                exact natCast_ne_zero_of_pos_lt (m := m) (n := (m - x - 2) + b + t) (by omega)
+                  (by
+                    dsimp [b, c] at htlt
+                    omega)
+
+theorem iterate_returnMap1CaseII_m_sub_five_suffix_tail_prefix_partial [Fact (9 < m)]
+    (hm : m % 6 = 4) {t : ℕ} (ht : t ≤ m / 2 - 1) :
+    ((returnMap1CaseII (m := m)^[t])
+      ((((m / 2 + 1 : ℕ) : ZMod m)), (((m / 2 : ℕ) : ZMod m)))) =
+      ((((m / 2 + 1 + t : ℕ) : ZMod m)), (((m / 2 + t : ℕ) : ZMod m))) := by
+  have hmEven : Even m := even_of_mod_six_eq_four (m := m) hm
+  calc
+    ((returnMap1CaseII (m := m)^[t])
+      ((((m / 2 + 1 : ℕ) : ZMod m)), (((m / 2 : ℕ) : ZMod m))))
+        = ((bulkMap1CaseI (m := m)^[t])
+          ((((m / 2 + 1 : ℕ) : ZMod m)), (((m / 2 : ℕ) : ZMod m)))) := by
+            refine iterate_eq_iterate_of_eq_on_prefix
+              (F := returnMap1CaseII (m := m)) (G := bulkMap1CaseI (m := m))
+              (z := ((((m / 2 + 1 : ℕ) : ZMod m)), (((m / 2 : ℕ) : ZMod m)))) t ?_
+            intro s hs
+            rw [iterate_bulkMap1CaseI (m := m) s
+              ((((m / 2 + 1 : ℕ) : ZMod m)), (((m / 2 : ℕ) : ZMod m)))]
+            have hi_pos : 0 < m / 2 + 1 + s := by
+              rcases hmEven with ⟨q, hq⟩
+              rw [hq]
+              omega
+            have hi_lt : m / 2 + 1 + s < m := by
+              rcases hmEven with ⟨q, hq⟩
+              omega
+            have hk_pos : 0 < m / 2 + s := by
+              rcases hmEven with ⟨q, hq⟩
+              rw [hq]
+              omega
+            have hk_lt : m / 2 + s < m := by
+              rcases hmEven with ⟨q, hq⟩
+              omega
+            have hk_lt' : m / 2 + s + 1 < m := by
+              rcases hmEven with ⟨q, hq⟩
+              omega
+            have hi_ne_zero : (((m / 2 + 1 + s : ℕ) : ZMod m)) ≠ 0 := by
+              exact natCast_ne_zero_of_pos_lt (m := m) (n := m / 2 + 1 + s) hi_pos hi_lt
+            have hi_ne_one : (((m / 2 + 1 + s : ℕ) : ZMod m)) ≠ 1 := by
+              exact natCast_ne_one_of_two_le_lt (m := m) (n := m / 2 + 1 + s) (by
+                rcases hmEven with ⟨q, hq⟩
+                rw [hq]
+                omega) hi_lt
+            have hi_ne_two : (((m / 2 + 1 + s : ℕ) : ZMod m)) ≠ 2 := by
+              exact natCast_ne_natCast_of_lt (m := m) (a := m / 2 + 1 + s) (b := 2) hi_lt (by
+                have hm9 : 9 < m := Fact.out
+                omega) (by
+                rcases hmEven with ⟨q, hq⟩
+                rw [hq]
+                omega)
+            have hk_ne_zero : (((m / 2 + s : ℕ) : ZMod m)) ≠ 0 := by
+              exact natCast_ne_zero_of_pos_lt (m := m) (n := m / 2 + s) hk_pos hk_lt
+            have hk_ne_one : (((m / 2 + s : ℕ) : ZMod m)) ≠ 1 := by
+              exact natCast_ne_one_of_two_le_lt (m := m) (n := m / 2 + s) (by
+                rcases hmEven with ⟨q, hq⟩
+                rw [hq]
+                omega) hk_lt
+            have hk_ne_neg_one : (((m / 2 + s : ℕ) : ZMod m)) ≠ (-1 : ZMod m) := by
+              exact natCast_ne_neg_one_of_lt (m := m) (n := m / 2 + s) hk_lt'
+            have h00 :
+                ¬ ((((m / 2 + 1 + s : ℕ) : ZMod m)) = 0 ∧ (((m / 2 + s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              exact hi_ne_zero h.1
+            have hdiag :
+                ¬ ((((m / 2 + 1 + s : ℕ) : ZMod m)) + (((m / 2 + s : ℕ) : ZMod m)) = (-1 : ZMod m) ∧
+                    (((m / 2 + 1 + s : ℕ) : ZMod m)) ≠ 0 ∧
+                    (((m / 2 + 1 + s : ℕ) : ZMod m)) ≠ (1 : ZMod m) ∧
+                    (((m / 2 + 1 + s : ℕ) : ZMod m)) ≠ (-2 : ZMod m) ∧
+                    (((m / 2 + 1 + s : ℕ) : ZMod m)) ≠ (-1 : ZMod m)) := by
+              intro h
+              have hsum_ne : (((1 + 2 * s : ℕ) : ZMod m)) ≠ (-1 : ZMod m) := by
+                exact natCast_ne_neg_one_of_lt (m := m) (n := 1 + 2 * s) (by
+                  rcases hmEven with ⟨q, hq⟩
+                  omega)
+              apply hsum_ne
+              have hnat : m / 2 + 1 + s + (m / 2 + s) = m + (1 + 2 * s) := by
+                rcases hmEven with ⟨q, hq⟩
+                rw [hq]
+                omega
+              have hcast :
+                  ((((m / 2 + 1 + s : ℕ) : ZMod m)) + (((m / 2 + s : ℕ) : ZMod m))) =
+                    (((m + (1 + 2 * s) : ℕ) : ZMod m)) := by
+                simpa [Nat.cast_add, add_assoc, add_left_comm, add_comm] using
+                  congrArg (fun n : ℕ => ((n : ℕ) : ZMod m)) hnat
+              have hsumEq :
+                  ((((m / 2 + 1 + s : ℕ) : ZMod m)) + (((m / 2 + s : ℕ) : ZMod m))) =
+                    (((1 + 2 * s : ℕ) : ZMod m)) := by
+                simpa [Nat.cast_add, ZMod.natCast_self, zero_add] using hcast
+              exact hsumEq.symm.trans h.1
+            have h10 :
+                ¬ ((((m / 2 + 1 + s : ℕ) : ZMod m)) = (1 : ZMod m) ∧ (((m / 2 + s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              exact hi_ne_one h.1
+            have hneg20 :
+                ¬ ((((m / 2 + 1 + s : ℕ) : ZMod m)) = (-2 : ZMod m) ∧ (((m / 2 + s : ℕ) : ZMod m)) = 0) := by
+              intro h
+              exact hk_ne_zero h.2
+            have hneg1neg1 :
+                ¬ ((((m / 2 + 1 + s : ℕ) : ZMod m)) = (-1 : ZMod m) ∧ (((m / 2 + s : ℕ) : ZMod m)) = (-1 : ZMod m)) := by
+              intro h
+              exact hk_ne_neg_one h.2
+            have h0line :
+                ¬ ((((m / 2 + 1 + s : ℕ) : ZMod m)) = 0 ∧
+                    (((m / 2 + s : ℕ) : ZMod m)) ≠ 0 ∧
+                    (((m / 2 + s : ℕ) : ZMod m)) ≠ (-1 : ZMod m)) := by
+              intro h
+              exact hi_ne_zero h.1
+            have h1line :
+                ¬ ((((m / 2 + 1 + s : ℕ) : ZMod m)) = (1 : ZMod m) ∧
+                    (((m / 2 + s : ℕ) : ZMod m)) ≠ 0) := by
+              intro h
+              exact hi_ne_one h.1
+            have h2neg2 :
+                ¬ ((((m / 2 + 1 + s : ℕ) : ZMod m)) = (2 : ZMod m) ∧ (((m / 2 + s : ℕ) : ZMod m)) = (-2 : ZMod m)) := by
+              intro h
+              exact hi_ne_two h.1
+            have h2neg1 :
+                ¬ ((((m / 2 + 1 + s : ℕ) : ZMod m)) = (2 : ZMod m) ∧ (((m / 2 + s : ℕ) : ZMod m)) = (-1 : ZMod m)) := by
+              intro h
+              exact hi_ne_two h.1
+            have hneg2one :
+                ¬ ((((m / 2 + 1 + s : ℕ) : ZMod m)) = (-2 : ZMod m) ∧ (((m / 2 + s : ℕ) : ZMod m)) = (1 : ZMod m)) := by
+              intro h
+              exact hk_ne_one h.2
+            simpa [Nat.cast_add, add_assoc, add_left_comm, add_comm] using
+              returnMap1CaseII_eq_bulk_of_not_special (m := m)
+                (i := (((m / 2 + 1 + s : ℕ) : ZMod m))) (k := (((m / 2 + s : ℕ) : ZMod m)))
+                h00 hdiag h10 hneg20 hneg1neg1 h0line h1line h2neg2 h2neg1 hneg2one
+    _ = ((((m / 2 + 1 + t : ℕ) : ZMod m)), (((m / 2 + t : ℕ) : ZMod m))) := by
+          rw [iterate_bulkMap1CaseI (m := m) t
+            ((((m / 2 + 1 : ℕ) : ZMod m)), (((m / 2 : ℕ) : ZMod m)))]
+          simp [Nat.cast_add, add_assoc, add_left_comm, add_comm]
+
+theorem hfirst_line_m_sub_five_caseII [Fact (9 < m)] (hm : m % 6 = 4) {x : Fin m}
+    (hx : x.1 = m - 5) :
+    ∀ n, 0 < n →
+      n < rho1CaseII (m := m) x →
+        (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) ∉ Set.range (linePoint1 (m := m)) := by
+  intro n hn0 hnlt
+  have hm0 : 0 < m := by
+    have hm9 : 9 < m := Fact.out
+    omega
+  letI : Fact (0 < m) := ⟨hm0⟩
+  let x0 : Fin m := ⟨m - 5, by
+    have hm9 : 9 < m := Fact.out
+    omega⟩
+  have hx' : x = x0 := Fin.ext hx
+  have hrho : rho1CaseII (m := m) x = m + 4 := by
+    exact rho1CaseII_eq_m_add_four_of_val_eq_m_sub_five (m := m) hx
+  have hnm : n < m + 4 := by
+    rwa [hrho] at hnlt
+  have hx3 : 3 ≤ m - 5 := by
+    have hm9 : 9 < m := Fact.out
+    omega
+  have hxle : m - 5 ≤ m - 5 := le_rfl
+  let b : ℕ := ((m - 5) - 1) / 2
+  have hxb : m - 5 = 1 + 2 * b := by
+    dsimp [b]
+    rcases even_of_mod_six_eq_four (m := m) hm with ⟨q, hq⟩
+    rw [hq]
+    omega
+  have hxodd : Odd (m - 5) := by
+    refine ⟨b, ?_⟩
+    omega
+  have ha : (m - 1 - (m - 5)) / 2 = 2 := by
+    omega
+  have hthree : (((m - (m - 5) - 2 : ℕ) : ZMod m)) = (3 : ZMod m) := by
+    have hnat : m - (m - 5) - 2 = 3 := by omega
+    simpa [hnat]
+  have hbhalf : 2 + b = m / 2 - 1 := by
+    dsimp [b]
+    rcases even_of_mod_six_eq_four (m := m) hm with ⟨q, hq⟩
+    rw [hq]
+    omega
+  have hkhalf : (m - (m - 5) - 2) + b = m / 2 := by
+    dsimp [b]
+    rcases even_of_mod_six_eq_four (m := m) hm with ⟨q, hq⟩
+    rw [hq]
+    omega
+  have hbdiag : 4 + b = m / 2 + 1 := by
+    omega
+  have hprefix2 :
+      (returnMap1CaseII (m := m)^[2]) (linePoint1 (m := m) x) =
+        ((((m - 3 : ℕ) : ZMod m)), (2 : ZMod m)) := by
+    have hnat : m - 5 + 2 = m - 3 := by omega
+    have hiter :=
+      iterate_returnMap1CaseII_odd_prefix_partial (m := m) hm
+        (x := m - 5) (t := 2) hx3 hxle hxodd (by omega)
+    simpa [hx', x0, hnat] using hiter
+  have hdiag1 :
+      (returnMap1CaseII (m := m)^[3]) (linePoint1 (m := m) x) =
+        ((((m - 1 : ℕ) : ZMod m)), (2 : ZMod m)) := by
+    rw [show (3 : ℕ) = 1 + 2 by norm_num, Function.iterate_add_apply]
+    rw [hprefix2]
+    have hstart :
+        ((((m - 3 : ℕ) : ZMod m)), (2 : ZMod m)) =
+          ((((m - 5 : ℕ) : ZMod m) + 2), (2 : ZMod m)) := by
+      ext
+      · have hnat : m - 5 + 2 = m - 3 := by omega
+        calc
+          (((m - 3 : ℕ) : ZMod m)) = (((m - 5 + 2 : ℕ) : ZMod m)) := by simpa [hnat]
+          _ = (((m - 5 : ℕ) : ZMod m) + 2) := by simp [Nat.cast_add]
+      · rfl
+    rw [hstart]
+    have hnat : m - 5 + 2 + 2 = m - 1 := by omega
+    simpa [ha, hnat] using returnMap1CaseII_odd_diag (m := m) hm (x := m - 5) hx3 hxle hxodd
+  have hmidEnd :
+      (returnMap1CaseII (m := m)^[4]) (linePoint1 (m := m) x) =
+        ((0 : ZMod m), (3 : ZMod m)) := by
+    rw [show (4 : ℕ) = 1 + 3 by norm_num, Function.iterate_add_apply]
+    rw [hdiag1]
+    have hnat : m - 5 + 2 + 2 = m - 1 := by omega
+    simpa [ha, hthree, hnat] using
+      iterate_returnMap1CaseII_odd_middle (m := m) hm (x := m - 5) hx3 hxle hxodd
+  have hvert0 :
+      (returnMap1CaseII (m := m)^[5]) (linePoint1 (m := m) x) =
+        ((1 : ZMod m), (3 : ZMod m)) := by
+    rw [show (5 : ℕ) = 1 + 4 by norm_num, Function.iterate_add_apply]
+    rw [hmidEnd]
+    simpa [Function.iterate_one, hthree] using
+      returnMap1CaseII_odd_vertical_zero (m := m) (x := m - 5) hx3 hxle
+  have hvert1 :
+      (returnMap1CaseII (m := m)^[6]) (linePoint1 (m := m) x) =
+        ((2 : ZMod m), (3 : ZMod m)) := by
+    rw [show (6 : ℕ) = 1 + 5 by norm_num, Function.iterate_add_apply]
+    rw [hvert0]
+    simpa [Function.iterate_one, hthree] using
+      returnMap1CaseII_odd_vertical_one (m := m) (x := m - 5) hx3 hxle
+  have hsuffixEnd :
+      (returnMap1CaseII (m := m)^[m / 2 + 3]) (linePoint1 (m := m) x) =
+        ((((m / 2 - 1 : ℕ) : ZMod m)), (((m / 2 : ℕ) : ZMod m))) := by
+    have hsum : m / 2 + 3 = b + 6 := by
+      dsimp [b]
+      rcases even_of_mod_six_eq_four (m := m) hm with ⟨q, hq⟩
+      rw [hq]
+      omega
+    rw [hsum]
+    rw [Function.iterate_add_apply]
+    rw [hvert1]
+    simpa [b, hthree, hbhalf, hkhalf] using
+      iterate_returnMap1CaseII_odd_suffix_prefix (m := m) hm (x := m - 5) hx3 hxle hxodd
+  have hdiag2 :
+      (returnMap1CaseII (m := m)^[m / 2 + 4]) (linePoint1 (m := m) x) =
+        ((((m / 2 + 1 : ℕ) : ZMod m)), (((m / 2 : ℕ) : ZMod m))) := by
+    rw [show m / 2 + 4 = 1 + (m / 2 + 3) by omega, Function.iterate_add_apply]
+    rw [hsuffixEnd]
+    simpa [b, hthree, hbhalf, hkhalf, hbdiag] using
+      returnMap1CaseII_odd_suffix_diag (m := m) hm (x := m - 5) hx3 hxle hxodd
+  by_cases hprefix : n ≤ 2
+  · have hiter :
+        (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) =
+          ((((m - 5 + n : ℕ) : ZMod m)), (((n : ℕ) : ZMod m))) := by
+      have hprefix' : n ≤ (m - 1 - (m - 5)) / 2 := by
+        omega
+      simpa [hx', x0] using
+        iterate_returnMap1CaseII_odd_prefix_partial (m := m) hm
+          (x := m - 5) (t := n) hx3 hxle hxodd hprefix'
+    apply not_mem_range_linePoint1_of_snd_ne_zero
+    rw [hiter]
+    exact natCast_ne_zero_of_pos_lt (m := m) (n := n) hn0 (by omega)
+  · by_cases h3 : n = 3
+    · have hiter :
+          (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) =
+            ((((m - 1 : ℕ) : ZMod m)), (2 : ZMod m)) := by
+        simpa [h3] using hdiag1
+      apply not_mem_range_linePoint1_of_snd_ne_zero
+      rw [hiter]
+      exact two_ne_zero (m := m)
+    · by_cases h4 : n = 4
+      · have hiter :
+            (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) =
+              ((0 : ZMod m), (3 : ZMod m)) := by
+          simpa [h4] using hmidEnd
+        apply not_mem_range_linePoint1_of_snd_ne_zero
+        rw [hiter]
+        exact natCast_ne_zero_of_pos_lt (m := m) (n := 3) (by omega) (by omega)
+      · by_cases h5 : n = 5
+        · have hiter :
+              (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) =
+                ((1 : ZMod m), (3 : ZMod m)) := by
+            simpa [h5] using hvert0
+          apply not_mem_range_linePoint1_of_snd_ne_zero
+          rw [hiter]
+          exact natCast_ne_zero_of_pos_lt (m := m) (n := 3) (by omega) (by omega)
+        · by_cases h6 : n = 6
+          · have hiter :
+                (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) =
+                  ((2 : ZMod m), (3 : ZMod m)) := by
+              simpa [h6] using hvert1
+            apply not_mem_range_linePoint1_of_snd_ne_zero
+            rw [hiter]
+            exact natCast_ne_zero_of_pos_lt (m := m) (n := 3) (by omega) (by omega)
+          · by_cases hsuffix : n ≤ m / 2 + 3
+            · let t : ℕ := n - 6
+              have ht : t ≤ b := by
+                dsimp [t, b]
+                rcases even_of_mod_six_eq_four (m := m) hm with ⟨q, hq⟩
+                rw [hq] at hsuffix
+                omega
+              have hnEq : n = 6 + t := by
+                dsimp [t]
+                omega
+              have hiter :
+                  (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) =
+                    ((((2 + t : ℕ) : ZMod m)), (((3 + t : ℕ) : ZMod m))) := by
+                rw [hnEq]
+                rw [show 6 + t = t + 6 by omega, Function.iterate_add_apply]
+                rw [hvert1]
+                have hiter' :=
+                  iterate_returnMap1CaseII_odd_suffix_prefix_partial (m := m) hm
+                    (x := m - 5) (t := t) hx3 hxle hxodd ht
+                simpa [hthree, Nat.cast_add, add_assoc, add_left_comm, add_comm] using hiter'
+              apply not_mem_range_linePoint1_of_snd_ne_zero
+              rw [hiter]
+              exact natCast_ne_zero_of_pos_lt (m := m) (n := 3 + t) (by omega) (by omega)
+            · by_cases hdiag : n = m / 2 + 4
+              · have hiter :
+                    (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) =
+                      ((((m / 2 + 1 : ℕ) : ZMod m)), (((m / 2 : ℕ) : ZMod m))) := by
+                  simpa [hdiag] using hdiag2
+                apply not_mem_range_linePoint1_of_snd_ne_zero
+                rw [hiter]
+                exact natCast_ne_zero_of_pos_lt (m := m) (n := m / 2) (by omega) (by omega)
+              · let t : ℕ := n - (m / 2 + 4)
+                have htlt : t < m / 2 := by
+                  dsimp [t]
+                  omega
+                have ht : t ≤ m / 2 - 1 := by
+                  omega
+                have hnEq : n = m / 2 + 4 + t := by
+                  dsimp [t]
+                  omega
+                have hiter :
+                    (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) =
+                      ((((m / 2 + 1 + t : ℕ) : ZMod m)), (((m / 2 + t : ℕ) : ZMod m))) := by
+                  rw [hnEq]
+                  rw [show m / 2 + 4 + t = t + (m / 2 + 4) by omega, Function.iterate_add_apply]
+                  rw [hdiag2]
+                  simpa using
+                    iterate_returnMap1CaseII_m_sub_five_suffix_tail_prefix_partial
+                      (m := m) hm ht
+                apply not_mem_range_linePoint1_of_snd_ne_zero
+                rw [hiter]
+                exact natCast_ne_zero_of_pos_lt (m := m) (n := m / 2 + t) (by omega) (by omega)
+
+theorem hfirst_line_caseII [Fact (9 < m)] (hm : m % 6 = 4) (x : Fin m) :
+    ∀ n, 0 < n →
+      n < rho1CaseII (m := m) x →
+        (returnMap1CaseII (m := m)^[n]) (linePoint1 (m := m) x) ∉ Set.range (linePoint1 (m := m)) := by
+  by_cases hx0 : x.1 = 0
+  · have hx' : x = 0 := Fin.ext hx0
+    simpa [hx'] using hfirst_line_zero_caseII (m := m)
+  by_cases hx1 : x.1 = 1
+  · have hm9 : 9 < m := Fact.out
+    have h1val : ((1 : Fin m)).1 = 1 := by
+      show 1 % m = 1
+      exact Nat.mod_eq_of_lt (by omega)
+    have hx' : x = (1 : Fin m) := Fin.ext (hx1.trans h1val.symm)
+    simpa [hx'] using hfirst_line_one_caseII (m := m)
+  by_cases hx2 : x.1 = 2
+  · have hm9 : 9 < m := Fact.out
+    have h2val : ((2 : Fin m)).1 = 2 := by
+      show 2 % m = 2
+      exact Nat.mod_eq_of_lt (by omega)
+    have hx' : x = (2 : Fin m) := Fin.ext (hx2.trans h2val.symm)
+    simpa [hx'] using hfirst_line_two_caseII (m := m) hm
+  by_cases hxm5 : x.1 = m - 5
+  · exact hfirst_line_m_sub_five_caseII (m := m) hm hxm5
+  by_cases hxm3 : x.1 = m - 3
+  · exact hfirst_line_m_sub_three_caseII (m := m) hm hxm3
+  by_cases hxm2 : x.1 = m - 2
+  · have hm9 : 9 < m := Fact.out
+    let x0 : Fin m := ⟨m - 2, by omega⟩
+    have hx' : x = x0 := Fin.ext hxm2
+    simpa [hx', x0] using hfirst_line_m_sub_two_caseII (m := m)
+  by_cases hxm1 : x.1 = m - 1
+  · exact hfirst_line_m_sub_one_caseII (m := m) hm hxm1
+  have hmEven : Even m := even_of_mod_six_eq_four (m := m) hm
+  rcases Nat.even_or_odd x.1 with hxeven | hxodd
+  · have hx4 : 4 ≤ x.1 := by
+      rcases hxeven with ⟨k, hk⟩
+      omega
+    have hxle : x.1 ≤ m - 4 := by
+      rcases hxeven with ⟨k, hk⟩
+      rcases hmEven with ⟨r, hr⟩
+      omega
+    simpa using hfirst_line_even_generic_caseII (m := m) hm (x := x.1) hx4 hxle hxeven
+  · have hx3 : 3 ≤ x.1 := by
+      rcases hxodd with ⟨k, hk⟩
+      omega
+    have hxle : x.1 ≤ m - 7 := by
+      rcases hxodd with ⟨k, hk⟩
+      rcases hmEven with ⟨r, hr⟩
+      omega
+    simpa using hfirst_line_odd_generic_caseII (m := m) hm (x := x.1) hx3 hxle hxodd
+
+theorem cycleOn_returnMap1CaseII_caseII [Fact (9 < m)] (hm : m % 6 = 4) :
+    TorusD4.CycleOn (m ^ 2) (returnMap1CaseII (m := m))
+      (linePoint1 (m := m) (0 : Fin m)) := by
+  have hm0 : 0 < m := by
+    have hm9 : 9 < m := Fact.out
+    omega
+  letI : NeZero m := ⟨Nat.ne_of_gt hm0⟩
+  letI : Fact (0 < m) := ⟨hm0⟩
+  have hsumCard :
+      TorusD3Even.blockTime
+          (TorusD3Even.T1CaseII (m := m) hm)
+          (rho1CaseII (m := m))
+          ⟨0, hm0⟩
+          m = Fintype.card (P0Coord m) := by
+    simpa [P0Coord, ZMod.card, pow_two] using hsum_caseII (m := m) hm
+  simpa [P0Coord, ZMod.card, pow_two] using
+    (TorusD3Even.firstReturn_counting
+      (α := P0Coord m) (β := Fin m)
+      (F := returnMap1CaseII (m := m)) (embed := linePoint1 (m := m))
+      (T := TorusD3Even.T1CaseII (m := m) hm) (rho := rho1CaseII (m := m))
+      (M := m) (x0 := (0 : Fin m))
+      linePoint1_injective
+      (cycleOn_laneMap1_caseII_mod_four (m := m) hm)
+      (hreturn_line_caseII (m := m) hm)
+      (hfirst_line_caseII (m := m) hm)
+      hsumCard)
+
+theorem cycleOn_fullMap1CaseII_caseII [Fact (9 < m)] (hm : m % 6 = 4) :
+    TorusD4.CycleOn (m ^ 3) (fullMap1CaseII (m := m))
+      (slicePoint (0 : ZMod m) (linePoint1 (m := m) (0 : Fin m))) := by
+  have hm0 : 0 < m := by
+    have hm9 : 9 < m := Fact.out
+    omega
+  letI : Fact (0 < m) := ⟨hm0⟩
+  letI : NeZero m := ⟨Nat.ne_of_gt hm0⟩
+  exact cycleOn_full_of_cycleOn_p0 (m := m)
+    (F := fullMap1CaseII (m := m)) (T := returnMap1CaseII (m := m))
+    (hstep := fullMap1CaseII_snd (m := m))
+    (hreturn := iterate_m_fullMap1CaseII_slicePoint_zero (m := m))
+    (u := linePoint1 (m := m) (0 : Fin m))
+    (cycleOn_returnMap1CaseII_caseII (m := m) hm)
+
 end TorusD3Odometer
