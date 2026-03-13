@@ -1,0 +1,55 @@
+% D5 boundary reset theorem: proof attempt 055
+
+\paragraph{Boundary reset theorem (reduced uniform target).}
+Let
+\[
+B=(s,u,v,\lambda,f),\qquad \tau(x)=\max\{t\ge 0: dn(F^j x)=\delta_{\mathrm{flat}}\text{ for }0\le j<t\},
+\]
+with \(\delta_{\mathrm{flat}}=(0,0,0,1)\). Then away from the boundary,
+\[
+\tau(Fx)=\tau(x)-1\qquad (\tau(x)>0).
+\]
+So to prove the uniform odd-\(m\) boundary theorem it is enough to prove the following branch lemmas at \(\tau(x)=0\):
+\begin{enumerate}
+\item \emph{Wrap branch:}
+\[
+\epsilon_4(x)=\mathrm{wrap}\implies \tau(Fx)=0.
+\]
+\item \emph{Carry\_jump branch:} there is a current-state formula
+\[
+\tau(Fx)=R_{\mathrm{cj}}(s,v,\lambda),
+\]
+with checked candidate
+\[
+R_{\mathrm{cj}}(s,v,\lambda)=
+\begin{cases}
+0,& s+v+\lambda\equiv 2\pmod m,\\
+1,& s=1 \text{ and } s+v+\lambda\not\equiv 2\pmod m,\\
+m-2,& \text{otherwise}.
+\end{cases}
+\]
+Equivalently, on the checked range,
+\[
+q\equiv 1-s-v-\lambda\pmod m
+\]
+on the carry\_jump boundary.
+\item \emph{Other branch:} there is a current-state formula
+\[
+\tau(Fx)=R_{\mathrm{oth}}(s,u,\lambda).
+\]
+On the checked range the branch splits into the two concrete grouped-delta subtypes
+\[
+(0,0,1,0)\qquad\text{and}\qquad(1,0,0,0),
+\]
+with reset values
+\[
+(0,0,1,0)\mapsto m-4,
+\qquad
+(1,0,0,0)\mapsto
+\begin{cases}
+m-3,& s=1,\\
+0,& s\neq 1.
+\end{cases}
+\]
+\end{enumerate}
+Thus the full boundary theorem reduces to proving the branch lemmas uniformly in odd \(m\).

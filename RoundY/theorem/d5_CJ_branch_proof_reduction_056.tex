@@ -1,0 +1,50 @@
+% D5 CJ-first boundary reset proof reduction 056
+\begin{proposition}[Carry\_jump boundary reduction]
+Fix an odd modulus \(m\) and the active best-seed branch for \(R1\to H_{L1}\).
+Assume the theorem-side coordinates
+\[
+B=(s,u,v,\lambda,f),\qquad \tau,\qquad \epsilon_4.
+\]
+On the boundary \(\tau=0\) with \(\epsilon_4=\mathrm{carry\_jump}\), the checked reset law
+through \(m\le 23\) is
+\[
+R_{\mathrm{cj}}(s,v,\lambda)=
+\begin{cases}
+0,& s+v+\lambda\equiv 2 \pmod m,\\
+1,& s=1 \text{ and } s+v+\lambda\not\equiv 2 \pmod m,\\
+m-2,& \text{otherwise.}
+\end{cases}
+\]
+Equivalently, the current raw coordinate satisfies
+\[
+q\equiv 1-s-v-\lambda \pmod m.
+\]
+Moreover, if \(\rho=u_{\mathrm{source}}+1\) is the constructive source residue from the
+compute-side refinement, then on the carry\_jump boundary
+\[
+q\equiv u-\rho+1 \pmod m,
+\qquad
+\rho\equiv s+u+v+\lambda \pmod m.
+\]
+Therefore the uniform carry\_jump proof reduces to the noncarry dichotomy
+\[
+q\neq m-1
+\Longrightarrow
+R_{\mathrm{cj}}=
+\begin{cases}
+1,& s=1,\\
+m-2,& s\neq 1.
+\end{cases}
+\]
+\end{proposition}
+
+\begin{remark}[Proof program]
+The boundary reset theorem now splits into three parts:
+\begin{enumerate}
+\item wrap \(\mapsto 0\), already formal;
+\item the carry\_jump lemma above, whose only remaining content is the noncarry dichotomy;
+\item the \texttt{other} branch lemma, which still requires the two-subtype reduction.
+\end{enumerate}
+Thus the proof burden is no longer ``decode the future window'' but ``prove two explicit
+boundary branch lemmas, starting with carry\_jump.''
+\end{remark}
