@@ -1,0 +1,61 @@
+% D5 CJ uniform proof progress 057
+
+\begin{proposition}[Carry\_jump reduction to the flat corner]
+Let
+\[
+B=(s,u,v,\lambda,f),\qquad \tau,\qquad \epsilon_4\in\{\mathrm{flat},\mathrm{wrap},\mathrm{carry\_jump},\mathrm{other}\},
+\]
+and let \(\rho=u_{\mathrm{source}}+1\) be used only as an auxiliary proof device.
+Define
+\[
+\delta:=\rho-(s+u+v+\lambda)\in\mathbb Z_m.
+\]
+Assume the checked identities
+\[
+q\equiv u-\rho+1 \pmod m
+\quad\text{on }\epsilon_4=\mathrm{carry\_jump},
+\qquad
+q\equiv 1-s-v-\lambda \pmod m
+\quad\text{on }\epsilon_4=\mathrm{carry\_jump}.
+\]
+Then on a carry\_jump boundary state \(x\) with \(c(x)=0\), its successor
+\(y=F(x)\) is flat and satisfies
+\[
+\delta(y)=m-2,
+\qquad
+s(y)=s(x)+1.
+\]
+Consequently, if the flat-corner rule
+\[
+\epsilon_4(Fy)=
+\begin{cases}
+\mathrm{other},& \delta(y)=m-2 \text{ and } s(y)=2,\\
+\mathrm{flat},& \delta(y)=m-2 \text{ and } s(y)\neq 2,
+\end{cases}
+\]
+holds uniformly in odd \(m\), then the carry\_jump reset law follows:
+\[
+R_{\mathrm{cj}}(x)=
+\begin{cases}
+0,& q(x)=m-1,\\
+1,& q(x)\neq m-1 \text{ and } s(x)=1,\\
+m-2,& q(x)\neq m-1 \text{ and } s(x)\neq 1.
+\end{cases}
+\]
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+The zero-reset branch is exactly the carry slice \(q=m-1\).  On the noncarry
+branch, carry\_jump has \(dn=(1,1,0,0)\), so \(s\) and \(u\) both increase by one
+while \(v\) and \(\lambda\) remain fixed.  The formula for \(q\) on the
+carry\_jump boundary implies that \(q\) is unchanged across the step, and hence
+\[
+\delta(y)=\rho-(s(y)+u(y)+v(y)+\lambda(y))
+=\rho-(s(x)+u(x)+v(x)+\lambda(x)+2)
+\equiv -2\equiv m-2.
+\]
+Thus every noncarry carry\_jump state lands in a flat state with
+\(\delta=m-2\).  If the flat-corner rule holds, then this successor has
+\(\tau=1\) exactly when \(s(y)=2\), and otherwise \(\tau=m-2\).  Since
+\(s(y)=s(x)+1\), this is equivalent to the stated noncarry dichotomy.
+\end{proof}

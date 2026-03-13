@@ -1,0 +1,74 @@
+\begin{proposition}[Bootstrap $B$-region invariance from the mixed witness scheduler]
+Fix odd $m$ and the best seed $L=[2,2,1]$, $R=[1,4,4]$. Let the active branch start at the alternate-$2$ entry
+\[
+E_\rho=(q,w,\Theta)=(m-1,1,2).
+\]
+Assume the extracted first-exit targets
+\[
+(\Theta,q,w)=(1,m-1,m-2)\quad\text{and}\quad(1,m-2,m-1),
+\]
+with associated cross-section indices
+\[
+\eta_{\mathrm{reg}}=m(m-3),\qquad \eta_{\mathrm{exc}}=m(m-2)-1,
+\]
+where
+\[
+\eta(q,w)=q+m(w-1)-(m-1).
+\]
+Then every nonterminal current state on the active branch is $B$-labeled.
+
+\begin{proof}
+Suppose not, and let $t\ge 0$ be the first time a nonterminal current state $x_t$ is not $B$-labeled. Then every earlier current state $x_0,\dots,x_{t-1}$ is $B$-labeled, so the unmodified mixed witness rule applies there.
+
+For current $B$-states, the witness changes $(q,w,\Theta)$ by
+\[
+(q,w,0)\mapsto(q+1,w,1),\qquad (q,w,1)\mapsto(q,w,2),
+\]
+\[
+(q,w,2)\mapsto(q,w+\mathbf 1_{\{q=m-1\}},3),\qquad (q,w,\Theta)\mapsto(q,w,\Theta+1)
+\]
+for $3\le \Theta\le m-1$. Hence the induced return map on the section $\Sigma=\{\Theta=2\}$ is
+\[
+T(q,w)=(q+1,\;w+\mathbf 1_{\{q=m-1\}}),
+\]
+starting from $(m-1,1)$, i.e. $\eta\mapsto\eta+1$.
+
+The six modified current classes have supports
+\[
+R1=(1,m-1,0),\quad L1=(1,m-1,m-1),\quad R2=(2,0,0),
+\]
+\[
+L2=(2,m-1,0),\quad R3=(3,0,0),\quad L3=(3,m-1,1),
+\]
+and their associated section indices are
+\[
+\eta(R1)=\eta(L2)=\eta(L3)=m^2-m,
+\]
+\[
+\eta(R2)=\eta(R3)=m(m-2)+1,
+\]
+\[
+\eta(L1)=m(m-2).
+\]
+So every non-$B$ current class has associated index at least $m(m-2)$.
+
+But $x_t$ is assumed nonterminal, so its associated section state still lies before first exit; therefore its index is strictly less than $m(m-2)$, since even the exceptional first exit occurs at $\eta_{\mathrm{exc}}=m(m-2)-1$. Contradiction.
+
+Therefore no nonterminal current state can be non-$B$, and the active branch stays in the unmodified $B$-region up to first exit.
+\end{proof}
+\end{proposition}
+
+\begin{corollary}[Global raw law and phase scheduler]
+On the active nonterminal branch one has the raw current-coordinate law
+\[
+(q,w,0)\mapsto(q+1,w,1),\quad (q,w,1)\mapsto(q,w,2),
+\]
+\[
+(q,w,2)\mapsto(q,w+\mathbf 1_{\{q=m-1\}},3),\quad (q,w,\Theta)\mapsto(q,w,\Theta+1)
+\]
+for $3\le \Theta\le m-1$, and the return map on $\Sigma=\{\Theta=2\}$ is
+\[
+T(q,w)=(q+1,\;w+\mathbf 1_{\{q=m-1\}}).
+\]
+Consequently the mixed-witness phase scheduler in $\Theta=q+s+v+\lambda$ applies exactly at every nonterminal current state, and the flat-corner law, $CJ$, and $OTH$ follow as corollaries.
+\end{corollary}

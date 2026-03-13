@@ -1,0 +1,70 @@
+\begin{theorem}[Active phase-event scheduler on the best-seed branch]\label{thm:d5-active-phase-scheduler}
+Fix odd $m$ and the active nonterminal best-seed branch of the unresolved channel $R1\to H_{L1}$. Let
+\[
+B=(s,u,v,\lambda,f),\qquad
+\Theta:=q+s+v+\lambda\pmod m,
+\qquad c:=\mathbf 1_{\{q=m-1\}}.
+\]
+Then the current grouped event is determined by $(\Theta,s,c)$ as follows:
+\[
+\Theta=0 \Rightarrow \epsilon_4=\mathrm{wrap},\quad dn=(0,0,0,0),
+\]
+\[
+\Theta=1 \Rightarrow \epsilon_4=\mathrm{carry\_jump},\quad dn=(1,1,0,0),
+\]
+\[
+\Theta=2 \Rightarrow
+\begin{cases}
+\epsilon_4=\mathrm{other},\ dn=(1,0,0,0),& c=1,\\
+\epsilon_4=\mathrm{flat},\ dn=(0,0,0,1),& c=0,
+\end{cases}
+\]
+\[
+\Theta=3 \Rightarrow
+\begin{cases}
+\epsilon_4=\mathrm{other},\ dn=(0,0,1,0),& (c=0 \text{ and } s=2) \text{ or } (c=1 \text{ and } s\neq 2),\\
+\epsilon_4=\mathrm{flat},\ dn=(0,0,0,1),& \text{otherwise},
+\end{cases}
+\]
+and for every $4\le \Theta\le m-1$ one has
+\[
+\epsilon_4=\mathrm{flat},\qquad dn=(0,0,0,1).
+\]
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+On the active nonterminal branch every state is still $B$-labeled, so the outgoing direction is given by the unmodified mixed witness $\mathrm{mixed\_008}$. Its current layer bucket is precisely
+\[
+\Theta=x_0+x_1+x_2+x_3+x_4=q+w+u+v+\lambda=q+s+v+\lambda \pmod m.
+\]
+The witness rule uses anchor $1$ at layer $0$, anchor $4$ at layer $1$, the old-bit orientation $0/2$ at layer $2$ with old bit $c=\mathbf 1_{\{q=m-1\}}$, the predecessor-flag mode switch at layer $3$, and anchor $0$ at every layer $\ge 4$.
+
+For color $0$, the predecessor flag $\mathrm{pred\_sig1\_wu2}$ is exactly the condition $s=2$, because predecessor direction $1$ changes only $q$ and leaves $(w,u)$ unchanged. Hence at phase $\Theta=3$ the witness chooses anchor $3$ exactly in the two cases $(c=0,s=2)$ and $(c=1,s\neq 2)$, and chooses anchor $0$ otherwise.
+
+Finally, anchor $0$ increments $\lambda$, anchor $1$ increments $q$, anchor $2$ increments $w$, anchor $3$ increments $v$, and anchor $4$ increments $u$. Translating those anchors to grouped deltas gives the displayed table.
+\end{proof}
+
+\begin{corollary}[CJ and OTH as scheduler corollaries]
+The checked branch-reset formulas for $\mathrm{CJ}$ and $\mathrm{OTH}$ follow formally from Theorem~\ref{thm:d5-active-phase-scheduler}. In particular,
+\[
+q\equiv 1-s-v-\lambda \pmod m
+\]
+on carry-jump states, the zero-reset fiber is $s+v+\lambda\equiv 2$, and the noncarry carry-jump reset is
+\[
+R_{\mathrm{cj}}=
+\begin{cases}
+1,& s=1,\\
+m-2,& s\neq 1.
+\end{cases}
+\]
+Moreover, the two `other' subtypes satisfy
+\[
+(1,0,0,0)\mapsto
+\begin{cases}
+m-3,& s=1,\\
+0,& s\neq 1,
+\end{cases}
+\qquad
+(0,0,1,0)\mapsto m-4.
+\]
+\end{corollary}

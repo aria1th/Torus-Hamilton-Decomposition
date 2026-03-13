@@ -1,0 +1,52 @@
+\begin{proposition}[CJ from the active phase-event law]
+Keep the theorem object
+\[
+B=(s,u,v,\lambda,f),\qquad \tau,\qquad \epsilon_4.
+\]
+Define the active phase
+\[
+\Theta:=q+s+v+\lambda\pmod m.
+\]
+Assume the active branch satisfies the phase-event law
+\begin{align*}
+\Theta=0 &\Longrightarrow \epsilon_4=\mathrm{wrap},\\
+\Theta=1 &\Longrightarrow \epsilon_4=\mathrm{carry\_jump},\\
+\Theta=2 &\Longrightarrow \epsilon_4=\mathrm{other}\iff c=1,\\
+\Theta=3 &\Longrightarrow \epsilon_4=\mathrm{other}\iff \bigl(c=0\text{ and }s=2\bigr)\text{ or }\bigl(c=1\text{ and }s\neq 2\bigr),\\
+4\le \Theta\le m-1 &\Longrightarrow \epsilon_4=\mathrm{flat}.
+\end{align*}
+Then the flat-corner law follows:
+\[
+\delta=1 \Longrightarrow \text{next event is wrap},
+\]
+\[
+2\le \delta\le m-3 \Longrightarrow \text{next event is flat},
+\]
+\[
+\delta=m-2 \Longrightarrow
+\begin{cases}
+\text{next event is other},& s=2,\\
+\text{next event is flat},& s\neq 2.
+\end{cases}
+\]
+Consequently, the carry\_jump reset theorem follows:
+\[
+R_{\mathrm{cj}}=
+\begin{cases}
+0,& s+v+\lambda\equiv 2\pmod m,\\
+1,& s=1\text{ and }s+v+\lambda\not\equiv 2\pmod m,\\
+m-2,& \text{otherwise}.
+\end{cases}
+\]
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+On flat states one has
+\[
+\delta\equiv -\Theta\pmod m.
+\]
+If \(\delta=1\), then \(\Theta=m-1\) and the successor has phase \(0\), hence is wrap.
+If \(2\le \delta\le m-3\), then the successor phase lies in \(\{4,\dots,m-1\}\), hence is flat.
+If \(\delta=m-2\), then the current flat state has \(\Theta=2\), so the phase-event law forces \(c=0\); its successor has \(\Theta=3\) with the same \(s\) and \(c=0\), hence is other iff \(s=2\).
+This is exactly the flat-corner law.  The previously established carry\_jump reduction then yields the stated formula for \(R_{\mathrm{cj}}\).
+\end{proof}
