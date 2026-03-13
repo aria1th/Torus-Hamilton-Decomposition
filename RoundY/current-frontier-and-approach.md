@@ -19,6 +19,8 @@ Use it together with:
 - [theorem/d5_proof_program_050.md](./theorem/d5_proof_program_050.md)
 - [theorem/d5_boundary_reset_and_tau_proof_052.md](./theorem/d5_boundary_reset_and_tau_proof_052.md)
 - [theorem/d5_positive_theorem_chain_054.md](./theorem/d5_positive_theorem_chain_054.md)
+- [theorem/d5_boundary_reset_uniform_proof_attempt_055.md](./theorem/d5_boundary_reset_uniform_proof_attempt_055.md)
+- [theorem/d5_CJ_branch_proof_reduction_056.md](./theorem/d5_CJ_branch_proof_reduction_056.md)
 - [DOCUMENT_FOR_EXTERNAL_REVIEW.md](../DOCUMENT_FOR_EXTERNAL_REVIEW.md)
 - [formal/README-D5.md](../formal/README-D5.md)
 
@@ -31,7 +33,7 @@ RoundY D5 support files now live in:
 
 ## Current real problem
 
-After artifacts `017–050`, the live D5 obstruction is no longer:
+After artifacts `017–055`, the live D5 obstruction is no longer:
 
 - missing clean frame
 - missing Latin feasibility
@@ -144,6 +146,16 @@ What is already known:
   The `048` reset law remains exact on the same theorem-side quotients, and
   the explicit `047/048` witness pair persists with the same `m-4` lower-bound
   shape.
+- `052`: the proof-direction evidence stays stable through `m=19`.
+  The expected per-modulus horizon pattern persists, the positive-route
+  reset-law support stays exact, and the negative-route witness support
+  remains stable.
+- `055`: the positive route sharpens further through `m=23`.
+  The `carry_jump` branch formula, the raw identity
+  `q = 1-s-v-layer`, the `other`-branch subtype law, and `wrap -> 0`
+  all remain exact on the extended checked range.
+  So the honest positive-route target is no longer a vague uniform reset law;
+  it is the proof of the two branch lemmas `CJ` and `OTH`.
 
 So the next branch should be read as:
 
@@ -189,10 +201,11 @@ The proof program itself now has two honest routes sharing that same picture:
   explicit witness family showing that no fixed future flat/nonflat horizon
   can code the carry sheet uniformly in `m`;
 - positive route:
-  package `048/050/052` into a countdown/reset theorem where `tau` is the main
-  hidden datum, `tau_next = tau-1` away from the boundary, and the `tau=0`
-  reset is governed by the small current-state classes `wrap`, `carry_jump`,
-  and `other`;
+  package `048/050/052/055/056` into a countdown/reset theorem where `tau` is
+  the main hidden datum, `tau_next = tau-1` away from the boundary, and the
+  `tau=0` reset is governed by the small current-state classes `wrap`,
+  `carry_jump`, and `other`, with the remaining burden reduced to the two
+  branch lemmas `CJ` and `OTH`;
 - compute route:
   allow the stronger current-memory refinement `(B,rho)` from `049` when the
   goal is constructive support rather than the theorem-side minimal object.

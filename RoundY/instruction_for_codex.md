@@ -42,6 +42,7 @@ Then read the key artifact READMEs in this order:
 21. [../artifacts/d5_tau_countdown_carrier_048/README.md](../artifacts/d5_tau_countdown_carrier_048/README.md)
 22. [../artifacts/d5_source_residue_refinement_049/README.md](../artifacts/d5_source_residue_refinement_049/README.md)
 23. [../artifacts/d5_proof_support_generalization_050/README.md](../artifacts/d5_proof_support_generalization_050/README.md)
+24. [../artifacts/d5_boundary_reset_proof_support_055/README.md](../artifacts/d5_boundary_reset_proof_support_055/README.md)
 
 If working on Lean / formalization, then also read:
 
@@ -60,19 +61,22 @@ For D5 support files inside this repo, use this layout:
 - `RoundY/theorem/` for theorem-shaping notes and snippets
 - root `RoundY/` for short session summaries such as `codex_work_s59.md`
 
-For the current theorem-side packaging around `047–054`, start with:
+For the current theorem-side packaging around `047–056`, start with:
 
 1. [theorem/d5_proof_program_050.md](./theorem/d5_proof_program_050.md)
 2. [theorem/d5_proof_generalization_051.md](./theorem/d5_proof_generalization_051.md)
 3. [theorem/d5_boundary_reset_and_tau_proof_052.md](./theorem/d5_boundary_reset_and_tau_proof_052.md)
 4. [theorem/d5_positive_theorem_chain_054.md](./theorem/d5_positive_theorem_chain_054.md)
+5. [theorem/d5_boundary_reset_uniform_proof_attempt_055.md](./theorem/d5_boundary_reset_uniform_proof_attempt_055.md)
+6. [theorem/d5_CJ_branch_proof_reduction_056.md](./theorem/d5_CJ_branch_proof_reduction_056.md)
 
 These notes spell out the actual proof split:
 
 - negative route:
   bounded-horizon no-go via the `046/047/048` witness family
 - positive route:
-  countdown/reset theorem packaging for `tau`
+  countdown/reset theorem packaging for `tau`, now sharpened to the branch
+  lemmas `CJ` and `OTH`
 - compute support:
   stronger `(B,rho)` refinement only when explicitly using a constructive
   branch
@@ -85,7 +89,7 @@ Do not frame the problem as:
 - “find a better one-bit separator”
 - “try a slightly larger tiny transducer”
 
-The real frontier after `050` is:
+The real frontier after `055` is:
 
 **find an admissible/local coding of the countdown carrier `tau`, now that the structural theorem
 branch is explicit, the first carry-only admissible catalogs are dead, the

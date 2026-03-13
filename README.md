@@ -1,10 +1,34 @@
-# Hamilton decompositions of the directed 3-torus
+# Hamilton decompositions of low-dimensional directed tori
 
-This bundle contains the editorial-revision manuscript and supporting
-information for:
+This repository now contains the full low-dimensional program around directed
+torus Hamilton decompositions:
+
+- `d=3`: solved manuscript for all `m >= 3`
+- `d=4`: solved in the same return-map / odometer language, with Lean
+  formalization
+- `d=5`: active frontier, currently reduced to a boundary-reset / countdown
+  carrier theorem problem
+
+The original core manuscript in this bundle is:
 
 *Hamilton decompositions of the directed 3-torus `D(m)`: explicit constructions
 for all `m >= 3`* by Sanghyun Park.
+
+## Current repository status
+
+The repo is no longer just the original `d=3` manuscript bundle.
+
+- `tex/` and the main manuscript files still center the finished `d=3` paper
+- `RoundX/` contains the finished `d=4` proof program
+- `formal/` contains the Lean development, including a complete `d=4`
+  formalization and a now-complete `d=3` odometer color-1 checkpoint
+- `RoundY/` contains the live `d=5` frontier
+
+For the current research-facing status, start with:
+
+- [RESEARCH_HIGHLIGHTS.md](RESEARCH_HIGHLIGHTS.md)
+- [RESEARCH_PROGRESSION.md](RESEARCH_PROGRESSION.md)
+- [RoundY/README.md](RoundY/README.md)
 
 ## Context
 
@@ -30,7 +54,8 @@ mathematical treatment for all `m >= 3`, including:
 ```
 .
 ├── README.md
-├── RESEARCH_PROGRESSION.md   ← 연구 진행 타임라인
+├── RESEARCH_HIGHLIGHTS.md    ← 현재 연구 하이라이트
+├── RESEARCH_PROGRESSION.md   ← 전체 연구 진행 타임라인
 ├── CITATION.cff
 ├── LICENSE
 ├── .gitignore
@@ -59,6 +84,17 @@ mathematical treatment for all `m >= 3`, including:
 │   ├── codex_job_request{,_2,_3}.md
 │   ├── d4_line_union_general_theorem_proof_final.{tex,md}
 │   └── d3torus_..._v5.tex    (최종 submission 후보)
+│
+├── RoundY/                   ← d=5 현재 frontier
+│   ├── README.md
+│   ├── current-frontier-and-approach.md
+│   ├── theorem/
+│   └── autonomous/
+│
+├── formal/                   ← Lean formalization
+│   ├── README.md
+│   ├── TorusD4/
+│   └── TorusD5/
 │
 ├── 4d_generalization/        ← 4D 연구 메모
 │
@@ -108,22 +144,49 @@ line-union gauge witness:
 The proof relies on a two-level return map → odometer conjugacy structure.
 See `RESEARCH_PROGRESSION.md` for the full narrative of how this was discovered.
 
+## d=5 frontier (RoundY)
+
+The `RoundY/` directory contains the current `d=5` research frontier.
+This case is still open, but the question is now much narrower than a generic
+search problem. The active theorem-side object is a finite-cover normal form
+with a countdown carrier and a boundary reset law.
+
+Start with:
+
+- `RoundY/README.md`
+- `RoundY/current-frontier-and-approach.md`
+- `RoundY/theorem/`
+
+## Lean formalization checkpoint
+
+The `formal/` tree now contains:
+
+- a complete `d=4` formalization;
+- a complete `d=3` odometer color-1 rewrite through both Case I and Case II;
+- the early extracted-model scaffolding for `d=5`.
+
+So the live formal scope question is no longer whether the Case-II color-1
+odometer package closes. It does. The next scope decision is whether to stop at
+that strong `d=3` checkpoint or continue to a larger color-0 rewrite.
+
 ## Research progression
 
 See [`RESEARCH_PROGRESSION.md`](RESEARCH_PROGRESSION.md) for a detailed
-chronological account of the one-week research arc, including:
+chronological account of the full research arc, including:
 
 - AI-assisted proof restructuring (orbit tracing → height comparison → finite splice)
 - Multi-stage referee feedback loop (6/10 → 8/10)
 - d=4 generalization breakthrough
+- d=5 reduction from broad search to the countdown-carrier / boundary-reset frontier
 
 ## AI tooling disclosure
 
-During the development of this manuscript, the author used GPT-5.4 Pro,
-Codex 5.3, and Opus 4.6 for exploratory case analysis, candidate proof
-directions, validation-code assistance, internal critique, and language
-revision. The author independently reviewed and edited all outputs and takes
-full responsibility for the final content.
+During the development of this manuscript and the broader low-dimensional
+research program, the author used GPT-5.4, GPT-5.4 Pro, Codex 5.3, Gemini 3.1
+Deep Think, and Opus 4.6 for exploratory case analysis, theorem packaging,
+candidate proof directions, validation-code assistance, internal critique, and
+language revision. The author independently reviewed and edited all outputs and
+takes full responsibility for the final content.
 
 ## Citation and license
 

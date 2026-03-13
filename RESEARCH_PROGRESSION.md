@@ -1,6 +1,6 @@
 # Research Progression: Hamilton Decompositions of the Directed d-Torus
 
-*Sanghyun Park, March 2–9, 2026 (one week)*
+*Sanghyun Park, March 2–13, 2026*
 
 이 문서는 레포지토리의 파일들을 시간순·내용순으로 정리하여,
 논문이 어떠한 경로를 거쳐 현재 형태에 이르렀는지를 기록합니다.
@@ -18,6 +18,7 @@ flowchart LR
     E --> F["3/9 오전<br>RoundX: 4D 일반화"]
     F --> G["3/9 11:01<br>d=4 완전 증명 완성"]
     G --> H["3/9 12:00<br>d=3 v6 + d=4 v3<br>교차 검증"]
+    H --> I["3/9–3/13<br>RoundY: d=5 return-map extraction<br>→ finite cover → countdown carrier"]
 ```
 
 ---
@@ -197,6 +198,92 @@ v3에서 모든 이슈 수정 완료. 핵심 수정: Prop 5–6의 counting argu
 
 ---
 
+## Phase 6: RoundY — d=5 frontier의 성숙 (3월 9–13일)
+
+### 핵심 파일
+| 파일 | 내용 |
+|---|---|
+| `RoundY/README.md` | 현재 d=5 frontier의 전체 맵 |
+| `RoundY/current-frontier-and-approach.md` | 현재 문제와 작업 방식 요약 |
+| `RoundY/theorem/d5_proof_direction_compute_support_052.md` | theorem-side compute support 요약 |
+| `RoundY/theorem/d5_positive_theorem_chain_054.md` | positive theorem chain 초안 |
+| `RoundY/theorem/d5_boundary_reset_uniform_proof_attempt_055.md` | boundary reset uniform proof attempt |
+| `RoundY/theorem/d5_CJ_branch_proof_reduction_056.md` | CJ-first proof reduction |
+| `artifacts/d5_return_map_model_017/` | mixed witness return-map extraction |
+| `artifacts/d5_carry_and_finite_cover_044/` | finite-cover normal form |
+| `artifacts/d5_tau_countdown_carrier_048/` | countdown carrier law |
+| `artifacts/d5_proof_direction_evidence_052/` | larger-modulus proof-support bundle |
+| `artifacts/d5_boundary_reset_proof_support_055/` | `CJ` / `OTH` branch formula extension to `m=21,23` |
+
+### 개념적 진화
+
+```
+mixed witness survives
+    ↓
+return-map extraction (017–019)
+    ↓
+reduced perturbation target (023–025)
+    ↓
+finite-cover normal form B <- B+c <- B+c+d (044)
+    ↓
+carry = future transition datum (046)
+    ↓
+boundary sharpening to (B, tau, epsilon4) (047)
+    ↓
+tau = countdown carrier with boundary reset law (048)
+    ↓
+proof-support generalization through m=19, then branch support to m=21,23 and CJ-first reduction (050,052,055,056)
+```
+
+### 현재 d=5 수학 상태
+
+`d=5`는 더 이상 “witness를 더 찾자” 단계가 아니다.
+현재 theorem-side object는
+
+\[
+(B,\tau,\epsilon_4),
+\qquad
+B=(s,u,v,\lambda,f),
+\]
+
+이고, active best-seed branch에서의 질문은 이제 다음으로 압축된다.
+
+1. `tau>0`에서는 형식적으로
+   \[
+   \tau'=\tau-1;
+   \]
+2. 따라서 모든 실제 수학 내용은 boundary `tau=0`에 있다;
+3. uniform odd-`m` theorem은
+   - `wrap`
+   - `CJ` (`carry_jump`)
+   - `OTH` (`other`)
+   의 세 branch lemma로 환원된다.
+
+즉, d=5는 “탐색 문제”에서 “boundary reset theorem 문제”로 바뀌었다.
+
+### 병행 formal checkpoint
+
+같은 시기에 `formal/`에서도 독립적인 checkpoint가 닫혔다.
+
+- `formal/TorusD3Odometer/Color1FullCaseII.lean`가 이제 Case-II counting,
+  `hfirst`, global dispatcher, full cycle theorem까지 닫는다
+- 따라서 `d=3` odometer color-1 Lean rewrite는 Case I / Case II 전체가 완결되었다
+- formal 쪽의 다음 질문은 “Case II가 되느냐”가 아니라
+  “이 강한 color-1 checkpoint에서 멈출지, color-0 full rewrite까지 갈지” 이다
+
+### 이 phase의 의미
+
+이 phase는 low-dimensional program 전체를 정리한다.
+
+- `d=3`: 완성 manuscript
+- `d=4`: 완전 증명 + Lean formalization
+- `d=5`: theorem-shaped frontier 확보
+
+그래서 현재 열린 건 단순히 “계산이 덜 된 case”가 아니라, 전체 프로그램의 마지막
+실질적 개념 병목이다.
+
+---
+
 ## 전체 서사 요약
 
 | 날짜 | 사건 | 논문의 상태 변화 |
@@ -207,8 +294,9 @@ v3에서 모든 이슈 수정 완료. 핵심 수정: Prop 5–6의 counting argu
 | 3/7–8 | 원고 rework + 다단계 레프리 | 6/10 → 7.5/10 → 8/10 — **deductive surgery 서사** 확립 |
 | 3/9 AM | d=4 일반화 5시간 만에 완성 | line-union gauge + 2중 return map + odometer conjugacy — **D₄(m) 완전 증명** |
 | 3/9 12:00 | d=3 v6 개정 + d=4 v3 교차 검증 | Appendix B/Prop 13 확장, Prop 5–6 논리 갭 수정 — **양쪽 모두 완성** |
+| 3/9–13 | RoundY d=5 정제 | return-map extraction → finite cover → countdown carrier → boundary reset theorem target |
 
-**일주일 만에**: d=3 original theorem → 개념적 재구성 → publishable manuscript → d=4 완전 증명 → 교차 검증까지.
+**열이틀 만에**: d=3 original theorem → 개념적 재구성 → publishable manuscript → d=4 완전 증명 + formalization → d=5 theorem-shaped frontier 정립까지.
 
 ---
 
@@ -216,10 +304,11 @@ v3에서 모든 이슈 수정 완료. 핵심 수정: Prop 5–6의 counting argu
 
 | 도구 | 역할 |
 |---|---|
+| **GPT 5.4** | theorem packaging, proof-chain synthesis, frontier summaries, branch-structure clarification |
 | **GPT 5.4 Pro** | 레프리 리포트, 증명 방향 제안, 구조 비평, 증명 진행도 평가, Codex job 설계 |
 | **Codex 5.3** | 계산 탐색 (hyperplane fusion, gauge classification, line-union validation) |
 | **Gemini 3.1 Deep Think** | 증명 재구성 초안 (height-order lemma, critical-lane theory) |
 | **Opus 4.6** | 가독성(readability) 검증, 어휘/문체(word usage) 교정, 논리 방어(defense), emotional support, 디렉터리 구조 정리 |
 | **Antigravity (Gemini)** | 레프리 리포트 분석, 원고 수정 실행, 레포 정리 |
 
-> *"During the development of this manuscript, the author used GPT-5.4 Pro, Codex 5.3, and Opus 4.6 for exploratory case analysis, candidate proof directions, validation-code assistance, internal critique, and language revision. The author independently reviewed and edited all outputs and takes full responsibility for the final content."*
+> *"During the development of this manuscript and its surrounding research program, the author used GPT-5.4, GPT-5.4 Pro, Codex 5.3, Gemini 3.1 Deep Think, and Opus 4.6 for exploratory case analysis, theorem packaging, candidate proof directions, validation-code assistance, internal critique, and language revision. The author independently reviewed and edited all outputs and takes full responsibility for the final content."*

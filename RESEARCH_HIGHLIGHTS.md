@@ -1,8 +1,33 @@
 # Research Highlights — Torus Hamilton Decomposition
 
-*2026-03-02 ~ 2026-03-09, one week*
+*2026-03-02 ~ 2026-03-13*
 
 ---
+
+## 현재 프로그램 상태: d=3, d=4는 닫혔고 d=5만 frontier
+
+이번 라운드에서 전체 low-dimensional program은 세 층으로 정리되었다.
+
+- `d=3`: 수학적으로 완결. 현재 원고는 odd/even 모두 포함한 완성 manuscript 상태
+- `d=4`: return-map / odometer 언어로 완전 증명 완료, Lean formalization까지 진행 완료
+- `d=5`: 아직 open이지만, 이제는 “witness를 더 찾는 문제”가 아니라
+  **countdown carrier와 boundary reset law를 가진 finite-cover normal form** 위의
+  정확한 obstruction 문제로 바뀜
+
+즉, 프로젝트의 전체 건강도는 꽤 좋아졌다.
+열린 건 `d=5` 하나이고, 그마저도 질문이 많이 좁혀졌다.
+
+## Leanification checkpoint: d=4 완료, d=3 odometer color-1도 닫힘
+
+이번 라운드의 formal progress도 의미가 크다.
+
+- `d=4`: Lean formalization complete
+- `d=3`: odometer color-1 rewrite가 Case I, Case II 모두 닫힘
+- 따라서 formal 쪽의 현재 질문은 “Case II가 되느냐”가 아니라
+  **여기서 멈출지, 아니면 color-0 full rewrite까지 갈지** 로 바뀜
+
+즉 formal program도 exploratory 상태를 지나,
+명확한 checkpoint를 하나 확보한 셈이다.
 
 ## 가장 놀라운 결과: m=5 witness → 전체 odd m color 3 theorem
 
@@ -29,6 +54,29 @@ sign-product barrier가 Kempe 경로 자체를 차단 → 비-Kempe low-layer co
 - S₅에서 이를 만족하는 건 identity뿐 → carry 불가능
 - **한 줄짜리 obstruction이 전체 접근법을 폐기시킴** → affine-pinned model로 전환
 
+## 현재 가장 중요한 frontier: d=5 countdown carrier / boundary reset theorem
+
+`d=5`의 최근 진전은 “탐색이 더 필요하다”가 아니라
+**정확한 theorem chain이 생겼다**는 데 있다.
+
+- `017–019`: mixed witness의 return-map이 실제 reduced dynamical object라는 점을 추출
+- `044`: active branch가
+  `B <- B+c <- B+c+d`
+  로 factor된다는 finite-cover normal form 획득
+- `046–048`: carry sheet가 one-sided anticipation datum이고, 숨은 datum이
+  `tau`라는 countdown carrier라는 점을 추출
+- `049–053`: proof-support compute가 reset law, witness family, symbolic zero fiber를
+  더 큰 odd `m`까지 밀어 줌
+- `055`: uniform odd-`m` proof target을
+  `wrap`, `CJ`, `OTH`
+  세 boundary branch lemma로 압축
+
+핵심적으로, 지금의 d=5 질문은:
+
+> boundary `tau=0`에서의 reset law를 uniform odd `m`로 증명할 수 있는가?
+
+이다. 이것은 초기 d=5 단계들의 “blind local search”와는 질적으로 다른 상태다.
+
 ## AI 역할 분화
 
 | 역할 | 담당 |
@@ -48,3 +96,5 @@ sign-product barrier가 Kempe 경로 자체를 차단 → 비-Kempe low-layer co
 | 3/8 | d=3 v3~v6 referee 대응 |
 | 3/9 AM | d=3 v7 (최종), d=4 증명 완성 |
 | 3/9 PM | d=5 m=5 witness 발견, color 3 partial theorem 증명 |
+| 3/10–3/12 | d=5 return-map extraction → finite-cover / countdown-carrier normal form |
+| 3/13 | d=5 positive theorem chain 정리, boundary reset uniform proof branch 시작 |

@@ -581,6 +581,10 @@ Use these together:
   for the current theorem-side packaging of the countdown/reset law
 - [`RoundY/theorem/d5_positive_theorem_chain_054.md`](./theorem/d5_positive_theorem_chain_054.md)
   for the current positive-route theorem chain after the reset-law package
+- [`RoundY/theorem/d5_boundary_reset_uniform_proof_attempt_055.md`](./theorem/d5_boundary_reset_uniform_proof_attempt_055.md)
+  for the first uniform odd-`m` boundary-reset theorem packaging
+- [`RoundY/theorem/d5_CJ_branch_proof_reduction_056.md`](./theorem/d5_CJ_branch_proof_reduction_056.md)
+  for the CJ-first reduction of the remaining positive-route proof burden
 - [`RoundY/instruction_for_codex.md`](./instruction_for_codex.md)
   for the short Codex-oriented reading order and thinking patterns
 - [`DOCUMENT_FOR_EXTERNAL_REVIEW.md`](../DOCUMENT_FOR_EXTERNAL_REVIEW.md)
@@ -599,6 +603,8 @@ Use these together:
   for the larger-modulus reset-law and witness-pair proof support
 - [`artifacts/d5_proof_direction_evidence_052/README.md`](../artifacts/d5_proof_direction_evidence_052/README.md)
   for the consolidated theorem-side compute evidence through `m=19`
+- [`artifacts/d5_boundary_reset_proof_support_055/README.md`](../artifacts/d5_boundary_reset_proof_support_055/README.md)
+  for the `m=21,23` extension of the boundary-reset proof-support formulas
 - [`formal/README-D5.md`](../formal/README-D5.md)
   for the Lean / formalization side of the extracted D5 model
 
@@ -612,9 +618,11 @@ RoundY now keeps active D5 support files inside `RoundY/`, not `tmp/`.
   `codex_work_s60.md`,
   `codex_work_s61.md`,
   `codex_work_s62.md`,
+  `codex_work_s67.md`,
   `feedback_s63.md`,
   `note_s61.md`,
   `note_s63.md`,
+  `note_s64_055.md`,
   `routeY_status_summary_045.md`,
   and `d5_carry_transition_horizon_followup_045.md`
 - [`RoundY/specs/`](./specs/):
@@ -622,7 +630,8 @@ RoundY now keeps active D5 support files inside `RoundY/`, not `tmp/`.
   `d5_future_transition_carry_coding_047_work_template.md`,
   `d5_tau_reset_coding_parallel_work_request_049.md`,
   `d5_parallel_compute_requests_050.md`,
-  and `d5_reset_formula_probe_optional_052.md`
+  `d5_reset_formula_probe_optional_052.md`,
+  and `d5_boundary_reset_optional_check_request_055.md`
 - [`RoundY/checks/`](./checks/):
   small JSON prep checks and follow-up machine summaries such as
   `d5_046_boundary_followon_analysis.json`,
@@ -635,7 +644,9 @@ RoundY now keeps active D5 support files inside `RoundY/`, not `tmp/`.
   `d5_proof_program_050.md`,
   `d5_proof_generalization_051.md`,
   `d5_boundary_reset_and_tau_proof_052.md`,
-  and `d5_positive_theorem_chain_054.md`
+  `d5_positive_theorem_chain_054.md`,
+  `d5_boundary_reset_uniform_proof_attempt_055.md`,
+  and `d5_CJ_branch_proof_reduction_056.md`
 
 These files are research assets for the D5 branch, not transient scratch.
 
@@ -651,10 +662,11 @@ two-route proof program around the same reduced object.
   future flat/nonflat window; the witness family from the `047/048` notes then
   blocks any fixed horizon uniformly in `m`.
 - Positive route:
-  package `048/050/052` as the countdown/reset theorem.
+  package `048/050/052/055/056` as the countdown/reset theorem.
   Here `tau` is the main hidden datum, `tau_next = tau-1` on the positive
-  branch, and the only nontrivial dynamics are the tiny `tau=0` reset classes
-  `wrap`, `carry_jump`, and `other`.
+  branch, the `055` support extends the checked branch formulas through
+  `m=23`, and `056` isolates the remaining positive burden to the two boundary
+  lemmas `CJ` and `OTH`.
 - Structural wrapper:
   both routes sit inside the same cover picture
   `B <- B+c <- B+c+d`,
@@ -694,6 +706,7 @@ two-route proof program around the same reduced object.
 | `049` | **source-residue refinement extracted**: through `m=19`, `tau` is exact on `(s,u,v,layer,rho)`, `next_tau` on `(s,u,layer,rho,epsilon4)`, and `c` on `(u,rho,epsilon4)`; but `rho` is not recoverable from `(B,tau,epsilon4)`, so this is a stronger compute-side refinement rather than a new theorem object |
 | `050` | **proof-support persistence extracted**: through `m=19`, the `048` reset law remains exact on the same theorem-side quotients, and the explicit `047/048` witness pair persists with the same `h < m-4` lower-bound shape |
 | `052` | **proof-direction evidence consolidated**: through `m=19`, the `047` theorem-side quotient and horizon patterns persist in the expected per-modulus form, the positive-route reset-law support remains exact, and the negative-route bounded-horizon witness support stays stable |
+| `055` | **boundary-reset proof support extended**: on `m=21,23`, the `carry_jump` formula, the raw identity `q = 1-s-v-layer`, the `other`-branch subtype law, and `wrap -> 0` all remain exact, so the uniform positive route really does reduce to branch lemmas |
 
 ## Claim labels
 
