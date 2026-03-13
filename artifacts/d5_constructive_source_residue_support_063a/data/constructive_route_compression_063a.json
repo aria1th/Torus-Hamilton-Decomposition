@@ -1,0 +1,10 @@
+{
+  "current_rho_transport_required": true,
+  "current_delta_computation": "delta = rho - (s + u + v + layer) (mod m)",
+  "piecewise_current_formulas": {
+    "c": "1_{rho = u + 1 + 1_{epsilon4=carry_jump}}",
+    "tau": "explicit piecewise delta-formula from 063",
+    "next_tau": "explicit branchwise piecewise formula on (s,u,layer,rho,epsilon4)"
+  },
+  "stable_through_m_19": true
+}
