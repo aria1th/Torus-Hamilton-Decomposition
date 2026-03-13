@@ -1804,12 +1804,480 @@ Current checkpoint after decision:
     `cycleOn_laneMap0` under `Even m` and `Fact (9 < m)`.
 - So the odometer tree now exposes one wrapper theorem per color for the lane-cycle
   endpoint, rather than only residue-local theorem names.
+- The first bounded full-map probe beyond color `2` is now implemented for color `1`,
+  Case I, in `formal/TorusD3Odometer/Color1FullCaseI.lean`.
+- That file defines:
+  - the explicit one-step map `fullMap1CaseI` on `FullCoord`,
+  - the compact layer-zero dispatcher `dir1CaseILayerZero`,
+  - the induced `m`-step return map `returnMap1CaseI` on `P_0`,
+  - and proves the key return theorem
+    `iterate_m_fullMap1CaseI_slicePoint_zero`.
+- Structurally, this prototype is genuinely smaller than the splice proof at the
+  `m`-step return level: for color `1`, Case I, layers `1` and `2` are fixed and
+  layers `S ≥ 2` use only direction `1`, so the full `m`-step return is determined by
+  the first two low-layer steps and then a trivial tail.
+- Important correction after the first probe:
+  - the initial dispatcher was not yet the exact Case-I color-`1` geometry, because it
+    treated `(m-2,1)` as part of the diagonal `+2` family.
+  - the manuscript’s actual Case-I formula for `R_1` excludes `i = m - 2` from the
+    diagonal family, so `(m-2,1)` is an isolated `+1` stall.
+  - `formal/TorusD3Odometer/Color1FullCaseI.lean` is now corrected to that actual
+    geometry.
+- After that correction:
+  - small finite checks agree with the manuscript’s Case-I first-return formulas
+    `T1CaseI / rho1CaseI`,
+  - the induced `P_0` return map is again bijective in the actual Case-I congruence
+    classes,
+  - and the file now contains the first reusable first-return layer:
+    `linePoint1`, its range lemma, the bulk iterate lemma, branch lemmas for the
+    corrected `R_1`, and the exact line-return cases `x = 0` and `x = m - 2`.
+  - Update: the generic odd Case-I family is now fully wired in
+    `formal/TorusD3Odometer/Color1FullCaseI.lean`.
+  - The file now contains the explicit odd-family chain
+    `prefix -> diagonal +2 stall -> middle bulk -> vertical +1 stall -> suffix bulk`,
+    packaged as `iterate_returnMap1CaseI_odd_generic` and
+    `firstReturn_line_odd_generic`.
+  - So the bounded probe has passed the first real stress test: at least for the odd
+    generic lanes, the odometer rewrite still closes by composing a small number of
+    reusable geometric blocks rather than collapsing back into splice-style row
+    transcription.
+  - Update: the even generic family is now also fully wired in the same style.
+  - `formal/TorusD3Odometer/Color1FullCaseI.lean` now contains the full even-family
+    chain
+    `prefix -> vertical +1 stall -> middle bulk -> diagonal +2 stall -> suffix bulk`,
+    packaged as `iterate_returnMap1CaseI_even_generic` and
+    `firstReturn_line_even_generic`.
+  - So the bounded probe now closes both generic families by composing a small number
+    of reusable geometric blocks.
+  - Important negative checkpoint:
+    the first direct attempt to package the boundary lane `x = m - 3` as one long
+    monolithic theorem was rolled back.
+  - The rollback was not due to a mathematical error; it was due to proof-shape blowup
+    around nested `Function.iterate_add_apply` rewrites, endpoint cast normalizations,
+    and low-level `Fin` / `ZMod` bookkeeping.
+  - `formal/TorusD3Odometer/Color1FullCaseI.lean` is clean again after that rollback,
+    and the live frontier is now specifically the boundary-proof shape, not the generic
+    odometer derivation.
 
 Next exact target:
 - The unified congruence-dispatch API for colors `1/0` is now implemented.
-- The next real design choice is whether the odometer tree should stop here as a
-  wrapper/staging layer with a genuine full rewrite only for color `2`, or whether to
-  attempt new full-map `m^3` rewrites for colors `1/0` as well.
-- If that later rewrite path is attempted, the first serious candidate is not blind
-  case transcription but a shared full-map schema strong enough to recover the current
-  splice-cycle theorems by an `m`-step return argument.
+- The new immediate design question is narrower and more informative:
+  does the color-`1`, Case-I prototype remain materially shorter when pushed one layer
+  further, namely from the explicit `m`-step return theorem on `P_0` to the
+  first-return-to-line theorem recovering `T1CaseI` and `rho1CaseI`?
+  - The exact remaining Case-I frontier is now concrete:
+  - close the two boundary lanes `x = m - 3` and `x = m - 1`,
+  - then decide whether the rewrite is still genuinely shorter than the splice proof
+    once the boundary bookkeeping is included.
+  - If yes, then the full-map rewrite path for color `1` is likely real.
+  - If no, then the correct end state is probably the current hybrid architecture:
+  genuine full-map rewrite for color `2`, explicit `m`-step return prototypes where
+  they collapse cleanly, and wrapper-level acceptance theorems for the rest.
+
+## D41) D3 color-1 Case-I boundary-lane proof shape after the generic-even milestone
+
+**Decision:** After the generic odd/even Case-I families closed in `formal/TorusD3Odometer/Color1FullCaseI.lean`, do not continue the two boundary lanes as one-off monolithic calc proofs; first decide whether to add a small reusable boundary-lane helper layer or stop the full rewrite at the generic-family milestone.
+
+Options:
+1. Keep proving `x = m - 3` and `x = m - 1` directly as large lane-specific calc chains inside `formal/TorusD3Odometer/Color1FullCaseI.lean`.
+2. Add a small helper layer in `formal/TorusD3Odometer/Color1FullCaseI.lean` for boundary-lane segments:
+   explicit endpoint step lemmas plus reusable bulk-segment lemmas on fixed `u = i - k` lanes, then repackage the two boundary cases from those blocks.
+3. Stop the full Case-I rewrite after the generic odd/even milestone and keep the remaining boundary closure only at the wrapper/splice level.
+
+Recommendation:
+- Option 2.
+- Option 1 already showed the wrong proof shape: the mathematics remained correct, but the proof exploded into nested `iterate_add_apply` bookkeeping and endpoint cast rewrites.
+- Option 3 would stop the experiment before testing the only remaining interesting question, namely whether the boundary lanes can still be made block-structured enough to stay materially cleaner than splice transcription.
+- A very small helper layer is the honest next experiment because the boundary lanes are not generic, but they still visibly decompose into a short list of bulk segments and isolated stalls in the manuscript.
+
+Risks / mitigations:
+- The helper layer could become another local mini-framework with no reuse beyond the two boundary lanes -> keep the helper scope strict: only lane-segment lemmas actually used by `x = m - 3` and `x = m - 1`.
+- Even with helpers, the boundary cases may still remain uglier than the splice proof -> treat that as a valid negative result and stop the full rewrite there instead of forcing completion.
+- The current file is already buildable -> keep `formal/TorusD3Odometer/Color1FullCaseI.lean` clean after every helper addition so the experiment remains low-risk.
+
+Open questions:
+- Can one shared boundary helper layer cover both `x = m - 3` and `x = m - 1`, or do they need unrelated local proofs?
+- If the boundary lanes close, does the remaining `hfirst` / counting layer still look cleaner than the existing splice proof, or does the complexity reappear there?
+
+Rollout / acceptance:
+- First add only the smallest helper layer needed for the boundary lanes.
+- Accept Option 2 only if both Case-I boundary lanes close from those helpers while keeping `formal/TorusD3Odometer/Color1FullCaseI.lean` materially smaller in structure than the splice baseline.
+- If the helper layer itself becomes another large case-split framework, stop and keep the current hybrid architecture.
+
+## D40) D5 next-branch scope after the exact checked-range carry-coding extraction
+
+**Decision:** After `047`, stop describing the next D5 carry branch as a vague
+search over larger future sheets. On the checked active branch, the hidden
+datum has sharpened to `tau` with a tiny boundary correction, and the next
+honest local branch is admissible/local coding of that `tau` target.
+
+Options:
+1. Keep describing the next branch broadly as a future-sheet search.
+2. Treat `047` as the new exact checked-range carry target and search for an
+   admissible/local coding of `tau`, using the boundary event class only as a
+   secondary correction.
+3. Stop local search and move only to theorem packaging of `044/045/046/047`.
+
+Recommendation:
+- Option 2.
+- `047` verifies on `m = 5,7,9,11` that:
+  - the `tau=0` boundary event class is genuinely `3`-class minimal,
+  - the first exact checked-range quotient is
+    `B + min(tau,8) + epsilon4`,
+  - the unique minimal exact contiguous interval quotient on
+    `tau in {0,...,9}` is
+    `{0,1}|{2}|{3}|{4}|{5}|{6}|{7}|{8,9}`,
+  - the first exact checked-range transition-sheet coding is
+    current `B` plus current `epsilon4` plus the next `7` future binary
+    flat/nonflat indicators after the current step,
+  - full `4`-class event windows become exact at horizon `8`,
+  - pure future binary windows become exact only at horizon `10`.
+- So the next live object is no longer “some larger future window.” It is
+  `tau`, with `epsilon` as a boundary correction.
+
+Risks / mitigations:
+- `047` is still a checked active-union extraction, not yet a theorem for all
+  odd `m` -> keep it as a structural boundary, and package theorem work in
+  parallel instead of overclaiming uniformity.
+- The checked-range cap `min(tau,8)` could be overread as a universal closed
+  form -> record it as a checked-range fact, and treat the theorem-side
+  question as whether the real uniform target is full `tau` or a capped form.
+- Local search could still drift back into generic observable widening ->
+  require future branches to state explicitly how they code `tau`, not merely
+  “more future data.”
+
+Open questions:
+- Can the checked-range `047` target be upgraded symbolically to a uniform-in-`m`
+  theorem?
+- What is the smallest admissible/local coding of `tau`?
+- Is the exact checked-range `7`-step binary-after-current coding already the
+  right manuscript object, or just the first surviving computational family?
+
+Rollout / acceptance:
+- Save `047` as the exact checked-range carry-coding artifact.
+- Update the RoundY docs so the current message is:
+  `046` found the exact future-transition carry event, `047` pruned it to
+  `tau` plus a boundary correction and extracted the first exact checked-range
+  transition-sheet coding.
+- Keep the next autonomous local branch on admissible/local coding of `tau`,
+  not on generic broader future-sheet search or residual-sheet realization.
+
+## D42) D5 next-branch scope after the tau countdown-carrier extraction
+
+**Decision:** After `048`, stop treating the live D5 carry datum as an opaque
+future window. On the checked active nonterminal branch, `tau` already has
+exact internal dynamics as a countdown carrier with a tiny boundary reset law,
+so the next honest local branch should target that carrier explicitly.
+
+Options:
+1. Keep framing the next local branch as admissible coding of a generic future
+   `tau` window.
+2. Treat `048` as closing the autonomous `047A` question and target an
+   admissible/local coding of the countdown carrier itself, with the boundary
+   reset handled as a small current-state micro-law.
+3. Stop local search entirely and move only to theorem packaging of
+   `044/045/046/047/048`.
+
+Recommendation:
+- Option 2.
+- `048` verifies on `m = 5,7,9,11` that:
+  - for every checked active nonterminal row with `tau > 0`,
+    `tau_next = tau - 1` exactly;
+  - all nontrivial dynamics are confined to the boundary `tau = 0`;
+  - on that boundary,
+    `wrap -> 0`,
+    `carry_jump` resets exactly on `(s,v,layer)`,
+    and `other` resets exactly on `(s,u,layer)`;
+  - equivalently, the full next-`tau` map is exact on
+    `(tau, epsilon4, s, u, v, layer)`,
+    and no smaller current `B`-subset with `epsilon4` is exact on the
+    boundary.
+- So the live object is no longer “future data about tau.” It is a countdown
+  carrier plus a tiny reset law.
+
+Risks / mitigations:
+- `048` is still a checked active-union extraction on `m = 5,7,9,11`, not yet
+  a symbolic theorem for all odd `m` -> keep it as a structural boundary and
+  package proof work in parallel.
+- The boundary reset quotients could be overread as the final admissible/local
+  answer -> state them honestly as reduced dynamic targets, not as already
+  exposed local observables.
+- Local work could still drift into generic observable widening -> require any
+  new branch to say explicitly how it codes the positive countdown and how it
+  handles the `tau=0` reset.
+
+Open questions:
+- Can the countdown/reset law be upgraded symbolically to a uniform-in-`m`
+  theorem?
+- What is the smallest admissible/local coding of the positive countdown of
+  `tau`?
+- Is the right next local object a direct `tau`-carrier, or a surrogate whose
+  dynamics semiconjugate to this countdown/reset law?
+
+Rollout / acceptance:
+- Save `048` as the tau countdown-carrier artifact.
+- Update the RoundY docs so the current message is:
+  `046` found the exact future-transition carry event, `047` pruned it to
+  `tau` plus a boundary correction, and `048` reduced `tau` itself to a
+  countdown carrier with tiny reset law.
+- Keep any further autonomous local search explicitly on countdown-carrier
+  coding, not on generic future-window widening.
+
+## D43) D3 color-1 Case-I odometer package after the boundary dispatcher milestone
+
+**Decision:** After `formal/TorusD3Odometer/Color1FullCaseI.lean` closed the
+full Case-I line first-return dispatcher and the full-map `m`-step return to
+`returnMap1CaseI`, do not immediately brute-force the remaining Case-I endgame
+(`sum_rho1CaseI`, `hsum_caseI`, `hfirst`, final `m^2` / `m^3` cycle theorems)
+as more local calc code. First decide whether to add one tiny reusable
+finite-sum helper layer, or stop the Case-I full rewrite at the current clean
+dispatcher milestone.
+
+Options:
+1. Keep all remaining work local to
+   `formal/TorusD3Odometer/Color1FullCaseI.lean`: brute-force the `rho1CaseI`
+   sum over `Fin m`, then add `hfirst`, then finish the counting/lift package.
+2. Add one very small reusable helper layer for the sum/counting part
+   (for example a `Fin`/`range` transport lemma and/or a short range-tail split
+   lemma in `formal/TorusD3Even/Counting.lean` or locally in
+   `formal/TorusD3Odometer/Color1FullCaseI.lean`), then finish the Case-I
+   package on top of that.
+3. Stop the full Case-I odometer rewrite at the current buildable milestone:
+   keep the proved dispatcher/return theorems, but leave the final cycle
+   package to the existing splice-based results.
+
+Recommendation:
+- Option 2.
+- The mathematics is no longer the issue. `formal/TorusD3Odometer/Color1FullCaseI.lean`
+  already has:
+  - the full Case-I line first-return dispatcher,
+  - `cycleOn_T1CaseI_caseI`,
+  - `hreturn_line_caseI`,
+  - `blockTime_eq_sum_range`,
+  - and the full-map `m`-step return theorem `iterate_m_fullMap1CaseI_slicePoint_zero`.
+- The first failed continuation attempt showed the real remaining friction:
+  finite-sum proof engineering around `sum_rho1CaseI` / `hsum_caseI`, not new
+  orbit structure.
+- A tiny helper layer is the honest next experiment because the same
+  `Fin`/`range` transport and short tail-splitting pattern is exactly the sort
+  of proof noise that will recur if the odometer tree grows further.
+- Update: this experiment succeeded on the sum/counting side. The file now has
+  explicit `rho1CaseI` endpoint/generic value lemmas together with
+  `sum_rho1CaseI` and `hsum_caseI`, and `lake build TorusD3Odometer` is clean
+  again after that addition.
+- Update: the original D43 question is therefore resolved in the positive for
+  the arithmetic layer. The remaining unresolved part is no longer
+  `Fin`/`range` transport; it is the Case-I no-early-return package `hfirst`,
+  which still appears to require genuinely casewise reasoning.
+- Update: the remaining `hfirst` package also closed cleanly enough. The file
+  `formal/TorusD3Odometer/Color1FullCaseI.lean` now contains
+  `hfirst_line_caseI`, `cycleOn_returnMap1CaseI_caseI`, and
+  `cycleOn_fullMap1CaseI_caseI`, and `lake build TorusD3Odometer` succeeds.
+- Update: D43 is therefore resolved positively end-to-end for color `1`,
+  Case I. The real remaining question is no longer local proof engineering
+  inside this file; it is whether the odometer tree should now pursue another
+  genuine full rewrite family, or stop at this successful prototype boundary.
+
+Risks / mitigations:
+- The helper layer could sprawl into a generic arithmetic library unrelated to
+  the actual D3 goal -> keep it strict: only the lemmas needed to close
+  `sum_rho1CaseI` / `hsum_caseI`.
+- The helper may not pay off if `hfirst` still dominates the remaining work ->
+  reassess immediately after the sum/counting layer closes; do not auto-commit
+  to full Case-I completion beyond that.
+- The current file is buildable again -> preserve that invariant after every
+  helper attempt.
+
+Open questions:
+- Answered: yes, a tiny arithmetic/helper layer was enough to make the
+  Case-I sum/counting layer routine.
+- Remaining: after the sum/counting layer is closed, does `hfirst` still look
+  materially cleaner than the splice proof, or does the rewrite lose its
+  aesthetic edge there?
+
+Rollout / acceptance:
+- Keep the current buildable checkpoint in
+  `formal/TorusD3Odometer/Color1FullCaseI.lean`.
+- Completed: add only the smallest helper layer required to prove
+  `sum_rho1CaseI` and `hsum_caseI`.
+- Completed: the `hfirst` layer and the final `m^2` / `m^3` closure remained
+  small enough to justify the experiment.
+- Next acceptance gate: decide whether to attempt one more genuine full-family
+  odometer rewrite beyond Case I, or freeze the odometer tree at the current
+  successful prototype boundary.
+
+## D44) D3 odometer scope after the completed color-1 Case-I prototype
+
+**Decision:** After `formal/TorusD3Odometer/Color1FullCaseI.lean` closed all
+of Case I through the full `m^3` cycle theorem, decide whether to continue the
+parallel odometer rewrite beyond the current asymmetric but successful
+checkpoint.
+
+Options:
+1. Stop here and accept the current odometer tree as the final presentation:
+   - full rewrite for color `2`,
+   - full rewrite for color `1`, Case I,
+   - wrapper-level lane-cycle APIs for the remaining color `1` / `0` families.
+2. Run one bounded second full-rewrite experiment on color `1`, Case II,
+   using a new file and the same acceptance bar as Case I.
+3. Commit now to full explicit odometer rewrites for all remaining color `1`
+   and color `0` families.
+
+Recommendation:
+- Option 2.
+- We now have enough evidence that the full-rewrite idea is real, but not yet
+  enough evidence that it scales gracefully beyond the cleanest nontrivial
+  family.
+- Case I is no longer just a promising scaffold; it is a completed parallel
+  rewrite. That makes one more bounded experiment worthwhile.
+- Color `1`, Case II is the right test: it is closer to the Case-I geometry and
+  helper layer than color `0`, but it is still materially more complex than the
+  current success case.
+- Do not jump directly to Option 3. That would spend effort before answering
+  the actual architectural question.
+
+Risks / mitigations:
+- Case II may collapse into disguised splice transcription rather than a clean
+  odometer derivation -> stop immediately if the proof shape starts replicating
+  the old case-by-case route at comparable size.
+- A second rewrite attempt could create a parallel helper forest ->
+  any new helper must either be shared with `formal/TorusD3Odometer/Color1FullCaseI.lean`
+  or remain strictly local to the new prototype file.
+- The current checkpoint is already mathematically valuable -> preserve the
+  buildable `TorusD3Odometer` baseline before every new experiment.
+
+Open questions:
+- Does color `1`, Case II admit the same clean pattern:
+  lane cycle -> return-time sum -> casewise `hfirst` -> full-map lift?
+- If Case II fails the cleanliness bar, is that enough evidence to declare the
+  current wrapper architecture the final endpoint for the remaining families?
+
+Rollout / acceptance:
+- Start with a separate `formal/TorusD3Odometer/Color1FullCaseII.lean` file.
+- First milestone: full `m`-step return theorem to the Case-II return map.
+- Second milestone: if that is clean, continue through `hreturn`, `hsum`,
+  `hfirst`, and the final `m^2` / `m^3` cycle theorems.
+- Abort the experiment if the proof shape becomes splice-sized or requires a
+  second large ad hoc boundary framework.
+
+Update:
+- `formal/TorusD3Odometer/Color1FullCaseII.lean` now exists and builds as a
+  separate prototype file.
+- The first milestone is achieved: the file contains the full generic color-1
+  low-layer core and the theorem
+  `iterate_m_fullMap1CaseII_slicePoint_zero`.
+- The implementation result is cleaner than the initial fear: Case II reuses
+  the same low-layer `fullMapColor1` / `returnMapColor1` architecture as
+  Case I, with only the layer-0 classifier changed.
+- A small reusable local API was enough to keep the next step concrete:
+  `dir1CaseIILayerZero_eq_two_of_not_special`,
+  `returnMap1CaseII_eq_bulk_of_not_special`,
+  the line compatibility lemmas for `x = 0, 1, m - 2`,
+  and the first nontrivial return case
+  `firstReturn_line_two`.
+- The important engineering finding is that the right proof shape for the
+  Case-II step chain is:
+  bulk-prefix theorem -> named special-point lemmas -> short successor-chain
+  packaging. Direct rewriting on iterate exponents was brittle because of the
+  local `Fact (5 < m)` instance; auxiliary `1 + n` lemmas were stable.
+- The generic even family is now closed in
+  `formal/TorusD3Odometer/Color1FullCaseII.lean`. The odd family also now has
+  a stable first-half core in the same file:
+  odd bulk prefix -> first diagonal stall -> bulk middle -> the two vertical
+  defects. Those lemmas build cleanly and confirm the manuscript stall pattern
+  is the right organizing principle here too.
+- The safe odd-generic package is now closed as well, but under the honest
+  bound `3 ≤ x ≤ m - 7`: the file now builds through the full second-diagonal
+  / tail block and the final `rho = m + 4` theorem for that uniform subfamily.
+- The first genuine Case-II odd wrinkle is now explicit and local:
+  the naive odd-tail bulk window is uniform only for `3 ≤ x ≤ m - 7`.
+  The endpoint `x = m - 5` still belongs to the manuscript's generic odd
+  family, but it needs a tiny separate tail argument because the post-second-
+  diagonal tail reaches the `i = 0` boundary at height `m - 1`, where the
+  "just keep using the same bulk bound" proof shape stops being literally
+  true.
+- Current next frontier: split off the small `x = m - 5` endpoint argument,
+  then handle the true boundary lanes `x = m - 3` and `x = m - 1`.
+- Current status judgment: the experiment is still inside the intended
+  cleanliness bar. It has not yet collapsed into splice-sized transcription.
+- The boundary lanes `x = m - 5`, `x = m - 3`, and `x = m - 1` are now all
+  closed in `formal/TorusD3Odometer/Color1FullCaseII.lean`, and the file
+  builds cleanly again.
+- A useful next-layer artifact was added there: the standalone timing function
+  `rho1CaseII`. This is the right data for the eventual
+  `hreturn` / `hsum` / `hfirst` packaging.
+- The first failed packaging attempt was informative and was rolled back
+  before accepting the checkpoint. The blocker was not new orbit mathematics.
+  It was proof engineering around the nested dependent `if` terms inside
+  `rho1CaseII`: direct `rw` / `simp` on goals of the form
+  `(returnMap^[rho1CaseII x]) ...` was brittle because the goal kept the
+  local `Decidable` proof binders from the `if`s.
+- Recommendation for the next pass: do not retry the full dispatcher/counting
+  layer directly. First add tiny explicit value lemmas for `rho1CaseII`
+  (`0`, `1`, `2`, generic even, generic odd, `m-5`, `m-3`, `m-2`, `m-1`)
+  using `split_ifs` or a similarly stable local pattern, then build
+  `hreturn_line_caseII` and `sum_rho1CaseII` on top of those lemmas.
+- Current status judgment after that rollback: the experiment is still healthy,
+  but the next bottleneck has shifted from orbit decomposition to the
+  dependent-`if` normalization layer.
+
+## D45) D5 theorem-side minimal object vs compute-side source-residue refinement after 049/050
+
+**Decision:** Keep `(B,tau,epsilon4)` as the main D5 theorem-side object, and
+treat `(B,rho)` with `rho = source_u + 1 mod m` as a stronger compute-side
+constructive refinement rather than as a replacement coordinate.
+
+Options:
+1. Promote `rho` to the main theorem coordinate and rewrite the current
+   `044–048` chain in source-memory language.
+2. Keep the theorem side minimal on `(B,tau,epsilon4)`, use `049` only as a
+   stronger constructive refinement, and use `050` as larger-modulus proof
+   support for the existing theorem chain.
+3. Ignore `rho` entirely and keep both proof and compute work strictly on the
+   minimal future-side cover.
+
+Recommendation:
+- Option 2.
+- `049` verifies through `m=19` that:
+  - `tau` is exact on `(s,u,v,layer,rho)`,
+  - `next_tau` is exact on `(s,u,layer,rho,epsilon4)`,
+  - `c` is exact on `(u,rho,epsilon4)`,
+  - and `q ≡ u-rho+1_{epsilon4=carry_jump} mod m`.
+- But `049` also shows that `rho` is not recoverable from `(B,tau,epsilon4)`
+  once `m>=7`; on the tested range the ambiguous bucket count matches
+  `2m-11`. So `rho` is a stricter current-memory refinement, not the same
+  object in different notation.
+- `050` then strengthens the proof side without changing the theorem object:
+  the `048` reset law remains exact on the same theorem-side quotients through
+  `m=19`, and the explicit `047/048` witness pair persists with the same
+  `h < m-4` lower-bound shape.
+- So the clean split is:
+  - proof / manuscript: stay on `(B,tau,epsilon4)`,
+  - constructive compute: allow `(B,rho)`,
+  - proof-support compute: use `050` to reinforce the existing theorem chain.
+
+Risks / mitigations:
+- The proof notes could drift toward the stronger current-memory coordinate and
+  lose the clean minimal theorem story -> keep `rho` explicitly labeled as a
+  constructive refinement / remark.
+- Compute work could fork into incompatible goals -> require future compute
+  branches to say whether they are theorem-side (`tau`) or constructive-side
+  (`rho`) from the start.
+- Larger-modulus support could be overread as a proof -> record `049/050` as
+  extended evidence, not as a symbolic theorem for all odd `m`.
+
+Open questions:
+- Can a genuine admissible/local mechanism initialize and transport enough of
+  `rho` to realize the constructive refinement?
+- Can the intended local class be shown to collapse to bounded transition/reset
+  data on the theorem-side object, yielding a real no-go theorem?
+- Is there a smaller local quotient of `rho` that still realizes `tau` or `c`?
+
+Rollout / acceptance:
+- Update the RoundY docs so the current message is:
+  theorem side stays minimal on `(B,tau,epsilon4)`,
+  compute side may use `(B,rho)`,
+  and `050` is proof support rather than a theorem-object change.
+- Package `049` and `050` as reproducible artifacts with saved summaries.
+- Use `050` in the proof notes only as extended support for the reset law and
+  the witness family, not as a change in theorem statement.
