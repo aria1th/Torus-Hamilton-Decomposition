@@ -1,0 +1,109 @@
+% D5 proof generalization snippet after 049/050
+
+\begin{theorem}[D5 active anticipation chain; checked form, theorem target]
+Let $m$ be an odd modulus and consider the active best-seed branch of the
+unresolved channel $R1\to H_{L1}$. Let
+\[
+B=(s,u,v,\lambda,f),
+\qquad
+c=\mathbf 1_{\{q=m-1\}},
+\qquad
+d=\mathbf 1_{\{U^+\ge m-3\}}.
+\]
+On the checked odd moduli $m=5,7,9,11$, the branch factors as
+\[
+B \leftarrow B+c \leftarrow B+c+d.
+\]
+Moreover:
+\begin{enumerate}
+    \item the exceptional trigger descends to $B$;
+    \item the regular trigger descends to $B+c$ but not to $B$;
+    \item deterministic active evolution closes on $B+c+d$;
+    \item the carry sheet $c$ is not a current grouped-state observable, but a
+    one-sided anticipation datum over the grouped base.
+\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[Carry as anticipation datum; conceptual theorem]
+Let $\tau$ denote the initial flat-run length of the future grouped-delta
+sequence, and let $\epsilon_4\in\{\mathrm{flat},\mathrm{wrap},\mathrm{carry\_jump},\mathrm{other}\}$
+be the current grouped-delta event class. Then on the checked active branch for $m=5,7,9,11$,
+the carry sheet $c$ is a function of $(B,\tau,\epsilon_4)$.
+
+More precisely, all ambiguity of $(B,\tau)$ lies at the boundary $\tau=0$,
+and the boundary class is genuinely three-way:
+\[
+\{\mathrm{wrap},\mathrm{carry\_jump},\mathrm{other}\}.
+\]
+Thus the canonical theorem-side object is $(B,\tau,\epsilon_4)$.
+\end{theorem}
+
+\begin{proposition}[Countdown carrier reduction]
+Define $\tau(x)$ to be the length of the initial flat prefix of the future
+$dn$-sequence at $x$. Then
+\[
+\tau(Fx)=\tau(x)-1 \qquad \text{whenever } \tau(x)>0.
+\]
+Hence all nontrivial dynamics of $\tau$ are confined to the boundary $\tau=0$.
+On the checked odd moduli through $m=19$, the boundary reset law is exact on
+small current quotients:
+\[
+R(\epsilon_4,s,u,v,\lambda)=
+\begin{cases}
+0, & \epsilon_4=\mathrm{wrap},\\
+R_{\mathrm{cj}}(s,v,\lambda), & \epsilon_4=\mathrm{carry\_jump},\\
+R_{\mathrm{oth}}(s,u,\lambda), & \epsilon_4=\mathrm{other},
+\end{cases}
+\]
+with observed value sets
+\[
+R_{\mathrm{cj}}\subseteq\{0,1,m-2\},
+\qquad
+R_{\mathrm{oth}}\subseteq\{0,m-4,m-3\}.
+\]
+Consequently, any realization of the D5 carry mechanism may be reformulated as
+realization of a countdown carrier together with a boundary reset map.
+\end{proposition}
+
+\begin{proposition}[Witness family for bounded-horizon lower bounds]
+For each checked odd modulus $m$, there are states
+\[
+x^-_m=(m-2,2,1,2,0),
+\qquad
+x^+_m=(m-1,2,1,2,0),
+\]
+with common grouped base
+\[
+B_*=(3,1,2,0,\mathrm{regular}),
+\]
+common current event class $\epsilon_4=\mathrm{flat}$, but opposite carry
+labels and anticipation values
+\[
+c(x^-_m)=0,
+\quad
+c(x^+_m)=1,
+\qquad
+\tau(x^-_m)=m-3,
+\quad
+\tau(x^+_m)=m-4.
+\]
+They also share a common future flat/nonflat prefix of length $m-5$.
+Therefore any coding that sees only current $B$, current $\epsilon_4$, and the
+next $h<m-4$ future flat/nonflat bits fails on modulus $m$.
+\end{proposition}
+
+\begin{remark}[Source-residue refinement]
+The stronger checked coordinate
+\[
+\rho=u_{\mathrm{source}}+1 \pmod m
+\]
+may still be useful as a constructive refinement: on the checked odd moduli
+through $m=19$, $\tau$ is exact on $(s,u,v,\lambda,\rho)$, $c$ is exact on
+$(u,\rho,\epsilon_4)$, and
+\[
+q \equiv u-\rho + \mathbf 1_{\{\epsilon_4=\mathrm{carry\_jump}\}} \pmod m.
+\]
+However, for checked $m\ge 7$, $\rho$ is not recoverable from
+$(B,\tau,\epsilon_4)$, so it should be treated as a constructive refinement
+rather than as the minimal theorem-side coordinate.
+\end{remark}

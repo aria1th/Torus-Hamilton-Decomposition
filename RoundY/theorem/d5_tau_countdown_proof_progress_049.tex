@@ -1,0 +1,66 @@
+% D5 tau countdown / anticipation theorem chain after 048
+
+\begin{proposition}[Checked carry anticipation theorem]\label{prop:d5-carry-anticipation-checked}
+On the checked active best-seed branch for the unresolved channel $R1\to H_{L1}$ and for
+$m\in\{5,7,9,11\}$, the carry sheet
+\[
+c=\mathbf 1_{\{q=m-1\}}
+\]
+is an exact future grouped-transition datum over the grouped base
+\[
+B=(s,u,v,\lambda,f).
+\]
+More precisely, there exists a future signature of the form
+\[
+B+\tau+\eta
+\]
+that determines $c$ exactly, where $\tau$ is the initial flat-run length for the grouped-delta event
+$dn=(0,0,0,1)$ and $\eta$ is the first nonflat grouped-delta event. On the checked moduli, the minimal exact grouped-delta horizon is $m-3$ and the minimal exact grouped-state horizon is $m-2$.
+\end{proposition}
+
+\begin{proposition}[Checked boundary sharpening]\label{prop:d5-boundary-sharpening-checked}
+In the situation of Proposition~\ref{prop:d5-carry-anticipation-checked}, all ambiguity in $B+\tau$ lies at the boundary $\tau=0$. The boundary event class is genuinely three-valued,
+\[
+\epsilon_4\in\{\mathrm{wrap},\mathrm{carry\_jump},\mathrm{other}\},
+\]
+and the first exact checked-range quotient is
+\[
+B+\min(\tau,8)+\epsilon_4.
+\]
+Equivalently, on the checked range, the first exact transition-sheet coding uses current $B$, current $\epsilon_4$, and the next seven future flat/nonflat bits.
+\end{proposition}
+
+\begin{proposition}[Checked countdown carrier law]\label{prop:d5-tau-countdown-checked}
+In the same setting, the hidden datum $\tau$ has exact internal dynamics as a countdown carrier on the checked active nonterminal branch.
+Whenever $\tau>0$ one has
+\[
+\tau'=\tau-1.
+\]
+All nontrivial dynamics are confined to the boundary $\tau=0$, where:
+\begin{itemize}
+    \item $\mathrm{wrap}$ resets to $0$;
+    \item $\mathrm{carry\_jump}$ resets exactly as a function of $(s,v,\lambda)$;
+    \item $\mathrm{other}$ resets exactly as a function of $(s,u,\lambda)$.
+\end{itemize}
+Equivalently, the full next-$\tau$ map is exact on
+\[
+(\tau,\epsilon_4,s,u,v,\lambda).
+\]
+No smaller current $B$-subset together with $\epsilon_4$ is exact on the boundary.
+\end{proposition}
+
+\begin{corollary}[Reduction to reset-law coding]\label{cor:d5-reset-law-coding}
+On the checked active branch, coding the carry sheet is equivalent to coding an exact countdown carrier with piecewise reset law at $\tau=0$. In particular, the remaining local/admissibility problem is to realize the boundary reset map
+\[
+R(\epsilon_4,s,u,v,\lambda),
+\]
+with
+\[
+R(\mathrm{wrap},\cdot)=0,
+\qquad
+R(\mathrm{carry\_jump},s,u,v,\lambda)=R_{cj}(s,v,\lambda),
+\qquad
+R(\mathrm{other},s,u,v,\lambda)=R_{oth}(s,u,\lambda).
+\]
+After that, propagation is deterministic by the internal update $\tau' = \tau-1$ for $\tau>0$.
+\end{corollary}

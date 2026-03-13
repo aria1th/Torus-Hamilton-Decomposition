@@ -1,0 +1,109 @@
+% D5 carry anticipation theorem chain (044--047)
+
+\begin{theorem}[Checked finite-sheet anticipation normal form for the best-seed D5 active branch]
+Fix the best seed pair
+\[
+L=[2,2,1],\qquad R=[1,4,4],
+\]
+and let $A_m$ be the extracted active branch of the unresolved channel
+\[
+R1 \to H_{L1}
+\]
+for a checked modulus $m\in\{5,7,9,11\}$. For $x\in A_m$, define
+\[
+B(x)=(s(x),u(x),v(x),\lambda(x),f(x)),
+\qquad
+c(x)=\mathbf 1_{\{q(x)=m-1\}},
+\]
+where $\lambda=\mathrm{layer}$ and $f\in\{\mathrm{regular},\mathrm{exceptional}\}$ is the carried family tag. Let
+\[
+\tau_c(x)=\min\{t\ge 0 : c(F_m^t x)=1\},
+\qquad
+U^+(x)=u(F_m^{\tau_c(x)}x),
+\]
+and set
+\[
+d(x)=\mathbf 1_{\{U^+(x)\ge m-3\}}.
+\]
+Then the checked active branch admits the finite-sheet normal form
+\[
+B \leftarrow B+c \leftarrow B+c+d,
+\]
+with the following properties:
+\begin{enumerate}
+\item the exceptional fire predicate is a function of $B$;
+\item the regular fire predicate is not a function of $B$, but it is a function of $B+c$;
+\item every $(B+c)$-fiber with $c=1$ is a singleton;
+\item every non-singleton $(B+c)$-fiber lies on the regular noncarry region;
+\item the residual deterministic cover over $B+c$ is binary and is realized by the anticipation bit
+\[
+d=\mathbf 1_{\{U^+\ge m-3\}};
+\]
+\item the active transition law is deterministic on $B+c+d$.
+\end{enumerate}
+Moreover, the carry sheet $c$ is not a function of the current grouped base $B$ and is best read on the checked branch as a one-sided anticipation datum over the grouped dynamics.
+\end{theorem}
+
+\begin{proposition}[First carry-only admissibility no-go]
+On the checked active branch, no observable from the first admissible current-edge / short-transition / low-cardinality gauge catalogs realizes the carry sheet $c$ exactly. In particular, the checked families built from
+\[
+B,
+\qquad
+B\to B_{\mathrm{next}},
+\qquad
+B\to B_{\mathrm{next}}\to B_{\mathrm{next2}}
+\]
+all fail to realize $c$ exactly.
+\end{proposition}
+
+\begin{proposition}[Carry as an exact future grouped-transition event]
+For each checked modulus $m\in\{5,7,9,11\}$, the carry sheet $c$ is an exact future grouped-transition event on the active grouped base. More precisely,
+\begin{enumerate}
+\item the minimal exact future grouped-delta horizon is $m-3$;
+\item the minimal exact future grouped-state horizon is $m-2$;
+\item the exact future signature compresses to
+\[
+B+\tau+\eta,
+\]
+where $\tau$ is the initial flat-run length for grouped-delta event $dn=(0,0,0,1)$ and $\eta$ is the first nonflat grouped-delta event after that run.
+\end{enumerate}
+\end{proposition}
+
+\begin{proposition}[Boundary sharpening and exact checked-range coding]
+On the checked active branch for $m=5,7,9,11$:
+\begin{enumerate}
+\item every ambiguity in $B+\tau$ lies at the boundary $\tau=0$;
+\item the $\tau=0$ boundary class is genuinely $3$-class minimal, with current event partition
+\[
+\{\mathrm{wrap},\ \mathrm{carry\_jump},\ \mathrm{other}\};
+\]
+\item the first exact checked-range quotient is
+\[
+B+\min(\tau,8)+\epsilon_4,
+\]
+where
+\[
+\epsilon_4\in\{\mathrm{flat},\mathrm{wrap},\mathrm{carry\_jump},\mathrm{other}\};
+\]
+\item equivalently, the first exact checked-range transition-sheet coding is current $B$, current $\epsilon_4$, and the next $7$ future flat/nonflat bits after the current step.
+\end{enumerate}
+Thus the live hidden datum is $\tau$, with $\epsilon_4$ entering only as a boundary correction.
+\end{proposition}
+
+\begin{corollary}[Checked carry-anticipation formulation]
+On the checked active best-seed branch, the carry mechanism is best read as follows:
+\begin{enumerate}
+\item the structural object is the finite-sheet normal form
+\[
+B \leftarrow B+c \leftarrow B+c+d;
+\]
+\item the first trigger-level missing lift is the carry sheet $c$;
+\item the first admissible current-edge and short-transition catalogs do not realize $c$;
+\item the carry sheet is nevertheless an exact one-sided anticipation datum on the grouped base;
+\item on the checked range, it is exactly coded by
+\[
+B+\min(\tau,8)+\epsilon_4,
+\]
+with $\epsilon_4$ only a boundary correction.
+\end{enumerate}
+\end{corollary}

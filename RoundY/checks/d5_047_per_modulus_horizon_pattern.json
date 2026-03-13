@@ -1,0 +1,261 @@
+{
+  "5": {
+    "minimal_current_eps4_plus_future_binary_horizon": 1,
+    "matches_m_minus_4": true,
+    "minimal_eps4_window_horizon": 2,
+    "matches_m_minus_3": true,
+    "minimal_binary_window_horizon": 4,
+    "matches_m_minus_1": true,
+    "canonical_checked_quotient": "B + min(tau,2) + epsilon4",
+    "canonical_transition_sheet": "B + epsilon4(current) + next 1 future flat/nonflat bits after current",
+    "h_minus_1_witness_pair": {
+      "key": {
+        "B": [
+          3,
+          1,
+          2,
+          0,
+          "regular"
+        ],
+        "epsilon4": "flat",
+        "future_binary_after_current_prefix": []
+      },
+      "rows": [
+        {
+          "q": 3,
+          "w": 2,
+          "u": 1,
+          "v": 2,
+          "layer": 0,
+          "family": "regular",
+          "c": 0,
+          "tau": 2,
+          "epsilon4": "flat",
+          "B": [
+            3,
+            1,
+            2,
+            0,
+            "regular"
+          ]
+        },
+        {
+          "q": 4,
+          "w": 2,
+          "u": 1,
+          "v": 2,
+          "layer": 0,
+          "family": "regular",
+          "c": 1,
+          "tau": 1,
+          "epsilon4": "flat",
+          "B": [
+            3,
+            1,
+            2,
+            0,
+            "regular"
+          ]
+        }
+      ]
+    }
+  },
+  "7": {
+    "minimal_current_eps4_plus_future_binary_horizon": 3,
+    "matches_m_minus_4": true,
+    "minimal_eps4_window_horizon": 4,
+    "matches_m_minus_3": true,
+    "minimal_binary_window_horizon": 6,
+    "matches_m_minus_1": true,
+    "canonical_checked_quotient": "B + min(tau,4) + epsilon4",
+    "canonical_transition_sheet": "B + epsilon4(current) + next 3 future flat/nonflat bits after current",
+    "h_minus_1_witness_pair": {
+      "key": {
+        "B": [
+          3,
+          1,
+          2,
+          0,
+          "regular"
+        ],
+        "epsilon4": "flat",
+        "future_binary_after_current_prefix": [
+          1,
+          1
+        ]
+      },
+      "rows": [
+        {
+          "q": 5,
+          "w": 2,
+          "u": 1,
+          "v": 2,
+          "layer": 0,
+          "family": "regular",
+          "c": 0,
+          "tau": 4,
+          "epsilon4": "flat",
+          "B": [
+            3,
+            1,
+            2,
+            0,
+            "regular"
+          ]
+        },
+        {
+          "q": 6,
+          "w": 2,
+          "u": 1,
+          "v": 2,
+          "layer": 0,
+          "family": "regular",
+          "c": 1,
+          "tau": 3,
+          "epsilon4": "flat",
+          "B": [
+            3,
+            1,
+            2,
+            0,
+            "regular"
+          ]
+        }
+      ]
+    }
+  },
+  "9": {
+    "minimal_current_eps4_plus_future_binary_horizon": 5,
+    "matches_m_minus_4": true,
+    "minimal_eps4_window_horizon": 6,
+    "matches_m_minus_3": true,
+    "minimal_binary_window_horizon": 8,
+    "matches_m_minus_1": true,
+    "canonical_checked_quotient": "B + min(tau,6) + epsilon4",
+    "canonical_transition_sheet": "B + epsilon4(current) + next 5 future flat/nonflat bits after current",
+    "h_minus_1_witness_pair": {
+      "key": {
+        "B": [
+          3,
+          1,
+          2,
+          0,
+          "regular"
+        ],
+        "epsilon4": "flat",
+        "future_binary_after_current_prefix": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "rows": [
+        {
+          "q": 7,
+          "w": 2,
+          "u": 1,
+          "v": 2,
+          "layer": 0,
+          "family": "regular",
+          "c": 0,
+          "tau": 6,
+          "epsilon4": "flat",
+          "B": [
+            3,
+            1,
+            2,
+            0,
+            "regular"
+          ]
+        },
+        {
+          "q": 8,
+          "w": 2,
+          "u": 1,
+          "v": 2,
+          "layer": 0,
+          "family": "regular",
+          "c": 1,
+          "tau": 5,
+          "epsilon4": "flat",
+          "B": [
+            3,
+            1,
+            2,
+            0,
+            "regular"
+          ]
+        }
+      ]
+    }
+  },
+  "11": {
+    "minimal_current_eps4_plus_future_binary_horizon": 7,
+    "matches_m_minus_4": true,
+    "minimal_eps4_window_horizon": 8,
+    "matches_m_minus_3": true,
+    "minimal_binary_window_horizon": 10,
+    "matches_m_minus_1": true,
+    "canonical_checked_quotient": "B + min(tau,8) + epsilon4",
+    "canonical_transition_sheet": "B + epsilon4(current) + next 7 future flat/nonflat bits after current",
+    "h_minus_1_witness_pair": {
+      "key": {
+        "B": [
+          3,
+          1,
+          2,
+          0,
+          "regular"
+        ],
+        "epsilon4": "flat",
+        "future_binary_after_current_prefix": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "rows": [
+        {
+          "q": 9,
+          "w": 2,
+          "u": 1,
+          "v": 2,
+          "layer": 0,
+          "family": "regular",
+          "c": 0,
+          "tau": 8,
+          "epsilon4": "flat",
+          "B": [
+            3,
+            1,
+            2,
+            0,
+            "regular"
+          ]
+        },
+        {
+          "q": 10,
+          "w": 2,
+          "u": 1,
+          "v": 2,
+          "layer": 0,
+          "family": "regular",
+          "c": 1,
+          "tau": 7,
+          "epsilon4": "flat",
+          "B": [
+            3,
+            1,
+            2,
+            0,
+            "regular"
+          ]
+        }
+      ]
+    }
+  }
+}

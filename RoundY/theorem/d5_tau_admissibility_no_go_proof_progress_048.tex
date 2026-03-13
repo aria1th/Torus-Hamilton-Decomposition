@@ -1,0 +1,90 @@
+% D5 tau / carry-sheet proof progress after 044--047
+
+\begin{proposition}[Conceptual carry theorem on the checked active branch]
+Let
+\[
+B=(s,u,v,\lambda,\mathrm{family}),
+\qquad
+\Delta_{\mathrm{flat}}=(0,0,0,1),
+\]
+and define
+\[
+\tau(x)=\min\{t\ge 0 : \Delta_n(T^t x)\ne \Delta_{\mathrm{flat}}\},
+\qquad
+\eta(x)=\Delta_n(T^{\tau(x)}x).
+\]
+On the checked active best-seed branch for $m\in\{5,7,9,11\}$, the carry sheet
+\[
+c(x)=\mathbf 1_{\{q(x)=m-1\}}
+\]
+is a function of $(B(x),\tau(x),\eta(x))$.
+Moreover, the minimal exact grouped-delta horizon is $m-3$ and the minimal exact grouped-state horizon is $m-2$.
+\end{proposition}
+
+\begin{proposition}[Boundary sharpening]
+On the same checked branch, all ambiguity of $(B,\tau)$ is supported on the boundary stratum $\tau=0$.
+If $\epsilon_4\in\{\mathrm{flat},\mathrm{wrap},\mathrm{carry\_jump},\mathrm{other}\}$ denotes the current grouped-delta event class, then the nonflat boundary partition
+\[
+\{\mathrm{wrap},\mathrm{carry\_jump},\mathrm{other}\}
+\]
+is minimal on the checked moduli, and $(B,\tau,\epsilon_4)$ determines $c$ exactly.
+\end{proposition}
+
+\begin{proposition}[Per-modulus canonical coding on the checked data]
+For each checked modulus $m\in\{5,7,9,11\}$, the quotient
+\[
+(B,\min(\tau,m-3),\epsilon_4)
+\]
+determines the carry sheet exactly.
+Equivalently, the first exact transition-sheet coding is
+\[
+(B,\epsilon_4,\beta_{m-4}),
+\]
+where $\beta_h$ is the next $h$ future flat/nonflat indicators after the current step.
+The corresponding minimal exact horizons on the checked data are:
+\[
+\text{current }\epsilon_4 + \text{future binary after current}: m-4,
+\]
+\[
+\text{full }\epsilon_4\text{-event window}: m-3,
+\]
+\[
+\text{pure binary flat/nonflat window}: m-1.
+\]
+\end{proposition}
+
+\begin{proposition}[Explicit lower-bound witness family on the checked data]
+For each checked modulus $m\in\{5,7,9,11\}$, there exist regular active states
+\[
+x^-_m=(m-2,2,1,2,0),
+\qquad
+x^+_m=(m-1,2,1,2,0),
+\]
+with common grouped base
+\[
+B_*=(3,1,2,0,\mathrm{regular}),
+\qquad
+\epsilon_4(x^-_m)=\epsilon_4(x^+_m)=\mathrm{flat},
+\]
+and opposite carry labels
+\[
+c(x^-_m)=0,
+\qquad
+c(x^+_m)=1.
+\]
+Their anticipation times satisfy
+\[
+\tau(x^-_m)=m-3,
+\qquad
+\tau(x^+_m)=m-4.
+\]
+Hence for every $h<m-4$, the states $x^-_m$ and $x^+_m$ agree on
+\[
+(B,\epsilon_4,\beta_h)
+\]
+but have different carry labels. In particular, no coding using only current $B$, current $\epsilon_4$, and the next $h$ future flat/nonflat bits can be exact on that modulus when $h<m-4$.
+\end{proposition}
+
+\begin{remark}[Exact remaining proof fork]
+The remaining proof problem is now sharply posed. Either one proves an admissible/local coding theorem for $\tau$ (or an equivalent anticipation coordinate), or one proves that every intended local mechanism reduces to a bounded-horizon grouped transition sheet and then applies the explicit lower-bound witness family above.
+\end{remark}

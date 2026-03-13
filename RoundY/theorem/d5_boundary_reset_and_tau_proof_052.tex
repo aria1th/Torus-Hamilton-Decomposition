@@ -1,0 +1,92 @@
+% D5 proof progress 052: manuscript-oriented theorem chain
+
+\begin{theorem}[Finite-cover normal form on the checked active branch]
+On the checked active best-seed branch, the reduced structure factors as
+\[
+B \leftarrow B+c \leftarrow B+c+d,
+\]
+where
+\[
+B=(s,u,v,\lambda,f),
+\qquad
+c=\mathbf 1_{\{q=m-1\}},
+\qquad
+d=\mathbf 1_{\{U^+\ge m-3\}}.
+\]
+Moreover, exceptional trigger descends to $B$, regular trigger descends to
+$B+c$ but not to $B$, and deterministic active evolution closes on $B+c+d$.
+\end{theorem}
+
+\begin{theorem}[Carry as anticipation datum]
+On the checked active branch, the carry sheet $c$ is not a current grouped-state
+observable. It is an exact one-sided future grouped-transition datum.
+A canonical future-side signature is $(B,\tau,\eta)$, where $\tau$ is the
+initial flat-run length of the future grouped-delta sequence and $\eta$ is the
+first nonflat grouped-delta event. The checked minimal exact horizons are
+$m-3$ on grouped deltas and $m-2$ on grouped states.
+\end{theorem}
+
+\begin{proposition}[Boundary sharpening]
+All ambiguity of $B+\tau$ lies at $\tau=0$. At the boundary, the current
+grouped-delta event class is genuinely three-way:
+\[
+\{\mathrm{wrap},\mathrm{carry\_jump},\mathrm{other}\}.
+\]
+Accordingly, the canonical theorem-side quotient is $(B,\tau,\epsilon_4)$.
+\end{proposition}
+
+\begin{theorem}[Countdown carrier with boundary reset law]
+Define
+\[
+\tau(x)=\max\{t\ge 0: dn_j(x)=\delta_{\mathrm{flat}}\text{ for }0\le j<t\},
+\qquad
+\delta_{\mathrm{flat}}=(0,0,0,1).
+\]
+Then
+\[
+\tau(Fx)=\tau(x)-1 \qquad (\tau(x)>0).
+\]
+Thus all nontrivial dynamics of $\tau$ are confined to the boundary $\tau=0$.
+
+On the tested range $m\in\{5,7,9,11,13,15,17,19\}$, the boundary reset law is
+exact on the quotients
+\[
+\mathrm{wrap}\to 0,
+\qquad
+\mathrm{carry\_jump}\text{ exact on }(s,v,\lambda),
+\qquad
+\mathrm{other}\text{ exact on }(s,u,\lambda).
+\]
+Moreover, the tested reset-value images are exactly
+\[
+\mathrm{Im}(R_{\mathrm{cj}})=\{0,1,m-2\},
+\qquad
+\mathrm{Im}(R_{\mathrm{oth}})=\{0,m-4,m-3\}.
+\]
+\end{theorem}
+
+\begin{proposition}[Persistent witness family]
+For every tested odd modulus $m\in\{5,7,9,11,13,15,17,19\}$, the active
+branch contains
+\[
+x^-_m=(m-2,2,1,2,0),
+\qquad
+x^+_m=(m-1,2,1,2,0),
+\]
+with common grouped base $B_*=(3,1,2,0,\mathrm{regular})$, common current event
+label $\epsilon_4=\mathrm{flat}$, opposite carry labels, anticipation values
+$\tau(x^-_m)=m-3$, $\tau(x^+_m)=m-4$, and common future flat/nonflat prefix
+length $m-5$.
+Consequently, any coding that sees only current $B$, current $\epsilon_4$, and
+the next $h<m-4$ future flat/nonflat bits fails on modulus $m$.
+\end{proposition}
+
+\begin{remark}[Constructive refinement]
+A stronger checked constructive refinement exists through $m=19$ via
+$\rho=u_{\mathrm{source}}+1\pmod m$. On the tested range,
+$\tau$ is exact on $(s,u,v,\lambda,\rho)$, $\tau'$ is exact on
+$(s,u,\lambda,\rho,\epsilon_4)$, and $c$ is exact on $(u,\rho,\epsilon_4)$.
+However, $\rho$ is not recoverable from $(B,\tau,\epsilon_4)$ for tested
+$m\ge 7$, so it should be treated as a constructive route rather than as a
+replacement theorem coordinate.
+\end{remark}

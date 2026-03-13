@@ -1,0 +1,66 @@
+{
+  "task_id": "D5-DEEP-TRANSITION-CARRY-SHEET-046-FOLLOWON",
+  "scope": "Direct follow-on analysis of frozen_active_carry_dataset_046.json from the 046 bundle.",
+  "main_result": "The exact future-transition signature can be sharpened. Let tau be the initial flat-run length (the number of consecutive future grouped-delta steps equal to (0,0,0,1)), and let epsilon be the current grouped-delta event class with values {flat, wrap, carry_jump, other}, where carry_jump=(1,1,0,0), wrap=(0,0,0,0), flat=(0,0,0,1), and other collects the remaining current grouped-delta values seen on the checked active branch. Then on m=5,7,9,11 the carry bit c=1_{q=m-1} is an exact function of current B=(s,u,v,layer,family) together with (tau, epsilon). Moreover, the ambiguity of B+tau alone is confined entirely to tau=0; for tau>0, B+tau already determines c exactly.",
+  "checked_moduli": [5, 7, 9, 11],
+  "definitions": {
+    "B": ["s", "u", "v", "layer", "family"],
+    "tau": "initial flat-run length for future grouped delta dn=(0,0,0,1)",
+    "epsilon_classes": {
+      "flat": [0, 0, 0, 1],
+      "wrap": [0, 0, 0, 0],
+      "carry_jump": [1, 1, 0, 0],
+      "other": "all other current dn values seen on the checked active branch"
+    }
+  },
+  "summary_by_modulus": {
+    "5": {
+      "B_plus_tau_collision_buckets": 17,
+      "B_plus_tau_collision_buckets_tau_gt_0": 0,
+      "B_plus_tau_collision_buckets_tau_eq_0": 17,
+      "B_plus_tau_plus_epsilon_collision_buckets": 0,
+      "tau_eq_0_epsilon_counts_by_c": {
+        "carry_jump": {"0": 36, "1": 8},
+        "other": {"0": 7, "1": 16},
+        "wrap": {"0": 35, "1": 9}
+      }
+    },
+    "7": {
+      "B_plus_tau_collision_buckets": 51,
+      "B_plus_tau_collision_buckets_tau_gt_0": 0,
+      "B_plus_tau_collision_buckets_tau_eq_0": 51,
+      "B_plus_tau_plus_epsilon_collision_buckets": 0,
+      "tau_eq_0_epsilon_counts_by_c": {
+        "carry_jump": {"0": 150, "1": 24},
+        "other": {"0": 21, "1": 46},
+        "wrap": {"0": 149, "1": 25}
+      }
+    },
+    "9": {
+      "B_plus_tau_collision_buckets": 101,
+      "B_plus_tau_collision_buckets_tau_gt_0": 0,
+      "B_plus_tau_collision_buckets_tau_eq_0": 101,
+      "B_plus_tau_plus_epsilon_collision_buckets": 0,
+      "tau_eq_0_epsilon_counts_by_c": {
+        "carry_jump": {"0": 392, "1": 48},
+        "other": {"0": 43, "1": 92},
+        "wrap": {"0": 391, "1": 49}
+      }
+    },
+    "11": {
+      "B_plus_tau_collision_buckets": 167,
+      "B_plus_tau_collision_buckets_tau_gt_0": 0,
+      "B_plus_tau_collision_buckets_tau_eq_0": 167,
+      "B_plus_tau_plus_epsilon_collision_buckets": 0,
+      "tau_eq_0_epsilon_counts_by_c": {
+        "carry_jump": {"0": 810, "1": 80},
+        "other": {"0": 73, "1": 154},
+        "wrap": {"0": 809, "1": 81}
+      }
+    }
+  },
+  "meaning": {
+    "local_branch": "The next live local branch can be phrased more narrowly than in 046. It is not merely admissible coding of an exact future window; it is admissible coding of tau together with the 4-valued current grouped-delta event class epsilon.",
+    "structural_branch": "The carry sheet c is already the first exact future nonflat-event datum on the grouped base. The only unresolved piece is admissible access to that anticipation datum."
+  }
+}

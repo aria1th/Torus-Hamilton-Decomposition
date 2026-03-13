@@ -1,0 +1,94 @@
+% D5 positive theorem chain centered on (B,\tau,\epsilon_4)
+
+\paragraph{Theorem A (checked finite-cover normal form).}
+On the checked active best-seed branch for $m=5,7,9,11$, the dynamics factor as
+\[
+B \leftarrow B+c \leftarrow B+c+d,
+\qquad
+B=(s,u,v,\lambda,f),
+\qquad
+c=\mathbf 1_{\{q=m-1\}},
+\qquad
+d=\mathbf 1_{\{U^+\ge m-3\}}.
+\]
+Carry states are singleton over $B+c$, the residual ambiguity is supported only
+on regular noncarry states, and the transition law closes deterministically on
+$B+c+d$.
+
+\paragraph{Theorem B (carry as anticipation datum).}
+Let $\tau$ be the initial flat-prefix length of the future grouped-delta sequence,
+and let $\eta$ be the first nonflat grouped-delta event after that run. On the
+checked active branch, the carry sheet $c$ is exactly determined by
+\[
+(B,\tau,\eta).
+\]
+Equivalently, the first exact future grouped-delta horizon is $m-3$ and the first
+exact future grouped-state horizon is $m-2$ on the tested range.
+
+\paragraph{Theorem C (boundary sharpening).}
+All ambiguity in $(B,\tau)$ is concentrated at the boundary $\tau=0$. Away from the
+boundary, $(B,\tau)$ already determines $c$. At the boundary, the residual event
+class is genuinely three-way:
+\[
+\{\mathrm{wrap},\ \mathrm{carry\_jump},\ \mathrm{other}\}.
+\]
+Thus $(B,\tau,\epsilon_4)$ is exact for $c$ on the checked range. The stronger
+truncation $(B,\min(\tau,m-3),\epsilon_4)$ is also exact on the tested moduli, but
+is used only as checked-range evidence.
+
+\paragraph{Theorem D (countdown/reset theorem).}
+The anticipation datum $\tau$ is a countdown carrier:
+\[
+\tau(Fx)=\tau(x)-1 \qquad \text{whenever } \tau(x)>0.
+\]
+At the boundary $\tau=0$, the reset law is exact in the form
+\[
+\tau'(x)=
+\begin{cases}
+0, & \epsilon_4(x)=\mathrm{wrap},\\
+R_{\mathrm{cj}}(s,v,\lambda), & \epsilon_4(x)=\mathrm{carry\_jump},\\
+R_{\mathrm{oth}}(s,u,\lambda), & \epsilon_4(x)=\mathrm{other}.
+\end{cases}
+\]
+On the tested range $m=5,7,9,11,13,15,17,19$, the reset-value sets are exactly
+\[
+\operatorname{Im}(R_{\mathrm{cj}})=\{0,1,m-2\},
+\qquad
+\operatorname{Im}(R_{\mathrm{oth}})=\{0,m-4,m-3\}.
+\]
+Moreover, on the carry\_jump branch the zero-reset fiber is cut out exactly by
+\[
+s+v+\lambda \equiv 2 \pmod m.
+\]
+
+\paragraph{Corollary E (minimal positive carry coding).}
+On the checked active branch, the carry sheet is exactly coded by the minimal
+future-side object $(B,\tau,\epsilon_4)$. Thus the positive proof route is to code
+$\tau$ admissibly/locality-wise, or at least to code the boundary reset law at
+$\tau=0$.
+
+\paragraph{Remark (constructive $\rho$-refinement).}
+The stronger coordinate $\rho=u_{\mathrm{source}}+1 \pmod m$ yields a checked
+constructive refinement through $m=19$: $\tau$ is exact on $(s,u,v,\lambda,\rho)$,
+$\tau'$ is exact on $(s,u,\lambda,\rho,\epsilon_4)$, and $c$ is exact on
+$(u,\rho,\epsilon_4)$. This is a constructive side route only; it is not a
+replacement for the theorem-side object $(B,\tau,\epsilon_4)$.
+
+\paragraph{Proposition F (persistent bounded-horizon witness family).}
+For each tested odd modulus $m\in\{5,7,9,11,13,15,17,19\}$, the active branch
+contains states
+\[
+x^-_m=(m-2,2,1,2,0),
+\qquad
+x^+_m=(m-1,2,1,2,0),
+\]
+with common grouped base $B_*=(3,1,2,0,\mathrm{regular})$ and common
+$\epsilon_4=\mathrm{flat}$, but with opposite carry labels and
+\[
+\tau(x^-_m)=m-3,
+\qquad
+\tau(x^+_m)=m-4.
+\]
+Their future binary flat/nonflat signatures agree for the first $m-5$ steps.
+Hence any coding that factors only through $(B,\epsilon_4,\beta_h)$ with
+$h<m-4$ fails on modulus $m$.
