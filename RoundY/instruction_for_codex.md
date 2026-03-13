@@ -14,8 +14,8 @@ Read in this order:
 2. [current-frontier-and-approach.md](./current-frontier-and-approach.md)
 3. [../DOCUMENT_FOR_EXTERNAL_REVIEW.md](../DOCUMENT_FOR_EXTERNAL_REVIEW.md)
    Focus on `D23`, `D24`, `D25`, `D26`, `D27`, `D28`, `D29`, `D30`, `D31`,
-   `D32`, `D33`, `D34`, `D35`, `D37`, `D38`.
-4. [autonomous/d5_autonomous_perturbation_note_v21.md](./autonomous/d5_autonomous_perturbation_note_v21.md)
+   `D32`, `D33`, `D34`, `D35`, `D37`, `D38`, `D40`, `D42`, `D45`.
+4. [autonomous/d5_autonomous_perturbation_note_v25.md](./autonomous/d5_autonomous_perturbation_note_v25.md)
 
 Then read the key artifact READMEs in this order:
 
@@ -38,6 +38,10 @@ Then read the key artifact READMEs in this order:
 17. [../artifacts/d5_carry_and_finite_cover_044/README.md](../artifacts/d5_carry_and_finite_cover_044/README.md)
 18. [../artifacts/d5_carry_admissibility_search_045/README.md](../artifacts/d5_carry_admissibility_search_045/README.md)
 19. [../artifacts/d5_deep_transition_carry_sheet_046/README.md](../artifacts/d5_deep_transition_carry_sheet_046/README.md)
+20. [../artifacts/d5_future_transition_carry_coding_047/README.md](../artifacts/d5_future_transition_carry_coding_047/README.md)
+21. [../artifacts/d5_tau_countdown_carrier_048/README.md](../artifacts/d5_tau_countdown_carrier_048/README.md)
+22. [../artifacts/d5_source_residue_refinement_049/README.md](../artifacts/d5_source_residue_refinement_049/README.md)
+23. [../artifacts/d5_proof_support_generalization_050/README.md](../artifacts/d5_proof_support_generalization_050/README.md)
 
 If working on Lean / formalization, then also read:
 
@@ -56,6 +60,23 @@ For D5 support files inside this repo, use this layout:
 - `RoundY/theorem/` for theorem-shaping notes and snippets
 - root `RoundY/` for short session summaries such as `codex_work_s59.md`
 
+For the current theorem-side packaging around `047–054`, start with:
+
+1. [theorem/d5_proof_program_050.md](./theorem/d5_proof_program_050.md)
+2. [theorem/d5_proof_generalization_051.md](./theorem/d5_proof_generalization_051.md)
+3. [theorem/d5_boundary_reset_and_tau_proof_052.md](./theorem/d5_boundary_reset_and_tau_proof_052.md)
+4. [theorem/d5_positive_theorem_chain_054.md](./theorem/d5_positive_theorem_chain_054.md)
+
+These notes spell out the actual proof split:
+
+- negative route:
+  bounded-horizon no-go via the `046/047/048` witness family
+- positive route:
+  countdown/reset theorem packaging for `tau`
+- compute support:
+  stronger `(B,rho)` refinement only when explicitly using a constructive
+  branch
+
 ## Real current problem
 
 Do not frame the problem as:
@@ -64,12 +85,12 @@ Do not frame the problem as:
 - “find a better one-bit separator”
 - “try a slightly larger tiny transducer”
 
-The real frontier after `046` is:
+The real frontier after `050` is:
 
-**find an admissible coding of the first exact future grouped-transition event
-for the carry sheet, now that the structural theorem branch is explicit, the
-first carry-only admissible catalogs are dead, and the future horizon is
-already extracted**
+**find an admissible/local coding of the countdown carrier `tau`, now that the structural theorem
+branch is explicit, the first carry-only admissible catalogs are dead, the
+carry sheet is already the first exact future-transition event, and the first
+exact checked-range carry coding is known**
 
 `R1 -> H_L1`
 
@@ -174,10 +195,35 @@ Treat these as current working facts unless you are explicitly revisiting them.
    The minimal exact future `dn` horizon is `m-3`, the minimal exact future
    grouped-state horizon is `m-2`, and the exact future window compresses to
    current `B` plus `flat-run length + first nonflat dn`.
+18. `047`
+   The exact checked-range carry target sharpens to
+   `B + min(tau,8) + epsilon4`.
+   The boundary event class at `tau=0` is `3`-class minimal, and the first
+   exact transition-sheet coding is current `B` plus current `epsilon4` plus
+   the next `7` future flat/nonflat indicators after the current step.
+19. `048`
+   `tau` itself already has exact internal dynamics on the checked active
+   nonterminal branch:
+   for `tau>0`, the next value is `tau-1`,
+   while the boundary reset at `tau=0` is tiny and current-state driven:
+   `wrap -> 0`, `carry_jump` on `(s,v,layer)`, and `other` on `(s,u,layer)`.
+20. `049`
+   a stronger constructive refinement persists through `m=19`:
+   with `rho = source_u + 1 mod m`,
+   `tau` is exact on `(s,u,v,layer,rho)`,
+   `next_tau` is exact on `(s,u,layer,rho,epsilon4)`,
+   and `c` is exact on `(u,rho,epsilon4)`.
+   But `rho` is not recoverable from `(B,tau,epsilon4)` once `m>=7`, so this
+   is a compute-side refinement, not the main theorem object.
+21. `050`
+   the two narrow proof-support checks persist through `m=19`:
+   the `048` reset law remains exact on the same theorem-side quotients,
+   and the explicit `047/048` witness pair persists with the same
+   `h < m-4` lower-bound shape.
 
 So the branch is now:
 
-**projected phase known, raw odometer known, raw control logic explicit, grouped-state descent exhausted, carry lift identified, binary anticipation cover explicit, first carry-only catalogs exhausted, future-transition carry sheet extracted**
+**projected phase known, raw odometer known, raw control logic explicit, grouped-state descent exhausted, carry lift identified, binary anticipation cover explicit, first carry-only catalogs exhausted, future-transition carry sheet extracted, exact checked-range carry coding extracted, countdown carrier extracted, stronger current-memory refinement available, larger-modulus proof support in place**
 
 ## Patterns to think in first
 

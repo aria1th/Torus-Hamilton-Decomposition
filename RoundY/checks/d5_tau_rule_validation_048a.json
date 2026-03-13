@@ -1,0 +1,226 @@
+{
+  "source_dataset": "artifacts/d5_future_transition_carry_coding_047/data/frozen_B_c_tau_epsilon_dataset_047.json",
+  "validated_claims": {
+    "countdown_reset_rule_048": {
+      "5": {
+        "countdown_reset_failures": 0,
+        "carry_jump_reset_ambiguous_buckets": 0,
+        "other_reset_ambiguous_buckets": 0
+      },
+      "7": {
+        "countdown_reset_failures": 0,
+        "carry_jump_reset_ambiguous_buckets": 0,
+        "other_reset_ambiguous_buckets": 0
+      },
+      "9": {
+        "countdown_reset_failures": 0,
+        "carry_jump_reset_ambiguous_buckets": 0,
+        "other_reset_ambiguous_buckets": 0
+      },
+      "11": {
+        "countdown_reset_failures": 0,
+        "carry_jump_reset_ambiguous_buckets": 0,
+        "other_reset_ambiguous_buckets": 0
+      }
+    },
+    "exact_quotient_B_min_tau_m_minus_3_epsilon4": {
+      "5": {
+        "is_exact": true,
+        "distinct_key_count": 216
+      },
+      "7": {
+        "is_exact": true,
+        "distinct_key_count": 1209
+      },
+      "9": {
+        "is_exact": true,
+        "distinct_key_count": 3945
+      },
+      "11": {
+        "is_exact": true,
+        "distinct_key_count": 9769
+      }
+    },
+    "minimal_horizon_pattern": {
+      "5": {
+        "binary_after_current": 1,
+        "event_window": 2,
+        "binary_window": 4
+      },
+      "7": {
+        "binary_after_current": 3,
+        "event_window": 4,
+        "binary_window": 6
+      },
+      "9": {
+        "binary_after_current": 5,
+        "event_window": 6,
+        "binary_window": 8
+      },
+      "11": {
+        "binary_after_current": 7,
+        "event_window": 8,
+        "binary_window": 10
+      }
+    },
+    "explicit_witness_pair": {
+      "5": {
+        "x_minus": {
+          "q": 3,
+          "w": 2,
+          "u": 1,
+          "v": 2,
+          "layer": 0,
+          "c": 0,
+          "tau": 2,
+          "epsilon4": "flat",
+          "B": [
+            3,
+            1,
+            2,
+            0,
+            "regular"
+          ]
+        },
+        "x_plus": {
+          "q": 4,
+          "w": 2,
+          "u": 1,
+          "v": 2,
+          "layer": 0,
+          "c": 1,
+          "tau": 1,
+          "epsilon4": "flat",
+          "B": [
+            3,
+            1,
+            2,
+            0,
+            "regular"
+          ]
+        },
+        "common_future_binary_prefix_length": 0,
+        "first_difference_index": 0,
+        "claimed_lower_bound_valid_for_h_less_than": 1
+      },
+      "7": {
+        "x_minus": {
+          "q": 5,
+          "w": 2,
+          "u": 1,
+          "v": 2,
+          "layer": 0,
+          "c": 0,
+          "tau": 4,
+          "epsilon4": "flat",
+          "B": [
+            3,
+            1,
+            2,
+            0,
+            "regular"
+          ]
+        },
+        "x_plus": {
+          "q": 6,
+          "w": 2,
+          "u": 1,
+          "v": 2,
+          "layer": 0,
+          "c": 1,
+          "tau": 3,
+          "epsilon4": "flat",
+          "B": [
+            3,
+            1,
+            2,
+            0,
+            "regular"
+          ]
+        },
+        "common_future_binary_prefix_length": 2,
+        "first_difference_index": 2,
+        "claimed_lower_bound_valid_for_h_less_than": 3
+      },
+      "9": {
+        "x_minus": {
+          "q": 7,
+          "w": 2,
+          "u": 1,
+          "v": 2,
+          "layer": 0,
+          "c": 0,
+          "tau": 6,
+          "epsilon4": "flat",
+          "B": [
+            3,
+            1,
+            2,
+            0,
+            "regular"
+          ]
+        },
+        "x_plus": {
+          "q": 8,
+          "w": 2,
+          "u": 1,
+          "v": 2,
+          "layer": 0,
+          "c": 1,
+          "tau": 5,
+          "epsilon4": "flat",
+          "B": [
+            3,
+            1,
+            2,
+            0,
+            "regular"
+          ]
+        },
+        "common_future_binary_prefix_length": 4,
+        "first_difference_index": 4,
+        "claimed_lower_bound_valid_for_h_less_than": 5
+      },
+      "11": {
+        "x_minus": {
+          "q": 9,
+          "w": 2,
+          "u": 1,
+          "v": 2,
+          "layer": 0,
+          "c": 0,
+          "tau": 8,
+          "epsilon4": "flat",
+          "B": [
+            3,
+            1,
+            2,
+            0,
+            "regular"
+          ]
+        },
+        "x_plus": {
+          "q": 10,
+          "w": 2,
+          "u": 1,
+          "v": 2,
+          "layer": 0,
+          "c": 1,
+          "tau": 7,
+          "epsilon4": "flat",
+          "B": [
+            3,
+            1,
+            2,
+            0,
+            "regular"
+          ]
+        },
+        "common_future_binary_prefix_length": 6,
+        "first_difference_index": 6,
+        "claimed_lower_bound_valid_for_h_less_than": 7
+      }
+    }
+  },
+  "note": "The witness pair supports the lower bound h < m-4 in the (B, epsilon4, beta_h) family by agreeing on prefixes of length up to m-5 and first differing at position m-4."
+}

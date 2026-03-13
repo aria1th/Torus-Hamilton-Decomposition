@@ -13,9 +13,12 @@ Use it together with:
 
 - [README.md](./README.md)
 - [d5_progress_master_summary.md](./d5_progress_master_summary.md)
-- [d5_autonomous_perturbation_note_v21.md](./autonomous/d5_autonomous_perturbation_note_v21.md)
+- [d5_autonomous_perturbation_note_v25.md](./autonomous/d5_autonomous_perturbation_note_v25.md)
 - [routeY_status_summary_045.md](./routeY_status_summary_045.md)
 - [d5_carry_transition_horizon_followup_045.md](./d5_carry_transition_horizon_followup_045.md)
+- [theorem/d5_proof_program_050.md](./theorem/d5_proof_program_050.md)
+- [theorem/d5_boundary_reset_and_tau_proof_052.md](./theorem/d5_boundary_reset_and_tau_proof_052.md)
+- [theorem/d5_positive_theorem_chain_054.md](./theorem/d5_positive_theorem_chain_054.md)
 - [DOCUMENT_FOR_EXTERNAL_REVIEW.md](../DOCUMENT_FOR_EXTERNAL_REVIEW.md)
 - [formal/README-D5.md](../formal/README-D5.md)
 
@@ -28,7 +31,7 @@ RoundY D5 support files now live in:
 
 ## Current real problem
 
-After artifacts `017–046`, the live D5 obstruction is no longer:
+After artifacts `017–050`, the live D5 obstruction is no longer:
 
 - missing clean frame
 - missing Latin feasibility
@@ -38,10 +41,11 @@ After artifacts `017–046`, the live D5 obstruction is no longer:
 
 The actual frontier is:
 
-**find an admissible coding of the first exact future grouped-transition event
-for the carry sheet, now that the structural theorem branch is explicit, the
-first carry-only admissible catalogs are dead, and the future horizon is
-already extracted**
+**find an admissible/local coding of the countdown carrier `tau`, now that the
+structural theorem branch is explicit, the first carry-only admissible
+catalogs are dead, the carry sheet is already the first exact future-transition
+event, the first exact checked-range carry coding is known, and the internal
+`tau` dynamics have already reduced to countdown plus tiny reset law**
 
 `R1 -> H_L1`
 
@@ -110,12 +114,44 @@ What is already known:
   `first nonflat dn`.
   Flat-run length alone is not exact, and the `H-1` ambiguity is confined to
   regular carry `B`-states.
+- `047`: that exact future carry target sharpens further.
+  The boundary event class at `tau=0` is genuinely `3`-class minimal:
+  `wrap`, `carry_jump`, `other`.
+  The first exact checked-range quotient is
+  `B + min(tau,8) + epsilon4`.
+  Equivalently, the first exact checked-range transition-sheet coding is
+  current `B` plus current `epsilon4` plus the next `7` future binary
+  flat/nonflat indicators after the current step.
+  So the live hidden datum is `tau`, not a vague larger future sheet.
+- `048`: `tau` itself now has exact internal dynamics on the checked active
+  nonterminal branch.
+  Whenever `tau > 0`, the next value is exactly `tau-1`.
+  All nontrivial dynamics are confined to the boundary `tau=0`, where
+  `wrap -> 0`, `carry_jump` resets exactly on `(s,v,layer)`, and `other`
+  resets exactly on `(s,u,layer)`.
+  So the live local target is better read as a countdown carrier with a tiny
+  reset law.
+- `049`: the stronger source-memory refinement also survives a larger direct
+  replay range.
+  Through `m=19`, with `rho = source_u + 1 mod m`,
+  `tau` is exact on `(s,u,v,layer,rho)`,
+  `next_tau` is exact on `(s,u,layer,rho,epsilon4)`,
+  `c` is exact on `(u,rho,epsilon4)`,
+  and `q ≡ u-rho+1_{epsilon4=carry_jump} mod m`.
+  But `rho` is not recoverable from `(B,tau,epsilon4)` once `m>=7`, so this is
+  a stronger constructive refinement, not the theorem-side minimal object.
+- `050`: the two narrow proof-support checks also persist through `m=19`.
+  The `048` reset law remains exact on the same theorem-side quotients, and
+  the explicit `047/048` witness pair persists with the same `m-4` lower-bound
+  shape.
 
 So the next branch should be read as:
 
-**admissible coding of the first exact future grouped-transition event for the
-carry sheet, now that the structural theorem branch is explicit and the first
-carry-only catalogs are already exhausted**.
+**admissible/local coding of the countdown carrier `tau`, now that the
+structural theorem branch is explicit, the carry sheet is already the first
+exact future-transition event, the exact checked-range coding boundary is
+known, and the internal `tau` dynamics have been reduced to countdown plus
+tiny reset law**.
 
 ## What the current approach should be
 
@@ -146,6 +182,21 @@ The guiding proof picture is now:
   existing `025` grouped target and the finite-cover theorem becomes the clean
   structural wrapper around it.
 
+The proof program itself now has two honest routes sharing that same picture:
+
+- negative route:
+  package `046/047/048` into a bounded-horizon reduction and then apply the
+  explicit witness family showing that no fixed future flat/nonflat horizon
+  can code the carry sheet uniformly in `m`;
+- positive route:
+  package `048/050/052` into a countdown/reset theorem where `tau` is the main
+  hidden datum, `tau_next = tau-1` away from the boundary, and the `tau=0`
+  reset is governed by the small current-state classes `wrap`, `carry_jump`,
+  and `other`;
+- compute route:
+  allow the stronger current-memory refinement `(B,rho)` from `049` when the
+  goal is constructive support rather than the theorem-side minimal object.
+
 The first honest next moves are:
 
 1. separate trigger-level lifts from closed structural lifts
@@ -154,10 +205,15 @@ The first honest next moves are:
    `B <- B+c <- B+c+d`
    with `d = 1_{next carry u >= m-3}` a binary anticipation sheet
 4. do not reopen the first carry-only catalogs already killed by `045`
-5. do not describe the next object as an amorphous broader gauge when `046`
-   already gives an exact future-transition signature
+5. do not describe the next object as an amorphous broader future sheet when
+   `046–048` already reduce it to a countdown carrier with tiny reset law
 6. only then open genuinely new observable families, not lifts of the same
    simple `038` row
+7. treat `epsilon` as a secondary boundary correction and the positive
+   countdown of `tau` as the main hidden datum
+8. keep the theorem-side object minimal, but allow compute branches to use the
+   stronger current-memory refinement `(B,rho)` when they are explicitly
+   constructive rather than theorem-packaging
 
 ## Brief explanation of `docs/suggested_workflow.md`
 
@@ -314,32 +370,41 @@ These are the theorem-shaped objects worth seeking now.
    current `B` plus
    `initial flat-run length + first nonflat dn`.
 
-13. **Localized-carrier theorem**
+13. **Exact checked-range carry-coding theorem**
+   Formalize the `047` extraction:
+   the `tau=0` boundary event class is genuinely `3`-class minimal,
+   the first exact checked-range quotient is
+   `B + min(tau,8) + epsilon4`,
+   and the first exact checked-range transition-sheet coding is
+   current `B` plus current `epsilon4` plus the next `7` future binary
+   flat/nonflat indicators after the current step.
+
+14. **Localized-carrier theorem**
    Identify the smallest local mechanism that can create and preserve a marker
    on the intended corridor while using the visible raw odometer phase to fire
    at the right target.
 
-14. **Carry-priority local theorem**
+15. **Carry-priority local theorem**
    Show that the next honest local target is still the carry sheet `c`,
    not the full anticipation sheet `d`.
 
-15. **Residual-sheet no-go / coordinatization theorem**
+16. **Residual-sheet no-go / coordinatization theorem**
    Prove either:
    - the anticipation sheet `d` is not any small current observable in the
      intended local class, or
    - the smallest admissible observable that realizes it.
 
-16. **Visible-phase no-go theorem**
+17. **Visible-phase no-go theorem**
    Strengthen the computational `033/034/035/036/037` obstruction into a real
    statement: visible raw phase alone is insufficient without corridor
    localization.
 
-17. **Local-to-reduced realization theorem**
+18. **Local-to-reduced realization theorem**
    Show that if a local mechanism realizes the extracted phase target while
    preserving the reduced `025` structure to first order, then the grouped
    orbit target follows.
 
-18. **Bridge-to-full-D5 theorem**
+19. **Bridge-to-full-D5 theorem**
    Convert the right reduced/local realization into the full Hamilton
    decomposition statement for D5.
 

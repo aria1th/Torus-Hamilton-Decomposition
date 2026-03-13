@@ -5,11 +5,25 @@ Hamilton decomposition of the directed `5`-torus
 `D_5(m) = Cay((Z_m)^5, {e_0, e_1, e_2, e_3, e_4})`.
 
 **Status:** `[O]` open.  
-**Current frontier:** after artifact `046`, grouped-state-descending admissible families are pruned, the structural theorem branch has a clean checked normal form, the first carry-only admissible catalogs are dead, and the carry sheet is now identified exactly as a future grouped-transition event. On `m=5,7,9,11`, the minimal exact future grouped-delta horizon is `m-3`, the minimal exact future grouped-state horizon is `m-2`, and the exact future window compresses to `B` plus `initial flat-run length + first nonflat dn`. It is now: **seek an admissible coding of that exact future-transition event, not a generic broader gauge.**
+**Current frontier:** after artifacts `049` and `050`, the theorem-side D5 chain is still the minimal `044–048` normal form, but the compute side is stronger and cleaner than before. Through `m=19`, the countdown-carrier picture stays stable, the stronger current-memory refinement via `rho = source_u + 1 mod m` is exact, and the two highest-value proof-support checks also persist. The open problem is still: **seek an admissible/local coding of the countdown carrier `tau`, not a generic broader future sheet.**
 
 This README is the current top-level map. It replaces the older Session-20-only
 snapshot and is organized around the actual D5 branch progression through the
 recent artifacts.
+
+## Larger Program Status
+
+RoundY is only the live `d=5` frontier. The broader low-dimensional program is
+already in much better shape:
+
+- `d=3` is mathematically solved in the current odometer manuscript;
+- `d=4` is mathematically solved in the same return-map / odometer language;
+- `d=4` is also fully Lean-formalized in [formal/README.md](../formal/README.md);
+- `d=3` has an active Lean cleanup / odometer repackaging branch, but it is
+  not the current frontier.
+
+So this README should be read as: the remaining open low-dimensional case is
+`d=5`, not as a statement that the whole `d=3,4,5` program is equally open.
 
 ## One-paragraph status
 
@@ -25,7 +39,58 @@ endpoint seed: the lifted phase is already visible on raw `(q,w,layer)`, the
 raw control logic is already exact, the carry-slice trigger lift is known, and
 the remaining structural object is now explicit: grouped base plus carry sheet
 plus binary anticipation cover, with the first carry-only admissible catalogs
-now ruled out and the carry bit exposed as a future-transition event.
+now ruled out, the carry bit exposed as a future-transition event, the first
+exact checked-range carry coding extracted, and the hidden datum `tau` reduced
+further to countdown plus a tiny boundary reset law.
+
+## Brief Mathematical Summary
+
+For a reader who does not have the artifacts open, the current D5 picture is:
+
+1. there is a genuine mixed D5 witness, so the problem is no longer existence
+   of mixed cycle-plus-monodromy dynamics;
+2. the grouped dynamics already have a clean reduced model, and the best
+   reduced perturbation target is known;
+3. on the active best-seed branch of the unresolved local channel, the checked
+   structure factors as
+   `B <- B+c <- B+c+d`,
+   where
+   `B = (s,u,v,layer,family)`,
+   `c = 1_{q=m-1}`,
+   and
+   `d = 1_{next carry u >= m-3}`;
+4. the carry sheet `c` is not a function of the current grouped base `B`, so
+   the missing ingredient is not another current-state separator;
+5. `c` is already an exact one-sided anticipation datum on the grouped
+   dynamics: it is determined by the first future nonflat grouped-transition
+   event;
+6. on the checked moduli `m=5,7,9,11`, the live hidden datum sharpens to
+   `tau`, the initial flat-run length for `dn=(0,0,0,1)`, together with a tiny
+   boundary correction `epsilon4` at `tau=0`;
+7. after `048`, `tau` itself already has exact internal dynamics on the
+   checked active nonterminal branch:
+   positive values propagate by countdown, and only the boundary reset remains
+   to be coded locally.
+8. on the larger tested range `m=13,15,17,19`, the compute-side refinement
+   through `rho = source_u + 1 mod m` stays exact, and the two narrow
+   proof-support checks also persist:
+   the `048` reset law remains exact on the same theorem-side quotients, and
+   the explicit `047/048` witness pair keeps the same `m-4` lower-bound shape.
+
+So the mathematical problem is now very narrow. The branch is no longer asking
+for a new witness or a broader search over tiny controllers. It is asking for
+one of two things:
+
+- an admissible/local coding of the countdown carrier `tau`, or
+- a theorem that the intended local mechanism class cannot code that carrier.
+
+For context, this is exactly the point where `d=5` now differs from the lower
+dimensions:
+
+- `d=3` already closes by direct or finite-defect odometer return maps;
+- `d=4` already closes by one more nested return and is fully machine-checked;
+- `d=5` already has the same theorem-shaped language, but the last local
+  anticipation obstruction is still open.
 
 ## Current proof strategy
 
@@ -39,21 +104,57 @@ That part is already done. The live theorem strategy is:
    `B = (s,u,v,layer,family)`,
    `c = 1_{q=m-1}`,
    and `d = 1_{next carry u >= m-3}`;
-3. use `045` and `046` to sharpen the remaining gap:
+3. use `044–048` to sharpen the remaining gap:
    the missing ingredient is not more controller logic, but an admissible way
-   to code the carry event already visible as
-   `B + flat-run length + first nonflat dn`;
-4. once that carry event is realized in the intended local/admissible class,
+   to code the carry target now known as a countdown carrier with a tiny reset
+   law:
+   checked-range exact form `B + min(tau,8) + epsilon4`,
+   equivalent future-window coding by current `B` plus current `epsilon4` plus
+   the next `7` future flat/nonflat indicators after the current step,
+   and internal `048` dynamics given by countdown away from the boundary plus a
+   small boundary reset;
+4. use `049/050` only as support around that theorem chain:
+   `049` as the stronger constructive current-memory refinement,
+   `050` as larger-modulus evidence for the reset law and the witness family;
+5. once that carry event is realized in the intended local/admissible class,
    the trigger logic should descend to the reduced model cleanly, while `d`
    stays on the theorem side as a structural finite-cover coordinate.
 
 So the proof is currently split into two coordinated branches:
 
 - local branch:
-  find an admissible surrogate for the exact future-transition carry event;
+  find an admissible/local coding of the countdown carrier `tau`;
 - theorem branch:
-  package `044`, `045`, and `046` as the checked normal-form chain behind the
-  D5 mechanism.
+  package `044`, `045`, `046`, `047`, and `048` as the checked normal-form
+  chain behind the D5 mechanism.
+
+## What To Do Now
+
+The recommended next work is:
+
+1. proof-first packaging:
+   treat `044–048` as one theorem chain:
+   finite-sheet normal form,
+   first carry-only no-go,
+   carry as an exact future-transition event,
+   boundary sharpening to `tau` plus a tiny correction,
+   then countdown-carrier dynamics for `tau` itself;
+2. if any new search is opened, make it explicitly about coding the countdown
+   carrier `tau`;
+3. do not reopen:
+   broad one-bit scans,
+   generic tiny-transducer widening on the old alphabet,
+   or more current-edge / short-transition carry catalogs unless they are
+   justified as a real `tau`-coding family.
+
+In short:
+
+- proof question:
+  can the `044–048` chain be turned into a clean theorem package?
+- local question:
+  can the countdown carrier `tau` be coded admissibly?
+- no-go question:
+  if not, can that be proved for the current mechanism class?
 
 ## Barrier evolution
 
@@ -72,11 +173,13 @@ The real story of RoundY is the bottleneck moving inward:
 11. `carry-slice trigger lift identified`
 12. `first carry-only admissible catalogs pruned`
 13. `carry sheet identified as first exact future-transition event`
-14. `current frontier: admissible coding of that future event`
+14. `first exact checked-range carry coding extracted`
+15. `tau sharpened to an exact countdown carrier with tiny reset law`
+16. `current frontier: admissible/local coding of that countdown carrier`
 
 In short:
 
-`clean frame -> Latin -> return dynamics -> reduced normal form -> local realization -> orbit phase -> lifted-coordinate admissibility -> tiny finite-sheet cover -> carry-only admissibility no-go -> future-transition carry sheet`
+`clean frame -> Latin -> return dynamics -> reduced normal form -> local realization -> orbit phase -> lifted-coordinate admissibility -> tiny finite-sheet cover -> carry-only admissibility no-go -> future-transition carry sheet -> exact checked-range carry coding -> countdown carrier`
 
 ## High-level progress map
 
@@ -189,7 +292,7 @@ Main outcome:
 - endpoint orientation is necessary,
 - but fixed static endpoint words are still not enough.
 
-### `032–046`: best endpoint seed, defect quotient, corridor phase, static gate no-go, phase clarification, carrier target, birth-local split, exact raw birth formulas, realization boundary, first admissibility no-go, carry-slice / finite-cover extraction, first carry-only no-go, deep future-transition carry sheet
+### `032–050`: best endpoint seed, defect quotient, corridor phase, static gate no-go, phase clarification, carrier target, birth-local split, exact raw birth formulas, realization boundary, first admissibility no-go, carry-slice / finite-cover extraction, first carry-only no-go, deep future-transition carry sheet, exact checked-range carry coding, countdown carrier, source-residue refinement, proof-support persistence
 
 This is the current live branch.
 
@@ -304,6 +407,41 @@ This is the current live branch.
   `first nonflat dn`.
   Flat-run length alone is not exact, and the `H-1` ambiguity is confined to
   regular carry `B`-states.
+- `047`:
+  the `046` target sharpens further.
+  The boundary event class at `tau=0` is genuinely `3`-class minimal:
+  `wrap`, `carry_jump`, `other`.
+  The first exact checked-range quotient is
+  `B + min(tau,8) + epsilon4`.
+  Equivalently, the first exact checked-range transition-sheet coding is:
+  current `B` plus current `epsilon4` plus the next `7` future binary
+  flat/nonflat indicators after the current step.
+  Full `4`-class event windows become exact at horizon `8`, while pure future
+  binary windows become exact only at horizon `10`.
+- `048`:
+  `tau` itself already has exact internal dynamics on the checked active
+  nonterminal branch:
+  for `tau>0`, `tau_next = tau-1` exactly, while the boundary `tau=0` reset is
+  tiny and current-state driven:
+  `wrap -> 0`, `carry_jump` on `(s,v,layer)`, and `other` on `(s,u,layer)`.
+- `049`:
+  the compute branch gains a stronger current-state refinement through
+  transported source residue.
+  Through `m=19`, with `rho = source_u + 1 mod m`,
+  `tau` is exact on `(s,u,v,layer,rho)`,
+  `next_tau` is exact on `(s,u,layer,rho,epsilon4)`,
+  `c` is exact on `(u,rho,epsilon4)`,
+  and `q ≡ u-rho+1_{epsilon4=carry_jump} mod m`.
+  But `rho` is not recoverable from `(B,tau,epsilon4)` once `m>=7`, so this is
+  a stronger constructive refinement, not the theorem-side minimal object.
+- `050`:
+  the two highest-value proof-support checks persist through `m=19`.
+  The `048` reset law stays exact on the same theorem-side quotients, and the
+  explicit `047/048` witness pair persists exactly with
+  `x^-_m=(m-2,2,1,2,0)`,
+  `x^+_m=(m-1,2,1,2,0)`,
+  common `B=(3,1,2,0,regular)`,
+  and common future-binary prefix length `m-5`.
 
 Main outcome:
 
@@ -328,11 +466,19 @@ Main outcome:
 - The first carry-only admissible families are now pruned too.
 - The carry sheet is no longer an amorphous deeper lift.
 - It is already the first exact future grouped-transition event.
-- The remaining live local branch is admissible coding of that future event.
+- The exact checked-range carry target is no longer the whole future window.
+- It sharpens to `tau` plus a tiny boundary correction.
+- `tau` itself is now known to be a countdown carrier with tiny reset law.
+- The compute branch also has a stronger current-memory refinement through
+  `rho`, but that is not the theorem-side minimal object.
+- The proof branch now has larger-modulus support for both the `048` reset law
+  and the `047/048` witness family.
+- The remaining live local branch is admissible/local coding of that carrier.
 - But the closed structural lift is still not just the carry bit.
 - So the missing admissibility ingredient is the smallest finite lifted sheet
   over the grouped base beyond current edge / `1`-step / `2`-step /
-  low-cardinality anchored-gauge data.
+  low-cardinality anchored-gauge data, now targeted specifically at `tau`
+  rather than a generic broader future sheet.
 
 ## Current picture
 
@@ -362,6 +508,20 @@ The strongest supported D5 picture so far is:
 13. The first carry-only admissible catalogs are also exhausted exactly.
 14. The carry sheet is already the first exact future grouped-transition
     event, not an unspecified deeper lift.
+15. The first exact checked-range carry coding is already extracted:
+    `B + min(tau,8) + epsilon4`, or equivalently current `B` plus current
+    `epsilon4` plus the next `7` future flat/nonflat indicators after the
+    current step.
+16. `tau` itself already has exact internal dynamics on the checked active
+    nonterminal branch: positive values count down, and only the boundary
+    reset is nontrivial.
+17. Through `m=19`, the stronger compute-side refinement through `rho`
+    remains exact:
+    `tau` on `(s,u,v,layer,rho)`,
+    `next_tau` on `(s,u,layer,rho,epsilon4)`,
+    and `c` on `(u,rho,epsilon4)`.
+18. Through `m=19`, the proof-side reset law and the explicit lower-bound
+    witness pair both persist.
 
 So the current question is not:
 
@@ -371,23 +531,29 @@ So the current question is not:
 
 It is:
 
-**what is the smallest admissible coding of the exact future-transition
-signature
-`B + flat-run length + first nonflat dn`
-that exposes and closes the raw control logic already identified?**
+**what is the smallest admissible/local coding of the countdown carrier
+`tau`, now that the checked carry target is already reduced to
+`B + min(tau,8) + epsilon4`,
+the first exact transition-sheet coding is explicit,
+and the internal `tau` dynamics are already reduced to countdown plus reset?**
 
 ## Current next branch
 
-After `046`, the honest next branch is:
+After `050`, the honest next branch is:
 
-1. search for an admissible surrogate for
-   `B + flat-run length + first nonflat dn`,
-   still targeting only the carry bit `c = 1_{q=m-1}`;
-2. package `044`, `045`, and `046` as one theorem chain:
+1. package `044`, `045`, `046`, `047`, and `048` as one theorem chain:
    grouped base, carry sheet, binary anticipation cover, first carry-catalog
-   no-go, and exact future-transition carry event;
-3. only then ask whether the future signature itself compresses further or
-   whether a smaller equivalent admissible coding exists.
+   no-go, exact future-transition carry event, the first exact checked-range
+   carry coding, and the countdown-carrier law for `tau`;
+2. keep `049` as a constructive refinement only:
+   use `(B,rho)` if it helps computation, but do not replace the theorem-side
+   minimal object `(B,tau,epsilon4)`;
+3. use `050` as proof support:
+   the reset law and the witness family now have larger-modulus backing
+   through `m=19`;
+4. only then ask for the next real local step:
+   an admissible/local coding of the countdown carrier `tau`, or a reduction
+   lemma showing the intended local class cannot code it.
 
 What is not recommended now:
 
@@ -404,17 +570,35 @@ Use these together:
   for the compressed exact history through the earlier D5 pilot chain
 - [`RoundY/current-frontier-and-approach.md`](./current-frontier-and-approach.md)
   for the current problem statement, workflow note, and theorem targets
+- [`RoundY/d5_revealed_and_next_split_049.md`](./d5_revealed_and_next_split_049.md)
+  for the current revealed facts and the split between proof and compute next directions
+- [`RoundY/theorem/d5_proof_direction_compute_support_052.md`](./theorem/d5_proof_direction_compute_support_052.md)
+  for the consolidated compute evidence supporting the current proof directions
+- [`RoundY/theorem/d5_proof_program_050.md`](./theorem/d5_proof_program_050.md)
+  for the explicit split between the negative bounded-horizon route and the
+  positive countdown/reset route
+- [`RoundY/theorem/d5_boundary_reset_and_tau_proof_052.md`](./theorem/d5_boundary_reset_and_tau_proof_052.md)
+  for the current theorem-side packaging of the countdown/reset law
+- [`RoundY/theorem/d5_positive_theorem_chain_054.md`](./theorem/d5_positive_theorem_chain_054.md)
+  for the current positive-route theorem chain after the reset-law package
 - [`RoundY/instruction_for_codex.md`](./instruction_for_codex.md)
   for the short Codex-oriented reading order and thinking patterns
 - [`DOCUMENT_FOR_EXTERNAL_REVIEW.md`](../DOCUMENT_FOR_EXTERNAL_REVIEW.md)
-  for the branch decisions `D17` through `D39`
-- [`RoundY/autonomous/d5_autonomous_perturbation_note_v21.md`](./autonomous/d5_autonomous_perturbation_note_v21.md)
-  for the latest local-branch summary
+  for the branch decisions `D17` through `D45`
+- [`RoundY/autonomous/d5_autonomous_perturbation_note_v25.md`](./autonomous/d5_autonomous_perturbation_note_v25.md)
+  for the latest compute-branch summary
 - [`RoundY/routeY_status_summary_045.md`](./routeY_status_summary_045.md)
   for the compact branch-status freeze at the start of the carry-only search
-- [`RoundY/d5_carry_transition_horizon_followup_045.md`](./d5_carry_transition_horizon_followup_045.md)
-  for the short note explaining why the `046` branch sharpened from a vague
-  “deeper sheet” to an exact future-transition event
+- [`artifacts/d5_future_transition_carry_coding_047/README.md`](../artifacts/d5_future_transition_carry_coding_047/README.md)
+  for the exact checked-range `047` carry-coding extraction
+- [`artifacts/d5_tau_countdown_carrier_048/README.md`](../artifacts/d5_tau_countdown_carrier_048/README.md)
+  for the countdown-carrier `047A` extraction
+- [`artifacts/d5_source_residue_refinement_049/README.md`](../artifacts/d5_source_residue_refinement_049/README.md)
+  for the stronger compute-side current-memory refinement
+- [`artifacts/d5_proof_support_generalization_050/README.md`](../artifacts/d5_proof_support_generalization_050/README.md)
+  for the larger-modulus reset-law and witness-pair proof support
+- [`artifacts/d5_proof_direction_evidence_052/README.md`](../artifacts/d5_proof_direction_evidence_052/README.md)
+  for the consolidated theorem-side compute evidence through `m=19`
 - [`formal/README-D5.md`](../formal/README-D5.md)
   for the Lean / formalization side of the extracted D5 model
 
@@ -426,16 +610,59 @@ RoundY now keeps active D5 support files inside `RoundY/`, not `tmp/`.
   session summaries and short branch notes such as
   `codex_work_s59.md`,
   `codex_work_s60.md`,
+  `codex_work_s61.md`,
+  `codex_work_s62.md`,
+  `feedback_s63.md`,
+  `note_s61.md`,
+  `note_s63.md`,
   `routeY_status_summary_045.md`,
   and `d5_carry_transition_horizon_followup_045.md`
 - [`RoundY/specs/`](./specs/):
-  executable specs and work templates for artifact branches
+  executable specs and work templates for artifact branches, including
+  `d5_future_transition_carry_coding_047_work_template.md`,
+  `d5_tau_reset_coding_parallel_work_request_049.md`,
+  `d5_parallel_compute_requests_050.md`,
+  and `d5_reset_formula_probe_optional_052.md`
 - [`RoundY/checks/`](./checks/):
-  small JSON prep checks and follow-up machine summaries
+  small JSON prep checks and follow-up machine summaries such as
+  `d5_046_boundary_followon_analysis.json`,
+  `d5_047_per_modulus_horizon_pattern.json`,
+  and `d5_tau_rule_validation_048a.json`
 - [`RoundY/theorem/`](./theorem/):
-  theorem-packaging notes and manuscript snippets
+  theorem-packaging notes and manuscript snippets such as
+  `d5_tau_admissibility_no_go_proof_progress_048.md`,
+  `d5_tau_countdown_proof_progress_049.md`,
+  `d5_proof_program_050.md`,
+  `d5_proof_generalization_051.md`,
+  `d5_boundary_reset_and_tau_proof_052.md`,
+  and `d5_positive_theorem_chain_054.md`
 
 These files are research assets for the D5 branch, not transient scratch.
+
+## Current proof program
+
+The D5 theorem side is no longer a generic search. It is now a clean
+two-route proof program around the same reduced object.
+
+- Negative route:
+  package `046/047/048` as a bounded-horizon no-go statement.
+  The target reduction is that an intended admissible/local mechanism should
+  factor through current `B`, the boundary class `epsilon4`, and a bounded
+  future flat/nonflat window; the witness family from the `047/048` notes then
+  blocks any fixed horizon uniformly in `m`.
+- Positive route:
+  package `048/050/052` as the countdown/reset theorem.
+  Here `tau` is the main hidden datum, `tau_next = tau-1` on the positive
+  branch, and the only nontrivial dynamics are the tiny `tau=0` reset classes
+  `wrap`, `carry_jump`, and `other`.
+- Structural wrapper:
+  both routes sit inside the same cover picture
+  `B <- B+c <- B+c+d`,
+  where `c = 1_{q=m-1}` and
+  `d = 1_{next carry u >= m-3}`.
+- Compute support:
+  the stronger current-memory refinement `(B,rho)` from `049` is useful for
+  constructive evidence, but it is not the main theorem object.
 
 ## Recent artifact chain
 
@@ -462,6 +689,11 @@ These files are research assets for the D5 branch, not transient scratch.
 | `044` | **normal form confirmed**: `B <- B+c <- B+c+d` with `d = 1_{next carry u >= m-3}`; carry states singleton over `B+c`; `d` needed only on regular noncarry; carry realization: **open** |
 | `045` | **first carry-only admissibility no-go**: `0` exact candidates across `69,994` first catalog families; `B`, `B->B_next`, and `B->B_next->B_next2` classes all fail; next missing datum = broader lifted gauge or deeper-than-`2`-step transition sheet |
 | `046` | **future-transition carry sheet extracted**: minimal exact future `dn` horizon = `m-3`, minimal exact future grouped-state horizon = `m-2`; exact compression = `B + flat-run length + first nonflat dn`; next branch = admissible coding of that event |
+| `047` | **exact checked-range carry coding extracted**: boundary event class is `3`-class minimal; first exact quotient = `B + min(tau,8) + epsilon4`; first exact transition-sheet coding = current `B` + current `epsilon4` + next `7` future flat/nonflat indicators |
+| `048` | **countdown-carrier law extracted**: for `tau>0`, `tau_next = tau-1` exactly; boundary reset is tiny with `wrap -> 0`, `carry_jump` on `(s,v,layer)`, and `other` on `(s,u,layer)` |
+| `049` | **source-residue refinement extracted**: through `m=19`, `tau` is exact on `(s,u,v,layer,rho)`, `next_tau` on `(s,u,layer,rho,epsilon4)`, and `c` on `(u,rho,epsilon4)`; but `rho` is not recoverable from `(B,tau,epsilon4)`, so this is a stronger compute-side refinement rather than a new theorem object |
+| `050` | **proof-support persistence extracted**: through `m=19`, the `048` reset law remains exact on the same theorem-side quotients, and the explicit `047/048` witness pair persists with the same `h < m-4` lower-bound shape |
+| `052` | **proof-direction evidence consolidated**: through `m=19`, the `047` theorem-side quotient and horizon patterns persist in the expected per-modulus form, the positive-route reset-law support remains exact, and the negative-route bounded-horizon witness support stays stable |
 
 ## Claim labels
 
@@ -491,11 +723,11 @@ The d=5 theorem narrative:
 
 | d | Structure |
 |---|---|
-| 3 | odometer return map |
-| 4 | affine / second-return odometer |
+| 3 | solved: odometer / finite-defect odometer return maps |
+| 4 | solved + Lean-formalized: affine / second-return odometer |
 | 5 | grouped base + carry sheet + binary anticipation cover |
 
 Next branches:
 
-1. **046A (local):** search an admissible surrogate for `B + flat-run length + first nonflat dn` that still targets only `c = 1_{q=m-1}`.
-2. **046B (proof):** formalize the `044` normal form, the `045` first-catalog no-go, and the `046` future-transition theorem cleanly.
+1. **Proof / theorem side:** formalize and write the `044–048` chain cleanly, using `050` only as larger-modulus support.
+2. **Constructive compute side:** if search reopens, either target an admissible/local coding of the countdown carrier `tau`, or explicitly pursue the stronger `rho`-transport route from `049`.
