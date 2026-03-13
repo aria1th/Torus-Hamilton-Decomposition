@@ -209,11 +209,13 @@ v3에서 모든 이슈 수정 완료. 핵심 수정: Prop 5–6의 counting argu
 | `RoundY/theorem/d5_positive_theorem_chain_054.md` | positive theorem chain 초안 |
 | `RoundY/theorem/d5_boundary_reset_uniform_proof_attempt_055.md` | boundary reset uniform proof attempt |
 | `RoundY/theorem/d5_CJ_branch_proof_reduction_056.md` | CJ-first proof reduction |
+| `RoundY/theorem/d5_phase_machine_summary_058.md` | phase-machine proof-side summary |
 | `artifacts/d5_return_map_model_017/` | mixed witness return-map extraction |
 | `artifacts/d5_carry_and_finite_cover_044/` | finite-cover normal form |
 | `artifacts/d5_tau_countdown_carrier_048/` | countdown carrier law |
 | `artifacts/d5_proof_direction_evidence_052/` | larger-modulus proof-support bundle |
 | `artifacts/d5_boundary_reset_proof_support_055/` | `CJ` / `OTH` branch formula extension to `m=21,23` |
+| `artifacts/d5_phase_scheduler_branch_support_059b/` | safe branch-local support through `m=25,27,29` |
 
 ### 개념적 진화
 
@@ -233,6 +235,8 @@ boundary sharpening to (B, tau, epsilon4) (047)
 tau = countdown carrier with boundary reset law (048)
     ↓
 proof-support generalization through m=19, then branch support to m=21,23 and CJ-first reduction (050,052,055,056)
+    ↓
+phase scheduler + branch-local support + bootstrap invariance route (058–061)
 ```
 
 ### 현재 d=5 수학 상태
@@ -258,6 +262,10 @@ B=(s,u,v,\lambda,f),
    - `CJ` (`carry_jump`)
    - `OTH` (`other`)
    의 세 branch lemma로 환원된다.
+4. 최근 `058–061`에서 그 세 lemma조차 다시 압축된다:
+   small phase scheduler in `Theta = q+s+v+layer`,
+   then `B`-region invariance by bootstrap from local `B`-state dynamics plus
+   universal first-exit targets.
 
 즉, d=5는 “탐색 문제”에서 “boundary reset theorem 문제”로 바뀌었다.
 

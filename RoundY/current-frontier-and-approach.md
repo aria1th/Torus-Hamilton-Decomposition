@@ -21,6 +21,9 @@ Use it together with:
 - [theorem/d5_positive_theorem_chain_054.md](./theorem/d5_positive_theorem_chain_054.md)
 - [theorem/d5_boundary_reset_uniform_proof_attempt_055.md](./theorem/d5_boundary_reset_uniform_proof_attempt_055.md)
 - [theorem/d5_CJ_branch_proof_reduction_056.md](./theorem/d5_CJ_branch_proof_reduction_056.md)
+- [theorem/d5_phase_machine_hypothesis_057a.md](./theorem/d5_phase_machine_hypothesis_057a.md)
+- [theorem/d5_phase_machine_summary_058.md](./theorem/d5_phase_machine_summary_058.md)
+- [theorem/d5_first_exit_target_proof_062.md](./theorem/d5_first_exit_target_proof_062.md)
 - [DOCUMENT_FOR_EXTERNAL_REVIEW.md](../DOCUMENT_FOR_EXTERNAL_REVIEW.md)
 - [formal/README-D5.md](../formal/README-D5.md)
 
@@ -33,7 +36,8 @@ RoundY D5 support files now live in:
 
 ## Current real problem
 
-After artifacts `017–055`, the live D5 obstruction is no longer:
+After artifacts `017–055` and the proof-side compression `056–062`, the live
+D5 obstruction is no longer:
 
 - missing clean frame
 - missing Latin feasibility
@@ -41,13 +45,16 @@ After artifacts `017–055`, the live D5 obstruction is no longer:
 - missing a better one-bit separator
 - missing a slightly larger tiny transducer
 
-The actual frontier is:
+The actual current problem is now best split as:
 
-**find an admissible/local coding of the countdown carrier `tau`, now that the
-structural theorem branch is explicit, the first carry-only admissible
-catalogs are dead, the carry sheet is already the first exact future-transition
-event, the first exact checked-range carry coding is known, and the internal
-`tau` dynamics have already reduced to countdown plus tiny reset law**
+**strongest theorem-side draft:** the active best-seed branch is governed by a
+tiny phase/corner machine in `Theta = q+s+v+layer`, and `062` derives the
+universal first-exit targets directly from the explicit `H_{L1}` trigger law,
+so `B`-region invariance, the global phase scheduler, and the boundary reset
+laws all fall into one structural chain.
+
+**honest remaining frontier:** admissible/local coding of the countdown
+carrier `tau`, or a no-go theorem for the intended local class.
 
 `R1 -> H_L1`
 
@@ -156,14 +163,47 @@ What is already known:
   all remain exact on the extended checked range.
   So the honest positive-route target is no longer a vague uniform reset law;
   it is the proof of the two branch lemmas `CJ` and `OTH`.
+- `056`: the `CJ` branch is compressed further.
+  The real remaining `CJ` burden is not the whole reset law but the noncarry
+  dichotomy, which is best read through the flat-corner reduction.
+- `057`: the `CJ` proof is reduced again to a one-step flat-corner lemma on
+  the auxiliary residue `delta`, with support extending cleanly through
+  `m=23`.
+- `058/058B`: the flat-corner lemma itself is compressed to a tiny checked
+  phase/corner machine in `Theta = q+s+v+layer mod m`.
+  On the checked frozen scope, that one-step machine already yields both `CJ`
+  and `OTH`.
+- `059`: the active phase scheduler is reinterpreted as the mixed witness rule
+  itself on the active best-seed branch, once one knows the branch stays in
+  the unmodified `B` region.
+- `059B`: the safe branch-local support route replaces the dangerous full-state
+  support pass, and validates the scheduler / `B`-region picture on
+  representative branches through `m=25,27,29`.
+- `060`: `B`-region invariance is reduced to avoidance of the six patched
+  classes `L1,R1,L2,R2,L3,R3`, once the raw active current-coordinate law is
+  granted.
+- `061`: that loop is tightened again.
+  `B`-region invariance can be bootstrapped from
+  local mixed-witness dynamics on current `B`-states,
+  the explicit support of the six patched classes,
+  and the universal first-exit targets from `037/044`,
+  via the `Theta=2` cross-section odometer `eta -> eta+1`.
+- `062`: the last structural input is internalized.
+  The universal first-exit targets are derived directly from
+  the exact `H_{L1}` trigger theorem from `033`,
+  the candidate active orbit,
+  and the phase-`1` source-residue invariant
+  `q = u-rho+1`.
+  Then the actual branch agrees with the candidate orbit up to first exit,
+  every pre-exit current state is `B`, and the phase scheduler plus reset laws
+  follow.
 
 So the next branch should be read as:
 
-**admissible/local coding of the countdown carrier `tau`, now that the
-structural theorem branch is explicit, the carry sheet is already the first
-exact future-transition event, the exact checked-range coding boundary is
-known, and the internal `tau` dynamics have been reduced to countdown plus
-tiny reset law**.
+**if `062` is accepted, the structural branch is essentially closed and the
+next honest frontier is local/admissible coding of the countdown carrier
+`tau`; if not, the remaining proof job is only to finalize that `062`
+first-exit-target chain cleanly**.
 
 ## What the current approach should be
 
@@ -185,10 +225,15 @@ The guiding proof picture is now:
 
 - theorem branch:
   the active best-seed mechanism is already cleanly described by
-  `B <- B+c <- B+c+d`;
+  `B <- B+c <- B+c+d`,
+  then compressed further to a tiny phase machine in
+  `Theta = q+s+v+layer`,
+  then to the `061` bootstrap on the `Theta=2` cross-section odometer,
+  and finally to the `062` derivation of the universal first-exit targets from
+  the explicit `H_{L1}` trigger theorem;
 - local branch:
-  the remaining work is to code the carry event admissibly, not to invent a
-  new reduced controller;
+  admissible/local coding of the carry event is again the live constructive
+  frontier once the `062` structural draft is accepted;
 - bridge:
   once the carry event is local, the reduced trigger logic should slot into the
   existing `025` grouped target and the finite-cover theorem becomes the clean
@@ -201,11 +246,12 @@ The proof program itself now has two honest routes sharing that same picture:
   explicit witness family showing that no fixed future flat/nonflat horizon
   can code the carry sheet uniformly in `m`;
 - positive route:
-  package `048/050/052/055/056` into a countdown/reset theorem where `tau` is
-  the main hidden datum, `tau_next = tau-1` away from the boundary, and the
-  `tau=0` reset is governed by the small current-state classes `wrap`,
-  `carry_jump`, and `other`, with the remaining burden reduced to the two
-  branch lemmas `CJ` and `OTH`;
+  package `048/050/052/055/056/058/059/060/061/062` into a countdown/reset theorem
+  where `tau` is the main hidden datum, `tau_next = tau-1` away from the
+  boundary, the `tau=0` reset is governed by the small current-state classes
+  `wrap`, `carry_jump`, and `other`, then the whole burden is compressed to
+  the active phase scheduler, the `061` bootstrap of `B`-region invariance,
+  and the `062` derivation of the first-exit targets;
 - compute route:
   allow the stronger current-memory refinement `(B,rho)` from `049` when the
   goal is constructive support rather than the theorem-side minimal object.
@@ -213,7 +259,8 @@ The proof program itself now has two honest routes sharing that same picture:
 The first honest next moves are:
 
 1. separate trigger-level lifts from closed structural lifts
-2. target the carry sheet before any attempt to localize the residual sheet
+2. if `062` is being accepted, shift effort from structural branch geometry to
+   local/admissible `tau` coding or no-go reductions
 3. treat the structural object as
    `B <- B+c <- B+c+d`
    with `d = 1_{next carry u >= m-3}` a binary anticipation sheet
@@ -227,6 +274,8 @@ The first honest next moves are:
 8. keep the theorem-side object minimal, but allow compute branches to use the
    stronger current-memory refinement `(B,rho)` when they are explicitly
    constructive rather than theorem-packaging
+9. do not treat the raw active law or the first-exit target formulas as
+   independent global assumptions if the `061/062` route can replace them
 
 ## Brief explanation of `docs/suggested_workflow.md`
 

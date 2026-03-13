@@ -7,7 +7,8 @@ torus Hamilton decompositions:
 - `d=4`: solved in the same return-map / odometer language, with Lean
   formalization
 - `d=5`: active frontier, currently reduced to a boundary-reset / countdown
-  carrier theorem problem
+  carrier theorem problem, with the proof side now compressed further to a
+  phase-scheduler / bootstrap theorem route
 
 The original core manuscript in this bundle is:
 

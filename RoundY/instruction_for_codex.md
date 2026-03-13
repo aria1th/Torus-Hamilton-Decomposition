@@ -43,6 +43,7 @@ Then read the key artifact READMEs in this order:
 22. [../artifacts/d5_source_residue_refinement_049/README.md](../artifacts/d5_source_residue_refinement_049/README.md)
 23. [../artifacts/d5_proof_support_generalization_050/README.md](../artifacts/d5_proof_support_generalization_050/README.md)
 24. [../artifacts/d5_boundary_reset_proof_support_055/README.md](../artifacts/d5_boundary_reset_proof_support_055/README.md)
+25. [../artifacts/d5_phase_scheduler_branch_support_059b/README.md](../artifacts/d5_phase_scheduler_branch_support_059b/README.md)
 
 If working on Lean / formalization, then also read:
 
@@ -61,7 +62,7 @@ For D5 support files inside this repo, use this layout:
 - `RoundY/theorem/` for theorem-shaping notes and snippets
 - root `RoundY/` for short session summaries such as `codex_work_s59.md`
 
-For the current theorem-side packaging around `047–056`, start with:
+For the current theorem-side packaging around `047–062`, start with:
 
 1. [theorem/d5_proof_program_050.md](./theorem/d5_proof_program_050.md)
 2. [theorem/d5_proof_generalization_051.md](./theorem/d5_proof_generalization_051.md)
@@ -69,6 +70,12 @@ For the current theorem-side packaging around `047–056`, start with:
 4. [theorem/d5_positive_theorem_chain_054.md](./theorem/d5_positive_theorem_chain_054.md)
 5. [theorem/d5_boundary_reset_uniform_proof_attempt_055.md](./theorem/d5_boundary_reset_uniform_proof_attempt_055.md)
 6. [theorem/d5_CJ_branch_proof_reduction_056.md](./theorem/d5_CJ_branch_proof_reduction_056.md)
+7. [theorem/d5_phase_machine_hypothesis_057a.md](./theorem/d5_phase_machine_hypothesis_057a.md)
+8. [theorem/d5_phase_machine_summary_058.md](./theorem/d5_phase_machine_summary_058.md)
+9. [theorem/d5_phase_scheduler_uniform_proof_059.md](./theorem/d5_phase_scheduler_uniform_proof_059.md)
+10. [theorem/d5_B_region_invariance_proof_progress_060.md](./theorem/d5_B_region_invariance_proof_progress_060.md)
+11. [theorem/d5_B_region_bootstrap_proof_061.md](./theorem/d5_B_region_bootstrap_proof_061.md)
+12. [theorem/d5_first_exit_target_proof_062.md](./theorem/d5_first_exit_target_proof_062.md)
 
 These notes spell out the actual proof split:
 
@@ -89,12 +96,16 @@ Do not frame the problem as:
 - “find a better one-bit separator”
 - “try a slightly larger tiny transducer”
 
-The real frontier after `055` is:
+The strongest current theorem-side draft after `062` is:
 
-**find an admissible/local coding of the countdown carrier `tau`, now that the structural theorem
-branch is explicit, the first carry-only admissible catalogs are dead, the
-carry sheet is already the first exact future-transition event, and the first
-exact checked-range carry coding is known**
+**derive the universal first-exit targets directly from the explicit `H_{L1}`
+trigger theorem, then recover `B`-region invariance, the global active phase
+scheduler, and the reset laws as one structural chain**
+
+The honest remaining frontier is then:
+
+**admissible/local coding of the countdown carrier `tau`, or a no-go theorem
+for the intended local class**
 
 `R1 -> H_L1`
 
@@ -224,10 +235,39 @@ Treat these as current working facts unless you are explicitly revisiting them.
    the `048` reset law remains exact on the same theorem-side quotients,
    and the explicit `047/048` witness pair persists with the same
    `h < m-4` lower-bound shape.
+22. `055`
+   the boundary-reset proof-support formulas extend through `m=21,23`:
+   `carry_jump`, the raw identity `q = 1-s-v-layer`, the `other` subtype law,
+   and `wrap -> 0` remain exact.
+23. `056`
+   the remaining positive burden is compressed to `CJ`, with the real content
+   in the noncarry dichotomy rather than the whole branch law.
+24. `057`
+   `CJ` is reduced again to a one-step flat-corner lemma.
+25. `058/058B`
+   the flat-corner lemma itself is compressed to a tiny checked phase/corner
+   machine in `Theta = q+s+v+layer`, and on the checked frozen scope that
+   machine already yields both `CJ` and `OTH`.
+26. `059`
+   the active phase scheduler is reinterpreted as the mixed witness rule on
+   the active branch, once one knows the branch stays in `B`.
+27. `059B`
+   the safe branch-local support route validates that scheduler / `B`-region
+   picture through `m=25,27,29`.
+28. `060`
+   `B`-region invariance is reduced to avoidance of the six patched classes.
+29. `061`
+   that invariance is then bootstrapped from local `B`-state dynamics plus the
+   universal first-exit targets via the `Theta=2` cross-section odometer.
+30. `062`
+   the universal first-exit targets are then derived directly from the exact
+   `H_{L1}` trigger theorem from `033`, the candidate active orbit, and the
+   phase-`1` source-residue invariant; then `B`-region invariance, the global
+   phase scheduler, and the reset laws follow.
 
 So the branch is now:
 
-**projected phase known, raw odometer known, raw control logic explicit, grouped-state descent exhausted, carry lift identified, binary anticipation cover explicit, first carry-only catalogs exhausted, future-transition carry sheet extracted, exact checked-range carry coding extracted, countdown carrier extracted, stronger current-memory refinement available, larger-modulus proof support in place**
+**projected phase known, raw odometer known, raw control logic explicit, grouped-state descent exhausted, carry lift identified, binary anticipation cover explicit, first carry-only catalogs exhausted, future-transition carry sheet extracted, exact checked-range carry coding extracted, countdown carrier extracted, stronger current-memory refinement available, larger-modulus proof support in place, phase machine isolated, `B`-region bootstrap identified, and first-exit targets internalized**
 
 ## Patterns to think in first
 
@@ -265,7 +305,24 @@ Default assumption:
 Only leave it if a branch gives concrete evidence that the true target must be
 different.
 
-### 4. Treat failure as obstruction sharpening
+### 4. Phase machine before branch lemmas
+
+Do not start from separate `CJ` and `OTH` formulas if the active phase
+scheduler can be used instead.
+
+The current proof compression is:
+
+- phase scheduler in `Theta = q+s+v+layer`
+- then flat-corner / branch laws as corollaries
+- then `061` bootstrap for `B`-region invariance
+- then `062` derivation of the universal first-exit targets
+
+So the first proof question is now:
+
+- if `062` is not yet accepted, can that strengthened structural chain be
+  finalized cleanly?
+
+### 5. Treat failure as obstruction sharpening
 
 Every failed branch must return one of:
 
@@ -276,7 +333,7 @@ Every failed branch must return one of:
 
 “No survivors” by itself is not enough.
 
-### 5. Think in orbit phase, not opaque controller state
+### 6. Think in orbit phase, not opaque controller state
 
 After `034–037`, the live obstruction is best thought of as corridor
 localization on top of an already-visible raw odometer.
@@ -289,7 +346,7 @@ not:
 
 - how can we add more abstract controller states?
 
-### 6. Prefer theorem-shaped outputs
+### 7. Prefer theorem-shaped outputs
 
 The strongest outputs now are not huge candidate lists.
 They are:

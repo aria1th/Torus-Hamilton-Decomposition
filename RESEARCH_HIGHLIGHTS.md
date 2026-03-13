@@ -70,10 +70,15 @@ sign-product barrier가 Kempe 경로 자체를 차단 → 비-Kempe low-layer co
 - `055`: uniform odd-`m` proof target을
   `wrap`, `CJ`, `OTH`
   세 boundary branch lemma로 압축
+- `058–061`: 그 branch lemma들마저
+  `Theta = q+s+v+layer`
+  위의 tiny phase machine과
+  `B`-region bootstrap theorem으로 다시 압축
 
 핵심적으로, 지금의 d=5 질문은:
 
-> boundary `tau=0`에서의 reset law를 uniform odd `m`로 증명할 수 있는가?
+> active branch의 phase scheduler / boundary reset law를 uniform odd `m`로
+> 증명할 수 있는가?
 
 이다. 이것은 초기 d=5 단계들의 “blind local search”와는 질적으로 다른 상태다.
 
@@ -97,4 +102,4 @@ sign-product barrier가 Kempe 경로 자체를 차단 → 비-Kempe low-layer co
 | 3/9 AM | d=3 v7 (최종), d=4 증명 완성 |
 | 3/9 PM | d=5 m=5 witness 발견, color 3 partial theorem 증명 |
 | 3/10–3/12 | d=5 return-map extraction → finite-cover / countdown-carrier normal form |
-| 3/13 | d=5 positive theorem chain 정리, boundary reset uniform proof branch 시작 |
+| 3/13 | d=5 positive theorem chain 정리, phase-machine / bootstrap proof branch로 압축 |
