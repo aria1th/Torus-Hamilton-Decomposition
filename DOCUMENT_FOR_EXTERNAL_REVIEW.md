@@ -2283,6 +2283,254 @@ Update:
   Case II, so the next scope question is no longer whether Case II works; it
   is whether the odometer tree should now stop at this strong color-1
   checkpoint or attempt a color-0 full rewrite.
+- The bounded color-0 full-rewrite experiment has now started in
+  `formal/TorusD3Odometer/Color0FullCaseI.lean`.
+- The decisive architectural choice was to split the job in two layers:
+  use the original `(i,k)` coordinates for the full-map object and its
+  low-layer word table, but keep the linear change of variables
+  `(x,y) = (i + 2k, k)` explicit as a separate equivalence for the later
+  line-return proofs.
+- That choice is now validated by code, not just by intent:
+  the file contains the original Case-I layer-0 classifier
+  `dir0CaseILayerZero`, the full map `fullMap0CaseI`, the explicit
+  return map `returnMap0CaseI`, the equivalence
+  `toXY` / `fromXY` / `xyEquiv`, and the line embedding `linePoint0`.
+- The first reusable full-map core is also in place and builds:
+  `iterate_KMap0`, `iterate_fullMap0CaseI_from_three`,
+  `iterate_m_sub_three_fullMap0CaseI`, and the first batch of low-layer word
+  lemmas, including the realized words `110`, `020`, `120`, `122`, `010`,
+  `212`, and the remaining color-`2`-start packages
+  `222` / `220` through the generic theorems
+  `iterate_three_fullMap0CaseI_of_dir2_i_ne_zero_sum_zero` and
+  `iterate_three_fullMap0CaseI_of_dir2_i_ne_zero_generic`.
+- Important implementation finding: the original-coordinate full map is clean
+  only if the layer-2 rule is stated with the actual middle coordinate
+  condition `i + k = 2`. An earlier attempt that used `k = 0` was wrong and
+  was corrected immediately before building further.
+- Current next frontier: finish the remaining easy Case-I low-layer
+  specializations on the `i = 0` / `dir = 2` side, then package
+  the global `iterate_m_fullMap0CaseI_slicePoint_zero` theorem and only after
+  that move on to the xy-side first-return / `hfirst` layer.
+- Current status judgment: the color-0 experiment still satisfies the bounded
+  prototype bar. No new architectural blocker has appeared; the remaining work
+  is theorem packaging on top of an already-stable transducer shape.
+- The full-map side is now actually closed for Case I:
+  `formal/TorusD3Odometer/Color0FullCaseI.lean` contains the global
+  `iterate_m_fullMap0CaseI_slicePoint_zero` theorem, the return-time layer
+  `rho0CaseI`, and the counting identity `sum_rho0CaseI = m^2`.
+- The xy-side bridge is also now started in the same file:
+  `returnMap0CaseIXY`, the conjugacy lemmas
+  `returnMap0CaseI_semiconj_xy` /
+  `returnMap0CaseI_semiconj_xy_symm`, and the concrete special-point / line
+  step lemmas for
+  `(0,0)`, `(m-2,0)`, `(1,1)`, `(m-1,m-1)`, `(0,1)`, `(m-2,m-1)`,
+  generic line starts, and the `x = m-1` start.
+- Implementation finding from the first xy-side pass: a fully generic
+  “vertical bulk step” or “diagonal bulk jump” theorem was the wrong proof
+  shape here. The proof burden moves from geometry to ZMod/nat-cast transport,
+  and the abstraction cost is higher than the reuse obtained.
+- Recommendation for the next pass:
+  keep the current xy-side point lemmas, do not generalize them further yet,
+  and instead build the Case-I proof with the same pattern that worked in
+  color `1`:
+  case-specific partial iterate theorems first, then `hreturn`, then `hfirst`.
+- That next pass is now partially realized and root-verified:
+  `lake build TorusD3Odometer` succeeds with the expanded
+  `formal/TorusD3Odometer/Color0FullCaseI.lean` checkpoint.
+- The file now contains the first genuine xy-side partial-iterate layer for
+  color `0`, Case I:
+  `verticalMap0XY`,
+  `iterate_returnMap0CaseIXY_prefix_partial`,
+  `returnMap0CaseIXY_diag_step`,
+  `iterate_returnMap0CaseIXY_suffix_partial`,
+  and the first packaged generic return theorem
+  `firstReturn_line_generic`.
+- The important implementation finding is mathematical, not just proof
+  engineering:
+  the honest uniform generic band is `2 ≤ x ≤ m - 5`, not
+  `1 ≤ x ≤ m - 5`.
+  At `x = 1`, the point `(2,1)` is already a diagonal defect, so the naive
+  “vertical prefix first” theorem is literally false there.
+- This means the Case-I color-0 line analysis should now be organized as:
+  special `x = 0`,
+  boundary `x = 1`,
+  generic `2 ≤ x ≤ m - 5`,
+  and the upper boundary / specials near `m - 4`, `m - 3`, `m - 2`.
+- Recommendation for the next pass:
+  do not try to re-extend the generic theorem downward again.
+  Instead, add the explicit `x = 1` boundary return package next, then check
+  whether `x = m - 4` also needs its own short boundary theorem before
+  attempting the global Case-I dispatcher.
+- That `x = 1` boundary step is now done.
+  `formal/TorusD3Odometer/Color0FullCaseI.lean` contains
+  `firstReturn_line_one`, and `lake build TorusD3Odometer` still succeeds.
+- The useful reproducible finding from that proof is that the right shape is
+  not another mini-framework:
+  one line-start lemma,
+  one diagonal milestone,
+  then a direct reuse of the already-proved suffix-partial theorem.
+- Current next frontier: test the upper boundary `x = m - 4`.
+  If it also needs a short explicit theorem, keep it local and then assemble
+  the global Case-I `hreturn` dispatcher from
+  `x = 0`, `x = 1`, generic `2 ≤ x ≤ m - 5`, and the upper boundary /
+  special lanes near `m - 4`, `m - 3`, `m - 2`.
+- That upper-boundary test has now been resolved positively:
+  `formal/TorusD3Odometer/Color0FullCaseI.lean` contains the local boundary
+  package `firstReturn_line_m_sub_four`, together with the auxiliary special
+  point theorem `returnMap0CaseIXY_m_sub_two_m_sub_two`. The trivial
+  `x = 0` lane is also now packaged explicitly as
+  `firstReturn_line_zero_case0`.
+- The reproducible proof-engineering finding is sharper than “add more
+  boundary theorems”: the right generic/boundary split is to widen only the
+  prefix and diagonal machinery from `x ≤ m - 5` to `x ≤ m - 4`, keep the
+  suffix machinery on the honest generic range `x ≤ m - 5`, and bridge the
+  actual upper boundary with one explicit top-corner point lemma at
+  `(m - 2, m - 2) -> (m - 2, m - 1)`.
+- This confirms that `x = m - 4` is a real local boundary, but not a reason
+  to rebuild the generic framework. The successful shape is the same bounded
+  style as for `x = 1`: reuse the generic partials up to the last honest
+  milestone, then finish with one or two explicit special-point steps.
+- Root verification remains clean after this extension:
+  `lake env lean TorusD3Odometer/Color0FullCaseI.lean` and
+  `lake build TorusD3Odometer` both succeed.
+- Current next frontier: the remaining genuinely exceptional Case-I lanes are
+  now concentrated in `x = m - 3`, `x = m - 2`, and `x = m - 1`. The next
+  bounded pass should close those three lanes explicitly and only then decide
+  whether the global Case-I `hreturn` dispatcher can be assembled without a
+  new helper framework.
+- That next bounded pass has already improved the reusable layer once more.
+  The prefix / diagonal machinery in
+  `formal/TorusD3Odometer/Color0FullCaseI.lean`
+  (`returnMap0CaseIXY_prefix_step`,
+  `returnMap0CaseIXY_diag_step`,
+  `iterate_returnMap0CaseIXY_prefix_partial`)
+  is now verified on the wider range `x ≤ m - 2`, not merely `x ≤ m - 4`.
+- That widening is mathematically real, not a proof artifact. It closes the
+  `x = m - 1` lane cleanly, and the file now contains the theorem
+  `firstReturn_line_m_sub_one_case0` in addition to
+  `firstReturn_line_zero_case0`,
+  `firstReturn_line_one`,
+  `firstReturn_line_generic`,
+  and `firstReturn_line_m_sub_four`.
+- The updated reusable picture is now:
+  prefix / diagonal behavior remains valid through the last column
+  `x = m - 2`,
+  but the suffix behavior is still honestly generic only on
+  `x ≤ m - 5`.
+  This asymmetry is the key design fact for the remaining proofs.
+- That asymmetry has now tightened further in a useful way.
+  The suffix layer in `formal/TorusD3Odometer/Color0FullCaseI.lean`
+  (`returnMap0CaseIXY_suffix_step`,
+  `iterate_returnMap0CaseIXY_suffix_partial`)
+  no longer needs the old lower-bound hypothesis `1 ≤ x`; it now works on the
+  full natural range `0 ≤ x ≤ m - 5`.
+- This was immediately strong enough to keep the `x = m - 1` lane short:
+  `formal/TorusD3Odometer/Color0FullCaseI.lean` now contains
+  `firstReturn_line_m_sub_one_case0`, and `lake build TorusD3Odometer`
+  remains clean.
+- The reusable picture is therefore now asymmetric in the productive way:
+  prefix / diagonal reach all the way up to `x = m - 2`,
+  suffix reaches all the way down to `x = 0`,
+  and the remaining proof burden is concentrated only at the handful of true
+  corner transitions where those bands meet.
+- That prediction has now been tested once successfully.
+  `formal/TorusD3Odometer/Color0FullCaseI.lean` contains the explicit theorem
+  `firstReturn_line_m_sub_three_case0`, and it closed without adding a new
+  family of helper lemmas. The winning proof shape was:
+  line start at `x = m - 3`,
+  widened prefix on the same column,
+  widened diagonal at `x = m - 3`,
+  the existing special point `(-1,-1) -> (2,2)`,
+  then the widened suffix at `x = 0`.
+- So the current residual difficulty is now sharply isolated:
+  only the `x = m - 2` Case-I lane remains before attempting the global
+  Case-I `hreturn` dispatcher.
+- Current recommendation:
+  treat `x = m - 2` as the next bounded experiment, but expect it to be the
+  first place where a tiny dedicated helper layer for the `x = 0` / `x = 1`
+  columns may actually be justified. If that helper layer stays small and
+  local, keep going; if it starts growing into a second mini-framework, stop
+  there and record the asymmetry explicitly.
+- That bounded `x = m - 2` experiment has now succeeded cleanly.
+  `formal/TorusD3Odometer/Color0FullCaseI.lean` contains the local helper
+  layer
+  `returnMap0CaseIXY_zero_column_step`,
+  `iterate_returnMap0CaseIXY_zero_column_partial`,
+  `returnMap0CaseIXY_zero_m_sub_one`,
+  `returnMap0CaseIXY_one_column_step`,
+  `iterate_returnMap0CaseIXY_one_column_partial`,
+  `returnMap0CaseIXY_one_m_sub_one`,
+  and the resulting boundary theorem
+  `firstReturn_line_m_sub_two_case0`.
+- The reproducible proof pattern is now explicit:
+  `x = m - 2` is not another generic band extension.
+  The right proof shape is
+  start step to `(0,2)`,
+  a zero-column climb to `(0,m-1)`,
+  one special corner step to `(1,1)`,
+  the existing short steps through `(0,1)` and `(1,2)`,
+  then a one-column climb to `(1,m-1)` and the final special step to
+  `(1,0)`.
+  So the earlier “tiny dedicated helper layer for the `x = 0` / `x = 1`
+  columns” prediction was exactly right.
+- The next routine layer after that also now succeeds and builds:
+  `formal/TorusD3Odometer/Color0FullCaseI.lean` contains the global Case-I
+  line-return dispatcher `hreturn_line_case0_caseI` and the counting theorem
+  `hsum_case0_caseI`.
+- This means the remaining unfinished part of the color-0 Case-I odometer
+  rewrite is no longer `hreturn` or the `m^2` timing sum. The next honest
+  frontier is `hfirst`: a no-early-return package for the same Case-I lane
+  families. Root verification remains clean after this extension:
+  `lake env lean TorusD3Odometer/Color0FullCaseI.lean` and
+  `lake build TorusD3Odometer` both succeed.
+- Updated recommendation:
+  the current checkpoint is strong enough to keep as-is. The next bounded
+  experiment, if pursued, should be exactly the color-0 Case-I `hfirst`
+  layer. If that stays on the same “generic family plus a few boundary
+  packages” scale, then the full return-map and full-map cycle theorems are
+  plausibly within reach. If it instead starts demanding a second local
+  framework, that is the correct place to stop and record the asymmetry.
+- That bounded `hfirst` experiment has now succeeded cleanly.
+  `formal/TorusD3Odometer/Color0FullCaseI.lean` now closes the full Case-I
+  odometer rewrite for color `0`, including the boundary packages
+  `hfirst_line_one_case0`,
+  `hfirst_line_m_sub_four_case0`,
+  `hfirst_line_m_sub_three_case0`,
+  `hfirst_line_m_sub_two_case0`,
+  `hfirst_line_m_sub_one_case0`,
+  the generic theorem `hfirst_line_generic_case0`,
+  the global dispatcher `hfirst_line_case0_caseI`,
+  and the final cycle theorems
+  `cycleOn_returnMap0CaseI_caseI` /
+  `cycleOn_fullMap0CaseI_caseI`.
+- The important reproducible implementation finding is that the `hfirst` layer
+  did not require a second helper framework. The successful proof shape stayed
+  inside the existing bounded discipline:
+  reuse the generic prefix / suffix partials where they are honest,
+  add only short local packages for the true boundary lanes,
+  and discharge non-return from the second coordinate.
+- A second, more structural finding is that the full-map lift must happen on
+  the original return map `returnMap0CaseI`, not directly on the xy-side map
+  `returnMap0CaseIXY`.
+  The correct final pattern is:
+  first prove the `m^2` cycle on `returnMap0CaseIXY`,
+  then conjugate it back through `xyEquiv.symm` to a cycle on
+  `returnMap0CaseI`,
+  and only then apply `cycleOn_full_of_cycleOn_p0` to get the `m^3` cycle.
+- Root verification remains clean after this closure:
+  `lake env lean TorusD3Odometer/Color0FullCaseI.lean` and
+  `lake build TorusD3Odometer` both succeed.
+- Updated scope judgment:
+  color `0`, Case I now also passes the cleanliness bar as a genuine full
+  odometer rewrite, not merely as a wrapper over the splice proof.
+  This creates a new real scope boundary.
+- Recommendation at the new boundary:
+  do not automatically jump into all remaining color-0 families.
+  The next bounded experiment, if pursued, should be exactly
+  color `0`, Case II in a separate file, with the same acceptance bar used for
+  color `1`, Case II:
+  keep the current checkpoint as a valid endpoint, and continue only if the
+  next family stays on the same local-helper scale.
 
 ## D45) D5 theorem-side minimal object vs compute-side source-residue refinement after 049/050
 
