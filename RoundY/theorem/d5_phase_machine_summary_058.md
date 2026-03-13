@@ -49,9 +49,9 @@ lemma:
 
 This is the content of:
 
-- [d5_CJ_branch_proof_reduction_056.md](/data/angel/repos/modulation-guidance/Torus-Hamilton-Decomposition/RoundY/theorem/d5_CJ_branch_proof_reduction_056.md)
+- [d5_CJ_branch_proof_reduction_056.md](./d5_CJ_branch_proof_reduction_056.md)
 - [d5_CJ_uniform_proof_progress_057.md](./d5_CJ_uniform_proof_progress_057.md)
-- [d5_CJ_flat_corner_support_057a/README.md](/data/angel/repos/modulation-guidance/Torus-Hamilton-Decomposition/artifacts/d5_CJ_flat_corner_support_057a/README.md)
+- [d5_CJ_flat_corner_support_057a/README.md](../../artifacts/d5_CJ_flat_corner_support_057a/README.md)
 
 So `057` already compressed `CJ` from a future-window theorem to a tiny
 auxiliary lemma.

@@ -1,0 +1,102 @@
+\paragraph{Theorem-side object after the extended constructive support.}
+The theorem object remains
+\[
+B=(s,u,v,\lambda,f),\qquad \tau,\qquad \epsilon_4.
+\]
+The constructive coordinates
+\[
+\rho=u_{\mathrm{source}}+1,
+\qquad
+\alpha=\rho-u,
+\qquad
+\delta=\rho-(s+u+v+\lambda),
+\qquad
+\kappa=q+s+v+\lambda
+\]
+are auxiliary proof coordinates only.
+
+\begin{theorem}[Phase--Corner Theorem, manuscript target]
+Fix odd $m\ge 5$ and the best seed. On the active nonterminal best-seed branch, define
+\[
+\kappa=q+s+v+\lambda \pmod m.
+\]
+Then:
+\begin{enumerate}
+\item $\kappa' = \kappa+1 \pmod m$;
+\item the current event $\epsilon_4$ is determined by
+\[
+\kappa=0 \Rightarrow \mathrm{wrap},
+\qquad
+\kappa=1 \Rightarrow \mathrm{carry\_jump},
+\]
+\[
+\kappa=2 \Rightarrow
+\begin{cases}
+\mathrm{other}_{1000},& c=1,\\
+\mathrm{flat},& c=0,
+\end{cases}
+\qquad
+\kappa=3 \Rightarrow
+\begin{cases}
+\mathrm{other}_{0010},& (c=0\ \&\ s=2)\ \text{or}\ (c=1\ \&\ s\neq 2),\\
+\mathrm{flat},& \text{otherwise},
+\end{cases}
+\]
+with every phase $4,\dots,m-1$ flat;
+\item among flat states, the only short reset occurs at the corner
+\[
+(\kappa,s)=(2,2).
+\]
+\end{enumerate}
+Thus the active best-seed branch is an odometer with one corner.
+\end{theorem}
+
+\begin{corollary}[Countdown law]
+On the active nonterminal branch,
+\[
+\tau=0 \text{ on nonflat states},
+\qquad
+\tau=
+\begin{cases}
+1,& (\kappa,s)=(2,2),\\
+m-\kappa,& \text{otherwise on flat states},
+\end{cases}
+\]
+and therefore $\tau' = \tau-1$ whenever $\tau>0$.
+\end{corollary}
+
+\begin{corollary}[Reset laws]
+The phase--corner theorem implies
+\[
+R_{\mathrm{cj}}=
+\begin{cases}
+0,& s+v+\lambda\equiv 2 \pmod m,\\
+1,& s=1 \text{ and } s+v+\lambda\not\equiv 2 \pmod m,\\
+m-2,& \text{otherwise,}
+\end{cases}
+\]
+and
+\[
+(1,0,0,0)\mapsto
+\begin{cases}
+m-3,& s=1,\\
+0,& s\neq 1,
+\end{cases}
+\qquad
+(0,0,1,0)\mapsto m-4.
+\]
+\end{corollary}
+
+\begin{remark}[Constructive support without changing the theorem object]
+On the constructive route, define
+\[
+\alpha=\rho-u,
+\qquad
+\delta=\rho-(s+u+v+\lambda)=\alpha-(s+v+\lambda).
+\]
+Then on flat states,
+\[
+\delta\equiv -\kappa \pmod m.
+\]
+So the constructive residue clock and the theorem-side phase clock are the same machine in two gauges.
+\end{remark}

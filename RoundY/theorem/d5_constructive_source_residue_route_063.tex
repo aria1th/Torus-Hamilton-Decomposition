@@ -1,0 +1,42 @@
+\paragraph{Constructive source-residue refinement.}
+Let
+\[
+\rho:=u_{\mathrm{source}}+1 \pmod m,
+\qquad
+\delta:=\rho-(s+u+v+\lambda) \pmod m,
+\qquad
+ a:=1_{\{\rho=u+1\}}.
+\]
+On the checked active best-seed branch,
+\[
+c = 1_{\{\rho = u + 1 + 1_{\{\epsilon_4=\mathrm{carry\_jump}\}}\}},
+\qquad
+q \equiv u-\rho+1_{\{\epsilon_4=\mathrm{carry\_jump}\}} \pmod m.
+\]
+Moreover the hidden anticipation datum admits the current-state formula
+\[
+\tau =
+\begin{cases}
+0, & \delta=0,\\[1mm]
+\delta, & 1\le \delta \le m-4,\\[1mm]
+0, & \delta=m-3 \text{ and } \big((a=0\ \&\ s=2)\ \text{or}\ (a=1\ \&\ s\neq 2)\big),\\[1mm]
+m-3, & \delta=m-3 \text{ and } \big((a=0\ \&\ s\neq 2)\ \text{or}\ (a=1\ \&\ s=2)\big),\\[1mm]
+0, & \delta=m-2 \text{ and } a=1,\\[1mm]
+1, & \delta=m-2,\ a=0,\ s=2,\\[1mm]
+m-2, & \delta=m-2,\ a=0,\ s\neq 2.
+\end{cases}
+\]
+Equivalently, if the current event class $\epsilon_4$ is also available, then
+\[
+\tau=0 \quad (\epsilon_4\neq\mathrm{flat}),
+\qquad
+\tau=
+\begin{cases}
+1,& (s,\delta)=(2,m-2),\\
+\delta,& \text{otherwise}
+\end{cases}
+\quad (\epsilon_4=\mathrm{flat}).
+\]
+Thus, once the source residue $\rho$ is transported, the hidden theorem-side
+anticipation datum becomes an explicit current-state quantity. The remaining
+constructive gap is the local/admissible birth and transport of $\rho$.

@@ -5,7 +5,7 @@ Hamilton decomposition of the directed `5`-torus
 `D_5(m) = Cay((Z_m)^5, {e_0, e_1, e_2, e_3, e_4})`.
 
 **Status:** `[O]` open.  
-**Current frontier:** after the `055–062` proof compression, the strongest theorem-side D5 draft no longer leaves the phase scheduler / bootstrap picture as an independent open structural gap. `062` derives the universal first-exit targets directly from the explicit `H_{L1}` trigger theorem, the candidate active orbit, and a phase-`1` source-residue invariant; then `B`-region invariance, the global `Theta = q+s+v+layer` scheduler, and the boundary reset laws follow. So the current problem is best read as: **the structural branch is close to closed, and the honest remaining frontier is local/admissible coding of the countdown carrier `tau`, or a no-go theorem for the intended local class.**
+**Current frontier:** after the `055–062` proof compression and the `063–067` clock-route sharpening, the strongest theorem-side D5 draft is no longer an open structural search. `062` derives the universal first-exit targets directly from the explicit `H_{L1}` trigger theorem, the candidate active orbit, and a phase-`1` source-residue invariant; then `B`-region invariance, the global `Theta = q+s+v+layer` scheduler, and the boundary reset laws follow. `067` then sharpens the remaining frontier: the canonical constructive gauge `beta` is the same machine as the theorem-side phase in another gauge, and on the lifted active corridor that clock already exists as `beta = -Theta`. So the current problem is best read as: **the theorem package is close to closed, and the honest remaining frontier is whether that canonical lifted clock descends to the intended local/admissible class, or whether exact-clock rigidity shows that any exact local realization must already carry that same `m`-scale clock.**
 
 This README is the current top-level map. It replaces the older Session-20-only
 snapshot and is organized around the actual D5 branch progression through the
@@ -42,8 +42,9 @@ is already a countdown carrier, the branch laws were compressed to `CJ` and
 region, and finally `062` removes the first-exit targets as an external
 structural input by deriving them from the explicit `H_{L1}` trigger law.
 So the live issue is no longer “what is the reduced model?” or even
-“where is the first exit?” but whether the countdown carrier can be coded
-admissibly, or ruled out, in the intended local class.
+“where is the first exit?” but whether the canonical clock behind that phase
+machine can be descended / exposed in the intended local class, or forced by a
+rigidity theorem on the exact reduction object.
 
 ## Brief Mathematical Summary
 
@@ -98,12 +99,14 @@ For a reader who does not have the artifacts open, the current D5 picture is:
 
 So the mathematical problem is now very narrow. The branch is no longer asking
 for a new witness or a broader search over tiny controllers. It is asking for
-one of two things:
+three tightly linked pieces:
 
-- a clean final writeup / verification of the strengthened `062` structural
-  chain, or
-- an admissibility/local-coding theorem for the countdown carrier `tau`, or a
-  no-go theorem for the intended local class.
+- a clean final writeup / verification of the strengthened `062` theorem
+  package,
+- a descent / exposure theorem for the canonical cyclic controller behind the
+  phase-corner machine,
+- or a rigidity theorem showing that any exact local realization must already
+  carry that same canonical clock.
 
 For context, this is exactly the point where `d=5` now differs from the lower
 dimensions:
@@ -154,14 +157,17 @@ That part is already done. The live theorem strategy is:
    separate mysteries: they are corollaries of the mixed-witness phase
    machine on the active branch.
 
-So the proof is currently split into two coordinated branches:
+So the proof is currently split into:
 
-- theorem branch:
+- theorem package:
   package `044–062` as the checked normal-form / phase-machine chain behind
   the D5 mechanism;
-- local branch:
-  treat admissible/local coding of the countdown carrier `tau` as the next
-  honest frontier once the strengthened structural chain is accepted.
+- clock route:
+  treat the canonical `beta` clock as the remaining object, with descent on
+  one side and rigidity on the other;
+- compute support:
+  validate the exact reduction object and the exact reduction data, not broad
+  controller search.
 
 ## What To Do Now
 
@@ -633,6 +639,24 @@ Use these together:
 - [`RoundY/theorem/d5_phase_machine_summary_058.md`](./theorem/d5_phase_machine_summary_058.md)
   for the organized `058/058B` proof-side summary, including the explicit
   phase-machine theorem target and attribution note for that viewpoint
+- [`RoundY/theorem/d5_063_route_organization.md`](./theorem/d5_063_route_organization.md)
+  for the consolidated `063` split into the theorem / structural route, the
+  positive constructive `rho`/`alpha` route, and the negative bounded-quotient
+  route
+- [`RoundY/theorem/d5_064_unified_handoff.md`](./theorem/d5_064_unified_handoff.md)
+  for the merged `064` handoff note combining the theorem target, the
+  alpha-gauge constructive route, the cyclic-section negative route, and a
+  division of labor for different researchers
+- [`RoundY/theorem/d5_065_concentrated_handoff.md`](./theorem/d5_065_concentrated_handoff.md)
+  for the concentrated `065` update: phase-corner theorem as the manuscript
+  center, canonical `beta` controller on the positive route, and the
+  bounded-quotient theorem read as rigidity rather than mere no-go
+- [`RoundY/theorem/d5_066_concentrated_handoff.md`](./theorem/d5_066_concentrated_handoff.md)
+  for the current top-level split into theorem package, clock route, and
+  compute support
+- [`RoundY/theorem/d5_067_concentrated_handoff.md`](./theorem/d5_067_concentrated_handoff.md)
+  for the current canonical handoff: theorem package, clock descent/rigidity,
+  and tightly scoped compute support
 - [`RoundY/theorem/d5_first_exit_target_proof_062.md`](./theorem/d5_first_exit_target_proof_062.md)
   for the strengthened `062` draft deriving the universal first-exit targets
   directly from the explicit `H_{L1}` trigger theorem

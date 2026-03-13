@@ -76,17 +76,19 @@ For the current theorem-side packaging around `047–062`, start with:
 10. [theorem/d5_B_region_invariance_proof_progress_060.md](./theorem/d5_B_region_invariance_proof_progress_060.md)
 11. [theorem/d5_B_region_bootstrap_proof_061.md](./theorem/d5_B_region_bootstrap_proof_061.md)
 12. [theorem/d5_first_exit_target_proof_062.md](./theorem/d5_first_exit_target_proof_062.md)
+13. [theorem/d5_067_concentrated_handoff.md](./theorem/d5_067_concentrated_handoff.md)
 
-These notes spell out the actual proof split:
+These notes now spell out the actual top-level split:
 
-- negative route:
-  bounded-horizon no-go via the `046/047/048` witness family
-- positive route:
-  countdown/reset theorem packaging for `tau`, now sharpened to the branch
-  lemmas `CJ` and `OTH`
+- theorem package:
+  phase-corner theorem, countdown/reset corollaries, and the `033 -> 062 -> 059`
+  structural spine
+- clock route:
+  the canonical `beta` clock, viewed as lifted-clock descent / realization on
+  one side and exact-clock rigidity on the other
 - compute support:
-  stronger `(B,rho)` refinement only when explicitly using a constructive
-  branch
+  only reduction validation, accessible quotient validation, and
+  `(B,beta)` exactness / drift stress tests
 
 ## Real current problem
 
@@ -104,8 +106,12 @@ scheduler, and the reset laws as one structural chain**
 
 The honest remaining frontier is then:
 
-**admissible/local coding of the countdown carrier `tau`, or a no-go theorem
-for the intended local class**
+**the phase-corner theorem determines a canonical cyclic controller
+(`beta` in the current constructive gauge). On the lifted active corridor that
+same clock already exists as `beta = -Theta`. The live question is whether
+that lifted clock descends to the intended local/admissible class, or whether
+exact-clock rigidity shows that any exact local realization must already carry
+that same `m`-scale clock**
 
 `R1 -> H_L1`
 

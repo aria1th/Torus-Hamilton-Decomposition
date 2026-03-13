@@ -38,9 +38,9 @@ The important discipline is:
 
 This is consistent with:
 
-- [d5_carry_and_finite_cover_044/README.md](/data/angel/repos/modulation-guidance/Torus-Hamilton-Decomposition/artifacts/d5_carry_and_finite_cover_044/README.md)
-- [d5_tau_countdown_carrier_048/README.md](/data/angel/repos/modulation-guidance/Torus-Hamilton-Decomposition/artifacts/d5_tau_countdown_carrier_048/README.md)
-- [d5_proof_direction_compute_support_052.md](/data/angel/repos/modulation-guidance/Torus-Hamilton-Decomposition/RoundY/theorem/d5_proof_direction_compute_support_052.md)
+- [d5_carry_and_finite_cover_044/README.md](../../artifacts/d5_carry_and_finite_cover_044/README.md)
+- [d5_tau_countdown_carrier_048/README.md](../../artifacts/d5_tau_countdown_carrier_048/README.md)
+- [d5_proof_direction_compute_support_052.md](./d5_proof_direction_compute_support_052.md)
 
 ## 2. What is already structurally known
 
@@ -70,8 +70,8 @@ The `wrap` branch is essentially trivial. The current live proof work is:
 
 See:
 
-- [d5_boundary_reset_uniform_proof_attempt_055.md](/data/angel/repos/modulation-guidance/Torus-Hamilton-Decomposition/RoundY/theorem/d5_boundary_reset_uniform_proof_attempt_055.md)
-- [d5_CJ_branch_proof_reduction_056.md](/data/angel/repos/modulation-guidance/Torus-Hamilton-Decomposition/RoundY/theorem/d5_CJ_branch_proof_reduction_056.md)
+- [d5_boundary_reset_uniform_proof_attempt_055.md](./d5_boundary_reset_uniform_proof_attempt_055.md)
+- [d5_CJ_branch_proof_reduction_056.md](./d5_CJ_branch_proof_reduction_056.md)
 - [d5_CJ_uniform_proof_progress_057.md](./d5_CJ_uniform_proof_progress_057.md)
 
 ## 3. Why `CJ` is the right first branch
@@ -108,7 +108,7 @@ The strongest current proof device is the constructive residue
 
 from:
 
-- [d5_source_residue_refinement_049/README.md](/data/angel/repos/modulation-guidance/Torus-Hamilton-Decomposition/artifacts/d5_source_residue_refinement_049/README.md)
+- [d5_source_residue_refinement_049/README.md](../../artifacts/d5_source_residue_refinement_049/README.md)
 
 Define the auxiliary quantity
 
@@ -133,7 +133,7 @@ That is the key reduction in:
 
 and is compute-supported through `m = 23` by:
 
-- [d5_CJ_flat_corner_support_057a/README.md](/data/angel/repos/modulation-guidance/Torus-Hamilton-Decomposition/artifacts/d5_CJ_flat_corner_support_057a/README.md)
+- [d5_CJ_flat_corner_support_057a/README.md](../../artifacts/d5_CJ_flat_corner_support_057a/README.md)
 
 ## 5. Flat-corner lemma
 
@@ -162,10 +162,10 @@ This extension now checks exactly on
 
 with packaged support in:
 
-- [analysis_summary.json](/data/angel/repos/modulation-guidance/Torus-Hamilton-Decomposition/artifacts/d5_CJ_flat_corner_support_057a/data/analysis_summary.json)
-- [flat_corner_extension_checks_057a.json](/data/angel/repos/modulation-guidance/Torus-Hamilton-Decomposition/artifacts/d5_CJ_flat_corner_support_057a/data/flat_corner_extension_checks_057a.json)
-- [flat_tau_formula_extension_057a.json](/data/angel/repos/modulation-guidance/Torus-Hamilton-Decomposition/artifacts/d5_CJ_flat_corner_support_057a/data/flat_tau_formula_extension_057a.json)
-- [CJ_delta_reduction_extension_057a.json](/data/angel/repos/modulation-guidance/Torus-Hamilton-Decomposition/artifacts/d5_CJ_flat_corner_support_057a/data/CJ_delta_reduction_extension_057a.json)
+- [analysis_summary.json](../../artifacts/d5_CJ_flat_corner_support_057a/data/analysis_summary.json)
+- [flat_corner_extension_checks_057a.json](../../artifacts/d5_CJ_flat_corner_support_057a/data/flat_corner_extension_checks_057a.json)
+- [flat_tau_formula_extension_057a.json](../../artifacts/d5_CJ_flat_corner_support_057a/data/flat_tau_formula_extension_057a.json)
+- [CJ_delta_reduction_extension_057a.json](../../artifacts/d5_CJ_flat_corner_support_057a/data/CJ_delta_reduction_extension_057a.json)
 
 So the current best positive route for `CJ` is:
 

@@ -23,6 +23,11 @@ Use it together with:
 - [theorem/d5_CJ_branch_proof_reduction_056.md](./theorem/d5_CJ_branch_proof_reduction_056.md)
 - [theorem/d5_phase_machine_hypothesis_057a.md](./theorem/d5_phase_machine_hypothesis_057a.md)
 - [theorem/d5_phase_machine_summary_058.md](./theorem/d5_phase_machine_summary_058.md)
+- [theorem/d5_063_route_organization.md](./theorem/d5_063_route_organization.md)
+- [theorem/d5_064_unified_handoff.md](./theorem/d5_064_unified_handoff.md)
+- [theorem/d5_065_concentrated_handoff.md](./theorem/d5_065_concentrated_handoff.md)
+- [theorem/d5_066_concentrated_handoff.md](./theorem/d5_066_concentrated_handoff.md)
+- [theorem/d5_067_concentrated_handoff.md](./theorem/d5_067_concentrated_handoff.md)
 - [theorem/d5_first_exit_target_proof_062.md](./theorem/d5_first_exit_target_proof_062.md)
 - [DOCUMENT_FOR_EXTERNAL_REVIEW.md](../DOCUMENT_FOR_EXTERNAL_REVIEW.md)
 - [formal/README-D5.md](../formal/README-D5.md)
@@ -47,14 +52,25 @@ D5 obstruction is no longer:
 
 The actual current problem is now best split as:
 
-**strongest theorem-side draft:** the active best-seed branch is governed by a
-tiny phase/corner machine in `Theta = q+s+v+layer`, and `062` derives the
+**theorem package:** the active best-seed branch is governed by a tiny
+phase/corner machine in `Theta = q+s+v+layer`, and `062` derives the
 universal first-exit targets directly from the explicit `H_{L1}` trigger law,
 so `B`-region invariance, the global phase scheduler, and the boundary reset
 laws all fall into one structural chain.
 
-**honest remaining frontier:** admissible/local coding of the countdown
-carrier `tau`, or a no-go theorem for the intended local class.
+**clock route:** the phase-corner theorem determines a canonical cyclic
+controller, now best seen in the `beta` gauge. `067` sharpens this further:
+on the lifted active corridor the same clock already exists as `beta=-Theta`,
+so the live positive question is descent / exposure of that lifted clock to
+the intended local/admissible class.
+
+**rigidity side of the clock route:** exact reduction appears to force any
+exact realization to carry that same canonical clock on its accessible exact
+part, not merely some large hidden memory.
+
+**compute support:** validate the exact reduction object and the exact
+reduction data only: cycle vs chain, accessible quotient, and `(B,beta)`
+exactness / drift on larger moduli.
 
 `R1 -> H_L1`
 
@@ -223,7 +239,7 @@ In practice, that means:
 
 The guiding proof picture is now:
 
-- theorem branch:
+- theorem package:
   the active best-seed mechanism is already cleanly described by
   `B <- B+c <- B+c+d`,
   then compressed further to a tiny phase machine in
@@ -231,30 +247,26 @@ The guiding proof picture is now:
   then to the `061` bootstrap on the `Theta=2` cross-section odometer,
   and finally to the `062` derivation of the universal first-exit targets from
   the explicit `H_{L1}` trigger theorem;
-- local branch:
-  admissible/local coding of the carry event is again the live constructive
-  frontier once the `062` structural draft is accepted;
-- bridge:
-  once the carry event is local, the reduced trigger logic should slot into the
-  existing `025` grouped target and the finite-cover theorem becomes the clean
-  structural wrapper around it.
+- clock route:
+  once that theorem package is accepted, the canonical controller is no longer
+  vague; it is the same clock in two gauges, `kappa` on the theorem side and
+  `beta` on the constructive side, with `067` sharpening the positive question
+  to descent / exposure of the lifted clock `beta=-Theta`;
+- compute support:
+  only validate the exact reduction object, the accessible quotient, and the
+  `(B,beta)` exactness / drift data needed by the theorem and clock routes.
 
-The proof program itself now has two honest routes sharing that same picture:
+The live route split is therefore:
 
-- negative route:
-  package `046/047/048` into a bounded-horizon reduction and then apply the
-  explicit witness family showing that no fixed future flat/nonflat horizon
-  can code the carry sheet uniformly in `m`;
-- positive route:
-  package `048/050/052/055/056/058/059/060/061/062` into a countdown/reset theorem
-  where `tau` is the main hidden datum, `tau_next = tau-1` away from the
-  boundary, the `tau=0` reset is governed by the small current-state classes
-  `wrap`, `carry_jump`, and `other`, then the whole burden is compressed to
-  the active phase scheduler, the `061` bootstrap of `B`-region invariance,
-  and the `062` derivation of the first-exit targets;
-- compute route:
-  allow the stronger current-memory refinement `(B,rho)` from `049` when the
-  goal is constructive support rather than the theorem-side minimal object.
+- theorem package:
+  package `044–062` into the phase-corner theorem plus countdown/reset
+  corollaries;
+- clock route:
+  treat the remaining object as the canonical `beta` clock, with descent on
+  one side and rigidity on the other;
+- compute support:
+  use stronger coordinates such as `(B,rho)` only when validating the exact
+  reduction or a proposed descent object, never to reopen generic search.
 
 The first honest next moves are:
 
