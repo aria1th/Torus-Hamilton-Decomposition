@@ -14,3 +14,15 @@ __pycache__/
 *.pyc
 *.pyo
 artifacts/*/data/rule_rows/
+
+# Large generated / archival payloads
+*.tar
+*.tar.gz
+*.zip
+*.pdf
+RoundY/distribution/
+formal/TorusD3Draft/
+artifacts/d5_*/
+
+# Low-priority local drafts
+tex/d3torus_complete_m_ge_3_odometer_revision_v9_with_d4_patched.tex
