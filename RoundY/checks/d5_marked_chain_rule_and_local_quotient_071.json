@@ -1,0 +1,287 @@
+{
+  "task_id": "D5-MARKED-CHAIN-RULE-QUOTIENT-071",
+  "scope": "small compute support on frozen 045 checked-range data",
+  "exact_marked_chain_rule": {
+    "object": "regular carry-jump slice chain at fixed (m, source_u, w)",
+    "normalized_coordinate": "q in {0,...,m-1}",
+    "affine_local_coordinate": "s = q + sigma mod m with sigma = source_u + w mod m",
+    "interior_rule": {
+      "condition": "q < m-1",
+      "conclusions": [
+        "q' = q+1",
+        "s' = s+1 mod m",
+        "c = 0",
+        "next_dn = flat = (0,0,0,1)"
+      ]
+    },
+    "endpoint_rule": {
+      "condition": "q = m-1",
+      "conclusions": [
+        "s = sigma-1 mod m",
+        "c = 1",
+        "next_dn = other_1000 = (1,0,0,0)",
+        "this is the terminal marked endpoint of the first exact object"
+      ]
+    },
+    "validation": {
+      "validated_on_m": [
+        5,
+        7,
+        9,
+        11
+      ],
+      "num_chains": 140,
+      "num_rows": 1340,
+      "num_violations": 0,
+      "sample_violations": []
+    }
+  },
+  "catalog_feature_identification": {
+    "cur:antidiag_omit.tau_lo": {
+      "total_rows_checked": 15188,
+      "target": "current s",
+      "num_mismatches": 0,
+      "sample_mismatches": []
+    },
+    "cur:diag_omit.tau_lo": {
+      "total_rows_checked": 15188,
+      "target": "current s",
+      "num_mismatches": 0,
+      "sample_mismatches": []
+    },
+    "nxt:antidiag_omit.tau_lo": {
+      "total_rows_checked": 15188,
+      "target": "next s = B_next[0]",
+      "num_mismatches": 0,
+      "sample_mismatches": []
+    },
+    "nxt:diag_omit.tau_lo": {
+      "total_rows_checked": 15188,
+      "target": "next s = B_next[0]",
+      "num_mismatches": 0,
+      "sample_mismatches": []
+    }
+  },
+  "quotient_seen_by_intended_class": {
+    "per_chain": {
+      "signature_s": {
+        "by_m_sizes": {
+          "5": [
+            5
+          ],
+          "7": [
+            7
+          ],
+          "9": [
+            9
+          ],
+          "11": [
+            11
+          ]
+        },
+        "num_violations": 0,
+        "sample_violations": []
+      },
+      "signature_next_dn": {
+        "by_m_sizes": {
+          "5": [
+            2
+          ],
+          "7": [
+            2
+          ],
+          "9": [
+            2
+          ],
+          "11": [
+            2
+          ]
+        },
+        "num_violations": 140,
+        "sample_violations": [
+          {
+            "m": 5,
+            "source_u": 1,
+            "w": 2,
+            "signature": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "carries": [
+              0
+            ],
+            "succs": [
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                0,
+                0,
+                0
+              ]
+            ]
+          },
+          {
+            "m": 5,
+            "source_u": 1,
+            "w": 3,
+            "signature": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "carries": [
+              0
+            ],
+            "succs": [
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                0,
+                0,
+                0
+              ]
+            ]
+          },
+          {
+            "m": 5,
+            "source_u": 2,
+            "w": 2,
+            "signature": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "carries": [
+              0
+            ],
+            "succs": [
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                0,
+                0,
+                0
+              ]
+            ]
+          },
+          {
+            "m": 5,
+            "source_u": 2,
+            "w": 3,
+            "signature": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "carries": [
+              0
+            ],
+            "succs": [
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                0,
+                0,
+                0
+              ]
+            ]
+          },
+          {
+            "m": 5,
+            "source_u": 4,
+            "w": 2,
+            "signature": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "carries": [
+              0
+            ],
+            "succs": [
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                0,
+                0,
+                0
+              ]
+            ]
+          }
+        ]
+      },
+      "signature_s_plus_next_dn": {
+        "by_m_sizes": {
+          "5": [
+            5
+          ],
+          "7": [
+            7
+          ],
+          "9": [
+            9
+          ],
+          "11": [
+            11
+          ]
+        },
+        "num_violations": 0,
+        "sample_violations": []
+      }
+    },
+    "global_union": {
+      "signature_s": {
+        "num_states": 11,
+        "exact_c": false,
+        "deterministic_successor": false
+      },
+      "signature_next_dn": {
+        "num_states": 2,
+        "exact_c": true,
+        "deterministic_successor": false
+      },
+      "signature_s_plus_next_dn": {
+        "num_states": 22,
+        "exact_c": true,
+        "deterministic_successor": false
+      }
+    },
+    "interpretation": {
+      "m_state_deterministic_quotient": "current tau_lo feature = current s, i.e. the affine chain coordinate on each fixed slice chain",
+      "two_state_exact_only_quotient": "next_dn sees the endpoint/interior mark only",
+      "reason_global_union_still_fails": "the offset sigma = source_u + w changes from chain to chain, so s or (s,next_dn) are exact/deterministic only after fixing the individual marked chain"
+    }
+  },
+  "takeaway": "The correct first exact rule is the standard marked length-m chain in q-gauge, equivalently an affine s-gauge chain s -> s+1 with chain-dependent endpoint s = sigma-1. The current admissible class already sees this chain exactly via current s (tau_lo), while next_dn gives only the marked-endpoint bit."
+}

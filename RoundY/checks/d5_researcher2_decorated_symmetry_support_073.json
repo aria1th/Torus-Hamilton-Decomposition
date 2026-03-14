@@ -1,0 +1,75 @@
+{
+  "task_id": "D5-RESEARCHER2-DECORATED-SYMMETRY-SUPPORT-073",
+  "source_dataset": "artifacts/d5_future_transition_carry_coding_047/data/frozen_B_c_tau_epsilon_dataset_047.json",
+  "statement": "On the frozen checked range, every regular carry_jump row matches a decorated beta-chain prefix determined by beta plus two chain decorations (a,b). The decorations are validated exactly by simple formulas in the coarse chain data (q,sigma).",
+  "per_modulus": {
+    "5": {
+      "regular_carry_jump_rows_checked": 30,
+      "available_event_window_length": 10,
+      "checked_prefix_length": 5,
+      "formula_ab_exact_on_all_regular_carry_jump_rows": true,
+      "formula_ab_violation_count": 0,
+      "decorated_beta_prefix_matches_on_all_regular_carry_jump_rows": true,
+      "prefix_violation_count": 0,
+      "pattern_counts_all_regular_carry_jump_rows": {
+        "(0,0)": 19,
+        "(0,1)": 5,
+        "(1,1)": 5,
+        "(1,0)": 1
+      },
+      "sample_formula_violations": [],
+      "sample_prefix_violations": []
+    },
+    "7": {
+      "regular_carry_jump_rows_checked": 140,
+      "available_event_window_length": 10,
+      "checked_prefix_length": 7,
+      "formula_ab_exact_on_all_regular_carry_jump_rows": true,
+      "formula_ab_violation_count": 0,
+      "decorated_beta_prefix_matches_on_all_regular_carry_jump_rows": true,
+      "prefix_violation_count": 0,
+      "pattern_counts_all_regular_carry_jump_rows": {
+        "(0,0)": 103,
+        "(0,1)": 17,
+        "(1,1)": 17,
+        "(1,0)": 3
+      },
+      "sample_formula_violations": [],
+      "sample_prefix_violations": []
+    },
+    "9": {
+      "regular_carry_jump_rows_checked": 378,
+      "available_event_window_length": 10,
+      "checked_prefix_length": 9,
+      "formula_ab_exact_on_all_regular_carry_jump_rows": true,
+      "formula_ab_violation_count": 0,
+      "decorated_beta_prefix_matches_on_all_regular_carry_jump_rows": true,
+      "prefix_violation_count": 0,
+      "pattern_counts_all_regular_carry_jump_rows": {
+        "(0,0)": 299,
+        "(0,1)": 37,
+        "(1,1)": 37,
+        "(1,0)": 5
+      },
+      "sample_formula_violations": [],
+      "sample_prefix_violations": []
+    },
+    "11": {
+      "regular_carry_jump_rows_checked": 792,
+      "available_event_window_length": 10,
+      "checked_prefix_length": 10,
+      "formula_ab_exact_on_all_regular_carry_jump_rows": true,
+      "formula_ab_violation_count": 0,
+      "decorated_beta_prefix_matches_on_all_regular_carry_jump_rows": true,
+      "prefix_violation_count": 0,
+      "pattern_counts_all_regular_carry_jump_rows": {
+        "(0,0)": 655,
+        "(0,1)": 65,
+        "(1,1)": 65,
+        "(1,0)": 7
+      },
+      "sample_formula_violations": [],
+      "sample_prefix_violations": []
+    }
+  }
+}

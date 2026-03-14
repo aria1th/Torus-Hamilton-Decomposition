@@ -1,0 +1,238 @@
+{
+  "source": "RoundY/checks/d5_073_r1_support.json",
+  "purpose": "Support summary for D5 researcher 2 note 074 on dynamic symmetry vs splice asymmetry.",
+  "checked_moduli": [
+    5,
+    7,
+    9,
+    11
+  ],
+  "per_modulus": {
+    "5": {
+      "chain_type_counts": {
+        "00": 19,
+        "01": 5,
+        "10": 1,
+        "11": 2
+      },
+      "type_successors": {
+        "00": [
+          "00",
+          "01",
+          "10",
+          "11"
+        ],
+        "01": [
+          "00",
+          "11"
+        ],
+        "10": [
+          "00"
+        ],
+        "11": [
+          "00"
+        ]
+      },
+      "sample_component_chain_lengths": [
+        9
+      ],
+      "nondeterministic_chain_static_states": {
+        "beta=0,ab=00": [
+          "beta=4,ab=00",
+          "beta=4,ab=01",
+          "beta=4,ab=10",
+          "beta=4,ab=11"
+        ],
+        "beta=0,ab=01": [
+          "beta=4,ab=00",
+          "beta=4,ab=11"
+        ]
+      }
+    },
+    "7": {
+      "chain_type_counts": {
+        "00": 103,
+        "01": 17,
+        "10": 3,
+        "11": 12
+      },
+      "type_successors": {
+        "00": [
+          "00",
+          "01",
+          "10",
+          "11"
+        ],
+        "01": [
+          "00",
+          "11"
+        ],
+        "10": [
+          "00"
+        ],
+        "11": [
+          "00",
+          "01"
+        ]
+      },
+      "sample_component_chain_lengths": [
+        27
+      ],
+      "nondeterministic_chain_static_states": {
+        "beta=0,ab=00": [
+          "beta=6,ab=00",
+          "beta=6,ab=01",
+          "beta=6,ab=10",
+          "beta=6,ab=11"
+        ],
+        "beta=0,ab=01": [
+          "beta=6,ab=00",
+          "beta=6,ab=11"
+        ],
+        "beta=0,ab=11": [
+          "beta=6,ab=00",
+          "beta=6,ab=01"
+        ]
+      }
+    },
+    "9": {
+      "chain_type_counts": {
+        "00": 299,
+        "01": 37,
+        "10": 5,
+        "11": 30
+      },
+      "type_successors": {
+        "00": [
+          "00",
+          "01",
+          "10",
+          "11"
+        ],
+        "01": [
+          "00",
+          "11"
+        ],
+        "10": [
+          "00"
+        ],
+        "11": [
+          "00",
+          "01"
+        ]
+      },
+      "sample_component_chain_lengths": [
+        53
+      ],
+      "nondeterministic_chain_static_states": {
+        "beta=0,ab=00": [
+          "beta=8,ab=00",
+          "beta=8,ab=01",
+          "beta=8,ab=10",
+          "beta=8,ab=11"
+        ],
+        "beta=0,ab=01": [
+          "beta=8,ab=00",
+          "beta=8,ab=11"
+        ],
+        "beta=0,ab=11": [
+          "beta=8,ab=00",
+          "beta=8,ab=01"
+        ]
+      }
+    },
+    "11": {
+      "chain_type_counts": {
+        "00": 655,
+        "01": 65,
+        "10": 7,
+        "11": 56
+      },
+      "type_successors": {
+        "00": [
+          "00",
+          "01",
+          "10",
+          "11"
+        ],
+        "01": [
+          "00",
+          "11"
+        ],
+        "10": [
+          "00"
+        ],
+        "11": [
+          "00",
+          "01"
+        ]
+      },
+      "sample_component_chain_lengths": [
+        87
+      ],
+      "nondeterministic_chain_static_states": {
+        "beta=0,ab=00": [
+          "beta=10,ab=00",
+          "beta=10,ab=01",
+          "beta=10,ab=10",
+          "beta=10,ab=11"
+        ],
+        "beta=0,ab=01": [
+          "beta=10,ab=00",
+          "beta=10,ab=11"
+        ],
+        "beta=0,ab=11": [
+          "beta=10,ab=00",
+          "beta=10,ab=01"
+        ]
+      }
+    }
+  },
+  "m5_component_examples": {
+    "1": {
+      "type_cycle": [
+        "00",
+        "00",
+        "00",
+        "01",
+        "11",
+        "00",
+        "00",
+        "01",
+        "00"
+      ],
+      "primitive_period": 9,
+      "min_future_prefix_length_distinguishing_positions": 4
+    },
+    "2": {
+      "type_cycle": [
+        "00",
+        "00",
+        "01",
+        "00",
+        "11",
+        "00",
+        "01",
+        "00",
+        "00"
+      ],
+      "primitive_period": 9,
+      "min_future_prefix_length_distinguishing_positions": 4
+    },
+    "4": {
+      "type_cycle": [
+        "01",
+        "00",
+        "00",
+        "00",
+        "10",
+        "00",
+        "00",
+        "00",
+        "00"
+      ],
+      "primitive_period": 9,
+      "min_future_prefix_length_distinguishing_positions": 4
+    }
+  }
+}

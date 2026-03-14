@@ -1,0 +1,179 @@
+{
+  "abstract_bridge": {
+    "current_epsilon4_rule": {
+      "beta=0": "wrap",
+      "beta=m-1": "carry_jump",
+      "beta=m-2": "other_1000 iff q0=m-1",
+      "beta=m-3": "other_0010 iff (q0+sigma=1 mod m) or (q0=m-1 and sigma!=1)",
+      "otherwise": "flat"
+    },
+    "delta_representation": "delta = q0 + m*sigma mod m^2",
+    "minimality_claim": "boundary right-congruence on delta is trivial; smallest exact bridge on splice-invariant accessible subset A has m*|A| states",
+    "splice_update": "if beta>0: (beta,delta)->(beta-1,delta); if beta=0: (0,delta)->(m-1,delta+1 mod m^2)",
+    "state": "(beta, delta)"
+  },
+  "interpreted_exact_candidate": "beta_plus_q_plus_sigma = (beta, q0, sigma) = (beta, delta)",
+  "m5_saved_data_caveat": {
+    "example_missing_successors": [
+      {
+        "from": [
+          3,
+          0
+        ],
+        "to_missing": [
+          4,
+          0
+        ]
+      },
+      {
+        "from": [
+          3,
+          2
+        ],
+        "to_missing": [
+          4,
+          2
+        ]
+      }
+    ],
+    "missing_boundary_pairs": [
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        2
+      ]
+    ],
+    "not_closed_under_odometer_on_saved_sample": true
+  },
+  "per_modulus": {
+    "11": {
+      "ab_formula_failure_count": 0,
+      "all_boundary_pairs_realized_in_saved_data": true,
+      "checked_chain_transition_count": 774,
+      "missing_boundary_pairs_in_saved_data": [],
+      "regular_chain_count": 783,
+      "saved_exact_candidate_state_count": 1331,
+      "splice_update_failure_count": 0,
+      "type_successors_induced_by_boundary_odometer": {
+        "00": [
+          "00",
+          "01",
+          "10",
+          "11"
+        ],
+        "01": [
+          "00",
+          "11"
+        ],
+        "10": [
+          "00"
+        ],
+        "11": [
+          "00",
+          "01"
+        ]
+      },
+      "unique_boundary_pair_count_in_saved_data": 121
+    },
+    "5": {
+      "ab_formula_failure_count": 0,
+      "all_boundary_pairs_realized_in_saved_data": false,
+      "checked_chain_transition_count": 24,
+      "missing_boundary_pairs_in_saved_data": [
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "regular_chain_count": 27,
+      "saved_exact_candidate_state_count": 115,
+      "splice_update_failure_count": 0,
+      "type_successors_induced_by_boundary_odometer": {
+        "00": [
+          "00",
+          "01",
+          "10",
+          "11"
+        ],
+        "01": [
+          "00",
+          "11"
+        ],
+        "10": [
+          "00"
+        ],
+        "11": [
+          "00"
+        ]
+      },
+      "unique_boundary_pair_count_in_saved_data": 23
+    },
+    "7": {
+      "ab_formula_failure_count": 0,
+      "all_boundary_pairs_realized_in_saved_data": true,
+      "checked_chain_transition_count": 130,
+      "missing_boundary_pairs_in_saved_data": [],
+      "regular_chain_count": 135,
+      "saved_exact_candidate_state_count": 343,
+      "splice_update_failure_count": 0,
+      "type_successors_induced_by_boundary_odometer": {
+        "00": [
+          "00",
+          "01",
+          "10",
+          "11"
+        ],
+        "01": [
+          "00",
+          "11"
+        ],
+        "10": [
+          "00"
+        ],
+        "11": [
+          "00",
+          "01"
+        ]
+      },
+      "unique_boundary_pair_count_in_saved_data": 49
+    },
+    "9": {
+      "ab_formula_failure_count": 0,
+      "all_boundary_pairs_realized_in_saved_data": true,
+      "checked_chain_transition_count": 364,
+      "missing_boundary_pairs_in_saved_data": [],
+      "regular_chain_count": 371,
+      "saved_exact_candidate_state_count": 729,
+      "splice_update_failure_count": 0,
+      "type_successors_induced_by_boundary_odometer": {
+        "00": [
+          "00",
+          "01",
+          "10",
+          "11"
+        ],
+        "01": [
+          "00",
+          "11"
+        ],
+        "10": [
+          "00"
+        ],
+        "11": [
+          "00",
+          "01"
+        ]
+      },
+      "unique_boundary_pair_count_in_saved_data": 81
+    }
+  },
+  "source_dataset": "frozen_B_c_tau_epsilon_dataset_047.json from roundy_d5_bridge_bundle_20260314_update_071",
+  "task_id": "d5_074_r1_dynamic_boundary_odometer"
+}

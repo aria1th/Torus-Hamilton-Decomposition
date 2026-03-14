@@ -1,0 +1,4823 @@
+{
+  "method": "regular-family chains extracted as consecutive length-m blocks from carry_jump to wrap inclusive; decorations a,b are whether beta=m-2 is other_1000 and beta=m-3 is other_0010; transition summary records next chain type after wrap.",
+  "per_modulus": {
+    "11": {
+      "chain_type_counts": {
+        "00": 655,
+        "01": 65,
+        "10": 7,
+        "11": 56
+      },
+      "m": 11,
+      "nondeterministic_chain_static_states": {
+        "beta=0,ab=00": [
+          "beta=10,ab=00",
+          "beta=10,ab=01",
+          "beta=10,ab=10",
+          "beta=10,ab=11"
+        ],
+        "beta=0,ab=01": [
+          "beta=10,ab=00",
+          "beta=10,ab=11"
+        ],
+        "beta=0,ab=11": [
+          "beta=10,ab=00",
+          "beta=10,ab=01"
+        ]
+      },
+      "source_samples": {
+        "1": {
+          "chains": [
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 10,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 21,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 32,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 43,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 54,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 65,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 76,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 87,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 98,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 109,
+              "type": [
+                0,
+                1
+              ]
+            }
+          ],
+          "num_chains": 87
+        },
+        "10": {
+          "chains": [
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 10,
+              "start_trace_step": 10,
+              "type": [
+                0,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 10,
+              "start_trace_step": 21,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 10,
+              "start_trace_step": 32,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 10,
+              "start_trace_step": 43,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 10,
+              "start_trace_step": 54,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 10,
+              "start_trace_step": 65,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 10,
+              "start_trace_step": 76,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 10,
+              "start_trace_step": 87,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 10,
+              "start_trace_step": 98,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 10,
+              "start_trace_step": 109,
+              "type": [
+                0,
+                0
+              ]
+            }
+          ],
+          "num_chains": 87
+        },
+        "2": {
+          "chains": [
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 10,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 21,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 32,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 43,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 54,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 65,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 76,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 87,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 98,
+              "type": [
+                0,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 109,
+              "type": [
+                0,
+                0
+              ]
+            }
+          ],
+          "num_chains": 87
+        },
+        "4": {
+          "chains": [
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 10,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 21,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 32,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 43,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 54,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 65,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 76,
+              "type": [
+                0,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 87,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 98,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 109,
+              "type": [
+                0,
+                0
+              ]
+            }
+          ],
+          "num_chains": 87
+        },
+        "5": {
+          "chains": [
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 10,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 21,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 32,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 43,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 54,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 65,
+              "type": [
+                0,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 76,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 87,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 98,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 109,
+              "type": [
+                0,
+                0
+              ]
+            }
+          ],
+          "num_chains": 87
+        },
+        "6": {
+          "chains": [
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 10,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 21,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 32,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 43,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 54,
+              "type": [
+                0,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 65,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 76,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 87,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 98,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 109,
+              "type": [
+                0,
+                0
+              ]
+            }
+          ],
+          "num_chains": 87
+        },
+        "7": {
+          "chains": [
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 7,
+              "start_trace_step": 10,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 7,
+              "start_trace_step": 21,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 7,
+              "start_trace_step": 32,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 7,
+              "start_trace_step": 43,
+              "type": [
+                0,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 7,
+              "start_trace_step": 54,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 7,
+              "start_trace_step": 65,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 7,
+              "start_trace_step": 76,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 7,
+              "start_trace_step": 87,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 7,
+              "start_trace_step": 98,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 7,
+              "start_trace_step": 109,
+              "type": [
+                0,
+                0
+              ]
+            }
+          ],
+          "num_chains": 87
+        },
+        "8": {
+          "chains": [
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 8,
+              "start_trace_step": 10,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 8,
+              "start_trace_step": 21,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 8,
+              "start_trace_step": 32,
+              "type": [
+                0,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 8,
+              "start_trace_step": 43,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 8,
+              "start_trace_step": 54,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 8,
+              "start_trace_step": 65,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 8,
+              "start_trace_step": 76,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 8,
+              "start_trace_step": 87,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 8,
+              "start_trace_step": 98,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 8,
+              "start_trace_step": 109,
+              "type": [
+                0,
+                0
+              ]
+            }
+          ],
+          "num_chains": 87
+        },
+        "9": {
+          "chains": [
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 9,
+              "start_trace_step": 10,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 9,
+              "start_trace_step": 21,
+              "type": [
+                0,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 9,
+              "start_trace_step": 32,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 9,
+              "start_trace_step": 43,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 9,
+              "start_trace_step": 54,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 9,
+              "start_trace_step": 65,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 9,
+              "start_trace_step": 76,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 9,
+              "start_trace_step": 87,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 9,
+              "start_trace_step": 98,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 9,
+              "start_trace_step": 109,
+              "type": [
+                0,
+                0
+              ]
+            }
+          ],
+          "num_chains": 87
+        }
+      },
+      "type_successors": {
+        "00": [
+          "00",
+          "01",
+          "10",
+          "11"
+        ],
+        "01": [
+          "00",
+          "11"
+        ],
+        "10": [
+          "00"
+        ],
+        "11": [
+          "00",
+          "01"
+        ]
+      },
+      "type_transition_counts": {
+        "00->00": 532,
+        "00->01": 58,
+        "00->10": 7,
+        "00->11": 50,
+        "01->00": 58,
+        "01->11": 6,
+        "10->00": 7,
+        "11->00": 50,
+        "11->01": 6
+      }
+    },
+    "5": {
+      "chain_type_counts": {
+        "00": 19,
+        "01": 5,
+        "10": 1,
+        "11": 2
+      },
+      "m": 5,
+      "nondeterministic_chain_static_states": {
+        "beta=0,ab=00": [
+          "beta=4,ab=00",
+          "beta=4,ab=01",
+          "beta=4,ab=10",
+          "beta=4,ab=11"
+        ],
+        "beta=0,ab=01": [
+          "beta=4,ab=00",
+          "beta=4,ab=11"
+        ]
+      },
+      "source_samples": {
+        "1": {
+          "chains": [
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 4,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 9,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 14,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "other_0010",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 19,
+              "type": [
+                0,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "other_1000",
+                "other_0010",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 24,
+              "type": [
+                1,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 29,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 34,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "other_0010",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 39,
+              "type": [
+                0,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 44,
+              "type": [
+                0,
+                0
+              ]
+            }
+          ],
+          "num_chains": 9
+        },
+        "2": {
+          "chains": [
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 4,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 9,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "other_0010",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 14,
+              "type": [
+                0,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 19,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "other_1000",
+                "other_0010",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 24,
+              "type": [
+                1,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 29,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "other_0010",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 34,
+              "type": [
+                0,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 39,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 44,
+              "type": [
+                0,
+                0
+              ]
+            }
+          ],
+          "num_chains": 9
+        },
+        "4": {
+          "chains": [
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "other_0010",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 4,
+              "type": [
+                0,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 9,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 14,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 19,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "other_1000",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 24,
+              "type": [
+                1,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 29,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 34,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 39,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 44,
+              "type": [
+                0,
+                0
+              ]
+            }
+          ],
+          "num_chains": 9
+        }
+      },
+      "type_successors": {
+        "00": [
+          "00",
+          "01",
+          "10",
+          "11"
+        ],
+        "01": [
+          "00",
+          "11"
+        ],
+        "10": [
+          "00"
+        ],
+        "11": [
+          "00"
+        ]
+      },
+      "type_transition_counts": {
+        "00->00": 10,
+        "00->01": 4,
+        "00->10": 1,
+        "00->11": 1,
+        "01->00": 4,
+        "01->11": 1,
+        "10->00": 1,
+        "11->00": 2
+      }
+    },
+    "7": {
+      "chain_type_counts": {
+        "00": 103,
+        "01": 17,
+        "10": 3,
+        "11": 12
+      },
+      "m": 7,
+      "nondeterministic_chain_static_states": {
+        "beta=0,ab=00": [
+          "beta=6,ab=00",
+          "beta=6,ab=01",
+          "beta=6,ab=10",
+          "beta=6,ab=11"
+        ],
+        "beta=0,ab=01": [
+          "beta=6,ab=00",
+          "beta=6,ab=11"
+        ],
+        "beta=0,ab=11": [
+          "beta=6,ab=00",
+          "beta=6,ab=01"
+        ]
+      },
+      "source_samples": {
+        "1": {
+          "chains": [
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 6,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 13,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 20,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 27,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 34,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 41,
+              "type": [
+                0,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "other_1000",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 48,
+              "type": [
+                1,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 55,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 62,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 69,
+              "type": [
+                0,
+                0
+              ]
+            }
+          ],
+          "num_chains": 27
+        },
+        "2": {
+          "chains": [
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 6,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 13,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 20,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 27,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 34,
+              "type": [
+                0,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 41,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "other_1000",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 48,
+              "type": [
+                1,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 55,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 62,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 69,
+              "type": [
+                0,
+                0
+              ]
+            }
+          ],
+          "num_chains": 27
+        },
+        "4": {
+          "chains": [
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 6,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 13,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 20,
+              "type": [
+                0,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 27,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 34,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 41,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "other_1000",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 48,
+              "type": [
+                1,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 55,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 62,
+              "type": [
+                0,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 69,
+              "type": [
+                0,
+                0
+              ]
+            }
+          ],
+          "num_chains": 27
+        },
+        "5": {
+          "chains": [
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 6,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 13,
+              "type": [
+                0,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 20,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 27,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 34,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 41,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "other_1000",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 48,
+              "type": [
+                1,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 55,
+              "type": [
+                0,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 62,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 69,
+              "type": [
+                0,
+                0
+              ]
+            }
+          ],
+          "num_chains": 27
+        },
+        "6": {
+          "chains": [
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 6,
+              "type": [
+                0,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 13,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 20,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 27,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 34,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 41,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "other_1000",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 48,
+              "type": [
+                1,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 55,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 62,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 69,
+              "type": [
+                0,
+                0
+              ]
+            }
+          ],
+          "num_chains": 27
+        }
+      },
+      "type_successors": {
+        "00": [
+          "00",
+          "01",
+          "10",
+          "11"
+        ],
+        "01": [
+          "00",
+          "11"
+        ],
+        "10": [
+          "00"
+        ],
+        "11": [
+          "00",
+          "01"
+        ]
+      },
+      "type_transition_counts": {
+        "00->00": 72,
+        "00->01": 14,
+        "00->10": 3,
+        "00->11": 10,
+        "01->00": 14,
+        "01->11": 2,
+        "10->00": 3,
+        "11->00": 10,
+        "11->01": 2
+      }
+    },
+    "9": {
+      "chain_type_counts": {
+        "00": 299,
+        "01": 37,
+        "10": 5,
+        "11": 30
+      },
+      "m": 9,
+      "nondeterministic_chain_static_states": {
+        "beta=0,ab=00": [
+          "beta=8,ab=00",
+          "beta=8,ab=01",
+          "beta=8,ab=10",
+          "beta=8,ab=11"
+        ],
+        "beta=0,ab=01": [
+          "beta=8,ab=00",
+          "beta=8,ab=11"
+        ],
+        "beta=0,ab=11": [
+          "beta=8,ab=00",
+          "beta=8,ab=01"
+        ]
+      },
+      "source_samples": {
+        "1": {
+          "chains": [
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 8,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 17,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 26,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 35,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 44,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 53,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 62,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 71,
+              "type": [
+                0,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "other_1000",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 80,
+              "type": [
+                1,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 1,
+              "start_trace_step": 89,
+              "type": [
+                0,
+                0
+              ]
+            }
+          ],
+          "num_chains": 53
+        },
+        "2": {
+          "chains": [
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 8,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 17,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 26,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 35,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 44,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 53,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 62,
+              "type": [
+                0,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 71,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "other_1000",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 80,
+              "type": [
+                1,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 2,
+              "start_trace_step": 89,
+              "type": [
+                0,
+                0
+              ]
+            }
+          ],
+          "num_chains": 53
+        },
+        "4": {
+          "chains": [
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 8,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 17,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 26,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 35,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 44,
+              "type": [
+                0,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 53,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 62,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 71,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "other_1000",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 80,
+              "type": [
+                1,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 4,
+              "start_trace_step": 89,
+              "type": [
+                0,
+                0
+              ]
+            }
+          ],
+          "num_chains": 53
+        },
+        "5": {
+          "chains": [
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 8,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 17,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 26,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 35,
+              "type": [
+                0,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 44,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 53,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 62,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 71,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "other_1000",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 80,
+              "type": [
+                1,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 5,
+              "start_trace_step": 89,
+              "type": [
+                0,
+                0
+              ]
+            }
+          ],
+          "num_chains": 53
+        },
+        "6": {
+          "chains": [
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 8,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 17,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 26,
+              "type": [
+                0,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 35,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 44,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 53,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 62,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 71,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "other_1000",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 80,
+              "type": [
+                1,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 6,
+              "start_trace_step": 89,
+              "type": [
+                0,
+                0
+              ]
+            }
+          ],
+          "num_chains": 53
+        },
+        "7": {
+          "chains": [
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 7,
+              "start_trace_step": 8,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 7,
+              "start_trace_step": 17,
+              "type": [
+                0,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 7,
+              "start_trace_step": 26,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 7,
+              "start_trace_step": 35,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 7,
+              "start_trace_step": 44,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 7,
+              "start_trace_step": 53,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 7,
+              "start_trace_step": 62,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 7,
+              "start_trace_step": 71,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "other_1000",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 7,
+              "start_trace_step": 80,
+              "type": [
+                1,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 7,
+              "start_trace_step": 89,
+              "type": [
+                0,
+                1
+              ]
+            }
+          ],
+          "num_chains": 53
+        },
+        "8": {
+          "chains": [
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "other_0010",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 8,
+              "start_trace_step": 8,
+              "type": [
+                0,
+                1
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 8,
+              "start_trace_step": 17,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 8,
+              "start_trace_step": 26,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 8,
+              "start_trace_step": 35,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 8,
+              "start_trace_step": 44,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 8,
+              "start_trace_step": 53,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 8,
+              "start_trace_step": 62,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 8,
+              "start_trace_step": 71,
+              "type": [
+                0,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "other_1000",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 8,
+              "start_trace_step": 80,
+              "type": [
+                1,
+                0
+              ]
+            },
+            {
+              "events": [
+                "carry_jump",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "flat",
+                "wrap"
+              ],
+              "source_u": 8,
+              "start_trace_step": 89,
+              "type": [
+                0,
+                0
+              ]
+            }
+          ],
+          "num_chains": 53
+        }
+      },
+      "type_successors": {
+        "00": [
+          "00",
+          "01",
+          "10",
+          "11"
+        ],
+        "01": [
+          "00",
+          "11"
+        ],
+        "10": [
+          "00"
+        ],
+        "11": [
+          "00",
+          "01"
+        ]
+      },
+      "type_transition_counts": {
+        "00->00": 230,
+        "00->01": 32,
+        "00->10": 5,
+        "00->11": 26,
+        "01->00": 32,
+        "01->11": 4,
+        "10->00": 5,
+        "11->00": 26,
+        "11->01": 4
+      }
+    }
+  },
+  "source_dataset": "artifacts/d5_future_transition_carry_coding_047/data/frozen_B_c_tau_epsilon_dataset_047.json"
+}
