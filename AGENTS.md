@@ -130,8 +130,10 @@ Current exact Lean frontier:
 
 For D5, the canonical current handoff is:
 
-- `RoundY/theorem/d5_078_accepted_frontier_and_split.md`
-- `RoundY/theorem/d5_079_single_critical_lemma.md`
+- `RoundY/theorem/d5_082_frontier_and_theorem_map.md`
+- `RoundY/theorem/d5_083_gluing_flow_and_final_theorem.md`
+- `RoundY/theorem/d5_083_final_theorem_proof.md`
+- `RoundY/theorem/d5_086_dependency_audit_and_generalization_gate.md`
 
 The active top-level split is:
 
@@ -149,18 +151,20 @@ The active top-level split is:
    Validate the concrete bridge identification and accessible exact reduction
    object only. No generic search.
 
-After the accepted `079` refinement, the live D5 frontier is one critical
-globalization lemma:
+After the promoted `083` proof, the odd-`m` D5 theorem closes inside the
+accepted `076–082` package.
 
-- same realized `delta` must imply same remaining full-chain tail length,
-- equivalently `rho` must depend only on realized `delta`,
-- equivalently raw global `(beta,delta)` must be exact.
+The live task is now a short dependency audit:
+
+- recheck `033 -> 062`,
+- recheck the `079` chart/interface usage,
+- and only then treat D5 as the base for broader generalization.
 
 ## Read this first for D5 work
 
 1. `RoundY/README.md`
 2. `RoundY/current-frontier-and-approach.md`
-3. `RoundY/theorem/d5_079_single_critical_lemma.md`
+3. `RoundY/theorem/d5_082_frontier_and_theorem_map.md`
 4. `RoundY/instruction_for_codex.md`
 
 Then read the specific theorem or artifact note directly relevant to the task.
