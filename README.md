@@ -6,6 +6,10 @@ torus Hamilton decompositions:
 - `d=3`: solved manuscript for all `m >= 3`
 - `d=4`: solved in the same return-map / odometer language, with Lean
   formalization
+- composite dimensions: theorem-level product reduction now shows that every
+  dimension of the form `2^alpha 3^beta` with `alpha + beta >= 1` is already
+  forced, including `d=6,8,9,12,16,18,...`; more generally, all composite
+  dimensions follow once the prime dimensions are settled
 - `d=5`: active frontier, currently reduced to an exact-bridge /
   globalization question: abstract bridge `(beta,rho)` versus the strongest
   checked concrete model `(beta,q,sigma)` / `(beta,delta)`
@@ -21,6 +25,8 @@ The repo is no longer just the original `d=3` manuscript bundle.
 
 - `tex/` and the main manuscript files still center the finished `d=3` paper
 - `RoundX/` contains the finished `d=4` proof program
+- `RoundComposite/` contains the theorem-level composite-dimension product
+  reduction and prime-to-composite closure note
 - `formal/` contains the Lean development, including a complete `d=4`
   formalization, a complete `d=3` even Route E package, an active `d=3`
   odometer rewrite, and conservative `d=5` extracted-model support
@@ -88,6 +94,12 @@ mathematical treatment for all `m >= 3`, including:
 │   ├── d4_line_union_general_theorem_proof_final.{tex,md}
 │   └── d3torus_..._v5.tex    (최종 submission 후보)
 │
+├── RoundComposite/           ← composite-dimension product reduction
+│   ├── README.md
+│   ├── TODO.md
+│   ├── Result.md
+│   └── d_composite_product_reduction.tex
+│
 ├── RoundY/                   ← d=5 현재 frontier
 │   ├── README.md
 │   ├── current-frontier-and-approach.md
@@ -149,6 +161,22 @@ line-union gauge witness:
 
 The proof relies on a two-level return map → odometer conjugacy structure.
 See `RESEARCH_PROGRESSION.md` for the full narrative of how this was discovered.
+
+## Composite dimensions (RoundComposite)
+
+The `RoundComposite/` directory contains a theorem-level product reduction for
+composite dimensions:
+
+- `d_composite_product_reduction.tex` proves the square lemma for `d=2`;
+- it proves multiplicative closure
+  `D_a(m)` and `D_b(m)` solved for all `m` `=> D_{ab}(m)` solved for all `m`;
+- therefore every dimension `2^alpha 3^beta` with `alpha + beta >= 1` is now
+  unconditionally closed from the already-solved `d=2,3,4` cases;
+- more generally, all composite dimensions follow formally once the prime
+  dimensions are settled.
+
+This is currently a theorem-level existence result, not yet a tiny local
+witness-table construction and not yet Lean-formalized.
 
 ## d=5 frontier (RoundY)
 

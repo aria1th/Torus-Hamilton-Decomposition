@@ -1,0 +1,222 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb,mathtools}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}[proposition]{Theorem}
+\newtheorem{corollary}[proposition]{Corollary}
+\newtheorem{remark}[proposition]{Remark}
+
+\newcommand{\torus}[2]{D_{#1}(#2)}
+\newcommand{\cycle}[1]{\vec C_{#1}}
+
+\title{A Product Reduction for Composite Dimensions}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note isolates a theorem-level reduction for composite dimensions in the
+directed torus Hamilton-decomposition problem. The key point is that the class
+of dimensions admitting Hamilton decompositions for every modulus is
+multiplicatively closed. Consequently, once the prime dimensions are settled,
+all composite dimensions follow formally.
+\end{abstract}
+
+\section*{Setup}
+
+For integers $d \ge 1$ and $m \ge 2$, let
+\[
+\torus{d}{m}
+=
+\operatorname{Cay}\bigl((\mathbb Z/m\mathbb Z)^d,\{e_0,\dots,e_{d-1}\}\bigr).
+\]
+Thus $\torus{d}{m}$ has one outgoing edge in each coordinate direction. A
+\emph{Hamilton decomposition} of $\torus{d}{m}$ is a partition of its arc set
+into $d$ arc-disjoint directed Hamilton cycles.
+
+\section*{The two-dimensional base case}
+
+\begin{proposition}[Square lemma]
+For every integer $n \ge 2$, the directed torus
+\[
+\torus{2}{n} \cong \cycle{n} \square \cycle{n}
+\]
+admits a Hamilton decomposition into two directed Hamilton cycles.
+\end{proposition}
+
+\begin{proof}
+Work on the vertex set $\mathbb Z_n^2$. At each $(u,v)$ there are two outgoing
+arcs:
+\[
+(u,v)\to(u+1,v),
+\qquad
+(u,v)\to(u,v+1).
+\]
+Define spanning subdigraphs $H_0$ and $H_1$ by
+\[
+H_0(u,v)=
+\begin{cases}
+(u+1,v), & u+v \not\equiv n-1 \pmod n,\\
+(u,v+1), & u+v \equiv n-1 \pmod n,
+\end{cases}
+\]
+and let $H_1$ be the complementary choice:
+\[
+H_1(u,v)=
+\begin{cases}
+(u,v+1), & u+v \not\equiv n-1 \pmod n,\\
+(u+1,v), & u+v \equiv n-1 \pmod n.
+\end{cases}
+\]
+These two rules clearly partition the two outgoing arcs at every vertex.
+
+They also partition the two incoming arcs. Into $(u,v)$, the west incoming arc
+comes from $(u-1,v)$ and is used by $H_0$ exactly when
+\[
+(u-1)+v \not\equiv n-1 \pmod n,
+\]
+that is, when $u+v \not\equiv 0 \pmod n$. The south incoming arc comes from
+$(u,v-1)$ and is used by $H_0$ exactly when
+\[
+u+(v-1) \equiv n-1 \pmod n,
+\]
+that is, when $u+v \equiv 0 \pmod n$. So every vertex has indegree $1$ in
+$H_0$, and therefore also in $H_1$. Hence both $H_0$ and $H_1$ are directed
+$1$-factors.
+
+Now conjugate $H_0$ by
+\[
+\Psi(u,v)=(s,t):=(u+v,v).
+\]
+Since $\Psi^{-1}(s,t)=(s-t,t)$, one checks directly that
+\[
+\Psi H_0 \Psi^{-1}(s,t)=
+\begin{cases}
+(s+1,t), & s \neq n-1,\\
+(0,t+1), & s=n-1.
+\end{cases}
+\]
+This is the standard odometer on $\mathbb Z_n^2$, so it is a single directed
+cycle of length $n^2$. Hence $H_0$ is Hamilton.
+
+Finally, $H_1$ is conjugate to $H_0$ by the coordinate swap
+\[
+(u,v)\longmapsto(v,u),
+\]
+so $H_1$ is Hamilton as well.
+\end{proof}
+
+\section*{Composite dimensions}
+
+\begin{theorem}[Multiplicative closure]
+Let $a,b \ge 2$. Assume that for every integer $n \ge 3$, both
+\[
+\torus{a}{n}
+\qquad\text{and}\qquad
+\torus{b}{n}
+\]
+admit Hamilton decompositions. Then for every integer $m \ge 3$, the directed
+torus $\torus{ab}{m}$ also admits a Hamilton decomposition.
+\end{theorem}
+
+\begin{proof}
+Fix $m \ge 3$, and write
+\[
+V:=((\mathbb Z/m\mathbb Z)^a)^b.
+\]
+By grouping the coordinates into $b$ consecutive blocks of size $a$, we may
+identify
+\[
+\torus{ab}{m}
+\cong
+G^{(1)} \square G^{(2)} \square \cdots \square G^{(b)},
+\]
+where each factor $G^{(r)}$ is a copy of $\torus{a}{m}$.
+
+For each factor $r \in \{1,\dots,b\}$, choose a Hamilton decomposition
+\[
+G^{(r)} = A_0^{(r)} \sqcup A_1^{(r)} \sqcup \cdots \sqcup A_{a-1}^{(r)},
+\]
+where each $A_i^{(r)}$ is a directed Hamilton cycle on the vertex set
+$(\mathbb Z/m\mathbb Z)^a$. Every such cycle has length
+\[
+n := m^a.
+\]
+
+For each $i \in \{0,\dots,a-1\}$, define
+\[
+F_i := A_i^{(1)} \square A_i^{(2)} \square \cdots \square A_i^{(b)}.
+\]
+Since each $A_i^{(r)}$ is a directed cycle of length $n$, the product $F_i$ is
+canonically isomorphic to
+\[
+\cycle{n}^{\square b} \cong \torus{b}{n}.
+\]
+By the hypothesis on dimension $b$, each $F_i$ therefore admits a Hamilton
+decomposition into $b$ directed Hamilton cycles.
+
+It remains to check that the subdigraphs $F_0,\dots,F_{a-1}$ partition the arc
+set of $\torus{ab}{m}$. An arc of
+\[
+G^{(1)} \square \cdots \square G^{(b)}
+\]
+changes exactly one block, say the $r$-th block, and in that block it uses one
+arc of $G^{(r)}$. Because the cycles
+\[
+A_0^{(r)},\dots,A_{a-1}^{(r)}
+\]
+partition the arc set of $G^{(r)}$, that changing-block arc belongs to a unique
+$A_i^{(r)}$. By definition, the full product arc then belongs to the unique
+subdigraph $F_i$.
+
+Thus the $F_i$ are pairwise arc-disjoint and cover all arcs of $\torus{ab}{m}$.
+Since each $F_i$ splits into $b$ Hamilton cycles, the whole digraph
+$\torus{ab}{m}$ splits into
+\[
+a \cdot b = ab
+\]
+Hamilton cycles, as required.
+\end{proof}
+
+\begin{corollary}[Prime reduction]
+Assume that for every prime $p$ and every integer $n \ge 3$, the directed torus
+$\torus{p}{n}$ admits a Hamilton decomposition. Then for every integer $d \ge 2$
+and every integer $m \ge 3$, the directed torus $\torus{d}{m}$ admits a
+Hamilton decomposition.
+\end{corollary}
+
+\begin{proof}
+Proceed by induction on $d$. If $d$ is prime, this is exactly the hypothesis.
+If $d$ is composite, write $d=ab$ with $2 \le a,b < d$. By the induction
+hypothesis, both $\torus{a}{n}$ and $\torus{b}{n}$ admit Hamilton
+decompositions for every $n \ge 3$. The multiplicative-closure theorem then
+gives a Hamilton decomposition of $\torus{d}{m}$ for every $m \ge 3$.
+\end{proof}
+
+\begin{corollary}[Immediate families from currently solved cases]
+The following infinite families follow immediately.
+\begin{enumerate}
+\item Since $\torus{2}{n}$ is solved by the square lemma, any solved dimension
+    $d$ automatically gives the doubled dimension $2d$.
+\item Since $\torus{3}{n}$ is already solved in this repository for every
+    $n \ge 3$, the dimensions $6=2\cdot 3$, $9=3\cdot 3$, $12=3\cdot 4$,
+    $18=3\cdot 6$, and more generally every $2^{\alpha}3^{\beta}$ with
+    $\alpha+\beta \ge 1$, are all forced by repeated product reduction.
+\item Since $\torus{4}{n}$ is also solved here for every $n \ge 3$, the
+    dimensions $8=2\cdot 4$, $16=4\cdot 4$, and every other dimension obtained
+    by multiplying together already-solved dimensions are likewise forced.
+\end{enumerate}
+\end{corollary}
+
+\begin{remark}
+This argument is theorem-level rather than witness-level. It proves existence
+for composite dimensions once smaller factors are known, but it does not
+directly produce a tiny low-layer local rule table of the kind used in the
+current explicit $d=3$ and $d=4$ constructions.
+\end{remark}
+
+\end{document}
