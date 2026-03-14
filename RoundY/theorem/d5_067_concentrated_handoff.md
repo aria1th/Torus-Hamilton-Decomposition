@@ -98,6 +98,24 @@ feeding `B`-region invariance and the theorem-side scheduler.
 So the theorem package is no longer exploratory. It is close to manuscript
 completion in shape.
 
+### 2.5 Exact theorem targets
+
+The theorem-side target should now be read as the following package:
+
+- **Structural reduction theorem**
+  universal first exits plus pre-exit `B`-region invariance on the active
+  branch
+- **Phase-corner theorem**
+  `kappa' = kappa + 1`, current event determined by `(kappa,c,s)`, and one
+  short flat corner
+- **Countdown corollary**
+  `tau' = tau - 1` away from the boundary
+- **Reset corollary**
+  `wrap`, `carry_jump`, `other_1000`, `other_0010` as current-state
+  consequences of the phase-corner theorem
+- **Gauge remark**
+  `beta = -kappa`
+
 ## 3. Clock route
 
 The remaining live frontier is about one canonical clock.
@@ -177,6 +195,20 @@ object, with the cycle statement a possible later strengthening.
 But this no longer changes the conceptual picture: both forms carry the same
 canonical clock.
 
+### 3.5 Exact clock-route targets
+
+The clock route is now narrow enough to state explicitly:
+
+- **Descent / realization target**
+  prove that the lifted clock `beta = -Theta` descends to the intended
+  local/admissible quotient
+- **Rigidity target**
+  prove that any exact realization on the exact reduction object is injective
+  on the accessible exact part and therefore transports the canonical clock
+- **Reduction target**
+  identify whether the first exact reduction object is a marked chain or a
+  cycle, and state the clock theorem on that exact object first
+
 ## 4. Compute support
 
 Compute is now tightly scoped. Its job is to validate the reduction, not to
@@ -216,6 +248,23 @@ This means:
 - no new witness hunting
 
 Compute is now support for the exact reduction only.
+
+### 4.5 What to dig for
+
+For each live part, the next digging target is:
+
+- **Theorem package**
+  tighten dependencies and write the structural reduction theorem cleanly,
+  rather than reopening upstream extraction
+- **Clock descent**
+  identify the smallest admissible quotient on which lifted phase fibers become
+  singletons
+- **Clock rigidity**
+  prove injectivity on the exact marked chain/cycle and then transport the
+  whole theorem-side machine
+- **Compute support**
+  validate chain vs cycle, accessible quotient behavior, and `(B,beta)`
+  exactness / drift on larger moduli
 
 ## 5. Recommended division of labor
 

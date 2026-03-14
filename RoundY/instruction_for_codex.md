@@ -12,10 +12,12 @@ Read in this order:
 
 1. [README.md](./README.md)
 2. [current-frontier-and-approach.md](./current-frontier-and-approach.md)
-3. [../DOCUMENT_FOR_EXTERNAL_REVIEW.md](../DOCUMENT_FOR_EXTERNAL_REVIEW.md)
+3. [theorem/d5_071_unified_bridge_handoff.md](./theorem/d5_071_unified_bridge_handoff.md)
+4. [theorem/d5_071_four_researcher_questions.md](./theorem/d5_071_four_researcher_questions.md)
+5. [../DOCUMENT_FOR_EXTERNAL_REVIEW.md](../DOCUMENT_FOR_EXTERNAL_REVIEW.md)
    Focus on `D23`, `D24`, `D25`, `D26`, `D27`, `D28`, `D29`, `D30`, `D31`,
    `D32`, `D33`, `D34`, `D35`, `D37`, `D38`, `D40`, `D42`, `D45`.
-4. [autonomous/d5_autonomous_perturbation_note_v25.md](./autonomous/d5_autonomous_perturbation_note_v25.md)
+6. [autonomous/d5_autonomous_perturbation_note_v25.md](./autonomous/d5_autonomous_perturbation_note_v25.md)
 
 Then read the key artifact READMEs in this order:
 
@@ -77,15 +79,26 @@ For the current theorem-side packaging around `047–062`, start with:
 11. [theorem/d5_B_region_bootstrap_proof_061.md](./theorem/d5_B_region_bootstrap_proof_061.md)
 12. [theorem/d5_first_exit_target_proof_062.md](./theorem/d5_first_exit_target_proof_062.md)
 13. [theorem/d5_067_concentrated_handoff.md](./theorem/d5_067_concentrated_handoff.md)
+14. [theorem/d5_068_theorem_package_organized.md](./theorem/d5_068_theorem_package_organized.md)
+15. [theorem/d5_069_concentrated_handoff.md](./theorem/d5_069_concentrated_handoff.md)
+16. [theorem/d5_070_minimal_handoff_for_069_readers.md](./theorem/d5_070_minimal_handoff_for_069_readers.md)
+17. [theorem/d5_071_unified_bridge_handoff.md](./theorem/d5_071_unified_bridge_handoff.md)
+18. [theorem/d5_071_four_researcher_questions.md](./theorem/d5_071_four_researcher_questions.md)
 
 These notes now spell out the actual top-level split:
 
 - theorem package:
   phase-corner theorem, countdown/reset corollaries, and the `033 -> 062 -> 059`
-  structural spine
-- clock route:
-  the canonical `beta` clock, viewed as lifted-clock descent / realization on
-  one side and exact-clock rigidity on the other
+  structural spine; after `068`, this side should usually be treated as
+  near-stable unless the user is explicitly asking for theorem cleanup
+- exact reduction / realization:
+  the canonical `beta` clock on the exact marked reduction object; after `069`,
+  the right question is no longer “invent the clock” but “identify the exact
+  object and prove the quotient is exact enough that the clock descends”
+- bridge question:
+  after `071`, the first exact per-chain marked-chain rule is mostly settled;
+  the live missing link is whether those exact quotients globalize across
+  chains, or whether the carry is essentially asymmetric
 - compute support:
   only reduction validation, accessible quotient validation, and
   `(B,beta)` exactness / drift stress tests
@@ -108,10 +121,11 @@ The honest remaining frontier is then:
 
 **the phase-corner theorem determines a canonical cyclic controller
 (`beta` in the current constructive gauge). On the lifted active corridor that
-same clock already exists as `beta = -Theta`. The live question is whether
-that lifted clock descends to the intended local/admissible class, or whether
-exact-clock rigidity shows that any exact local realization must already carry
-that same `m`-scale clock**
+same clock already exists as `beta = -Theta`. The first exact per-chain marked
+object is now largely identified. The live question is whether those per-chain
+exact quotients globalize to one exact quotient on which current `epsilon4`
+and the canonical clock descend, or whether the carry is essentially
+asymmetric across chains**
 
 `R1 -> H_L1`
 

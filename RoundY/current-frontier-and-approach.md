@@ -28,6 +28,11 @@ Use it together with:
 - [theorem/d5_065_concentrated_handoff.md](./theorem/d5_065_concentrated_handoff.md)
 - [theorem/d5_066_concentrated_handoff.md](./theorem/d5_066_concentrated_handoff.md)
 - [theorem/d5_067_concentrated_handoff.md](./theorem/d5_067_concentrated_handoff.md)
+- [theorem/d5_068_theorem_package_organized.md](./theorem/d5_068_theorem_package_organized.md)
+- [theorem/d5_069_concentrated_handoff.md](./theorem/d5_069_concentrated_handoff.md)
+- [theorem/d5_070_minimal_handoff_for_069_readers.md](./theorem/d5_070_minimal_handoff_for_069_readers.md)
+- [theorem/d5_071_unified_bridge_handoff.md](./theorem/d5_071_unified_bridge_handoff.md)
+- [theorem/d5_071_four_researcher_questions.md](./theorem/d5_071_four_researcher_questions.md)
 - [theorem/d5_first_exit_target_proof_062.md](./theorem/d5_first_exit_target_proof_062.md)
 - [DOCUMENT_FOR_EXTERNAL_REVIEW.md](../DOCUMENT_FOR_EXTERNAL_REVIEW.md)
 - [formal/README-D5.md](../formal/README-D5.md)
@@ -56,21 +61,30 @@ The actual current problem is now best split as:
 phase/corner machine in `Theta = q+s+v+layer`, and `062` derives the
 universal first-exit targets directly from the explicit `H_{L1}` trigger law,
 so `B`-region invariance, the global phase scheduler, and the boundary reset
-laws all fall into one structural chain.
+laws all fall into one structural chain. After the `068` packaging pass, this
+side looks near-stable in shape and no longer seems like the main live
+research branch.
 
-**clock route:** the phase-corner theorem determines a canonical cyclic
-controller, now best seen in the `beta` gauge. `067` sharpens this further:
-on the lifted active corridor the same clock already exists as `beta=-Theta`,
-so the live positive question is descent / exposure of that lifted clock to
-the intended local/admissible class.
+**exact reduction / realization:** the phase-corner theorem determines a
+canonical cyclic controller, now best seen in the `beta` gauge. `067` sharpens
+this further by observing that on the lifted active corridor the same clock
+already exists as `beta=-Theta`. `069–070` then make the next step precise:
+first identify the exact marked reduction object and the intended quotient on
+it. `071` sharpens it one more time: on each fixed regular slice the first
+exact object is already a marked length-`m` chain and the intended class
+already sees the full affine chain coordinate there. So the live issue is now
+the **exact bridge across chains**, namely whether the chain-dependent offset
+can be normalized so that current `epsilon4` and the canonical clock descend
+globally.
 
-**rigidity side of the clock route:** exact reduction appears to force any
+**rigidity support:** exact reduction appears to force any
 exact realization to carry that same canonical clock on its accessible exact
 part, not merely some large hidden memory.
 
 **compute support:** validate the exact reduction object and the exact
-reduction data only: cycle vs chain, accessible quotient, and `(B,beta)`
-exactness / drift on larger moduli.
+reduction data only: chain vs promoted cycle, accessible quotient on the
+union-of-chains object, offset normalization, and `(B,beta)` exactness / drift
+on larger moduli.
 
 `R1 -> H_L1`
 
@@ -216,10 +230,11 @@ What is already known:
 
 So the next branch should be read as:
 
-**if `062` is accepted, the structural branch is essentially closed and the
-next honest frontier is local/admissible coding of the countdown carrier
-`tau`; if not, the remaining proof job is only to finalize that `062`
-first-exit-target chain cleanly**.
+**if `062` is accepted, the structural branch is essentially closed. The live
+D5 question is no longer the per-chain exact rule, but whether those exact
+marked-chain quotients globalize across chains into one exact quotient on which
+the canonical clock descends, or whether the carry is essentially asymmetric
+across chains.**
 
 ## What the current approach should be
 

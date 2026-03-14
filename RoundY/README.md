@@ -5,7 +5,7 @@ Hamilton decomposition of the directed `5`-torus
 `D_5(m) = Cay((Z_m)^5, {e_0, e_1, e_2, e_3, e_4})`.
 
 **Status:** `[O]` open.  
-**Current frontier:** after the `055–062` proof compression and the `063–067` clock-route sharpening, the strongest theorem-side D5 draft is no longer an open structural search. `062` derives the universal first-exit targets directly from the explicit `H_{L1}` trigger theorem, the candidate active orbit, and a phase-`1` source-residue invariant; then `B`-region invariance, the global `Theta = q+s+v+layer` scheduler, and the boundary reset laws follow. `067` then sharpens the remaining frontier: the canonical constructive gauge `beta` is the same machine as the theorem-side phase in another gauge, and on the lifted active corridor that clock already exists as `beta = -Theta`. So the current problem is best read as: **the theorem package is close to closed, and the honest remaining frontier is whether that canonical lifted clock descends to the intended local/admissible class, or whether exact-clock rigidity shows that any exact local realization must already carry that same `m`-scale clock.**
+**Current frontier:** after the `055–062` proof compression, the `063–067` clock-route sharpening, the `068` theorem packaging pass, the `069–070` exact-reduction cleanup, and the `071` marked-chain identification, the strongest theorem-side D5 draft is no longer the main open branch. `062` derives the universal first-exit targets directly from the explicit `H_{L1}` trigger theorem, the candidate active orbit, and a phase-`1` source-residue invariant; then `B`-region invariance, the global `Theta = q+s+v+layer` scheduler, and the boundary reset laws follow. `071` sharpens the remaining frontier further: **on each fixed regular slice, the first exact object is already a marked length-`m` chain and the intended class already sees the full affine chain coordinate there. The real remaining issue is the exact bridge across chains: can those per-chain exact quotients be normalized into one global exact quotient on which the canonical clock descends, or is the carry essentially asymmetric across chains?**
 
 This README is the current top-level map. It replaces the older Session-20-only
 snapshot and is organized around the actual D5 branch progression through the
@@ -101,12 +101,11 @@ So the mathematical problem is now very narrow. The branch is no longer asking
 for a new witness or a broader search over tiny controllers. It is asking for
 three tightly linked pieces:
 
-- a clean final writeup / verification of the strengthened `062` theorem
+- a clean final writeup / verification of the strengthened `062/068` theorem
   package,
-- a descent / exposure theorem for the canonical cyclic controller behind the
-  phase-corner machine,
-- or a rigidity theorem showing that any exact local realization must already
-  carry that same canonical clock.
+- an exact reduction theorem isolating the marked chain/cycle and the intended
+  quotient on it,
+- a realization theorem showing the canonical clock descends on that quotient.
 
 For context, this is exactly the point where `d=5` now differs from the lower
 dimensions:
@@ -161,10 +160,12 @@ So the proof is currently split into:
 
 - theorem package:
   package `044–062` as the checked normal-form / phase-machine chain behind
-  the D5 mechanism;
-- clock route:
-  treat the canonical `beta` clock as the remaining object, with descent on
-  one side and rigidity on the other;
+  the D5 mechanism, with `068` recording that this side now looks near-closed
+  in shape;
+- exact reduction / realization:
+  treat the remaining object as the canonical `beta` clock on the exact marked
+  chain/cycle, with reduction to that object first and clock descent on the
+  quotient second;
 - compute support:
   validate the exact reduction object and the exact reduction data, not broad
   controller search.
@@ -657,6 +658,19 @@ Use these together:
 - [`RoundY/theorem/d5_067_concentrated_handoff.md`](./theorem/d5_067_concentrated_handoff.md)
   for the current canonical handoff: theorem package, clock descent/rigidity,
   and tightly scoped compute support
+- [`RoundY/theorem/d5_068_theorem_package_organized.md`](./theorem/d5_068_theorem_package_organized.md)
+  for the theorem-side freeze: what is already near-stable, what remains
+  imported, and why the live frontier has shifted away from theorem discovery
+- [`RoundY/theorem/d5_069_concentrated_handoff.md`](./theorem/d5_069_concentrated_handoff.md)
+  for the current canonical handoff: theorem package near-stable, exact
+  reduction first, realization second
+- [`RoundY/theorem/d5_070_minimal_handoff_for_069_readers.md`](./theorem/d5_070_minimal_handoff_for_069_readers.md)
+  for the chain-first clarification and corner-time descent formulation
+- [`RoundY/theorem/d5_071_unified_bridge_handoff.md`](./theorem/d5_071_unified_bridge_handoff.md)
+  for the current concentrated statement of the live D5 bottleneck: the exact
+  bridge across chains
+- [`RoundY/theorem/d5_071_four_researcher_questions.md`](./theorem/d5_071_four_researcher_questions.md)
+  for the current split into four distinct collaborator questions
 - [`RoundY/theorem/d5_first_exit_target_proof_062.md`](./theorem/d5_first_exit_target_proof_062.md)
   for the strengthened `062` draft deriving the universal first-exit targets
   directly from the explicit `H_{L1}` trigger theorem
