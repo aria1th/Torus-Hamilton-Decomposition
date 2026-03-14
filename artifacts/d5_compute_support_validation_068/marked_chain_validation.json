@@ -1,0 +1,4588 @@
+{
+  "13": {
+    "regular_source_count": 11,
+    "expected_chain_w_values": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "all_regular_sources_ok": true,
+    "all_regular_splices_ok": true,
+    "interpretation": "fixed-(source_u,w) regular carry_jump rows form a marked length-m q-chain; quotienting successive w-slices is the extra step needed to view a cycle",
+    "per_source": {
+      "1": {
+        "w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "expected_w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "chain_lengths": [
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13
+        ],
+        "all_w_slices_marked_q_chains": true,
+        "endpoint_splice_to_next_w_slice": true,
+        "per_w": {
+          "2": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "3": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "4": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "5": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "6": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "7": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "8": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "9": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "10": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "11": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          }
+        }
+      },
+      "2": {
+        "w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "expected_w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "chain_lengths": [
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13
+        ],
+        "all_w_slices_marked_q_chains": true,
+        "endpoint_splice_to_next_w_slice": true,
+        "per_w": {
+          "2": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "3": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "4": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "5": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "6": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "7": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "8": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "9": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "10": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "11": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          }
+        }
+      },
+      "4": {
+        "w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "expected_w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "chain_lengths": [
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13
+        ],
+        "all_w_slices_marked_q_chains": true,
+        "endpoint_splice_to_next_w_slice": true,
+        "per_w": {
+          "2": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "3": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "4": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "5": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "6": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "7": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "8": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "9": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "10": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "11": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          }
+        }
+      },
+      "5": {
+        "w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "expected_w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "chain_lengths": [
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13
+        ],
+        "all_w_slices_marked_q_chains": true,
+        "endpoint_splice_to_next_w_slice": true,
+        "per_w": {
+          "2": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "3": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "4": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "5": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "6": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "7": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "8": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "9": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "10": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "11": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          }
+        }
+      },
+      "6": {
+        "w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "expected_w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "chain_lengths": [
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13
+        ],
+        "all_w_slices_marked_q_chains": true,
+        "endpoint_splice_to_next_w_slice": true,
+        "per_w": {
+          "2": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "3": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "4": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "5": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "6": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "7": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "8": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "9": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "10": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "11": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          }
+        }
+      },
+      "7": {
+        "w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "expected_w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "chain_lengths": [
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13
+        ],
+        "all_w_slices_marked_q_chains": true,
+        "endpoint_splice_to_next_w_slice": true,
+        "per_w": {
+          "2": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "3": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "4": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "5": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "6": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "7": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "8": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "9": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "10": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "11": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          }
+        }
+      },
+      "8": {
+        "w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "expected_w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "chain_lengths": [
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13
+        ],
+        "all_w_slices_marked_q_chains": true,
+        "endpoint_splice_to_next_w_slice": true,
+        "per_w": {
+          "2": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "3": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "4": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "5": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "6": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "7": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "8": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "9": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "10": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "11": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          }
+        }
+      },
+      "9": {
+        "w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "expected_w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "chain_lengths": [
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13
+        ],
+        "all_w_slices_marked_q_chains": true,
+        "endpoint_splice_to_next_w_slice": true,
+        "per_w": {
+          "2": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "3": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "4": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "5": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "6": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "7": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "8": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "9": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "10": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "11": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          }
+        }
+      },
+      "10": {
+        "w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "expected_w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "chain_lengths": [
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13
+        ],
+        "all_w_slices_marked_q_chains": true,
+        "endpoint_splice_to_next_w_slice": true,
+        "per_w": {
+          "2": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "3": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "4": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "5": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "6": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "7": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "8": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "9": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "10": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "11": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          }
+        }
+      },
+      "11": {
+        "w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "expected_w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "chain_lengths": [
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13
+        ],
+        "all_w_slices_marked_q_chains": true,
+        "endpoint_splice_to_next_w_slice": true,
+        "per_w": {
+          "2": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "3": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "4": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "5": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "6": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "7": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "8": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "9": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "10": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "11": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          }
+        }
+      },
+      "12": {
+        "w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "expected_w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "chain_lengths": [
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13
+        ],
+        "all_w_slices_marked_q_chains": true,
+        "endpoint_splice_to_next_w_slice": true,
+        "per_w": {
+          "2": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "3": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "4": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "5": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "6": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "7": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "8": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "9": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "10": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "11": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          }
+        }
+      }
+    }
+  },
+  "15": {
+    "regular_source_count": 13,
+    "expected_chain_w_values": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "all_regular_sources_ok": true,
+    "all_regular_splices_ok": true,
+    "interpretation": "fixed-(source_u,w) regular carry_jump rows form a marked length-m q-chain; quotienting successive w-slices is the extra step needed to view a cycle",
+    "per_source": {
+      "1": {
+        "w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expected_w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "chain_lengths": [
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15
+        ],
+        "all_w_slices_marked_q_chains": true,
+        "endpoint_splice_to_next_w_slice": true,
+        "per_w": {
+          "2": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "3": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "4": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "5": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "6": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "7": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "8": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "9": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "10": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "11": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "12": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "13": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          }
+        }
+      },
+      "2": {
+        "w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expected_w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "chain_lengths": [
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15
+        ],
+        "all_w_slices_marked_q_chains": true,
+        "endpoint_splice_to_next_w_slice": true,
+        "per_w": {
+          "2": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "3": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "4": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "5": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "6": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "7": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "8": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "9": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "10": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "11": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "12": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "13": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          }
+        }
+      },
+      "4": {
+        "w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expected_w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "chain_lengths": [
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15
+        ],
+        "all_w_slices_marked_q_chains": true,
+        "endpoint_splice_to_next_w_slice": true,
+        "per_w": {
+          "2": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "3": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "4": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "5": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "6": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "7": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "8": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "9": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "10": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "11": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "12": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "13": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          }
+        }
+      },
+      "5": {
+        "w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expected_w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "chain_lengths": [
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15
+        ],
+        "all_w_slices_marked_q_chains": true,
+        "endpoint_splice_to_next_w_slice": true,
+        "per_w": {
+          "2": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "3": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "4": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "5": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "6": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "7": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "8": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "9": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "10": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "11": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "12": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "13": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          }
+        }
+      },
+      "6": {
+        "w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expected_w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "chain_lengths": [
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15
+        ],
+        "all_w_slices_marked_q_chains": true,
+        "endpoint_splice_to_next_w_slice": true,
+        "per_w": {
+          "2": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "3": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "4": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "5": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "6": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "7": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "8": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "9": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "10": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "11": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "12": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "13": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          }
+        }
+      },
+      "7": {
+        "w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expected_w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "chain_lengths": [
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15
+        ],
+        "all_w_slices_marked_q_chains": true,
+        "endpoint_splice_to_next_w_slice": true,
+        "per_w": {
+          "2": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "3": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "4": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "5": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "6": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "7": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "8": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "9": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "10": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "11": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "12": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "13": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          }
+        }
+      },
+      "8": {
+        "w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expected_w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "chain_lengths": [
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15
+        ],
+        "all_w_slices_marked_q_chains": true,
+        "endpoint_splice_to_next_w_slice": true,
+        "per_w": {
+          "2": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "3": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "4": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "5": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "6": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "7": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "8": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "9": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "10": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "11": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "12": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "13": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          }
+        }
+      },
+      "9": {
+        "w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expected_w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "chain_lengths": [
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15
+        ],
+        "all_w_slices_marked_q_chains": true,
+        "endpoint_splice_to_next_w_slice": true,
+        "per_w": {
+          "2": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "3": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "4": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "5": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "6": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "7": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "8": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "9": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "10": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "11": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "12": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "13": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          }
+        }
+      },
+      "10": {
+        "w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expected_w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "chain_lengths": [
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15
+        ],
+        "all_w_slices_marked_q_chains": true,
+        "endpoint_splice_to_next_w_slice": true,
+        "per_w": {
+          "2": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "3": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "4": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "5": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "6": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "7": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "8": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "9": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "10": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "11": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "12": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "13": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          }
+        }
+      },
+      "11": {
+        "w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expected_w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "chain_lengths": [
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15
+        ],
+        "all_w_slices_marked_q_chains": true,
+        "endpoint_splice_to_next_w_slice": true,
+        "per_w": {
+          "2": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "3": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "4": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "5": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "6": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "7": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "8": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "9": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "10": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "11": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "12": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "13": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          }
+        }
+      },
+      "12": {
+        "w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expected_w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "chain_lengths": [
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15
+        ],
+        "all_w_slices_marked_q_chains": true,
+        "endpoint_splice_to_next_w_slice": true,
+        "per_w": {
+          "2": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "3": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "4": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "5": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "6": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "7": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "8": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "9": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "10": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "11": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "12": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "13": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          }
+        }
+      },
+      "13": {
+        "w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expected_w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "chain_lengths": [
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15
+        ],
+        "all_w_slices_marked_q_chains": true,
+        "endpoint_splice_to_next_w_slice": true,
+        "per_w": {
+          "2": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "3": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "4": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "5": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "6": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "7": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "8": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "9": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "10": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "11": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "12": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "13": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          }
+        }
+      },
+      "14": {
+        "w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expected_w_values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "chain_lengths": [
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15
+        ],
+        "all_w_slices_marked_q_chains": true,
+        "endpoint_splice_to_next_w_slice": true,
+        "per_w": {
+          "2": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "3": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "4": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "5": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "6": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "7": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "8": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "9": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "10": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "11": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "12": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          },
+          "13": {
+            "chain_ok": true,
+            "q_values": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              "..."
+            ],
+            "carry_pattern_ok": true
+          }
+        }
+      }
+    }
+  }
+}

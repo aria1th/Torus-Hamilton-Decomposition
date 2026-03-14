@@ -1,0 +1,9 @@
+{
+  "31": {
+    "checked_sources": 30,
+    "all_branch_checks_exact": true,
+    "regular_targets_ok": true,
+    "exceptional_targets_ok": true,
+    "first_failure": null
+  }
+}

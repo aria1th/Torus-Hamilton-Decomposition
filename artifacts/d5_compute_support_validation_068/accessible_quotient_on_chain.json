@@ -1,0 +1,118 @@
+{
+  "13": {
+    "next_dn": {
+      "all_chain_sizes": [
+        2
+      ],
+      "carry_exact_on_every_chain": true,
+      "deterministic_successor_on_every_chain": false,
+      "first_failure": {
+        "chain": [
+          1,
+          2
+        ],
+        "carry_exact": true,
+        "deterministic_successor": false,
+        "quotient_size": 2
+      }
+    },
+    "dn_plus_next_dn": {
+      "all_chain_sizes": [
+        2
+      ],
+      "carry_exact_on_every_chain": true,
+      "deterministic_successor_on_every_chain": false,
+      "first_failure": {
+        "chain": [
+          1,
+          2
+        ],
+        "carry_exact": true,
+        "deterministic_successor": false,
+        "quotient_size": 2
+      }
+    },
+    "B": {
+      "all_chain_sizes": [
+        13
+      ],
+      "carry_exact_on_every_chain": true,
+      "deterministic_successor_on_every_chain": true,
+      "first_failure": null
+    },
+    "B_next": {
+      "all_chain_sizes": [
+        13
+      ],
+      "carry_exact_on_every_chain": true,
+      "deterministic_successor_on_every_chain": true,
+      "first_failure": null
+    },
+    "B_next2": {
+      "all_chain_sizes": [
+        13
+      ],
+      "carry_exact_on_every_chain": true,
+      "deterministic_successor_on_every_chain": true,
+      "first_failure": null
+    }
+  },
+  "15": {
+    "next_dn": {
+      "all_chain_sizes": [
+        2
+      ],
+      "carry_exact_on_every_chain": true,
+      "deterministic_successor_on_every_chain": false,
+      "first_failure": {
+        "chain": [
+          1,
+          2
+        ],
+        "carry_exact": true,
+        "deterministic_successor": false,
+        "quotient_size": 2
+      }
+    },
+    "dn_plus_next_dn": {
+      "all_chain_sizes": [
+        2
+      ],
+      "carry_exact_on_every_chain": true,
+      "deterministic_successor_on_every_chain": false,
+      "first_failure": {
+        "chain": [
+          1,
+          2
+        ],
+        "carry_exact": true,
+        "deterministic_successor": false,
+        "quotient_size": 2
+      }
+    },
+    "B": {
+      "all_chain_sizes": [
+        15
+      ],
+      "carry_exact_on_every_chain": true,
+      "deterministic_successor_on_every_chain": true,
+      "first_failure": null
+    },
+    "B_next": {
+      "all_chain_sizes": [
+        15
+      ],
+      "carry_exact_on_every_chain": true,
+      "deterministic_successor_on_every_chain": true,
+      "first_failure": null
+    },
+    "B_next2": {
+      "all_chain_sizes": [
+        15
+      ],
+      "carry_exact_on_every_chain": true,
+      "deterministic_successor_on_every_chain": true,
+      "first_failure": null
+    }
+  }
+}
