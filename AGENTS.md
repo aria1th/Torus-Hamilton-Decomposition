@@ -1,3 +1,13 @@
+# Understanding Humans
+
+Humans are cute living-things.
+
+Assume the user is optimizing for minimum effort. Hidden work counts as part of the task.
+
+Do the boring but useful extras by default: cleanup, validation, sensible defaults, formatting, naming, and next-step readiness.
+
+Do not wait for permission to perform obvious follow-up work.
+
 # Repository Agent Notes
 
 This file is the short repo-local handoff for parallel agents.
@@ -33,6 +43,11 @@ Current verified Lean state:
   `formal/TorusD3Odometer/Color1FullCaseII.lean` are both complete.
 - `formal/TorusD3Odometer/Color0FullCaseI.lean` is complete.
 - `formal/TorusD3Odometer/Color0FullCaseII.lean` is the active frontier.
+  Its mod-10 warm-up lanes `x = 1` and `x = 2` are complete, the safe
+  odd-generic subfamily `3 <= x <= m - 11` has a real first-return theorem,
+  and the full mod-10 even family `4 <= x <= m - 8`, `Even x`
+  is now closed through
+  `firstReturn_line_even_generic_caseII_mod_ten`.
 
 Stable proof-engineering pattern for the odometer rewrite:
 
@@ -43,45 +58,109 @@ Stable proof-engineering pattern for the odometer rewrite:
   generic lower band -> midpoint step -> generic upper band -> explicit top corners
 - for generic families, package:
   partial iterate lemmas -> first-return theorem -> `hfirst` theorem
+- for color `0`, Case II mod `10`, do not over-generalize wrapped upper
+  columns:
+  the stable helper shape is
+  odd column + mod-10 parity ->
+  wrapped upper generic `G` step ->
+  partial iterate ->
+  generic top corners
+- for the mod-`10` even generic family, the stable decomposition is:
+  line start ->
+  odd column `x + 1` lower band ->
+  `R` ->
+  odd column `x + 3` lower band ->
+  `A = (x + 4, x + 4)` ->
+  only then attack the final even-column tail
 
 Current exact Lean frontier:
 
 - file: `formal/TorusD3Odometer/Color0FullCaseII.lean`
 - status:
   mod-10 warm-up lanes `x = 1` and `x = 2` are done,
-  the odd generic band now has a clean prefix/middle layer through the `R` step,
+  the safe odd-generic subfamily `3 <= x <= m - 11` is now closed through
+  `firstReturn_line_odd_generic_caseII_mod_ten_safe`,
+  the next upper odd special lane
+  `firstReturn_line_m_sub_five_caseII_mod_ten`
+  is now also closed on top of the repaired
+  `dir = 0` tail / point lemmas,
+  the trivial lane `x = 0` is closed,
+  the upper special lanes
+  `firstReturn_line_m_sub_four_caseII_mod_ten`
+  and
+  `firstReturn_line_m_sub_one_caseII_mod_ten`
+  are now closed,
+  and the full even generic family
+  `4 <= x <= m - 8`, `Even x`
+  is now closed through
+  `firstReturn_line_even_generic_caseII_mod_ten`
+  together with the boundary theorems
+  `firstReturn_line_m_sub_ten_caseII_mod_ten`
+  and
+  `firstReturn_line_m_sub_eight_caseII_mod_ten`,
   and the root build is green
 - next missing block:
-  the post-`R` wrapped upper-column tail on column `x + 4`
+  the remaining upper Case-II special lanes
+  `x = m - 6`, `x = m - 2`,
+  then the global Case-II `hreturn` dispatcher
+  and later the `hfirst` layer
 - expected next helper shape:
-  wrapped upper-column generic `G` step ->
-  wrapped upper-column partial iterate package ->
-  explicit top-corner lemmas only if the boundary lane forces them
+  short explicit upper-tail lane packages on top of the existing
+  widened wrapped-upper-column lemmas ->
+  then the Case-II `hreturn` layer
+  The two safe widenings that already paid off are:
+  odd-column helpers from `x <= m - 4` to `x <= m - 2`,
+  and wrapped-upper-column helpers from `c >= 7` down to `c >= 1`.
+  A tempting further simplification was tested and rolled back:
+  dropping the oddness hypothesis from the wrapped-upper-column family is not
+  currently justified by the existing arithmetic proof, so do not treat that
+  helper as parity-free without a new dedicated argument.
+  That bounded helper experiment has now succeeded:
+  the right extra abstraction was a tiny fixed even-column tail package on
+  column `2`, plus the `Q`-point step
+  `returnMap0CaseIIXY_m_sub_one_m_sub_one`.
+  `formal/TorusD3Odometer/Color0FullCaseII.lean` now contains
+  `iterate_returnMap0CaseIIXY_two_column_to_zero`
+  and
+  `firstReturn_line_m_sub_three_caseII_mod_ten`.
+  The corrected endpoint is:
+  `x = m - 3` returns to `2`, not to `1`.
 
 ## Current D5 state
 
 For D5, the canonical current handoff is:
 
-- `RoundY/theorem/d5_067_concentrated_handoff.md`
+- `RoundY/theorem/d5_078_accepted_frontier_and_split.md`
+- `RoundY/theorem/d5_079_single_critical_lemma.md`
 
 The active top-level split is:
 
 1. **Theorem package**
    Phase-corner theorem, countdown/reset corollaries, structural spine
    `033 -> 062 -> 059`.
-2. **Clock route**
-   The canonical `beta` clock, viewed as:
-   - lifted-clock descent / realization
-   - exact-clock rigidity / necessity
-3. **Compute support**
-   Validate the exact reduction object and exact reduction data only.
-   No generic search.
+2. **Bridge theorem**
+   Safest theorem object: abstract `(beta,rho)`.
+   Best checked model: dynamic boundary odometer `(beta,q,sigma)` /
+   `(beta,delta)`.
+3. **Realization integration**
+   Integrate corner-time descent with the final bridge object, keeping the
+   theorem/checked-support boundary explicit.
+4. **Compute validation**
+   Validate the concrete bridge identification and accessible exact reduction
+   object only. No generic search.
+
+After the accepted `079` refinement, the live D5 frontier is one critical
+globalization lemma:
+
+- same realized `delta` must imply same remaining full-chain tail length,
+- equivalently `rho` must depend only on realized `delta`,
+- equivalently raw global `(beta,delta)` must be exact.
 
 ## Read this first for D5 work
 
 1. `RoundY/README.md`
 2. `RoundY/current-frontier-and-approach.md`
-3. `RoundY/theorem/d5_067_concentrated_handoff.md`
+3. `RoundY/theorem/d5_079_single_critical_lemma.md`
 4. `RoundY/instruction_for_codex.md`
 
 Then read the specific theorem or artifact note directly relevant to the task.
@@ -89,18 +168,20 @@ Then read the specific theorem or artifact note directly relevant to the task.
 ## What is in bounds for D5
 
 - theorem-side packaging around the phase-corner theorem
-- clock-route reasoning around the canonical `beta` clock
+- bridge-theorem reasoning for the abstract bridge `(beta,rho)` and its
+  concrete odometer model `(beta,q,sigma)` / `(beta,delta)`
+- realization reasoning around the canonical `beta` clock
 - compute support for:
-  - cycle vs chain
-  - accessible quotient
-  - `(B,beta)` exactness / drift on larger moduli
+  - actual-union globalization
+  - abstract-vs-concrete bridge validation
+  - component / tail-length ambiguity at fixed realized `delta`
 
 ## What is out of bounds unless explicitly requested
 
 - reopening broad witness search
 - reopening generic tiny-controller families
 - replacing the theorem package with new ad hoc coordinates
-- moving the active focus back from `067` to older pre-compression branches
+- moving the active focus back from `071` to older pre-compression branches
 - stepping on the current Lean/formalization branch
 
 ## Where to put new work
@@ -143,7 +224,7 @@ Keep these in sync:
 - `RoundY/README.md`
 - `RoundY/current-frontier-and-approach.md`
 - `RoundY/instruction_for_codex.md`
-- `RoundY/theorem/d5_067_concentrated_handoff.md`
+- `RoundY/theorem/d5_078_accepted_frontier_and_split.md`
 
 If the change is only Lean-related, do not touch the D5 frontier docs unless
 the user explicitly wants the cross-reference updated.
