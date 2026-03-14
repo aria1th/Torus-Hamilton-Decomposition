@@ -1,0 +1,311 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb,mathtools}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\Cay}{\operatorname{Cay}}
+\newcommand{\Cdir}{\vec C}
+\newcommand{\torus}[2]{D_{#1}(#2)}
+
+\title{A Cartesian-power lift for Hamilton decompositions of directed tori}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We isolate a general reduction behind composite-dimension constructions for directed tori.
+If a finite digraph $G$ admits a Hamilton decomposition and the directed torus
+$\vec C_{|V(G)|}^{\square b}$ also admits one, then the Cartesian power $G^{\square b}$ admits a
+Hamilton decomposition.
+Applied to
+\[
+\torus{d}{m}=\Cay\bigl((\mathbb Z/m\mathbb Z)^d,\{e_0,\dots,e_{d-1}\}\bigr),
+\]
+this yields the pointwise implication
+\[
+\torus{a}{m}\text{ and }\torus{b}{m^a}\text{ decomposable }\Longrightarrow \torus{ab}{m}\text{ decomposable},
+\]
+and therefore a multiplicative-closure reduction for any family of base dimensions already known uniformly in the modulus.
+The contribution of this note is thus theorem-level rather than base-case level: it packages a clean product argument that propagates solved dimensions to composite ones.
+\end{abstract}
+
+\section{Literature context and scope}
+Cartesian products of directed cycles have a substantial Hamiltonicity literature.
+Trotter and Erd\H{o}s characterized when $\vec C_{n_1}\square \vec C_{n_2}$ is Hamiltonian \cite{TrotterErdos1978}.
+Curran and Witte characterized Hamilton paths in $\vec C_{n_1}\square \vec C_{n_2}$ and showed that every Cartesian product of three or more nontrivial directed cycles has a Hamilton cycle \cite{CurranWitte1985}; see also the surveys \cite{CurranGallian1996,LanelPallageRatnayakeThevashaWelihinda2019}.
+More recently, Bogdanowicz proved a common-factor criterion for decompositions of Cartesian products of directed cycles into equal-length directed cycles \cite{Bogdanowicz2017}, and identified Hamilton cycles and, in some arithmetic cases, two arc-disjoint Hamilton cycles in products of directed cycles \cite{Bogdanowicz2020}.
+Darijani, Miraftab, and Morris proved that products of two directed cycles, and more generally of any four or more directed cycles, admit two arc-disjoint Hamiltonian paths \cite{DarijaniMiraftabMorris2025}.
+
+In the undirected setting, Hamilton decompositions of Cartesian products have long been studied; classical product-decomposition results include Foregger \cite{Foregger1978}, Aubert--Schneider \cite{AubertSchneider1982}, and Stong \cite{Stong1991}.
+Within the equal-side directed-torus program relevant here, companion manuscript-level work includes a complete $d=3$ paper for all $m\ge 3$ and a finished $d=4$ proof program recorded in Park's repository bundle \cite{ParkD3,ParkRepo2026}.
+Against this background, the present note is narrower but different.
+It does not attempt to settle new base dimensions, and it does not address arbitrary mixed products $\vec C_{n_1}\square\cdots\square\vec C_{n_r}$.
+Instead, it isolates a Cartesian-power lift tailored to equal-side directed tori: once dimensions $a$ and $b$ are available uniformly in the modulus, the theorem here propagates them to the composite dimension $ab$.
+
+\section{General Cartesian-power lift}
+
+Let $G=(V,E)$ be a finite digraph on $n$ vertices.
+Recall that a Hamilton decomposition of $G$ is a partition of $E$ into directed Hamilton cycles.
+Write $G^{\square b}$ for the $b$-fold Cartesian power of $G$.
+
+\begin{theorem}[Cartesian-power lift]\label{thm:product}
+Let $G$ be a finite digraph on $n$ vertices.
+Assume:
+\begin{enumerate}
+    \item $G$ admits a Hamilton decomposition into $a$ directed Hamilton cycles;
+    \item $\vec C_n^{\square b}$ admits a Hamilton decomposition into $b$ directed Hamilton cycles.
+\end{enumerate}
+Then $G^{\square b}$ admits a Hamilton decomposition into $ab$ directed Hamilton cycles.
+\end{theorem}
+
+\begin{proof}
+Choose a Hamilton decomposition
+\[
+E(G)=H_1\sqcup H_2\sqcup\cdots\sqcup H_a,
+\]
+where each $H_i$ is a directed Hamilton cycle on $V$.
+
+Fix $i\in\{1,\dots,a\}$.
+In $G^{\square b}$, consider the spanning subdigraph
+\[
+K_i:=H_i^{\square b}.
+\]
+Since each $H_i$ is a directed $n$-cycle, we have a canonical isomorphism
+\[
+K_i\cong \vec C_n^{\square b}.
+\]
+By assumption, $\vec C_n^{\square b}$ has a Hamilton decomposition into $b$ directed Hamilton cycles, so $K_i$ also has one.
+Write
+\[
+E(K_i)=A_i^{(1)}\sqcup A_i^{(2)}\sqcup\cdots\sqcup A_i^{(b)},
+\]
+where each $A_i^{(r)}$ is a directed Hamilton cycle on $V^b$.
+
+Now every arc of $G^{\square b}$ belongs to exactly one of the subdigraphs $K_i$:
+an arc changes exactly one coordinate, and in that coordinate it uses exactly one arc of $G$, which lies in exactly one Hamilton factor $H_i$.
+Hence
+\[
+E(G^{\square b})=E(K_1)\sqcup E(K_2)\sqcup\cdots\sqcup E(K_a).
+\]
+Substituting the decompositions of the $K_i$, we obtain
+\[
+E(G^{\square b})=\bigsqcup_{i=1}^a\bigsqcup_{r=1}^b A_i^{(r)},
+\]
+a partition into $ab$ directed Hamilton cycles.
+So $G^{\square b}$ admits a Hamilton decomposition.
+\end{proof}
+
+\begin{corollary}[Self-square closure]\label{cor:selfsquare}
+If a finite digraph $G$ admits a Hamilton decomposition, then $G\square G$ admits a Hamilton decomposition.
+\end{corollary}
+
+\begin{proof}
+Take $b=2$ in Theorem~\ref{thm:product}.
+Since $\vec C_n\square\vec C_n$ is a 2-regular directed torus, it suffices to know that it decomposes into two directed Hamilton cycles; an explicit proof appears in Lemma~\ref{lem:square} below.
+\end{proof}
+
+\section{Application to directed tori}
+
+For integers $d\ge 1$ and $m\ge 2$, define the directed $d$-torus
+\[
+\torus{d}{m}=\Cay\bigl((\mathbb Z/m\mathbb Z)^d,\{e_0,\dots,e_{d-1}\}\bigr).
+\]
+Equivalently, this is the Cartesian power $\vec C_m^{\square d}$.
+
+\begin{theorem}[Pointwise composite expansion]\label{thm:abm}
+Let $a,b\ge 1$ and $m\ge 2$.
+If both $\torus{a}{m}$ and $\torus{b}{m^a}$ admit Hamilton decompositions, then $\torus{ab}{m}$ admits a Hamilton decomposition.
+\end{theorem}
+
+\begin{proof}
+Observe that
+\[
+\torus{ab}{m}=\bigl(\vec C_m^{\square a}\bigr)^{\square b}=\bigl(\torus{a}{m}\bigr)^{\square b}.
+\]
+Apply Theorem~\ref{thm:product} with $G=\torus{a}{m}$.
+The digraph $G$ has $m^a$ vertices, so the auxiliary input required by Theorem~\ref{thm:product} is exactly
+\[
+\vec C_{m^a}^{\square b}=\torus{b}{m^a}.
+\]
+By hypothesis both inputs admit Hamilton decompositions, hence so does $G^{\square b}=\torus{ab}{m}$.
+\end{proof}
+
+\begin{remark}
+Theorem~\ref{thm:abm} is deliberately pointwise in the modulus: to pass from dimensions $a$ and $b$ to the composite dimension $ab$, the second input is $\torus{b}{m^a}$ rather than $\torus{b}{m}$.
+The uniform multiplicative-closure corollary below is obtained only after quantifying this pointwise implication over all moduli.
+\end{remark}
+
+\begin{corollary}[Uniform multiplicative closure]\label{cor:multiplicative}
+Suppose $A\subseteq \{1,2,3,\dots\}$ has the property that for every $d\in A$ and every integer $m\ge 3$, the directed torus $\torus{d}{m}$ admits a Hamilton decomposition.
+Then the same is true for every dimension in the multiplicative semigroup generated by $A$.
+\end{corollary}
+
+\begin{proof}
+It suffices to prove closure under multiplication.
+Take $a,b\in A$ and fix $m\ge 3$.
+By hypothesis, $\torus{a}{m}$ admits a Hamilton decomposition, and so does
+\[
+\torus{b}{m^a}
+\]
+because $m^a\ge 3$.
+Therefore Theorem~\ref{thm:abm} implies that $\torus{ab}{m}$ admits a Hamilton decomposition.
+\end{proof}
+
+\section{The square case d=2}
+
+\begin{lemma}[Two-cycle decomposition of the square torus]\label{lem:square}
+For every integer $n\ge 2$, the directed torus
+\[
+\vec C_n\square \vec C_n
+\]
+decomposes into two directed Hamilton cycles.
+\end{lemma}
+
+\begin{proof}
+Label vertices by pairs $(i,j)\in \mathbb Z_n^2$.
+From each vertex there are two outgoing arcs:
+\[(i,j)\to(i+1,j),\qquad (i,j)\to(i,j+1).
+\]
+Define two 1-factors $F_0,F_1$ by
+\[
+F_0(i,j)=
+\begin{cases}
+(i+1,j), & i+j\not\equiv n-1 \pmod n,\\
+(i,j+1), & i+j\equiv n-1 \pmod n,
+\end{cases}
+\qquad
+F_1(i,j)=
+\begin{cases}
+(i,j+1), & i+j\not\equiv n-1 \pmod n,\\
+(i+1,j), & i+j\equiv n-1 \pmod n.
+\end{cases}
+\]
+At each vertex, the two outgoing arcs are exactly partitioned between $F_0$ and $F_1$.
+So it remains to show that each $F_t$ is a single directed Hamilton cycle.
+
+For $F_0$, consider the bijection
+\[
+\Psi(i,j)=(i+j,\,j)
+\]
+with inverse $\Psi^{-1}(s,t)=(s-t,\,t)$.
+A direct substitution shows
+\[
+\Psi F_0 \Psi^{-1}(s,t)=
+\begin{cases}
+(s+1,t), & s\not\equiv n-1 \pmod n,\\
+(0,t+1), & s\equiv n-1 \pmod n.
+\end{cases}
+\]
+Thus $F_0$ is conjugate to the standard odometer on $\mathbb Z_n^2$.
+Starting from $(0,0)$, that odometer runs through
+\[
+(0,0), (1,0), \dots, (n-1,0), (0,1), \dots, (n-1,n-1)
+\]
+as a single orbit of length $n^2$.
+Hence $F_0$ is a directed Hamilton cycle.
+
+Let $\sigma(i,j)=(j,i)$.
+Then $F_1=\sigma\circ F_0\circ\sigma^{-1}$, so $F_1$ is conjugate to $F_0$ and is also a directed Hamilton cycle.
+Therefore the two 1-factors partition the arc set into two directed Hamilton cycles.
+\end{proof}
+
+\begin{remark}
+The Hamiltonicity of $\vec C_{n_1}\square\vec C_{n_2}$ is classical \cite{TrotterErdos1978}.
+We record the explicit equal-side factorization above because the Cartesian-power lift requires a full Hamilton decomposition of the auxiliary square torus, not merely a single Hamilton cycle.
+\end{remark}
+
+\section{Consequences for composite dimensions}
+
+\begin{corollary}[Low-dimensional base cases and propagated dimensions]\label{cor:examples}
+The preceding results have the following consequences.
+\begin{enumerate}
+    \item Since $\torus{2}{m}$ is solved for every $m\ge 2$ by Lemma~\ref{lem:square}, any dimension already known uniformly in the modulus automatically yields its doubled dimension.
+    \item Companion work supplies uniform base cases in dimensions $3$ and $4$ for every $m\ge 3$ \cite{ParkD3,ParkRepo2026}.
+    Therefore the multiplicative semigroup generated by $\{2,3,4\}$, equivalently by $\{2,3\}$, is solved for every $m\ge 3$.
+    In particular, every dimension of the form $2^\alpha 3^\beta$ with $\alpha+\beta\ge 1$ admits a Hamilton decomposition for all $m\ge 3$.
+    \item More generally, once uniform base cases are available for any set of prime dimensions, every composite dimension in the semigroup they generate follows formally from Corollary~\ref{cor:multiplicative}.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+Item~(1) is immediate from Corollary~\ref{cor:selfsquare} or, equivalently, from Theorem~\ref{thm:abm} with $a=d$, $b=2$.
+Item~(2) is Corollary~\ref{cor:multiplicative} applied to $A=\{2,3,4\}$.
+Item~(3) is exactly the content of Corollary~\ref{cor:multiplicative}.
+\end{proof}
+
+\begin{thebibliography}{99}
+
+\bibitem{AubertSchneider1982}
+Jacques Aubert and Bernadette Schneider,
+\emph{Decomposition de la somme cartesienne d'un cycle et de l'union de deux cycles hamiltoniens en cycles hamiltoniens},
+Discrete Mathematics \textbf{38} (1982), 7--16.
+
+\bibitem{Bogdanowicz2017}
+Zbigniew R. Bogdanowicz,
+\emph{On decomposition of the Cartesian product of directed cycles into cycles of equal lengths},
+Discrete Applied Mathematics \textbf{229} (2017), 148--150.
+
+\bibitem{Bogdanowicz2020}
+Zbigniew R. Bogdanowicz,
+\emph{Identifying Hamilton cycles in the Cartesian product of directed cycles},
+AKCE International Journal of Graphs and Combinatorics \textbf{17} (2020), 534--538.
+
+\bibitem{CurranGallian1996}
+Stephen J. Curran and Joseph A. Gallian,
+\emph{Hamiltonian cycles and paths in Cayley graphs and digraphs---a survey},
+Discrete Mathematics \textbf{156} (1996), 1--18.
+
+\bibitem{CurranWitte1985}
+Stephen J. Curran and David Witte,
+\emph{Hamilton Paths in Cartesian Products of Directed Cycles},
+Annals of Discrete Mathematics \textbf{27} (1985), 35--74.
+
+\bibitem{DarijaniMiraftabMorris2025}
+Iren Darijani, Babak Miraftab, and Dave Witte Morris,
+\emph{Arc-disjoint hamiltonian paths in Cartesian products of directed cycles},
+Ars Mathematica Contemporanea \textbf{25} (2025), Article P2.10.
+
+\bibitem{Foregger1978}
+Marsha F. Foregger,
+\emph{Hamiltonian decompositions of products of cycles},
+Discrete Mathematics \textbf{24} (1978), 251--260.
+
+\bibitem{LanelPallageRatnayakeThevashaWelihinda2019}
+G. H. J. Lanel, H. K. Pallage, J. K. Ratnayake, S. Thevasha, and B. A. K. Welihinda,
+\emph{A survey on Hamiltonicity in Cayley graphs and digraphs on different groups},
+Discrete Mathematics, Algorithms and Applications \textbf{11} (2019), 1930002.
+
+\bibitem{ParkD3}
+Sanghyun Park,
+\emph{Hamilton decompositions of the directed 3-torus $D(m)$: explicit constructions for all $m \ge 3$},
+manuscript, 2026.
+Available through the repository bundle at \url{https://github.com/aria1th/Torus-Hamilton-Decomposition}.
+
+\bibitem{ParkRepo2026}
+Sanghyun Park,
+\emph{Hamilton decompositions of low-dimensional directed tori},
+GitHub repository, 2026.
+The repository README records a solved $d=3$ manuscript, a finished $d=4$ proof program, and the composite-dimension reduction note discussed here.
+\url{https://github.com/aria1th/Torus-Hamilton-Decomposition}.
+
+\bibitem{Stong1991}
+Richard Stong,
+\emph{Hamilton decompositions of cartesian products of graphs},
+Discrete Mathematics \textbf{90} (1991), 169--190.
+
+\bibitem{TrotterErdos1978}
+William T. Trotter, Jr. and Paul Erd\H{o}s,
+\emph{When the Cartesian product of directed cycles is Hamiltonian},
+Journal of Graph Theory \textbf{2} (1978), 137--142.
+
+\end{thebibliography}
+
+\end{document}
