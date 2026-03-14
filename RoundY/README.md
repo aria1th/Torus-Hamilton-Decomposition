@@ -5,7 +5,7 @@ Hamilton decomposition of the directed `5`-torus
 `D_5(m) = Cay((Z_m)^5, {e_0, e_1, e_2, e_3, e_4})`.
 
 **Status:** `[O]` open.  
-**Current frontier:** after the `075` bridge / realization / review round, the clean theorem-level bridge is now best stated as the abstract right-congruence object `(beta,rho)`, while the dynamic boundary odometer `(beta,q,sigma)` / `(beta,delta)` is the strongest checked coordinate model for it. So the live D5 target is now narrower still: **prove or disprove the concrete bridge identification `rho ≅ (q,sigma) ≅ delta`, prove the splice law and current-event readout uniformly, and settle whether the accessible image is the full `m^2` odometer or must first be stated abstractly.**
+**Current frontier:** after accepting the `079` bridge / review round, the safe global bridge is `(beta,rho)`, the strongest concrete model is componentwise `(beta,q,sigma)` / `(beta,delta)`, and the entire odd-`m` D5 globalization question has reduced to one critical lemma: **does the same realized `delta` always imply the same remaining full-chain tail length?** Equivalently, is `rho` a function of `delta`, so that raw global `(beta,delta)` works without a component tag?
 
 This README is the current top-level map. It replaces the older Session-20-only
 snapshot and is organized around the actual D5 branch progression through the
@@ -100,13 +100,13 @@ For a reader who does not have the artifacts open, the current D5 picture is:
 
 So the mathematical problem is now very narrow. The branch is no longer asking
 for a new witness or a broader search over tiny controllers. It is asking for
-three tightly linked pieces:
+one decisive globalization upgrade:
 
 - keep the structural theorem package `044–062` / `068` clean and explicit;
 - identify the final bridge safely as abstract `(beta,rho)` versus concrete
   `(beta,q,sigma)` / `(beta,delta)`;
-- settle whether raw global `(beta,delta)` works on the full accessible union,
-  or only componentwise.
+- settle the single critical lemma that upgrades componentwise concrete
+  `(beta,delta)` to raw global `(beta,delta)`.
 
 For context, this is exactly the point where `d=5` now differs from the lower
 dimensions:
@@ -186,12 +186,13 @@ The recommended next work is:
 In short:
 
 - bridge question:
-  is the abstract bridge `(beta,rho)` globally identified with raw
-  `(beta,delta)`?
+  does fixed realized `delta` determine tail length, hence `rho`?
 - structural question:
-  what are the true accessible splice-connected components?
+  can the actual accessible union create different right endpoints at the same
+  realized `delta`?
 - compute question:
-  do repeated realized `delta` values ever carry different future words?
+  do repeated realized `(beta,delta)` states on larger actual unions glue to
+  one forward chain?
 
 ## Barrier evolution
 
@@ -217,7 +218,15 @@ The real story of RoundY is the bottleneck moving inward:
 18. `first-exit targets derived from the explicit H_L1 trigger theorem`
 19. `abstract bridge (beta,rho) isolated as the safe theorem object`
 20. `componentwise concrete bridge (beta,delta) accepted as the strongest checked model`
-21. `current frontier: does raw global (beta,delta) work without a component tag?`
+21. `componentwise concrete bridge (beta,delta) isolated`
+22. `exceptional splice reduced to the common 4 -> 1 interface`
+23. `current frontier: same realized delta must imply same tail length`
+
+## Current canonical note
+
+For the post-`079` state, the shortest correct frontier note is:
+
+- [theorem/d5_079_single_critical_lemma.md](./theorem/d5_079_single_critical_lemma.md)
 
 In short:
 
@@ -671,6 +680,15 @@ Use these together:
 - [`RoundY/theorem/d5_077_live_questions_and_tracks.md`](./theorem/d5_077_live_questions_and_tracks.md)
   for the shortest current split of the globalization frontier into:
   global component structure, the `rho(delta)` criterion, and targeted compute
+- [`RoundY/theorem/d5_078_accepted_frontier_and_split.md`](./theorem/d5_078_accepted_frontier_and_split.md)
+  for the accepted post-`077` frontier: what is achieved, what remains open,
+  the three active jobs, and what each researcher should hand back
+- [`RoundY/theorem/d5_078_researcherA_request.md`](./theorem/d5_078_researcherA_request.md),
+  [`RoundY/theorem/d5_078_researcherB_request.md`](./theorem/d5_078_researcherB_request.md),
+  [`RoundY/theorem/d5_078_researcherC_request.md`](./theorem/d5_078_researcherC_request.md),
+  [`RoundY/theorem/d5_078_researcherD_optional_review_request.md`](./theorem/d5_078_researcherD_optional_review_request.md)
+  for the current per-researcher `078` split: component structure, globalization
+  criterion, actual-union compute, and optional review
 - [`RoundY/theorem/d5_075_threeway_handoff.md`](./theorem/d5_075_threeway_handoff.md)
   for the previous `075` split into bridge theorem, realization integration,
   and compute validation before the theorem/support cleanup

@@ -33,6 +33,15 @@ Use it together with:
 - [theorem/d5_070_minimal_handoff_for_069_readers.md](./theorem/d5_070_minimal_handoff_for_069_readers.md)
 - [theorem/d5_071_unified_bridge_handoff.md](./theorem/d5_071_unified_bridge_handoff.md)
 - [theorem/d5_071_four_researcher_questions.md](./theorem/d5_071_four_researcher_questions.md)
+- [theorem/d5_076_unified_handoff.md](./theorem/d5_076_unified_handoff.md)
+- [theorem/d5_077_globalization_handoff.md](./theorem/d5_077_globalization_handoff.md)
+- [theorem/d5_077_live_questions_and_tracks.md](./theorem/d5_077_live_questions_and_tracks.md)
+- [theorem/d5_078_accepted_frontier_and_split.md](./theorem/d5_078_accepted_frontier_and_split.md)
+- [theorem/d5_079_single_critical_lemma.md](./theorem/d5_079_single_critical_lemma.md)
+- [theorem/d5_078_researcherA_request.md](./theorem/d5_078_researcherA_request.md)
+- [theorem/d5_078_researcherB_request.md](./theorem/d5_078_researcherB_request.md)
+- [theorem/d5_078_researcherC_request.md](./theorem/d5_078_researcherC_request.md)
+- [theorem/d5_078_researcherD_optional_review_request.md](./theorem/d5_078_researcherD_optional_review_request.md)
 - [theorem/d5_074_researcher1_bridge_request.md](./theorem/d5_074_researcher1_bridge_request.md)
 - [theorem/d5_074_researcher2_symmetry_request.md](./theorem/d5_074_researcher2_symmetry_request.md)
 - [theorem/d5_074_researcher3_realization_request.md](./theorem/d5_074_researcher3_realization_request.md)
@@ -92,8 +101,34 @@ part, not merely some large hidden memory.
 
 **compute support:** validate the exact reduction object and the exact
 reduction data only: chain vs promoted cycle, accessible quotient on the
-union-of-chains object, offset normalization, and `(B,beta)` exactness / drift
-on larger moduli.
+union-of-chains object, abstract bridge `(beta,rho)` versus concrete coordinate
+model `(beta,q,sigma)` / `(beta,delta)`, offset normalization, and `(B,beta)`
+exactness / drift on larger moduli.
+
+After the `075` bridge / realization / review round, the safest current
+formulation is:
+
+- theorem-level canonical bridge: abstract `(beta,rho)`;
+- strongest checked coordinate model: `(beta,q,sigma)` / `(beta,delta)`;
+- live missing link: prove or disprove the concrete identification
+  `rho ≅ (q,sigma) ≅ delta`, prove the splice law and current-event readout
+  uniformly, and settle the accessible image.
+
+After accepting the `076` bridge / realization / compute notes, the `077`
+Track A/B/C + review reduction, and the `079` follow-up on the exceptional
+splice, that frontier can be phrased as one single lemma:
+
+- abstract bridge `(beta,rho)` is accepted;
+- concrete bridge `(beta,delta)` is accepted componentwise;
+- the exceptional continuation is no longer the main open issue;
+- the remaining question is whether the same realized `delta` always implies
+  the same remaining full-chain tail length;
+- equivalently, whether `rho` depends only on `delta`;
+- equivalently, whether raw global `(beta,delta)` is exact.
+
+The shortest current frontier note is:
+
+- [theorem/d5_079_single_critical_lemma.md](./theorem/d5_079_single_critical_lemma.md)
 
 `R1 -> H_L1`
 
