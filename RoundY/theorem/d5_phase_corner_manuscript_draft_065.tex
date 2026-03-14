@@ -1,0 +1,138 @@
+\section{The active best-seed branch as a phase--corner machine}
+
+We keep the theorem object minimal. On the active best-seed branch we work with
+\[
+B=(s,u,v,\lambda,\mathrm{family}),\qquad \tau,\qquad \epsilon_4,
+\]
+and treat the auxiliary coordinates
+\[
+\rho=u_{\mathrm{source}}+1,
+\qquad
+\alpha=\rho-u,
+\qquad
+\delta=\rho-(s+u+v+\lambda),
+\qquad
+\kappa=q+s+v+\lambda
+\]
+as proof or constructive coordinates only.
+
+\begin{theorem}[Phase--corner theorem]
+Fix odd $m\ge 5$ and the best seed
+\[
+L=[2,2,1],\qquad R=[1,4,4].
+\]
+On the active nonterminal branch for the unresolved channel $R1\to H_{L1}$,
+define
+\[
+\kappa=q+s+v+\lambda\pmod m.
+\]
+Then:
+\begin{enumerate}
+    \item $\kappa'\equiv \kappa+1\pmod m$.
+    \item The current event $\epsilon_4$ is determined by $\kappa$, the carry
+    sheet $c=1_{\{q=m-1\}}$, and the single corner state $s=2$ by the rules
+    \begin{align*}
+    \kappa=0 &\Rightarrow \mathrm{wrap},\\
+    \kappa=1 &\Rightarrow \mathrm{carry\_jump},\\
+    \kappa=2 &\Rightarrow
+    \begin{cases}
+    \mathrm{other}_{1000},& c=1,\\
+    \mathrm{flat},& c=0,
+    \end{cases}\\
+    \kappa=3 &\Rightarrow
+    \begin{cases}
+    \mathrm{other}_{0010},& (c=0\ \&\ s=2)\ \text{or}\ (c=1\ \&\ s\ne 2),\\
+    \mathrm{flat},& \text{otherwise},
+    \end{cases}
+    \end{align*}
+    and for every $4\le \kappa\le m-1$ the event is flat.
+    \item Among flat states, the only short reset occurs at the corner
+    $(\kappa,s)=(2,2)$.
+\end{enumerate}
+Equivalently, the active branch is an odometer with one corner.
+\end{theorem}
+
+\begin{corollary}[Countdown carrier]
+Define $\tau$ on the active branch by
+\begin{itemize}
+    \item $\tau=0$ on nonflat states;
+    \item on flat states,
+    \[
+    \tau=
+    \begin{cases}
+    1,& (\kappa,s)=(2,2),\\
+    m-\kappa,& \text{otherwise}.
+    \end{cases}
+    \]
+\end{itemize}
+Then $\tau'=\tau-1$ whenever $\tau>0$.
+\end{corollary}
+
+\begin{corollary}[Boundary reset formulas]
+At $\tau=0$ the reset laws are:
+\begin{itemize}
+    \item $\mathrm{wrap}\mapsto 0$;
+    \item $\mathrm{carry\_jump}\mapsto 0$ on the zero-reset fiber
+    $s+v+\lambda\equiv 2\pmod m$, maps to $1$ when $s=1$ off that fiber, and to
+    $m-2$ otherwise;
+    \item $\mathrm{other}_{1000}\mapsto m-3$ if $s=1$ and $0$ otherwise;
+    \item $\mathrm{other}_{0010}\mapsto m-4$.
+\end{itemize}
+\end{corollary}
+
+\begin{corollary}[Finite-cover compatibility]
+The phase--corner machine is compatible with the checked finite-cover normal
+form
+\[
+B\leftarrow B+c\leftarrow B+c+d,
+\]
+where
+\[
+B=(s,u,v,\lambda,\mathrm{family}),
+\qquad
+c=1_{\{q=m-1\}},
+\qquad
+d=1_{\{\text{next carry }u\ge m-3\}}.
+\]
+\end{corollary}
+
+\begin{proof}[Proof spine]
+The clean proof spine is:
+\[
+033\to 062\to 059.
+\]
+First, one imports the exact trigger family $H_{L1}$ from the branch analysis.
+Second, using the phase-$1$ source-residue invariant, one derives the
+universal first-exit targets
+\[
+T_{\mathrm{reg}}=(m-1,m-2,1),
+\qquad
+T_{\mathrm{exc}}=(m-2,m-1,1).
+\]
+Third, before those targets are reached, the active branch cannot hit any of
+the six modified current classes, so every pre-exit current state is
+$B$-labelled. On those $B$-states the mixed witness rule applies exactly, and
+in the current coordinate $\kappa=q+s+v+\lambda$ it yields the scheduler stated
+in the theorem. Restricting the scheduler to flat states shows that the only
+short reset occurs at $(\kappa,s)=(2,2)$, and the countdown and branchwise
+reset formulas are immediate corollaries.
+\end{proof}
+
+\begin{remark}[Constructive refinement]
+On the checked range through $m=19$, the stronger source-residue gauge with
+\[
+\rho=u_{\mathrm{source}}+1,
+\qquad
+\alpha=\rho-u,
+\qquad
+J=1_{\{\epsilon_4=\mathrm{carry\_jump}\}}
+\]
+gives exact current formulas
+\[
+q\equiv -\alpha+J\pmod m,
+\qquad
+c=1_{\{\alpha=1+J\}}.
+\]
+This is a constructive refinement of the theorem-side machine, not a change in
+the theorem object.
+\end{remark}
