@@ -20,7 +20,8 @@ used only inside the proof.
 
 The key point is that the family-dependent first exits can be proved directly from:
 
-1. the exact defect-family formula for `H_{L1}` from `033`,
+1. the exact defect-family formula for `H_{L1}` from
+   `theorem/d5_033_explicit_trigger_family.md`,
 2. the mixed witness rule on current `B`-states,
 3. the candidate raw orbit starting at the alt-`2` entry,
 4. and one phase-`1` invariant relating `q` and `u` to `\rho`.
@@ -35,7 +36,7 @@ becomes a corollary rather than a hypothesis.
 
 ## 1. Exact hole target formula
 
-From the exact defect classification extracted in `033`, the hole family `H_{L1}` is
+From the promoted trigger-family theorem, the hole family `H_{L1}` is
 \[
 H_{L1} = \{(q,w,u,\lambda)=(m-1,m-1,u,2):\ u\neq 2\}.
 \tag{H-L1}
