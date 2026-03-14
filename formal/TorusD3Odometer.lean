@@ -6,4 +6,5 @@ import TorusD3Odometer.Color1FullCaseI
 import TorusD3Odometer.Color1FullCaseII
 import TorusD3Odometer.Color0
 import TorusD3Odometer.Color0FullCaseI
+import TorusD3Odometer.Color0FullCaseII
 import TorusD3Odometer.Color2Full
