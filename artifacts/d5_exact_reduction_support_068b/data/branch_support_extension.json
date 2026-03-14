@@ -1,0 +1,44 @@
+{
+  "31": {
+    "checked_sources": 30,
+    "all_branch_checks_exact": true,
+    "regular_targets_ok": true,
+    "exceptional_targets_ok": true,
+    "first_failure": null
+  },
+  "33": {
+    "checked_sources": 32,
+    "all_branch_checks_exact": true,
+    "regular_targets_ok": true,
+    "exceptional_targets_ok": true,
+    "first_failure": null
+  },
+  "35": {
+    "checked_sources": 34,
+    "all_branch_checks_exact": true,
+    "regular_targets_ok": true,
+    "exceptional_targets_ok": true,
+    "first_failure": null
+  },
+  "37": {
+    "checked_sources": 36,
+    "all_branch_checks_exact": true,
+    "regular_targets_ok": true,
+    "exceptional_targets_ok": true,
+    "first_failure": null
+  },
+  "39": {
+    "checked_sources": 38,
+    "all_branch_checks_exact": true,
+    "regular_targets_ok": true,
+    "exceptional_targets_ok": true,
+    "first_failure": null
+  },
+  "41": {
+    "checked_sources": 40,
+    "all_branch_checks_exact": true,
+    "regular_targets_ok": true,
+    "exceptional_targets_ok": true,
+    "first_failure": null
+  }
+}

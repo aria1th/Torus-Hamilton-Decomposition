@@ -1,0 +1,27 @@
+{
+  "task_id": "D5-EXACT-REDUCTION-SUPPORT-068B",
+  "full_row_moduli": [
+    13,
+    15,
+    17,
+    19,
+    21
+  ],
+  "branch_only_moduli": [
+    31,
+    33,
+    35,
+    37,
+    39,
+    41
+  ],
+  "all_full_chain_checks_exact": true,
+  "all_full_beta_checks_exact": true,
+  "large_branch_support_exact": true,
+  "main_result": "The safer first exact reduction object is a marked length-m chain extracted from regular carry_jump slices. On the exhaustive full-row range, the canonical clock beta has exact unit drift and (B,beta) is exact for q, c, epsilon4, tau, next_tau, and next_B. Small chain quotients can read the carry mark, but deterministic quotients already force the full m-scale state on the marked chain. Larger-modulus branch-local support keeps the same raw phase scheduler and beta drift.",
+  "runtime_seconds": 541.4228017162532,
+  "environment": {
+    "python_version": "3.10.12",
+    "rich_version": "14.2.0"
+  }
+}

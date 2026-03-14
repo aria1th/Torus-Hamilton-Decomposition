@@ -1,0 +1,182 @@
+{
+  "13": {
+    "beta_drift_exact": true,
+    "first_drift_failure": null,
+    "readouts": {
+      "q": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      },
+      "c": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      },
+      "epsilon4": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      },
+      "tau": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      },
+      "next_tau": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      },
+      "next_B": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      }
+    }
+  },
+  "15": {
+    "beta_drift_exact": true,
+    "first_drift_failure": null,
+    "readouts": {
+      "q": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      },
+      "c": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      },
+      "epsilon4": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      },
+      "tau": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      },
+      "next_tau": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      },
+      "next_B": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      }
+    }
+  },
+  "17": {
+    "beta_drift_exact": true,
+    "first_drift_failure": null,
+    "readouts": {
+      "q": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      },
+      "c": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      },
+      "epsilon4": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      },
+      "tau": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      },
+      "next_tau": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      },
+      "next_B": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      }
+    }
+  },
+  "19": {
+    "beta_drift_exact": true,
+    "first_drift_failure": null,
+    "readouts": {
+      "q": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      },
+      "c": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      },
+      "epsilon4": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      },
+      "tau": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      },
+      "next_tau": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      },
+      "next_B": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      }
+    }
+  },
+  "21": {
+    "beta_drift_exact": true,
+    "first_drift_failure": null,
+    "readouts": {
+      "q": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      },
+      "c": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      },
+      "epsilon4": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      },
+      "tau": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      },
+      "next_tau": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      },
+      "next_B": {
+        "is_exact": true,
+        "collision_bucket_count": 0,
+        "first_collision": null
+      }
+    }
+  }
+}
