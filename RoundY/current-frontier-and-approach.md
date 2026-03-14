@@ -34,10 +34,26 @@ Use it together with:
 - [theorem/d5_071_unified_bridge_handoff.md](./theorem/d5_071_unified_bridge_handoff.md)
 - [theorem/d5_071_four_researcher_questions.md](./theorem/d5_071_four_researcher_questions.md)
 - [theorem/d5_076_unified_handoff.md](./theorem/d5_076_unified_handoff.md)
+- [theorem/d5_076_bridge_main.md](./theorem/d5_076_bridge_main.md)
+- [theorem/d5_076_realization_trackB.md](./theorem/d5_076_realization_trackB.md)
+- [theorem/d5_076_concrete_bridge_proof.md](./theorem/d5_076_concrete_bridge_proof.md)
 - [theorem/d5_077_globalization_handoff.md](./theorem/d5_077_globalization_handoff.md)
 - [theorem/d5_077_live_questions_and_tracks.md](./theorem/d5_077_live_questions_and_tracks.md)
+- [theorem/d5_077_tail_length_and_actual_union.md](./theorem/d5_077_tail_length_and_actual_union.md)
 - [theorem/d5_078_accepted_frontier_and_split.md](./theorem/d5_078_accepted_frontier_and_split.md)
 - [theorem/d5_079_single_critical_lemma.md](./theorem/d5_079_single_critical_lemma.md)
+- [theorem/d5_079_exceptional_interface_support.md](./theorem/d5_079_exceptional_interface_support.md)
+- [theorem/d5_080_next_work_program.md](./theorem/d5_080_next_work_program.md)
+- [theorem/d5_080_no_mixed_delta_reduction.md](./theorem/d5_080_no_mixed_delta_reduction.md)
+- [theorem/d5_081_regular_union_and_gluing_support.md](./theorem/d5_081_regular_union_and_gluing_support.md)
+- [theorem/d5_082_frontier_and_theorem_map.md](./theorem/d5_082_frontier_and_theorem_map.md)
+- [theorem/d5_082_exceptional_row_reduction.md](./theorem/d5_082_exceptional_row_reduction.md)
+- [theorem/d5_083_gluing_flow_and_final_theorem.md](./theorem/d5_083_gluing_flow_and_final_theorem.md)
+- [theorem/d5_085_proof_progress_report.md](./theorem/d5_085_proof_progress_report.md)
+- [theorem/d5_084_theorem_name_map.md](./theorem/d5_084_theorem_name_map.md)
+- [checks/d5_084_compute_evidence_index.md](./checks/d5_084_compute_evidence_index.md)
+- [d5_084_session_note_map.md](./d5_084_session_note_map.md)
+- [theorem/d5_084_session_extractions.md](./theorem/d5_084_session_extractions.md)
 - [theorem/d5_078_researcherA_request.md](./theorem/d5_078_researcherA_request.md)
 - [theorem/d5_078_researcherB_request.md](./theorem/d5_078_researcherB_request.md)
 - [theorem/d5_078_researcherC_request.md](./theorem/d5_078_researcherC_request.md)
@@ -115,20 +131,48 @@ formulation is:
   uniformly, and settle the accessible image.
 
 After accepting the `076` bridge / realization / compute notes, the `077`
-Track A/B/C + review reduction, and the `079` follow-up on the exceptional
-splice, that frontier can be phrased as one single lemma:
+Track A/B/C + review reduction, the `079` exceptional-splice follow-up, and the
+`081b/082` end-gluing reduction, the frontier can now be phrased as one single
+exceptional row:
 
 - abstract bridge `(beta,rho)` is accepted;
 - concrete bridge `(beta,delta)` is accepted componentwise;
-- the exceptional continuation is no longer the main open issue;
-- the remaining question is whether the same realized `delta` always implies
-  the same remaining full-chain tail length;
-- equivalently, whether `rho` depends only on `delta`;
-- equivalently, whether raw global `(beta,delta)` is exact.
+- the regular raw gluing problem is closed;
+- the old remaining question was whether the exceptional actual lift at
+  `3m-3` glues into the regular continuing class through `3m-2 -> 3m-1`;
+- the promoted `083` final proof closes that step inside the accepted package;
+- the live task is now a short dependency audit of the imported structural
+  inputs, not a new D5 bottleneck.
 
-The shortest current frontier note is:
+The shortest current theorem map is:
 
-- [theorem/d5_079_single_critical_lemma.md](./theorem/d5_079_single_critical_lemma.md)
+- [theorem/d5_082_frontier_and_theorem_map.md](./theorem/d5_082_frontier_and_theorem_map.md)
+
+The final-gluing explanation and proof are:
+
+- [theorem/d5_083_gluing_flow_and_final_theorem.md](./theorem/d5_083_gluing_flow_and_final_theorem.md)
+- [theorem/d5_083_final_theorem_proof.md](./theorem/d5_083_final_theorem_proof.md)
+
+The corresponding next-step work note is now:
+
+- [theorem/d5_086_dependency_audit_and_generalization_gate.md](./theorem/d5_086_dependency_audit_and_generalization_gate.md)
+
+The shortest dependency/progress diagram is:
+
+- [theorem/d5_086_dependency_flow_diagram.md](./theorem/d5_086_dependency_flow_diagram.md)
+
+The first concrete audit report is:
+
+- [theorem/d5_087_dependency_audit_report.md](./theorem/d5_087_dependency_audit_report.md)
+
+The promoted `033` trigger-family input is:
+
+- [theorem/d5_033_explicit_trigger_family.md](./theorem/d5_033_explicit_trigger_family.md)
+
+The cleanup-facing handoff and exact odd-`m` theorem statement are:
+
+- [theorem/d5_088_tex_cleanup_handoff.md](./theorem/d5_088_tex_cleanup_handoff.md)
+- [theorem/d5_088_exact_verifiable_solution_for_odd_m.md](./theorem/d5_088_exact_verifiable_solution_for_odd_m.md)
 
 `R1 -> H_L1`
 

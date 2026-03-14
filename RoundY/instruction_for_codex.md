@@ -13,19 +13,38 @@ Read in this order:
 1. [README.md](./README.md)
 2. [current-frontier-and-approach.md](./current-frontier-and-approach.md)
 3. [theorem/d5_076_unified_handoff.md](./theorem/d5_076_unified_handoff.md)
-4. [theorem/d5_077_globalization_handoff.md](./theorem/d5_077_globalization_handoff.md)
-5. [theorem/d5_077_live_questions_and_tracks.md](./theorem/d5_077_live_questions_and_tracks.md)
-6. [theorem/d5_078_accepted_frontier_and_split.md](./theorem/d5_078_accepted_frontier_and_split.md)
-7. [theorem/d5_079_single_critical_lemma.md](./theorem/d5_079_single_critical_lemma.md)
-8. [theorem/d5_075_threeway_handoff.md](./theorem/d5_075_threeway_handoff.md)
-9. [theorem/d5_075_bridge_theorem_request.md](./theorem/d5_075_bridge_theorem_request.md)
-10. [theorem/d5_075_realization_integration_request.md](./theorem/d5_075_realization_integration_request.md)
-11. [theorem/d5_075_compute_validation_request.md](./theorem/d5_075_compute_validation_request.md)
-12. [theorem/d5_075_reviewer_brief.md](./theorem/d5_075_reviewer_brief.md)
-13. [../DOCUMENT_FOR_EXTERNAL_REVIEW.md](../DOCUMENT_FOR_EXTERNAL_REVIEW.md)
+4. [theorem/d5_076_bridge_main.md](./theorem/d5_076_bridge_main.md)
+5. [theorem/d5_076_realization_trackB.md](./theorem/d5_076_realization_trackB.md)
+6. [theorem/d5_076_concrete_bridge_proof.md](./theorem/d5_076_concrete_bridge_proof.md)
+7. [theorem/d5_077_globalization_handoff.md](./theorem/d5_077_globalization_handoff.md)
+8. [theorem/d5_077_live_questions_and_tracks.md](./theorem/d5_077_live_questions_and_tracks.md)
+9. [theorem/d5_077_tail_length_and_actual_union.md](./theorem/d5_077_tail_length_and_actual_union.md)
+10. [theorem/d5_078_accepted_frontier_and_split.md](./theorem/d5_078_accepted_frontier_and_split.md)
+11. [theorem/d5_079_single_critical_lemma.md](./theorem/d5_079_single_critical_lemma.md)
+12. [theorem/d5_079_exceptional_interface_support.md](./theorem/d5_079_exceptional_interface_support.md)
+13. [theorem/d5_080_next_work_program.md](./theorem/d5_080_next_work_program.md)
+14. [theorem/d5_080_no_mixed_delta_reduction.md](./theorem/d5_080_no_mixed_delta_reduction.md)
+15. [theorem/d5_081_regular_union_and_gluing_support.md](./theorem/d5_081_regular_union_and_gluing_support.md)
+16. [theorem/d5_082_exceptional_row_reduction.md](./theorem/d5_082_exceptional_row_reduction.md)
+17. [theorem/d5_082_frontier_and_theorem_map.md](./theorem/d5_082_frontier_and_theorem_map.md)
+18. [theorem/d5_083_gluing_flow_and_final_theorem.md](./theorem/d5_083_gluing_flow_and_final_theorem.md)
+19. [theorem/d5_083_final_theorem_proof.md](./theorem/d5_083_final_theorem_proof.md)
+20. [theorem/d5_085_proof_progress_report.md](./theorem/d5_085_proof_progress_report.md)
+21. [theorem/d5_086_dependency_audit_and_generalization_gate.md](./theorem/d5_086_dependency_audit_and_generalization_gate.md)
+22. [theorem/d5_086_dependency_flow_diagram.md](./theorem/d5_086_dependency_flow_diagram.md)
+23. [theorem/d5_087_dependency_audit_report.md](./theorem/d5_087_dependency_audit_report.md)
+24. [theorem/d5_033_explicit_trigger_family.md](./theorem/d5_033_explicit_trigger_family.md)
+25. [theorem/d5_084_theorem_name_map.md](./theorem/d5_084_theorem_name_map.md)
+26. [checks/d5_084_compute_evidence_index.md](./checks/d5_084_compute_evidence_index.md)
+27. [theorem/d5_075_threeway_handoff.md](./theorem/d5_075_threeway_handoff.md)
+28. [theorem/d5_075_bridge_theorem_request.md](./theorem/d5_075_bridge_theorem_request.md)
+29. [theorem/d5_075_realization_integration_request.md](./theorem/d5_075_realization_integration_request.md)
+30. [theorem/d5_075_compute_validation_request.md](./theorem/d5_075_compute_validation_request.md)
+31. [theorem/d5_075_reviewer_brief.md](./theorem/d5_075_reviewer_brief.md)
+32. [../DOCUMENT_FOR_EXTERNAL_REVIEW.md](../DOCUMENT_FOR_EXTERNAL_REVIEW.md)
    Focus on `D23`, `D24`, `D25`, `D26`, `D27`, `D28`, `D29`, `D30`, `D31`,
    `D32`, `D33`, `D34`, `D35`, `D37`, `D38`, `D40`, `D42`, `D45`.
-14. [autonomous/d5_autonomous_perturbation_note_v25.md](./autonomous/d5_autonomous_perturbation_note_v25.md)
+33. [autonomous/d5_autonomous_perturbation_note_v25.md](./autonomous/d5_autonomous_perturbation_note_v25.md)
 
 Then read the key artifact READMEs in this order:
 
@@ -150,9 +169,10 @@ The honest remaining frontier is then:
 same clock already exists as `beta = -Theta`. The safest current theorem object
 is the abstract exact bridge `(beta,rho)`, while the strongest checked concrete
 model is the dynamic boundary odometer `(beta,q,sigma)` / `(beta,delta)`. The
-live question is now one globalization lemma: does the same realized `delta`
-always imply the same remaining full-chain tail length, hence the same `rho`
-and the same raw concrete bridge `(beta,delta)`?**
+regular raw gluing problem is now closed, and the remaining live question is
+one exceptional-row theorem: does the exceptional actual lift at `3m-3`
+glue into the regular continuing class through `3m-2 -> 3m-1`, equivalently is
+there no hidden second endpoint sheet over `delta = 3m-1`?**
 
 `R1 -> H_L1`
 

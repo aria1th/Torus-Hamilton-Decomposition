@@ -1,0 +1,88 @@
+\section{D5 odd-$m$ final globalization theorem}
+
+\subsection{Imported structural inputs}
+
+We use the following imported propositions.
+
+\begin{enumerate}
+\item Explicit trigger family:
+\[
+H_{L1}=\{(q,w,u,\lambda)=(m-1,m-1,u,2):u\neq 2\}.
+\]
+
+\item Universal first-exit targets:
+the regular families first exit at
+\[
+T_{\mathrm{reg}}=(m-1,m-2,1),
+\]
+while the exceptional family first exits at
+\[
+T_{\mathrm{exc}}=(m-2,m-1,1).
+\]
+\end{enumerate}
+
+\subsection{Concrete bridge package}
+
+On the $\Theta=2$ boundary section define
+\[
+\sigma \equiv w+u-q-1 \pmod m,
+\qquad
+\delta := q + m\sigma.
+\]
+
+On each splice-connected accessible component:
+\[
+\delta'=\delta+1 \pmod{m^2},
+\]
+and the current event class $\epsilon_4$ is a function of $(\beta,\delta)$.
+
+\subsection{Globalization reductions}
+
+\begin{enumerate}
+\item Fixed realized $\delta$ can differ only by remaining tail length.
+\item Every regular realization of every realized $\delta$ continues.
+\item The exceptional continuation is pinned at chart/interface level to
+\[
+3m-3 \to 3m-2 \to 3m-1.
+\]
+\item Therefore the final globalization problem is the exceptional-row gluing
+statement.
+\end{enumerate}
+
+\subsection{Final theorem}
+
+\begin{theorem}
+For odd $m$ in the accepted D5 regime, every actual lift of the exceptional
+cutoff row $\delta=3m-3$ continues through
+\[
+3m-2 \to 3m-1
+\]
+and lies in the regular continuing endpoint class there.
+Consequently, fixed realized $\delta$ determines endpoint class and future
+word, hence
+\[
+\rho=\rho(\delta)
+\]
+globally, and raw global $(\beta,\delta)$ is exact.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+The regular sector is already closed, so only the exceptional cutoff can be
+terminal. The structural first-exit theorem gives a unique actual exceptional
+exit target and branch direction. The interface theorem pins the corresponding
+chain-label continuation to $3m-3 \to 3m-2 \to 3m-1$. Hence the exceptional
+cutoff also has a forward successor. Therefore every accessible component is
+total, every realization has infinite tail length, and the tail-length
+reduction forces $\rho=\rho(\delta)$ globally.
+\end{proof}
+
+\subsection{Cleanup warning}
+
+In a final manuscript, keep the following scope distinctions explicit:
+
+\begin{itemize}
+\item the concrete bridge package is componentwise before globalization;
+\item the exceptional interface theorem is chart/interface level before it is
+combined with the structural first-exit theorem;
+\item the global theorem is obtained only after these inputs are combined.
+\end{itemize}

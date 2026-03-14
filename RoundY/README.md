@@ -4,8 +4,22 @@ Hamilton decomposition of the directed `5`-torus
 
 `D_5(m) = Cay((Z_m)^5, {e_0, e_1, e_2, e_3, e_4})`.
 
-**Status:** `[O]` open.  
-**Current frontier:** after accepting the `079` bridge / review round, the safe global bridge is `(beta,rho)`, the strongest concrete model is componentwise `(beta,q,sigma)` / `(beta,delta)`, and the entire odd-`m` D5 globalization question has reduced to one critical lemma: **does the same realized `delta` always imply the same remaining full-chain tail length?** Equivalently, is `rho` a function of `delta`, so that raw global `(beta,delta)` works without a component tag?
+**Status:** `[C]` closed inside the accepted theorem package.  
+**Current frontier:** after the promoted `083` proof, the odd-`m` D5 theorem closes within the accepted `076–082` package. The live task is now a short dependency audit of the imported structural inputs, especially `033 -> 062` and the `079` chart/interface theorem, before using D5 as a base for broader generalization.
+
+For the shortest dependency/progress picture, see
+[theorem/d5_086_dependency_flow_diagram.md](./theorem/d5_086_dependency_flow_diagram.md).
+
+For the first concrete dependency audit, see
+[theorem/d5_087_dependency_audit_report.md](./theorem/d5_087_dependency_audit_report.md).
+
+For the promoted `033` trigger-family input used by the final chain, see
+[theorem/d5_033_explicit_trigger_family.md](./theorem/d5_033_explicit_trigger_family.md).
+
+For the cleanup-facing handoff and exact odd-`m` theorem statement, see
+[theorem/d5_088_tex_cleanup_handoff.md](./theorem/d5_088_tex_cleanup_handoff.md)
+and
+[theorem/d5_088_exact_verifiable_solution_for_odd_m.md](./theorem/d5_088_exact_verifiable_solution_for_odd_m.md).
 
 This README is the current top-level map. It replaces the older Session-20-only
 snapshot and is organized around the actual D5 branch progression through the
@@ -41,11 +55,11 @@ is already a countdown carrier, the branch laws were compressed to `CJ` and
 `061` bootstrap that keeps the active branch inside the unmodified `B`
 region, and finally `062` removes the first-exit targets as an external
 structural input by deriving them from the explicit `H_{L1}` trigger law.
-So the live issue is no longer “what is the reduced model?” or even
-“where is the first exit?” but whether the accepted abstract bridge
-`(beta,rho)` is globally realized by the concrete boundary odometer
-`(beta,q,sigma)` / `(beta,delta)`, or whether the final theorem must keep the
-bridge abstract globally.
+So the live issue is no longer “what is the reduced model?”, “where is the
+first exit?”, or even the old exceptional-row gluing question. Inside the
+accepted package, the abstract bridge `(beta,rho)` is now globally realized by
+raw `(beta,delta)`. The remaining work is to audit the imported accepted
+inputs that the final proof uses, not to reopen the D5 bridge itself.
 
 ## Brief Mathematical Summary
 
@@ -97,16 +111,33 @@ For a reader who does not have the artifacts open, the current D5 picture is:
     `033`, the candidate orbit, and a phase-`1` source-residue invariant.
     So first exits, `B`-region invariance, the global phase scheduler, and the
     boundary reset laws become one structural chain.
+13. `076–079` isolate the safe global bridge `(beta,rho)`, the strongest
+    componentwise concrete bridge `(beta,delta)`, and the chart-level
+    exceptional continuation
+    `3 -> (terminal chain of 4) -> 1`, reducing the globalization problem to
+    fixed-`delta` tail-length / endpoint compatibility.
+14. `080` sharpens that again: it is enough to prove a no-mixed-`delta` lemma,
+    and the right finite proof object becomes an end-gluing table on actual
+    lifts, not just on the reconstructed quotient.
+15. `081` closes the regular sector: every regular realization of every
+    realized `delta` continues, so regular rows cannot launch a new endpoint
+    sheet. The remaining issue is already confined to the exceptional
+    interface.
+16. `081b/082` reduce the full raw globalization theorem to one exceptional
+    actual-lift gluing lemma at
+    `3m-2 -> 3m-1`.
+17. the promoted `083` final proof then closes that last step inside the
+    accepted `076–082` package and yields raw global `(beta,delta)`.
 
 So the mathematical problem is now very narrow. The branch is no longer asking
 for a new witness or a broader search over tiny controllers. It is asking for
-one decisive globalization upgrade:
+one decisive exceptional-row upgrade:
 
 - keep the structural theorem package `044–062` / `068` clean and explicit;
 - identify the final bridge safely as abstract `(beta,rho)` versus concrete
   `(beta,q,sigma)` / `(beta,delta)`;
-- settle the single critical lemma that upgrades componentwise concrete
-  `(beta,delta)` to raw global `(beta,delta)`.
+- settle the single exceptional actual-lift gluing lemma that upgrades
+  componentwise concrete `(beta,delta)` to raw global `(beta,delta)`.
 
 For context, this is exactly the point where `d=5` now differs from the lower
 dimensions:
@@ -156,6 +187,15 @@ That part is already done. The live theorem strategy is:
 6. once that `062` chain is accepted, the branch reset laws are no longer
    separate mysteries: they are corollaries of the mixed-witness phase
    machine on the active branch.
+7. use `076–079` to separate the safe global theorem object `(beta,rho)` from
+   the strongest concrete componentwise chart `(beta,delta)`, and to pin the
+   chart-level exceptional continuation to
+   `3m-3 -> 3m-2 -> 3m-1`;
+8. use `080–081` to shrink the globalization problem to the end-gluing
+   problem on actual lifts, then close the regular raw gluing sector entirely;
+9. use `081b/082` to reduce the full raw globalization theorem to one final
+   exceptional-row statement, and the promoted `083` proof to close that step
+   inside the accepted package.
 
 So the proof is currently split into:
 
@@ -165,9 +205,11 @@ So the proof is currently split into:
 - bridge theorem / realization:
   keep the theorem-level object abstract as `(beta,rho)` unless the concrete
   identification with `(beta,q,sigma)` / `(beta,delta)` is actually proved;
+  after `082`, the only remaining raw upgrade clause is the exceptional-row
+  gluing lemma;
 - compute support:
-  test globalization, accessible-image closure, and component structure only,
-  not broad controller search.
+  test exceptional-row gluing and raw-state endpoint compatibility only, not
+  broad controller search.
 
 ## What To Do Now
 
@@ -175,24 +217,22 @@ The recommended next work is:
 
 1. keep the theorem language safe at abstract `(beta,rho)` level while the
    final bridge identification is still open;
-2. prove or disprove the globalization criterion:
-   whether the padded future current-event word depends only on realized
-   `delta`, not on the accessible component where it is realized;
-3. settle the theorem form of the accessible image:
-   abstract accessible image first, or direct full `m^2` odometer;
-4. if any new compute is opened, make it directly address fixed-`delta`
-   ambiguity, accessible components, or accessible-image closure.
+2. audit the imported accepted inputs used by the promoted `083` proof,
+   especially `033 -> 062` and `079`;
+3. rewrite the D5 theorem chain in the shortest final manuscript order if
+   needed;
+4. only after that decide whether to move directly to broader prime-dimension
+   generalization.
 
 In short:
 
 - bridge question:
-  does fixed realized `delta` determine tail length, hence `rho`?
+  does the exceptional actual lift at `3m-3` glue into the regular continuing
+  class at `3m-2 -> 3m-1`?
 - structural question:
-  can the actual accessible union create different right endpoints at the same
-  realized `delta`?
+  is there any hidden second endpoint sheet over `delta = 3m-1`?
 - compute question:
-  do repeated realized `(beta,delta)` states on larger actual unions glue to
-  one forward chain?
+  can actual larger-state data certify the exceptional-row gluing directly?
 
 ## Barrier evolution
 
@@ -220,13 +260,39 @@ The real story of RoundY is the bottleneck moving inward:
 20. `componentwise concrete bridge (beta,delta) accepted as the strongest checked model`
 21. `componentwise concrete bridge (beta,delta) isolated`
 22. `exceptional splice reduced to the common 4 -> 1 interface`
-23. `current frontier: same realized delta must imply same tail length`
+23. `regular raw gluing problem closed`
+24. `current frontier: exceptional actual-lift gluing at 3m-2 -> 3m-1`
 
 ## Current canonical note
 
-For the post-`079` state, the shortest correct frontier note is:
+For the post-`081b/082` state, the canonical theorem/frontier note is:
 
-- [theorem/d5_079_single_critical_lemma.md](./theorem/d5_079_single_critical_lemma.md)
+- [theorem/d5_082_frontier_and_theorem_map.md](./theorem/d5_082_frontier_and_theorem_map.md)
+
+For the shortest explanation of the `081–082` reduction flow and the final
+theorem target, use:
+
+- [theorem/d5_083_gluing_flow_and_final_theorem.md](./theorem/d5_083_gluing_flow_and_final_theorem.md)
+
+For a grouped proof-progress report in the same style as the session catalog,
+use:
+
+- [theorem/d5_085_proof_progress_report.md](./theorem/d5_085_proof_progress_report.md)
+
+For poorly named legacy theorem notes and legacy compute-evidence files, use:
+
+- [theorem/d5_084_theorem_name_map.md](./theorem/d5_084_theorem_name_map.md)
+- [checks/d5_084_compute_evidence_index.md](./checks/d5_084_compute_evidence_index.md)
+
+For old session logs and task notes such as `codex_work_s22.md` or
+`note_s20.md`, use:
+
+- [d5_084_session_note_map.md](./d5_084_session_note_map.md)
+
+For the small subset of session notes that still contain useful mathematical
+content worth remembering, use:
+
+- [theorem/d5_084_session_extractions.md](./theorem/d5_084_session_extractions.md)
 
 In short:
 
