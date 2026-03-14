@@ -1,6 +1,6 @@
 # Research Progression: Hamilton Decompositions of the Directed d-Torus
 
-*Sanghyun Park, March 2–13, 2026*
+*Sanghyun Park, March 2–14, 2026*
 
 이 문서는 레포지토리의 파일들을 시간순·내용순으로 정리하여,
 논문이 어떠한 경로를 거쳐 현재 형태에 이르렀는지를 기록합니다.
@@ -18,7 +18,7 @@ flowchart LR
     E --> F["3/9 오전<br>RoundX: 4D 일반화"]
     F --> G["3/9 11:01<br>d=4 완전 증명 완성"]
     G --> H["3/9 12:00<br>d=3 v6 + d=4 v3<br>교차 검증"]
-    H --> I["3/9–3/13<br>RoundY: d=5 return-map extraction<br>→ finite cover → countdown carrier"]
+    H --> I["3/9–3/14<br>RoundY: d=5 return-map extraction<br>→ bridge/globalization frontier"]
 ```
 
 ---
@@ -198,7 +198,7 @@ v3에서 모든 이슈 수정 완료. 핵심 수정: Prop 5–6의 counting argu
 
 ---
 
-## Phase 6: RoundY — d=5 frontier의 성숙 (3월 9–13일)
+## Phase 6: RoundY — d=5 frontier의 성숙 (3월 9–14일)
 
 ### 핵심 파일
 | 파일 | 내용 |
@@ -210,12 +210,16 @@ v3에서 모든 이슈 수정 완료. 핵심 수정: Prop 5–6의 counting argu
 | `RoundY/theorem/d5_boundary_reset_uniform_proof_attempt_055.md` | boundary reset uniform proof attempt |
 | `RoundY/theorem/d5_CJ_branch_proof_reduction_056.md` | CJ-first proof reduction |
 | `RoundY/theorem/d5_phase_machine_summary_058.md` | phase-machine proof-side summary |
+| `RoundY/theorem/d5_076_unified_handoff.md` | abstract bridge vs concrete odometer handoff |
+| `RoundY/theorem/d5_077_globalization_handoff.md` | globalization question handoff |
+| `RoundY/theorem/d5_077_live_questions_and_tracks.md` | current D5 tracks: component structure / `rho(delta)` / targeted compute |
 | `artifacts/d5_return_map_model_017/` | mixed witness return-map extraction |
 | `artifacts/d5_carry_and_finite_cover_044/` | finite-cover normal form |
 | `artifacts/d5_tau_countdown_carrier_048/` | countdown carrier law |
 | `artifacts/d5_proof_direction_evidence_052/` | larger-modulus proof-support bundle |
 | `artifacts/d5_boundary_reset_proof_support_055/` | `CJ` / `OTH` branch formula extension to `m=21,23` |
 | `artifacts/d5_phase_scheduler_branch_support_059b/` | safe branch-local support through `m=25,27,29` |
+| `RoundY/checks/d5_077_compact_interval_summary.json` | compact interval/globalization support summary |
 
 ### 개념적 진화
 
@@ -237,47 +241,49 @@ tau = countdown carrier with boundary reset law (048)
 proof-support generalization through m=19, then branch support to m=21,23 and CJ-first reduction (050,052,055,056)
     ↓
 phase scheduler + branch-local support + bootstrap invariance route (058–061)
+    ↓
+first-exit targets internalized, theorem package organized, per-chain bridge sharpened (062,068,071)
+    ↓
+abstract bridge `(beta,rho)` isolated vs strongest checked concrete model `(beta,delta)` (076)
+    ↓
+globalization question: does raw global `(beta,delta)` work without a component tag? (077)
 ```
 
 ### 현재 d=5 수학 상태
 
 `d=5`는 더 이상 “witness를 더 찾자” 단계가 아니다.
-현재 theorem-side object는
+현재 accepted picture는 두 층으로 분리된다.
 
-\[
-(B,\tau,\epsilon_4),
-\qquad
-B=(s,u,v,\lambda,f),
-\]
+1. **structural theorem package**
+   `044–062`와 `068`이 active branch의 finite-cover normal form,
+   countdown/reset behavior, phase-corner machine, first-exit targets를
+   거의 안정된 theorem package로 만든다.
+2. **bridge theorem**
+   safest theorem object는 abstract bridge `(beta,rho)`이고,
+   strongest checked concrete model은 dynamic boundary odometer
+   `(beta,q,sigma)` / `(beta,delta)`이다.
+3. **remaining gap**
+   componentwise concrete bridge는 강하게 지지되지만,
+   raw global `(beta,delta)`가 full accessible union에서 component tag 없이
+   exact bridge가 되는지는 아직 미해결이다.
 
-이고, active best-seed branch에서의 질문은 이제 다음으로 압축된다.
-
-1. `tau>0`에서는 형식적으로
-   \[
-   \tau'=\tau-1;
-   \]
-2. 따라서 모든 실제 수학 내용은 boundary `tau=0`에 있다;
-3. uniform odd-`m` theorem은
-   - `wrap`
-   - `CJ` (`carry_jump`)
-   - `OTH` (`other`)
-   의 세 branch lemma로 환원된다.
-4. 최근 `058–061`에서 그 세 lemma조차 다시 압축된다:
-   small phase scheduler in `Theta = q+s+v+layer`,
-   then `B`-region invariance by bootstrap from local `B`-state dynamics plus
-   universal first-exit targets.
-
-즉, d=5는 “탐색 문제”에서 “boundary reset theorem 문제”로 바뀌었다.
+즉, d=5는 “탐색 문제”에서 먼저 “boundary reset theorem 문제”로 좁혀졌고,
+지금은 다시 한 번 더 압축되어
+**abstract bridge vs concrete globalization 문제** 로 정리되었다.
 
 ### 병행 formal checkpoint
 
 같은 시기에 `formal/`에서도 독립적인 checkpoint가 닫혔다.
 
-- `formal/TorusD3Odometer/Color1FullCaseII.lean`가 이제 Case-II counting,
-  `hfirst`, global dispatcher, full cycle theorem까지 닫는다
-- 따라서 `d=3` odometer color-1 Lean rewrite는 Case I / Case II 전체가 완결되었다
-- formal 쪽의 다음 질문은 “Case II가 되느냐”가 아니라
-  “이 강한 color-1 checkpoint에서 멈출지, color-0 full rewrite까지 갈지” 이다
+- `formal/TorusD3Even/`는 complete even Route E package가 되었다
+- `formal/TorusD3Odometer/Color2Full.lean`,
+  `Color1FullCaseI.lean`,
+  `Color1FullCaseII.lean`,
+  `Color0FullCaseI.lean`이 모두 complete 상태다
+- 현재 Lean frontier는 `formal/TorusD3Odometer/Color0FullCaseII.lean`이며,
+  남은 일은 upper special lanes와 Case-II `hreturn` / `hfirst` packaging이다
+- `formal/TorusD5/`는 full D5 proof branch가 아니라 extracted-model / spec
+  support branch로 유지되고 있다
 
 ### 이 phase의 의미
 
@@ -285,7 +291,7 @@ B=(s,u,v,\lambda,f),
 
 - `d=3`: 완성 manuscript
 - `d=4`: 완전 증명 + Lean formalization
-- `d=5`: theorem-shaped frontier 확보
+- `d=5`: theorem-shaped frontier를 넘어서, bridge/globalization frontier 확보
 
 그래서 현재 열린 건 단순히 “계산이 덜 된 case”가 아니라, 전체 프로그램의 마지막
 실질적 개념 병목이다.
@@ -302,9 +308,9 @@ B=(s,u,v,\lambda,f),
 | 3/7–8 | 원고 rework + 다단계 레프리 | 6/10 → 7.5/10 → 8/10 — **deductive surgery 서사** 확립 |
 | 3/9 AM | d=4 일반화 5시간 만에 완성 | line-union gauge + 2중 return map + odometer conjugacy — **D₄(m) 완전 증명** |
 | 3/9 12:00 | d=3 v6 개정 + d=4 v3 교차 검증 | Appendix B/Prop 13 확장, Prop 5–6 논리 갭 수정 — **양쪽 모두 완성** |
-| 3/9–13 | RoundY d=5 정제 | return-map extraction → finite cover → countdown carrier → boundary reset theorem target |
+| 3/9–14 | RoundY d=5 정제 | return-map extraction → finite cover → countdown carrier → phase-corner package → abstract bridge / globalization frontier |
 
-**열이틀 만에**: d=3 original theorem → 개념적 재구성 → publishable manuscript → d=4 완전 증명 + formalization → d=5 theorem-shaped frontier 정립까지.
+**열사흘 만에**: d=3 original theorem → 개념적 재구성 → publishable manuscript → d=4 완전 증명 + formalization → d=5 abstract-bridge / globalization frontier 정립까지.
 
 ---
 
