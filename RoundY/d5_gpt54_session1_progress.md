@@ -79,7 +79,7 @@ SymPy에 대해서는 이렇게 본다.
 
 정리 파일 두 개를 저장했다.
 
-* [진행 요약](sandbox:/mnt/data/d5_progress_update.md)
-* [m=5의 26-move Kempe witness](sandbox:/mnt/data/d5_m5_kempe_witness_26.json)
+* [진행 요약](./d5_progress_update.md)
+* [m=5의 26-move Kempe witness](./d5_m5_kempe_witness_26.json)
 
 다음 한 수는 분명하다: **이 26-move (m=5) witness를 ((q_c,w_c,v_c,u_c)) 상대 좌표계로 밀어 넣어, layer 1/2/3의 Boolean truth table로 압축하는 것**이다.

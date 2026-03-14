@@ -5,7 +5,7 @@ Hamilton decomposition of the directed `5`-torus
 `D_5(m) = Cay((Z_m)^5, {e_0, e_1, e_2, e_3, e_4})`.
 
 **Status:** `[O]` open.  
-**Current frontier:** after the `055–062` proof compression, the `063–067` clock-route sharpening, the `068` theorem packaging pass, the `069–070` exact-reduction cleanup, and the `071` marked-chain identification, the strongest theorem-side D5 draft is no longer the main open branch. `062` derives the universal first-exit targets directly from the explicit `H_{L1}` trigger theorem, the candidate active orbit, and a phase-`1` source-residue invariant; then `B`-region invariance, the global `Theta = q+s+v+layer` scheduler, and the boundary reset laws follow. `071` sharpens the remaining frontier further: **on each fixed regular slice, the first exact object is already a marked length-`m` chain and the intended class already sees the full affine chain coordinate there. The real remaining issue is the exact bridge across chains: can those per-chain exact quotients be normalized into one global exact quotient on which the canonical clock descends, or is the carry essentially asymmetric across chains?**
+**Current frontier:** after the `055–062` proof compression, the `063–067` clock-route sharpening, the `068` theorem packaging pass, the `069–071` bridge cleanup, the `072–073` decorated-bridge correction, and the `074` three-part refinement, the strongest theorem-side D5 draft is no longer the main open branch. The live target is now much narrower: **the likely exact global bridge is the dynamic boundary odometer `(beta,q,sigma)` / `(beta,delta)`, where the coarse bridge is settled, the bare `m`-state bridge is too coarse, the static decorated bridge is not splice-compatible, and the remaining work is to prove the dynamic bridge uniformly, integrate realization with it, and validate the accessible exact reduction object.**
 
 This README is the current top-level map. It replaces the older Session-20-only
 snapshot and is organized around the actual D5 branch progression through the
@@ -669,8 +669,22 @@ Use these together:
 - [`RoundY/theorem/d5_071_unified_bridge_handoff.md`](./theorem/d5_071_unified_bridge_handoff.md)
   for the current concentrated statement of the live D5 bottleneck: the exact
   bridge across chains
+- [`RoundY/theorem/d5_075_threeway_handoff.md`](./theorem/d5_075_threeway_handoff.md)
+  for the current canonical handoff after `074`: dynamic boundary-odometer
+  bridge, realization integration, and compute validation
 - [`RoundY/theorem/d5_071_four_researcher_questions.md`](./theorem/d5_071_four_researcher_questions.md)
   for the current split into four distinct collaborator questions
+- [`RoundY/theorem/d5_074_researcher1_bridge_request.md`](./theorem/d5_074_researcher1_bridge_request.md),
+  [`RoundY/theorem/d5_074_researcher2_symmetry_request.md`](./theorem/d5_074_researcher2_symmetry_request.md),
+  [`RoundY/theorem/d5_074_researcher3_realization_request.md`](./theorem/d5_074_researcher3_realization_request.md),
+  [`RoundY/theorem/d5_074_researcher4_compute_request.md`](./theorem/d5_074_researcher4_compute_request.md)
+  for the current per-researcher `074` handoff requests after the `073`
+  decorated-bridge correction
+- [`RoundY/theorem/d5_075_bridge_theorem_request.md`](./theorem/d5_075_bridge_theorem_request.md),
+  [`RoundY/theorem/d5_075_realization_integration_request.md`](./theorem/d5_075_realization_integration_request.md),
+  [`RoundY/theorem/d5_075_compute_validation_request.md`](./theorem/d5_075_compute_validation_request.md),
+  [`RoundY/theorem/d5_075_reviewer_brief.md`](./theorem/d5_075_reviewer_brief.md)
+  for the current reduced split into 3 active researchers plus 1 reviewer
 - [`RoundY/theorem/d5_first_exit_target_proof_062.md`](./theorem/d5_first_exit_target_proof_062.md)
   for the strengthened `062` draft deriving the universal first-exit targets
   directly from the explicit `H_{L1}` trigger theorem

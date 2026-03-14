@@ -124,9 +124,9 @@ f_3 \text{ 는 전체 } m^5 \text{ 꼭짓점 위의 Hamilton cycle}.
 
 업데이트한 자료는 여기 있다.
 
-* [progress note v5](sandbox:/mnt/data/d5_progress_note_v5.md)
-* [검증 스크립트](sandbox:/mnt/data/d5_color3_partial_theorem_check.py)
-* [검증 요약 JSON](sandbox:/mnt/data/d5_color3_partial_theorem_summary.json)
-* [기존 26-move witness](sandbox:/mnt/data/d5_m5_kempe_witness_26.json)
+* [progress note v5](./d5_progress_note_v5.md)
+* [검증 스크립트](./d5_color3_partial_theorem_check.py)
+* [검증 요약 JSON](./d5_color3_partial_theorem_summary.json)
+* [기존 26-move witness](./d5_m5_kempe_witness_26.json)
 
 다음은 **color 0/1/4의 first-return을 같은 방식으로 해체해서, 어디서 exact obstruction이 생기는지 분해**하겠다.

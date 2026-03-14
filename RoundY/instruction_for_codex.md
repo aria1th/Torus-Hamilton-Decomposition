@@ -12,12 +12,15 @@ Read in this order:
 
 1. [README.md](./README.md)
 2. [current-frontier-and-approach.md](./current-frontier-and-approach.md)
-3. [theorem/d5_071_unified_bridge_handoff.md](./theorem/d5_071_unified_bridge_handoff.md)
-4. [theorem/d5_071_four_researcher_questions.md](./theorem/d5_071_four_researcher_questions.md)
-5. [../DOCUMENT_FOR_EXTERNAL_REVIEW.md](../DOCUMENT_FOR_EXTERNAL_REVIEW.md)
+3. [theorem/d5_075_threeway_handoff.md](./theorem/d5_075_threeway_handoff.md)
+4. [theorem/d5_075_bridge_theorem_request.md](./theorem/d5_075_bridge_theorem_request.md)
+5. [theorem/d5_075_realization_integration_request.md](./theorem/d5_075_realization_integration_request.md)
+6. [theorem/d5_075_compute_validation_request.md](./theorem/d5_075_compute_validation_request.md)
+7. [theorem/d5_075_reviewer_brief.md](./theorem/d5_075_reviewer_brief.md)
+8. [../DOCUMENT_FOR_EXTERNAL_REVIEW.md](../DOCUMENT_FOR_EXTERNAL_REVIEW.md)
    Focus on `D23`, `D24`, `D25`, `D26`, `D27`, `D28`, `D29`, `D30`, `D31`,
    `D32`, `D33`, `D34`, `D35`, `D37`, `D38`, `D40`, `D42`, `D45`.
-6. [autonomous/d5_autonomous_perturbation_note_v25.md](./autonomous/d5_autonomous_perturbation_note_v25.md)
+9. [autonomous/d5_autonomous_perturbation_note_v25.md](./autonomous/d5_autonomous_perturbation_note_v25.md)
 
 Then read the key artifact READMEs in this order:
 
@@ -84,6 +87,7 @@ For the current theorem-side packaging around `047–062`, start with:
 16. [theorem/d5_070_minimal_handoff_for_069_readers.md](./theorem/d5_070_minimal_handoff_for_069_readers.md)
 17. [theorem/d5_071_unified_bridge_handoff.md](./theorem/d5_071_unified_bridge_handoff.md)
 18. [theorem/d5_071_four_researcher_questions.md](./theorem/d5_071_four_researcher_questions.md)
+19. [theorem/d5_075_threeway_handoff.md](./theorem/d5_075_threeway_handoff.md)
 
 These notes now spell out the actual top-level split:
 
@@ -99,6 +103,10 @@ These notes now spell out the actual top-level split:
   after `071`, the first exact per-chain marked-chain rule is mostly settled;
   the live missing link is whether those exact quotients globalize across
   chains, or whether the carry is essentially asymmetric
+- dynamic bridge:
+  after `074`, the best current exact object is the splice-compatible dynamic
+  bridge `(beta,q,sigma)` / `(beta,delta)`; the active work is now bridge
+  theorem, realization integration, and compute validation of that object
 - compute support:
   only reduction validation, accessible quotient validation, and
   `(B,beta)` exactness / drift stress tests
@@ -121,11 +129,10 @@ The honest remaining frontier is then:
 
 **the phase-corner theorem determines a canonical cyclic controller
 (`beta` in the current constructive gauge). On the lifted active corridor that
-same clock already exists as `beta = -Theta`. The first exact per-chain marked
-object is now largely identified. The live question is whether those per-chain
-exact quotients globalize to one exact quotient on which current `epsilon4`
-and the canonical clock descend, or whether the carry is essentially
-asymmetric across chains**
+same clock already exists as `beta = -Theta`. The likely exact global bridge is
+now the dynamic boundary odometer `(beta,q,sigma)` / `(beta,delta)`. The live
+question is to prove that bridge uniformly, integrate the realization theorem
+with it, and validate the accessible exact reduction object**
 
 `R1 -> H_L1`
 
