@@ -5,7 +5,7 @@ Hamilton decomposition of the directed `5`-torus
 `D_5(m) = Cay((Z_m)^5, {e_0, e_1, e_2, e_3, e_4})`.
 
 **Status:** `[O]` open.  
-**Current frontier:** after the `055–062` proof compression, the `063–067` clock-route sharpening, the `068` theorem packaging pass, the `069–071` bridge cleanup, the `072–073` decorated-bridge correction, and the `074` three-part refinement, the strongest theorem-side D5 draft is no longer the main open branch. The live target is now much narrower: **the likely exact global bridge is the dynamic boundary odometer `(beta,q,sigma)` / `(beta,delta)`, where the coarse bridge is settled, the bare `m`-state bridge is too coarse, the static decorated bridge is not splice-compatible, and the remaining work is to prove the dynamic bridge uniformly, integrate realization with it, and validate the accessible exact reduction object.**
+**Current frontier:** after the `075` bridge / realization / review round, the clean theorem-level bridge is now best stated as the abstract right-congruence object `(beta,rho)`, while the dynamic boundary odometer `(beta,q,sigma)` / `(beta,delta)` is the strongest checked coordinate model for it. So the live D5 target is now narrower still: **prove or disprove the concrete bridge identification `rho ≅ (q,sigma) ≅ delta`, prove the splice law and current-event readout uniformly, and settle whether the accessible image is the full `m^2` odometer or must first be stated abstractly.**
 
 This README is the current top-level map. It replaces the older Session-20-only
 snapshot and is organized around the actual D5 branch progression through the
@@ -42,9 +42,10 @@ is already a countdown carrier, the branch laws were compressed to `CJ` and
 region, and finally `062` removes the first-exit targets as an external
 structural input by deriving them from the explicit `H_{L1}` trigger law.
 So the live issue is no longer “what is the reduced model?” or even
-“where is the first exit?” but whether the canonical clock behind that phase
-machine can be descended / exposed in the intended local class, or forced by a
-rigidity theorem on the exact reduction object.
+“where is the first exit?” but whether the accepted abstract bridge
+`(beta,rho)` is globally realized by the concrete boundary odometer
+`(beta,q,sigma)` / `(beta,delta)`, or whether the final theorem must keep the
+bridge abstract globally.
 
 ## Brief Mathematical Summary
 
@@ -101,19 +102,19 @@ So the mathematical problem is now very narrow. The branch is no longer asking
 for a new witness or a broader search over tiny controllers. It is asking for
 three tightly linked pieces:
 
-- a clean final writeup / verification of the strengthened `062/068` theorem
-  package,
-- an exact reduction theorem isolating the marked chain/cycle and the intended
-  quotient on it,
-- a realization theorem showing the canonical clock descends on that quotient.
+- keep the structural theorem package `044–062` / `068` clean and explicit;
+- identify the final bridge safely as abstract `(beta,rho)` versus concrete
+  `(beta,q,sigma)` / `(beta,delta)`;
+- settle whether raw global `(beta,delta)` works on the full accessible union,
+  or only componentwise.
 
 For context, this is exactly the point where `d=5` now differs from the lower
 dimensions:
 
 - `d=3` already closes by direct or finite-defect odometer return maps;
 - `d=4` already closes by one more nested return and is fully machine-checked;
-- `d=5` already has the same theorem-shaped language, but the last local
-  anticipation obstruction is still open.
+- `d=5` already has the same theorem-shaped language, but the last bridge
+  globalization question is still open.
 
 ## Current proof strategy
 
@@ -159,48 +160,38 @@ That part is already done. The live theorem strategy is:
 So the proof is currently split into:
 
 - theorem package:
-  package `044–062` as the checked normal-form / phase-machine chain behind
-  the D5 mechanism, with `068` recording that this side now looks near-closed
-  in shape;
-- exact reduction / realization:
-  treat the remaining object as the canonical `beta` clock on the exact marked
-  chain/cycle, with reduction to that object first and clock descent on the
-  quotient second;
+  keep `044–062` / `068` as the checked normal-form / phase-machine chain, but
+  treat this side as near-stable rather than as the main open discovery branch;
+- bridge theorem / realization:
+  keep the theorem-level object abstract as `(beta,rho)` unless the concrete
+  identification with `(beta,q,sigma)` / `(beta,delta)` is actually proved;
 - compute support:
-  validate the exact reduction object and the exact reduction data, not broad
-  controller search.
+  test globalization, accessible-image closure, and component structure only,
+  not broad controller search.
 
 ## What To Do Now
 
 The recommended next work is:
 
-1. proof-first packaging:
-   treat `044–062` as one theorem chain:
-   finite-sheet normal form,
-   first carry-only no-go,
-   carry as an exact future-transition event,
-   boundary sharpening to `tau` plus a tiny correction,
-   countdown-carrier dynamics,
-   then the `058–062` phase-scheduler / first-exit / bootstrap reduction;
-2. make the immediate proof target explicit:
-   either finish and verify the `062` structural loop cleanly,
-   or move to the local/admissible coding question for `tau`;
-3. if any new search is opened, make it explicitly support that theorem
-   picture rather than reopening broad local-controller scans;
-4. do not reopen:
-   broad one-bit scans,
-   generic tiny-transducer widening on the old alphabet,
-   or more current-edge / short-transition carry catalogs unless they are
-   justified as real support for the phase-machine / bootstrap theorem.
+1. keep the theorem language safe at abstract `(beta,rho)` level while the
+   final bridge identification is still open;
+2. prove or disprove the globalization criterion:
+   whether the padded future current-event word depends only on realized
+   `delta`, not on the accessible component where it is realized;
+3. settle the theorem form of the accessible image:
+   abstract accessible image first, or direct full `m^2` odometer;
+4. if any new compute is opened, make it directly address fixed-`delta`
+   ambiguity, accessible components, or accessible-image closure.
 
 In short:
 
-- structural proof question:
-  can the `062` first-exit-target / bootstrap chain be finalized cleanly?
-- constructive question:
-  can the countdown carrier `tau` be coded admissibly?
-- no-go question:
-  if not, can that be proved for the current mechanism class?
+- bridge question:
+  is the abstract bridge `(beta,rho)` globally identified with raw
+  `(beta,delta)`?
+- structural question:
+  what are the true accessible splice-connected components?
+- compute question:
+  do repeated realized `delta` values ever carry different future words?
 
 ## Barrier evolution
 
@@ -224,11 +215,13 @@ The real story of RoundY is the bottleneck moving inward:
 16. `branch lemmas compressed to a small phase scheduler`
 17. `B-region invariance bootstrapped from local B-state dynamics plus first-exit targets`
 18. `first-exit targets derived from the explicit H_L1 trigger theorem`
-19. `current frontier: admissible/local coding of the countdown carrier tau, or a no-go theorem`
+19. `abstract bridge (beta,rho) isolated as the safe theorem object`
+20. `componentwise concrete bridge (beta,delta) accepted as the strongest checked model`
+21. `current frontier: does raw global (beta,delta) work without a component tag?`
 
 In short:
 
-`clean frame -> Latin -> return dynamics -> reduced normal form -> local realization -> orbit phase -> lifted-coordinate admissibility -> tiny finite-sheet cover -> carry-only admissibility no-go -> future-transition carry sheet -> exact checked-range carry coding -> countdown carrier`
+`clean frame -> Latin -> return dynamics -> reduced normal form -> local realization -> orbit phase -> lifted-coordinate admissibility -> tiny finite-sheet cover -> carry-only admissibility no-go -> future-transition carry sheet -> exact checked-range carry coding -> countdown carrier -> phase-corner machine -> abstract bridge -> globalization question`
 
 ## High-level progress map
 
@@ -343,7 +336,8 @@ Main outcome:
 
 ### `032–050`: best endpoint seed, defect quotient, corridor phase, static gate no-go, phase clarification, carrier target, birth-local split, exact raw birth formulas, realization boundary, first admissibility no-go, carry-slice / finite-cover extraction, first carry-only no-go, deep future-transition carry sheet, exact checked-range carry coding, countdown carrier, source-residue refinement, proof-support persistence
 
-This is the current live branch.
+This is the structural branch that leads into the current bridge/globalization
+frontier. It is no longer the whole live question by itself.
 
 - `032`:
   the best endpoint seed is isolated:
@@ -522,12 +516,14 @@ Main outcome:
   `rho`, but that is not the theorem-side minimal object.
 - The proof branch now has larger-modulus support for both the `048` reset law
   and the `047/048` witness family.
-- The remaining live local branch is admissible/local coding of that carrier.
+- Later theorem compression and bridge cleanup show that the remaining live
+  branch is no longer local coding of `tau` by itself, but the final bridge
+  identification and globalization question.
 - But the closed structural lift is still not just the carry bit.
 - So the missing admissibility ingredient is the smallest finite lifted sheet
   over the grouped base beyond current edge / `1`-step / `2`-step /
-  low-cardinality anchored-gauge data, now targeted specifically at `tau`
-  rather than a generic broader future sheet.
+  low-cardinality anchored-gauge data, now understood as part of the bridge
+  theorem rather than as a reopened local-controller search.
 
 ## Current picture
 
@@ -577,39 +573,35 @@ So the current question is not:
 - “does mixed dynamics exist?”
 - “can we guess another one-bit repair?”
 - “should we widen tiny transducer search again?”
+- “can we locally code `tau` in some ad hoc way?”
 
 It is:
 
-**what is the smallest admissible/local coding of the countdown carrier
-`tau`, now that the checked carry target is already reduced to
-`B + min(tau,8) + epsilon4`,
-the first exact transition-sheet coding is explicit,
-and the internal `tau` dynamics are already reduced to countdown plus reset?**
+**does the abstract bridge `(beta,rho)` globalize concretely as raw global
+`(beta,delta)` on the full accessible union, or does the final theorem need to
+stay abstract globally, with `(beta,delta)` valid only componentwise?**
 
 ## Current next branch
 
-After `050`, the honest next branch is:
+After `076/077`, the honest next branch is:
 
-1. package `044`, `045`, `046`, `047`, and `048` as one theorem chain:
-   grouped base, carry sheet, binary anticipation cover, first carry-catalog
-   no-go, exact future-transition carry event, the first exact checked-range
-   carry coding, and the countdown-carrier law for `tau`;
-2. keep `049` as a constructive refinement only:
-   use `(B,rho)` if it helps computation, but do not replace the theorem-side
-   minimal object `(B,tau,epsilon4)`;
-3. use `050` as proof support:
-   the reset law and the witness family now have larger-modulus backing
-   through `m=19`;
-4. only then ask for the next real local step:
-   an admissible/local coding of the countdown carrier `tau`, or a reduction
-   lemma showing the intended local class cannot code it.
+1. keep the theorem object abstract as `(beta,rho)` until the concrete bridge
+   identification is actually proved;
+2. determine whether `rho` depends only on realized `delta`, or on
+   `(component,delta)`;
+3. settle the accessible-image statement cleanly:
+   abstract image first, or direct full `m^2` odometer;
+4. use compute only for fixed-`delta` ambiguity, component structure, and
+   accessible-image closure.
 
 What is not recommended now:
 
 - reopening the first carry-only catalogs already killed by `045`,
 - broader one-bit scans,
 - generic `2`-state / `3`-state transducer widening on the same alphabet,
-- reopening static endpoint-word families without a phase-aware ingredient.
+- reopening static endpoint-word families without a phase-aware ingredient,
+- or treating the concrete odometer coordinates as theorem data before the
+  globalization question is settled.
 
 ## Recommended companion files
 
@@ -669,9 +661,19 @@ Use these together:
 - [`RoundY/theorem/d5_071_unified_bridge_handoff.md`](./theorem/d5_071_unified_bridge_handoff.md)
   for the current concentrated statement of the live D5 bottleneck: the exact
   bridge across chains
+- [`RoundY/theorem/d5_076_unified_handoff.md`](./theorem/d5_076_unified_handoff.md)
+  for the current canonical handoff after `075`: abstract bridge
+  `(beta,rho)`, best checked coordinate model `(beta,q,sigma)` /
+  `(beta,delta)`, and the narrowed D5 bridge-identification gap
+- [`RoundY/theorem/d5_077_globalization_handoff.md`](./theorem/d5_077_globalization_handoff.md)
+  for the current new-researcher handoff after accepting the `076` round:
+  componentwise bridge accepted, global raw-`delta` globalization still open
+- [`RoundY/theorem/d5_077_live_questions_and_tracks.md`](./theorem/d5_077_live_questions_and_tracks.md)
+  for the shortest current split of the globalization frontier into:
+  global component structure, the `rho(delta)` criterion, and targeted compute
 - [`RoundY/theorem/d5_075_threeway_handoff.md`](./theorem/d5_075_threeway_handoff.md)
-  for the current canonical handoff after `074`: dynamic boundary-odometer
-  bridge, realization integration, and compute validation
+  for the previous `075` split into bridge theorem, realization integration,
+  and compute validation before the theorem/support cleanup
 - [`RoundY/theorem/d5_071_four_researcher_questions.md`](./theorem/d5_071_four_researcher_questions.md)
   for the current split into four distinct collaborator questions
 - [`RoundY/theorem/d5_074_researcher1_bridge_request.md`](./theorem/d5_074_researcher1_bridge_request.md),
@@ -817,6 +819,10 @@ two-route proof program around the same reduced object.
 | `055` | **boundary-reset proof support extended**: on `m=21,23`, the `carry_jump` formula, the raw identity `q = 1-s-v-layer`, the `other`-branch subtype law, and `wrap -> 0` all remain exact, so the uniform positive route really does reduce to branch lemmas |
 | `059B` | **safe larger-modulus branch support**: branch-local validation through `m=25,27,29` confirms the active branch stays in `B`, the phase scheduler agrees with the raw `037` corridor law, and the universal first-exit targets persist |
 | `062` | **first-exit targets internalized**: the universal `H_{L1}` exit targets are derived directly from the explicit defect-family formula from `033`, the candidate orbit, and the phase-`1` source-residue invariant; then `B`-region invariance, the global phase scheduler, and the reset laws follow |
+| `068` | **theorem package organized**: the `044–062` normal-form / phase-machine chain is treated as near-stable in shape rather than as the main open discovery branch |
+| `071` | **per-chain bridge sharpened**: on each fixed regular slice, the first exact object is already a marked length-`m` chain; the remaining issue is the bridge across chains |
+| `076` | **safe theorem/support split**: the abstract bridge `(beta,rho)` is the safest theorem object, while `(beta,q,sigma)` / `(beta,delta)` is the strongest checked concrete model |
+| `077` | **globalization question isolated**: componentwise concrete bridge is accepted, and the live open question is whether raw global `(beta,delta)` works without a component tag |
 
 ## Claim labels
 
@@ -853,15 +859,23 @@ The newest proof-side compression is:
 - and `062` suggests even those first-exit targets are not a separate input,
   but part of the same structural chain.
 
+The newest bridge-side cleanup is:
+
+- keep the theorem-level bridge abstract as `(beta,rho)`,
+- treat `(beta,q,sigma)` / `(beta,delta)` as the strongest checked concrete
+  chart,
+- and ask only whether raw global `delta` already determines the future
+  current-event word on the full accessible union.
+
 The d=5 theorem narrative:
 
 | d | Structure |
 |---|---|
 | 3 | solved: odometer / finite-defect odometer return maps |
 | 4 | solved + Lean-formalized: affine / second-return odometer |
-| 5 | grouped base + carry sheet + binary anticipation cover |
+| 5 | abstract bridge `(beta,rho)` + componentwise concrete odometer `(beta,delta)`; globalization open |
 
 Next branches:
 
-1. **Proof / theorem side:** formalize and write the `044–048` chain cleanly, using `050` only as larger-modulus support.
-2. **Constructive compute side:** if search reopens, either target an admissible/local coding of the countdown carrier `tau`, or explicitly pursue the stronger `rho`-transport route from `049`.
+1. **Proof / theorem side:** keep the final theorem language at abstract `(beta,rho)` level unless the concrete identification is actually proved.
+2. **Constructive / compute side:** test the globalization criterion directly by fixed-`delta` ambiguity, accessible component structure, and accessible-image closure.

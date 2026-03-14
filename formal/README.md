@@ -1,31 +1,25 @@
 # Torus Lean Formalization
 
-This directory is a standalone Lean 4 + mathlib project.
+This directory is a standalone Lean 4 + mathlib project for the formal side of
+the low-dimensional torus program.
 
-Its current verified core is the `d=4` Hamilton decomposition proof.
+## Current verified status
 
-For the current `d=5` frontier and the recommended Lean role after artifact
-`D5-RETURN-MAP-MODEL-017`, see:
+- `TorusD4/`: complete `d=4` Hamilton decomposition formalization.
+- `TorusD3Even/`: complete even-`d=3` Route E package.
+- `TorusD3Odometer/`: active `d=3` odometer rewrite. The current completed
+  files are `Color2Full.lean`, `Color1FullCaseI.lean`,
+  `Color1FullCaseII.lean`, and `Color0FullCaseI.lean`. The live frontier is
+  `Color0FullCaseII.lean`.
+- `TorusD5/`: extracted-model support only. This is not the main D5 proof
+  frontier; see `README-D5.md` and `D5_LEAN_PROGRESS.md`.
 
-- `README-D5.md`
+## What to read
 
-## Current scope
-
-The current formalization covers:
-
-- the torus point model `Fin 4 -> ZMod m`,
-- the explicit line-union witness as a permutation-valued rule,
-- the `P_0` parameterization `phi`,
-- the explicit return-map formulas `R0`-`R3` and `T0`-`T3`,
-- the odometer model,
-- the affine conjugacy lemmas `psi0_conj`-`psi3_conj`.
-
-The next proof targets are:
-
-- the odometer single-cycle theorem,
-- the lift from `Q` to `P_0`,
-- the lift from `P_0` to the full torus,
-- linking the explicit witness to the closed-form `R_c` formulas.
+- `README-D5.md` for the current D5 theorem/support split and the recommended
+  Lean role.
+- `D5_LEAN_PROGRESS.md` for the exact current `TorusD5/` implementation state.
+- `../RoundY/README.md` for the live research frontier.
 
 ## CLI workflow
 
@@ -37,20 +31,41 @@ source "$HOME/.elan/env"
 lake build
 ```
 
-Check a single file:
+Build focused targets:
 
 ```bash
 cd formal
 source "$HOME/.elan/env"
-lake env lean TorusD4/Basic.lean
-lake env lean TorusD4/ReturnMaps.lean
+lake build TorusD3Odometer
+lake build TorusD5
 ```
 
-## File layout
+Check active files directly:
 
-- `TorusD4/Basic.lean`
-  core types, witness, bump maps, and `phi`
-- `TorusD4/ReturnMaps.lean`
-  explicit `R`/`T` formulas, odometer, and conjugacy lemmas
+```bash
+cd formal
+source "$HOME/.elan/env"
+lake env lean TorusD3Odometer/Color0FullCaseII.lean
+lake env lean TorusD5/GroupedReturn.lean
+```
+
+## Directory layout
+
+- `TorusD3Even/`
+  even-`d=3` Route E formalization
+- `TorusD3Odd/`
+  odd-`d=3` return-map and cycle library
+- `TorusD3Odometer/`
+  full-map odometer rewrite for `d=3`
+- `TorusD4/`
+  complete `d=4` return-map / second-return / lift formalization
+- `TorusD5/`
+  extracted-model and specification scaffold for D5
+
+Top-level umbrella imports:
+
+- `TorusD3Even.lean`
+- `TorusD3Odd.lean`
+- `TorusD3Odometer.lean`
 - `TorusD4.lean`
-  umbrella import for the library
+- `TorusD5.lean`

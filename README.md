@@ -6,9 +6,9 @@ torus Hamilton decompositions:
 - `d=3`: solved manuscript for all `m >= 3`
 - `d=4`: solved in the same return-map / odometer language, with Lean
   formalization
-- `d=5`: active frontier, currently reduced to a boundary-reset / countdown
-  carrier theorem problem, with the proof side now compressed further to a
-  phase-scheduler / bootstrap theorem route
+- `d=5`: active frontier, currently reduced to an exact-bridge /
+  globalization question: abstract bridge `(beta,rho)` versus the strongest
+  checked concrete model `(beta,q,sigma)` / `(beta,delta)`
 
 The original core manuscript in this bundle is:
 
@@ -22,7 +22,8 @@ The repo is no longer just the original `d=3` manuscript bundle.
 - `tex/` and the main manuscript files still center the finished `d=3` paper
 - `RoundX/` contains the finished `d=4` proof program
 - `formal/` contains the Lean development, including a complete `d=4`
-  formalization and a now-complete `d=3` odometer color-1 checkpoint
+  formalization, a complete `d=3` even Route E package, an active `d=3`
+  odometer rewrite, and conservative `d=5` extracted-model support
 - `RoundY/` contains the live `d=5` frontier
 
 For the current research-facing status, start with:
@@ -30,6 +31,7 @@ For the current research-facing status, start with:
 - [RESEARCH_HIGHLIGHTS.md](RESEARCH_HIGHLIGHTS.md)
 - [RESEARCH_PROGRESSION.md](RESEARCH_PROGRESSION.md)
 - [RoundY/README.md](RoundY/README.md)
+- [formal/README.md](formal/README.md)
 
 ## Context
 
@@ -94,6 +96,9 @@ mathematical treatment for all `m >= 3`, including:
 │
 ├── formal/                   ← Lean formalization
 │   ├── README.md
+│   ├── TorusD3Even/
+│   ├── TorusD3Odd/
+│   ├── TorusD3Odometer/
 │   ├── TorusD4/
 │   └── TorusD5/
 │
@@ -149,26 +154,34 @@ See `RESEARCH_PROGRESSION.md` for the full narrative of how this was discovered.
 
 The `RoundY/` directory contains the current `d=5` research frontier.
 This case is still open, but the question is now much narrower than a generic
-search problem. The active theorem-side object is a finite-cover normal form
-with a countdown carrier and a boundary reset law.
+search problem. The theorem-level bridge is now best stated as the abstract
+right-congruence object `(beta,rho)`, the strongest checked concrete model is
+the dynamic boundary odometer `(beta,q,sigma)` / `(beta,delta)`, and the
+remaining gap is whether raw global `(beta,delta)` works on the full
+accessible union or only componentwise.
 
 Start with:
 
 - `RoundY/README.md`
 - `RoundY/current-frontier-and-approach.md`
-- `RoundY/theorem/`
+- `RoundY/theorem/d5_076_unified_handoff.md`
+- `RoundY/theorem/d5_077_globalization_handoff.md`
 
 ## Lean formalization checkpoint
 
 The `formal/` tree now contains:
 
 - a complete `d=4` formalization;
-- a complete `d=3` odometer color-1 rewrite through both Case I and Case II;
-- the early extracted-model scaffolding for `d=5`.
+- a complete `d=3` even Route E package;
+- an active `d=3` odometer rewrite, with `Color2Full`, `Color1FullCaseI`,
+  `Color1FullCaseII`, and `Color0FullCaseI` complete, while
+  `Color0FullCaseII` is the current frontier;
+- the extracted-model / specification scaffolding for `d=5`.
 
-So the live formal scope question is no longer whether the Case-II color-1
-odometer package closes. It does. The next scope decision is whether to stop at
-that strong `d=3` checkpoint or continue to a larger color-0 rewrite.
+So the live formal scope question is no longer whether the color-1 odometer
+rewrite closes. It does. The active `d=3` Lean frontier is now the remaining
+upper-lane and dispatcher work in color-0 Case II, while `d=5` Lean remains a
+support/specification branch rather than the main research frontier.
 
 ## Research progression
 
@@ -178,7 +191,8 @@ chronological account of the full research arc, including:
 - AI-assisted proof restructuring (orbit tracing → height comparison → finite splice)
 - Multi-stage referee feedback loop (6/10 → 8/10)
 - d=4 generalization breakthrough
-- d=5 reduction from broad search to the countdown-carrier / boundary-reset frontier
+- d=5 reduction from broad search to the current abstract-bridge /
+  globalization frontier
 
 ## AI tooling disclosure
 
