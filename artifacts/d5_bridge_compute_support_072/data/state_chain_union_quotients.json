@@ -1,0 +1,2685 @@
+{
+  "candidates": {
+    "beta": {
+      "combined": {
+        "determinism": {
+          "deterministic": true,
+          "first_failure": null
+        },
+        "epsilon4": {
+          "exact": false,
+          "first_collision": {
+            "key": [
+              5,
+              3
+            ],
+            "rows": [
+              {
+                "a": 0,
+                "b": 0,
+                "beta": 3,
+                "epsilon4": "flat",
+                "m": 5,
+                "q0": 0,
+                "sigma": 3,
+                "source_u": 1,
+                "terminal": false,
+                "value": "flat",
+                "w0": 2
+              },
+              {
+                "a": 1,
+                "b": 1,
+                "beta": 3,
+                "epsilon4": "other",
+                "m": 5,
+                "q0": 4,
+                "sigma": 3,
+                "source_u": 1,
+                "terminal": false,
+                "value": "other",
+                "w0": 2
+              }
+            ],
+            "values": [
+              "flat",
+              "other"
+            ]
+          },
+          "quotient_size": 32
+        },
+        "short_corner": {
+          "exact": false,
+          "first_collision": {
+            "key": [
+              5,
+              3
+            ],
+            "rows": [
+              {
+                "a": 0,
+                "b": 0,
+                "beta": 3,
+                "epsilon4": "flat",
+                "m": 5,
+                "next_beta": 2,
+                "next_epsilon4": "flat",
+                "q0": 0,
+                "short_corner": 0,
+                "sigma": 3,
+                "source_u": 1,
+                "terminal": false,
+                "value": 0,
+                "w0": 2
+              },
+              {
+                "a": 0,
+                "b": 1,
+                "beta": 3,
+                "epsilon4": "flat",
+                "m": 5,
+                "next_beta": 2,
+                "next_epsilon4": "other",
+                "q0": 3,
+                "short_corner": 1,
+                "sigma": 3,
+                "source_u": 1,
+                "terminal": false,
+                "value": 1,
+                "w0": 2
+              }
+            ],
+            "values": [
+              0,
+              1
+            ]
+          },
+          "quotient_size": 28
+        }
+      },
+      "per_modulus": {
+        "11": {
+          "determinism": {
+            "deterministic": true,
+            "first_failure": null
+          },
+          "epsilon4": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                11,
+                9
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 9,
+                  "epsilon4": "flat",
+                  "m": 11,
+                  "q0": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "flat",
+                  "w0": 2
+                },
+                {
+                  "a": 1,
+                  "b": 1,
+                  "beta": 9,
+                  "epsilon4": "other",
+                  "m": 11,
+                  "q0": 10,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "other",
+                  "w0": 2
+                }
+              ],
+              "values": [
+                "flat",
+                "other"
+              ]
+            },
+            "quotient_size": 11
+          },
+          "short_corner": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                11,
+                9
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 9,
+                  "epsilon4": "flat",
+                  "m": 11,
+                  "next_beta": 8,
+                  "next_epsilon4": "flat",
+                  "q0": 0,
+                  "short_corner": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 0,
+                  "w0": 2
+                },
+                {
+                  "a": 0,
+                  "b": 1,
+                  "beta": 9,
+                  "epsilon4": "flat",
+                  "m": 11,
+                  "next_beta": 8,
+                  "next_epsilon4": "other",
+                  "q0": 9,
+                  "short_corner": 1,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 1,
+                  "w0": 2
+                }
+              ],
+              "values": [
+                0,
+                1
+              ]
+            },
+            "quotient_size": 10
+          }
+        },
+        "5": {
+          "determinism": {
+            "deterministic": true,
+            "first_failure": null
+          },
+          "epsilon4": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                5,
+                3
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 3,
+                  "epsilon4": "flat",
+                  "m": 5,
+                  "q0": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "flat",
+                  "w0": 2
+                },
+                {
+                  "a": 1,
+                  "b": 1,
+                  "beta": 3,
+                  "epsilon4": "other",
+                  "m": 5,
+                  "q0": 4,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "other",
+                  "w0": 2
+                }
+              ],
+              "values": [
+                "flat",
+                "other"
+              ]
+            },
+            "quotient_size": 5
+          },
+          "short_corner": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                5,
+                3
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 3,
+                  "epsilon4": "flat",
+                  "m": 5,
+                  "next_beta": 2,
+                  "next_epsilon4": "flat",
+                  "q0": 0,
+                  "short_corner": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 0,
+                  "w0": 2
+                },
+                {
+                  "a": 0,
+                  "b": 1,
+                  "beta": 3,
+                  "epsilon4": "flat",
+                  "m": 5,
+                  "next_beta": 2,
+                  "next_epsilon4": "other",
+                  "q0": 3,
+                  "short_corner": 1,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 1,
+                  "w0": 2
+                }
+              ],
+              "values": [
+                0,
+                1
+              ]
+            },
+            "quotient_size": 4
+          }
+        },
+        "7": {
+          "determinism": {
+            "deterministic": true,
+            "first_failure": null
+          },
+          "epsilon4": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                7,
+                5
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 5,
+                  "epsilon4": "flat",
+                  "m": 7,
+                  "q0": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "flat",
+                  "w0": 2
+                },
+                {
+                  "a": 1,
+                  "b": 1,
+                  "beta": 5,
+                  "epsilon4": "other",
+                  "m": 7,
+                  "q0": 6,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "other",
+                  "w0": 2
+                }
+              ],
+              "values": [
+                "flat",
+                "other"
+              ]
+            },
+            "quotient_size": 7
+          },
+          "short_corner": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                7,
+                5
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 5,
+                  "epsilon4": "flat",
+                  "m": 7,
+                  "next_beta": 4,
+                  "next_epsilon4": "flat",
+                  "q0": 0,
+                  "short_corner": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 0,
+                  "w0": 2
+                },
+                {
+                  "a": 0,
+                  "b": 1,
+                  "beta": 5,
+                  "epsilon4": "flat",
+                  "m": 7,
+                  "next_beta": 4,
+                  "next_epsilon4": "other",
+                  "q0": 5,
+                  "short_corner": 1,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 1,
+                  "w0": 2
+                }
+              ],
+              "values": [
+                0,
+                1
+              ]
+            },
+            "quotient_size": 6
+          }
+        },
+        "9": {
+          "determinism": {
+            "deterministic": true,
+            "first_failure": null
+          },
+          "epsilon4": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                9,
+                7
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 7,
+                  "epsilon4": "flat",
+                  "m": 9,
+                  "q0": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "flat",
+                  "w0": 2
+                },
+                {
+                  "a": 1,
+                  "b": 1,
+                  "beta": 7,
+                  "epsilon4": "other",
+                  "m": 9,
+                  "q0": 8,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "other",
+                  "w0": 2
+                }
+              ],
+              "values": [
+                "flat",
+                "other"
+              ]
+            },
+            "quotient_size": 9
+          },
+          "short_corner": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                9,
+                7
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 7,
+                  "epsilon4": "flat",
+                  "m": 9,
+                  "next_beta": 6,
+                  "next_epsilon4": "flat",
+                  "q0": 0,
+                  "short_corner": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 0,
+                  "w0": 2
+                },
+                {
+                  "a": 0,
+                  "b": 1,
+                  "beta": 7,
+                  "epsilon4": "flat",
+                  "m": 9,
+                  "next_beta": 6,
+                  "next_epsilon4": "other",
+                  "q0": 7,
+                  "short_corner": 1,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 1,
+                  "w0": 2
+                }
+              ],
+              "values": [
+                0,
+                1
+              ]
+            },
+            "quotient_size": 8
+          }
+        }
+      }
+    },
+    "beta_plus_a": {
+      "combined": {
+        "determinism": {
+          "deterministic": true,
+          "first_failure": null
+        },
+        "epsilon4": {
+          "exact": false,
+          "first_collision": {
+            "key": [
+              5,
+              2,
+              0
+            ],
+            "rows": [
+              {
+                "a": 0,
+                "b": 0,
+                "beta": 2,
+                "epsilon4": "flat",
+                "m": 5,
+                "q0": 0,
+                "sigma": 3,
+                "source_u": 1,
+                "terminal": false,
+                "value": "flat",
+                "w0": 2
+              },
+              {
+                "a": 0,
+                "b": 1,
+                "beta": 2,
+                "epsilon4": "other",
+                "m": 5,
+                "q0": 3,
+                "sigma": 3,
+                "source_u": 1,
+                "terminal": false,
+                "value": "other",
+                "w0": 2
+              }
+            ],
+            "values": [
+              "flat",
+              "other"
+            ]
+          },
+          "quotient_size": 64
+        },
+        "short_corner": {
+          "exact": false,
+          "first_collision": {
+            "key": [
+              5,
+              3,
+              0
+            ],
+            "rows": [
+              {
+                "a": 0,
+                "b": 0,
+                "beta": 3,
+                "epsilon4": "flat",
+                "m": 5,
+                "next_beta": 2,
+                "next_epsilon4": "flat",
+                "q0": 0,
+                "short_corner": 0,
+                "sigma": 3,
+                "source_u": 1,
+                "terminal": false,
+                "value": 0,
+                "w0": 2
+              },
+              {
+                "a": 0,
+                "b": 1,
+                "beta": 3,
+                "epsilon4": "flat",
+                "m": 5,
+                "next_beta": 2,
+                "next_epsilon4": "other",
+                "q0": 3,
+                "short_corner": 1,
+                "sigma": 3,
+                "source_u": 1,
+                "terminal": false,
+                "value": 1,
+                "w0": 2
+              }
+            ],
+            "values": [
+              0,
+              1
+            ]
+          },
+          "quotient_size": 56
+        }
+      },
+      "per_modulus": {
+        "11": {
+          "determinism": {
+            "deterministic": true,
+            "first_failure": null
+          },
+          "epsilon4": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                11,
+                8,
+                0
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 8,
+                  "epsilon4": "flat",
+                  "m": 11,
+                  "q0": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "flat",
+                  "w0": 2
+                },
+                {
+                  "a": 0,
+                  "b": 1,
+                  "beta": 8,
+                  "epsilon4": "other",
+                  "m": 11,
+                  "q0": 9,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "other",
+                  "w0": 2
+                }
+              ],
+              "values": [
+                "flat",
+                "other"
+              ]
+            },
+            "quotient_size": 22
+          },
+          "short_corner": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                11,
+                9,
+                0
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 9,
+                  "epsilon4": "flat",
+                  "m": 11,
+                  "next_beta": 8,
+                  "next_epsilon4": "flat",
+                  "q0": 0,
+                  "short_corner": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 0,
+                  "w0": 2
+                },
+                {
+                  "a": 0,
+                  "b": 1,
+                  "beta": 9,
+                  "epsilon4": "flat",
+                  "m": 11,
+                  "next_beta": 8,
+                  "next_epsilon4": "other",
+                  "q0": 9,
+                  "short_corner": 1,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 1,
+                  "w0": 2
+                }
+              ],
+              "values": [
+                0,
+                1
+              ]
+            },
+            "quotient_size": 20
+          }
+        },
+        "5": {
+          "determinism": {
+            "deterministic": true,
+            "first_failure": null
+          },
+          "epsilon4": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                5,
+                2,
+                0
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 2,
+                  "epsilon4": "flat",
+                  "m": 5,
+                  "q0": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "flat",
+                  "w0": 2
+                },
+                {
+                  "a": 0,
+                  "b": 1,
+                  "beta": 2,
+                  "epsilon4": "other",
+                  "m": 5,
+                  "q0": 3,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "other",
+                  "w0": 2
+                }
+              ],
+              "values": [
+                "flat",
+                "other"
+              ]
+            },
+            "quotient_size": 10
+          },
+          "short_corner": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                5,
+                3,
+                0
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 3,
+                  "epsilon4": "flat",
+                  "m": 5,
+                  "next_beta": 2,
+                  "next_epsilon4": "flat",
+                  "q0": 0,
+                  "short_corner": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 0,
+                  "w0": 2
+                },
+                {
+                  "a": 0,
+                  "b": 1,
+                  "beta": 3,
+                  "epsilon4": "flat",
+                  "m": 5,
+                  "next_beta": 2,
+                  "next_epsilon4": "other",
+                  "q0": 3,
+                  "short_corner": 1,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 1,
+                  "w0": 2
+                }
+              ],
+              "values": [
+                0,
+                1
+              ]
+            },
+            "quotient_size": 8
+          }
+        },
+        "7": {
+          "determinism": {
+            "deterministic": true,
+            "first_failure": null
+          },
+          "epsilon4": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                7,
+                4,
+                0
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 4,
+                  "epsilon4": "flat",
+                  "m": 7,
+                  "q0": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "flat",
+                  "w0": 2
+                },
+                {
+                  "a": 0,
+                  "b": 1,
+                  "beta": 4,
+                  "epsilon4": "other",
+                  "m": 7,
+                  "q0": 5,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "other",
+                  "w0": 2
+                }
+              ],
+              "values": [
+                "flat",
+                "other"
+              ]
+            },
+            "quotient_size": 14
+          },
+          "short_corner": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                7,
+                5,
+                0
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 5,
+                  "epsilon4": "flat",
+                  "m": 7,
+                  "next_beta": 4,
+                  "next_epsilon4": "flat",
+                  "q0": 0,
+                  "short_corner": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 0,
+                  "w0": 2
+                },
+                {
+                  "a": 0,
+                  "b": 1,
+                  "beta": 5,
+                  "epsilon4": "flat",
+                  "m": 7,
+                  "next_beta": 4,
+                  "next_epsilon4": "other",
+                  "q0": 5,
+                  "short_corner": 1,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 1,
+                  "w0": 2
+                }
+              ],
+              "values": [
+                0,
+                1
+              ]
+            },
+            "quotient_size": 12
+          }
+        },
+        "9": {
+          "determinism": {
+            "deterministic": true,
+            "first_failure": null
+          },
+          "epsilon4": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                9,
+                6,
+                0
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 6,
+                  "epsilon4": "flat",
+                  "m": 9,
+                  "q0": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "flat",
+                  "w0": 2
+                },
+                {
+                  "a": 0,
+                  "b": 1,
+                  "beta": 6,
+                  "epsilon4": "other",
+                  "m": 9,
+                  "q0": 7,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "other",
+                  "w0": 2
+                }
+              ],
+              "values": [
+                "flat",
+                "other"
+              ]
+            },
+            "quotient_size": 18
+          },
+          "short_corner": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                9,
+                7,
+                0
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 7,
+                  "epsilon4": "flat",
+                  "m": 9,
+                  "next_beta": 6,
+                  "next_epsilon4": "flat",
+                  "q0": 0,
+                  "short_corner": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 0,
+                  "w0": 2
+                },
+                {
+                  "a": 0,
+                  "b": 1,
+                  "beta": 7,
+                  "epsilon4": "flat",
+                  "m": 9,
+                  "next_beta": 6,
+                  "next_epsilon4": "other",
+                  "q0": 7,
+                  "short_corner": 1,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 1,
+                  "w0": 2
+                }
+              ],
+              "values": [
+                0,
+                1
+              ]
+            },
+            "quotient_size": 16
+          }
+        }
+      }
+    },
+    "beta_plus_ab": {
+      "combined": {
+        "determinism": {
+          "deterministic": true,
+          "first_failure": null
+        },
+        "epsilon4": {
+          "exact": true,
+          "first_collision": null,
+          "quotient_size": 128
+        },
+        "short_corner": {
+          "exact": true,
+          "first_collision": null,
+          "quotient_size": 112
+        }
+      },
+      "per_modulus": {
+        "11": {
+          "determinism": {
+            "deterministic": true,
+            "first_failure": null
+          },
+          "epsilon4": {
+            "exact": true,
+            "first_collision": null,
+            "quotient_size": 44
+          },
+          "short_corner": {
+            "exact": true,
+            "first_collision": null,
+            "quotient_size": 40
+          }
+        },
+        "5": {
+          "determinism": {
+            "deterministic": true,
+            "first_failure": null
+          },
+          "epsilon4": {
+            "exact": true,
+            "first_collision": null,
+            "quotient_size": 20
+          },
+          "short_corner": {
+            "exact": true,
+            "first_collision": null,
+            "quotient_size": 16
+          }
+        },
+        "7": {
+          "determinism": {
+            "deterministic": true,
+            "first_failure": null
+          },
+          "epsilon4": {
+            "exact": true,
+            "first_collision": null,
+            "quotient_size": 28
+          },
+          "short_corner": {
+            "exact": true,
+            "first_collision": null,
+            "quotient_size": 24
+          }
+        },
+        "9": {
+          "determinism": {
+            "deterministic": true,
+            "first_failure": null
+          },
+          "epsilon4": {
+            "exact": true,
+            "first_collision": null,
+            "quotient_size": 36
+          },
+          "short_corner": {
+            "exact": true,
+            "first_collision": null,
+            "quotient_size": 32
+          }
+        }
+      }
+    },
+    "beta_plus_b": {
+      "combined": {
+        "determinism": {
+          "deterministic": true,
+          "first_failure": null
+        },
+        "epsilon4": {
+          "exact": false,
+          "first_collision": {
+            "key": [
+              5,
+              3,
+              0
+            ],
+            "rows": [
+              {
+                "a": 0,
+                "b": 0,
+                "beta": 3,
+                "epsilon4": "flat",
+                "m": 5,
+                "q0": 0,
+                "sigma": 3,
+                "source_u": 1,
+                "terminal": false,
+                "value": "flat",
+                "w0": 2
+              },
+              {
+                "a": 1,
+                "b": 0,
+                "beta": 3,
+                "epsilon4": "other",
+                "m": 5,
+                "q0": 4,
+                "sigma": 1,
+                "source_u": 4,
+                "terminal": false,
+                "value": "other",
+                "w0": 2
+              }
+            ],
+            "values": [
+              "flat",
+              "other"
+            ]
+          },
+          "quotient_size": 64
+        },
+        "short_corner": {
+          "exact": false,
+          "first_collision": {
+            "key": [
+              5,
+              3,
+              1
+            ],
+            "rows": [
+              {
+                "a": 0,
+                "b": 1,
+                "beta": 3,
+                "epsilon4": "flat",
+                "m": 5,
+                "next_beta": 2,
+                "next_epsilon4": "other",
+                "q0": 3,
+                "short_corner": 1,
+                "sigma": 3,
+                "source_u": 1,
+                "terminal": false,
+                "value": 1,
+                "w0": 2
+              },
+              {
+                "a": 1,
+                "b": 1,
+                "beta": 3,
+                "epsilon4": "other",
+                "m": 5,
+                "next_beta": 2,
+                "next_epsilon4": "other",
+                "q0": 4,
+                "short_corner": 0,
+                "sigma": 3,
+                "source_u": 1,
+                "terminal": false,
+                "value": 0,
+                "w0": 2
+              }
+            ],
+            "values": [
+              0,
+              1
+            ]
+          },
+          "quotient_size": 56
+        }
+      },
+      "per_modulus": {
+        "11": {
+          "determinism": {
+            "deterministic": true,
+            "first_failure": null
+          },
+          "epsilon4": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                11,
+                9,
+                0
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 9,
+                  "epsilon4": "flat",
+                  "m": 11,
+                  "q0": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "flat",
+                  "w0": 2
+                },
+                {
+                  "a": 1,
+                  "b": 0,
+                  "beta": 9,
+                  "epsilon4": "other",
+                  "m": 11,
+                  "q0": 10,
+                  "sigma": 1,
+                  "source_u": 4,
+                  "terminal": false,
+                  "value": "other",
+                  "w0": 8
+                }
+              ],
+              "values": [
+                "flat",
+                "other"
+              ]
+            },
+            "quotient_size": 22
+          },
+          "short_corner": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                11,
+                9,
+                1
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 1,
+                  "beta": 9,
+                  "epsilon4": "flat",
+                  "m": 11,
+                  "next_beta": 8,
+                  "next_epsilon4": "other",
+                  "q0": 9,
+                  "short_corner": 1,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 1,
+                  "w0": 2
+                },
+                {
+                  "a": 1,
+                  "b": 1,
+                  "beta": 9,
+                  "epsilon4": "other",
+                  "m": 11,
+                  "next_beta": 8,
+                  "next_epsilon4": "other",
+                  "q0": 10,
+                  "short_corner": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 0,
+                  "w0": 2
+                }
+              ],
+              "values": [
+                0,
+                1
+              ]
+            },
+            "quotient_size": 20
+          }
+        },
+        "5": {
+          "determinism": {
+            "deterministic": true,
+            "first_failure": null
+          },
+          "epsilon4": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                5,
+                3,
+                0
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 3,
+                  "epsilon4": "flat",
+                  "m": 5,
+                  "q0": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "flat",
+                  "w0": 2
+                },
+                {
+                  "a": 1,
+                  "b": 0,
+                  "beta": 3,
+                  "epsilon4": "other",
+                  "m": 5,
+                  "q0": 4,
+                  "sigma": 1,
+                  "source_u": 4,
+                  "terminal": false,
+                  "value": "other",
+                  "w0": 2
+                }
+              ],
+              "values": [
+                "flat",
+                "other"
+              ]
+            },
+            "quotient_size": 10
+          },
+          "short_corner": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                5,
+                3,
+                1
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 1,
+                  "beta": 3,
+                  "epsilon4": "flat",
+                  "m": 5,
+                  "next_beta": 2,
+                  "next_epsilon4": "other",
+                  "q0": 3,
+                  "short_corner": 1,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 1,
+                  "w0": 2
+                },
+                {
+                  "a": 1,
+                  "b": 1,
+                  "beta": 3,
+                  "epsilon4": "other",
+                  "m": 5,
+                  "next_beta": 2,
+                  "next_epsilon4": "other",
+                  "q0": 4,
+                  "short_corner": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 0,
+                  "w0": 2
+                }
+              ],
+              "values": [
+                0,
+                1
+              ]
+            },
+            "quotient_size": 8
+          }
+        },
+        "7": {
+          "determinism": {
+            "deterministic": true,
+            "first_failure": null
+          },
+          "epsilon4": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                7,
+                5,
+                0
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 5,
+                  "epsilon4": "flat",
+                  "m": 7,
+                  "q0": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "flat",
+                  "w0": 2
+                },
+                {
+                  "a": 1,
+                  "b": 0,
+                  "beta": 5,
+                  "epsilon4": "other",
+                  "m": 7,
+                  "q0": 6,
+                  "sigma": 1,
+                  "source_u": 4,
+                  "terminal": false,
+                  "value": "other",
+                  "w0": 4
+                }
+              ],
+              "values": [
+                "flat",
+                "other"
+              ]
+            },
+            "quotient_size": 14
+          },
+          "short_corner": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                7,
+                5,
+                1
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 1,
+                  "beta": 5,
+                  "epsilon4": "flat",
+                  "m": 7,
+                  "next_beta": 4,
+                  "next_epsilon4": "other",
+                  "q0": 5,
+                  "short_corner": 1,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 1,
+                  "w0": 2
+                },
+                {
+                  "a": 1,
+                  "b": 1,
+                  "beta": 5,
+                  "epsilon4": "other",
+                  "m": 7,
+                  "next_beta": 4,
+                  "next_epsilon4": "other",
+                  "q0": 6,
+                  "short_corner": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 0,
+                  "w0": 2
+                }
+              ],
+              "values": [
+                0,
+                1
+              ]
+            },
+            "quotient_size": 12
+          }
+        },
+        "9": {
+          "determinism": {
+            "deterministic": true,
+            "first_failure": null
+          },
+          "epsilon4": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                9,
+                7,
+                0
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 7,
+                  "epsilon4": "flat",
+                  "m": 9,
+                  "q0": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "flat",
+                  "w0": 2
+                },
+                {
+                  "a": 1,
+                  "b": 0,
+                  "beta": 7,
+                  "epsilon4": "other",
+                  "m": 9,
+                  "q0": 8,
+                  "sigma": 1,
+                  "source_u": 4,
+                  "terminal": false,
+                  "value": "other",
+                  "w0": 6
+                }
+              ],
+              "values": [
+                "flat",
+                "other"
+              ]
+            },
+            "quotient_size": 18
+          },
+          "short_corner": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                9,
+                7,
+                1
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 1,
+                  "beta": 7,
+                  "epsilon4": "flat",
+                  "m": 9,
+                  "next_beta": 6,
+                  "next_epsilon4": "other",
+                  "q0": 7,
+                  "short_corner": 1,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 1,
+                  "w0": 2
+                },
+                {
+                  "a": 1,
+                  "b": 1,
+                  "beta": 7,
+                  "epsilon4": "other",
+                  "m": 9,
+                  "next_beta": 6,
+                  "next_epsilon4": "other",
+                  "q0": 8,
+                  "short_corner": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 0,
+                  "w0": 2
+                }
+              ],
+              "values": [
+                0,
+                1
+              ]
+            },
+            "quotient_size": 16
+          }
+        }
+      }
+    },
+    "beta_plus_q": {
+      "combined": {
+        "determinism": {
+          "deterministic": true,
+          "first_failure": null
+        },
+        "epsilon4": {
+          "exact": false,
+          "first_collision": {
+            "key": [
+              5,
+              2,
+              0
+            ],
+            "rows": [
+              {
+                "a": 0,
+                "b": 0,
+                "beta": 2,
+                "epsilon4": "flat",
+                "m": 5,
+                "q0": 0,
+                "sigma": 3,
+                "source_u": 1,
+                "terminal": false,
+                "value": "flat",
+                "w0": 2
+              },
+              {
+                "a": 0,
+                "b": 1,
+                "beta": 2,
+                "epsilon4": "other",
+                "m": 5,
+                "q0": 0,
+                "sigma": 1,
+                "source_u": 4,
+                "terminal": false,
+                "value": "other",
+                "w0": 2
+              }
+            ],
+            "values": [
+              "flat",
+              "other"
+            ]
+          },
+          "quotient_size": 276
+        },
+        "short_corner": {
+          "exact": false,
+          "first_collision": {
+            "key": [
+              5,
+              3,
+              0
+            ],
+            "rows": [
+              {
+                "a": 0,
+                "b": 0,
+                "beta": 3,
+                "epsilon4": "flat",
+                "m": 5,
+                "next_beta": 2,
+                "next_epsilon4": "flat",
+                "q0": 0,
+                "short_corner": 0,
+                "sigma": 3,
+                "source_u": 1,
+                "terminal": false,
+                "value": 0,
+                "w0": 2
+              },
+              {
+                "a": 0,
+                "b": 1,
+                "beta": 3,
+                "epsilon4": "flat",
+                "m": 5,
+                "next_beta": 2,
+                "next_epsilon4": "other",
+                "q0": 0,
+                "short_corner": 1,
+                "sigma": 1,
+                "source_u": 4,
+                "terminal": false,
+                "value": 1,
+                "w0": 2
+              }
+            ],
+            "values": [
+              0,
+              1
+            ]
+          },
+          "quotient_size": 244
+        }
+      },
+      "per_modulus": {
+        "11": {
+          "determinism": {
+            "deterministic": true,
+            "first_failure": null
+          },
+          "epsilon4": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                11,
+                8,
+                0
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 8,
+                  "epsilon4": "flat",
+                  "m": 11,
+                  "q0": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "flat",
+                  "w0": 2
+                },
+                {
+                  "a": 0,
+                  "b": 1,
+                  "beta": 8,
+                  "epsilon4": "other",
+                  "m": 11,
+                  "q0": 0,
+                  "sigma": 1,
+                  "source_u": 4,
+                  "terminal": false,
+                  "value": "other",
+                  "w0": 8
+                }
+              ],
+              "values": [
+                "flat",
+                "other"
+              ]
+            },
+            "quotient_size": 121
+          },
+          "short_corner": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                11,
+                9,
+                0
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 9,
+                  "epsilon4": "flat",
+                  "m": 11,
+                  "next_beta": 8,
+                  "next_epsilon4": "flat",
+                  "q0": 0,
+                  "short_corner": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 0,
+                  "w0": 2
+                },
+                {
+                  "a": 0,
+                  "b": 1,
+                  "beta": 9,
+                  "epsilon4": "flat",
+                  "m": 11,
+                  "next_beta": 8,
+                  "next_epsilon4": "other",
+                  "q0": 0,
+                  "short_corner": 1,
+                  "sigma": 1,
+                  "source_u": 4,
+                  "terminal": false,
+                  "value": 1,
+                  "w0": 8
+                }
+              ],
+              "values": [
+                0,
+                1
+              ]
+            },
+            "quotient_size": 110
+          }
+        },
+        "5": {
+          "determinism": {
+            "deterministic": true,
+            "first_failure": null
+          },
+          "epsilon4": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                5,
+                2,
+                0
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 2,
+                  "epsilon4": "flat",
+                  "m": 5,
+                  "q0": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "flat",
+                  "w0": 2
+                },
+                {
+                  "a": 0,
+                  "b": 1,
+                  "beta": 2,
+                  "epsilon4": "other",
+                  "m": 5,
+                  "q0": 0,
+                  "sigma": 1,
+                  "source_u": 4,
+                  "terminal": false,
+                  "value": "other",
+                  "w0": 2
+                }
+              ],
+              "values": [
+                "flat",
+                "other"
+              ]
+            },
+            "quotient_size": 25
+          },
+          "short_corner": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                5,
+                3,
+                0
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 3,
+                  "epsilon4": "flat",
+                  "m": 5,
+                  "next_beta": 2,
+                  "next_epsilon4": "flat",
+                  "q0": 0,
+                  "short_corner": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 0,
+                  "w0": 2
+                },
+                {
+                  "a": 0,
+                  "b": 1,
+                  "beta": 3,
+                  "epsilon4": "flat",
+                  "m": 5,
+                  "next_beta": 2,
+                  "next_epsilon4": "other",
+                  "q0": 0,
+                  "short_corner": 1,
+                  "sigma": 1,
+                  "source_u": 4,
+                  "terminal": false,
+                  "value": 1,
+                  "w0": 2
+                }
+              ],
+              "values": [
+                0,
+                1
+              ]
+            },
+            "quotient_size": 20
+          }
+        },
+        "7": {
+          "determinism": {
+            "deterministic": true,
+            "first_failure": null
+          },
+          "epsilon4": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                7,
+                4,
+                0
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 4,
+                  "epsilon4": "flat",
+                  "m": 7,
+                  "q0": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "flat",
+                  "w0": 2
+                },
+                {
+                  "a": 0,
+                  "b": 1,
+                  "beta": 4,
+                  "epsilon4": "other",
+                  "m": 7,
+                  "q0": 0,
+                  "sigma": 1,
+                  "source_u": 4,
+                  "terminal": false,
+                  "value": "other",
+                  "w0": 4
+                }
+              ],
+              "values": [
+                "flat",
+                "other"
+              ]
+            },
+            "quotient_size": 49
+          },
+          "short_corner": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                7,
+                5,
+                0
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 5,
+                  "epsilon4": "flat",
+                  "m": 7,
+                  "next_beta": 4,
+                  "next_epsilon4": "flat",
+                  "q0": 0,
+                  "short_corner": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 0,
+                  "w0": 2
+                },
+                {
+                  "a": 0,
+                  "b": 1,
+                  "beta": 5,
+                  "epsilon4": "flat",
+                  "m": 7,
+                  "next_beta": 4,
+                  "next_epsilon4": "other",
+                  "q0": 0,
+                  "short_corner": 1,
+                  "sigma": 1,
+                  "source_u": 4,
+                  "terminal": false,
+                  "value": 1,
+                  "w0": 4
+                }
+              ],
+              "values": [
+                0,
+                1
+              ]
+            },
+            "quotient_size": 42
+          }
+        },
+        "9": {
+          "determinism": {
+            "deterministic": true,
+            "first_failure": null
+          },
+          "epsilon4": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                9,
+                6,
+                0
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 6,
+                  "epsilon4": "flat",
+                  "m": 9,
+                  "q0": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "flat",
+                  "w0": 2
+                },
+                {
+                  "a": 0,
+                  "b": 1,
+                  "beta": 6,
+                  "epsilon4": "other",
+                  "m": 9,
+                  "q0": 0,
+                  "sigma": 1,
+                  "source_u": 4,
+                  "terminal": false,
+                  "value": "other",
+                  "w0": 6
+                }
+              ],
+              "values": [
+                "flat",
+                "other"
+              ]
+            },
+            "quotient_size": 81
+          },
+          "short_corner": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                9,
+                7,
+                0
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 7,
+                  "epsilon4": "flat",
+                  "m": 9,
+                  "next_beta": 6,
+                  "next_epsilon4": "flat",
+                  "q0": 0,
+                  "short_corner": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 0,
+                  "w0": 2
+                },
+                {
+                  "a": 0,
+                  "b": 1,
+                  "beta": 7,
+                  "epsilon4": "flat",
+                  "m": 9,
+                  "next_beta": 6,
+                  "next_epsilon4": "other",
+                  "q0": 0,
+                  "short_corner": 1,
+                  "sigma": 1,
+                  "source_u": 4,
+                  "terminal": false,
+                  "value": 1,
+                  "w0": 6
+                }
+              ],
+              "values": [
+                0,
+                1
+              ]
+            },
+            "quotient_size": 72
+          }
+        }
+      }
+    },
+    "beta_plus_q_plus_sigma": {
+      "combined": {
+        "determinism": {
+          "deterministic": true,
+          "first_failure": null
+        },
+        "epsilon4": {
+          "exact": true,
+          "first_collision": null,
+          "quotient_size": 2518
+        },
+        "short_corner": {
+          "exact": true,
+          "first_collision": null,
+          "quotient_size": 2244
+        }
+      },
+      "per_modulus": {
+        "11": {
+          "determinism": {
+            "deterministic": true,
+            "first_failure": null
+          },
+          "epsilon4": {
+            "exact": true,
+            "first_collision": null,
+            "quotient_size": 1331
+          },
+          "short_corner": {
+            "exact": true,
+            "first_collision": null,
+            "quotient_size": 1210
+          }
+        },
+        "5": {
+          "determinism": {
+            "deterministic": true,
+            "first_failure": null
+          },
+          "epsilon4": {
+            "exact": true,
+            "first_collision": null,
+            "quotient_size": 115
+          },
+          "short_corner": {
+            "exact": true,
+            "first_collision": null,
+            "quotient_size": 92
+          }
+        },
+        "7": {
+          "determinism": {
+            "deterministic": true,
+            "first_failure": null
+          },
+          "epsilon4": {
+            "exact": true,
+            "first_collision": null,
+            "quotient_size": 343
+          },
+          "short_corner": {
+            "exact": true,
+            "first_collision": null,
+            "quotient_size": 294
+          }
+        },
+        "9": {
+          "determinism": {
+            "deterministic": true,
+            "first_failure": null
+          },
+          "epsilon4": {
+            "exact": true,
+            "first_collision": null,
+            "quotient_size": 729
+          },
+          "short_corner": {
+            "exact": true,
+            "first_collision": null,
+            "quotient_size": 648
+          }
+        }
+      }
+    },
+    "beta_plus_sigma": {
+      "combined": {
+        "determinism": {
+          "deterministic": true,
+          "first_failure": null
+        },
+        "epsilon4": {
+          "exact": false,
+          "first_collision": {
+            "key": [
+              5,
+              3,
+              3
+            ],
+            "rows": [
+              {
+                "a": 0,
+                "b": 0,
+                "beta": 3,
+                "epsilon4": "flat",
+                "m": 5,
+                "q0": 0,
+                "sigma": 3,
+                "source_u": 1,
+                "terminal": false,
+                "value": "flat",
+                "w0": 2
+              },
+              {
+                "a": 1,
+                "b": 1,
+                "beta": 3,
+                "epsilon4": "other",
+                "m": 5,
+                "q0": 4,
+                "sigma": 3,
+                "source_u": 1,
+                "terminal": false,
+                "value": "other",
+                "w0": 2
+              }
+            ],
+            "values": [
+              "flat",
+              "other"
+            ]
+          },
+          "quotient_size": 276
+        },
+        "short_corner": {
+          "exact": false,
+          "first_collision": {
+            "key": [
+              5,
+              3,
+              3
+            ],
+            "rows": [
+              {
+                "a": 0,
+                "b": 0,
+                "beta": 3,
+                "epsilon4": "flat",
+                "m": 5,
+                "next_beta": 2,
+                "next_epsilon4": "flat",
+                "q0": 0,
+                "short_corner": 0,
+                "sigma": 3,
+                "source_u": 1,
+                "terminal": false,
+                "value": 0,
+                "w0": 2
+              },
+              {
+                "a": 0,
+                "b": 1,
+                "beta": 3,
+                "epsilon4": "flat",
+                "m": 5,
+                "next_beta": 2,
+                "next_epsilon4": "other",
+                "q0": 3,
+                "short_corner": 1,
+                "sigma": 3,
+                "source_u": 1,
+                "terminal": false,
+                "value": 1,
+                "w0": 2
+              }
+            ],
+            "values": [
+              0,
+              1
+            ]
+          },
+          "quotient_size": 244
+        }
+      },
+      "per_modulus": {
+        "11": {
+          "determinism": {
+            "deterministic": true,
+            "first_failure": null
+          },
+          "epsilon4": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                11,
+                9,
+                3
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 9,
+                  "epsilon4": "flat",
+                  "m": 11,
+                  "q0": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "flat",
+                  "w0": 2
+                },
+                {
+                  "a": 1,
+                  "b": 1,
+                  "beta": 9,
+                  "epsilon4": "other",
+                  "m": 11,
+                  "q0": 10,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "other",
+                  "w0": 2
+                }
+              ],
+              "values": [
+                "flat",
+                "other"
+              ]
+            },
+            "quotient_size": 121
+          },
+          "short_corner": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                11,
+                9,
+                3
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 9,
+                  "epsilon4": "flat",
+                  "m": 11,
+                  "next_beta": 8,
+                  "next_epsilon4": "flat",
+                  "q0": 0,
+                  "short_corner": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 0,
+                  "w0": 2
+                },
+                {
+                  "a": 0,
+                  "b": 1,
+                  "beta": 9,
+                  "epsilon4": "flat",
+                  "m": 11,
+                  "next_beta": 8,
+                  "next_epsilon4": "other",
+                  "q0": 9,
+                  "short_corner": 1,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 1,
+                  "w0": 2
+                }
+              ],
+              "values": [
+                0,
+                1
+              ]
+            },
+            "quotient_size": 110
+          }
+        },
+        "5": {
+          "determinism": {
+            "deterministic": true,
+            "first_failure": null
+          },
+          "epsilon4": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                5,
+                3,
+                3
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 3,
+                  "epsilon4": "flat",
+                  "m": 5,
+                  "q0": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "flat",
+                  "w0": 2
+                },
+                {
+                  "a": 1,
+                  "b": 1,
+                  "beta": 3,
+                  "epsilon4": "other",
+                  "m": 5,
+                  "q0": 4,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "other",
+                  "w0": 2
+                }
+              ],
+              "values": [
+                "flat",
+                "other"
+              ]
+            },
+            "quotient_size": 25
+          },
+          "short_corner": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                5,
+                3,
+                3
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 3,
+                  "epsilon4": "flat",
+                  "m": 5,
+                  "next_beta": 2,
+                  "next_epsilon4": "flat",
+                  "q0": 0,
+                  "short_corner": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 0,
+                  "w0": 2
+                },
+                {
+                  "a": 0,
+                  "b": 1,
+                  "beta": 3,
+                  "epsilon4": "flat",
+                  "m": 5,
+                  "next_beta": 2,
+                  "next_epsilon4": "other",
+                  "q0": 3,
+                  "short_corner": 1,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 1,
+                  "w0": 2
+                }
+              ],
+              "values": [
+                0,
+                1
+              ]
+            },
+            "quotient_size": 20
+          }
+        },
+        "7": {
+          "determinism": {
+            "deterministic": true,
+            "first_failure": null
+          },
+          "epsilon4": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                7,
+                5,
+                3
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 5,
+                  "epsilon4": "flat",
+                  "m": 7,
+                  "q0": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "flat",
+                  "w0": 2
+                },
+                {
+                  "a": 1,
+                  "b": 1,
+                  "beta": 5,
+                  "epsilon4": "other",
+                  "m": 7,
+                  "q0": 6,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "other",
+                  "w0": 2
+                }
+              ],
+              "values": [
+                "flat",
+                "other"
+              ]
+            },
+            "quotient_size": 49
+          },
+          "short_corner": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                7,
+                5,
+                3
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 5,
+                  "epsilon4": "flat",
+                  "m": 7,
+                  "next_beta": 4,
+                  "next_epsilon4": "flat",
+                  "q0": 0,
+                  "short_corner": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 0,
+                  "w0": 2
+                },
+                {
+                  "a": 0,
+                  "b": 1,
+                  "beta": 5,
+                  "epsilon4": "flat",
+                  "m": 7,
+                  "next_beta": 4,
+                  "next_epsilon4": "other",
+                  "q0": 5,
+                  "short_corner": 1,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 1,
+                  "w0": 2
+                }
+              ],
+              "values": [
+                0,
+                1
+              ]
+            },
+            "quotient_size": 42
+          }
+        },
+        "9": {
+          "determinism": {
+            "deterministic": true,
+            "first_failure": null
+          },
+          "epsilon4": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                9,
+                7,
+                3
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 7,
+                  "epsilon4": "flat",
+                  "m": 9,
+                  "q0": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "flat",
+                  "w0": 2
+                },
+                {
+                  "a": 1,
+                  "b": 1,
+                  "beta": 7,
+                  "epsilon4": "other",
+                  "m": 9,
+                  "q0": 8,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": "other",
+                  "w0": 2
+                }
+              ],
+              "values": [
+                "flat",
+                "other"
+              ]
+            },
+            "quotient_size": 81
+          },
+          "short_corner": {
+            "exact": false,
+            "first_collision": {
+              "key": [
+                9,
+                7,
+                3
+              ],
+              "rows": [
+                {
+                  "a": 0,
+                  "b": 0,
+                  "beta": 7,
+                  "epsilon4": "flat",
+                  "m": 9,
+                  "next_beta": 6,
+                  "next_epsilon4": "flat",
+                  "q0": 0,
+                  "short_corner": 0,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 0,
+                  "w0": 2
+                },
+                {
+                  "a": 0,
+                  "b": 1,
+                  "beta": 7,
+                  "epsilon4": "flat",
+                  "m": 9,
+                  "next_beta": 6,
+                  "next_epsilon4": "other",
+                  "q0": 7,
+                  "short_corner": 1,
+                  "sigma": 3,
+                  "source_u": 1,
+                  "terminal": false,
+                  "value": 1,
+                  "w0": 2
+                }
+              ],
+              "values": [
+                0,
+                1
+              ]
+            },
+            "quotient_size": 72
+          }
+        }
+      }
+    }
+  },
+  "chain_type_counts": {
+    "11": {
+      "00": 655,
+      "01": 65,
+      "10": 7,
+      "11": 56
+    },
+    "5": {
+      "00": 19,
+      "01": 5,
+      "10": 1,
+      "11": 2
+    },
+    "7": {
+      "00": 103,
+      "01": 17,
+      "10": 3,
+      "11": 12
+    },
+    "9": {
+      "00": 299,
+      "01": 37,
+      "10": 5,
+      "11": 30
+    }
+  },
+  "checked_moduli": [
+    5,
+    7,
+    9,
+    11
+  ],
+  "exact_supported_object": {
+    "current_epsilon4_rule": {
+      "beta = 0": "wrap",
+      "beta = m-1": "carry_jump",
+      "beta = m-2": "other_1000 iff a=1, else flat",
+      "beta = m-3": "other_0010 iff b=1, else flat",
+      "otherwise": "flat"
+    },
+    "name": "decorated_beta_chain",
+    "short_corner_detector": "1 iff (beta,a,b) = (m-2,0,1)",
+    "state": "(m, beta, a, b)",
+    "state_count_on_checked_moduli": {
+      "11": 44,
+      "5": 20,
+      "7": 28,
+      "9": 36
+    },
+    "successor_rule_on_nonterminal_states": "(m,beta,a,b) -> (m,beta-1,a,b)"
+  },
+  "object": "union of regular state-level carry_jump-to-wrap beta-chains",
+  "takeaway": "The bare normalized m-state beta chain is deterministic on successor but is not exact for current epsilon4 or the short-corner detector. A decorated 4m-state beta-chain quotient survives all checked frozen rows."
+}

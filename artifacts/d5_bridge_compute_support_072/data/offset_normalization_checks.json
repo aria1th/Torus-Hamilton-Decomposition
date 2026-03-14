@@ -1,0 +1,299 @@
+{
+  "candidates": {
+    "q_equals_s_minus_source_u_minus_w": {
+      "deterministic": true,
+      "exact": true,
+      "first_collision": null,
+      "first_failure": null,
+      "quotient_size": 32
+    },
+    "s": {
+      "deterministic": false,
+      "exact": false,
+      "first_collision": {
+        "key": [
+          5,
+          3
+        ],
+        "rows": [
+          {
+            "c": 0,
+            "m": 5,
+            "next_s": 4,
+            "next_w": 2,
+            "q": 0,
+            "s": 3,
+            "sigma": 3,
+            "source_u": 1,
+            "terminal": false,
+            "trace_step": 4,
+            "value": 0,
+            "w": 2
+          },
+          {
+            "c": 1,
+            "m": 5,
+            "next_s": 0,
+            "next_w": 3,
+            "q": 4,
+            "s": 3,
+            "sigma": 4,
+            "source_u": 2,
+            "terminal": false,
+            "trace_step": 24,
+            "value": 1,
+            "w": 2
+          }
+        ],
+        "values": [
+          0,
+          1
+        ]
+      },
+      "first_failure": {
+        "key": [
+          5,
+          3
+        ],
+        "next_keys": [
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            4
+          ]
+        ],
+        "rows": [
+          {
+            "c": 0,
+            "m": 5,
+            "next_s": 4,
+            "next_w": 2,
+            "q": 0,
+            "s": 3,
+            "sigma": 3,
+            "source_u": 1,
+            "terminal": false,
+            "trace_step": 4,
+            "w": 2
+          },
+          {
+            "c": 1,
+            "m": 5,
+            "next_s": 0,
+            "next_w": 3,
+            "q": 4,
+            "s": 3,
+            "sigma": 4,
+            "source_u": 2,
+            "terminal": false,
+            "trace_step": 24,
+            "w": 2
+          },
+          {
+            "c": 0,
+            "m": 5,
+            "next_s": 4,
+            "next_w": 3,
+            "q": 3,
+            "s": 3,
+            "sigma": 0,
+            "source_u": 2,
+            "terminal": false,
+            "trace_step": 44,
+            "w": 3
+          },
+          {
+            "c": 0,
+            "m": 5,
+            "next_s": 4,
+            "next_w": 2,
+            "q": 2,
+            "s": 3,
+            "sigma": 1,
+            "source_u": 4,
+            "terminal": false,
+            "trace_step": 14,
+            "w": 2
+          }
+        ]
+      },
+      "quotient_size": 32
+    },
+    "s_minus_source_u": {
+      "deterministic": false,
+      "exact": false,
+      "first_collision": {
+        "key": [
+          5,
+          1
+        ],
+        "rows": [
+          {
+            "c": 1,
+            "m": 5,
+            "next_s": 4,
+            "next_w": 3,
+            "q": 4,
+            "s": 2,
+            "sigma": 3,
+            "source_u": 1,
+            "terminal": false,
+            "trace_step": 24,
+            "value": 1,
+            "w": 2
+          },
+          {
+            "c": 0,
+            "m": 5,
+            "next_s": 3,
+            "next_w": 3,
+            "q": 3,
+            "s": 2,
+            "sigma": 4,
+            "source_u": 1,
+            "terminal": false,
+            "trace_step": 44,
+            "value": 0,
+            "w": 3
+          }
+        ],
+        "values": [
+          0,
+          1
+        ]
+      },
+      "first_failure": {
+        "key": [
+          5,
+          1
+        ],
+        "next_keys": [
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            3
+          ]
+        ],
+        "rows": [
+          {
+            "c": 1,
+            "m": 5,
+            "next_s": 4,
+            "next_w": 3,
+            "q": 4,
+            "s": 2,
+            "sigma": 3,
+            "source_u": 1,
+            "terminal": false,
+            "trace_step": 24,
+            "w": 2
+          },
+          {
+            "c": 0,
+            "m": 5,
+            "next_s": 3,
+            "next_w": 3,
+            "q": 3,
+            "s": 2,
+            "sigma": 4,
+            "source_u": 1,
+            "terminal": false,
+            "trace_step": 44,
+            "w": 3
+          },
+          {
+            "c": 1,
+            "m": 5,
+            "next_s": 0,
+            "next_w": 3,
+            "q": 4,
+            "s": 3,
+            "sigma": 4,
+            "source_u": 2,
+            "terminal": false,
+            "trace_step": 24,
+            "w": 2
+          },
+          {
+            "c": 0,
+            "m": 5,
+            "next_s": 4,
+            "next_w": 3,
+            "q": 3,
+            "s": 3,
+            "sigma": 0,
+            "source_u": 2,
+            "terminal": false,
+            "trace_step": 44,
+            "w": 3
+          }
+        ]
+      },
+      "quotient_size": 32
+    },
+    "s_minus_w": {
+      "deterministic": true,
+      "exact": false,
+      "first_collision": {
+        "key": [
+          5,
+          1
+        ],
+        "rows": [
+          {
+            "c": 0,
+            "m": 5,
+            "next_s": 4,
+            "next_w": 2,
+            "q": 0,
+            "s": 3,
+            "sigma": 3,
+            "source_u": 1,
+            "terminal": false,
+            "trace_step": 4,
+            "value": 0,
+            "w": 2
+          },
+          {
+            "c": 1,
+            "m": 5,
+            "next_s": 0,
+            "next_w": 3,
+            "q": 4,
+            "s": 3,
+            "sigma": 4,
+            "source_u": 2,
+            "terminal": false,
+            "trace_step": 24,
+            "value": 1,
+            "w": 2
+          }
+        ],
+        "values": [
+          0,
+          1
+        ]
+      },
+      "first_failure": null,
+      "quotient_size": 32
+    }
+  },
+  "checked_moduli": [
+    5,
+    7,
+    9,
+    11
+  ],
+  "object": "regular carry_jump slice union",
+  "takeaway": "Among the natural affine normalizations tested on the carry_jump slice union, only q = s - source_u - w is exact for the carry mark and deterministic on successor. This validates the expected offset normalization for the slice-chain object.",
+  "target_properties": [
+    "exact_for_current_carry_mark",
+    "deterministic_successor"
+  ]
+}

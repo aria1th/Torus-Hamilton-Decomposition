@@ -1,0 +1,19 @@
+{
+  "candidate_bridge_status": {
+    "bare_beta_m_state_bridge": "contradicted on checked frozen rows",
+    "decorated_beta_union_quotient": "supported on checked frozen rows",
+    "offset_normalization_on_slice_union": "supported"
+  },
+  "main_result": "The data support a two-stage picture. First, the offset normalization q = s - source_u - w exactly globalizes the regular carry_jump slice-chain object on the checked frozen range, and the larger 068B artifact keeps the marked-chain / beta picture exact through m=21 full rows and m=41 branch-local support. Second, that normalization is not enough for current epsilon4 on the state-level union of chains: the bare m-state beta quotient fails current epsilon4 and the short-corner detector. On the frozen checked range, the supported sharper object is a decorated 4m-state beta-chain quotient (beta,a,b), with a=1_{q=m-1} and b determined by (q,sigma).",
+  "saved_outputs": [
+    "data/larger_modulus_chain_support.json",
+    "data/offset_normalization_checks.json",
+    "data/state_chain_union_quotients.json",
+    "data/chain_type_formula_validation.json",
+    "README.md",
+    "logs/summary.log",
+    "code/d5_bridge_compute_support_072.py"
+  ],
+  "scope": "Targeted bridge-support analysis only: larger-modulus marked-chain validation from 068B, affine offset-normalization checks on the frozen 047 carry_jump slice union, and candidate quotient checks on the frozen 047 state-level union of chains.",
+  "task_id": "D5-BRIDGE-COMPUTE-SUPPORT-072"
+}

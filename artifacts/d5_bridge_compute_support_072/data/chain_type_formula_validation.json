@@ -1,0 +1,21 @@
+{
+  "all_formula_checks_exact": true,
+  "checked_moduli": [
+    5,
+    7,
+    9,
+    11
+  ],
+  "failures": {
+    "11": [],
+    "5": [],
+    "7": [],
+    "9": []
+  },
+  "formula": {
+    "a": "1 iff q = m-1",
+    "b": "1 iff (q + sigma = 1 mod m) or (q = m-1 and sigma != 1)",
+    "sigma": "source_u + w mod m"
+  },
+  "interpretation": "The two early-post-carry decorations are not arbitrary. On the checked range they are exactly determined by the normalized slice coordinate q together with the slice offset sigma."
+}
