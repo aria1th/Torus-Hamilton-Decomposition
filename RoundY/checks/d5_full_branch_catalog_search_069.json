@@ -1,0 +1,67 @@
+{
+  "core_transition": {
+    "num_families": 119,
+    "elapsed_sec": 1.3751065731048584,
+    "exact_det_count": 0,
+    "top20": [],
+    "top20_short_unique_all_m": []
+  },
+  "point_defect_basis": {
+    "num_families": 1470,
+    "elapsed_sec": 8.267224788665771,
+    "exact_det_count": 0,
+    "top20": [],
+    "top20_short_unique_all_m": []
+  },
+  "full_vector_core_transition": {
+    "size_by_m": {
+      "5": 37,
+      "7": 57,
+      "9": 69,
+      "11": 96
+    },
+    "exact_event5": true,
+    "deterministic_successor": false,
+    "pair_exact": true,
+    "short_unique_by_m": {
+      "5": false,
+      "7": false,
+      "9": false,
+      "11": false
+    }
+  },
+  "full_vector_gauge_transition_basis": {
+    "size_by_m": {
+      "5": 193,
+      "7": 744,
+      "9": 1770,
+      "11": 3443
+    },
+    "exact_event5": true,
+    "deterministic_successor": false,
+    "pair_exact": true,
+    "short_unique_by_m": {
+      "5": false,
+      "7": false,
+      "9": false,
+      "11": false
+    }
+  },
+  "full_vector_point_defect_basis": {
+    "size_by_m": {
+      "5": 47,
+      "7": 72,
+      "9": 96,
+      "11": 121
+    },
+    "exact_event5": true,
+    "deterministic_successor": false,
+    "pair_exact": false,
+    "short_unique_by_m": {
+      "5": true,
+      "7": true,
+      "9": true,
+      "11": true
+    }
+  }
+}

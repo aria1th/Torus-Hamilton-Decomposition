@@ -1,0 +1,258 @@
+{
+  "scope": "Frozen 047 regular full carry-to-wrap chains only; used as checked support for d5_075_bridge.md.",
+  "moduli": {
+    "5": {
+      "full_chains": 27,
+      "splice_checks": 24,
+      "splice_failures": 0,
+      "event_formula_failures": 0,
+      "observed_boundary_pairs": 23,
+      "full_grid_realized": false,
+      "missing_boundary_pairs": [
+        {
+          "q": 4,
+          "sigma": 0
+        },
+        {
+          "q": 4,
+          "sigma": 2
+        }
+      ],
+      "per_source": {
+        "1": {
+          "full_chains": 9,
+          "delta_start": 15,
+          "delta_end": 23,
+          "all_step_differences_mod_m2": [
+            1
+          ]
+        },
+        "2": {
+          "full_chains": 9,
+          "delta_start": 20,
+          "delta_end": 3,
+          "all_step_differences_mod_m2": [
+            1
+          ]
+        },
+        "4": {
+          "full_chains": 9,
+          "delta_start": 5,
+          "delta_end": 13,
+          "all_step_differences_mod_m2": [
+            1
+          ]
+        }
+      },
+      "first_splice_failure": null,
+      "first_event_failure": null
+    },
+    "7": {
+      "full_chains": 135,
+      "splice_checks": 130,
+      "splice_failures": 0,
+      "event_formula_failures": 0,
+      "observed_boundary_pairs": 49,
+      "full_grid_realized": true,
+      "missing_boundary_pairs": [],
+      "per_source": {
+        "1": {
+          "full_chains": 27,
+          "delta_start": 21,
+          "delta_end": 47,
+          "all_step_differences_mod_m2": [
+            1
+          ]
+        },
+        "2": {
+          "full_chains": 27,
+          "delta_start": 28,
+          "delta_end": 5,
+          "all_step_differences_mod_m2": [
+            1
+          ]
+        },
+        "4": {
+          "full_chains": 27,
+          "delta_start": 42,
+          "delta_end": 19,
+          "all_step_differences_mod_m2": [
+            1
+          ]
+        },
+        "5": {
+          "full_chains": 27,
+          "delta_start": 0,
+          "delta_end": 26,
+          "all_step_differences_mod_m2": [
+            1
+          ]
+        },
+        "6": {
+          "full_chains": 27,
+          "delta_start": 7,
+          "delta_end": 33,
+          "all_step_differences_mod_m2": [
+            1
+          ]
+        }
+      },
+      "first_splice_failure": null,
+      "first_event_failure": null
+    },
+    "9": {
+      "full_chains": 371,
+      "splice_checks": 364,
+      "splice_failures": 0,
+      "event_formula_failures": 0,
+      "observed_boundary_pairs": 81,
+      "full_grid_realized": true,
+      "missing_boundary_pairs": [],
+      "per_source": {
+        "1": {
+          "full_chains": 53,
+          "delta_start": 27,
+          "delta_end": 79,
+          "all_step_differences_mod_m2": [
+            1
+          ]
+        },
+        "2": {
+          "full_chains": 53,
+          "delta_start": 36,
+          "delta_end": 7,
+          "all_step_differences_mod_m2": [
+            1
+          ]
+        },
+        "4": {
+          "full_chains": 53,
+          "delta_start": 54,
+          "delta_end": 25,
+          "all_step_differences_mod_m2": [
+            1
+          ]
+        },
+        "5": {
+          "full_chains": 53,
+          "delta_start": 63,
+          "delta_end": 34,
+          "all_step_differences_mod_m2": [
+            1
+          ]
+        },
+        "6": {
+          "full_chains": 53,
+          "delta_start": 72,
+          "delta_end": 43,
+          "all_step_differences_mod_m2": [
+            1
+          ]
+        },
+        "7": {
+          "full_chains": 53,
+          "delta_start": 0,
+          "delta_end": 52,
+          "all_step_differences_mod_m2": [
+            1
+          ]
+        },
+        "8": {
+          "full_chains": 53,
+          "delta_start": 9,
+          "delta_end": 61,
+          "all_step_differences_mod_m2": [
+            1
+          ]
+        }
+      },
+      "first_splice_failure": null,
+      "first_event_failure": null
+    },
+    "11": {
+      "full_chains": 783,
+      "splice_checks": 774,
+      "splice_failures": 0,
+      "event_formula_failures": 0,
+      "observed_boundary_pairs": 121,
+      "full_grid_realized": true,
+      "missing_boundary_pairs": [],
+      "per_source": {
+        "1": {
+          "full_chains": 87,
+          "delta_start": 33,
+          "delta_end": 119,
+          "all_step_differences_mod_m2": [
+            1
+          ]
+        },
+        "2": {
+          "full_chains": 87,
+          "delta_start": 44,
+          "delta_end": 9,
+          "all_step_differences_mod_m2": [
+            1
+          ]
+        },
+        "4": {
+          "full_chains": 87,
+          "delta_start": 66,
+          "delta_end": 31,
+          "all_step_differences_mod_m2": [
+            1
+          ]
+        },
+        "5": {
+          "full_chains": 87,
+          "delta_start": 77,
+          "delta_end": 42,
+          "all_step_differences_mod_m2": [
+            1
+          ]
+        },
+        "6": {
+          "full_chains": 87,
+          "delta_start": 88,
+          "delta_end": 53,
+          "all_step_differences_mod_m2": [
+            1
+          ]
+        },
+        "7": {
+          "full_chains": 87,
+          "delta_start": 99,
+          "delta_end": 64,
+          "all_step_differences_mod_m2": [
+            1
+          ]
+        },
+        "8": {
+          "full_chains": 87,
+          "delta_start": 110,
+          "delta_end": 75,
+          "all_step_differences_mod_m2": [
+            1
+          ]
+        },
+        "9": {
+          "full_chains": 87,
+          "delta_start": 0,
+          "delta_end": 86,
+          "all_step_differences_mod_m2": [
+            1
+          ]
+        },
+        "10": {
+          "full_chains": 87,
+          "delta_start": 11,
+          "delta_end": 97,
+          "all_step_differences_mod_m2": [
+            1
+          ]
+        }
+      },
+      "first_splice_failure": null,
+      "first_event_failure": null
+    }
+  }
+}

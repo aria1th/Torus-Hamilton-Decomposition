@@ -1,0 +1,908 @@
+{
+  "elapsed_sec": 73.47705292701721,
+  "num_families": 69994,
+  "chain_counts": {
+    "num_chains": 140,
+    "num_chain_rows": 1340,
+    "by_m": {
+      "5": 6,
+      "7": 20,
+      "9": 42,
+      "11": 72
+    }
+  },
+  "exact_and_deterministic": {
+    "count": 53120,
+    "top20": [
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "cur:antidiag_omit.tau_lo"
+        ],
+        "size_by_m": {
+          "5": 5,
+          "7": 7,
+          "9": 9,
+          "11": 11
+        },
+        "max_quotient_size": 11,
+        "num_features": 1
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "cur:diag_omit.tau_lo"
+        ],
+        "size_by_m": {
+          "5": 5,
+          "7": 7,
+          "9": 9,
+          "11": 11
+        },
+        "max_quotient_size": 11,
+        "num_features": 1
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "nxt:antidiag_omit.tau_lo"
+        ],
+        "size_by_m": {
+          "5": 5,
+          "7": 7,
+          "9": 9,
+          "11": 11
+        },
+        "max_quotient_size": 11,
+        "num_features": 1
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "nxt:diag_omit.tau_lo"
+        ],
+        "size_by_m": {
+          "5": 5,
+          "7": 7,
+          "9": 9,
+          "11": 11
+        },
+        "max_quotient_size": 11,
+        "num_features": 1
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "cur:antidiag_omit.tau_hi",
+          "dlt:antidiag_omit.tau_hi"
+        ],
+        "size_by_m": {
+          "5": 5,
+          "7": 7,
+          "9": 9,
+          "11": 11
+        },
+        "max_quotient_size": 11,
+        "num_features": 2
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "cur:antidiag_omit.tau_hi",
+          "nxt:antidiag_omit.tau_hi"
+        ],
+        "size_by_m": {
+          "5": 5,
+          "7": 7,
+          "9": 9,
+          "11": 11
+        },
+        "max_quotient_size": 11,
+        "num_features": 2
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "cur:antidiag_omit.tau_lo",
+          "cur:antidiag_omit.edge_pair"
+        ],
+        "size_by_m": {
+          "5": 5,
+          "7": 7,
+          "9": 9,
+          "11": 11
+        },
+        "max_quotient_size": 11,
+        "num_features": 2
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "cur:antidiag_omit.tau_lo",
+          "cur:antidiag_omit.tau_hi"
+        ],
+        "size_by_m": {
+          "5": 5,
+          "7": 7,
+          "9": 9,
+          "11": 11
+        },
+        "max_quotient_size": 11,
+        "num_features": 2
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "cur:antidiag_omit.tau_lo",
+          "dlt:antidiag_omit.edge_pair"
+        ],
+        "size_by_m": {
+          "5": 5,
+          "7": 7,
+          "9": 9,
+          "11": 11
+        },
+        "max_quotient_size": 11,
+        "num_features": 2
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "cur:antidiag_omit.tau_lo",
+          "dlt:antidiag_omit.tau_hi"
+        ],
+        "size_by_m": {
+          "5": 5,
+          "7": 7,
+          "9": 9,
+          "11": 11
+        },
+        "max_quotient_size": 11,
+        "num_features": 2
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "cur:antidiag_omit.tau_lo",
+          "dlt:antidiag_omit.tau_lo"
+        ],
+        "size_by_m": {
+          "5": 5,
+          "7": 7,
+          "9": 9,
+          "11": 11
+        },
+        "max_quotient_size": 11,
+        "num_features": 2
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "cur:antidiag_omit.tau_lo",
+          "nxt:antidiag_omit.edge_pair"
+        ],
+        "size_by_m": {
+          "5": 5,
+          "7": 7,
+          "9": 9,
+          "11": 11
+        },
+        "max_quotient_size": 11,
+        "num_features": 2
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "cur:antidiag_omit.tau_lo",
+          "nxt:antidiag_omit.tau_hi"
+        ],
+        "size_by_m": {
+          "5": 5,
+          "7": 7,
+          "9": 9,
+          "11": 11
+        },
+        "max_quotient_size": 11,
+        "num_features": 2
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "cur:antidiag_omit.tau_lo",
+          "nxt:antidiag_omit.tau_lo"
+        ],
+        "size_by_m": {
+          "5": 5,
+          "7": 7,
+          "9": 9,
+          "11": 11
+        },
+        "max_quotient_size": 11,
+        "num_features": 2
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "cur:diag_omit.edge_pair",
+          "cur:antidiag_omit.tau_lo"
+        ],
+        "size_by_m": {
+          "5": 5,
+          "7": 7,
+          "9": 9,
+          "11": 11
+        },
+        "max_quotient_size": 11,
+        "num_features": 2
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "cur:diag_omit.edge_pair",
+          "nxt:antidiag_omit.tau_lo"
+        ],
+        "size_by_m": {
+          "5": 5,
+          "7": 7,
+          "9": 9,
+          "11": 11
+        },
+        "max_quotient_size": 11,
+        "num_features": 2
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "cur:diag_omit.tau_hi",
+          "cur:antidiag_omit.tau_hi"
+        ],
+        "size_by_m": {
+          "5": 5,
+          "7": 7,
+          "9": 9,
+          "11": 11
+        },
+        "max_quotient_size": 11,
+        "num_features": 2
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "cur:diag_omit.tau_hi",
+          "cur:antidiag_omit.tau_lo"
+        ],
+        "size_by_m": {
+          "5": 5,
+          "7": 7,
+          "9": 9,
+          "11": 11
+        },
+        "max_quotient_size": 11,
+        "num_features": 2
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "cur:diag_omit.tau_hi",
+          "dlt:diag_omit.tau_hi"
+        ],
+        "size_by_m": {
+          "5": 5,
+          "7": 7,
+          "9": 9,
+          "11": 11
+        },
+        "max_quotient_size": 11,
+        "num_features": 2
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "cur:diag_omit.tau_hi",
+          "nxt:antidiag_omit.tau_hi"
+        ],
+        "size_by_m": {
+          "5": 5,
+          "7": 7,
+          "9": 9,
+          "11": 11
+        },
+        "max_quotient_size": 11,
+        "num_features": 2
+      }
+    ]
+  },
+  "exact_only": {
+    "count": 4086,
+    "top20": [
+      {
+        "catalog": "core_transition",
+        "features": [
+          "next_dn"
+        ],
+        "size_by_m": {
+          "5": 2,
+          "7": 2,
+          "9": 2,
+          "11": 2
+        },
+        "max_quotient_size": 2,
+        "num_features": 1
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "next_dn"
+        ],
+        "size_by_m": {
+          "5": 2,
+          "7": 2,
+          "9": 2,
+          "11": 2
+        },
+        "max_quotient_size": 2,
+        "num_features": 1
+      },
+      {
+        "catalog": "core_transition",
+        "features": [
+          "dn",
+          "next_dn"
+        ],
+        "size_by_m": {
+          "5": 2,
+          "7": 2,
+          "9": 2,
+          "11": 2
+        },
+        "max_quotient_size": 2,
+        "num_features": 2
+      },
+      {
+        "catalog": "core_transition",
+        "features": [
+          "label",
+          "next_dn"
+        ],
+        "size_by_m": {
+          "5": 2,
+          "7": 2,
+          "9": 2,
+          "11": 2
+        },
+        "max_quotient_size": 2,
+        "num_features": 2
+      },
+      {
+        "catalog": "core_transition",
+        "features": [
+          "pred_label",
+          "next_dn"
+        ],
+        "size_by_m": {
+          "5": 2,
+          "7": 2,
+          "9": 2,
+          "11": 2
+        },
+        "max_quotient_size": 2,
+        "num_features": 2
+      },
+      {
+        "catalog": "core_transition",
+        "features": [
+          "succ_label",
+          "next_dn"
+        ],
+        "size_by_m": {
+          "5": 2,
+          "7": 2,
+          "9": 2,
+          "11": 2
+        },
+        "max_quotient_size": 2,
+        "num_features": 2
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "dn",
+          "next_dn"
+        ],
+        "size_by_m": {
+          "5": 2,
+          "7": 2,
+          "9": 2,
+          "11": 2
+        },
+        "max_quotient_size": 2,
+        "num_features": 2
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "label",
+          "next_dn"
+        ],
+        "size_by_m": {
+          "5": 2,
+          "7": 2,
+          "9": 2,
+          "11": 2
+        },
+        "max_quotient_size": 2,
+        "num_features": 2
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "next_dn",
+          "cur:diag_omit.edge_pair"
+        ],
+        "size_by_m": {
+          "5": 2,
+          "7": 2,
+          "9": 2,
+          "11": 2
+        },
+        "max_quotient_size": 2,
+        "num_features": 2
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "next_dn",
+          "dlt:antidiag_omit.tau_lo"
+        ],
+        "size_by_m": {
+          "5": 2,
+          "7": 2,
+          "9": 2,
+          "11": 2
+        },
+        "max_quotient_size": 2,
+        "num_features": 2
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "next_dn",
+          "dlt:diag_omit.edge_pair"
+        ],
+        "size_by_m": {
+          "5": 2,
+          "7": 2,
+          "9": 2,
+          "11": 2
+        },
+        "max_quotient_size": 2,
+        "num_features": 2
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "next_dn",
+          "dlt:diag_omit.tau_lo"
+        ],
+        "size_by_m": {
+          "5": 2,
+          "7": 2,
+          "9": 2,
+          "11": 2
+        },
+        "max_quotient_size": 2,
+        "num_features": 2
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "next_dn",
+          "nxt:diag_omit.edge_pair"
+        ],
+        "size_by_m": {
+          "5": 2,
+          "7": 2,
+          "9": 2,
+          "11": 2
+        },
+        "max_quotient_size": 2,
+        "num_features": 2
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "pred_label",
+          "next_dn"
+        ],
+        "size_by_m": {
+          "5": 2,
+          "7": 2,
+          "9": 2,
+          "11": 2
+        },
+        "max_quotient_size": 2,
+        "num_features": 2
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "succ_label",
+          "next_dn"
+        ],
+        "size_by_m": {
+          "5": 2,
+          "7": 2,
+          "9": 2,
+          "11": 2
+        },
+        "max_quotient_size": 2,
+        "num_features": 2
+      },
+      {
+        "catalog": "core_transition",
+        "features": [
+          "label",
+          "dn",
+          "next_dn"
+        ],
+        "size_by_m": {
+          "5": 2,
+          "7": 2,
+          "9": 2,
+          "11": 2
+        },
+        "max_quotient_size": 2,
+        "num_features": 3
+      },
+      {
+        "catalog": "core_transition",
+        "features": [
+          "label",
+          "pred_label",
+          "next_dn"
+        ],
+        "size_by_m": {
+          "5": 2,
+          "7": 2,
+          "9": 2,
+          "11": 2
+        },
+        "max_quotient_size": 2,
+        "num_features": 3
+      },
+      {
+        "catalog": "core_transition",
+        "features": [
+          "label",
+          "succ_label",
+          "next_dn"
+        ],
+        "size_by_m": {
+          "5": 2,
+          "7": 2,
+          "9": 2,
+          "11": 2
+        },
+        "max_quotient_size": 2,
+        "num_features": 3
+      },
+      {
+        "catalog": "core_transition",
+        "features": [
+          "pred_label",
+          "dn",
+          "next_dn"
+        ],
+        "size_by_m": {
+          "5": 2,
+          "7": 2,
+          "9": 2,
+          "11": 2
+        },
+        "max_quotient_size": 2,
+        "num_features": 3
+      },
+      {
+        "catalog": "core_transition",
+        "features": [
+          "pred_label",
+          "succ_label",
+          "next_dn"
+        ],
+        "size_by_m": {
+          "5": 2,
+          "7": 2,
+          "9": 2,
+          "11": 2
+        },
+        "max_quotient_size": 2,
+        "num_features": 3
+      }
+    ]
+  },
+  "deterministic_only": {
+    "count": 6683,
+    "top20": [
+      {
+        "catalog": "core_transition",
+        "features": [
+          "dn"
+        ],
+        "size_by_m": {
+          "5": 1,
+          "7": 0,
+          "9": 0,
+          "11": 0
+        },
+        "max_quotient_size": 1,
+        "num_features": 1
+      },
+      {
+        "catalog": "core_transition",
+        "features": [
+          "label"
+        ],
+        "size_by_m": {
+          "5": 1,
+          "7": 0,
+          "9": 0,
+          "11": 0
+        },
+        "max_quotient_size": 1,
+        "num_features": 1
+      },
+      {
+        "catalog": "core_transition",
+        "features": [
+          "pred_label"
+        ],
+        "size_by_m": {
+          "5": 1,
+          "7": 0,
+          "9": 0,
+          "11": 0
+        },
+        "max_quotient_size": 1,
+        "num_features": 1
+      },
+      {
+        "catalog": "core_transition",
+        "features": [
+          "succ_label"
+        ],
+        "size_by_m": {
+          "5": 1,
+          "7": 0,
+          "9": 0,
+          "11": 0
+        },
+        "max_quotient_size": 1,
+        "num_features": 1
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "cur:diag_omit.edge_pair"
+        ],
+        "size_by_m": {
+          "5": 1,
+          "7": 0,
+          "9": 0,
+          "11": 0
+        },
+        "max_quotient_size": 1,
+        "num_features": 1
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "dlt:antidiag_omit.tau_lo"
+        ],
+        "size_by_m": {
+          "5": 1,
+          "7": 0,
+          "9": 0,
+          "11": 0
+        },
+        "max_quotient_size": 1,
+        "num_features": 1
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "dlt:diag_omit.edge_pair"
+        ],
+        "size_by_m": {
+          "5": 1,
+          "7": 0,
+          "9": 0,
+          "11": 0
+        },
+        "max_quotient_size": 1,
+        "num_features": 1
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "dlt:diag_omit.tau_lo"
+        ],
+        "size_by_m": {
+          "5": 1,
+          "7": 0,
+          "9": 0,
+          "11": 0
+        },
+        "max_quotient_size": 1,
+        "num_features": 1
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "dn"
+        ],
+        "size_by_m": {
+          "5": 1,
+          "7": 0,
+          "9": 0,
+          "11": 0
+        },
+        "max_quotient_size": 1,
+        "num_features": 1
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "label"
+        ],
+        "size_by_m": {
+          "5": 1,
+          "7": 0,
+          "9": 0,
+          "11": 0
+        },
+        "max_quotient_size": 1,
+        "num_features": 1
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "nxt:diag_omit.edge_pair"
+        ],
+        "size_by_m": {
+          "5": 1,
+          "7": 0,
+          "9": 0,
+          "11": 0
+        },
+        "max_quotient_size": 1,
+        "num_features": 1
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "pred_label"
+        ],
+        "size_by_m": {
+          "5": 1,
+          "7": 0,
+          "9": 0,
+          "11": 0
+        },
+        "max_quotient_size": 1,
+        "num_features": 1
+      },
+      {
+        "catalog": "gauge_transition_basis",
+        "features": [
+          "succ_label"
+        ],
+        "size_by_m": {
+          "5": 1,
+          "7": 0,
+          "9": 0,
+          "11": 0
+        },
+        "max_quotient_size": 1,
+        "num_features": 1
+      },
+      {
+        "catalog": "point_defect_basis",
+        "features": [
+          "cur:antidiag_omit.point_left"
+        ],
+        "size_by_m": {
+          "5": 1,
+          "7": 0,
+          "9": 0,
+          "11": 0
+        },
+        "max_quotient_size": 1,
+        "num_features": 1
+      },
+      {
+        "catalog": "point_defect_basis",
+        "features": [
+          "cur:diag_omit.point_left"
+        ],
+        "size_by_m": {
+          "5": 1,
+          "7": 0,
+          "9": 0,
+          "11": 0
+        },
+        "max_quotient_size": 1,
+        "num_features": 1
+      },
+      {
+        "catalog": "point_defect_basis",
+        "features": [
+          "cur:diag_omit.point_right"
+        ],
+        "size_by_m": {
+          "5": 1,
+          "7": 0,
+          "9": 0,
+          "11": 0
+        },
+        "max_quotient_size": 1,
+        "num_features": 1
+      },
+      {
+        "catalog": "point_defect_basis",
+        "features": [
+          "dlt:antidiag_omit.point_left"
+        ],
+        "size_by_m": {
+          "5": 1,
+          "7": 0,
+          "9": 0,
+          "11": 0
+        },
+        "max_quotient_size": 1,
+        "num_features": 1
+      },
+      {
+        "catalog": "point_defect_basis",
+        "features": [
+          "dlt:diag_omit.point_left"
+        ],
+        "size_by_m": {
+          "5": 1,
+          "7": 0,
+          "9": 0,
+          "11": 0
+        },
+        "max_quotient_size": 1,
+        "num_features": 1
+      },
+      {
+        "catalog": "point_defect_basis",
+        "features": [
+          "dlt:diag_omit.point_right"
+        ],
+        "size_by_m": {
+          "5": 1,
+          "7": 0,
+          "9": 0,
+          "11": 0
+        },
+        "max_quotient_size": 1,
+        "num_features": 1
+      },
+      {
+        "catalog": "point_defect_basis",
+        "features": [
+          "dn"
+        ],
+        "size_by_m": {
+          "5": 1,
+          "7": 0,
+          "9": 0,
+          "11": 0
+        },
+        "max_quotient_size": 1,
+        "num_features": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "task": "D5-CONSTRUCTIVE-SOURCE-RESIDUE-ROUTE-063",
+  "checked_moduli": [
+    5,
+    7,
+    9,
+    11
+  ],
+  "summary": {
+    "5": {
+      "row_count": 216,
+      "tau_formula_exact": true,
+      "next_tau_formula_exact": true,
+      "tau_formula_collisions": 0,
+      "next_tau_formula_collisions": 0
+    },
+    "7": {
+      "row_count": 1212,
+      "tau_formula_exact": true,
+      "next_tau_formula_exact": true,
+      "tau_formula_collisions": 0,
+      "next_tau_formula_collisions": 0
+    },
+    "9": {
+      "row_count": 3952,
+      "tau_formula_exact": true,
+      "next_tau_formula_exact": true,
+      "tau_formula_collisions": 0,
+      "next_tau_formula_collisions": 0
+    },
+    "11": {
+      "row_count": 9780,
+      "tau_formula_exact": true,
+      "next_tau_formula_exact": true,
+      "tau_formula_collisions": 0,
+      "next_tau_formula_collisions": 0
+    }
+  },
+  "notes": {
+    "tau_formula": "tau exact on current (s,u,v,layer,rho) via piecewise delta-formula",
+    "next_tau_formula": "next_tau exact on current (s,u,layer,rho,epsilon4) via branchwise piecewise formula"
+  }
+}

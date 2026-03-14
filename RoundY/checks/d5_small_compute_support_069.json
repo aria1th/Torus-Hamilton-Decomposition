@@ -1,0 +1,267 @@
+{
+  "task_id": "D5-SMALL-COMPUTE-SUPPORT-069",
+  "purpose": "Run modest validations supporting the theorem package and clock route without exhaustive raw regeneration.",
+  "full_small_phase_corner_exactness": {
+    "5": {
+      "row_count": 220,
+      "event_exact": true,
+      "first_event_failure": null,
+      "tau_formula_exact": true,
+      "first_tau_failure": null,
+      "next_tau_formula_exact_on_nonterminal_rows": true,
+      "first_next_tau_failure": null,
+      "nonterminal_count": 216
+    },
+    "7": {
+      "row_count": 1218,
+      "event_exact": true,
+      "first_event_failure": null,
+      "tau_formula_exact": true,
+      "first_tau_failure": null,
+      "next_tau_formula_exact_on_nonterminal_rows": true,
+      "first_next_tau_failure": null,
+      "nonterminal_count": 1212
+    },
+    "9": {
+      "row_count": 3960,
+      "event_exact": true,
+      "first_event_failure": null,
+      "tau_formula_exact": true,
+      "first_tau_failure": null,
+      "next_tau_formula_exact_on_nonterminal_rows": true,
+      "first_next_tau_failure": null,
+      "nonterminal_count": 3952
+    },
+    "11": {
+      "row_count": 9790,
+      "event_exact": true,
+      "first_event_failure": null,
+      "tau_formula_exact": true,
+      "first_tau_failure": null,
+      "next_tau_formula_exact_on_nonterminal_rows": true,
+      "first_next_tau_failure": null,
+      "nonterminal_count": 9780
+    }
+  },
+  "full_small_B_beta_injectivity": {
+    "5": {
+      "nonterminal_row_count": 216,
+      "distinct_B_beta_states": 216,
+      "injective_on_nonterminal_rows": true,
+      "exact_readout": {
+        "q": true,
+        "w": true,
+        "c": true,
+        "epsilon4": true,
+        "tau": true,
+        "next_tau": true,
+        "next_B": true
+      },
+      "first_failures": {
+        "q": null,
+        "w": null,
+        "c": null,
+        "epsilon4": null,
+        "tau": null,
+        "next_tau": null,
+        "next_B": null
+      }
+    },
+    "7": {
+      "nonterminal_row_count": 1212,
+      "distinct_B_beta_states": 1212,
+      "injective_on_nonterminal_rows": true,
+      "exact_readout": {
+        "q": true,
+        "w": true,
+        "c": true,
+        "epsilon4": true,
+        "tau": true,
+        "next_tau": true,
+        "next_B": true
+      },
+      "first_failures": {
+        "q": null,
+        "w": null,
+        "c": null,
+        "epsilon4": null,
+        "tau": null,
+        "next_tau": null,
+        "next_B": null
+      }
+    },
+    "9": {
+      "nonterminal_row_count": 3952,
+      "distinct_B_beta_states": 3952,
+      "injective_on_nonterminal_rows": true,
+      "exact_readout": {
+        "q": true,
+        "w": true,
+        "c": true,
+        "epsilon4": true,
+        "tau": true,
+        "next_tau": true,
+        "next_B": true
+      },
+      "first_failures": {
+        "q": null,
+        "w": null,
+        "c": null,
+        "epsilon4": null,
+        "tau": null,
+        "next_tau": null,
+        "next_B": null
+      }
+    },
+    "11": {
+      "nonterminal_row_count": 9780,
+      "distinct_B_beta_states": 9780,
+      "injective_on_nonterminal_rows": true,
+      "exact_readout": {
+        "q": true,
+        "w": true,
+        "c": true,
+        "epsilon4": true,
+        "tau": true,
+        "next_tau": true,
+        "next_B": true
+      },
+      "first_failures": {
+        "q": null,
+        "w": null,
+        "c": null,
+        "epsilon4": null,
+        "tau": null,
+        "next_tau": null,
+        "next_B": null
+      }
+    }
+  },
+  "representative_row_formula_support_049": {
+    "5": {
+      "sample_row_count": 4,
+      "event_exact_on_sample": true,
+      "tau_exact_on_sample": true,
+      "partial_next_tau_supported_rows": 3,
+      "partial_next_tau_exact_on_supported_rows": true,
+      "first_failures": {
+        "event": null,
+        "tau": null,
+        "partial_next_tau": null
+      }
+    },
+    "7": {
+      "sample_row_count": 6,
+      "event_exact_on_sample": true,
+      "tau_exact_on_sample": true,
+      "partial_next_tau_supported_rows": 5,
+      "partial_next_tau_exact_on_supported_rows": true,
+      "first_failures": {
+        "event": null,
+        "tau": null,
+        "partial_next_tau": null
+      }
+    },
+    "9": {
+      "sample_row_count": 6,
+      "event_exact_on_sample": true,
+      "tau_exact_on_sample": true,
+      "partial_next_tau_supported_rows": 5,
+      "partial_next_tau_exact_on_supported_rows": true,
+      "first_failures": {
+        "event": null,
+        "tau": null,
+        "partial_next_tau": null
+      }
+    },
+    "11": {
+      "sample_row_count": 6,
+      "event_exact_on_sample": true,
+      "tau_exact_on_sample": true,
+      "partial_next_tau_supported_rows": 5,
+      "partial_next_tau_exact_on_supported_rows": true,
+      "first_failures": {
+        "event": null,
+        "tau": null,
+        "partial_next_tau": null
+      }
+    },
+    "13": {
+      "sample_row_count": 6,
+      "event_exact_on_sample": true,
+      "tau_exact_on_sample": true,
+      "partial_next_tau_supported_rows": 5,
+      "partial_next_tau_exact_on_supported_rows": true,
+      "first_failures": {
+        "event": null,
+        "tau": null,
+        "partial_next_tau": null
+      }
+    },
+    "15": {
+      "sample_row_count": 6,
+      "event_exact_on_sample": true,
+      "tau_exact_on_sample": true,
+      "partial_next_tau_supported_rows": 5,
+      "partial_next_tau_exact_on_supported_rows": true,
+      "first_failures": {
+        "event": null,
+        "tau": null,
+        "partial_next_tau": null
+      }
+    },
+    "17": {
+      "sample_row_count": 6,
+      "event_exact_on_sample": true,
+      "tau_exact_on_sample": true,
+      "partial_next_tau_supported_rows": 5,
+      "partial_next_tau_exact_on_supported_rows": true,
+      "first_failures": {
+        "event": null,
+        "tau": null,
+        "partial_next_tau": null
+      }
+    },
+    "19": {
+      "sample_row_count": 6,
+      "event_exact_on_sample": true,
+      "tau_exact_on_sample": true,
+      "partial_next_tau_supported_rows": 5,
+      "partial_next_tau_exact_on_supported_rows": true,
+      "first_failures": {
+        "event": null,
+        "tau": null,
+        "partial_next_tau": null
+      }
+    }
+  },
+  "large_representative_scheduler_support_059b": {
+    "25": {
+      "family_row_count": 24,
+      "target_formula_exact": true,
+      "first_target_failure": null,
+      "anchor_formula_exact_on_displayed_rows": true,
+      "first_anchor_failure": null,
+      "displayed_row_drift_exact": true,
+      "first_drift_failure": null
+    },
+    "27": {
+      "family_row_count": 26,
+      "target_formula_exact": true,
+      "first_target_failure": null,
+      "anchor_formula_exact_on_displayed_rows": true,
+      "first_anchor_failure": null,
+      "displayed_row_drift_exact": true,
+      "first_drift_failure": null
+    },
+    "29": {
+      "family_row_count": 28,
+      "target_formula_exact": true,
+      "first_target_failure": null,
+      "anchor_formula_exact_on_displayed_rows": true,
+      "first_anchor_failure": null,
+      "displayed_row_drift_exact": true,
+      "first_drift_failure": null
+    }
+  }
+}

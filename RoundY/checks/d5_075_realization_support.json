@@ -1,0 +1,27 @@
+{
+  "title": "D5 075 realization integration support",
+  "core_theorem": "deterministic dynamic bridge + current epsilon4 exactness + short-corner recurrence implies short-corner descent and unique canonical-clock descent by corner-time mod m",
+  "bridge_inputs": [
+    "deterministic quotient pi:X->Q_A with induced successor G",
+    "current epsilon4 exactness on Q_A",
+    "visible short-corner recurrence on accessible bridge states"
+  ],
+  "automatic_consequences": [
+    "short-corner detector descends exactly",
+    "future short-corner hit times from one state have a unique residue mod m",
+    "canonical clock descends uniquely as T_Q-2 mod m",
+    "any bridge beta coordinate with correct drift and short-corner normalization equals the descended canonical clock"
+  ],
+  "boundary_recurrence_equivalent": "for dynamic bridge Q_A=(Z/m)xA with S={(m-2,delta):delta in C}, recurrence is equivalent to every forward T-orbit in A meeting C",
+  "normalization": "always modulo m, never modulo the full bridge-component length",
+  "not_needed": [
+    "singleton short-corner state",
+    "prior exactness of short-corner or future event words",
+    "prior exactness of the canonical clock"
+  ],
+  "remaining_open_items": [
+    "uniform proof of dynamic bridge theorem",
+    "clean package for accessible boundary state space A",
+    "proof of short-corner recurrence on A"
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "per_m": {
+    "5": {
+      "row_count": 220,
+      "transition_count": 216,
+      "trace_count": 4,
+      "birth_failure_count": 0,
+      "drift_failure_count": 0,
+      "collision_counts": {
+        "q_on_B_beta": 0,
+        "c_on_B_beta": 0,
+        "epsilon4_on_B_beta": 0,
+        "tau_on_B_beta": 0,
+        "next_tau_on_B_beta": 0,
+        "next_B_on_B_beta": 0
+      },
+      "formula_failure_counts": {
+        "q": 0,
+        "c": 0,
+        "epsilon4": 0,
+        "tau": 0
+      }
+    },
+    "7": {
+      "row_count": 1218,
+      "transition_count": 1212,
+      "trace_count": 6,
+      "birth_failure_count": 0,
+      "drift_failure_count": 0,
+      "collision_counts": {
+        "q_on_B_beta": 0,
+        "c_on_B_beta": 0,
+        "epsilon4_on_B_beta": 0,
+        "tau_on_B_beta": 0,
+        "next_tau_on_B_beta": 0,
+        "next_B_on_B_beta": 0
+      },
+      "formula_failure_counts": {
+        "q": 0,
+        "c": 0,
+        "epsilon4": 0,
+        "tau": 0
+      }
+    },
+    "9": {
+      "row_count": 3960,
+      "transition_count": 3952,
+      "trace_count": 8,
+      "birth_failure_count": 0,
+      "drift_failure_count": 0,
+      "collision_counts": {
+        "q_on_B_beta": 0,
+        "c_on_B_beta": 0,
+        "epsilon4_on_B_beta": 0,
+        "tau_on_B_beta": 0,
+        "next_tau_on_B_beta": 0,
+        "next_B_on_B_beta": 0
+      },
+      "formula_failure_counts": {
+        "q": 0,
+        "c": 0,
+        "epsilon4": 0,
+        "tau": 0
+      }
+    },
+    "11": {
+      "row_count": 9790,
+      "transition_count": 9780,
+      "trace_count": 10,
+      "birth_failure_count": 0,
+      "drift_failure_count": 0,
+      "collision_counts": {
+        "q_on_B_beta": 0,
+        "c_on_B_beta": 0,
+        "epsilon4_on_B_beta": 0,
+        "tau_on_B_beta": 0,
+        "next_tau_on_B_beta": 0,
+        "next_B_on_B_beta": 0
+      },
+      "formula_failure_counts": {
+        "q": 0,
+        "c": 0,
+        "epsilon4": 0,
+        "tau": 0
+      }
+    }
+  },
+  "raw_section_blocks": {
+    "5": {
+      "regular_exit_step": 49,
+      "theta2_return_count": 10,
+      "full_block_count": 1,
+      "first_full_w": 2,
+      "last_full_w": 2,
+      "last_block_length": 4
+    },
+    "7": {
+      "regular_exit_step": 195,
+      "theta2_return_count": 28,
+      "full_block_count": 3,
+      "first_full_w": 2,
+      "last_full_w": 4,
+      "last_block_length": 6
+    },
+    "9": {
+      "regular_exit_step": 485,
+      "theta2_return_count": 54,
+      "full_block_count": 5,
+      "first_full_w": 2,
+      "last_full_w": 6,
+      "last_block_length": 8
+    },
+    "11": {
+      "regular_exit_step": 967,
+      "theta2_return_count": 88,
+      "full_block_count": 7,
+      "first_full_w": 2,
+      "last_full_w": 8,
+      "last_block_length": 10
+    },
+    "13": {
+      "regular_exit_step": 1689,
+      "theta2_return_count": 130,
+      "full_block_count": 9,
+      "first_full_w": 2,
+      "last_full_w": 10,
+      "last_block_length": 12
+    },
+    "15": {
+      "regular_exit_step": 2699,
+      "theta2_return_count": 180,
+      "full_block_count": 11,
+      "first_full_w": 2,
+      "last_full_w": 12,
+      "last_block_length": 14
+    },
+    "17": {
+      "regular_exit_step": 4045,
+      "theta2_return_count": 238,
+      "full_block_count": 13,
+      "first_full_w": 2,
+      "last_full_w": 14,
+      "last_block_length": 16
+    },
+    "19": {
+      "regular_exit_step": 5775,
+      "theta2_return_count": 304,
+      "full_block_count": 15,
+      "first_full_w": 2,
+      "last_full_w": 16,
+      "last_block_length": 18
+    },
+    "25": {
+      "regular_exit_step": 13749,
+      "theta2_return_count": 550,
+      "full_block_count": 21,
+      "first_full_w": 2,
+      "last_full_w": 22,
+      "last_block_length": 24
+    },
+    "27": {
+      "regular_exit_step": 17495,
+      "theta2_return_count": 648,
+      "full_block_count": 23,
+      "first_full_w": 2,
+      "last_full_w": 24,
+      "last_block_length": 26
+    },
+    "29": {
+      "regular_exit_step": 21865,
+      "theta2_return_count": 754,
+      "full_block_count": 25,
+      "first_full_w": 2,
+      "last_full_w": 26,
+      "last_block_length": 28
+    }
+  }
+}

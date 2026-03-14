@@ -1,0 +1,162 @@
+{
+  "task_id": "D5-EXACT-REDUCTION-CHAIN-QUOTIENT-SUPPORT-070",
+  "scope": "small compute support on frozen 045/047 checked-range data",
+  "data_sources": {
+    "045_frozen_active_carry_dataset": "artifacts/d5_carry_admissibility_search_045/data/frozen_active_carry_dataset_045.json",
+    "047_frozen_B_c_tau_epsilon_dataset": "artifacts/d5_future_transition_carry_coding_047/data/frozen_B_c_tau_epsilon_dataset_047.json",
+    "045_candidate_catalog": "artifacts/d5_carry_admissibility_search_045/data/candidate_family_catalog_045.json"
+  },
+  "marked_length_m_chain": {
+    "validated_on_m": [
+      5,
+      7,
+      9,
+      11
+    ],
+    "num_chains": 140,
+    "num_chain_rows": 1340,
+    "best_exact_and_deterministic_family": {
+      "catalog": "gauge_transition_basis",
+      "features": [
+        "cur:antidiag_omit.tau_lo"
+      ],
+      "size_by_m": {
+        "5": 5,
+        "7": 7,
+        "9": 9,
+        "11": 11
+      },
+      "max_quotient_size": 11,
+      "num_features": 1
+    },
+    "best_exact_only_family": {
+      "catalog": "core_transition",
+      "features": [
+        "next_dn"
+      ],
+      "size_by_m": {
+        "5": 2,
+        "7": 2,
+        "9": 2,
+        "11": 2
+      },
+      "max_quotient_size": 2,
+      "num_features": 1
+    },
+    "conclusion": "Within the full 045 admissible family catalog, the smallest exact deterministic quotient on a marked carry-jump slice has quotient size exactly m; 2-state families exist for exact carry readout but are not deterministic."
+  },
+  "spliced_source_chain": {
+    "validated_on_m": [
+      5,
+      7,
+      9,
+      11
+    ],
+    "lengths_by_m": {
+      "5": [
+        10
+      ],
+      "7": [
+        28
+      ],
+      "9": [
+        54
+      ],
+      "11": [
+        88
+      ]
+    },
+    "best_exact_and_deterministic_family": {
+      "catalog": "gauge_transition_basis",
+      "features": [
+        "cur:antidiag_omit.tau_lo",
+        "cur:antidiag_omit.tau_hi"
+      ],
+      "size_by_m": {
+        "5": 10,
+        "7": 28,
+        "9": 54,
+        "11": 88
+      },
+      "max_quotient_size": 88,
+      "num_features": 2
+    },
+    "best_exact_only_family": {
+      "catalog": "core_transition",
+      "features": [
+        "next_dn"
+      ],
+      "size_by_m": {
+        "5": 2,
+        "7": 2,
+        "9": 2,
+        "11": 2
+      },
+      "max_quotient_size": 2,
+      "num_features": 1
+    },
+    "conclusion": "Across the longer regular source chain obtained by splicing all w-slices, no catalog family compresses below the full source-chain length m(m-3) while remaining exact and deterministic. This supports marked length-m chain before any stronger cycle/source-chain identification."
+  },
+  "full_branch_event_quotients": {
+    "searched_catalogs_exhaustively": [
+      "core_transition",
+      "point_defect_basis"
+    ],
+    "event_label": "event5 = {flat, wrap, carry_jump, other_1000, other_0010}",
+    "core_transition_exact_det_count": 0,
+    "point_defect_basis_exact_det_count": 0,
+    "full_vector_core_transition": {
+      "size_by_m": {
+        "5": 37,
+        "7": 57,
+        "9": 69,
+        "11": 96
+      },
+      "exact_event5": true,
+      "deterministic_successor": false,
+      "pair_exact": true,
+      "short_unique_by_m": {
+        "5": false,
+        "7": false,
+        "9": false,
+        "11": false
+      }
+    },
+    "full_vector_gauge_transition_basis": {
+      "size_by_m": {
+        "5": 193,
+        "7": 744,
+        "9": 1770,
+        "11": 3443
+      },
+      "exact_event5": true,
+      "deterministic_successor": false,
+      "pair_exact": true,
+      "short_unique_by_m": {
+        "5": false,
+        "7": false,
+        "9": false,
+        "11": false
+      }
+    },
+    "full_vector_point_defect_basis": {
+      "size_by_m": {
+        "5": 47,
+        "7": 72,
+        "9": 96,
+        "11": 121
+      },
+      "exact_event5": true,
+      "deterministic_successor": false,
+      "pair_exact": false,
+      "short_unique_by_m": {
+        "5": true,
+        "7": true,
+        "9": true,
+        "11": true
+      }
+    },
+    "conclusion": "On the full checked active branch, the first small catalog families do not yet yield an exact deterministic quotient for the current event. Even the full catalog vectors are exact for the current event but still fail deterministic successor on the full branch."
+  },
+  "takeaway": "The safer first exact reduction object is the marked length-m carry-jump chain. The existing admissible class already sees that slice chain exactly, but does not compress the longer spliced source-chain and does not yet give an exact deterministic current-event quotient on the full active branch in the first small catalogs."
+}

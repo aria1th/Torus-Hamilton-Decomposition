@@ -1,0 +1,1134 @@
+{
+  "task_id": "D5-COMPUTE-SUPPORT-068",
+  "purpose": "Validate the exact reduction object, the canonical beta clock, and first quotient diagnostics without reopening generic search.",
+  "reduction_object_chain_validation": {
+    "5": {
+      "regular_source_count": 3,
+      "expected_chain_w_values": [
+        2,
+        3
+      ],
+      "all_regular_sources_ok": true,
+      "all_regular_splices_ok": true,
+      "interpretation": "fixed-(source_u,w) regular carry_jump rows form a marked length-m q-chain; quotienting successive w-slices is the extra step needed to view a cycle",
+      "per_source": {
+        "1": {
+          "w_values": [
+            2,
+            3
+          ],
+          "expected_w_values": [
+            2,
+            3
+          ],
+          "chain_lengths": [
+            5,
+            5
+          ],
+          "all_w_slices_marked_q_chains": true,
+          "endpoint_splice_to_next_w_slice": true
+        },
+        "2": {
+          "w_values": [
+            2,
+            3
+          ],
+          "expected_w_values": [
+            2,
+            3
+          ],
+          "chain_lengths": [
+            5,
+            5
+          ],
+          "all_w_slices_marked_q_chains": true,
+          "endpoint_splice_to_next_w_slice": true
+        },
+        "4": {
+          "w_values": [
+            2,
+            3
+          ],
+          "expected_w_values": [
+            2,
+            3
+          ],
+          "chain_lengths": [
+            5,
+            5
+          ],
+          "all_w_slices_marked_q_chains": true,
+          "endpoint_splice_to_next_w_slice": true
+        }
+      }
+    },
+    "7": {
+      "regular_source_count": 5,
+      "expected_chain_w_values": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "all_regular_sources_ok": true,
+      "all_regular_splices_ok": true,
+      "interpretation": "fixed-(source_u,w) regular carry_jump rows form a marked length-m q-chain; quotienting successive w-slices is the extra step needed to view a cycle",
+      "per_source": {
+        "1": {
+          "w_values": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "expected_w_values": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "chain_lengths": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "all_w_slices_marked_q_chains": true,
+          "endpoint_splice_to_next_w_slice": true
+        },
+        "2": {
+          "w_values": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "expected_w_values": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "chain_lengths": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "all_w_slices_marked_q_chains": true,
+          "endpoint_splice_to_next_w_slice": true
+        },
+        "4": {
+          "w_values": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "expected_w_values": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "chain_lengths": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "all_w_slices_marked_q_chains": true,
+          "endpoint_splice_to_next_w_slice": true
+        },
+        "5": {
+          "w_values": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "expected_w_values": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "chain_lengths": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "all_w_slices_marked_q_chains": true,
+          "endpoint_splice_to_next_w_slice": true
+        },
+        "6": {
+          "w_values": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "expected_w_values": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "chain_lengths": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "all_w_slices_marked_q_chains": true,
+          "endpoint_splice_to_next_w_slice": true
+        }
+      }
+    },
+    "9": {
+      "regular_source_count": 7,
+      "expected_chain_w_values": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "all_regular_sources_ok": true,
+      "all_regular_splices_ok": true,
+      "interpretation": "fixed-(source_u,w) regular carry_jump rows form a marked length-m q-chain; quotienting successive w-slices is the extra step needed to view a cycle",
+      "per_source": {
+        "1": {
+          "w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "expected_w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "chain_lengths": [
+            9,
+            9,
+            9,
+            9,
+            9,
+            9
+          ],
+          "all_w_slices_marked_q_chains": true,
+          "endpoint_splice_to_next_w_slice": true
+        },
+        "2": {
+          "w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "expected_w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "chain_lengths": [
+            9,
+            9,
+            9,
+            9,
+            9,
+            9
+          ],
+          "all_w_slices_marked_q_chains": true,
+          "endpoint_splice_to_next_w_slice": true
+        },
+        "4": {
+          "w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "expected_w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "chain_lengths": [
+            9,
+            9,
+            9,
+            9,
+            9,
+            9
+          ],
+          "all_w_slices_marked_q_chains": true,
+          "endpoint_splice_to_next_w_slice": true
+        },
+        "5": {
+          "w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "expected_w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "chain_lengths": [
+            9,
+            9,
+            9,
+            9,
+            9,
+            9
+          ],
+          "all_w_slices_marked_q_chains": true,
+          "endpoint_splice_to_next_w_slice": true
+        },
+        "6": {
+          "w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "expected_w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "chain_lengths": [
+            9,
+            9,
+            9,
+            9,
+            9,
+            9
+          ],
+          "all_w_slices_marked_q_chains": true,
+          "endpoint_splice_to_next_w_slice": true
+        },
+        "7": {
+          "w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "expected_w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "chain_lengths": [
+            9,
+            9,
+            9,
+            9,
+            9,
+            9
+          ],
+          "all_w_slices_marked_q_chains": true,
+          "endpoint_splice_to_next_w_slice": true
+        },
+        "8": {
+          "w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "expected_w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "chain_lengths": [
+            9,
+            9,
+            9,
+            9,
+            9,
+            9
+          ],
+          "all_w_slices_marked_q_chains": true,
+          "endpoint_splice_to_next_w_slice": true
+        }
+      }
+    },
+    "11": {
+      "regular_source_count": 9,
+      "expected_chain_w_values": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "all_regular_sources_ok": true,
+      "all_regular_splices_ok": true,
+      "interpretation": "fixed-(source_u,w) regular carry_jump rows form a marked length-m q-chain; quotienting successive w-slices is the extra step needed to view a cycle",
+      "per_source": {
+        "1": {
+          "w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "expected_w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "chain_lengths": [
+            11,
+            11,
+            11,
+            11,
+            11,
+            11,
+            11,
+            11
+          ],
+          "all_w_slices_marked_q_chains": true,
+          "endpoint_splice_to_next_w_slice": true
+        },
+        "2": {
+          "w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "expected_w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "chain_lengths": [
+            11,
+            11,
+            11,
+            11,
+            11,
+            11,
+            11,
+            11
+          ],
+          "all_w_slices_marked_q_chains": true,
+          "endpoint_splice_to_next_w_slice": true
+        },
+        "4": {
+          "w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "expected_w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "chain_lengths": [
+            11,
+            11,
+            11,
+            11,
+            11,
+            11,
+            11,
+            11
+          ],
+          "all_w_slices_marked_q_chains": true,
+          "endpoint_splice_to_next_w_slice": true
+        },
+        "5": {
+          "w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "expected_w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "chain_lengths": [
+            11,
+            11,
+            11,
+            11,
+            11,
+            11,
+            11,
+            11
+          ],
+          "all_w_slices_marked_q_chains": true,
+          "endpoint_splice_to_next_w_slice": true
+        },
+        "6": {
+          "w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "expected_w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "chain_lengths": [
+            11,
+            11,
+            11,
+            11,
+            11,
+            11,
+            11,
+            11
+          ],
+          "all_w_slices_marked_q_chains": true,
+          "endpoint_splice_to_next_w_slice": true
+        },
+        "7": {
+          "w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "expected_w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "chain_lengths": [
+            11,
+            11,
+            11,
+            11,
+            11,
+            11,
+            11,
+            11
+          ],
+          "all_w_slices_marked_q_chains": true,
+          "endpoint_splice_to_next_w_slice": true
+        },
+        "8": {
+          "w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "expected_w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "chain_lengths": [
+            11,
+            11,
+            11,
+            11,
+            11,
+            11,
+            11,
+            11
+          ],
+          "all_w_slices_marked_q_chains": true,
+          "endpoint_splice_to_next_w_slice": true
+        },
+        "9": {
+          "w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "expected_w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "chain_lengths": [
+            11,
+            11,
+            11,
+            11,
+            11,
+            11,
+            11,
+            11
+          ],
+          "all_w_slices_marked_q_chains": true,
+          "endpoint_splice_to_next_w_slice": true
+        },
+        "10": {
+          "w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "expected_w_values": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "chain_lengths": [
+            11,
+            11,
+            11,
+            11,
+            11,
+            11,
+            11,
+            11
+          ],
+          "all_w_slices_marked_q_chains": true,
+          "endpoint_splice_to_next_w_slice": true
+        }
+      }
+    }
+  },
+  "beta_exactness_full_rows_047": {
+    "5": {
+      "row_count": 220,
+      "nonterminal_row_count": 216,
+      "beta_formula": "beta = -(q + s + v + layer) mod m",
+      "beta_unit_drift_exact": true,
+      "beta_unit_drift_failures": [],
+      "readout_exactness_from_B_beta": {
+        "q": {
+          "distinct_key_count": 220,
+          "ambiguous_key_count": 0,
+          "is_exact": true
+        },
+        "c": {
+          "distinct_key_count": 220,
+          "ambiguous_key_count": 0,
+          "is_exact": true
+        },
+        "epsilon4": {
+          "distinct_key_count": 220,
+          "ambiguous_key_count": 0,
+          "is_exact": true
+        },
+        "tau": {
+          "distinct_key_count": 220,
+          "ambiguous_key_count": 0,
+          "is_exact": true
+        },
+        "next_tau": {
+          "distinct_key_count": 220,
+          "ambiguous_key_count": 0,
+          "is_exact": true
+        },
+        "next_B": {
+          "distinct_key_count": 216,
+          "ambiguous_key_count": 0,
+          "is_exact": true
+        }
+      }
+    },
+    "7": {
+      "row_count": 1218,
+      "nonterminal_row_count": 1212,
+      "beta_formula": "beta = -(q + s + v + layer) mod m",
+      "beta_unit_drift_exact": true,
+      "beta_unit_drift_failures": [],
+      "readout_exactness_from_B_beta": {
+        "q": {
+          "distinct_key_count": 1218,
+          "ambiguous_key_count": 0,
+          "is_exact": true
+        },
+        "c": {
+          "distinct_key_count": 1218,
+          "ambiguous_key_count": 0,
+          "is_exact": true
+        },
+        "epsilon4": {
+          "distinct_key_count": 1218,
+          "ambiguous_key_count": 0,
+          "is_exact": true
+        },
+        "tau": {
+          "distinct_key_count": 1218,
+          "ambiguous_key_count": 0,
+          "is_exact": true
+        },
+        "next_tau": {
+          "distinct_key_count": 1218,
+          "ambiguous_key_count": 0,
+          "is_exact": true
+        },
+        "next_B": {
+          "distinct_key_count": 1212,
+          "ambiguous_key_count": 0,
+          "is_exact": true
+        }
+      }
+    },
+    "9": {
+      "row_count": 3960,
+      "nonterminal_row_count": 3952,
+      "beta_formula": "beta = -(q + s + v + layer) mod m",
+      "beta_unit_drift_exact": true,
+      "beta_unit_drift_failures": [],
+      "readout_exactness_from_B_beta": {
+        "q": {
+          "distinct_key_count": 3960,
+          "ambiguous_key_count": 0,
+          "is_exact": true
+        },
+        "c": {
+          "distinct_key_count": 3960,
+          "ambiguous_key_count": 0,
+          "is_exact": true
+        },
+        "epsilon4": {
+          "distinct_key_count": 3960,
+          "ambiguous_key_count": 0,
+          "is_exact": true
+        },
+        "tau": {
+          "distinct_key_count": 3960,
+          "ambiguous_key_count": 0,
+          "is_exact": true
+        },
+        "next_tau": {
+          "distinct_key_count": 3960,
+          "ambiguous_key_count": 0,
+          "is_exact": true
+        },
+        "next_B": {
+          "distinct_key_count": 3952,
+          "ambiguous_key_count": 0,
+          "is_exact": true
+        }
+      }
+    },
+    "11": {
+      "row_count": 9790,
+      "nonterminal_row_count": 9780,
+      "beta_formula": "beta = -(q + s + v + layer) mod m",
+      "beta_unit_drift_exact": true,
+      "beta_unit_drift_failures": [],
+      "readout_exactness_from_B_beta": {
+        "q": {
+          "distinct_key_count": 9790,
+          "ambiguous_key_count": 0,
+          "is_exact": true
+        },
+        "c": {
+          "distinct_key_count": 9790,
+          "ambiguous_key_count": 0,
+          "is_exact": true
+        },
+        "epsilon4": {
+          "distinct_key_count": 9790,
+          "ambiguous_key_count": 0,
+          "is_exact": true
+        },
+        "tau": {
+          "distinct_key_count": 9790,
+          "ambiguous_key_count": 0,
+          "is_exact": true
+        },
+        "next_tau": {
+          "distinct_key_count": 9790,
+          "ambiguous_key_count": 0,
+          "is_exact": true
+        },
+        "next_B": {
+          "distinct_key_count": 9780,
+          "ambiguous_key_count": 0,
+          "is_exact": true
+        }
+      }
+    }
+  },
+  "beta_extension_support_049_063a": {
+    "13": {
+      "q_formula_exact": true,
+      "c_formula_exact": true,
+      "tau_formula_exact": true,
+      "next_tau_formula_exact": true,
+      "interpretation": "through m=19, the source-residue constructive formulas give exact current readout of q,c,tau,next_tau once the canonical clock/source-residue memory is present"
+    },
+    "15": {
+      "q_formula_exact": true,
+      "c_formula_exact": true,
+      "tau_formula_exact": true,
+      "next_tau_formula_exact": true,
+      "interpretation": "through m=19, the source-residue constructive formulas give exact current readout of q,c,tau,next_tau once the canonical clock/source-residue memory is present"
+    },
+    "17": {
+      "q_formula_exact": true,
+      "c_formula_exact": true,
+      "tau_formula_exact": true,
+      "next_tau_formula_exact": true,
+      "interpretation": "through m=19, the source-residue constructive formulas give exact current readout of q,c,tau,next_tau once the canonical clock/source-residue memory is present"
+    },
+    "19": {
+      "q_formula_exact": true,
+      "c_formula_exact": true,
+      "tau_formula_exact": true,
+      "next_tau_formula_exact": true,
+      "interpretation": "through m=19, the source-residue constructive formulas give exact current readout of q,c,tau,next_tau once the canonical clock/source-residue memory is present"
+    },
+    "049_current_state_exactness_summary": {
+      "tau_on_s_u_v_layer_rho_exact_all_m_5_to_19": true,
+      "next_tau_on_s_u_layer_rho_epsilon4_exact_all_m_5_to_19": true,
+      "c_on_u_rho_epsilon4_exact_all_m_5_to_19": true
+    }
+  },
+  "beta_representative_support_059b": {
+    "25": {
+      "representative_row_count": 288,
+      "beta_unit_drift_exact_on_representative_rows": true,
+      "family_validation_ok": true
+    },
+    "27": {
+      "representative_row_count": 312,
+      "beta_unit_drift_exact_on_representative_rows": true,
+      "family_validation_ok": true
+    },
+    "29": {
+      "representative_row_count": 336,
+      "beta_unit_drift_exact_on_representative_rows": true,
+      "family_validation_ok": true
+    }
+  },
+  "quotient_diagnostics_on_marked_chain": {
+    "5": {
+      "next_dn": {
+        "quotient_size_set_on_regular_marked_chains": [
+          2
+        ],
+        "carry_readout_exact_on_every_chain": true,
+        "chain_successor_deterministic": false,
+        "sample_nondeterministic_state": {
+          "state": "((0, 0, 0, 1),)",
+          "successor_count": 2
+        }
+      },
+      "dn_next_dn": {
+        "quotient_size_set_on_regular_marked_chains": [
+          2
+        ],
+        "carry_readout_exact_on_every_chain": true,
+        "chain_successor_deterministic": false,
+        "sample_nondeterministic_state": {
+          "state": "((1, 1, 0, 0), (0, 0, 0, 1))",
+          "successor_count": 2
+        }
+      },
+      "B_only": {
+        "quotient_size_set_on_regular_marked_chains": [
+          5
+        ],
+        "carry_readout_exact_on_every_chain": true,
+        "chain_successor_deterministic": true,
+        "sample_nondeterministic_state": null
+      },
+      "B_next": {
+        "quotient_size_set_on_regular_marked_chains": [
+          5
+        ],
+        "carry_readout_exact_on_every_chain": true,
+        "chain_successor_deterministic": true,
+        "sample_nondeterministic_state": null
+      },
+      "B_next_next2": {
+        "quotient_size_set_on_regular_marked_chains": [
+          5
+        ],
+        "carry_readout_exact_on_every_chain": true,
+        "chain_successor_deterministic": true,
+        "sample_nondeterministic_state": null
+      }
+    },
+    "7": {
+      "next_dn": {
+        "quotient_size_set_on_regular_marked_chains": [
+          2
+        ],
+        "carry_readout_exact_on_every_chain": true,
+        "chain_successor_deterministic": false,
+        "sample_nondeterministic_state": {
+          "state": "((0, 0, 0, 1),)",
+          "successor_count": 2
+        }
+      },
+      "dn_next_dn": {
+        "quotient_size_set_on_regular_marked_chains": [
+          2
+        ],
+        "carry_readout_exact_on_every_chain": true,
+        "chain_successor_deterministic": false,
+        "sample_nondeterministic_state": {
+          "state": "((1, 1, 0, 0), (0, 0, 0, 1))",
+          "successor_count": 2
+        }
+      },
+      "B_only": {
+        "quotient_size_set_on_regular_marked_chains": [
+          7
+        ],
+        "carry_readout_exact_on_every_chain": true,
+        "chain_successor_deterministic": true,
+        "sample_nondeterministic_state": null
+      },
+      "B_next": {
+        "quotient_size_set_on_regular_marked_chains": [
+          7
+        ],
+        "carry_readout_exact_on_every_chain": true,
+        "chain_successor_deterministic": true,
+        "sample_nondeterministic_state": null
+      },
+      "B_next_next2": {
+        "quotient_size_set_on_regular_marked_chains": [
+          7
+        ],
+        "carry_readout_exact_on_every_chain": true,
+        "chain_successor_deterministic": true,
+        "sample_nondeterministic_state": null
+      }
+    },
+    "9": {
+      "next_dn": {
+        "quotient_size_set_on_regular_marked_chains": [
+          2
+        ],
+        "carry_readout_exact_on_every_chain": true,
+        "chain_successor_deterministic": false,
+        "sample_nondeterministic_state": {
+          "state": "((0, 0, 0, 1),)",
+          "successor_count": 2
+        }
+      },
+      "dn_next_dn": {
+        "quotient_size_set_on_regular_marked_chains": [
+          2
+        ],
+        "carry_readout_exact_on_every_chain": true,
+        "chain_successor_deterministic": false,
+        "sample_nondeterministic_state": {
+          "state": "((1, 1, 0, 0), (0, 0, 0, 1))",
+          "successor_count": 2
+        }
+      },
+      "B_only": {
+        "quotient_size_set_on_regular_marked_chains": [
+          9
+        ],
+        "carry_readout_exact_on_every_chain": true,
+        "chain_successor_deterministic": true,
+        "sample_nondeterministic_state": null
+      },
+      "B_next": {
+        "quotient_size_set_on_regular_marked_chains": [
+          9
+        ],
+        "carry_readout_exact_on_every_chain": true,
+        "chain_successor_deterministic": true,
+        "sample_nondeterministic_state": null
+      },
+      "B_next_next2": {
+        "quotient_size_set_on_regular_marked_chains": [
+          9
+        ],
+        "carry_readout_exact_on_every_chain": true,
+        "chain_successor_deterministic": true,
+        "sample_nondeterministic_state": null
+      }
+    },
+    "11": {
+      "next_dn": {
+        "quotient_size_set_on_regular_marked_chains": [
+          2
+        ],
+        "carry_readout_exact_on_every_chain": true,
+        "chain_successor_deterministic": false,
+        "sample_nondeterministic_state": {
+          "state": "((0, 0, 0, 1),)",
+          "successor_count": 2
+        }
+      },
+      "dn_next_dn": {
+        "quotient_size_set_on_regular_marked_chains": [
+          2
+        ],
+        "carry_readout_exact_on_every_chain": true,
+        "chain_successor_deterministic": false,
+        "sample_nondeterministic_state": {
+          "state": "((1, 1, 0, 0), (0, 0, 0, 1))",
+          "successor_count": 2
+        }
+      },
+      "B_only": {
+        "quotient_size_set_on_regular_marked_chains": [
+          11
+        ],
+        "carry_readout_exact_on_every_chain": true,
+        "chain_successor_deterministic": true,
+        "sample_nondeterministic_state": null
+      },
+      "B_next": {
+        "quotient_size_set_on_regular_marked_chains": [
+          11
+        ],
+        "carry_readout_exact_on_every_chain": true,
+        "chain_successor_deterministic": true,
+        "sample_nondeterministic_state": null
+      },
+      "B_next_next2": {
+        "quotient_size_set_on_regular_marked_chains": [
+          11
+        ],
+        "carry_readout_exact_on_every_chain": true,
+        "chain_successor_deterministic": true,
+        "sample_nondeterministic_state": null
+      }
+    }
+  },
+  "remaining_gap": {
+    "full_raw_exhaustive_support_beyond_m_19": "not completed in this environment because the bundle does not include the full raw branch generator/dependencies needed to regenerate exhaustive active rows for larger odd moduli",
+    "accessible_quotient_for_intended_local_class": "not completed beyond the first 045 catalogs; this now needs full-repo extraction on the exact chain/section rather than more generic search"
+  }
+}
