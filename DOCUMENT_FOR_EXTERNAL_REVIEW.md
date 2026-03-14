@@ -2531,6 +2531,392 @@ Update:
   color `1`, Case II:
   keep the current checkpoint as a valid endpoint, and continue only if the
   next family stays on the same local-helper scale.
+- That bounded color-0 Case-II experiment has now started cleanly in
+  `formal/TorusD3Odometer/Color0FullCaseII.lean`, and the first architectural
+  milestone is positive.
+  The file is imported by `formal/TorusD3Odometer.lean`, and the root build
+  still succeeds.
+- The confirmed design finding is that color `0`, Case II shares the same
+  layer-1 / layer-2 transducer core as color `0`, Case I.
+  The only real change at the full-map level is the layer-0 classifier.
+  In code, that is now factored as the shared `fullMapColor0` core together
+  with the new `dir0CaseIILayerZero`.
+- A second useful implementation finding is that the counting side can be
+  developed independently of the final orbit packaging.
+  The file now has the induced `m`-step return map
+  `returnMap0CaseII`,
+  its xy transport `returnMap0CaseIIXY`,
+  the tautological `iterate_m_fullMap0CaseII_slicePoint_zero` bridge,
+  the Case-II return-time function `rho0CaseII`,
+  and the completed sum theorem `sum_rho0CaseII`.
+- That counting work also exposed a real arithmetic correction worth recording
+  for reproducibility:
+  the Case-II suffix block total is `9m - 15`, not `7m - 13`,
+  because the lane `x = m - 4` remains generic and contributes `m - 2`.
+  This was a genuine math/accounting correction, not just a Lean proof-shape
+  issue.
+- Current scope judgment:
+  the experiment is still on the right bounded scale.
+  No new framework was needed beyond the shared core and a small counting layer.
+- New verified checkpoint in the same file:
+  the first reusable xy-side local branch layer is now formalized.
+  `formal/TorusD3Odometer/Color0FullCaseII.lean` now contains the missing
+  three-step full-map helper packages for the Case-II `dir1` and `dir2`
+  subcases, together with the first explicit xy branch lemmas:
+  the warm-up `A` point `(2,1) -> (3,3)`,
+  the warm-up `A` point `(3,2) -> (4,4)`,
+  and the reusable `R`-line theorem on
+  `(1 + 2y, y) -> (3 + 2y, y + 2)`.
+- Reproducibility note:
+  the odometer tex lemma
+  `tex/d3torus_complete_m_ge_3_odometer_revision_v9_with_d4_patched.tex`,
+  lines `2924–2975`,
+  is now the right local blueprint for further Case-II work.
+  The useful proof engineering lesson is that the stable reusable layer is
+  not the old Case-I prefix/suffix engine, but this explicit branch API
+  (`P/Q/R/S/A/B/G`) derived from the Case-II xy formula.
+- Next exact frontier:
+  use that branch layer to close the warm-up lanes `x = 1` and `x = 2`
+  first.
+  Concretely, the next local theorem should be the dedicated `G`-tail package
+  on the even columns reached after the `A`-jump
+  (starting with the column `x = 4` tail for `x = 1`),
+  then the first-return theorem for `x = 1`,
+  then `x = 2`,
+  and only after that the generic band `3 ≤ x ≤ m - 7`.
+- The first direct attempt at that `x = 1` step has now been tried and
+  deliberately rolled back. The failed local abstraction was a single broad
+  theorem for the whole `x = 4` column tail
+  (`returnMap0CaseIIXY_four_column_step` plus its iterate wrapper and the
+  resulting `firstReturn_line_one_caseII_mod_ten` package).
+- That rollback is worth recording because it was a proof-shape failure, not an
+  architectural failure. The shared Case-II full-map / return-map core still
+  builds cleanly, and `lake build TorusD3Odometer` remains green. The problem
+  was narrower: the over-broad four-column theorem mixed three genuinely
+  different regimes into one statement:
+  the generic band `4 ≤ y ≤ m - 3`,
+  the top corner `y = m - 2`,
+  and the wrap point `y = m - 1`.
+- Reproducible engineering finding from that rollback:
+  for color `0`, Case II mod `10`, the stable next layer should not be a
+  single theorem over the whole `x = 4` column.
+  The better shape is:
+  one generic four-column step theorem on the honest band `4 ≤ y ≤ m - 3`,
+  then tiny separate boundary lemmas for `y = m - 2` and `y = m - 1`,
+  and only after that the partial iterate package and the `x = 1` first-return
+  theorem.
+- Practical status after the rollback:
+  keep the already-verified local branch API,
+  keep the full-map / return-map / counting layer,
+  and restart from a clean checkpoint with the narrower theorem split above.
+  This remains inside the bounded-experiment bar; no new negative evidence
+  against the overall color-0 Case-II odometer rewrite has appeared.
+- That narrower restart is now partially realized in code.
+  `formal/TorusD3Odometer/Color0FullCaseII.lean` contains the explicit split
+  of the `x = 4` column into three regimes on the original-coordinate side:
+  `fromXY_four_column_lower`,
+  `fromXY_four_column_mid`,
+  `fromXY_four_column_upper`,
+  together with the midpoint successor theorem
+  `returnMap0CaseIIXY_four_column_mid_step`.
+- Reproducible design finding from that successful helper layer:
+  the real special height on the `x = 4` column is
+  `y = m / 2 + 2`, where `fromXY (4,y)` lands exactly on the `i = 0` branch.
+  Below that height the first coordinate is the explicit nat-cast
+  `m + 4 - 2y`; above it the first coordinate is the explicit nat-cast
+  `2m + 4 - 2y`.
+  So the next pass should use this three-part column decomposition directly
+  instead of reintroducing a by-cases theorem over all `4 ≤ y ≤ m - 1`.
+- That columnwise approach has now closed the full warm-up lane `x = 1`.
+  The file now contains the generic step theorems
+  `returnMap0CaseIIXY_four_column_lower_step` and
+  `returnMap0CaseIIXY_four_column_upper_step`,
+  the partial iterate packages
+  `iterate_returnMap0CaseIIXY_four_column_lower_partial`,
+  `iterate_returnMap0CaseIIXY_four_column_to_upper_start`,
+  `iterate_returnMap0CaseIIXY_four_column_upper_partial`,
+  the two top-corner steps
+  `returnMap0CaseIIXY_four_column_m_sub_two` and
+  `returnMap0CaseIIXY_four_column_m_sub_one`,
+  the composed tail theorem
+  `iterate_returnMap0CaseIIXY_four_column_to_zero`,
+  and the final first-return theorem
+  `firstReturn_line_one_caseII_mod_ten`.
+- Reproducible implementation lesson from that closure:
+  the right unit of abstraction is not “one theorem for the whole repaired
+  column,” but
+  generic lower band ->
+  midpoint step ->
+  generic upper band ->
+  explicit top-corner steps.
+  Once that decomposition is stated, the `x = 1` proof is a short segment
+  composition rather than a second monolithic orbit trace.
+- Current next frontier:
+  the next warm-up lane is `x = 2`, whose manuscript orbit is
+  `(2,0) -> (3,1) -> (5,3) -> (5,4) -> (6,6) -> G^{m-6} -> (6,0)`.
+  The new checkpoint strongly suggests the right next move is to repeat the
+  same pattern on the `x = 6` column rather than to generalize prematurely.
+- That `x = 2` warm-up lane is now closed in
+  `formal/TorusD3Odometer/Color0FullCaseII.lean`.
+  The local entry lemmas are
+  `returnMap0CaseIIXY_five_three`,
+  `returnMap0CaseIIXY_five_four`,
+  the `x = 6` column layer
+  `fromXY_six_column_lower`,
+  `fromXY_six_column_mid`,
+  `fromXY_six_column_upper`,
+  the lower/upper generic step theorems,
+  the composed tail theorem
+  `iterate_returnMap0CaseIIXY_six_column_to_zero`,
+  and the final warm-up theorem
+  `firstReturn_line_two_caseII_mod_ten`.
+- Reproducible design finding from that closure:
+  the `x = 6` column is again a three-regime object on the
+  original-coordinate side, but simpler than the `x = 4` column.
+  The only interior special height is
+  `y = m / 2 + 3`, where `fromXY (6,y)` lands on the `i = 0` branch.
+  Below that height the first coordinate is the explicit nat-cast
+  `m + 6 - 2y`; above it the first coordinate is
+  `2m + 6 - 2y`.
+- One additional boundary correction is worth recording for reproducibility:
+  at the top corner `y = m - 2`, the original-coordinate representative is
+  generically `(10,-2)`, but when `m = 10` it collapses to `(0,-2)`.
+  So the stable theorem shape is:
+  generic lower band ->
+  midpoint `i = 0` step ->
+  generic upper band ->
+  explicit top corner(s),
+  with a tiny `m = 10` subcase only at `y = m - 2`.
+- Current next frontier:
+  the warm-up lanes are now complete for the mod-`10` Case-II family.
+  The next bounded step should be the generic band `3 ≤ x ≤ m - 7`,
+  reusing the explicit Case-II branch API
+  (`B`, `R`, `A`, and the repaired even-column `G` tails)
+  rather than trying to compress everything into one global column theorem.
+- That generic-band work has now moved from a broken scaffold to a clean,
+  reusable checkpoint in
+  `formal/TorusD3Odometer/Color0FullCaseII.lean`.
+  The file now has the repaired odd generic prefix
+  `returnMap0CaseIIXY_odd_generic_even_column_one_step`,
+  the lower / midpoint / upper column step theorems on the even column
+  `x + 1`,
+  the assembled prefix theorem
+  `iterate_returnMap0CaseIIXY_odd_generic_to_A`,
+  and a new reusable pre-`R` upper-column layer:
+  `returnMap0CaseIIXY_upper_column_step`,
+  `iterate_returnMap0CaseIIXY_upper_column_partial`,
+  the specialized odd-generic bridge
+  `iterate_returnMap0CaseIIXY_odd_generic_after_A_to_R`,
+  and the mod-`10` `R`-step theorem
+  `returnMap0CaseIIXY_odd_generic_R_step`.
+- Reproducible implementation finding from that extension:
+  the odd generic mod-`10` orbit really does admit a clean decomposition
+  matching the odometer tex:
+  `B -> G^(x-1) -> A -> G^((m-x-3)/2) -> R`,
+  and the right reusable object for the middle segment is not an
+  x-specific theorem but a generic upper-column `G`-step on points
+  `(c,y)` with `c ≤ y ≤ (m + c - 3)/2`.
+  That helper already survives outside the original `x + 1` column.
+- New non-routine frontier:
+  the next missing block is the post-`R` wrapped upper-column tail on the
+  column `x + 4`.
+  This is the first place where the generic band meets the top-corner
+  behavior, because after the `R` jump the orbit is already above the upper
+  `R`-height and the original-coordinate representative switches to the
+  wrapped form `2m + c - 2y`.
+  The likely next helper layer is therefore:
+  wrapped upper-column generic `G` step ->
+  its partial iterate package ->
+  explicit top-corner lemmas if the boundary lane `x = m - 7` forces them.
+- Practical status:
+  `lake env lean TorusD3Odometer/Color0FullCaseII.lean` and
+  `lake build TorusD3Odometer` both succeed again after this extension.
+  So the experiment remains on the accepted bounded scale, but the next step
+  is no longer routine warm-up packaging; it is the first genuinely new
+  generic-tail helper design for the color-`0`, Case-II mod-`10` rewrite.
+- That wrapped-tail design is now implemented and verified in
+  `formal/TorusD3Odometer/Color0FullCaseII.lean`.
+  The new helper layer is:
+  `returnMap0CaseIIXY_wrapped_upper_column_step`,
+  `iterate_returnMap0CaseIIXY_wrapped_upper_column_partial`,
+  the generic top-corner lemmas
+  `returnMap0CaseIIXY_wrapped_upper_column_m_sub_two` /
+  `returnMap0CaseIIXY_wrapped_upper_column_m_sub_one`,
+  the assembled tail theorem
+  `iterate_returnMap0CaseIIXY_wrapped_upper_column_to_zero`,
+  the specialized odd-generic tail
+  `iterate_returnMap0CaseIIXY_odd_generic_after_R_to_zero`,
+  and the first safe generic theorem
+  `firstReturn_line_odd_generic_caseII_mod_ten_safe`.
+- Reproducible design finding from that closure:
+  the wrapped upper-column helper cannot be stated honestly as a generic
+  all-`c` theorem.
+  The stable statement needs the real mod-`10` parity context plus an odd
+  column assumption.
+  Concretely, the safe generic odd family closes uniformly only on
+  `3 <= x <= m - 11`, where the post-`R` column is `x + 4 <= m - 7`.
+  That is exactly the range where the wrapped original-coordinate
+  representative stays inside the generic `dir = 1` regime and the two
+  generic top corners apply without extra collapse cases.
+- Updated exact frontier:
+  the next missing odd lanes are now the boundary values
+  `x = m - 9` and `x = m - 7`.
+  Those are the first places where the `x + 4` column leaves the safe
+  wrapped-upper generic regime, so the right next proof shape is
+  short boundary-specific tail theorems rather than a larger new framework.
+  After those are closed, the odd-family dispatcher should be packaged before
+  deciding whether to attack the even band or the global Case-II
+  `hreturn`/`hfirst` layer.
+- That odd-family branch is now closed through the safe generic theorem
+  `firstReturn_line_odd_generic_caseII_mod_ten_safe`, and the next active
+  work in `formal/TorusD3Odometer/Color0FullCaseII.lean` has moved to the
+  even generic family.
+- Reproducible design finding from the even-front-half implementation:
+  the stable decomposition is not a direct even-column theorem from the line
+  start, but the odometer-style sequence
+  `line start -> odd column x + 1 -> R -> odd column x + 3 -> A`.
+  Concretely, the reusable theorems are
+  `iterate_returnMap0CaseIIXY_even_generic_to_R`
+  and
+  `iterate_returnMap0CaseIIXY_even_generic_to_A`,
+  which close the generic even family on
+  `4 <= x <= m - 8`, `Even x`
+  through the point `A = (x + 4, x + 4)`.
+- Current exact frontier:
+  that final even-column tail is now implemented on the honest safe range
+  `4 <= x <= m - 12`, `Even x`.
+  The new reusable layer in
+  `formal/TorusD3Odometer/Color0FullCaseII.lean`
+  is:
+  `fromXY_even_generic_final_column_lower`,
+  `fromXY_even_generic_final_column_mid`,
+  `fromXY_even_generic_final_column_upper`,
+  the lower / midpoint / upper step theorems,
+  the assembled tail theorem
+  `iterate_returnMap0CaseIIXY_even_generic_final_column_to_zero_safe`,
+  and the resulting safe generic first-return theorem
+  `firstReturn_line_even_generic_caseII_mod_ten_safe`.
+- Reproducible design finding from that closure:
+  the even generic family does not stay uniform all the way to
+  `x = m - 8`.
+  The safe theorem really is
+  `4 <= x <= m - 12`, `Even x`;
+  the remaining boundary lanes `x = m - 10` and `x = m - 8`
+  are short special cases because the final even column loses its honest
+  upper generic band.
+- That boundary split is now closed in
+  `formal/TorusD3Odometer/Color0FullCaseII.lean` through
+  `firstReturn_line_m_sub_ten_caseII_mod_ten`,
+  `firstReturn_line_m_sub_eight_caseII_mod_ten`,
+  and the full even-family dispatcher
+  `firstReturn_line_even_generic_caseII_mod_ten`.
+- Reproducible design finding from those two boundary lanes:
+  the widened lower/mid final-column helper layer
+  `x <= m - 8`
+  was enough, but only because
+  `x = m - 10` reaches the top via exactly two corner steps and
+  `x = m - 8` reaches the top via exactly one corner step.
+  No new framework was needed beyond explicit arithmetic equalities for the
+  iterate counts and endpoint heights.
+- Updated exact frontier:
+  the even generic mod-`10` family is now complete, so the next missing
+  Case-II inputs are the upper special lanes
+  `x = m - 6`, `x = m - 5`, `x = m - 4`,
+  `x = m - 3`, `x = m - 2`, `x = m - 1`.
+  The correct next move is not another generic family theorem; it is a short
+  batch of explicit upper-tail packages on top of the already-proved
+  wrapped-upper-column lemmas, and only then the Case-II
+  `hreturn` / `hfirst` layer.
+- Practical status:
+  `lake env lean TorusD3Odometer/Color0FullCaseII.lean` and
+  `lake build TorusD3Odometer` both succeed after the full even-family
+  extension,
+  so the mod-`10` Case-II rewrite remains within the accepted bounded
+  experiment scale.
+- Incremental closure after that checkpoint:
+  `formal/TorusD3Odometer/Color0FullCaseII.lean` now also contains
+  `firstReturn_line_m_sub_five_caseII_mod_ten`.
+  The key engineering fact from that repair is reproducible:
+  the right tail proof does not need a new framework; it needs
+  a tiny `dir = 0` original-coordinate kernel together with two explicit
+  endpoint transport lemmas
+  `returnMap0CaseIIXY_m_sub_three_m_sub_two`
+  and
+  `returnMap0CaseIIXY_m_sub_two_m_sub_one`,
+  then a short four-step xy tail package.
+- Updated exact frontier after the `x = m - 5` closure:
+  the remaining upper special lanes are now
+  `x = m - 6`, `x = m - 4`, `x = m - 3`, `x = m - 2`, `x = m - 1`,
+  and after those the odd-family dispatcher should be widened to absorb
+  `x = m - 5` before attempting the Case-II
+  `hreturn` / `hfirst` layer.
+- Incremental closure after that upper-tail batch:
+  `formal/TorusD3Odometer/Color0FullCaseII.lean` now also contains
+  `firstReturn_line_m_sub_four_caseII_mod_ten`
+  and
+  `firstReturn_line_m_sub_one_caseII_mod_ten`.
+  The reproducible implementation fact is that no new orbit framework was
+  needed:
+  the clean path was to widen exactly two helper families and then package the
+  manuscript traces.
+  Concretely:
+  the odd-column helpers were widened from `x <= m - 4` to `x <= m - 2`,
+  and the wrapped-upper-column helpers were widened from `c >= 7` to
+  `c >= 1`.
+- Why those widenings are legitimate:
+  they do not change the branch logic; they only expose already-valid generic
+  zones that were previously left artificially narrow.
+  The `x = m - 1` closure then becomes a short composition:
+  one explicit start step at `(m - 1,0)`,
+  the widened odd-column partial on the same column,
+  one `R` hit at height `m / 2 - 1`,
+  and the widened wrapped-upper-column tail on column `1`.
+- Updated exact frontier after the `x = m - 4` / `x = m - 1` closures:
+  the remaining mod-`10` Case-II upper special lanes are now
+  `x = m - 6`, `x = m - 3`, and `x = m - 2`.
+  After those, the correct next packaging target is the Case-II
+  `hreturn` dispatcher, not another helper layer.
+- Negative result from the immediately following probe:
+  widening the wrapped-upper-column family from odd `c` to arbitrary
+  `c >= 1` looked attractive for `x = m - 3`, but the current arithmetic
+  proof does not support that simplification cleanly.
+  The safe takeaway is narrower:
+  keep the successful bound widening `c >= 1`,
+  but keep the oddness hypothesis in place until a genuinely new proof is
+  written.
+- Concrete next-boundary reading of that failure:
+  the lane `x = m - 3` does not naturally land in the existing wrapped
+  odd-column tail family after the `Q` step; its post-`Q` column is `x = 2`.
+  So the next reusable helper, if any, should be a tiny fixed even-column tail
+  package for column `2`, not a further attempted widening of the odd-column
+  machinery.
+- That bounded helper experiment has now succeeded.
+  `formal/TorusD3Odometer/Color0FullCaseII.lean`
+  now contains the fixed column-`2` package
+  `iterate_returnMap0CaseIIXY_two_column_to_zero`,
+  the new `Q`-point bridge
+  `returnMap0CaseIIXY_m_sub_one_m_sub_one`,
+  and the upper-special theorem
+  `firstReturn_line_m_sub_three_caseII_mod_ten`.
+  The reproducible design fact is exact:
+  the right abstraction was a tiny fixed even-column tail package on column
+  `2`, not a parity-free widening of the wrapped odd-column family.
+- Corrected mathematical endpoint from that closure:
+  the lane `x = m - 3` returns to `2`, not to `1`.
+  In the odometer rewrite that is now formalized with return time
+  `2m - 3`, matching
+  `rho0CaseII_eq_two_mul_sub_three_of_val_eq_m_sub_three`.
+- Updated exact frontier after the `x = m - 3` closure:
+  the remaining mod-`10` Case-II upper special lanes are now
+  `x = m - 6` and `x = m - 2`.
+  After those two, the correct next packaging target is the Case-II
+  `hreturn` dispatcher, and only then the `hfirst` layer.
+- Practical status:
+  `lake env lean TorusD3Odometer/Color0FullCaseII.lean`
+  and
+  `lake build TorusD3Odometer`
+  both succeed after the new closures, so the bounded color-`0` Case-II
+  experiment remains healthy.
 
 ## D45) D5 theorem-side minimal object vs compute-side source-residue refinement after 049/050
 
