@@ -1,0 +1,262 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{microtype}
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\Zm}{\mathbb Z_m}
+
+\title{A cleanup note for the odd-$m$ D5 globalization theorem}
+\author{}
+\date{March 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We record the current accepted theorem-level form of the odd-$m$ $d=5$
+package. The final claim is that raw global $(\beta,\delta)$ is exact on the
+true accessible boundary union, equivalently that every actual lift of the
+exceptional cutoff row $\delta=3m-3$ continues through
+$3m-2\to 3m-1$ and lands in the regular continuing endpoint class there.
+The note is written as a cleanup target: it keeps the structural input,
+componentwise bridge, globalization reductions, and final gluing theorem
+separate, and it preserves the scope distinction that the bridge is
+componentwise before the globalization argument closes.
+\end{abstract}
+
+\section{Statement and scope}
+
+Throughout, fix an odd modulus $m$ in the accepted D5 regime.
+We write the abstract right-congruence coordinate as $\rho$ and the concrete
+boundary coordinate as $\delta$.
+The purpose of this note is only to record the final theorem chain cleanly.
+It does not attempt to retell the full historical development of the D5 branch.
+
+The final theorem-level claim is:
+\begin{quote}
+raw global $(\beta,\delta)$ is exact on the true accessible boundary union.
+\end{quote}
+Equivalently:
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2.5em]
+\item the abstract bridge $(\beta,\rho)$ is exact on the true accessible
+boundary union;
+\item the concrete bridge $(\beta,\delta)$ is exact globally, not merely
+componentwise;
+\item $\rho=\rho(\delta)$ globally;
+\item there is no hidden second endpoint sheet over $\delta=3m-1$.
+\end{enumerate}
+
+The sharp row formulation is:
+\begin{quote}
+Every actual lift of the exceptional cutoff row $\delta=3m-3$ continues through
+$3m-2\to 3m-1$ and lies in the regular continuing endpoint class there.
+\end{quote}
+
+\section{Imported structural inputs}
+
+The final theorem uses the following structural inputs.
+
+\begin{proposition}[explicit trigger family]
+On the unresolved best-seed channel $R1\to H_{L1}$, the target hole family is
+\[
+H_{L1}=\{(q,w,u,\lambda)=(m-1,m-1,u,2):u\neq 2\}.
+\]
+\end{proposition}
+
+\begin{proposition}[universal first-exit targets]
+The active best-seed branch first exits to $H_{L1}$ at exactly one of the two
+states
+\[
+T_{\mathrm{reg}}=(m-1,m-2,1),
+\qquad
+T_{\mathrm{exc}}=(m-2,m-1,1).
+\]
+Regular source families exit at $T_{\mathrm{reg}}$ by direction $2$, while the
+exceptional source family exits at $T_{\mathrm{exc}}$ by direction $1$.
+\end{proposition}
+
+The role of these propositions in the final proof is narrow but decisive:
+first-exit data are used only to certify the exceptional continuation through
+the interface row.
+
+\section{The concrete bridge package}
+
+On the $\Theta=2$ boundary section define
+\[
+\sigma \equiv w+u-q-1 \pmod m,
+\qquad
+\delta := q+m\sigma.
+\]
+
+\begin{proposition}[componentwise concrete bridge]
+On each splice-connected accessible component:
+\begin{enumerate}[label=\textup{(\alph*)},leftmargin=2.5em]
+\item the odometer splice law holds,
+\[
+\delta'=\delta+1 \pmod{m^2};
+\]
+\item the current event class $\epsilon_4$ is a function of $(\beta,\delta)$.
+\end{enumerate}
+In particular, $(\beta,\delta)$ is an exact concrete bridge coordinate
+componentwise.
+\end{proposition}
+
+This bridge proposition is intentionally stated only componentwise. The global
+upgrade comes later.
+
+\section{Globalization reductions}
+
+\begin{proposition}[tail-length reduction]
+Once the concrete bridge package is accepted, two realizations of the same
+boundary label $\delta$ can differ only by remaining full-chain tail length.
+Equivalently, there is no further local future-law ambiguity at fixed realized
+$\delta$.
+\end{proposition}
+
+\begin{proposition}[regular continuation]
+Every regular realization of every realized $\delta$ continues on the true
+larger regular accessible union.
+\end{proposition}
+
+\begin{proposition}[exceptional interface theorem]
+At chart/interface level, the exceptional continuation is pinned to
+\[
+3m-3 \to 3m-2 \to 3m-1.
+\]
+The labels $3m-2$ and $3m-1$ are the distinguished regular interface labels:
+$3m-2$ is the terminal regular source-$4$ occurrence and $3m-1$ is the regular
+source-$1$ start.
+\end{proposition}
+
+\begin{proposition}[single-row reduction]
+The full raw globalization theorem is equivalent to one exceptional-row
+statement: every actual lift of the exceptional cutoff row $\delta=3m-3$ must
+glue through $3m-2\to 3m-1$ into the regular continuing class.
+\end{proposition}
+
+These reductions isolate the only remaining obstruction after the regular
+sector is closed: the exceptional cutoff row cannot be allowed to launch a new
+endpoint sheet.
+
+\section{Final theorem}
+
+\begin{theorem}[odd-$m$ D5 final globalization theorem]
+For odd $m$ in the accepted D5 regime, every actual lift of the exceptional
+cutoff row $\delta=3m-3$ continues through
+\[
+3m-2 \to 3m-1
+\]
+and lies in the regular continuing endpoint class there.
+Consequently:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.5em]
+\item there is no mixed-status realized $\delta$;
+\item fixed realized $\delta$ determines tail length;
+\item fixed realized $\delta$ determines endpoint class and future word;
+\item $\rho=\rho(\delta)$ globally;
+\item raw global $(\beta,\delta)$ is exact.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+By regular continuation, no regular full chain is terminal.
+By the componentwise splice law, every exceptional full chain before the cutoff
+continues internally.
+So only the exceptional cutoff chain at $\delta=3m-3$ needs work.
+
+The universal first-exit theorem gives a unique actual exceptional exit target
+and branch direction on the active branch. The interface theorem then pins the
+corresponding continuation in chain labels to
+\[
+3m-3 \to 3m-2 \to 3m-1.
+\]
+Hence the exceptional cutoff chain also has a forward successor.
+Therefore every accessible full chain has a forward successor.
+
+If some splice-connected accessible component were finite, its realized
+boundary image in $\mathbb Z/m^2\mathbb Z$ would have a right-end chain with no
+successor, contradicting the previous paragraph. Hence every splice-connected
+accessible component is total, and every realization has infinite remaining
+tail length.
+
+Now apply the tail-length reduction: at fixed realized $\delta$, the only
+possible ambiguity was tail length. Since tail length is now always infinite,
+fixed realized $\delta$ determines the endpoint class and future word.
+Therefore $\rho=\rho(\delta)$ globally, which is exactly the claim that raw
+global $(\beta,\delta)$ is exact.
+\end{proof}
+
+\section{Concrete $m=5$ specialization}
+
+The theorem has a directly checkable row form at $m=5$.
+Since
+\[
+3m-3=12,
+\qquad
+3m-2=13,
+\qquad
+3m-1=14,
+\]
+the exceptional interface statement becomes:
+\begin{quote}
+Every actual lift of $\delta=12$ continues through $13\to 14$ and glues into
+the regular continuing endpoint class at $14$.
+\end{quote}
+
+Using
+\[
+\delta=q+5\sigma,
+\]
+this is the row
+\[
+12=2+5\cdot 2,
+\qquad
+13=3+5\cdot 2,
+\qquad
+14=4+5\cdot 2,
+\]
+so the interface lies on the slice $\sigma=2$ with $q=2,3,4$.
+The corresponding trigger family and first-exit targets are
+\[
+H_{L1}=\{(4,4,u,2):u\neq 2\},
+\qquad
+T_{\mathrm{reg}}=(4,3,1),
+\qquad
+T_{\mathrm{exc}}=(3,4,1).
+\]
+
+\begin{remark}[separate explicit witness at $m=5$]
+The bundle also contains a separate concrete file
+\texttt{d5\_m5\_kempe\_witness\_26.json} recording a 26-move Kempe-valid witness
+with cycle counts $(1,1,1,1,1)$ on $m=5$.
+That object is a direct small-modulus existence witness.
+It is useful supporting evidence, but it is logically distinct from the final
+raw-state globalization theorem proved above.
+\end{remark}
+
+\section{Cleanup warning}
+
+In any later manuscript integration, the following scope distinctions should
+remain explicit.
+
+\begin{itemize}[leftmargin=2em]
+\item The concrete bridge package is componentwise before globalization.
+\item The exceptional interface theorem is chart/interface level before it is
+combined with the actual first-exit theorem.
+\item The global theorem is obtained only after combining the structural
+first-exit input, the interface theorem, the regular continuation theorem, and
+the tail-length reduction.
+\end{itemize}
+
+\end{document}

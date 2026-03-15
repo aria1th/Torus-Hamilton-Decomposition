@@ -1,0 +1,277 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage{booktabs,tabularx,array}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\title{From the Accepted Package to an Independent Odd-$m$ D5 Theorem Package}
+\author{}
+\date{2026-03-14}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note answers one packaging question and does not search for a new theorem.
+The odd-$m$ $d=5$ globalization theorem is already closed inside the accepted
+chain
+\[
+033 \to 062 \to 076 \to 077 \to 079 \to 081 \to 082 \to 083.
+\]
+No new mathematical bottleneck is visible in that chain. What remains is to
+rewrite the imported inputs so that the final theorem no longer reads as proved
+only ``within the accepted package.'' The main missing item is one explicit
+chart-to-raw continuation theorem that packages the current use of
+\texttt{062} and \texttt{079} into a single proof object.
+\end{abstract}
+
+\section{Purpose and exact current status}
+
+This is a cleanup note, not a new theorem note. Its job is to separate two
+claims that can otherwise get blurred together:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.2em]
+\item the odd-$m$ $d=5$ theorem is already closed \emph{inside the accepted
+package};
+\item the theorem is not yet written as one independently self-contained
+manuscript-order package.
+\end{enumerate}
+
+\begin{theorem}[Current accepted-package theorem]
+For odd $m$ in the accepted D5 regime, every actual lift of the exceptional
+cutoff row $\delta=3m-3$ continues through
+\[
+3m-2 \to 3m-1
+\]
+and lies in the regular continuing endpoint class there. Consequently:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.2em]
+\item there is no mixed-status realized $\delta$;
+\item fixed realized $\delta$ determines tail length;
+\item fixed realized $\delta$ determines endpoint class and future word;
+\item $\rho=\rho(\delta)$ globally;
+\item raw global $(\beta,\delta)$ is exact on the true accessible boundary
+union.
+\end{enumerate}
+\end{theorem}
+
+\begin{remark}[Scope reminder]
+The theorem above is exactly the current accepted conclusion, but its proof is
+still distributed across imported notes. In particular, \texttt{076} remains a
+\emph{componentwise} concrete bridge theorem, \texttt{079} remains a
+\emph{chart/interface} theorem, and \texttt{083} becomes final only after
+those inputs are combined with \texttt{062}, \texttt{077}, and \texttt{081}.
+\end{remark}
+
+\section{What an independent package should mean}
+
+\begin{definition}[Independent odd-$m$ D5 theorem package]
+An \emph{independent package} is a manuscript-order theorem package in which
+all proof-critical objects used by the final odd-$m$ $d=5$ globalization
+argument are stated in place, with their exact scope visible, so that the
+final theorem no longer depends on the phrase ``within the accepted package''
+for its mathematical status.
+\end{definition}
+
+This notion of independence is deliberately modest. It does \emph{not} ask for
+new numerics, a new search, or a new idea. It asks for one self-contained
+presentation layer in which the proof-critical imports have become theorems of
+the package itself.
+
+\section{What already looks theorem-level enough}
+
+\begin{proposition}[Stable layers]
+The following pieces already look strong enough to survive essentially
+unchanged in an independent package:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.2em]
+\item the abstract bridge $(\beta,\rho)$;
+\item the componentwise concrete bridge $(\beta,\delta)$;
+\item the reduction from fixed-$\delta$ ambiguity to full-chain tail length;
+\item the regular-union theorem;
+\item the exceptional-row reduction;
+\item the final gluing proof pattern.
+\end{enumerate}
+\end{proposition}
+
+So the missing work is not discovery. It is exposing the already-used inputs in
+one clean order.
+
+\section{What is still missing}
+
+\subsection*{1. One self-contained structural theorem block}
+
+\begin{proposition}[Needed repackaging: structural input]
+An independent package should contain one theorem block that states, in one
+place:
+\begin{enumerate}[label=\textup{(\alph*)},leftmargin=2.2em]
+\item the exact trigger family
+\[
+H_{L1}=\{(q,w,u,\lambda)=(m-1,m-1,u,2):u\neq 2\};
+\]
+\item the candidate active orbit on current coordinates;
+\item the phase-$1$ invariant
+\[
+q\equiv u-\rho+1 \pmod m;
+\]
+\item the universal first-exit targets
+\[
+T_{\mathrm{reg}}=(m-1,m-2,1),
+\qquad
+T_{\mathrm{exc}}=(m-2,m-1,1);
+\]
+\item the conclusion that, on the actual active branch, the true orbit agrees
+with the candidate orbit up to first exit.
+\end{enumerate}
+\end{proposition}
+
+At present this content is mathematically sound but distributed across
+\texttt{033} and \texttt{062}. Independence asks for one theorem block, not a
+new proof idea.
+
+\subsection*{2. One explicit chart-to-raw continuation theorem}
+
+\begin{proposition}[Needed repackaging: actual exceptional continuation]
+An independent package should include one theorem that packages the current
+composition of \texttt{062} and \texttt{079} into a single proof object:
+
+\smallskip
+\noindent every actual lift of the exceptional cutoff row reaches the universal
+raw first-exit target
+\[
+T_{\mathrm{exc}}=(m-2,m-1,1)
+\]
+by direction $1$, and therefore continues in chain labels through
+\[
+3m-3\to 3m-2\to 3m-1,
+\]
+where $3m-2$ is the terminal regular source-$4$ occurrence and $3m-1$ is the
+regular source-$1$ start.
+\end{proposition}
+
+\begin{remark}[Why this is the key packaging gap]
+This is the one place where the current proof still feels assembled from
+accepted notes rather than written as a single theorem object. This theorem is
+weaker than the final endpoint-class gluing theorem: it packages only the
+actual exceptional continuation, not the later tail-length or regular-union
+arguments that promote that continuation to global $\rho=\rho(\delta)$.
+\end{remark}
+
+\subsection*{3. One compact concrete bridge theorem}
+
+\begin{proposition}[Needed repackaging: concrete bridge]
+An independent package should contain one compact theorem that states, in one
+place, the intrinsic boundary coordinates
+\[
+\sigma\equiv w+u-q-1\pmod m,
+\qquad
+\delta=q+m\sigma,
+\]
+the splice law
+\[
+\delta' \equiv \delta+1 \pmod{m^2},
+\]
+the current-event readout from $(\beta,\delta)$, and the component-image
+statement that each splice-connected accessible component maps to one forward
+$+1$ orbit segment in $\mathbb Z/m^2\mathbb Z$.
+\end{proposition}
+
+This content already exists in \texttt{076}. The missing work is only to
+present it as one compact theorem in manuscript order.
+
+\subsection*{4. One theorem-level definition block}
+
+\begin{proposition}[Needed repackaging: final definitions]
+An independent package should define in one place the final proof objects used
+later without reconstruction from earlier notes:
+\begin{enumerate}[label=\textup{(\alph*)},leftmargin=2.2em]
+\item the accessible boundary union;
+\item a splice-connected accessible component;
+\item a full regular chain;
+\item the exceptional cutoff row;
+\item an actual lift;
+\item endpoint class, padded future word, and right-congruence state.
+\end{enumerate}
+\end{proposition}
+
+The notions are already present in the chain, but they are spread across
+notes. An independent package should not force the reader to reconstruct them
+from context.
+
+\subsection*{5. Support files should become verification aids only}
+
+\begin{proposition}[Needed repackaging: move proof-critical content out of
+support files]
+The support files
+\begin{center}
+\ttfamily
+checks/d5\_077\_compact\_interval\_summary.json \quad and \quad
+checks/d5\_081\_regular\_union\_endpoint\_table.csv
+\end{center}
+should remain attached as verification aids, but any proof-critical content now
+navigated through them should be restated as lemmas or propositions in the
+manuscript-order theorem notes.
+\end{proposition}
+
+Again, this is a packaging requirement, not evidence of a missing theorem idea.
+
+\section{Recommended manuscript order}
+
+A compact independent package can be organized in the following order:
+\begin{enumerate}[label=\textup{\arabic*.},leftmargin=2.2em]
+\item one definition note collecting the final objects;
+\item one structural theorem note replacing the distributed \texttt{033 -> 062}
+block;
+\item one concrete bridge theorem note replacing the current promoted-support
+status of \texttt{076};
+\item the fixed-$\delta$ tail-length reduction;
+\item the regular-union theorem;
+\item the explicit chart-to-raw exceptional continuation theorem;
+\item the final globalization theorem.
+\end{enumerate}
+
+That order makes the final proof read as a forward argument rather than as a
+reconstruction from accepted imports.
+
+\section{Smallest honest checklist}
+
+The shortest path from ``closed inside the accepted package'' to ``proved in a
+self-contained package'' is:
+\begin{enumerate}[label=\textup{\arabic*.},leftmargin=2.2em]
+\item write one self-contained \texttt{033 -> 062} structural theorem block;
+\item write one explicit theorem packaging raw exceptional first exit with the
+chart/interface continuation;
+\item compress \texttt{076} into one final concrete bridge theorem note;
+\item gather the final definitions in one manuscript-order theorem note;
+\item keep the JSON and CSV files as support only, not as implicit proof steps.
+\end{enumerate}
+
+If those five items are done, the phrase
+\begin{quote}
+closed inside the accepted package
+\end{quote}
+should be replaceable by
+\begin{quote}
+proved in a self-contained odd-$m$ D5 theorem package.
+\end{quote}
+
+\section{Bottom line}
+
+The remaining gap is no longer a theorem-search gap. It is a theorem-packaging
+gap:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.2em]
+\item one distributed structural block,
+\item one missing chart-to-raw composition theorem,
+\item one compact concrete bridge theorem statement, and
+\item one final definitions block.
+\end{enumerate}
+
+So the right next work is theorem cleanup, not new theorem search.
+
+\end{document}

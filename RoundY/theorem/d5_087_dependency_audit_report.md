@@ -77,7 +77,7 @@ The only caution is presentational:
 
 That distinction remains important in any final manuscript or summary note.
 
-### 3. `079` is the main place where citation discipline matters
+### 3. `079` was the main chart/interface citation-discipline point
 
 `theorem/d5_079_exceptional_interface_support.md` is deliberately conservative.
 It says:
@@ -99,6 +99,14 @@ So the audit verdict is:
 - `079` is sound;
 - but it should not be cited alone as an actual-lift continuation theorem.
 
+Update after `095`:
+
+- the exact chain-label statement needed by the cleaned `092` suite is now
+  reproved directly in
+  `theorem/d5_095_compact_reproof_079_chart_interface_landing.md`;
+- so `079` remains important as historical support, but it is no longer the
+  main remaining selective reproof target.
+
 ### 4. `081`, `082`, and `083` do not need rethinking
 
 The audit found no reason to reopen:
@@ -119,7 +127,8 @@ What still deserves work before broader generalization is not theorem search,
 but theorem cleanup:
 
 1. keep the new stable `033` trigger note in the citation chain;
-2. keep the scope of `076` and `079` explicit;
+2. keep the scope of `076` explicit and use `095` for the compact chart landing
+   step where appropriate;
 3. optionally rewrite the final D5 proof in one shorter manuscript-order note.
 
 ## Recommendation on next step

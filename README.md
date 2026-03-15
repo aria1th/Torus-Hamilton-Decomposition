@@ -10,9 +10,10 @@ torus Hamilton decompositions:
   dimension of the form `2^alpha 3^beta` with `alpha + beta >= 1` is already
   forced, including `d=6,8,9,12,16,18,...`; more generally, all composite
   dimensions follow once the prime dimensions are settled
-- `d=5`: active frontier, currently reduced to an exact-bridge /
-  globalization question: abstract bridge `(beta,rho)` versus the strongest
-  checked concrete model `(beta,q,sigma)` / `(beta,delta)`
+- `d=5`: odd `m` now closes inside the accepted theorem package via the global
+  bridge `(beta,rho)` / raw `(beta,delta)`; even `m` remains open and is
+  currently best treated as a finite-defect / splice repair problem rather
+  than as a broad witness-search branch
 
 The original core manuscript in this bundle is:
 
@@ -30,7 +31,8 @@ The repo is no longer just the original `d=3` manuscript bundle.
 - `formal/` contains the Lean development, including a complete `d=4`
   formalization, a complete `d=3` even Route E package, an active `d=3`
   odometer rewrite, and conservative `d=5` extracted-model support
-- `RoundY/` contains the live `d=5` frontier
+- `RoundY/` contains the closed odd-`m` D5 theorem package, the open even-`m`
+  branch, and the current generalization / screening notes
 
 For the current research-facing status, start with:
 
@@ -180,20 +182,47 @@ witness-table construction and not yet Lean-formalized.
 
 ## d=5 frontier (RoundY)
 
-The `RoundY/` directory contains the current `d=5` research frontier.
-This case is still open, but the question is now much narrower than a generic
-search problem. The theorem-level bridge is now best stated as the abstract
-right-congruence object `(beta,rho)`, the strongest checked concrete model is
-the dynamic boundary odometer `(beta,q,sigma)` / `(beta,delta)`, and the
-remaining gap is whether raw global `(beta,delta)` works on the full
-accessible union or only componentwise.
+The `RoundY/` directory contains the current `d=5` program.
+
+The odd-`m` branch is now closed inside the accepted theorem package:
+
+- theorem-level object: abstract bridge `(beta,rho)`;
+- concrete verifiable model: global raw `(beta,delta)`;
+- final promoted proof chain:
+  `033 -> 062 -> 076 -> 077 -> 079 -> 081 -> 082 -> 083`.
+
+The even-`m` branch is still open. The current recommendation is **not** to
+reopen broad witness search immediately, but to treat it by analogy with the
+solved `d=3` even case:
+
+- use the parity barrier to rule out Kempe-from-canonical;
+- identify the right reduced return object;
+- extract a finite-defect / splice repair theorem;
+- sharpen that to a critical-row theorem on source windows;
+- only then search for implementations.
+
+So the live D5 research question is no longer the old odd-`m` globalization
+gap. It is mainly:
+
+- manuscript / audit cleanup for the odd-`m` theorem package;
+- even-`m` repair-theorem discovery;
+- and pilot validation that the theorem-guided screening method still works on
+  manageable higher odd dimensions such as `d = 7, 9, ...`.
 
 Start with:
 
 - `RoundY/README.md`
 - `RoundY/current-frontier-and-approach.md`
-- `RoundY/theorem/d5_076_unified_handoff.md`
-- `RoundY/theorem/d5_077_globalization_handoff.md`
+- `RoundY/theorem/d5_088_exact_verifiable_solution_for_odd_m.md`
+- `RoundY/theorem/d5_even_case_strategy_from_d3.md`
+- `RoundY/theorem/d5_even_m_parity_and_critical_row_program.md`
+- `RoundY/TODO.md`
+
+For a concrete theorem-guided screening example derived from the odd-`m`
+methodology, see:
+
+- `RoundY/specs/d5_089_odd_m_search_screen_example.md`
+- `scripts/torus_nd_d5_odd_m_candidate_screen.py`
 
 ## Lean formalization checkpoint
 
@@ -219,8 +248,8 @@ chronological account of the full research arc, including:
 - AI-assisted proof restructuring (orbit tracing → height comparison → finite splice)
 - Multi-stage referee feedback loop (6/10 → 8/10)
 - d=4 generalization breakthrough
-- d=5 reduction from broad search to the current abstract-bridge /
-  globalization frontier
+- d=5 reduction from broad search to the bridge/globalization theorem, closure
+  of the odd-`m` branch, and the current even-`m` repair strategy
 
 ## AI tooling disclosure
 

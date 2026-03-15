@@ -19,32 +19,44 @@ Read in this order:
 7. [theorem/d5_077_globalization_handoff.md](./theorem/d5_077_globalization_handoff.md)
 8. [theorem/d5_077_live_questions_and_tracks.md](./theorem/d5_077_live_questions_and_tracks.md)
 9. [theorem/d5_077_tail_length_and_actual_union.md](./theorem/d5_077_tail_length_and_actual_union.md)
-10. [theorem/d5_078_accepted_frontier_and_split.md](./theorem/d5_078_accepted_frontier_and_split.md)
-11. [theorem/d5_079_single_critical_lemma.md](./theorem/d5_079_single_critical_lemma.md)
-12. [theorem/d5_079_exceptional_interface_support.md](./theorem/d5_079_exceptional_interface_support.md)
-13. [theorem/d5_080_next_work_program.md](./theorem/d5_080_next_work_program.md)
-14. [theorem/d5_080_no_mixed_delta_reduction.md](./theorem/d5_080_no_mixed_delta_reduction.md)
-15. [theorem/d5_081_regular_union_and_gluing_support.md](./theorem/d5_081_regular_union_and_gluing_support.md)
-16. [theorem/d5_082_exceptional_row_reduction.md](./theorem/d5_082_exceptional_row_reduction.md)
-17. [theorem/d5_082_frontier_and_theorem_map.md](./theorem/d5_082_frontier_and_theorem_map.md)
-18. [theorem/d5_083_gluing_flow_and_final_theorem.md](./theorem/d5_083_gluing_flow_and_final_theorem.md)
-19. [theorem/d5_083_final_theorem_proof.md](./theorem/d5_083_final_theorem_proof.md)
-20. [theorem/d5_085_proof_progress_report.md](./theorem/d5_085_proof_progress_report.md)
-21. [theorem/d5_086_dependency_audit_and_generalization_gate.md](./theorem/d5_086_dependency_audit_and_generalization_gate.md)
-22. [theorem/d5_086_dependency_flow_diagram.md](./theorem/d5_086_dependency_flow_diagram.md)
-23. [theorem/d5_087_dependency_audit_report.md](./theorem/d5_087_dependency_audit_report.md)
-24. [theorem/d5_033_explicit_trigger_family.md](./theorem/d5_033_explicit_trigger_family.md)
-25. [theorem/d5_084_theorem_name_map.md](./theorem/d5_084_theorem_name_map.md)
-26. [checks/d5_084_compute_evidence_index.md](./checks/d5_084_compute_evidence_index.md)
-27. [theorem/d5_075_threeway_handoff.md](./theorem/d5_075_threeway_handoff.md)
-28. [theorem/d5_075_bridge_theorem_request.md](./theorem/d5_075_bridge_theorem_request.md)
-29. [theorem/d5_075_realization_integration_request.md](./theorem/d5_075_realization_integration_request.md)
-30. [theorem/d5_075_compute_validation_request.md](./theorem/d5_075_compute_validation_request.md)
-31. [theorem/d5_075_reviewer_brief.md](./theorem/d5_075_reviewer_brief.md)
-32. [../DOCUMENT_FOR_EXTERNAL_REVIEW.md](../DOCUMENT_FOR_EXTERNAL_REVIEW.md)
+10. [theorem/d5_078_global_component_structure.md](./theorem/d5_078_global_component_structure.md)
+11. [theorem/d5_078_endpoint_compatibility_criterion.md](./theorem/d5_078_endpoint_compatibility_criterion.md)
+12. [theorem/d5_078_large_modulus_regular_union_support.md](./theorem/d5_078_large_modulus_regular_union_support.md)
+13. [theorem/d5_078_safe_theorem_language_review.md](./theorem/d5_078_safe_theorem_language_review.md)
+14. [theorem/d5_078_accepted_frontier_and_split.md](./theorem/d5_078_accepted_frontier_and_split.md)
+15. [theorem/d5_079_single_critical_lemma.md](./theorem/d5_079_single_critical_lemma.md)
+16. [theorem/d5_079_exceptional_interface_support.md](./theorem/d5_079_exceptional_interface_support.md)
+17. [theorem/d5_080_next_work_program.md](./theorem/d5_080_next_work_program.md)
+18. [theorem/d5_080_no_mixed_delta_reduction.md](./theorem/d5_080_no_mixed_delta_reduction.md)
+19. [theorem/d5_081_regular_union_and_gluing_support.md](./theorem/d5_081_regular_union_and_gluing_support.md)
+20. [theorem/d5_082_exceptional_row_reduction.md](./theorem/d5_082_exceptional_row_reduction.md)
+21. [theorem/d5_082_frontier_and_theorem_map.md](./theorem/d5_082_frontier_and_theorem_map.md)
+22. [theorem/d5_083_gluing_flow_and_final_theorem.md](./theorem/d5_083_gluing_flow_and_final_theorem.md)
+23. [theorem/d5_083_final_theorem_proof.md](./theorem/d5_083_final_theorem_proof.md)
+24. [theorem/d5_085_proof_progress_report.md](./theorem/d5_085_proof_progress_report.md)
+25. [theorem/d5_086_dependency_audit_and_generalization_gate.md](./theorem/d5_086_dependency_audit_and_generalization_gate.md)
+26. [theorem/d5_086_dependency_flow_diagram.md](./theorem/d5_086_dependency_flow_diagram.md)
+27. [theorem/d5_087_dependency_audit_report.md](./theorem/d5_087_dependency_audit_report.md)
+28. [theorem/d5_091_independent_package_gap_note.md](./theorem/d5_091_independent_package_gap_note.md)
+29. [theorem/d5_092_cleaned_independent_theorem_suite.md](./theorem/d5_092_cleaned_independent_theorem_suite.md)
+30. [theorem/d5_093_reproof_targets_after_092.md](./theorem/d5_093_reproof_targets_after_092.md)
+31. [theorem/d5_095_compact_reproof_079_chart_interface_landing.md](./theorem/d5_095_compact_reproof_079_chart_interface_landing.md)
+32. [theorem/d5_even_case_strategy_from_d3.md](./theorem/d5_even_case_strategy_from_d3.md)
+33. [theorem/d5_even_m_parity_and_critical_row_program.md](./theorem/d5_even_m_parity_and_critical_row_program.md)
+34. [theorem/d5_033_explicit_trigger_family.md](./theorem/d5_033_explicit_trigger_family.md)
+35. [theorem/d5_084_theorem_name_map.md](./theorem/d5_084_theorem_name_map.md)
+36. [theorem/d5_090_tmp_promotion_index.md](./theorem/d5_090_tmp_promotion_index.md)
+37. [theorem/d5_094_tmp_remaining_priority_map.md](./theorem/d5_094_tmp_remaining_priority_map.md)
+38. [checks/d5_084_compute_evidence_index.md](./checks/d5_084_compute_evidence_index.md)
+39. [theorem/d5_075_threeway_handoff.md](./theorem/d5_075_threeway_handoff.md)
+40. [theorem/d5_075_bridge_theorem_request.md](./theorem/d5_075_bridge_theorem_request.md)
+41. [theorem/d5_075_realization_integration_request.md](./theorem/d5_075_realization_integration_request.md)
+42. [theorem/d5_075_compute_validation_request.md](./theorem/d5_075_compute_validation_request.md)
+43. [theorem/d5_075_reviewer_brief.md](./theorem/d5_075_reviewer_brief.md)
+44. [../DOCUMENT_FOR_EXTERNAL_REVIEW.md](../DOCUMENT_FOR_EXTERNAL_REVIEW.md)
    Focus on `D23`, `D24`, `D25`, `D26`, `D27`, `D28`, `D29`, `D30`, `D31`,
    `D32`, `D33`, `D34`, `D35`, `D37`, `D38`, `D40`, `D42`, `D45`.
-33. [autonomous/d5_autonomous_perturbation_note_v25.md](./autonomous/d5_autonomous_perturbation_note_v25.md)
+45. [autonomous/d5_autonomous_perturbation_note_v25.md](./autonomous/d5_autonomous_perturbation_note_v25.md)
 
 Then read the key artifact READMEs in this order:
 
@@ -147,6 +159,10 @@ These notes now spell out the actual top-level split:
 - compute support:
   only reduction validation, accessible quotient validation, and
   `(B,beta)` exactness / drift stress tests
+- separate even-`m` branch:
+  do not mix it into the closed odd-`m` bridge chain; the current even target
+  is a parity-barrier / formal-extension / critical-row repair theorem package,
+  not a reopened odd-style globalization search
 
 ## Real current problem
 

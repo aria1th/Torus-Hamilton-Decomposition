@@ -1,21 +1,24 @@
 # Research Highlights — Torus Hamilton Decomposition
 
-*2026-03-02 ~ 2026-03-14*
+*2026-03-02 ~ 2026-03-15*
 
 ---
 
-## 현재 프로그램 상태: d=3, d=4는 닫혔고 d=5만 frontier
+## 현재 프로그램 상태: d=3, d=4는 닫혔고, d=5는 odd/even으로 분기됨
 
 이번 라운드에서 전체 low-dimensional program은 세 층으로 정리되었다.
 
 - `d=3`: 수학적으로 완결. 현재 원고는 odd/even 모두 포함한 완성 manuscript 상태
 - `d=4`: return-map / odometer 언어로 완전 증명 완료, Lean formalization까지 진행 완료
-- `d=5`: 아직 open이지만, 이제는 “witness를 더 찾는 문제”가 아니라
-  **추상 bridge `(beta,rho)`와 strongest checked concrete model
-  `(beta,q,sigma)` / `(beta,delta)` 사이의 globalization 문제** 로 바뀜
+- `d=5`, odd `m`: accepted theorem package 안에서 닫힘.
+  현재 cleaned manuscript-order theorem suite까지 정리되었고, 남은 것은
+  selective reproof / inlining 정리
+- `d=5`, even `m`: 아직 open.
+  하지만 broad witness search가 아니라 **finite-splice / critical-row repair**
+  branch로 재정의됨
 
 즉, 프로젝트의 전체 건강도는 꽤 좋아졌다.
-열린 건 `d=5` 하나이고, 그마저도 질문이 많이 좁혀졌다.
+이제 사실상 열린 건 `d=5` even branch와 이후 일반화 문제다.
 
 ## Leanification checkpoint: d=4 완료, d=3 even package 완료, odometer rewrite는 color-0 Case II frontier
 
@@ -57,10 +60,11 @@ sign-product barrier가 Kempe 경로 자체를 차단 → 비-Kempe low-layer co
 - S₅에서 이를 만족하는 건 identity뿐 → carry 불가능
 - **한 줄짜리 obstruction이 전체 접근법을 폐기시킴** → affine-pinned model로 전환
 
-## 현재 가장 중요한 frontier: d=5 abstract bridge / concrete odometer globalization
+## 현재 가장 중요한 성과: d=5 odd-m closure와 cleaned theorem suite
 
 `d=5`의 최근 진전은 “탐색이 더 필요하다”가 아니라
-**정확한 theorem chain과 bridge question이 분리되었다**는 데 있다.
+**정확한 theorem chain이 닫히고, 그것이 manuscript-order theorem suite로
+재패키징되었다**는 데 있다.
 
 - `017–019`: mixed witness의 return-map이 실제 reduced dynamical object라는 점을 추출
 - `044`: active branch가
@@ -81,14 +85,59 @@ sign-product barrier가 Kempe 경로 자체를 차단 → 비-Kempe low-layer co
 - `071`: fixed regular slice마다 exact object가 이미 marked length-`m` chain임을 분리
 - `076`: safest theorem object는 abstract bridge `(beta,rho)`이고,
   concrete odometer `(beta,q,sigma)` / `(beta,delta)`는 strongest checked model임을 정리
-- `077`: 남은 질문을 “raw global `(beta,delta)`가 component tag 없이 되는가?”로 고정
+- `077–083`: globalization bottleneck을 tail-length / exceptional interface /
+  final gluing theorem으로 차례로 압축하고 odd `m` closure 도달
+- `087`: odd-`m` D5는 accepted package 안에서 닫혔음을 dependency audit으로 확인
+- `092`: structural first-exit theorem, chart-to-raw composition,
+  final globalization proof를 하나의 cleaned independent-style suite로 정리
+- `093`: 아직 accepted-support form으로 남아 있는 정리들의 재증명 우선순위를
+  `076`, `079`, `062` patch-avoidance clause로 압축
 
-핵심적으로, 지금의 d=5 질문은:
+따라서 지금의 odd-`m` D5 질문은 더 이상
 
-> 같은 realized `delta`가 나타날 때 padded future current-event word가
-> 항상 같아서 raw global `(beta,delta)`가 exact bridge가 되는가?
+> globalization이 되느냐?
 
-이다. 이것은 초기 d=5 단계들의 “blind local search”와는 질적으로 전혀 다른 상태다.
+가 아니라
+
+> 어떤 정리를 다시 inlining/reproof 하면 fully independent package로
+> 부를 수 있는가?
+
+이다.
+
+이것은 초기 d=5 단계들의 “blind local search”와는 질적으로 전혀 다른 상태다.
+
+## 새 open branch: d=5 even-m은 finite-splice / critical-row repair 문제
+
+odd-`m` closure 이후 even-`m`은 별도 수학 문제로 정리되었다.
+
+- parity barrier가 `Kempe-from-canonical` 경로를 차단
+- odd final gluing proof는 형식적으로 parity-blind라서,
+  같은 upstream package만 재건되면 carry-over 가능
+- 따라서 새 목표는 fresh bridge theorem이 아니라
+  **critical-row finite-splice theorem**
+
+즉 even `m`의 좋은 질문은:
+
+> bulk odometer를 보존하면서 regular source-window splice `u -> u-3`를
+> 증명하고, source `3`을 유일한 exceptional splice defect로 고립시킬 수 있는가?
+
+이다.
+
+이건 `d=3` even Route E의 D5 analogue로 보는 것이 맞다.
+
+## 다음 우선순위: d=7,9,... 에서 theorem-guided screening method 검증
+
+현재 우선순위는 even branch를 곧바로 brute-force로 여는 것이 아니라,
+
+- `d=5` odd solution을 screening template로 정리하고
+- `d = 7, 9, ...`의 관리 가능한 작은 범위에서
+  theorem-guided search/screen method가 실제로 작동하는지
+  pilot validation 하는 것
+
+이다.
+
+즉 지금 필요한 것은 새로운 광범위 탐색이 아니라
+**탐색법 자체의 이식성 검증**이다.
 
 ## AI 역할 분화
 
@@ -112,3 +161,5 @@ sign-product barrier가 Kempe 경로 자체를 차단 → 비-Kempe low-layer co
 | 3/10–3/12 | d=5 return-map extraction → finite-cover / countdown-carrier normal form |
 | 3/13 | d=5 positive theorem chain 정리, phase-machine / bootstrap proof branch로 압축 |
 | 3/14 | d=5 bridge theorem cleanup: abstract bridge `(beta,rho)` vs componentwise concrete `(beta,delta)`, globalization question 분리 |
+| 3/14 late | exceptional-row gluing theorem까지 닫히며 odd-`m` accepted package closure |
+| 3/15 | `092` cleaned theorem suite, `093` reproof-target audit, even-`m` critical-row branch 정리 |

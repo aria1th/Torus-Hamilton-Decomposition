@@ -1,6 +1,6 @@
 # Research Progression: Hamilton Decompositions of the Directed d-Torus
 
-*Sanghyun Park, March 2–14, 2026*
+*Sanghyun Park, March 2–15, 2026*
 
 이 문서는 레포지토리의 파일들을 시간순·내용순으로 정리하여,
 논문이 어떠한 경로를 거쳐 현재 형태에 이르렀는지를 기록합니다.
@@ -18,7 +18,7 @@ flowchart LR
     E --> F["3/9 오전<br>RoundX: 4D 일반화"]
     F --> G["3/9 11:01<br>d=4 완전 증명 완성"]
     G --> H["3/9 12:00<br>d=3 v6 + d=4 v3<br>교차 검증"]
-    H --> I["3/9–3/14<br>RoundY: d=5 return-map extraction<br>→ bridge/globalization frontier"]
+    H --> I["3/9–3/15<br>RoundY: d=5 return-map extraction<br>→ odd-m closure + cleaned suite<br>+ even critical-row branch"]
 ```
 
 ---
@@ -198,7 +198,7 @@ v3에서 모든 이슈 수정 완료. 핵심 수정: Prop 5–6의 counting argu
 
 ---
 
-## Phase 6: RoundY — d=5 frontier의 성숙 (3월 9–14일)
+## Phase 6: RoundY — d=5 odd-m closure, even-m branch 분리, cleaned suite (3월 9–15일)
 
 ### 핵심 파일
 | 파일 | 내용 |
@@ -213,6 +213,13 @@ v3에서 모든 이슈 수정 완료. 핵심 수정: Prop 5–6의 counting argu
 | `RoundY/theorem/d5_076_unified_handoff.md` | abstract bridge vs concrete odometer handoff |
 | `RoundY/theorem/d5_077_globalization_handoff.md` | globalization question handoff |
 | `RoundY/theorem/d5_077_live_questions_and_tracks.md` | current D5 tracks: component structure / `rho(delta)` / targeted compute |
+| `RoundY/theorem/d5_083_final_theorem_proof.md` | accepted package 안에서 odd-`m` final gluing theorem proof |
+| `RoundY/theorem/d5_087_dependency_audit_report.md` | odd-`m` D5 accepted-package closure audit |
+| `RoundY/theorem/d5_091_independent_package_gap_note.md` | accepted package -> independent package gap note |
+| `RoundY/theorem/d5_092_cleaned_independent_theorem_suite.md` | manuscript-order cleaned theorem suite |
+| `RoundY/theorem/d5_093_reproof_targets_after_092.md` | selective reproof / inlining targets |
+| `RoundY/theorem/d5_even_case_strategy_from_d3.md` | even-`m` strategy note |
+| `RoundY/theorem/d5_even_m_parity_and_critical_row_program.md` | even-`m` parity barrier + formal extension + critical-row program |
 | `artifacts/d5_return_map_model_017/` | mixed witness return-map extraction |
 | `artifacts/d5_carry_and_finite_cover_044/` | finite-cover normal form |
 | `artifacts/d5_tau_countdown_carrier_048/` | countdown carrier law |
@@ -251,25 +258,28 @@ globalization question: does raw global `(beta,delta)` work without a component 
 
 ### 현재 d=5 수학 상태
 
-`d=5`는 더 이상 “witness를 더 찾자” 단계가 아니다.
-현재 accepted picture는 두 층으로 분리된다.
+`d=5`는 이제 odd/even으로 완전히 분리해서 보는 것이 맞다.
 
-1. **structural theorem package**
-   `044–062`와 `068`이 active branch의 finite-cover normal form,
-   countdown/reset behavior, phase-corner machine, first-exit targets를
-   거의 안정된 theorem package로 만든다.
-2. **bridge theorem**
-   safest theorem object는 abstract bridge `(beta,rho)`이고,
-   strongest checked concrete model은 dynamic boundary odometer
-   `(beta,q,sigma)` / `(beta,delta)`이다.
-3. **remaining gap**
-   componentwise concrete bridge는 강하게 지지되지만,
-   raw global `(beta,delta)`가 full accessible union에서 component tag 없이
-   exact bridge가 되는지는 아직 미해결이다.
+1. **odd `m`**
+   - `044–062`와 `068`이 structural theorem package를 안정화
+   - `076–083`이 bridge/globalization bottleneck을 exceptional-row gluing까지
+     압축하고 closure
+   - `087`은 odd-`m` D5가 accepted package 안에서 닫혔음을 audit
+   - `092`는 이 결과를 manuscript-order cleaned theorem suite로 재구성
+   - `093`은 아직 accepted-support form으로 남은 재증명 우선순위를
+     `076`, `079`, `062` patch-avoidance clause로 정리
 
-즉, d=5는 “탐색 문제”에서 먼저 “boundary reset theorem 문제”로 좁혀졌고,
-지금은 다시 한 번 더 압축되어
-**abstract bridge vs concrete globalization 문제** 로 정리되었다.
+2. **even `m`**
+   - odd bridge/globalization을 그대로 연장하는 문제가 아님
+   - parity barrier가 naive Kempe continuation을 차단
+   - 현재 목표는 fresh witness search가 아니라
+     `critical-row finite-splice theorem`
+   - 즉 regular source-window splice와 유일 exceptional splice defect를
+     분리하는 Route-E-style repair branch가 새 open problem
+
+즉, d=5는 더 이상 “하나의 frontier”가 아니다.
+odd `m`은 theorem package cleanup 단계로 들어갔고,
+even `m`은 finite-splice repair problem으로 재정의되었다.
 
 ### 병행 formal checkpoint
 
@@ -291,10 +301,11 @@ globalization question: does raw global `(beta,delta)` work without a component 
 
 - `d=3`: 완성 manuscript
 - `d=4`: 완전 증명 + Lean formalization
-- `d=5`: theorem-shaped frontier를 넘어서, bridge/globalization frontier 확보
+- `d=5`, odd `m`: accepted package closure + cleaned theorem suite
+- `d=5`, even `m`: parity / critical-row repair problem으로 독립 분기
 
 그래서 현재 열린 건 단순히 “계산이 덜 된 case”가 아니라, 전체 프로그램의 마지막
-실질적 개념 병목이다.
+실질적 개념 병목들의 정리된 목록이다.
 
 ---
 
@@ -308,9 +319,9 @@ globalization question: does raw global `(beta,delta)` work without a component 
 | 3/7–8 | 원고 rework + 다단계 레프리 | 6/10 → 7.5/10 → 8/10 — **deductive surgery 서사** 확립 |
 | 3/9 AM | d=4 일반화 5시간 만에 완성 | line-union gauge + 2중 return map + odometer conjugacy — **D₄(m) 완전 증명** |
 | 3/9 12:00 | d=3 v6 개정 + d=4 v3 교차 검증 | Appendix B/Prop 13 확장, Prop 5–6 논리 갭 수정 — **양쪽 모두 완성** |
-| 3/9–14 | RoundY d=5 정제 | return-map extraction → finite cover → countdown carrier → phase-corner package → abstract bridge / globalization frontier |
+| 3/9–15 | RoundY d=5 정제 | return-map extraction → finite cover → countdown carrier → phase-corner package → bridge/globalization closure (odd m) → cleaned theorem suite / even critical-row branch |
 
-**열사흘 만에**: d=3 original theorem → 개념적 재구성 → publishable manuscript → d=4 완전 증명 + formalization → d=5 abstract-bridge / globalization frontier 정립까지.
+**열나흘 만에**: d=3 original theorem → 개념적 재구성 → publishable manuscript → d=4 완전 증명 + formalization → d=5 odd-`m` closure + cleaned theorem suite + even-`m` repair branch 정리까지.
 
 ---
 

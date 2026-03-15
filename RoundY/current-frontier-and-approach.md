@@ -40,6 +40,10 @@ Use it together with:
 - [theorem/d5_077_globalization_handoff.md](./theorem/d5_077_globalization_handoff.md)
 - [theorem/d5_077_live_questions_and_tracks.md](./theorem/d5_077_live_questions_and_tracks.md)
 - [theorem/d5_077_tail_length_and_actual_union.md](./theorem/d5_077_tail_length_and_actual_union.md)
+- [theorem/d5_078_global_component_structure.md](./theorem/d5_078_global_component_structure.md)
+- [theorem/d5_078_endpoint_compatibility_criterion.md](./theorem/d5_078_endpoint_compatibility_criterion.md)
+- [theorem/d5_078_large_modulus_regular_union_support.md](./theorem/d5_078_large_modulus_regular_union_support.md)
+- [theorem/d5_078_safe_theorem_language_review.md](./theorem/d5_078_safe_theorem_language_review.md)
 - [theorem/d5_078_accepted_frontier_and_split.md](./theorem/d5_078_accepted_frontier_and_split.md)
 - [theorem/d5_079_single_critical_lemma.md](./theorem/d5_079_single_critical_lemma.md)
 - [theorem/d5_079_exceptional_interface_support.md](./theorem/d5_079_exceptional_interface_support.md)
@@ -51,6 +55,8 @@ Use it together with:
 - [theorem/d5_083_gluing_flow_and_final_theorem.md](./theorem/d5_083_gluing_flow_and_final_theorem.md)
 - [theorem/d5_085_proof_progress_report.md](./theorem/d5_085_proof_progress_report.md)
 - [theorem/d5_084_theorem_name_map.md](./theorem/d5_084_theorem_name_map.md)
+- [theorem/d5_090_tmp_promotion_index.md](./theorem/d5_090_tmp_promotion_index.md)
+- [theorem/d5_094_tmp_remaining_priority_map.md](./theorem/d5_094_tmp_remaining_priority_map.md)
 - [checks/d5_084_compute_evidence_index.md](./checks/d5_084_compute_evidence_index.md)
 - [d5_084_session_note_map.md](./d5_084_session_note_map.md)
 - [theorem/d5_084_session_extractions.md](./theorem/d5_084_session_extractions.md)
@@ -164,6 +170,18 @@ The shortest dependency/progress diagram is:
 The first concrete audit report is:
 
 - [theorem/d5_087_dependency_audit_report.md](./theorem/d5_087_dependency_audit_report.md)
+
+The accepted-package vs independent-package gap note is:
+
+- [theorem/d5_091_independent_package_gap_note.md](./theorem/d5_091_independent_package_gap_note.md)
+- [theorem/d5_092_cleaned_independent_theorem_suite.md](./theorem/d5_092_cleaned_independent_theorem_suite.md)
+- [theorem/d5_093_reproof_targets_after_092.md](./theorem/d5_093_reproof_targets_after_092.md)
+- [theorem/d5_095_compact_reproof_079_chart_interface_landing.md](./theorem/d5_095_compact_reproof_079_chart_interface_landing.md)
+
+The separate open even-`m` strategy notes are:
+
+- [theorem/d5_even_case_strategy_from_d3.md](./theorem/d5_even_case_strategy_from_d3.md)
+- [theorem/d5_even_m_parity_and_critical_row_program.md](./theorem/d5_even_m_parity_and_critical_row_program.md)
 
 The promoted `033` trigger-family input is:
 

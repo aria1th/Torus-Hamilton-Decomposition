@@ -124,6 +124,10 @@ componentwise model.
 | 076 | `theorem/d5_076_realization_trackB.md` | **Realization on the abstract bridge** | ★★ | [A] | Clock descent immediate on `(beta,rho)` |
 | 076 | `theorem/d5_076_concrete_bridge_proof.md` | **Concrete bridge package** | ★★★ | [A] | Uniform splice law and current-event readout |
 | 077 | `theorem/d5_077_tail_length_and_actual_union.md` | **Tail-length reduction** | ★★★ | [A] | Fixed-`delta` ambiguity reduced to tail length |
+| 078 | `theorem/d5_078_global_component_structure.md` | **Global component structure** | ★★ | [A] | Source windows already behave as overlapping charts |
+| 078 | `theorem/d5_078_endpoint_compatibility_criterion.md` | **Endpoint-compatibility criterion** | ★★★ | [A] | Globalization reduced to endpoint / tail-length compatibility |
+| 078 | `theorem/d5_078_large_modulus_regular_union_support.md` | **Large-modulus regular support** | ★★ | [A] | No regular chart-level dead-end witness through `m=21` |
+| 078 | `theorem/d5_078_safe_theorem_language_review.md` | **Safe theorem-language review** | ★★ | [A] | Keeps abstract `(beta,rho)` distinct from raw global `(beta,delta)` |
 | 079 | `theorem/d5_079_exceptional_interface_support.md` | **Exceptional interface support** | ★★★ | [A] | Exceptional landing fixed at `3m-3 -> 3m-2 -> 3m-1` |
 | 080 | `theorem/d5_080_no_mixed_delta_reduction.md` | **No-mixed-delta reduction** | ★★★ | [A] | Smaller target than direct tail-length equality |
 

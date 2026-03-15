@@ -1,0 +1,379 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{remark}{Remark}
+\newtheorem{definition}{Definition}
+
+\newcommand{\Zm}{\mathbb Z_m}
+\newcommand{\I}{\mathbf 1}
+\newcommand{\sgn}{\operatorname{sgn}}
+
+\title{Toward the even-m D5 case\\
+Parity barrier, formal extension theorem, and a critical-row program}
+\author{}
+\date{14 March 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note records what can already be proved about the even-modulus D5 case
+from the stabilized odd-modulus boundary theorem and the d=3 even-modulus
+philosophy. Two points are rigorous. First, the Kempe sign-product argument from
+$d=3$ extends verbatim to $D_5(m)$ and shows that for even $m$ no
+Kempe-from-canonical proof route can produce a Hamilton decomposition. Second,
+the final odd-modulus D5 gluing proof is formally parity-blind: once an
+even-modulus boundary package supplies the same first-exit theorem,
+componentwise bridge, regular continuation, and exceptional interface, the odd
+proof carries over unchanged. We then isolate a D5 analogue of the Route~E
+strategy: the real new work should be a critical-row theorem on the regular
+source windows, not a reworking of the final globalization step.
+\end{abstract}
+
+\section{What the d=3 even case suggests for D5}
+
+The d=3 even proof has two logically separate pieces. First, a parity barrier
+shows that the canonical Kempe route cannot work. Second, a direct low-layer
+construction (Route~E) rebuilds the clock-and-carry mechanism and then proves
+Hamiltonicity by a finite-defect first-return analysis.
+
+The present D5 odd-modulus theorem already supplies the second half of that
+picture at the boundary-theorem level: once the accepted package reaches the
+componentwise boundary coordinate
+\[
+\delta = q + m\sigma,
+\qquad
+\sigma \equiv w+u-q-1 \pmod m,
+\]
+one has the exact splice law
+\[
+\delta' = \delta + 1 \pmod{m^2}
+\]
+on each splice-connected accessible component, and the remaining globalization
+issue collapses to one exceptional row. So for even $m$ the first question is
+whether there is a parity obstruction analogous to the d=3 one. The answer is
+yes.
+
+\section{A Kempe parity barrier in dimension 5}
+
+We state the sign-product invariant in a form that is independent of the number
+of colors.
+
+\begin{definition}[Coloring and Kempe swap]
+Let $V$ be a finite set and let $(f_0,\dots,f_{d-1})$ be permutations of $V$.
+Fix two distinct colors $r\neq s$ and define the Kempe map
+\[
+\tau_{r,s}:=f_s^{-1}\circ f_r.
+\]
+If $X\subseteq V$ is a union of cycles of $\tau_{r,s}$, the \emph{Kempe swap}
+of colors $(r,s)$ on $X$ is the new $d$-tuple $(f'_0,\dots,f'_{d-1})$ defined
+by exchanging $f_r$ and $f_s$ on $X$ and leaving all other colors unchanged.
+\end{definition}
+
+\begin{proposition}[General sign-product invariant under Kempe swaps]
+\label{prop:signinv}
+Let $(f_0,\dots,f_{d-1})$ be a coloring in the above sense, and let
+$(f'_0,\dots,f'_{d-1})$ be obtained from it by one Kempe swap. Then
+\[
+\prod_{c=0}^{d-1} \sgn(f'_c)
+=
+\prod_{c=0}^{d-1} \sgn(f_c).
+\]
+\end{proposition}
+
+\begin{proof}
+Only the two swapped colors matter, so it is enough to consider colors $r$ and
+$s$. Because the swap support is a disjoint union of $\tau_{r,s}$-cycles and
+sign is multiplicative, it is enough to treat one cycle
+$C=(v_0,v_1,\dots,v_{\ell-1})$ of $\tau_{r,s}$. Let $\sigma$ be the $\ell$-cycle
+$(v_0\,v_1\,\cdots\,v_{\ell-1})$ on $C$ and the identity outside $C$.
+By the defining relation $f_r(v_t)=f_s(v_{t+1})$ along $C$, one has
+\[
+ f'_r = f_r\circ\sigma^{-1},
+ \qquad
+ f'_s = f_s\circ\sigma.
+\]
+Therefore
+\[
+\sgn(f'_r)\sgn(f'_s)
+=
+\sgn(f_r)\sgn(\sigma^{-1})\,\sgn(f_s)\sgn(\sigma)
+=
+\sgn(f_r)\sgn(f_s).
+\]
+All other colors are unchanged, so the full sign product is invariant.
+\end{proof}
+
+\begin{corollary}[Parity barrier for Kempe-from-canonical in $D_5(m)$]
+\label{cor:d5barrier}
+Let $m$ be even. Then no sequence of Kempe swaps starting from the canonical
+coloring of the directed torus
+\[
+D_5(m)=\operatorname{Cay}((\mathbb Z_m)^5,\{e_0,e_1,e_2,e_3,e_4\})
+\]
+can produce a decomposition into five directed Hamilton cycles.
+\end{corollary}
+
+\begin{proof}
+Let $N=m^5$. A directed Hamilton cycle on $N$ vertices is an $N$-cycle
+permutation, hence has sign $(-1)^{N-1}=-1$ because $N$ is even when $m$ is
+even. So any five-color Hamilton decomposition has total sign product
+\[
+(-1)^5=-1.
+\]
+
+In the canonical coloring, each color is translation by one basis vector. Its
+cycle decomposition therefore consists of $m^4$ disjoint directed $m$-cycles.
+Each $m$-cycle has sign $(-1)^{m-1}=-1$, and since $m^4$ is even one gets
+\[
+\sgn(f_c)=(-1)^{m^4}=+1
+\qquad (0\le c\le 4).
+\]
+Hence the canonical sign product is $+1$. By
+Proposition~\ref{prop:signinv}, this sign product is invariant under all Kempe
+swaps, so a Kempe-from-canonical route to a five-cycle Hamilton decomposition
+is impossible.
+\end{proof}
+
+\begin{remark}[Consequence]
+The even-$m$ D5 problem, if true, should be approached as a direct-design or
+Route~E-type repair theorem, not as a Kempe-from-canonical continuation of the
+odd case.
+\end{remark}
+
+\section{The final odd D5 theorem is parity-blind}
+
+The odd-modulus cleanup theorem uses only the following inputs on the true
+accessible boundary union:
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2.5em]
+    \item the first-exit theorem with universal targets
+    \[
+    T_{\mathrm{reg}}=(m-1,m-2,1),
+    \qquad
+    T_{\mathrm{exc}}=(m-2,m-1,1);
+    \]
+    \item the componentwise concrete bridge
+    \[
+    \delta=q+m\sigma,
+    \qquad
+    \delta' = \delta+1 \pmod{m^2};
+    \]
+    \item the tail-length reduction at fixed realized $\delta$;
+    \item regular continuation for every realized regular label;
+    \item the chart/interface landing
+    \[
+    3m-3 \to 3m-2 \to 3m-1.
+    \]
+\end{enumerate}
+No parity calculation occurs in the final gluing argument itself.
+
+\begin{theorem}[Formal extension theorem]
+\label{thm:formalextension}
+Let $m\ge 5$ be arbitrary. Assume that on the true accessible boundary union of
+an even- or odd-modulus D5 package the following statements hold:
+\begin{enumerate}[label=\textup{(\alph*)},leftmargin=2.5em]
+    \item \textbf{First exits.} The actual active branch agrees with the
+    candidate branch up to first exit, and the regular and exceptional families
+    first exit at
+    \[
+    T_{\mathrm{reg}}=(m-1,m-2,1),
+    \qquad
+    T_{\mathrm{exc}}=(m-2,m-1,1),
+    \]
+    with the exceptional first exit leaving in direction $1$.
+    \item \textbf{Componentwise bridge.} On each splice-connected accessible
+    component, the boundary coordinate
+    \[
+    \sigma \equiv w+u-q-1 \pmod m,
+    \qquad
+    \delta := q+m\sigma
+    \]
+    satisfies
+    \[
+    \delta' = \delta + 1 \pmod{m^2},
+    \]
+    and the current boundary event is a function of $(\beta,\delta)$.
+    \item \textbf{Tail reduction.} At fixed realized $\delta$, any two
+    realizations can differ only by remaining full-chain tail length.
+    \item \textbf{Regular continuation.} Every regular realization of every
+    realized $\delta$ has a forward successor on the true accessible union.
+    \item \textbf{Exceptional interface.} At chart/interface level the
+    exceptional continuation is pinned to
+    \[
+    3m-3 \to 3m-2 \to 3m-1.
+    \]
+\end{enumerate}
+Then every actual lift of the exceptional cutoff row $\delta=3m-3$ continues
+through
+\[
+3m-2 \to 3m-1,
+\]
+fixed realized $\delta$ determines endpoint class and padded future current-event
+word, and raw global $(\beta,\delta)$ is exact on the true accessible boundary
+union.
+\end{theorem}
+
+\begin{proof}
+The proof is exactly the same as in the odd-modulus cleanup theorem, so we only
+record the logical chain.
+
+By regular continuation, every regular chain has a forward successor. By the
+componentwise bridge, every interior exceptional chain also has a forward
+successor because its realized boundary labels follow the odometer step
+$\delta\mapsto\delta+1$. Hence only the exceptional cutoff row
+$\delta=3m-3$ remains.
+
+For that row, the first-exit theorem identifies the actual exceptional first
+exit with the universal target $T_{\mathrm{exc}}=(m-2,m-1,1)$ and fixes the exit
+direction. The chart/interface hypothesis then forces the continuation in chain
+labels to be
+\[
+3m-3 \to 3m-2 \to 3m-1.
+\]
+So the exceptional cutoff also has a forward successor.
+
+Thus every accessible full chain has a forward successor. If some
+splice-connected accessible component were finite, its realized boundary image
+would be a finite forward orbit segment of the odometer and would therefore
+have a terminal right endpoint, contradicting the previous paragraph. Hence
+every accessible component is total.
+
+Totality implies that every realized boundary state has infinite remaining tail
+length. The tail-reduction hypothesis then shows that fixed realized $\delta$
+determines tail length, endpoint class, and padded future current-event word.
+Together with the event readout from the componentwise bridge, this is exactly
+raw global $(\beta,\delta)$ exactness.
+\end{proof}
+
+\begin{corollary}[What the even case really has to prove]
+\label{cor:realwork}
+To prove the even-$m$ D5 boundary theorem, one does \emph{not} need a new final
+gluing argument. One needs an even-modulus package that supplies the same
+first-exit law, the same componentwise bridge, regular continuation, and the
+same exceptional interface.
+\end{corollary}
+
+\section{A D5 analogue of Route~E: critical rows rather than critical lanes}
+
+The bundled D5 interval summaries suggest that the regular source windows obey a
+very rigid arithmetic law. We record that law as a programmatic target rather
+than as a proved theorem, because the bundled data presently verify it only on
+the checked odd-modulus range.
+
+\begin{remark}[Empirical regular-window law from the bundled summaries]
+For each regular source parameter $u$, the bundled summaries exhibit a
+$\Theta=2$ start label
+\[
+ s_u = m(u+2)-1 \pmod{m^2},
+\]
+a regular endpoint label
+\[
+ e_u = m(u-1)-2 \pmod{m^2},
+\]
+and a regular-source window of length $m(m-3)$ running from $s_u$ to $e_u$.
+The successor of that window is
+\[
+ e_u+1 = m(u-1)-1 = s_{u-3}.
+\]
+So the generic source-to-source splice is the cyclic shift
+\[
+ u \longmapsto u-3 \pmod m.
+\]
+In the checked odd-modulus data, the unique non-generic source is $u=3$; its
+endpoint is the exceptional cutoff row $3m-3$, and the distinguished regular
+interface is the source-$4$ terminal / source-$1$ start splice
+\[
+ 3m-2 \to 3m-1.
+\]
+\end{remark}
+
+This suggests the D5 even proof should imitate d=3 Route~E at the level of
+\emph{rows} instead of lanes.
+
+\begin{quote}
+Preserve the bulk odometer law $\delta\mapsto\delta+1$, identify the regular
+source windows explicitly, prove that their endpoint splice is the generic
+shift $u\mapsto u-3$, and isolate the source-$3$ window as the unique finite
+splice defect.
+\end{quote}
+
+That is the D5 analogue of the d=3 statement ``the bulk motion is a primitive
+clock and only finitely many defect lanes remain''.
+
+\begin{proposition}[Critical-row reduction principle]
+Assume, for some modulus $m$, that the following hold on the true accessible
+boundary union.
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2.5em]
+    \item There is a partition of the regular sector into source windows
+    $I_u$, indexed by the regular sources, such that inside each $I_u$ the
+    successor law is the generic odometer step $\delta\mapsto\delta+1$.
+    \item Each regular window $I_u$ starts at $s_u$ and ends at $e_u$ with
+    \[
+    s_u = m(u+2)-1,
+    \qquad
+    e_u = m(u-1)-2,
+    \qquad
+    e_u+1=s_{u-3}.
+    \]
+    \item The unique missing source is $u=3$, and its window is the
+    exceptional one.
+    \item The exceptional window ends at $3m-3$ and its next two labels are
+    forced to be $3m-2$ and $3m-1$.
+\end{enumerate}
+Then the hypotheses of Theorem~\ref{thm:formalextension} are satisfied.
+In particular, raw global $(\beta,\delta)$ is exact.
+\end{proposition}
+
+\begin{proof}
+The generic law on each regular window gives componentwise continuation inside
+that window. The identity $e_u+1=s_{u-3}$ gives continuation across all regular
+window endpoints, so the regular sector is closed. The source-$3$ hypothesis
+isolates the exceptional sector, and the final splice hypothesis gives the
+exceptional interface
+\[
+3m-3 \to 3m-2 \to 3m-1.
+\]
+Therefore all hypotheses of Theorem~\ref{thm:formalextension} hold.
+\end{proof}
+
+\begin{remark}[Interpretation]
+This proposition is the closest D5 analogue of the d=3 even ``critical-lane''
+idea. It says that the right new theorem for even $m$ is not a fresh global
+bridge theorem but a finite-splice theorem for the source windows.
+\end{remark}
+
+\section{Bottom line}
+
+Three conclusions seem stable.
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.5em]
+    \item The d=3 parity obstruction persists in D5: for even $m$, a
+    Kempe-from-canonical route is blocked.
+    \item The odd D5 final proof already has the right form for all moduli; it
+    becomes an even theorem as soon as the upstream package is rebuilt.
+    \item The most promising D5 analogue of Route~E is a \emph{critical-row}
+    theorem: preserve the bulk boundary odometer, prove the regular
+    source-window splice $u\mapsto u-3$, and isolate source $3$ as the unique
+    exceptional splice defect.
+\end{enumerate}
+
+So the natural next theorem to attack is not ``reprove the final globalization
+step for even $m$'', but rather:
+\begin{quote}
+\emph{construct an even-modulus D5 boundary package whose only non-generic row
+splice is the source-$3$ / exceptional interface.}
+\end{quote}
+
+That is the direct D5 analogue of Route~E.
+
+\end{document}

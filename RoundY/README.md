@@ -5,13 +5,39 @@ Hamilton decomposition of the directed `5`-torus
 `D_5(m) = Cay((Z_m)^5, {e_0, e_1, e_2, e_3, e_4})`.
 
 **Status:** `[C]` closed inside the accepted theorem package.  
-**Current frontier:** after the promoted `083` proof, the odd-`m` D5 theorem closes within the accepted `076–082` package. The live task is now a short dependency audit of the imported structural inputs, especially `033 -> 062` and the `079` chart/interface theorem, before using D5 as a base for broader generalization.
+**Current frontier:** after the promoted `083` proof, the odd-`m` D5 theorem closes within the accepted `076–082` package. The live task is now a short dependency audit of the imported structural inputs, especially `033 -> 062`, the componentwise concrete bridge `076`, and the in-progress `077/081` compressions, before using D5 as a base for broader generalization.
 
 For the shortest dependency/progress picture, see
 [theorem/d5_086_dependency_flow_diagram.md](./theorem/d5_086_dependency_flow_diagram.md).
 
 For the first concrete dependency audit, see
 [theorem/d5_087_dependency_audit_report.md](./theorem/d5_087_dependency_audit_report.md).
+
+For what still separates the accepted theorem package from a fully independent
+self-contained theorem package, see
+[theorem/d5_091_independent_package_gap_note.md](./theorem/d5_091_independent_package_gap_note.md).
+
+For the first cleaned manuscript-order theorem suite and its remaining selective
+reproof targets, see
+[theorem/d5_092_cleaned_independent_theorem_suite.md](./theorem/d5_092_cleaned_independent_theorem_suite.md)
+and
+[theorem/d5_093_reproof_targets_after_092.md](./theorem/d5_093_reproof_targets_after_092.md).
+
+For the compact reproof that removes `079` as a standalone support theorem
+inside that cleaned package, see
+[theorem/d5_095_compact_reproof_079_chart_interface_landing.md](./theorem/d5_095_compact_reproof_079_chart_interface_landing.md).
+
+For the separate open even-`m` branch, see
+[theorem/d5_even_case_strategy_from_d3.md](./theorem/d5_even_case_strategy_from_d3.md)
+and
+[theorem/d5_even_m_parity_and_critical_row_program.md](./theorem/d5_even_m_parity_and_critical_row_program.md).
+
+For the tmp-promotion / provenance cleanup around the late bridge notes, see
+[theorem/d5_090_tmp_promotion_index.md](./theorem/d5_090_tmp_promotion_index.md).
+
+For the remaining `tmp/` files that still matter, sorted by whether they should
+be promoted, treated as provenance, or left outside the D5 theorem chain, see
+[theorem/d5_094_tmp_remaining_priority_map.md](./theorem/d5_094_tmp_remaining_priority_map.md).
 
 For the promoted `033` trigger-family input used by the final chain, see
 [theorem/d5_033_explicit_trigger_family.md](./theorem/d5_033_explicit_trigger_family.md).
@@ -60,6 +86,15 @@ first exit?”, or even the old exceptional-row gluing question. Inside the
 accepted package, the abstract bridge `(beta,rho)` is now globally realized by
 raw `(beta,delta)`. The remaining work is to audit the imported accepted
 inputs that the final proof uses, not to reopen the D5 bridge itself.
+
+Separate from that closed odd-`m` line, the even-`m` case is now best viewed as
+a Route-E-style repair problem. The stable even-branch picture is:
+
+- parity blocks the naive Kempe-from-canonical route;
+- the odd final gluing proof is formally parity-blind once the same upstream
+  boundary package is rebuilt;
+- the likely new theorem target is a critical-row splice theorem for regular
+  source windows, not a new bridge theorem.
 
 ## Brief Mathematical Summary
 
@@ -218,10 +253,14 @@ The recommended next work is:
 1. keep the theorem language safe at abstract `(beta,rho)` level while the
    final bridge identification is still open;
 2. audit the imported accepted inputs used by the promoted `083` proof,
-   especially `033 -> 062` and `079`;
+   especially `033 -> 062` and `076`, with `077/081` now in active
+   compression;
 3. rewrite the D5 theorem chain in the shortest final manuscript order if
    needed;
-4. only after that decide whether to move directly to broader prime-dimension
+4. add a small pilot generalization program before any broad odd-prime push:
+   first show that the theorem-guided search/screen method is still effective
+   on manageable cases such as `d = 7, 9, ...`;
+5. only after that decide whether to move directly to broader prime-dimension
    generalization.
 
 In short:
@@ -233,6 +272,10 @@ In short:
   is there any hidden second endpoint sheet over `delta = 3m-1`?
 - compute question:
   can actual larger-state data certify the exceptional-row gluing directly?
+
+See also:
+
+- [TODO.md](./TODO.md) for the post-closure pilot generalization tasks.
 
 ## Barrier evolution
 

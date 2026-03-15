@@ -1,0 +1,264 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+
+\newcommand{\Zm}{\mathbb Z_m}
+\newcommand{\I}{\mathbf 1}
+
+\title{An odd-$m$ boundary-globalization theorem for the five-dimensional directed torus}
+\author{Sanghyun Park \\ Yonsei University}
+\date{14 March 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We record the current theorem-order form of the odd-modulus $d=5$ boundary argument in the directed torus program.
+The underlying witness and reduction package are not redeveloped here; instead we isolate the short chain of structural inputs and globalization steps that upgrades the abstract bridge $(\beta,\rho)$ to a raw global bridge $(\beta,\delta)$ on the true accessible boundary union.
+The only possible obstruction is the exceptional cutoff row $\delta=3m-3$, and the accepted first-exit and interface theorems force that row to continue through $3m-2\to 3m-1$ into the regular continuing class.
+Consequently $\rho=\rho(\delta)$ globally and raw global $(\beta,\delta)$ is exact.
+As a concrete finite artifact, the bundled witness file for $m=5$ records a 26-move sequence with verified cycle counts $(1,1,1,1,1)$.
+\end{abstract}
+
+\section{Introduction}
+
+Let
+\[
+D_5(m)=\operatorname{Cay}((\mathbb Z_m)^5,\{e_0,e_1,e_2,e_3,e_4\}),
+\qquad m\ge 5\text{ odd}.
+\]
+The broader $d=5$ project aims at Hamilton decompositions of these directed tori, but the present note has a narrower purpose.
+We record, in paper order, the final theorem chain currently supporting the odd-modulus boundary globalization step.
+This is the short implication chain that upgrades the safe abstract bridge $(\beta,\rho)$ to a raw global bridge $(\beta,\delta)$ on the true accessible boundary union.
+
+The main point is organizational rather than exploratory.
+The theorem search itself is no longer centered on discovering a new bridge or a new local event law.
+Those inputs already exist in the accepted package.
+What matters now is that the globalization step can be written in a compact theorem style without carrying the full historical search record.
+Accordingly, this note keeps only four ingredients explicit:
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2.5em]
+\item the explicit trigger family and the resulting universal first-exit targets;
+\item the componentwise concrete boundary coordinate $\delta$ and its odometer splice law;
+\item the reduction of fixed-$\delta$ ambiguity to tail length together with regular continuation;
+\item the final exceptional-row gluing argument.
+\end{enumerate}
+
+The resulting theorem is the following.
+
+\begin{theorem}\label{thm:intro-main}
+Within the accepted odd-modulus $d=5$ package, every actual lift of the exceptional cutoff row $\delta=3m-3$ continues through
+\[
+3m-2\to 3m-1
+\]
+and lies in the regular continuing endpoint class there.
+Consequently fixed realized $\delta$ determines endpoint class and future word, so
+\[
+\rho=\rho(\delta)
+\]
+globally on the true accessible boundary union, and raw global $(\beta,\delta)$ is exact.
+\end{theorem}
+
+The body of the note simply expands this theorem in the cleanest order.
+A final remark records the bundled $m=5$ witness file as an exact finite sample artifact.
+
+
+%% =====================================================================
+%%  D = 5  SUPPLEMENT
+%% =====================================================================
+
+\section{Supplement: an odd-$d=5$ boundary-globalization theorem}\label{sec:d5}
+
+The $d=5$ program is not part of the main Hamilton-decomposition theorem of this paper, but it fits the same return-map philosophy closely enough that it is useful to record the current odd-modulus boundary theorem in manuscript form.
+We therefore isolate only the short theorem-order chain.
+The witness construction, the grouped boundary model, and the earlier reduction package are treated elsewhere; here we package the final globalization step and keep explicit which inputs remain imported.
+
+We work on the true accessible boundary union of the accepted odd-modulus $d=5$ package for
+\[
+D_5(m)=\operatorname{Cay}((\Zm)^5,\{e_0,e_1,e_2,e_3,e_4\}),
+\qquad m\ge 5\text{ odd}.
+\]
+Let $\beta$ denote the canonical phase-corner clock on a full boundary chain.
+On the boundary section $\Theta=2$ we write current coordinates as $(q,w,u,\lambda)$ and define
+\[
+\sigma \equiv w+u-q-1 \pmod m,
+\qquad
+\delta := q + m\sigma \in \mathbb Z/m^2\mathbb Z.
+\]
+The point of this section is to show that the abstract bridge $(\beta,\rho)$ can be upgraded to a raw global bridge $(\beta,\delta)$.
+
+\subsection{Imported structural inputs}
+
+\begin{proposition}[Explicit trigger family]\label{prop:d5-trigger}
+The target hole family on the active best-seed branch is exactly
+\[
+H_{L1}=\{(q,w,u,\lambda)=(m-1,m-1,u,2):u\neq 2\}.
+\]
+\end{proposition}
+
+\begin{proposition}[Universal first-exit targets]\label{prop:d5-first-exit}
+Let $\rho=u_{\mathrm{source}}+1\pmod m$ for the chosen source family.
+On phase-$1$ states of the candidate active orbit one has
+\[
+q\equiv u-\rho+1 \pmod m.
+\]
+Hence an alternate step lands in $H_{L1}$ if and only if either
+\[
+(q,w,\Theta)=(m-1,m-2,1)\quad\text{and}\quad u\neq 2,
+\]
+or
+\[
+(q,w,\Theta)=(m-2,m-1,1)\quad\text{and}\quad u\neq 2.
+\]
+Consequently the family-dependent first exits are exactly
+\[
+T_{\mathrm{reg}}=(m-1,m-2,1),
+\qquad
+T_{\mathrm{exc}}=(m-2,m-1,1),
+\]
+with the regular source families exiting at $T_{\mathrm{reg}}$ by direction $2$ and the exceptional source family exiting at $T_{\mathrm{exc}}$ by direction $1$.
+In particular, on the actual active branch every pre-exit current state is $B$-labelled and the actual branch agrees with the candidate branch up to first exit.
+\end{proposition}
+
+\begin{proof}
+By Proposition~\ref{prop:d5-trigger}, a successor lands in $H_{L1}$ precisely when it has
+$(q',w',\lambda')=(m-1,m-1,2)$ and $u'\neq 2$.
+On phase-$1$ states only directions $1$ and $2$ can produce $(q',w')=(m-1,m-1)$, so the only possible triggers are the two displayed states.
+At $(m-1,m-2,1)$ one has $u=\rho-2$, and at $(m-2,m-1,1)$ one has $u=\rho-3$.
+Therefore the first state triggers exactly when $\rho\neq 4$, while the second triggers on the exceptional family $\rho=4$.
+This yields the two universal first-exit targets.
+The final clause is the standard pre-exit patch-avoidance argument: before either target is reached, the orbit meets no modified current class, so the actual and candidate branches coincide through first exit.
+\end{proof}
+
+\subsection{The componentwise concrete bridge}
+
+\begin{proposition}[Componentwise concrete bridge]\label{prop:d5-bridge}
+On each splice-connected accessible component of the $\Theta=2$ boundary section:
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2.5em]
+\item under first return one has
+\[
+q'=q+1 \pmod m,
+\qquad
+\sigma'=\sigma+\I_{q=m-1} \pmod m,
+\qquad
+\delta'=\delta+1 \pmod{m^2};
+\]
+\item the current event class $\epsilon_4$ is determined by $(\beta,\delta)$;
+\item the realized boundary labels form one forward $+1$-orbit segment in $\mathbb Z/m^2\mathbb Z$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}[Imported proof sketch]
+The accepted bridge package proves the odometer splice law $\delta\mapsto\delta+1$ componentwise after rewriting the intrinsic boundary data as
+$\delta=q+m\sigma$.
+The same package reads the current event directly from $(\beta,\delta)$ and shows that every splice-connected accessible component projects to a forward orbit segment of the odometer on $\mathbb Z/m^2\mathbb Z$.
+The statement here is exactly that componentwise bridge theorem recast in manuscript order.
+\end{proof}
+
+\subsection{Globalization reductions}
+
+\begin{proposition}[Tail-length reduction]\label{prop:d5-tail}
+At fixed realized $\delta$, two realizations can differ only by remaining full-chain tail length.
+Hence fixed realized $\delta$ determines endpoint class and future word if and only if fixed realized $\delta$ has realization-independent tail length.
+\end{proposition}
+
+\begin{proof}[Imported proof sketch]
+Once Proposition~\ref{prop:d5-bridge} supplies the componentwise concrete bridge, the accepted tail-reduction theorem eliminates every further local ambiguity at fixed $\delta$.
+What remains is purely endpoint geometry, measured by the remaining number of full chains before termination.
+\end{proof}
+
+\begin{proposition}[Regular continuation]\label{prop:d5-regular}
+Every regular realization of every realized boundary label $\delta$ continues on the true accessible union.
+Equivalently, no regular cutoff row launches a new endpoint sheet.
+\end{proposition}
+
+\begin{proof}[Imported proof sketch]
+This is the promoted regular-union theorem: after the bridge package and the fixed-$\delta$ reduction are in place, the regular sector is already closed at the raw theorem level.
+\end{proof}
+
+\begin{proposition}[Exceptional interface]\label{prop:d5-interface}
+At chart/interface level the exceptional continuation is pinned to
+\[
+3m-3 \to 3m-2 \to 3m-1.
+\]
+Here $3m-2$ is the terminal regular source-$4$ occurrence and $3m-1$ is the regular source-$1$ start.
+\end{proposition}
+
+\begin{proof}[Imported proof sketch]
+The accepted interface theorem identifies the only possible landing location of the exceptional branch on the larger regular quotient.
+It settles the chart-level continuation, but not by itself the final raw-state gluing statement.
+\end{proof}
+
+\begin{remark}[Scope of the imported inputs]
+The bridge theorem is \emph{componentwise}, not yet global.
+The interface theorem is a \emph{chart/interface} theorem, not yet a raw-state continuation theorem.
+Raw global $(\beta,\delta)$ appears only after these inputs are combined with the first-exit theorem and the regular continuation theorem.
+\end{remark}
+
+\subsection{Final globalization theorem}
+
+\begin{theorem}[Odd-$m$ D5 boundary globalization]\label{thm:d5-global}
+Within the accepted odd-modulus $d=5$ package, every actual lift of the exceptional cutoff row $\delta=3m-3$ continues through
+\[
+3m-2 \to 3m-1
+\]
+and lies in the regular continuing endpoint class there.
+Consequently fixed realized $\delta$ determines tail length, endpoint class, and padded future current-event word.
+Equivalently,
+\[
+\rho=\rho(\delta)
+\]
+globally on the true accessible boundary union, and raw global $(\beta,\delta)$ is exact.
+\end{theorem}
+
+\begin{proof}
+By Proposition~\ref{prop:d5-regular}, every regular chain has a forward successor.
+Any exceptional chain strictly before the cutoff row also continues, because on interior exceptional chains the componentwise odometer splice law of Proposition~\ref{prop:d5-bridge} applies directly.
+So only the exceptional cutoff row $\delta=3m-3$ remains.
+
+For that row, Proposition~\ref{prop:d5-first-exit} identifies the actual first exit of the exceptional family with the universal target $T_{\mathrm{exc}}=(m-2,m-1,1)$ and fixes the exit direction.
+Proposition~\ref{prop:d5-interface} then pins the corresponding continuation in chain labels to
+\[
+3m-3 \to 3m-2 \to 3m-1.
+\]
+Hence every actual lift of the exceptional cutoff also has a forward successor.
+Therefore every accessible full chain has a forward successor.
+If some splice-connected accessible component were finite, its realized boundary image would be a finite forward orbit segment in $\mathbb Z/m^2\mathbb Z$ and would have a terminal right endpoint, contradicting the previous sentence.
+So every accessible component is total.
+
+Totality forces every realized state to have infinite remaining full-chain tail length.
+By Proposition~\ref{prop:d5-tail}, fixed realized $\delta$ can differ only by tail length, so fixed realized $\delta$ has realization-independent tail length and therefore determines endpoint class and future word.
+Thus $\rho=\rho(\delta)$ globally.
+Combined with Proposition~\ref{prop:d5-bridge}, this upgrades the componentwise bridge to raw global $(\beta,\delta)$ exactness.
+Finally, the realization at $\delta=3m-1$ reached from the exceptional cutoff has the same label and the same infinite tail length as the regular source-$1$ start realization, so both lie in the same endpoint class.
+Pulling back one full chain yields the stated gluing through $3m-2\to 3m-1$.
+\end{proof}
+
+
+\begin{remark}[A concrete $m=5$ verification artifact]
+The bundled file \nolinkurl{d5_m5_kempe_witness_26.json} records a pruned 26-move Kempe-valid witness at $m=5$.
+Its verified cycle-count vector is
+\[
+(1,1,1,1,1),
+\]
+so on the recorded modulus each of the five color classes closes as a single cycle.
+The same file also records that the identical move sequence does not close at $m=7$, which is why it should be read as an exact finite witness rather than as a uniform odd-$m$ construction.
+\end{remark}
+
+\end{document}

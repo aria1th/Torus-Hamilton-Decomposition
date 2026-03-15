@@ -1,0 +1,287 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{microtype}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+
+\title{A cleanup note on the odd-$m$ $d=5$ globalization theorem}
+\author{}
+\date{2026-03-14}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note rewrites the current odd-$m$ $d=5$ theorem chain into a compact
+manuscript-facing form. It preserves the scope distinctions emphasized by the
+accepted package: the concrete bridge $(\beta,\delta)$ is \emph{componentwise}
+before globalization, the exceptional landing statement is initially only a
+chart/interface theorem, and the final global theorem is obtained only after
+combining those inputs with the first-exit and tail-length reductions. An
+appendix records the exact 26-step $m=5$ witness that is included in the bundle
+as a separate finite example.
+\end{abstract}
+
+\section{Statement and provenance}
+
+This note is a cleanup draft, not a new theorem search. It compresses the
+accepted odd-$m$ $d=5$ chain into manuscript order using the files
+\texttt{033}, \texttt{062}, \texttt{076}, \texttt{077}, \texttt{079},
+\texttt{081}, \texttt{082}, and \texttt{083}. The theorem statement is kept in
+exactly the same scope as the bundle: it is asserted for odd $m$ in the
+\emph{accepted D5 regime}. We deliberately retain that phrase because the
+handoff bundle states the theorem in that form and does not reduce it to one
+standalone numeric cutoff.
+
+The theorem-level object is the abstract bridge $(\beta,\rho)$, while the
+concrete verifiable coordinate used for globalization is
+\[
+\delta = q + m\sigma,
+\qquad
+\sigma \equiv w + u - q - 1 \pmod m.
+\]
+The final claim is that the concrete bridge becomes global on the true
+accessible boundary union.
+
+\section{Imported structural inputs}
+
+Fix the best endpoint seed
+\[
+L=[2,2,1],\qquad R=[1,4,4].
+\]
+We use the following structural inputs.
+
+\begin{proposition}[Exact trigger family]
+The target hole family on the active best-seed branch is
+\[
+H_{L1}=\{(q,w,u,\lambda)=(m-1,m-1,u,2):u\neq 2\}.
+\]
+\end{proposition}
+
+\begin{proposition}[Universal first-exit targets]
+The active branch has exactly two possible first exits to $H_{L1}$:
+\[
+T_{\mathrm{reg}}=(m-1,m-2,1),
+\qquad
+T_{\mathrm{exc}}=(m-2,m-1,1).
+\]
+Regular source families first exit at $T_{\mathrm{reg}}$, while the exceptional
+source family first exits at $T_{\mathrm{exc}}$.
+\end{proposition}
+
+The structural role of these propositions is narrow but decisive: they pin down
+the actual exceptional first exit and its branch direction before the later
+chart/interface and globalization arguments are applied.
+
+\section{Concrete boundary coordinate and componentwise bridge}
+
+On the unique $\Theta=2$ state $(q,w,u,2)$ of a full regular chain, define
+\[
+\sigma \equiv w + u - q - 1 \pmod m,
+\qquad
+\delta := q + m\sigma.
+\]
+
+\begin{proposition}[Componentwise concrete bridge]
+Under first return to the $\Theta=2$ section one has
+\[
+q' \equiv q+1 \pmod m,
+\qquad
+\sigma' \equiv \sigma + \mathbf 1_{\{q=m-1\}} \pmod m,
+\]
+and therefore
+\[
+\delta' \equiv \delta+1 \pmod{m^2}.
+\]
+Moreover, the current event class $\epsilon_4$ is a function of
+$(\beta,\delta)$ alone. On each splice-connected accessible component, the
+realized boundary labels therefore form one forward $+1$ orbit segment in
+$\mathbb Z/m^2\mathbb Z$.
+\end{proposition}
+
+\begin{remark}[Scope discipline]
+This proposition is intentionally \emph{componentwise}. It does not by itself
+assert that $(\beta,\delta)$ is already global on the full accessible union.
+That globalization is the content of the final theorem below.
+\end{remark}
+
+\section{Globalization reductions}
+
+\begin{proposition}[Tail-length reduction]
+Once the concrete bridge package $(\beta,\delta)$ is accepted, two realizations
+of the same boundary label $\delta$ can differ only by remaining full-chain tail
+length. Equivalently, the statement
+\[
+\rho = \rho(\delta)
+\]
+holds globally if and only if fixed realized $\delta$ has realization-independent
+tail length.
+\end{proposition}
+
+\begin{proposition}[Regular continuation]
+Every regular realization of every realized $\delta$ continues on the true
+larger regular accessible union. Hence the full globalization theorem cannot
+fail for a regular reason.
+\end{proposition}
+
+\begin{proposition}[Exceptional interface theorem]
+At chart/interface level, the exceptional continuation is pinned to
+\[
+3m-3 \to 3m-2 \to 3m-1.
+\]
+The labels $3m-2$ and $3m-1$ have the distinguished regular interpretations of
+terminal regular source-$4$ occurrence and regular source-$1$ start,
+respectively.
+\end{proposition}
+
+\begin{remark}[Another scope boundary]
+The exceptional interface proposition is a chart/interface theorem, not yet a
+raw actual-lift continuation theorem. In the final proof it must be paired with
+the universal first-exit theorem above.
+\end{remark}
+
+\section{Final theorem}
+
+\begin{theorem}[Odd-$m$ D5 final globalization theorem]
+For odd $m$ in the accepted D5 regime, every actual lift of the exceptional
+cutoff row $\delta=3m-3$ continues through
+\[
+3m-2 \to 3m-1
+\]
+and lies in the regular continuing endpoint class there.
+Consequently:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.2em]
+\item there is no mixed-status realized $\delta$;
+\item fixed realized $\delta$ determines tail length;
+\item fixed realized $\delta$ determines endpoint class and future word;
+\item $\rho = \rho(\delta)$ globally;
+\item raw global $(\beta,\delta)$ is exact on the true accessible boundary
+union.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+By the tail-length reduction, once the concrete bridge package is in place it is
+enough to show that every actual accessible realization has infinite forward
+tail. The regular sector is already closed by the regular continuation theorem,
+so no regular full chain is terminal.
+
+Exceptional chains away from the cutoff continue internally by the componentwise
+odometer splice law $\delta \mapsto \delta+1$. Thus only the exceptional cutoff
+row $\delta=3m-3$ needs separate treatment.
+
+For that row, the universal first-exit theorem gives a unique actual raw exit
+target and branch direction for every actual lift of the exceptional family.
+Determinism then forces the same immediate post-exit continuation for every such
+lift. The exceptional interface theorem pins the corresponding chain-label
+continuation to
+\[
+3m-3 \to 3m-2 \to 3m-1.
+\]
+Hence every actual lift of the exceptional cutoff row has an actual forward
+successor and lands in the regular interface class.
+
+Therefore every accessible full chain has a forward successor. A finite
+splice-connected accessible component would then have a terminal right-end
+chain, which is impossible. So every accessible component is total, and every
+realized state has infinite remaining tail length. The tail-length reduction now
+forces fixed realized $\delta$ to determine endpoint class and future word,
+which is exactly the statement $\rho=\rho(\delta)$ globally. Raw global
+$(\beta,\delta)$ exactness follows.
+\end{proof}
+
+\begin{remark}[What is and is not claimed here]
+This cleanup note does not upgrade the bundle beyond its own evidence. In
+particular:
+\begin{enumerate}[label=\textup{(\alph*)},leftmargin=2.2em]
+\item the theorem is still presented as closed \emph{inside the accepted
+package};
+\item the phrase \emph{accepted D5 regime} is preserved verbatim rather than
+expanded to a numeric statement that the bundle does not itself isolate;
+\item the small support files cover different finite ranges, and the saved
+regular-union check explicitly flags $m=5$ as a tiny degenerate exception on
+that particular saved regular full-chain union;
+\item the explicit $m=5$ witness in Appendix~\ref{app:m5witness} is a concrete
+finite example, not by itself the full odd-$m$ theorem.
+\end{enumerate}
+\end{remark}
+
+\appendix
+
+\section{Exact $m=5$ witness recorded in the bundle}\label{app:m5witness}
+
+The bundle also contains a separate explicit finite witness
+(\texttt{RoundY/d5\_m5\_kempe\_witness\_26.json}). It is described there as a
+``pruned 26-move Kempe-valid witness found by greedy continuation on $m=5$.''
+The JSON records
+\[
+\texttt{m\_verified}=(5),
+\qquad
+\texttt{cycle\_counts\_m5}=(1,1,1,1,1),
+\qquad
+\texttt{sequence\_length}=26.
+\]
+So this file gives an exact concrete sample instance in dimension $5$ at modulus
+$m=5$.
+
+For convenience, we record the move list exactly in the notation carried by the
+JSON file.
+
+\setlength{\LTpre}{0pt}
+\setlength{\LTpost}{0pt}
+\begin{longtable}{@{}>{\raggedleft\arraybackslash}p{1.2cm} >{\centering\arraybackslash}p{2cm} p{9cm}@{}}
+\toprule
+Step & Pair & Support \\
+\midrule
+\endfirsthead
+\toprule
+Step & Pair & Support \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+1 & ${(1, 3)}$ & \texttt{("line1", 0, 2, 3)} \\
+2 & ${(2, 4)}$ & \texttt{("plane", 3, null, null)} \\
+3 & ${(0, 2)}$ & \texttt{("line1", 1, 4, 1)} \\
+4 & ${(2, 3)}$ & \texttt{("line1", 2, 0, 2)} \\
+5 & ${(1, 2)}$ & \texttt{("line2", 2, (0, 4), (0, 4))} \\
+6 & ${(2, 3)}$ & \texttt{("line2", 0, (0, 4), (0, 0))} \\
+7 & ${(1, 3)}$ & \texttt{("line1", 3, 2, 2)} \\
+8 & ${(3, 4)}$ & \texttt{("line1", 3, 0, 4)} \\
+9 & ${(0, 3)}$ & \texttt{("plane", 3, null, null)} \\
+10 & ${(3, 4)}$ & \texttt{("line2", 1, (0, 2), (1, 0))} \\
+11 & ${(0, 4)}$ & \texttt{("line1", 1, 1, 2)} \\
+12 & ${(1, 4)}$ & \texttt{("line2", 0, (2, 3), (1, 0))} \\
+13 & ${(1, 4)}$ & \texttt{("line1", 3, 4, 2)} \\
+14 & ${(1, 3)}$ & \texttt{("line1", 2, 4, 4)} \\
+15 & ${(1, 4)}$ & \texttt{("line1", 3, 4, 0)} \\
+16 & ${(1, 3)}$ & \texttt{("line2", 0, (2, 4), (0, 1))} \\
+17 & ${(0, 1)}$ & \texttt{("line1", 2, 4, 2)} \\
+18 & ${(1, 4)}$ & \texttt{("line2", 0, (2, 3), (1, 2))} \\
+19 & ${(1, 2)}$ & \texttt{("line2", 2, (0, 4), (4, 3))} \\
+20 & ${(1, 2)}$ & \texttt{("line1", 1, 4, 3)} \\
+21 & ${(1, 2)}$ & \texttt{("line1", 2, 4, 1)} \\
+22 & ${(0, 1)}$ & \texttt{("line2", 2, (1, 4), (0, 4))} \\
+23 & ${(1, 3)}$ & \texttt{("line1", 1, 0, 4)} \\
+24 & ${(1, 2)}$ & \texttt{("line2", 1, (0, 4), (2, 4))} \\
+25 & ${(0, 1)}$ & \texttt{("line2", 2, (3, 4), (4, 0))} \\
+26 & ${(1, 4)}$ & \texttt{("line1", 3, 4, 1)} \\
+\end{longtable}
+
+The same JSON file also records that the same 26-step sequence is \emph{not}
+a uniform odd-$m$ witness: when tested at $m=7$ it yields cycle counts
+\[
+(5,433,1,1,3),
+\]
+so the explicit 26-step witness is verified only at $m=5$.
+
+\end{document}

@@ -1,0 +1,390 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue
+}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\Z}{\mathbb Z}
+
+\title{A cleaned theorem suite in independent form for odd-$m$ D5}
+\author{}
+\date{March 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note repackages the current odd-$m$ D5 closure into one
+manuscript-order suite of theorem statements. The statements are no longer
+split across the
+\[
+033 \to 062 \to 076 \to 077 \to 079 \to 081 \to 082 \to 083
+\]
+chain. The structural first-exit theorem and the chart-to-raw composition step
+are written explicitly, and the final gluing argument is presented as one
+continuous proof.
+
+The note stays honest about support. The componentwise concrete bridge,
+fixed-$\delta$ tail-length reduction, chart/interface theorem, and regular
+continuation theorem are retained in their accepted theorem form rather than
+rederived here from the original compute-backed files.
+\end{abstract}
+
+\section{Scope and conventions}
+
+Fix an odd modulus $m$ in the accepted D5 regime, and fix the best-seed channel
+\[
+R1 \to H_{L1}
+\]
+with endpoint seed
+\[
+L=[2,2,1], \qquad R=[1,4,4].
+\]
+
+The final theorem we want in cleaned form is:
+\begin{quote}
+Every actual lift of the exceptional cutoff row $\delta=3m-3$ continues through
+$3m-2 \to 3m-1$ and lies in the regular continuing endpoint class there.
+\end{quote}
+Equivalent corollaries are:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.5em]
+\item no mixed-status realized $\delta$ exists on the true accessible union;
+\item fixed realized $\delta$ determines tail length;
+\item fixed realized $\delta$ determines endpoint class and padded future word;
+\item $\rho = \rho(\delta)$ globally;
+\item raw global $(\beta,\delta)$ is exact.
+\end{enumerate}
+
+The goal of this note is not to enlarge the accepted scope. It is to put the
+current odd-$m$ D5 result into a theorem package that is independent in
+statement and dependency order.
+
+\section{Definitions}
+
+\begin{definition}[full chains and actual lifts]
+A \emph{full chain} is a complete boundary block between consecutive visits to
+the $\Theta=2$ section. Its boundary label is the intrinsic digit $\delta$
+defined below.
+
+An \emph{actual lift} of a row $\delta_0$ is an actual accessible full-chain
+occurrence whose boundary label is $\delta_0$.
+\end{definition}
+
+\begin{definition}[accessible boundary union and components]
+The \emph{accessible boundary union} is the union of all actual accessible full
+chains.
+
+A \emph{splice-connected accessible component} is a connected component of that
+union under the successor/predecessor splice relation between consecutive full
+chains.
+\end{definition}
+
+\begin{definition}[tail length]
+The \emph{remaining tail length} of an actual lift is the number of full-chain
+successors still available before terminality. If successors continue forever,
+its tail length is $\infty$.
+\end{definition}
+
+\begin{definition}[endpoint class and $\rho$]
+Choose the standard accepted terminal padding convention on future current-event
+words, so that finite and infinite tails are compared in one common one-sided
+shift space.
+
+Two actual lifts are in the same \emph{endpoint class} when they determine the
+same padded future current-event word. The corresponding boundary
+right-congruence class is written $\rho$.
+\end{definition}
+
+\begin{definition}[distinguished rows]
+The \emph{exceptional cutoff row} is
+\[
+\delta = 3m-3.
+\]
+The corresponding interface rows are
+\[
+3m-2 \qquad \text{and} \qquad 3m-1.
+\]
+\end{definition}
+
+\section{Structural first-exit package}
+
+\begin{theorem}[structural first-exit theorem]
+Let $\rho = u_{\mathrm{source}} + 1 \pmod m$ for the chosen source family, and
+let $\widehat x_n=(q_n,w_n,u_n,\Theta_n)$ be the candidate active orbit
+starting from the alt-$2$ entry
+\[
+E=(m-1,1,u_{\mathrm{source}},2).
+\]
+Then the following hold.
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.5em]
+\item The trigger family is exactly
+\[
+H_{L1}=\{(q,w,u,\lambda)=(m-1,m-1,u,2):u\neq 2\}.
+\]
+\item Every phase-$1$ state on the candidate orbit satisfies
+\[
+q \equiv u-\rho+1 \pmod m.
+\]
+\item The only phase-$1$ states from which an alternate step can land in
+$H_{L1}$ are
+\[
+T_{\mathrm{reg}}=(m-1,m-2,1) \quad \text{by direction } 2,
+\]
+and
+\[
+T_{\mathrm{exc}}=(m-2,m-1,1) \quad \text{by direction } 1.
+\]
+\item If $\rho\neq 4$, the first exit is $T_{\mathrm{reg}}$. If $\rho=4$, the
+first exit is $T_{\mathrm{exc}}$.
+\item The actual active branch agrees with the candidate orbit up to first
+exit. Therefore the regular families first exit at $T_{\mathrm{reg}}$ by
+direction $2$, and the exceptional family first exits at $T_{\mathrm{exc}}$ by
+direction $1$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Write the candidate update as
+\[
+\widehat F(q,w,u,0)=(q+1,w,u,1),
+\]
+\[
+\widehat F(q,w,u,1)=(q,w,u+1,2),
+\]
+\[
+\widehat F(q,w,u,2)=\bigl(q,w+\mathbf 1_{\{q=m-1\}},u,3\bigr),
+\]
+\[
+\widehat F(q,w,u,\Theta)=(q,w,u,\Theta+1)
+\qquad (3\le \Theta\le m-1).
+\]
+
+The exact trigger family is the promoted $033$ formula, namely
+\[
+H_{L1}=\{(m-1,m-1,u,2):u\neq 2\}.
+\]
+So only phase-$1$ current states can trigger an alternate step into $H_{L1}$,
+and a trigger must arrive at $(q',w')=(m-1,m-1)$.
+
+On the candidate orbit, every phase-$1$ state satisfies
+\[
+q \equiv u-\rho+1 \pmod m.
+\]
+This is the phase-$1$ source-residue invariant of $062$: it holds at the first
+phase-$1$ state after entry, and from one phase-$1$ state to the next both
+sides increment by $1$.
+
+Now there are only two ways to reach $(q',w')=(m-1,m-1)$ at layer $2$:
+\begin{itemize}[leftmargin=2em]
+\item by direction $2$ from $(q,w,\Theta)=(m-1,m-2,1)$,
+\item by direction $1$ from $(q,w,\Theta)=(m-2,m-1,1)$.
+\end{itemize}
+These are exactly $T_{\mathrm{reg}}$ and $T_{\mathrm{exc}}$. At
+$T_{\mathrm{reg}}$ the invariant gives
+\[
+u \equiv \rho-2 \pmod m,
+\]
+so the trigger condition $u\neq 2$ holds exactly when $\rho\neq 4$. At
+$T_{\mathrm{exc}}$ the invariant gives
+\[
+u \equiv \rho-3 \pmod m,
+\]
+so when $\rho=4$ one has $u\equiv 1$, hence $u\neq 2$, and the exit occurs
+there. Thus the candidate first exits are the universal targets stated above.
+
+The remaining $062$ input is pre-exit patch avoidance: before the candidate
+first-exit time, the candidate orbit avoids the patched current classes. Hence
+all pre-exit actual states are $B$-labeled and therefore follow the same
+full-coordinate updates as the candidate orbit. So the actual active branch
+agrees with the candidate orbit up to first exit, and the same first-exit
+statement holds on the actual branch.
+\end{proof}
+
+\section{Accepted support theorems in cleaned form}
+
+\begin{proposition}[componentwise concrete bridge; accepted support theorem]
+On the unique $\Theta=2$ state $(q,w,u,2)$ of a full regular chain, define
+\[
+\sigma \equiv w+u-q-1 \pmod m,
+\qquad
+\delta := q+m\sigma.
+\]
+Then on each splice-connected accessible component:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.5em]
+\item consecutive full chains satisfy the odometer splice law
+\[
+\delta' = \delta+1 \pmod{m^2};
+\]
+\item the current event class $\epsilon_4$ is determined by $(\beta,\delta)$;
+\item the realized boundary image is a forward interval in $\Z/m^2\Z$ or the
+full odometer cycle.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}[Proof status]
+This is the promoted theorem content of $076$, rewritten as one compact bridge
+statement.
+\end{proof}
+
+\begin{proposition}[tail-length reduction; accepted support theorem]
+At fixed realized $\delta$, two actual lifts can differ only by remaining
+full-chain tail length.
+
+Equivalently, once the concrete bridge package is accepted, there is no further
+local future-law ambiguity at fixed realized $\delta$; the only possible
+ambiguity is endpoint geometry.
+\end{proposition}
+
+\begin{proof}[Proof status]
+This is the promoted theorem content of $077$.
+\end{proof}
+
+\begin{proposition}[chart/interface theorem; accepted support theorem]
+The exceptional continuation is pinned in chart / chain-label coordinates to
+\[
+3 \to (\text{terminal chain of }4)\to 1,
+\]
+equivalently in $\delta$ coordinates to the interface
+\[
+3m-3 \to 3m-2 \to 3m-1.
+\]
+\end{proposition}
+
+\begin{proof}[Proof status]
+This is the promoted theorem content of $079$.
+\end{proof}
+
+\begin{proposition}[regular continuation theorem; accepted support theorem]
+Every regular actual lift of every realized $\delta$ continues. In particular,
+regular rows cannot create a second endpoint sheet at fixed $\delta$.
+\end{proposition}
+
+\begin{proof}[Proof status]
+This is the promoted theorem content of $081$.
+\end{proof}
+
+\section{Chart-to-raw composition}
+
+\begin{theorem}[actual exceptional continuation theorem]
+Assume the structural first-exit theorem and the accepted chart/interface
+theorem. Then every actual lift of the exceptional cutoff row
+\[
+\delta=3m-3
+\]
+continues through the actual interface rows
+\[
+3m-2 \to 3m-1.
+\]
+\end{theorem}
+
+\begin{proof}
+By the structural first-exit theorem, the exceptional source family is exactly
+the family $\rho=4$, and its first exit occurs at the universal exceptional
+target $T_{\mathrm{exc}}$ by direction $1$.
+
+The accepted chart/interface theorem identifies the post-exit continuation of
+that family in chain-label coordinates as
+\[
+3 \to (\text{terminal chain of }4)\to 1,
+\]
+equivalently in $\delta$ coordinates as
+\[
+3m-3 \to 3m-2 \to 3m-1.
+\]
+
+Because the structural theorem already identifies the exceptional family on the
+actual branch and the chart theorem identifies the unique continuation of that
+family after first exit, the chart/interface landing composes directly with the
+raw first-exit theorem. Hence every actual exceptional lift of $3m-3$ continues
+through $3m-2$ and lands in the regular continuing class at $3m-1$.
+\end{proof}
+
+\section{Final gluing theorem}
+
+\begin{theorem}[final gluing theorem in cleaned form]
+On the true accessible boundary union of odd-$m$ D5, every realized
+$\delta$ has realization-independent padded future current-event word.
+Equivalently:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.5em]
+\item no mixed-status realized $\delta$ exists;
+\item fixed realized $\delta$ determines tail length;
+\item fixed realized $\delta$ determines endpoint class;
+\item $\rho=\rho(\delta)$ globally;
+\item raw global $(\beta,\delta)$ is exact.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+By the regular continuation theorem, every regular actual lift continues. So no
+regular row can create mixed status at fixed $\delta$.
+
+The only remaining possible mixed-status row is the exceptional cutoff row
+\[
+\delta=3m-3.
+\]
+But by the actual exceptional continuation theorem, every actual lift of
+$3m-3$ continues through the interface
+\[
+3m-2 \to 3m-1
+\]
+and lands in the regular continuing class there. Therefore the exceptional row
+also does not create a second endpoint sheet.
+
+Hence no realized $\delta$ has mixed continuation status on the true accessible
+union. By the accepted tail-length reduction theorem, fixed realized $\delta$
+can differ only by tail length; therefore no mixed status implies
+realization-independent tail length. With the standard accepted terminal padding
+convention, that implies realization-independent endpoint class and padded
+future current-event word. So $\rho=\rho(\delta)$ globally.
+
+Finally, the concrete bridge proposition says that on each component the current
+event class is already determined by $(\beta,\delta)$ and the boundary dynamics
+follow the odometer splice law. Since $\rho$ is now globalized as a function of
+$\delta$ alone, the componentwise concrete bridge upgrades to raw global
+$(\beta,\delta)$.
+\end{proof}
+
+\begin{corollary}[exact verifiable odd-$m$ solution]
+For odd $m$ in the accepted D5 regime, raw global $(\beta,\delta)$ is exact on
+the true accessible boundary union.
+\end{corollary}
+
+\begin{proof}
+This is the final assertion of the gluing theorem.
+\end{proof}
+
+\section{What is still imported rather than reproved}
+
+\begin{remark}
+This note is independent in theorem order, but not yet completely raw from the
+earliest files. The following inputs are still imported in accepted-support
+form:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.5em]
+\item the componentwise concrete bridge package ($076$),
+\item the fixed-$\delta$ tail-length reduction ($077$),
+\item the chart/interface theorem ($079$),
+\item the regular continuation theorem ($081$),
+\item the patch-avoidance clause inside the structural first-exit theorem.
+\end{enumerate}
+So this is the first cleaned independent theorem suite, but not yet the final
+self-contained replacement for every support theorem.
+\end{remark}
+
+\end{document}

@@ -1,0 +1,670 @@
+{
+  "title": "D5 odd-m theorem-guided candidate screen",
+  "methodology": "first-return + Hamilton cycle count + clean-frame filtered symmetry detection",
+  "complexity": {
+    "what_is_compressed": [
+      "candidate search is lifted from arbitrary vertexwise direction tuples to a support-based family description",
+      "Hamiltonicity is checked on the first-return map on P0, not by ad hoc full-orbit reasoning",
+      "clean-frame detection uses an x=0 prefilter before full translation verification"
+    ],
+    "naive_candidate_space": "(5!)^(m^5) for arbitrary D5 vertexwise rules",
+    "per_candidate_screen_cost": "O(L * |colors| * m^5) rule applications for a support family of length L",
+    "clean_frame_cost_reduction": "from naive O(m^8) pair checks over (k,x) to O(m^4 + r*m^4), where r is the filtered surviving translation count",
+    "how_to_use": "screen many candidate support families cheaply, then reserve deeper symbolic work only for candidates that keep clean frames and Hamilton colors across several odd moduli"
+  },
+  "screened_witnesses": [
+    "RoundY/d5_m5_kempe_witness_26.json"
+  ],
+  "m_values": [
+    5,
+    7,
+    9,
+    11
+  ],
+  "colors": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "results": {
+    "RoundY/d5_m5_kempe_witness_26.json": {
+      "5": {
+        "witness": "RoundY/d5_m5_kempe_witness_26.json",
+        "m": 5,
+        "p0_state_count": 625,
+        "per_color": {
+          "0": {
+            "hamilton_on_P0": true,
+            "cycle_count": 1,
+            "max_cycle_length": 625,
+            "min_cycle_length": 625,
+            "clean_frame_exists": false,
+            "clean_frame_direction_count": 0,
+            "filtered_clean_frame_candidate_count": 162,
+            "sample_clean_frame_directions": [],
+            "first_return_rule_calls": 3125
+          },
+          "1": {
+            "hamilton_on_P0": true,
+            "cycle_count": 1,
+            "max_cycle_length": 625,
+            "min_cycle_length": 625,
+            "clean_frame_exists": false,
+            "clean_frame_direction_count": 0,
+            "filtered_clean_frame_candidate_count": 115,
+            "sample_clean_frame_directions": [],
+            "first_return_rule_calls": 3125
+          },
+          "2": {
+            "hamilton_on_P0": true,
+            "cycle_count": 1,
+            "max_cycle_length": 625,
+            "min_cycle_length": 625,
+            "clean_frame_exists": true,
+            "clean_frame_direction_count": 4,
+            "filtered_clean_frame_candidate_count": 69,
+            "sample_clean_frame_directions": [
+              [
+                1,
+                0,
+                0,
+                4
+              ],
+              [
+                2,
+                0,
+                0,
+                3
+              ],
+              [
+                3,
+                0,
+                0,
+                2
+              ],
+              [
+                4,
+                0,
+                0,
+                1
+              ]
+            ],
+            "first_return_rule_calls": 3125
+          },
+          "3": {
+            "hamilton_on_P0": true,
+            "cycle_count": 1,
+            "max_cycle_length": 625,
+            "min_cycle_length": 625,
+            "clean_frame_exists": true,
+            "clean_frame_direction_count": 4,
+            "filtered_clean_frame_candidate_count": 139,
+            "sample_clean_frame_directions": [
+              [
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                0,
+                3,
+                0
+              ],
+              [
+                0,
+                0,
+                4,
+                0
+              ]
+            ],
+            "first_return_rule_calls": 3125
+          },
+          "4": {
+            "hamilton_on_P0": true,
+            "cycle_count": 1,
+            "max_cycle_length": 625,
+            "min_cycle_length": 625,
+            "clean_frame_exists": false,
+            "clean_frame_direction_count": 0,
+            "filtered_clean_frame_candidate_count": 138,
+            "sample_clean_frame_directions": [],
+            "first_return_rule_calls": 3125
+          }
+        },
+        "hamilton_colors": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "clean_frame_colors": [
+          2,
+          3
+        ],
+        "all_colors_hamilton": true,
+        "all_colors_have_clean_frame": false,
+        "operation_estimates": {
+          "first_return_rule_calls_total": 15625,
+          "support_membership_checks_total": 406250,
+          "naive_clean_frame_pair_checks_per_color": 390000,
+          "actual_filtered_candidates_total": 623
+        }
+      },
+      "7": {
+        "witness": "RoundY/d5_m5_kempe_witness_26.json",
+        "m": 7,
+        "p0_state_count": 2401,
+        "per_color": {
+          "0": {
+            "hamilton_on_P0": false,
+            "cycle_count": 5,
+            "max_cycle_length": 729,
+            "min_cycle_length": 210,
+            "clean_frame_exists": false,
+            "clean_frame_direction_count": 0,
+            "filtered_clean_frame_candidate_count": 1012,
+            "sample_clean_frame_directions": [],
+            "first_return_rule_calls": 16807
+          },
+          "1": {
+            "hamilton_on_P0": false,
+            "cycle_count": 433,
+            "max_cycle_length": 1753,
+            "min_cycle_length": 1,
+            "clean_frame_exists": false,
+            "clean_frame_direction_count": 0,
+            "filtered_clean_frame_candidate_count": 413,
+            "sample_clean_frame_directions": [],
+            "first_return_rule_calls": 16807
+          },
+          "2": {
+            "hamilton_on_P0": true,
+            "cycle_count": 1,
+            "max_cycle_length": 2401,
+            "min_cycle_length": 2401,
+            "clean_frame_exists": true,
+            "clean_frame_direction_count": 6,
+            "filtered_clean_frame_candidate_count": 237,
+            "sample_clean_frame_directions": [
+              [
+                1,
+                0,
+                0,
+                6
+              ],
+              [
+                2,
+                0,
+                0,
+                5
+              ],
+              [
+                3,
+                0,
+                0,
+                4
+              ],
+              [
+                4,
+                0,
+                0,
+                3
+              ],
+              [
+                5,
+                0,
+                0,
+                2
+              ],
+              [
+                6,
+                0,
+                0,
+                1
+              ]
+            ],
+            "first_return_rule_calls": 16807
+          },
+          "3": {
+            "hamilton_on_P0": true,
+            "cycle_count": 1,
+            "max_cycle_length": 2401,
+            "min_cycle_length": 2401,
+            "clean_frame_exists": true,
+            "clean_frame_direction_count": 6,
+            "filtered_clean_frame_candidate_count": 377,
+            "sample_clean_frame_directions": [
+              [
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                0,
+                3,
+                0
+              ],
+              [
+                0,
+                0,
+                4,
+                0
+              ],
+              [
+                0,
+                0,
+                5,
+                0
+              ],
+              [
+                0,
+                0,
+                6,
+                0
+              ]
+            ],
+            "first_return_rule_calls": 16807
+          },
+          "4": {
+            "hamilton_on_P0": false,
+            "cycle_count": 3,
+            "max_cycle_length": 1557,
+            "min_cycle_length": 76,
+            "clean_frame_exists": false,
+            "clean_frame_direction_count": 0,
+            "filtered_clean_frame_candidate_count": 942,
+            "sample_clean_frame_directions": [],
+            "first_return_rule_calls": 16807
+          }
+        },
+        "hamilton_colors": [
+          2,
+          3
+        ],
+        "clean_frame_colors": [
+          2,
+          3
+        ],
+        "all_colors_hamilton": false,
+        "all_colors_have_clean_frame": false,
+        "operation_estimates": {
+          "first_return_rule_calls_total": 84035,
+          "support_membership_checks_total": 2184910,
+          "naive_clean_frame_pair_checks_per_color": 5762400,
+          "actual_filtered_candidates_total": 2981
+        }
+      },
+      "9": {
+        "witness": "RoundY/d5_m5_kempe_witness_26.json",
+        "m": 9,
+        "p0_state_count": 6561,
+        "per_color": {
+          "0": {
+            "hamilton_on_P0": false,
+            "cycle_count": 5,
+            "max_cycle_length": 1866,
+            "min_cycle_length": 236,
+            "clean_frame_exists": false,
+            "clean_frame_direction_count": 0,
+            "filtered_clean_frame_candidate_count": 3463,
+            "sample_clean_frame_directions": [],
+            "first_return_rule_calls": 59049
+          },
+          "1": {
+            "hamilton_on_P0": false,
+            "cycle_count": 2055,
+            "max_cycle_length": 3727,
+            "min_cycle_length": 1,
+            "clean_frame_exists": false,
+            "clean_frame_direction_count": 0,
+            "filtered_clean_frame_candidate_count": 999,
+            "sample_clean_frame_directions": [],
+            "first_return_rule_calls": 59049
+          },
+          "2": {
+            "hamilton_on_P0": false,
+            "cycle_count": 19,
+            "max_cycle_length": 2187,
+            "min_cycle_length": 243,
+            "clean_frame_exists": true,
+            "clean_frame_direction_count": 8,
+            "filtered_clean_frame_candidate_count": 557,
+            "sample_clean_frame_directions": [
+              [
+                1,
+                0,
+                0,
+                8
+              ],
+              [
+                2,
+                0,
+                0,
+                7
+              ],
+              [
+                3,
+                0,
+                0,
+                6
+              ],
+              [
+                4,
+                0,
+                0,
+                5
+              ],
+              [
+                5,
+                0,
+                0,
+                4
+              ],
+              [
+                6,
+                0,
+                0,
+                3
+              ],
+              [
+                7,
+                0,
+                0,
+                2
+              ],
+              [
+                8,
+                0,
+                0,
+                1
+              ]
+            ],
+            "first_return_rule_calls": 59049
+          },
+          "3": {
+            "hamilton_on_P0": true,
+            "cycle_count": 1,
+            "max_cycle_length": 6561,
+            "min_cycle_length": 6561,
+            "clean_frame_exists": true,
+            "clean_frame_direction_count": 8,
+            "filtered_clean_frame_candidate_count": 791,
+            "sample_clean_frame_directions": [
+              [
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                0,
+                3,
+                0
+              ],
+              [
+                0,
+                0,
+                4,
+                0
+              ],
+              [
+                0,
+                0,
+                5,
+                0
+              ],
+              [
+                0,
+                0,
+                6,
+                0
+              ],
+              [
+                0,
+                0,
+                7,
+                0
+              ],
+              [
+                0,
+                0,
+                8,
+                0
+              ]
+            ],
+            "first_return_rule_calls": 59049
+          },
+          "4": {
+            "hamilton_on_P0": false,
+            "cycle_count": 7,
+            "max_cycle_length": 1576,
+            "min_cycle_length": 226,
+            "clean_frame_exists": false,
+            "clean_frame_direction_count": 0,
+            "filtered_clean_frame_candidate_count": 3321,
+            "sample_clean_frame_directions": [],
+            "first_return_rule_calls": 59049
+          }
+        },
+        "hamilton_colors": [
+          3
+        ],
+        "clean_frame_colors": [
+          2,
+          3
+        ],
+        "all_colors_hamilton": false,
+        "all_colors_have_clean_frame": false,
+        "operation_estimates": {
+          "first_return_rule_calls_total": 295245,
+          "support_membership_checks_total": 7676370,
+          "naive_clean_frame_pair_checks_per_color": 43040160,
+          "actual_filtered_candidates_total": 9131
+        }
+      },
+      "11": {
+        "witness": "RoundY/d5_m5_kempe_witness_26.json",
+        "m": 11,
+        "p0_state_count": 14641,
+        "per_color": {
+          "0": {
+            "hamilton_on_P0": false,
+            "cycle_count": 5,
+            "max_cycle_length": 9087,
+            "min_cycle_length": 473,
+            "clean_frame_exists": false,
+            "clean_frame_direction_count": 0,
+            "filtered_clean_frame_candidate_count": 8808,
+            "sample_clean_frame_directions": [],
+            "first_return_rule_calls": 161051
+          },
+          "1": {
+            "hamilton_on_P0": false,
+            "cycle_count": 6003,
+            "max_cycle_length": 5833,
+            "min_cycle_length": 1,
+            "clean_frame_exists": false,
+            "clean_frame_direction_count": 0,
+            "filtered_clean_frame_candidate_count": 1969,
+            "sample_clean_frame_directions": [],
+            "first_return_rule_calls": 161051
+          },
+          "2": {
+            "hamilton_on_P0": true,
+            "cycle_count": 1,
+            "max_cycle_length": 14641,
+            "min_cycle_length": 14641,
+            "clean_frame_exists": true,
+            "clean_frame_direction_count": 10,
+            "filtered_clean_frame_candidate_count": 1077,
+            "sample_clean_frame_directions": [
+              [
+                1,
+                0,
+                0,
+                10
+              ],
+              [
+                2,
+                0,
+                0,
+                9
+              ],
+              [
+                3,
+                0,
+                0,
+                8
+              ],
+              [
+                4,
+                0,
+                0,
+                7
+              ],
+              [
+                5,
+                0,
+                0,
+                6
+              ],
+              [
+                6,
+                0,
+                0,
+                5
+              ],
+              [
+                7,
+                0,
+                0,
+                4
+              ],
+              [
+                8,
+                0,
+                0,
+                3
+              ]
+            ],
+            "first_return_rule_calls": 161051
+          },
+          "3": {
+            "hamilton_on_P0": true,
+            "cycle_count": 1,
+            "max_cycle_length": 14641,
+            "min_cycle_length": 14641,
+            "clean_frame_exists": true,
+            "clean_frame_direction_count": 10,
+            "filtered_clean_frame_candidate_count": 1429,
+            "sample_clean_frame_directions": [
+              [
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                0,
+                3,
+                0
+              ],
+              [
+                0,
+                0,
+                4,
+                0
+              ],
+              [
+                0,
+                0,
+                5,
+                0
+              ],
+              [
+                0,
+                0,
+                6,
+                0
+              ],
+              [
+                0,
+                0,
+                7,
+                0
+              ],
+              [
+                0,
+                0,
+                8,
+                0
+              ]
+            ],
+            "first_return_rule_calls": 161051
+          },
+          "4": {
+            "hamilton_on_P0": false,
+            "cycle_count": 5,
+            "max_cycle_length": 8867,
+            "min_cycle_length": 144,
+            "clean_frame_exists": false,
+            "clean_frame_direction_count": 0,
+            "filtered_clean_frame_candidate_count": 8573,
+            "sample_clean_frame_directions": [],
+            "first_return_rule_calls": 161051
+          }
+        },
+        "hamilton_colors": [
+          2,
+          3
+        ],
+        "clean_frame_colors": [
+          2,
+          3
+        ],
+        "all_colors_hamilton": false,
+        "all_colors_have_clean_frame": false,
+        "operation_estimates": {
+          "first_return_rule_calls_total": 805255,
+          "support_membership_checks_total": 20936630,
+          "naive_clean_frame_pair_checks_per_color": 214344240,
+          "actual_filtered_candidates_total": 21856
+        }
+      }
+    }
+  },
+  "runtime_seconds": 11.119797877967358
+}

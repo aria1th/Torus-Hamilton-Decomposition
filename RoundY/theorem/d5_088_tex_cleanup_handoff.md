@@ -90,7 +90,35 @@ So the TeX cleanup should preserve the words:
 
 ## 5. Best cleanup target
 
-The cleanest target is one theorem section with:
+Adopt:
+
+- `RoundY/tex/d5_odd_m_globalization_note_20260314.tex`
+
+as the primary manuscript base.
+
+Use:
+
+- `RoundY/theorem/d5_088_tex_cleanup_outline.tex`
+
+only as a checklist for section order and theorem dependencies.
+
+Use:
+
+- `tex/d3torus_complete_m_ge_3_odometer_revision_v9_with_d4_patched.tex`
+
+as the preamble / theorem-style reference when the D5 section is folded into a
+larger manuscript.
+
+Do not use as the main base:
+
+- `RoundY/tex/d5_odd_m_boundary_globalization_note.tex`
+  because it mixes a standalone note with a supplement-style section and is too
+  large for the present cleanup task;
+- `RoundY/tex/d5_odd_m_globalization_note.tex`
+  because it is cleaner than the boundary note but weaker than the
+  `20260314` draft on scope discipline and provenance.
+
+The cleanest target structure remains one theorem section with:
 
 1. two imported propositions:
    trigger family and first-exit targets

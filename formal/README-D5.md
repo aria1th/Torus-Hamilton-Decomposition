@@ -101,6 +101,16 @@ The next safe D5 Lean work should stay one layer behind the research frontier:
 4. only formalize a raw global `(beta,delta)` theorem after the globalization
    criterion is actually settled.
 
+## Post-closure priority
+
+Before any broad Lean-facing generalization attempt, the preferred next
+research step is a small pilot showing that the theorem-guided search/screen
+method remains effective on manageable higher odd dimensions such as
+`d = 7, 9, ...`.
+
+That pilot should come before any attempt to formalize a guessed general odd
+pattern.
+
 ## What not to do
 
 Do not start by formalizing all of `d=5`.

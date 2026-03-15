@@ -136,6 +136,45 @@ Now largely subsumed by:
 
 - `theorem/d5_063_route_organization.md`
 
+### 2.7 `d5_078_rA.md`, `d5_078_rB.md`, `d5_078_rC.md`, `d5_078_rD.md`
+
+What they are:
+
+- the four `078` track notes that stabilized the pre-closure bridge language:
+  component structure, endpoint compatibility, larger-modulus regular support,
+  and safe theorem packaging
+
+Recommended interpretation:
+
+- use the promoted stable copies instead of the `tmp/` originals
+
+Now promoted as:
+
+- `theorem/d5_078_global_component_structure.md`
+- `theorem/d5_078_endpoint_compatibility_criterion.md`
+- `theorem/d5_078_large_modulus_regular_union_support.md`
+- `theorem/d5_078_safe_theorem_language_review.md`
+
+### 2.8 `d5_even_m_reduction_attempt.md`, `d5_even_m_reduction_note.tex`
+
+What they are:
+
+- the first even-`m` reduction/program notes written after the odd-`m` bridge
+  closure;
+- the place where the even branch was recentered around parity obstruction,
+  formal extension of the odd final proof, and a critical-row finite-splice
+  program.
+
+Recommended interpretation:
+
+- use the promoted stable copies instead of the `tmp/` originals
+
+Now promoted as:
+
+- `theorem/d5_even_case_strategy_from_d3.md`
+- `theorem/d5_even_m_parity_and_critical_row_program.md`
+- `theorem/d5_even_m_parity_and_critical_row_program.tex`
+
 ## 3. Helpful descriptive aliases already present
 
 Some older content was already re-promoted under better names:
@@ -144,6 +183,7 @@ Some older content was already re-promoted under better names:
 - `081/082` tmp line -> `theorem/d5_081_regular_union_and_gluing_support.md`,
   `theorem/d5_082_exceptional_row_reduction.md`
 - `076–080` tmp line -> the promoted `076`, `077`, `079`, `080` stable notes
+- `078` track notes -> the promoted `078` stable notes above
 
 So in most cases the right action is:
 
@@ -169,6 +209,12 @@ The main poorly named but still meaningful theorem notes in RoundY are:
 - `d5_072_r3.md`
 - `d5_073.md`
 - `d5_073_r1.md`
+- `d5_078_rA.md`
+- `d5_078_rB.md`
+- `d5_078_rC.md`
+- `d5_078_rD.md`
+- `d5_even_m_reduction_attempt.md`
+- `d5_even_m_reduction_note.tex`
 - `works_063_a.md`
 - `works_063_b.md`
 - `works_063_c.md`

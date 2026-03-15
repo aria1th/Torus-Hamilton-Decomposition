@@ -74,6 +74,13 @@ Status:
 
 Recommended audit question:
 
+Update after `095`:
+
+- the exact chart/interface label statement is now compactly reproved in
+  `theorem/d5_095_compact_reproof_079_chart_interface_landing.md`;
+- so `079` is no longer the main selective reproof target, but it remains part
+  of the historical accepted-package audit trail.
+
 - is the jump from “pinned chain-label continuation” to the actual interface
   step stated with the correct hypotheses everywhere it is cited?
 
@@ -159,9 +166,18 @@ coordinates.” It is:
   boundary/splice memory,
   and globalization via end-gluing.
 
+Before any broad odd-prime theorem push, add one pilot validation step:
+
+- test the theorem-guided search/screen method itself on manageable higher odd
+  dimensions such as `d = 7, 9, ...`;
+- keep that pilot finite and practical;
+- use it to decide whether the D5 compression really transfers as a search
+  methodology, not just as a one-case theorem package.
+
 ## 6. Bottom line
 
 The D5 odd-`m` theorem now looks closed **inside the accepted package**.
 
 The next serious task is a short dependency audit, not a new D5 search.
-After that, generalization becomes reasonable.
+After that, the next reasonable step is a small pilot validation on
+`d = 7, 9, ...`, and only then broad generalization.
