@@ -2113,6 +2113,26 @@ of Case I through the full `m^3` cycle theorem, decide whether to continue the
 parallel odometer rewrite beyond the current asymmetric but successful
 checkpoint.
 
+**Current final state:**
+- D44 is now resolved all the way through the bounded color-`0`, Case-II,
+  mod-`4` experiment.
+- The full current D3 odometer rewrite package is complete:
+  `Color2Full`,
+  `Color1FullCaseI`,
+  `Color1FullCaseII`,
+  `Color0FullCaseI`,
+  `Color0FullCaseII`,
+  and
+  `Color0FullCaseIIModFour`.
+- `lake build TorusD3Odometer` is green at this final checkpoint.
+- This completed odometer tree is the D3-even presentation layer.
+  It does not create a new `m = 3` obligation:
+  the small odd case `m = 3` is already covered by the pre-existing odd D3
+  theorems in `formal/TorusD3Odd/FullCycles.lean` under
+  `[Fact (Odd m)] [Fact (2 < m)]`.
+- The detailed chronology below is retained as an implementation log, but it no
+  longer records an active proof frontier.
+
 Options:
 1. Stop here and accept the current odometer tree as the final presentation:
    - full rewrite for color `2`,
@@ -2917,6 +2937,302 @@ Update:
   `lake build TorusD3Odometer`
   both succeed after the new closures, so the bounded color-`0` Case-II
   experiment remains healthy.
+- The mod-`10` upper special lane `x = m - 2` has now also been closed in the
+  odometer rewrite.
+  The proof needed only a tiny dedicated zero-column package:
+  `returnMap0CaseIIXY_m_sub_two_zero`,
+  the lower/mid/upper zero-column decomposition,
+  `iterate_returnMap0CaseIIXY_zero_column_to_top`,
+  the top-corner step `returnMap0CaseIIXY_zero_m_sub_one`,
+  and the short three-column descent back to zero.
+  That helper layer stayed local and did not require a new framework.
+- The next packaging step after the upper special closures has now succeeded as
+  well.
+  `formal/TorusD3Odometer/Color0FullCaseII.lean`
+  now contains
+  `mod_six_eq_four_of_mod_twelve_eq_ten`,
+  the internal dispatcher
+  `hreturn_line_case0_caseII_mod_ten_core`,
+  and the public theorem
+  `hreturn_line_case0_caseII_mod_ten`.
+  The main proof-engineering lesson is concrete:
+  the stable way to package this dispatcher is to use an explicit
+  `m % 6 = 4` core theorem plus small constant-lane rewrites, rather than to
+  fight inline proof terms and `Fin` numeral coercions directly.
+- The `m^2` counting package on the line map has now also been closed.
+  `formal/TorusD3Odometer/Color0FullCaseII.lean`
+  now contains
+  `hsum_case0_caseII_mod_ten`,
+  proved directly from the already-established lane cycle
+  `cycleOn_laneMap0_caseII_mod_ten`
+  plus
+  `sum_rho0CaseII`.
+  So the remaining endgame is no longer return-map arithmetic.
+- Updated exact frontier after the clean dispatcher closure:
+  the remaining work in color `0`, Case II is now the `hfirst` layer,
+  then the `m^2` counting / cycle theorem on the return map,
+  then the full-map `m^3` cycle theorem.
+- Update after the helper pass:
+  the intended Case-II mod-`10` abstraction boundary is now partially
+  validated in code.
+  `formal/TorusD3Odometer/Color0FullCaseII.lean`
+  now compiles with the helper theorems
+  `hfirst_four_column_to_zero`,
+  `hfirst_six_column_to_zero`,
+  `hfirst_upper_column_partial`,
+  `hfirst_wrapped_upper_column_to_zero`,
+  and
+  `hfirst_even_generic_final_column_to_zero_safe`,
+  and the warm-up lanes `x = 1,2` were successfully rewired to sit on top of
+  the fixed-column helpers.
+  More importantly, the safe even generic family
+  `4 <= x <= m - 12`, `Even x`
+  is now closed through
+  `hfirst_line_even_generic_caseII_mod_ten_safe`.
+  So the remaining Case-II `hfirst` work is no longer “discover the right
+  helper layer”; it is:
+  public odd/even generic dispatch,
+  then the remaining upper special explicit lanes,
+  then the global `hfirst` dispatcher and final cycle closures.
+- Update after the generic-dispatch closure:
+  the public odd/even generic Case-II mod-`10` `hfirst` families are now both
+  closed in
+  `formal/TorusD3Odometer/Color0FullCaseII.lean`:
+  `hfirst_line_odd_generic_caseII_mod_ten`
+  and
+  `hfirst_line_even_generic_caseII_mod_ten`.
+  Two extra local abstractions were enough:
+  `hfirst_line_odd_generic_caseII_mod_ten_to_R`
+  for the odd generic prefix up to the `R` point,
+  and
+  `hfirst_even_generic_final_column_to_zero`
+  for the repaired final even-column tail including the
+  `x = m - 10` / `x = m - 8` boundary cases.
+  This is a good design datapoint:
+  the generic families do not need full lane-by-lane `hfirst` search once the
+  right prefix/tail helper split is in place.
+  The remaining frontier in Case II mod `10` is now fully explicit:
+  the upper special `hfirst` lanes
+  `x = m - 6, m - 5, m - 4, m - 3, m - 2, m - 1`,
+  then the global `hfirst` dispatcher,
+  then `cycleOn_returnMap0CaseII_caseII_mod_ten`,
+  then `cycleOn_fullMap0CaseII_caseII_mod_ten`.
+- Update after the full mod-`10` Case-II closure:
+  `formal/TorusD3Odometer/Color0FullCaseII.lean` is now fully closed through
+  the theorems
+  `hfirst_line_case0_caseII_mod_ten`,
+  `cycleOn_returnMap0CaseII_caseII_mod_ten`,
+  and
+  `cycleOn_fullMap0CaseII_caseII_mod_ten`.
+  Together with the already-complete
+  `formal/TorusD3Odometer/Color2Full.lean`,
+  `formal/TorusD3Odometer/Color1FullCaseI.lean`,
+  `formal/TorusD3Odometer/Color1FullCaseII.lean`,
+  and
+  `formal/TorusD3Odometer/Color0FullCaseI.lean`,
+  this means the odometer tree now has genuine full rewrites for:
+  color `2`,
+  color `1` Case I,
+  color `1` Case II,
+  color `0` Case I,
+  and
+  color `0` Case II mod `10`.
+  `lake build TorusD3Odometer` succeeds at this checkpoint.
+- New exact frontier after that completion:
+  the remaining asymmetry is color `0`, Case II, `m % 12 = 4`.
+  The wrapper-level lane theorem already exists in
+  `formal/TorusD3Odometer/Color0.lean`
+  as
+  `cycleOn_laneMap0_caseII_mod_four`,
+  but there is not yet a genuine full odometer rewrite file for that residue
+  class.
+  Recommendation:
+  start a fresh bounded file for the mod-`4` branch, reusing the generic
+  Case-II transducer / xy-transport infrastructure from
+  `formal/TorusD3Odometer/Color0FullCaseII.lean`,
+  but check the repaired column geometry directly against
+  `formal/TorusD3Even/Color0.lean`
+  instead of assuming the mod-`10` helper families transfer unchanged.
+- Update after starting the bounded mod-`4` branch:
+  that recommendation has now been implemented as the imported file
+  `formal/TorusD3Odometer/Color0FullCaseIIModFour.lean`.
+  The file already contains:
+  `firstReturn_line_zero_caseII_mod_four`,
+  `hfirst_line_zero_caseII_mod_four`,
+  `hsum_case0_caseII_mod_four`,
+  the warm-up return theorems
+  `firstReturn_line_one_caseII_mod_four`
+  and
+  `firstReturn_line_two_caseII_mod_four`,
+  and the matching strict-prefix theorems
+  `hfirst_line_one_caseII_mod_four`
+  and
+  `hfirst_line_two_caseII_mod_four`.
+  It now also contains the full even generic first-return package:
+  `firstReturn_line_even_generic_caseII_mod_four_safe`,
+  the boundary lanes
+  `firstReturn_line_m_sub_ten_caseII_mod_four`
+  and
+  `firstReturn_line_m_sub_eight_caseII_mod_four`,
+  and the public wrapper
+  `firstReturn_line_even_generic_caseII_mod_four`.
+  It also now contains the full odd generic first-return package:
+  `firstReturn_line_odd_generic_caseII_mod_four_safe`,
+  the boundary lanes
+  `firstReturn_line_m_sub_nine_caseII_mod_four`
+  and
+  `firstReturn_line_m_sub_seven_caseII_mod_four`,
+  and the public wrapper
+  `firstReturn_line_odd_generic_caseII_mod_four`.
+  The important proof-engineering result is now concrete:
+  the mod-`4` branch does reuse the generic Case-II transducer and
+  return-map infrastructure from
+  `formal/TorusD3Odometer/Color0FullCaseII.lean`,
+  but the warm-up lanes still need dedicated repaired-column packages
+  rather than a blind reuse of the repaired mod-`10` column lemmas.
+  The stable local shape was the same on both columns `4` and `6`:
+  lower band ->
+  midpoint step ->
+  wrapped upper band ->
+  explicit top corners.
+  `lake build TorusD3Odometer` still succeeds with that new file imported.
+- New concrete next step after the imported scaffold:
+  with both generic first-return families now closed, the next bounded step is
+  the matching mod-`4` `hfirst` abstraction layer on top of the repaired
+  column helpers and the imported upper-column / wrapped-upper-column pattern,
+  and only after that the upper boundary lanes.
+  So the next design question is no longer “can the repaired warm-up layer be
+  proved cleanly?” but “how much of the mod-`10` `hfirst` packaging can be
+  transported to mod `4` before the upper specials become genuinely
+  residue-specific?”
+  Update after that `hfirst` abstraction pass:
+  the mod-`4` helper layer is now real in
+  `formal/TorusD3Odometer/Color0FullCaseIIModFour.lean` as
+  `hfirst_upper_column_partial_mod_four`,
+  `hfirst_wrapped_upper_column_to_zero_mod_four`,
+  and
+  `hfirst_even_generic_final_column_to_zero_safe_mod_four`.
+  On top of those, both generic mod-`4` `hfirst` families are now closed:
+  `hfirst_line_even_generic_caseII_mod_four`
+  and
+  `hfirst_line_odd_generic_caseII_mod_four`.
+  So the generic-family transport question is now answered positively:
+  the mod-`10` `hfirst` packaging does transfer to mod `4` at the family
+  level once the repaired column names are localized.
+  The next real frontier is no longer the generic helper design. It is the
+  upper special lanes
+  `x = m - 6, m - 5, m - 4, m - 3, m - 2, m - 1`,
+  then the global Case-II mod-`4` dispatchers and cycle closures.
+- Update after the first upper-special mod-`4` pass:
+  `formal/TorusD3Odometer/Color0FullCaseIIModFour.lean` now also contains
+  the real upper-special packages
+  `firstReturn_line_m_sub_five_caseII_mod_four`,
+  `hfirst_line_m_sub_five_caseII_mod_four`,
+  `firstReturn_line_m_sub_one_caseII_mod_four`,
+  `hfirst_line_m_sub_one_caseII_mod_four`,
+  and the return theorem
+  `firstReturn_line_m_sub_four_caseII_mod_four`.
+  The two stable endpoint proof shapes are now explicit:
+  for `x = m - 5`, the mod-`10` odd-column ->
+  `A` ->
+  two-corner package transfers directly;
+  for `x = m - 1`, the correct package is
+  lower odd-column prefix ->
+  `R` at height `m / 2 - 1` ->
+  wrapped upper column on `x = 1`.
+  So the remaining real mod-`4` upper-special frontier is narrower than before:
+  `x = m - 6`, `x = m - 3`, `x = m - 2`,
+  plus the missing strict-prefix theorem for `x = m - 4`,
+  then the global Case-II mod-`4` dispatchers and cycle closures.
+  `lake build TorusD3Odometer` remains green at this checkpoint.
+- Update after the repaired zero-column mod-`4` pass:
+  the missing `x = m - 4` strict-prefix theorem is now also present as
+  `hfirst_line_m_sub_four_caseII_mod_four`, and the zero-column helper family
+  is now explicit in
+  `formal/TorusD3Odometer/Color0FullCaseIIModFour.lean` as
+  `iterate_returnMap0CaseIIXY_zero_column_to_top_mod_four`
+  and
+  `hfirst_zero_column_to_top_mod_four`.
+  On top of that helper, the upper-special lane
+  `firstReturn_line_m_sub_two_caseII_mod_four`
+  is now closed together with
+  `hfirst_line_m_sub_two_caseII_mod_four`.
+  The checked mod-`4` endpoint is:
+  `x = m - 2` returns to `5` with time `2m - 4`.
+  The stable proof shape was:
+  line start ->
+  zero column ->
+  `Q = (0,m-1)` ->
+  `(2,1)` ->
+  `(3,3)` ->
+  `R` ->
+  wrapped upper column on `c = 5`.
+  So the remaining real mod-`4` upper-special frontier is now just
+  `x = m - 6` and `x = m - 3`,
+  followed by the global Case-II mod-`4` dispatchers and cycle closures.
+  `lake env lean TorusD3Odometer/Color0FullCaseIIModFour.lean`
+  and
+  `lake build TorusD3Odometer`
+  both succeed at this checkpoint.
+- Update after the lane-`1` mod-`4` helper pass:
+  `formal/TorusD3Odometer/Color0FullCaseIIModFour.lean` now also contains the
+  dedicated one-column helper family
+  `returnMap0CaseIIXY_one_column_lower_step_mod_four`,
+  `iterate_returnMap0CaseIIXY_one_column_lower_partial_mod_four`,
+  and
+  `returnMap0CaseIIXY_one_column_mid_step_mod_four`.
+  That helper layer was enough to close the upper-special return theorem
+  `firstReturn_line_m_sub_six_caseII_mod_four`.
+  The checked mod-`4` endpoint is:
+  `x = m - 6` returns to `3` with time `2m - 4`.
+  The stable proof shape is now explicit:
+  first even-generic prefix ->
+  `A` to `(m-2,m-2)` ->
+  `Q` ->
+  `(1,1) -> (0,1) -> (1,2)` ->
+  lane-`1` lower band ->
+  final `R` ->
+  wrapped upper column on `c = 3`.
+  So the remaining real mod-`4` upper-special frontier is now the single lane
+  `x = m - 3`,
+  plus the missing `hfirst` theorem for `x = m - 6`,
+  then the global Case-II mod-`4` dispatchers and cycle closures.
+  `lake env lean TorusD3Odometer/Color0FullCaseIIModFour.lean`
+  and
+  `lake build TorusD3Odometer`
+  both still succeed.
+- Final update on the bounded mod-`4` experiment:
+  `formal/TorusD3Odometer/Color0FullCaseIIModFour.lean` is now fully closed
+  through
+  `firstReturn_line_m_sub_three_caseII_mod_four`,
+  `hfirst_line_m_sub_three_caseII_mod_four`,
+  `hreturn_line_case0_caseII_mod_four`,
+  `hfirst_line_case0_caseII_mod_four`,
+  `cycleOn_returnMap0CaseII_caseII_mod_four`,
+  and
+  `cycleOn_fullMap0CaseII_caseII_mod_four`.
+  The last genuinely new local helper layer was the fixed column-`2` tail
+  package
+  `iterate_returnMap0CaseIIXY_two_column_to_zero_mod_four`
+  together with
+  `hfirst_two_column_to_zero_mod_four`.
+  That was enough to close the mod-`4` boundary lane `x = m - 3`, whose
+  checked endpoint is:
+  `T_0(m - 3) = 2`,
+  `rho_0(m - 3) = 2m - 3`,
+  with orbit
+  `(m-3,0) -> (m-2,1) -> G^(m-4) -> (m-2,m-3) -> A -> (m-1,m-1) -> Q -> (2,2) -> G^(m-2) -> (2,0)`.
+  At this point the bounded mod-`4` experiment has succeeded end-to-end, and
+  the full current D3 odometer rewrite package is complete:
+  `Color2Full`,
+  `Color1FullCaseI`,
+  `Color1FullCaseII`,
+  `Color0FullCaseI`,
+  `Color0FullCaseII`,
+  and
+  `Color0FullCaseIIModFour`
+  all build under
+  `lake build TorusD3Odometer`.
 
 ## D45) D5 theorem-side minimal object vs compute-side source-residue refinement after 049/050
 
@@ -2978,3 +3294,282 @@ Rollout / acceptance:
 - Package `049` and `050` as reproducible artifacts with saved summaries.
 - Use `050` in the proof notes only as extended support for the reset law and
   the witness family, not as a change in theorem statement.
+
+## D46) D5 intended quotient identification versus dynamic bridge after 105
+
+**Decision:** Treat the downstream intended quotient for full M3 as the
+theorem-side exact deterministic quotient on the exact marked object that
+retains the grouped base, and treat the dynamic boundary odometer
+`(beta,q0,sigma)` / `(beta,delta)` as a coarser comparison target rather than
+as the literal same state space.
+
+Options:
+1. Declare immediately that the intended quotient is exactly
+   `(beta,q0,sigma)` / `(beta,delta)` on the full downstream object.
+2. Keep the intended quotient abstract but require two theorem-side properties:
+   exactness for current `epsilon4` and retention of grouped base `G`, then
+   prove a comparison theorem from that quotient to the dynamic bridge.
+3. Abandon the grouped-base formulation and restate the whole M3 target only in
+   the dynamic odometer gauge.
+
+Recommendation:
+- Option 2.
+- The current notes `068/074/105` still separate two logically different
+  layers:
+  - the theorem-side M3 closure needs a quotient that keeps the grouped base so
+    that the canonical clock and all `(G,beta)` readouts descend;
+  - the dynamic bridge `(beta,q0,sigma)` / `(beta,delta)` is the strongest
+    checked splice-compatible parameterization for current-event and successor
+    behavior on the carry-jump-to-wrap chain object.
+- The new comparison checks behind `106` show the right relation on the checked
+  exact object:
+  - `(B,beta)` determines `(beta,q0,sigma)` exactly;
+  - `(beta,q0,sigma)` forgets source-residue / component bookkeeping and is not
+    globally equal to `(B,beta)`;
+  - adjoining the source residue `rho` recovers the theorem-side key on the
+    checked chain object.
+- So the honest target is:
+  - theorem side: intended quotient = exact deterministic quotient retaining
+    grouped base;
+  - comparison theorem: on the exact marked chain object it is equivalent to
+    `(rho,beta,q0,sigma)`, hence factors canonically to `(beta,q0,sigma)` and
+    then to `(beta,delta)`.
+
+Risks / mitigations:
+- The checked equivalence could fail away from the currently extracted chain
+  object -> keep the note explicit that `106` proves a comparison package on
+  the exact carry-jump-to-wrap object, not yet a full first-principles theorem
+  on every imported layer.
+- Reviewers could still read “equivalent” as literal state-space equality ->
+  use the words `factor map`, `comparison theorem`, and `same after adjoining
+  rho` instead of saying the two parameterizations are globally identical.
+- The dynamic bridge could be overused inside the theorem chain before grouped
+  base retention is proved -> keep M3 formulated on the theorem-side quotient
+  and use the dynamic bridge only as a downstream comparison / realization
+  target.
+
+Open questions:
+- Can the intended local/admissible quotient itself be shown to retain the
+  source residue `rho`, or is `rho` only a proof-side bookkeeping lift?
+- Can the factor map from the intended quotient to `(beta,q0,sigma)` be proved
+  directly from the accepted bridge package, without extra frozen-data input?
+- What is the cleanest manuscript-order statement of the comparison theorem:
+  bijection after fixing a splice-connected component, or explicit equivalence
+  after adjoining `rho`?
+
+Rollout / acceptance:
+- Add a comparison script and saved JSON summaries that measure:
+  theorem-side key -> dynamic key exactness,
+  dynamic-key ambiguity,
+  and recovery after adjoining `rho`.
+- Add a D5 note that states the intended quotient choice and the proof program
+  as a comparison theorem instead of a premature equality claim.
+- Update the RoundY frontier docs so they no longer speak as if the live M3
+  identification question were just “is the quotient literally `(beta,delta)`?”
+
+## D47) D5 post-107/108 external evidence packet priority
+
+**Decision:** The next external evidence packet should send explicit M3
+formula-level support first, then request M4 finite-automaton tables, and only
+after that request M5 intrachain / nested-return data.
+
+Options:
+1. Send one mixed packet combining M3, M4, and M5 evidence goals at once.
+2. Send the already-computable M3 formula packet now, then ask next for M4
+   invariant-automaton data, and defer M5 until a graph-lift candidate exists.
+3. Skip the M3 formula packet and jump directly to M5 Hamiltonicity-oriented
+   searches.
+
+Recommendation:
+- Option 2.
+- `107` is now explicit enough that a direct formula-support packet is both
+  cheap and reviewer-useful:
+  it validates the actual symbolic formulas, not just bucket-level quotient
+  comparisons.
+- `108` says the next graph-level burden is asymmetric:
+  - M4 is now a local finite-state automaton problem;
+  - M5 still needs a new geometric lift coordinate or a depth-3 nested-return
+    package.
+- So the best next request is not “look for Hamilton cycles.” It is:
+  send the closed M3 formula packet now, then ask for M4 generator-readout and
+  predecessor-transport tables on the invariant.
+
+Risks / mitigations:
+- Reviewers could think M5 is being neglected -> state explicitly that M5 is
+  deferred because `108` reduces it to a new lift object not yet visible in the
+  current bundle, whereas M4 already has a finite-state target.
+- The M3 formula packet could be misread as a proof of the full intended
+  quotient theorem -> label it as exact checked support for `107`, not a full
+  all-odd-`m` theorem.
+
+Open questions:
+- Can the M4 invariant tables actually be computed from an existing graph-lift
+  candidate, or do they first require a new local witness-descent packaging?
+- Is there a practical intermediate M5 packet based on nested return sections
+  before a full intrachain coordinate `tau` is found?
+
+Rollout / acceptance:
+- Save a checked JSON packet validating the explicit `107` formulas on the
+  regenerated chain object.
+- Write a short spec saying the next requested M4 data should be:
+  colorwise generator readouts, predecessor transports, and the local inverse
+  identity on the invariant state space.
+- State explicitly that M5 evidence remains third priority until a concrete
+  graph-lift candidate exists.
+
+## D48) D5 M4 evidence packet shape after 110
+
+**Decision:** Define the M4 external evidence packet around the invariant
+automaton itself, with full realized invariant-state tables for generator
+readouts, predecessor transports, and the local inverse identity, rather than
+around sampled torus-level arcs or full Hamilton-cycle outputs.
+
+Options:
+1. Ask for raw torus-level arc samples and ad hoc examples of local witness
+   descent.
+2. Ask for a finite invariant-automaton packet:
+   realized invariant-state catalog, colorwise generator table, predecessor
+   transport table, local inverse-identity table, and failure witnesses.
+3. Skip the invariant tables and ask directly for full factor permutations or
+   Hamilton-cycle statistics.
+
+Recommendation:
+- Option 2.
+- `108` reduces M4 to a finite invariant automaton once the graph lift of
+  `(beta,delta)` is written down, and `110` does not change that. It sharpens
+  M5, not M4.
+- So the right M4 data is exactly the data that witnesses the finite-state
+  selector criterion:
+  - invariant states,
+  - generator readouts `g_c(I)`,
+  - predecessor transports `P_j(I)`,
+  - local inverse identity
+    `#{j : g_c(P_j(I)) = j} = 1`.
+- This packet is much smaller, more reviewable, and more theorem-aligned than
+  any torus-level edge dump.
+
+Risks / mitigations:
+- The packet might omit enough representative data that reconstruction back to
+  torus vertices is unclear -> require a small witness section with sample
+  representatives / vertices for each invariant state or each failure class.
+- If the intended invariant is not literally `(beta,delta)` but an equivalent
+  quotient, reviewers may worry the packet is too rigid -> allow an explicit
+  `invariant_name` plus normalization section in the schema.
+- A table-only packet may hide formula structure -> include optional
+  `formula_candidates` and `formula_fit_summary` sections so affine or
+  piecewise-affine laws can be recorded when known.
+
+Open questions:
+- Can the intended graph lift actually be computed on checked moduli with the
+  current local witness package, or does one first need a new representative
+  construction?
+- Should the witness section store one sample torus vertex per invariant state
+  or only per failure class to keep packet size moderate?
+
+Rollout / acceptance:
+- Write a human-readable spec for the M4 packet.
+- Write a machine-readable template / schema JSON capturing the required
+  sections.
+- Add a small validator script so any future packet can be checked quickly
+  before being sent externally.
+- Bundle the spec, template, validator, and the key context notes into a tarball.
+
+## D49) D5 M4 filled-data delivery after the first actual table extraction
+
+**Decision:** Ship a filled raw-coordinate table packet together with compact-candidate failure summaries, rather than waiting for the intended compact invariant to close or sending only a prose blocker note.
+
+Options:
+1. Wait until the intended compact invariant is identified and only then send an M4 packet.
+2. Ship two layers now:
+   a filled raw-coordinate generator/predecessor/inverse table packet on the actual `mixed_008` full torus,
+   plus a checked summary of where smaller candidate invariants fail.
+3. Skip the filled tables and send only a request note saying the current bundle still lacks the intended graph lift.
+
+Recommendation:
+- Option 2.
+- It separates two logically different questions that were previously tangled:
+  - can we actually populate the M4-style tables from existing code?
+  - do the currently visible small invariants satisfy the selector criterion?
+- The first extracted tables answer the first question positively:
+  the raw-coordinate state space already supports fully populated generator,
+  predecessor, and inverse tables.
+- At the same time, the same extraction shows why this is not yet an M4 closure:
+  - even the raw-coordinate packet still fails the outgoing-permutation coverage
+    required by the selector criterion;
+  - smaller candidate invariants such as `feature_profile` and `full24_profile`
+    preserve generator readout but still fail deterministic predecessor
+    transport;
+  - the coarse control `feature0` fails already at generator exactness.
+- So the right external message is no longer “we could not compute anything.”
+  It is:
+  “the data pipeline works, the current witness rows and compact invariants fail
+  in specific ways, and the remaining work is the selector-compatible graph
+  lift / compression step.”
+
+Risks / mitigations:
+- Reviewers could misread the filled raw-coordinate packet as a proof of M4 ->
+  label it explicitly as a debugging / evidence packet, not an acceptance
+  packet.
+- Sending only failing compact candidates could look inconclusive ->
+  include the raw-coordinate packet to show that the extraction pipeline itself
+  is not the blocker.
+- The raw-coordinate packet may be overlarge for casual review ->
+  pair it with a short run summary and a compact failure-summary JSON so a
+  reader can inspect the key facts without opening the full table dump first.
+
+Open questions:
+- What extra local memory, if any, upgrades `feature_profile` to a genuinely
+  deterministic predecessor transport?
+- Is the real missing object a compact invariant at all, or a different
+  graph-level selector package whose generator rows satisfy outgoing coverage
+  only after a nontrivial descent from the current witness?
+- Can the outgoing-permutation failure on raw coordinates be interpreted as
+  evidence that `mixed_008` itself is not yet the right graph-level factor, but
+  only an upstream witness family?
+
+Rollout / acceptance:
+- Save the filled raw-coordinate packet, the compact-candidate failure summary,
+  and a short theorem-side note explaining how to read them.
+- Keep the M4 schema / validator in the bundle, but do not claim validator
+  success for the raw-coordinate packet when the outgoing-permutation criterion
+  fails.
+- Use the resulting bundle as the direct handoff for external requests about
+  the next M4 compression / selector-lift step.
+
+## D50. How should the shrunk `115` compute request be interpreted operationally?
+
+Date: 2026-03-16
+
+**Decision:** Treat `115` as a transport/compression execution request, not as
+permission to reopen the old large weighted search. Execute the small-tier
+selector rerun, then test the first natural slice-4 intermediate families and
+record both positive and negative results in stable JSON.
+
+Options:
+1. Read `115` narrowly as a prose request only and avoid new compute.
+2. Reopen the old large weighted defect-slice optimization, since `114` still
+   points there abstractly.
+3. Execute the shrunk `115` program literally:
+   rerun the pattern-only packet, rerun the transport stats, and test the
+   explicit intermediate families suggested there.
+
+Recommendation:
+- Option 3.
+- The note itself explicitly says not to rerun the old full weighted search.
+- The executable small-tier part is cheap and reproducible.
+- The remaining useful work is not another selector search, but narrowing the
+  slice-4 compression bottleneck with concrete no-go or exact packets.
+
+Observed outcome:
+- the rerun reproduces the existing pattern-only summary exactly;
+- the `m = 9` pattern assignment stays exact on `m = 11,13`;
+- slice `3` remains controlled by finite transport fields `F_3^-` and `F_3`;
+- slice `4` remains the bottleneck;
+- within the tested family `(B_k for k in subset, Z, M)` with
+  `subset ⊆ {0,1,2,3,4,5}`, no exact transport field exists on both
+  `m = 9` and `m = 11`;
+- the cyclic orbit quotient of `(fullpairs, Z, M)` is also a no-go.
+
+Practical consequence:
+- the next compute should move beyond the first `B_k`-subset / cyclic-orbit
+  families, not back to the old large weighted search.
