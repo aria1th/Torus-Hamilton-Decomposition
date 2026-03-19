@@ -1,0 +1,326 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+
+\DeclareMathOperator{\Cay}{Cay}
+\newcommand{\Cdir}{\vec C}
+\newcommand{\torus}[2]{D_{#1}(#2)}
+
+\title{Composite expansion for Hamilton decompositions of directed tori}
+\author{}
+\date{14 March 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We formalize a general Cartesian-power lifting principle behind the passage from
+known low-dimensional directed tori to higher composite dimensions.
+The key theorem is this: if a finite digraph $G$ on $n$ vertices admits a
+Hamilton decomposition, and if the Cartesian power $\Cdir_n^{\square b}$ admits
+one, then the Cartesian power $G^{\square b}$ admits a Hamilton decomposition as
+well.
+For directed tori this yields the pointwise composite-expansion implication
+\[
+\torus{a}{m}\text{ and }\torus{b}{m^a}
+\Longrightarrow
+\torus{ab}{m},
+\]
+and hence the multiplicative closure of the set of dimensions that are solved
+for every modulus.
+The previously discussed statement ``if $G$ has a Hamilton decomposition then so
+does $G\square G$'' appears as the special case $b=2$, using the explicit
+decomposition of $\Cdir_n\square\Cdir_n$ into two directed Hamilton cycles.
+\end{abstract}
+
+\section{Definitions}
+
+\begin{definition}[Cartesian product and Cartesian powers]
+Let $G=(V,A)$ and $H=(W,B)$ be finite digraphs.
+Their \emph{Cartesian product} $G\square H$ is the digraph with vertex set
+$V\times W$ and arc set consisting of all arcs
+\[
+(x,y)\to(x',y) \quad\text{whenever } x\to x'\text{ is an arc of }G,
+\]
+and all arcs
+\[
+(x,y)\to(x,y') \quad\text{whenever } y\to y'\text{ is an arc of }H.
+\]
+For $b\ge 1$, write $G^{\square b}$ for the $b$-fold Cartesian power of $G$.
+\end{definition}
+
+\begin{definition}[Hamilton decomposition]
+A \emph{directed Hamilton cycle} in a finite digraph is a spanning directed
+cycle.
+A \emph{Hamilton decomposition} of a finite digraph is a partition of its arc
+set into arc-disjoint directed Hamilton cycles.
+\end{definition}
+
+For $n\ge 2$, write $\Cdir_n$ for the directed cycle on $\mathbb Z_n$ with arcs
+$t\to t+1$ modulo $n$.
+
+\section{A Cartesian-power lift theorem}
+
+\begin{theorem}[Cartesian-power lift]\label{thm:power-lift}
+Let $G$ be a finite digraph on $n\ge 2$ vertices, and suppose that $A(G)$ is
+partitioned by directed Hamilton cycles
+\[
+H_0,H_1,\dots,H_{k-1}.
+\]
+Let $b\ge 1$.
+Assume that $\Cdir_n^{\square b}$ admits a Hamilton decomposition into $b$
+directed Hamilton cycles.
+Then $G^{\square b}$ admits a Hamilton decomposition into $kb$ directed Hamilton
+cycles.
+\end{theorem}
+
+\begin{proof}
+Let
+\[
+G^{\square b}=G^{(1)}\square G^{(2)}\square\cdots\square G^{(b)},
+\]
+where each $G^{(r)}$ is a copy of $G$.
+For each factor $r\in\{1,\dots,b\}$ and each color index
+$i\in\{0,\dots,k-1\}$, let $H_i^{(r)}$ denote the corresponding copy of $H_i$
+inside $G^{(r)}$.
+Define a spanning subdigraph $F_i\subseteq G^{\square b}$ by
+\[
+F_i:=H_i^{(1)}\square H_i^{(2)}\square\cdots\square H_i^{(b)}.
+\]
+Because every $H_i^{(r)}$ is a directed Hamilton cycle on $n$ vertices,
+there is a digraph isomorphism
+\[
+F_i\cong \Cdir_n^{\square b}.
+\]
+By hypothesis, each $F_i$ therefore admits a Hamilton decomposition into $b$
+directed Hamilton cycles.
+
+It remains to show that the subdigraphs $F_0,\dots,F_{k-1}$ partition the arc
+set of $G^{\square b}$.
+An arc of $G^{\square b}$ changes exactly one coordinate.
+So every arc has the form
+\[
+(x_1,\dots,x_b)\to(x_1,\dots,x_{r-1},x_r',x_{r+1},\dots,x_b)
+\]
+for a unique index $r$, where $x_r\to x_r'$ is an arc of the copy $G^{(r)}$.
+Since the Hamilton cycles $H_0^{(r)},\dots,H_{k-1}^{(r)}$ partition the arc set
+of $G^{(r)}$, there is a unique index $i$ such that
+\[
+x_r\to x_r'\in A\bigl(H_i^{(r)}\bigr).
+\]
+By definition of the Cartesian product, that full product arc then belongs to
+$F_i$, and it belongs to no $F_j$ with $j\neq i$.
+Thus
+\[
+A\bigl(G^{\square b}\bigr)=\bigsqcup_{i=0}^{k-1} A(F_i).
+\]
+Now decompose each $F_i$ into its $b$ Hamilton cycles, and collect all of those
+decompositions together.
+Because the $F_i$ are pairwise arc-disjoint and cover all arcs, this produces a
+Hamilton decomposition of $G^{\square b}$ into $kb$ directed Hamilton cycles.
+\end{proof}
+
+\begin{remark}
+The theorem is best viewed as a two-level construction.
+First one colors every factor-copy of $G$ by the Hamilton decomposition of $G$.
+Then one freezes a color $i$ across all $b$ factors, obtaining the monochromatic
+product block $F_i\cong \Cdir_n^{\square b}$.
+A Hamilton decomposition of $\Cdir_n^{\square b}$ can then be imported into each
+block $F_i$ independently.
+\end{remark}
+
+\section{The square case}
+
+The self-square statement is the special case $b=2$.
+For completeness we include the explicit $2$-cycle decomposition of
+$\Cdir_n\square\Cdir_n$.
+
+\begin{lemma}[Square lemma]\label{lem:square}
+For every integer $n\ge 2$, the digraph $\Cdir_n\square\Cdir_n$ decomposes into
+two directed Hamilton cycles.
+\end{lemma}
+
+\begin{proof}
+Identify the vertex set with $\mathbb Z_n^2$.
+At each vertex $(u,v)$ there are exactly two outgoing arcs,
+\[
+(u,v)\to(u+1,v),
+\qquad
+(u,v)\to(u,v+1),
+\]
+where all arithmetic is modulo $n$.
+Define maps $\alpha,\beta:\mathbb Z_n^2\to\mathbb Z_n^2$ by
+\[
+\alpha(u,v)=
+\begin{cases}
+(u+1,v), & u+v\not\equiv n-1 \pmod n,\\[2mm]
+(u,v+1), & u+v\equiv n-1 \pmod n,
+\end{cases}
+\]
+\[
+\beta(u,v)=
+\begin{cases}
+(u,v+1), & u+v\not\equiv n-1 \pmod n,\\[2mm]
+(u+1,v), & u+v\equiv n-1 \pmod n.
+\end{cases}
+\]
+At each vertex, $\alpha$ and $\beta$ choose complementary outgoing arcs, so
+their arc sets partition $A(\Cdir_n\square\Cdir_n)$.
+
+For $\alpha$, define the bijection
+\[
+\Psi(u,v)=(u+v,\,v).
+\]
+Since $\Psi^{-1}(s,t)=(s-t,\,t)$, a direct substitution gives
+\[
+\Psi\alpha\Psi^{-1}(s,t)=
+\begin{cases}
+(s+1,t), & s\not\equiv n-1 \pmod n,\\[2mm]
+(0,t+1), & s\equiv n-1 \pmod n.
+\end{cases}
+\]
+Thus $\alpha$ is conjugate to the standard odometer on $\mathbb Z_n^2$.
+Starting from $(0,0)$, one checks that
+\[
+(0,0), (1,0), \dots, (n-1,0), (0,1), \dots, (n-1,n-1)
+\]
+is a single orbit of length $n^2$.
+Hence $\alpha$ is a directed Hamilton cycle.
+
+Now let $\sigma(u,v)=(v,u)$.
+Then $\beta=\sigma\circ\alpha\circ\sigma^{-1}$, so $\beta$ is conjugate to
+$\alpha$ and is also a directed Hamilton cycle.
+Therefore $\Cdir_n\square\Cdir_n$ decomposes into two directed Hamilton cycles.
+\end{proof}
+
+\begin{corollary}[Self-square lift]\label{cor:self-square}
+Let $G$ be a finite digraph admitting a Hamilton decomposition.
+Then $G\square G$ admits a Hamilton decomposition as well.
+More precisely, if $G$ decomposes into $k$ directed Hamilton cycles, then
+$G\square G$ decomposes into $2k$ directed Hamilton cycles.
+\end{corollary}
+
+\begin{proof}
+Apply Theorem~\ref{thm:power-lift} with $b=2$, using
+Lemma~\ref{lem:square}.
+\end{proof}
+
+\section{Directed tori and composite expansion}
+
+For integers $d\ge 1$ and $m\ge 2$, define
+\[
+\torus{d}{m} := \Cay\bigl((\mathbb Z/m\mathbb Z)^d,\{e_0,e_1,\dots,e_{d-1}\}\bigr).
+\]
+Equivalently,
+\[
+\torus{d}{m}\cong \underbrace{\Cdir_m\square\cdots\square\Cdir_m}_{d\text{ factors}}.
+\]
+
+\begin{theorem}[Pointwise composite expansion]\label{thm:pointwise-composite}
+Let $a,b\ge 2$ and $m\ge 2$.
+Assume that $\torus{a}{m}$ admits a Hamilton decomposition and that
+$\torus{b}{m^a}$ admits a Hamilton decomposition.
+Then $\torus{ab}{m}$ admits a Hamilton decomposition.
+\end{theorem}
+
+\begin{proof}
+Set
+\[
+G:=\torus{a}{m}.
+\]
+Then $G$ has
+\[
+|V(G)|=m^a=:n
+\]
+vertices, and by hypothesis its arc set is partitioned by $a$ directed
+Hamilton cycles.
+Also,
+\[
+\torus{b}{n}=\torus{b}{m^a}\cong \Cdir_n^{\square b}
+\]
+admits a Hamilton decomposition by assumption.
+Therefore Theorem~\ref{thm:power-lift} applies to $G$ and gives a Hamilton
+decomposition of $G^{\square b}$.
+
+Finally,
+\[
+G^{\square b}
+\cong
+\bigl(\Cdir_m^{\square a}\bigr)^{\square b}
+\cong
+\Cdir_m^{\square ab}
+\cong
+\torus{ab}{m}.
+\]
+Hence $\torus{ab}{m}$ admits a Hamilton decomposition.
+\end{proof}
+
+\begin{corollary}[Multiplicative closure across all moduli]
+\label{cor:multiplicative-closure}
+Let $a,b\ge 2$.
+Assume that for every integer $n\ge 3$, both $\torus{a}{n}$ and $\torus{b}{n}$
+admit Hamilton decompositions.
+Then for every integer $m\ge 3$, the directed torus $\torus{ab}{m}$ admits a
+Hamilton decomposition.
+\end{corollary}
+
+\begin{proof}
+Fix $m\ge 3$.
+By hypothesis, $\torus{a}{m}$ admits a Hamilton decomposition.
+Also $m^a\ge 3$, so the same hypothesis gives a Hamilton decomposition of
+$\torus{b}{m^a}$.
+Now apply Theorem~\ref{thm:pointwise-composite}.
+\end{proof}
+
+\begin{corollary}[Prime reduction]
+\label{cor:prime-reduction}
+Assume that for every prime $p$ and every integer $n\ge 3$, the directed torus
+$\torus{p}{n}$ admits a Hamilton decomposition.
+Then for every integer $d\ge 2$ and every integer $m\ge 3$, the directed torus
+$\torus{d}{m}$ admits a Hamilton decomposition.
+\end{corollary}
+
+\begin{proof}
+Proceed by induction on $d$.
+If $d$ is prime, there is nothing to prove.
+If $d$ is composite, write $d=ab$ with $2\le a,b<d$.
+By the induction hypothesis, both families $\torus{a}{n}$ and $\torus{b}{n}$
+admit Hamilton decompositions for every $n\ge 3$.
+Corollary~\ref{cor:multiplicative-closure} then gives the result for $d=ab$.
+\end{proof}
+
+\begin{corollary}[Immediate consequences of currently solved cases]
+\label{cor:examples}
+The following implications are formal consequences of the product theorem.
+\begin{enumerate}
+    \item Since $\torus{2}{n}$ is solved by Lemma~\ref{lem:square}, any solved
+    dimension $d$ automatically gives the doubled dimension $2d$.
+    \item If the known $d=3$ theorem is available for all $n\ge 3$, then the
+    dimensions $6$, $9$, $12$, $18$, and more generally every
+    $2^{\alpha}3^{\beta}$ with $\alpha+\beta\ge 1$, follow by repeated
+    composite expansion.
+    \item If the known $d=4$ theorem is available for all $n\ge 3$, then the
+    dimensions $8$, $12$, $16$, $24$, and every other dimension obtained by
+    multiplying together already-solved dimensions, follow as well.
+\end{enumerate}
+\end{corollary}
+
+\begin{remark}
+This is a theorem-level reduction rather than a local witness construction.
+It proves existence in composite dimensions once the relevant lower-dimensional
+inputs are known, but it does not itself yield the kind of small low-layer rule
+table used in explicit constructions for dimensions such as $3$ and $4$.
+\end{remark}
+
+\end{document}

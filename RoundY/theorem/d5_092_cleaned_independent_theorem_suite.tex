@@ -41,10 +41,10 @@ chain. The structural first-exit theorem and the chart-to-raw composition step
 are written explicitly, and the final gluing argument is presented as one
 continuous proof.
 
-The note stays honest about support. The componentwise concrete bridge,
-fixed-$\delta$ tail-length reduction, chart/interface theorem, and regular
-continuation theorem are retained in their accepted theorem form rather than
-rederived here from the original compute-backed files.
+The note stays honest about support. The componentwise concrete bridge remains
+in accepted theorem form. The chart/interface, regular-continuation,
+tail-length, and compact structural roles are supplied by the cleanup notes
+095--098 rather than rederived here from the original compute-backed files.
 \end{abstract}
 
 \section{Scope and conventions}
@@ -176,7 +176,8 @@ Write the candidate update as
 \qquad (3\le \Theta\le m-1).
 \]
 
-The exact trigger family is the promoted $033$ formula, namely
+The exact trigger family is the compact trigger-family lemma later isolated in
+$098$, namely
 \[
 H_{L1}=\{(m-1,m-1,u,2):u\neq 2\}.
 \]
@@ -187,7 +188,8 @@ On the candidate orbit, every phase-$1$ state satisfies
 \[
 q \equiv u-\rho+1 \pmod m.
 \]
-This is the phase-$1$ source-residue invariant of $062$: it holds at the first
+This is the phase-$1$ source-residue invariant later packaged in $098$: it
+holds at the first
 phase-$1$ state after entry, and from one phase-$1$ state to the next both
 sides increment by $1$.
 
@@ -209,18 +211,19 @@ u \equiv \rho-3 \pmod m,
 so when $\rho=4$ one has $u\equiv 1$, hence $u\neq 2$, and the exit occurs
 there. Thus the candidate first exits are the universal targets stated above.
 
-The remaining $062$ input is pre-exit patch avoidance: before the candidate
-first-exit time, the candidate orbit avoids the patched current classes. Hence
-all pre-exit actual states are $B$-labeled and therefore follow the same
-full-coordinate updates as the candidate orbit. So the actual active branch
-agrees with the candidate orbit up to first exit, and the same first-exit
-statement holds on the actual branch.
+The last localized structural ingredient is pre-exit patch avoidance, also
+written out explicitly in $098$: before the candidate first-exit time, the
+candidate orbit avoids the patched current classes. Hence all pre-exit actual
+states are $B$-labeled and therefore follow the same full-coordinate updates as
+the candidate orbit. So the actual active branch agrees with the candidate
+orbit up to first exit, and the same first-exit statement holds on the actual
+branch.
 \end{proof}
 
-\section{Accepted support theorems in cleaned form}
+\section{Support theorems in cleaned form}
 
 \begin{proposition}[componentwise concrete bridge; accepted support theorem]
-On the unique $\Theta=2$ state $(q,w,u,2)$ of a full regular chain, define
+On the unique $\Theta=2$ boundary state $(q,w,u,2)$ of a full chain, define
 \[
 \sigma \equiv w+u-q-1 \pmod m,
 \qquad
@@ -243,7 +246,7 @@ This is the promoted theorem content of $076$, rewritten as one compact bridge
 statement.
 \end{proof}
 
-\begin{proposition}[tail-length reduction; accepted support theorem]
+\begin{proposition}[tail-length reduction; compactly reproved support theorem]
 At fixed realized $\delta$, two actual lifts can differ only by remaining
 full-chain tail length.
 
@@ -253,10 +256,11 @@ ambiguity is endpoint geometry.
 \end{proposition}
 
 \begin{proof}[Proof status]
-This is the promoted theorem content of $077$.
+This is the compact reproof content of $097$, replacing the old standalone
+$077$ role in the cleaned suite.
 \end{proof}
 
-\begin{proposition}[chart/interface theorem; accepted support theorem]
+\begin{proposition}[chart/interface theorem; compactly reproved support theorem]
 The exceptional continuation is pinned in chart / chain-label coordinates to
 \[
 3 \to (\text{terminal chain of }4)\to 1,
@@ -268,16 +272,18 @@ equivalently in $\delta$ coordinates to the interface
 \end{proposition}
 
 \begin{proof}[Proof status]
-This is the promoted theorem content of $079$.
+This is the compact reproof content of $095$, replacing the old standalone
+$079$ role in the cleaned suite.
 \end{proof}
 
-\begin{proposition}[regular continuation theorem; accepted support theorem]
+\begin{proposition}[regular continuation theorem; compactly reproved support theorem]
 Every regular actual lift of every realized $\delta$ continues. In particular,
 regular rows cannot create a second endpoint sheet at fixed $\delta$.
 \end{proposition}
 
 \begin{proof}[Proof status]
-This is the promoted theorem content of $081$.
+This is the compact reproof content of $096$, replacing the old standalone
+$081$ role in the cleaned suite.
 \end{proof}
 
 \section{Chart-to-raw composition}
@@ -374,17 +380,15 @@ This is the final assertion of the gluing theorem.
 
 \begin{remark}
 This note is independent in theorem order, but not yet completely raw from the
-earliest files. The following inputs are still imported in accepted-support
-form:
+earliest files. The only theorem layer still imported in accepted-support form
+is:
 \begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.5em]
-\item the componentwise concrete bridge package ($076$),
-\item the fixed-$\delta$ tail-length reduction ($077$),
-\item the chart/interface theorem ($079$),
-\item the regular continuation theorem ($081$),
-\item the patch-avoidance clause inside the structural first-exit theorem.
+\item the componentwise concrete bridge package ($076$).
 \end{enumerate}
-So this is the first cleaned independent theorem suite, but not yet the final
-self-contained replacement for every support theorem.
+The chart/interface, regular-continuation, tail-length, and structural roles
+are now supplied by the cleanup notes $095$--$098$. So this is very close to a
+self-contained theorem suite, but it is not yet the final compact bridge
+replacement for every support theorem.
 \end{remark}
 
 \end{document}

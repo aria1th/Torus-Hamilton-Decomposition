@@ -1,0 +1,361 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{xcolor}
+
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{placeholder}[theorem]{Placeholder}
+
+\title{D5 133: the front-end one-corner reduction theorem and the true remaining M1 burden}
+\author{}
+\date{March 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note rewrites the front-end odd-$m$, $d=5$ reduction in the cleaner
+``one-cornered odometer'' language proposed in the rewrite plan.
+It proves that the old broad front-end burden is smaller than it looked.
+Once one knows that every unresolved front-end instance reduces to a single
+oriented bridge-type seed and that its live continuation is the alternate-$2$
+entry branch analyzed in the compact structural note \textup{098}, all later
+front-end work is automatic: the normalized seed is forced to be
+\([2,2,1]/[1,4,4]\), the exact trigger family is
+\(H_{L1}=\{(m-1,m-1,u,2):u\neq 2\}\), and the actual branch agrees with the
+candidate one-corner odometer orbit up to first exit.
+In particular, the post-entry part of the old non-trigger \textup{033}
+classification is already internalized by \textup{098}; it is not an
+independent manuscript burden anymore.
+The genuinely remaining front-end work is therefore reduced to two finite
+inputs: an endpoint-word shape theorem and an initial entry-channel theorem.
+\end{abstract}
+
+\section{Scope}
+
+The rewrite plan proposed replacing the old front-end bookkeeping
+\textup{032}/\textup{033} with one cleaner theorem:
+
+\begin{quote}
+Every unresolved odd-$m$, $d=5$ front-end instance reduces, after the accepted
+static repairs and symmetries, to one oriented bridge-type one-corner seed.
+\end{quote}
+
+The present note shows how far that program can already be pushed using the
+current theorem-level bundle.
+The key point is that the old front-end burden naturally splits into two very
+small pieces:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.5em]
+\item a finite endpoint-word \emph{shape} theorem saying that the unresolved
+      front end has one oriented bridge-type seed shape;
+\item a finite \emph{entry} theorem saying that the live continuation of that
+      normalized seed is the alternate-$2$ entry branch analyzed in the compact
+      structural note \textup{098}.
+\end{enumerate}
+
+Everything after that point is already theorem-level.
+So the note does not claim a full first-principles front-end proof from the raw
+seed-search artifacts.
+Instead it isolates exactly what still remains to be promoted.
+
+\section{Imported ingredients already at theorem level}
+
+\subsection{The oriented bridge normal form}
+
+We use the cyclic direction alphabet
+\[
+\mathcal D=\{1,2,3,4\}
+\]
+with cyclic order
+\[
+1\to 2\to 3\to 4\to 1.
+\]
+
+\begin{definition}[oriented bridge-type endpoint seed]
+An \emph{oriented bridge-type endpoint seed} is a pair of length-$3$ endpoint
+words
+\[
+L=[\ell,\ell,b],\qquad R=[b,r,r]
+\]
+such that:
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2.5em]
+\item $b$ is the shared bridge symbol;
+\item $\ell$ is the repeated left neighbor of the bridge;
+\item $r$ is the repeated right neighbor of the bridge;
+\item after the standard orientation convention is fixed, $\ell$ is the
+      clockwise neighbor of $b$ and $r$ is the counterclockwise neighbor of
+      $b$.
+\end{enumerate}
+\end{definition}
+
+The normal-form lemma from Note \textup{131} is the following.
+
+\begin{proposition}[normal form of the one-corner seed]
+\label{prop:normal-form}
+Every oriented bridge-type endpoint seed is equivalent, under the accepted
+front-end relabeling and orientation normalizations, to the unique numerical
+representative
+\[
+L=[2,2,1],\qquad R=[1,4,4].
+\]
+\end{proposition}
+
+\begin{proof}
+Relabel cyclically so that the shared bridge symbol is $b=1$.
+Then the oriented left repeated neighbor is the clockwise neighbor of $1$,
+namely $\ell=2$, and the oriented right repeated neighbor is the
+counterclockwise neighbor of $1$, namely $r=4$.
+So the normalized representative is exactly
+\[
+L=[2,2,1],\qquad R=[1,4,4].
+\]
+Uniqueness is immediate because the normalization fixes the bridge symbol and
+then fixes which adjacent symbol is written on each side.
+\end{proof}
+
+\subsection{The best-seed channel package}
+
+Once the normalized seed has been fixed, the compact structural note
+\textup{098} already supplies the exact best-seed channel package.
+We only record the two statements that matter for front-end reduction.
+
+\begin{proposition}[exact trigger family]
+\label{prop:trigger}
+On the best-seed channel, the target hole family is exactly
+\[
+H_{L1}=\{(q,w,u,\Theta)=(m-1,m-1,u,2):u\neq 2\}.
+\]
+Equivalently, the target layer is $\Theta=2$, the target current coordinates
+satisfy $q=w=m-1$, and the only excluded fiber is $u=2$.
+\end{proposition}
+
+\begin{theorem}[actual first exits and pre-exit $B$-region invariance]
+\label{thm:098-core}
+Fix the normalized best-seed channel with source seed
+\[
+L=[2,2,1],\qquad R=[1,4,4],
+\]
+and start at the alternate-$2$ entry state
+\[
+E=(m-1,1,u_{\mathrm{source}},2).
+\]
+Then:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.5em]
+\item the actual active branch agrees with the candidate one-corner orbit up
+      to first exit;
+\item every pre-exit actual current state is $B$-labeled;
+\item the first exit to $H_{L1}$ occurs at the universal family-dependent
+      target
+      \[
+      T_{\mathrm{reg}}=(m-1,m-2,1)
+      \quad\text{or}\quad
+      T_{\mathrm{exc}}=(m-2,m-1,1),
+      \]
+      with regular families exiting at $T_{\mathrm{reg}}$ by direction $2$ and
+      the exceptional family exiting at $T_{\mathrm{exc}}$ by direction $1$;
+\item no patched current class is encountered before first exit.
+\end{enumerate}
+\end{theorem}
+
+\begin{remark}
+The last item is already part of the proof of the compact structural theorem:
+it uses only the coarse coordinate signatures of the patched classes and the
+monotonicity of the corridor coordinate $w$ on the candidate branch.
+That point is crucial for the present note, because it means the post-entry part
+of the old non-trigger classification is already internalized.
+\end{remark}
+
+\section{What is already automatic after entry}
+
+The previous section implies that one large part of the old front-end burden is
+no longer genuinely open.
+Once the normalized one-corner branch is entered, the remaining local current
+classes are automatically controlled by the compact \textup{098} theorem.
+
+\begin{proposition}[post-entry non-trigger control is internalized]
+\label{prop:post-entry-internalized}
+Assume the normalized one-corner seed
+\[
+L,R]=([2,2,1],[1,4,4])
+\]
+has already been reduced to the alternate-$2$ entry state
+\[
+E=(m-1,1,u_{\mathrm{source}},2)
+\]
+of the best-seed channel.
+Then no separate post-entry theorem is needed to rule out the old patched
+current classes on the unresolved branch: before first exit to $H_{L1}$, the
+actual branch never meets any patched current class at all.
+In particular, the old post-entry non-trigger control of classes
+\(L1,R1,L2,R2,L3,R3\) is already contained in
+Theorem~\ref{thm:098-core}.
+\end{proposition}
+
+\begin{proof}
+This is exactly item~(4) of Theorem~\ref{thm:098-core}.
+The compact structural theorem proves that the candidate orbit avoids all patched
+current classes before first exit, and then upgrades that avoidance to the
+actual branch because the actual branch agrees with the candidate orbit up to
+first exit.
+So once one has entered the normalized one-corner branch, there is no further
+independent post-entry channel-classification problem.
+\end{proof}
+
+\begin{corollary}[what is left of the old \textup{033} burden]
+\label{cor:033-shrunk}
+For the purposes of the main odd-$m$, $d=5$ proof spine, the old
+non-trigger part of \textup{033} does \emph{not} need to be promoted in its
+historical full breadth.
+What remains externally necessary is only the finite \emph{initial entry}
+classification saying that the live unresolved continuation of the one-corner
+seed really is the alternate-$2$ entry branch handled by
+Theorem~\ref{thm:098-core}.
+The subsequent patched-class avoidance is already automatic.
+\end{corollary}
+
+\section{The true remaining front-end inputs}
+
+The previous sections isolate the genuine external front-end inputs much more
+sharply than the old single $M1$ placeholder.
+
+\begin{placeholder}[endpoint-word shape theorem]
+\label{ph:shape}
+After the accepted tiny static repairs and front-end symmetries, every
+unresolved odd-$m$, $d=5$ front-end instance reduces to a single oriented
+bridge-type endpoint seed class.
+\end{placeholder}
+
+\begin{placeholder}[initial entry theorem]
+\label{ph:entry}
+For the normalized one-corner seed
+\[
+L=[2,2,1],\qquad R=[1,4,4],
+\]
+the live unresolved continuation is the alternate-$2$ entry branch considered
+in Theorem~\ref{thm:098-core}, with entry state
+\[
+E=(m-1,1,u_{\mathrm{source}},2).
+\]
+Equivalently, every other immediate continuation out of the normalized front-end
+seed is already resolved by the accepted static/direct repair package, and the
+only live unresolved continuation is this alternate-$2$ branch.
+\end{placeholder}
+
+\begin{remark}
+Placeholder~\ref{ph:entry} is intentionally smaller than the historical broad
+wording ``promote the non-trigger part of 033.''
+By Proposition~\ref{prop:post-entry-internalized}, once the alternate-$2$
+entry branch is identified, all later post-entry patched-class control is
+already theorem-level.
+So the remaining front-end burden is not a wide defect-template classification;
+it is only a finite initial-branch identification.
+\end{remark}
+
+\section{Front-end one-corner reduction theorem}
+
+\begin{theorem}[front-end one-corner reduction]
+\label{thm:one-corner-reduction}
+Assume Placeholders~\ref{ph:shape} and~\ref{ph:entry}.
+Then every unresolved odd-$m$, $d=5$ front-end instance reduces to the
+normalized one-corner best-seed channel with seed
+\[
+L=[2,2,1],\qquad R=[1,4,4],
+\]
+entry state
+\[
+E=(m-1,1,u_{\mathrm{source}},2),
+\]
+exact trigger family
+\[
+H_{L1}=\{(q,w,u,\Theta)=(m-1,m-1,u,2):u\neq 2\},
+\]
+and universal first exits
+\[
+T_{\mathrm{reg}}=(m-1,m-2,1),
+\qquad
+T_{\mathrm{exc}}=(m-2,m-1,1).
+\]
+Moreover, on that branch the actual active dynamics agree with the candidate
+one-corner odometer orbit up to first exit and avoid all patched current classes
+before exit.
+\end{theorem}
+
+\begin{proof}
+By Placeholder~\ref{ph:shape}, every unresolved front-end instance reduces,
+after the accepted static repairs and symmetries, to one oriented bridge-type
+endpoint seed class.
+By Proposition~\ref{prop:normal-form}, that seed class has the unique normalized
+representative
+\[
+L=[2,2,1],\qquad R=[1,4,4].
+\]
+By Placeholder~\ref{ph:entry}, the live unresolved continuation of this
+normalized seed is the alternate-$2$ entry branch with entry state
+\[
+E=(m-1,1,u_{\mathrm{source}},2).
+\]
+Now Proposition~\ref{prop:trigger} supplies the exact trigger family
+\[
+H_{L1}=\{(m-1,m-1,u,2):u\neq 2\},
+\]
+and Theorem~\ref{thm:098-core} gives the candidate/actual agreement up to first
+exit, the universal family-dependent first exits
+\[
+T_{\mathrm{reg}}=(m-1,m-2,1),
+\qquad
+T_{\mathrm{exc}}=(m-2,m-1,1),
+\]
+and the avoidance of all patched current classes before exit.
+This is exactly the claimed front-end reduction to the one-corner best-seed
+channel.
+\end{proof}
+
+\begin{corollary}[the clean replacement for the old $M1$ placeholder]
+\label{cor:M1-clean}
+In the rewritten one-cornered-odometer manuscript, the old broad front-end
+placeholder should be replaced by the much sharper pair:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.5em]
+\item the endpoint-word shape theorem
+      (Placeholder~\ref{ph:shape});
+\item the initial entry theorem
+      (Placeholder~\ref{ph:entry}).
+\end{enumerate}
+No additional post-entry non-trigger classification is needed in the main proof
+spine.
+\end{corollary}
+
+\section{Bottom line}
+
+The present note does not pretend to close the full front-end from raw
+endpoint-search artifacts alone.
+What it does prove is structurally important:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.5em]
+\item the normalized seed digits $[2,2,1]/[1,4,4]$ are just the normal form of
+      an oriented bridge-type one-corner seed;
+\item once the normalized seed enters the alternate-$2$ best-seed branch, the
+      exact trigger family and all post-entry patched-class control are already
+      theorem-level by the compact \textup{098} package;
+\item therefore the true remaining front-end work is only a finite shape
+      theorem plus a finite entry theorem.
+\end{enumerate}
+
+So the clean rewrite target is now precise:
+odd-$m$, $d=5$ should be presented as a one-cornered odometer whose genuinely
+new front-end burden is just the reduction to one normalized one-corner entry,
+not a broad re-proving of the historical \textup{032}/\textup{033} artifact
+chain.
+
+\end{document}

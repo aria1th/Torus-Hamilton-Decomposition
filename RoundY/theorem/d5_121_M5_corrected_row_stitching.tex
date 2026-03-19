@@ -1,0 +1,482 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{microtype}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Sm}{S_m}
+\newcommand{\Um}{U_m^{\sharp}}
+\newcommand{\half}{2^{-1}}
+
+\title{D5 121: Final-section row stitching for M5\\
+The corrected-row model forces one $m^2$-cycle}
+\author{}
+\date{March 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The 120 handoff reduced M5 for the color-$4$ selector surgery to the third
+return
+\[
+U_m=(F_4^{\star})^{m^3}\big|_{P_2}
+\]
+on the $m^2$-state section
+\[
+P_2=\{(a,b,-a,0,-b):a,b\in\Z/m\Z\}.
+\]
+The new 120 corrected-row handoff supplies an explicit symbolic model for that
+return in coordinates
+\[
+(a,v),\qquad v=b+c_m(a),
+\]
+with a sparse defect set of size $4m-7$.
+
+This note proves the missing symbolic step: the corrected-row model itself is a
+single cycle for every odd $m\ge 11$. The proof is purely finite-state and does
+not use any further geometry of the torus map. The key points are:
+\begin{itemize}[leftmargin=2.0em]
+\item the first return of row $a=0$ is the primitive translation
+      $v\mapsto v-2$;
+\item the row-$0$ first-return segments are pairwise disjoint;
+\item the exact return-time distribution sums to $m^2$.
+\end{itemize}
+Therefore the corrected-row model is one $m^2$-cycle.
+
+As a corollary, whenever the actual return $U_m$ agrees with that symbolic
+corrected-row rule, M5 holds for the color-$4$ Sel$^{\star}$ family. So the
+remaining issue is no longer the final stitching theorem; it is only the
+all-odd identification of the true return with the explicit corrected-row
+model.
+\end{abstract}
+
+\section{The explicit corrected-row model}
+
+Fix an odd modulus $m\ge 11$ and let
+\[
+\Sm=(\Z/m\Z)^2.
+\]
+Write states as $(a,v)$ with $a,v\in\Z/m\Z$, and let $z_t:=(0,t)$ denote the
+row-$0$ state with row coordinate $0$ and column coordinate $t$.
+
+We study the explicit model map $\Um:\Sm\to\Sm$ determined by the corrected-row
+handoff. It is the clean bulk row shift
+\[
+(a,v)\mapsto (a+1,v)
+\]
+away from a sparse defect set, with the following exceptions.
+
+\paragraph{Row $0$.}
+\begin{align*}
+&(0,m-8)\mapsto (0,m-10),\qquad (0,m-1)\mapsto (0,m-3),\\
+&(0,v)\mapsto (1,2v+6)\qquad\text{for all other }v.
+\end{align*}
+
+\paragraph{Rows $1\le a\le 6$.}
+\begin{align*}
+&(1,4)\mapsto (7,2),\\
+&(a,2a+2)\mapsto (a,2a),\\
+&(a,2a-10)\mapsto (a,2a-12),\\
+&(a,v)\mapsto (a+1,v)\qquad\text{otherwise.}
+\end{align*}
+
+\paragraph{Row $7$.}
+\[
+(7,16)\mapsto (7,14),
+\qquad
+(7,v)\mapsto (8,v)\text{ otherwise.}
+\]
+
+\paragraph{Row $8$.}
+\begin{align*}
+&(8,4)\mapsto (0,m-2),\\
+&(8,18)\mapsto (8,16),\\
+&(8,v)\mapsto (9,v)\qquad\text{otherwise.}
+\end{align*}
+(For $m=11,13,15,\dots$, the displayed values are always interpreted modulo
+$m$.)
+
+\paragraph{Rows $9\le a\le m-2$.}
+\begin{align*}
+&(a,2a+2)\mapsto (a,2a),\\
+&(a,2a-12)\mapsto (a,2a-14),\\
+&(a,v)\mapsto (a+1,v)\qquad\text{otherwise.}
+\end{align*}
+
+\paragraph{Row $m-1$.}
+\begin{align*}
+&(m-1,0)\mapsto (m-1,m-2),\\
+&(m-1,m-14)\mapsto (m-1,m-16),\\
+&(m-1,4)\mapsto (1,4),\\
+&(m-1,2)\mapsto (0,m-1),
+\end{align*}
+and for all remaining row-$(m-1)$ states,
+\[
+(m-1,r)\mapsto
+\begin{cases}
+(0,(r+m-6)/2), & r\text{ odd},\\
+(0,r/2-3), & r\text{ even}.
+\end{cases}
+\]
+
+\begin{remark}
+The exact corrected-row handoff also rewrites this as the clean bulk shift plus
+five defect pieces:
+\[
+D_0,\quad D_{m-1},\quad L_A,\quad L_B^-,\quad L_B^+,
+\]
+with total size $4m-7$. The proof below only uses the row-wise form above.
+\end{remark}
+
+\section{A uniform form of the row-$(m-1)$ output}
+
+\begin{lemma}\label{lem:last-row-unified}
+For every odd $m$ and every residue
+\[
+r\notin\{0,m-14,2,4\},
+\]
+the row-$(m-1)$ rule can be written uniformly as
+\[
+(m-1,r)\mapsto \bigl(0,\half(r-6)\bigr)
+\qquad\text{in }\Z/m\Z,
+\]
+where $\half=2^{-1}$ denotes the inverse of $2$ modulo $m$.
+\end{lemma}
+
+\begin{proof}
+In the even branch the displayed value is
+\[
+r/2-3 = \half(r-6).
+\]
+In the odd branch the displayed value is the integer representative
+\[
+(r+m-6)/2,
+\]
+which also solves
+\[
+2v\equiv r-6\pmod m.
+\]
+Since $2$ is a unit modulo odd $m$, that solution is unique and equals
+$\half(r-6)$ in $\Z/m\Z$.
+\end{proof}
+
+\section{The first return to row $0$}
+
+Let
+\[
+Z_0:=\{z_t=(0,t):t\in\Z/m\Z\}
+\subset \Sm
+\]
+be the row-$0$ section. For each $t\in\Z/m\Z$ define $\tau(t)$ to be the first
+return time of $z_t$ to $Z_0$, and let
+\[
+\mathcal R(z_t):=(\Um)^{\tau(t)}(z_t)
+\in Z_0
+\]
+be the first-return map.
+
+\begin{proposition}[explicit first return]\label{prop:first-return}
+For every odd $m\ge 11$ and every $t\in\Z/m\Z$,
+\[
+\mathcal R(z_t)=z_{t-2}.
+\]
+More precisely,
+\[
+\tau(t)=
+\begin{cases}
+1, & t\in\{m-8,m-1\},\\
+10, & t=0,\\
+2m-4, & t=1,\\
+m+2, & \text{otherwise.}
+\end{cases}
+\]
+\end{proposition}
+
+\begin{proof}
+We treat seven cases.
+
+\smallskip
+\noindent\textbf{Case 1: $t=m-8$ or $t=m-1$.}
+By the row-$0$ rule,
+\[
+z_{m-8}\mapsto z_{m-10},
+\qquad
+z_{m-1}\mapsto z_{m-3}.
+\]
+So in either case $\tau(t)=1$ and $\mathcal R(z_t)=z_{t-2}$.
+
+\smallskip
+\noindent\textbf{Case 2: $t=0$.}
+The orbit begins
+\[
+z_0\mapsto (1,6).
+\]
+No defect occurs before row $2$, where line $A$ is met:
+\[
+(2,6)\mapsto (2,4).
+\]
+After that all intermediate steps are bulk until row $8$, where the special row
+$8$ rule applies:
+\[
+(8,4)\mapsto z_{m-2}.
+\]
+Thus $\tau(0)=10$ and $\mathcal R(z_0)=z_{m-2}=z_{0-2}$.
+
+\smallskip
+\noindent\textbf{Case 3: $t=1$.}
+The orbit begins
+\[
+z_1\mapsto (1,8).
+\]
+The first defect is line $A$ at row $3$:
+\[
+(3,8)\mapsto (3,6).
+\]
+Then all steps are bulk until row $9$, where line $B^+$ occurs:
+\[
+(9,6)\mapsto (9,4).
+\]
+Then all steps are bulk until row $m-1$, where the special value $4$ sends the
+orbit to row $1$:
+\[
+(m-1,4)\mapsto (1,4)\mapsto (7,2).
+\]
+From $(7,2)$ all steps are bulk until row $m-1$, where the special value $2$
+returns to row $0$:
+\[
+(m-1,2)\mapsto z_{m-1}.
+\]
+Therefore $\tau(1)=2m-4$ and $\mathcal R(z_1)=z_{m-1}=z_{1-2}$.
+
+\smallskip
+\noindent\textbf{Case 4: $2\le t\le m-10$.}
+The orbit starts at
+\[
+z_t\mapsto (1,\overline{2t+6}).
+\]
+Here $\overline{\cdot}$ denotes reduction modulo $m$.
+
+The first defect is line $A$ at row $t+2$, because
+\[
+\overline{2t+6}=2(t+2)+2,
+\]
+and no earlier row can satisfy the same line equation. Thus
+\[
+(t+2,\overline{2t+6})\mapsto (t+2,\overline{2t+4}).
+\]
+Since $t+8\le m-2$, the next defect is line $B^+$ at row $t+8$, because
+\[
+\overline{2t+4}=2(t+8)-12,
+\]
+while all intervening rows are bulk. Hence
+\[
+(t+8,\overline{2t+4})\mapsto (t+8,\overline{2t+2}).
+\]
+After that, all remaining steps to row $m-1$ are bulk, so the orbit reaches
+\[
+(m-1,\overline{2t+2}).
+\]
+This residue is not one of the four special row-$(m-1)$ values
+$0,m-14,2,4$, so Lemma~\ref{lem:last-row-unified} gives
+\[
+(m-1,\overline{2t+2})\mapsto z_{\half(2t+2-6)} = z_{t-2}.
+\]
+The step count is
+\[
+1+(t+1)+1+6+1+(m-t-9)+1 = m+2.
+\]
+Thus $\tau(t)=m+2$ and $\mathcal R(z_t)=z_{t-2}$.
+
+\smallskip
+\noindent\textbf{Case 5: $t=m-9$.}
+Now
+\[
+z_{m-9}\mapsto (1,m-12).
+\]
+The first defect is line $A$ at row $m-7$:
+\[
+(m-7,m-12)\mapsto (m-7,m-14).
+\]
+All later steps to row $m-1$ are bulk, so the orbit arrives at
+\[
+(m-1,m-14)
+\]
+and then follows the special row-$(m-1)$ move
+\[
+(m-1,m-14)\mapsto (m-1,m-16).
+\]
+Applying Lemma~\ref{lem:last-row-unified} to the new residue $m-16$ gives
+\[
+(m-1,m-16)\mapsto z_{\half(m-22)} = z_{m-11}=z_{(m-9)-2}.
+\]
+The step count is
+\[
+1+(m-8)+1+6+1+1 = m+2.
+\]
+So again $\tau(t)=m+2$ and $\mathcal R(z_t)=z_{t-2}$.
+
+\smallskip
+\noindent\textbf{Case 6: $m-7\le t\le m-3$.}
+The orbit starts at
+\[
+z_t\mapsto (1,\overline{2t+6}).
+\]
+Since $t\ge m-7$, the first defect is the early $B$-line at row $t+8-m\in\{1,
+2,3,4,5\}$:
+\[
+(t+8-m,\overline{2t+6})\mapsto (t+8-m,\overline{2t+4}).
+\]
+After that, the next defect is line $A$ at row $t+1$:
+\[
+(t+1,\overline{2t+4})\mapsto (t+1,\overline{2t+2}).
+\]
+All later steps to row $m-1$ are bulk, so the orbit reaches
+\[
+(m-1,\overline{2t+2}).
+\]
+This is not one of the four special row-$(m-1)$ residues, hence by
+Lemma~\ref{lem:last-row-unified}
+\[
+(m-1,\overline{2t+2})\mapsto z_{\half(2t+2-6)} = z_{t-2}.
+\]
+The step count is
+\[
+1+(t+7-m)+1+(m-7)+1+(m-t-2)+1 = m+2.
+\]
+Therefore $\tau(t)=m+2$ and $\mathcal R(z_t)=z_{t-2}$.
+
+\smallskip
+\noindent\textbf{Case 7: $t=m-2$.}
+The orbit begins
+\[
+z_{m-2}\mapsto (1,2).
+\]
+The first defect is the early $B$-line at row $6$:
+\[
+(6,2)\mapsto (6,0).
+\]
+All later steps to row $m-1$ are bulk, so the orbit reaches $(m-1,0)$ and then
+follows the special row-$(m-1)$ move
+\[
+(m-1,0)\mapsto (m-1,m-2).
+\]
+Applying Lemma~\ref{lem:last-row-unified} to the residue $m-2$ gives
+\[
+(m-1,m-2)\mapsto z_{\half(m-8)} = z_{m-4}=z_{(m-2)-2}.
+\]
+The step count is
+\[
+1+5+1+(m-7)+1+1 = m+2.
+\]
+So $\tau(m-2)=m+2$ and $\mathcal R(z_{m-2})=z_{m-4}$.
+
+These seven cases exhaust all residues $t\in\Z/m\Z$.
+\end{proof}
+
+\section{Disjoint first-return segments}
+
+For each $t\in\Z/m\Z$, define the first-return segment
+\[
+S_t:=\{(\Um)^j(z_t):0\le j<\tau(t)\}.
+\]
+Thus $S_t$ contains the starting row-$0$ state $z_t$, contains no other
+row-$0$ states, and ends just before the next row-$0$ hit
+$\mathcal R(z_t)=z_{t-2}$.
+
+\begin{lemma}\label{lem:segments-disjoint}
+The family $(S_t)_{t\in\Z/m\Z}$ is pairwise disjoint.
+\end{lemma}
+
+\begin{proof}
+Suppose $x\in S_t\cap S_u$.
+
+If $x\in Z_0$, then by construction $x$ must be the initial row-$0$ point of
+both segments. Hence $x=z_t=z_u$, so $t=u$.
+
+Now assume $x\notin Z_0$. From $x$, the future orbit until the next hit of
+$Z_0$ is uniquely determined. Since $x\in S_t$, that next row-$0$ hit is
+$\mathcal R(z_t)=z_{t-2}$. Since $x\in S_u$, the same next row-$0$ hit is also
+$\mathcal R(z_u)=z_{u-2}$. Therefore $z_{t-2}=z_{u-2}$, hence $t=u$.
+
+So $S_t\cap S_u\ne\varnothing$ implies $t=u$.
+\end{proof}
+
+\section{The corrected-row model is one cycle}
+
+\begin{theorem}[row stitching theorem]\label{thm:model-one-cycle}
+For every odd $m\ge 11$, the corrected-row model $\Um$ is one cycle on the full
+$m^2$-state set $\Sm$.
+\end{theorem}
+
+\begin{proof}
+By Proposition~\ref{prop:first-return}, the first-return map on row $0$ is the
+translation
+\[
+\mathcal R(z_t)=z_{t-2}.
+\]
+Since $-2$ is a unit modulo odd $m$, $\mathcal R$ is one $m$-cycle on the row
+$0$ section $Z_0$.
+
+Now compute the total length of the first-return segments. There are exactly two
+residues with return time $1$, namely $m-8$ and $m-1$; one residue with return
+time $10$, namely $0$; one residue with return time $2m-4$, namely $1$; and the
+remaining $m-4$ residues have return time $m+2$. Therefore
+\[
+\sum_{t\in\Z/m\Z}\lvert S_t\rvert
+=2\cdot 1 + 10 + (2m-4) + (m-4)(m+2) = m^2.
+\]
+By Lemma~\ref{lem:segments-disjoint}, the segments $S_t$ are pairwise disjoint.
+Their union therefore has cardinality $m^2$, which is the full size of $\Sm$.
+
+Finally, because the row-$0$ return is the single cycle
+\[
+z_0\to z_{-2}\to z_{-4}\to\cdots\to z_{-2(m-1)}\to z_0,
+\]
+concatenating the segments in that order produces one closed orbit of length
+$m^2$. Since that orbit already covers all of $\Sm$, the map $\Um$ is a single
+$m^2$-cycle.
+\end{proof}
+
+\section{Consequence for the actual M5 target}
+
+Let $U_m=(F_4^{\star})^{m^3}|_{P_2}$ be the actual third return from the 120
+M5 setup, and let $v=b+c_m(a)$ be the corrected-row coordinate from the 120
+handoff.
+
+\begin{corollary}[conditional M5 closure from the corrected-row model]
+Assume that, for a given odd $m\ge 11$, the actual return $U_m$ agrees in the
+corrected-row coordinates $(a,v)$ with the symbolic model $\Um$ from
+Section~1. Then $U_m$ is one cycle on $P_2$.
+
+Consequently, by the 120 nested-return theorem, the color-$4$ torus map
+$F_4^{\star}$ is Hamilton.
+\end{corollary}
+
+\begin{proof}
+Under the stated hypothesis, the corrected-row coordinate change identifies the
+actual return $U_m$ with the explicit model $\Um$. By
+Theorem~\ref{thm:model-one-cycle}, that model is one cycle. So $U_m$ is one
+cycle on $P_2$. The final statement is exactly the reduction theorem proved in
+120.
+\end{proof}
+
+\begin{remark}
+This note proves the final stitching theorem once the corrected-row model is in
+hand. So the remaining all-odd issue for full M5 is no longer the final section
+cycle structure. It is only the all-odd derivation of the exact corrected-row
+rule for the true return $U_m$.
+\end{remark}
+
+\end{document}

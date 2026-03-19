@@ -1,0 +1,480 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{booktabs}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue
+}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\one}[1]{\mathbf 1_{\{#1\}}}
+
+\title{A compact cleanup of the remaining 033/062 structural block}
+\author{}
+\date{March 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note handles the last localized structural block that still sat outside the
+cleaned odd-$m$ D5 package after 092 and the reproof notes 095--097.
+It does \emph{not} address the separate compact-bridge task around 076.
+
+It treats 033 and 062 asymmetrically.
+It rewrites 062 as one compact first-exit theorem with the pre-exit
+patch-avoidance argument spelled out.
+For 033, it compresses the needed content to the single exact trigger-family
+lemma
+\[
+H_{L1}=\{(q,w,u,\Theta)=(m-1,m-1,u,2):u\neq 2\}.
+\]
+The note does \emph{not} attempt to rederive the full defect-template quotient
+behind 033 from scratch.
+Instead it isolates the exact theorem content needed later and records its
+pilot-range artifact verification.
+
+So 098 removes 062 as a separate support theorem and localizes the remaining
+033 content to one exact trigger-family lemma inside the package.
+\end{abstract}
+
+\section{Scope and status}
+
+Fix an odd modulus $m$ in the accepted D5 regime and the best-seed channel
+\[
+R1 \to H_{L1}
+\]
+with source seed
+\[
+L=[2,2,1], \qquad R=[1,4,4].
+\]
+We use the current coordinates
+\[
+(q,w,u,\Theta)
+\]
+along the active branch after the alternate-$2$ entry out of $R1$.
+
+The exact downstream use of the old 033/062 block is narrow:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.5em]
+\item identify the exact trigger family $H_{L1}$;
+\item derive the universal family-dependent first-exit targets;
+\item prove that the actual active branch agrees with the candidate branch up
+      to first exit.
+\end{enumerate}
+
+The point of the present note is that only item~(1) still belongs to the
+broader defect-template classification. The rest can be proved cleanly inside
+one short structural theorem. The separate compact-bridge task around 076 is
+not addressed here.
+
+\begin{remark}[honest dependency boundary]
+A genuine first-principles reproof of the full 033 defect-family quotient would
+be a larger project than the odd-$m$ D5 globalization package itself needs.
+What the package uses is only the exact $H_{L1}$ trigger formula. This note
+therefore rewrites 033 to that single lemma and fully rewrites 062.
+\end{remark}
+
+\section{The only 033 theorem content needed downstream}
+
+\begin{proposition}[exact trigger family]\label{prop:trigger-family}
+For the unresolved best-seed channel $R1\to H_{L1}$, the target hole family is
+exactly
+\[
+H_{L1}=\{(q,w,u,\Theta)=(m-1,m-1,u,2):u\neq 2\}.
+\]
+Equivalently:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.5em]
+\item the target layer is $\Theta=2$;
+\item the target current coordinates satisfy $q=w=m-1$;
+\item the only excluded fiber is $u=2$.
+\end{enumerate}
+\end{proposition}
+
+\begin{remark}[proof status]
+Proposition~\ref{prop:trigger-family} is the promoted theorem content of 033.
+This note does not rebuild the full defect-template classification from the raw
+artifact; it isolates the exact formula that later theorems use.
+\end{remark}
+
+\begin{proposition}[pilot-range exact verification of the trigger formula]
+The artifact file
+\path{artifacts/d5_defect_splice_transducer_033/data/best_seed_defect_templates.json}
+verifies the exact $H_{L1}$ signature on the saved pilot moduli $m=5,7,9$:
+\begin{center}
+\begin{tabular}{cccc}
+\toprule
+$m$ & target count & parameter values & representative $(q,w,u,\Theta)$ \\
+\midrule
+$5$ & $20=5\cdot 4$ & $\{0,1,3,4\}=\Z_5\setminus\{2\}$ & $(4,4,4,2)$ \\
+$7$ & $42=7\cdot 6$ & $\{0,1,3,4,5,6\}=\Z_7\setminus\{2\}$ & $(6,6,4,2)$ \\
+$9$ & $72=9\cdot 8$ & $\{0,1,3,4,5,6,7,8\}=\Z_9\setminus\{2\}$ & $(8,8,4,2)$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+So the saved defect-family artifact matches exactly the formula in
+Proposition~\ref{prop:trigger-family} on the pilot range.
+\end{proposition}
+
+\begin{proof}
+This is a direct readout from the saved JSON. For each of $m=5,7,9$, the
+artifact records:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.5em]
+\item target count $m(m-1)$,
+\item parameter values $\Z_m\setminus\{2\}$,
+\item representative coordinates $(q,w,\Theta)=(m-1,m-1,2)$.
+\end{enumerate}
+That is exactly the finite-range signature of
+\[
+H_{L1}=\{(m-1,m-1,u,2):u\neq 2\}.
+\]
+This is an exact verification on the saved pilot range, not a replacement for a
+full general proof of the defect-template classification.
+\end{proof}
+
+\section{Candidate orbit and phase-$1$ invariant}
+
+\begin{definition}[source residue and candidate orbit]
+Let
+\[
+\rho:=u_{\mathrm{source}}+1 \pmod m,
+\]
+where $u_{\mathrm{source}}$ is the source-$u$ label of the chosen $R1$ family.
+Start at the alternate-$2$ entry
+\[
+E=(m-1,1,u_{\mathrm{source}},2).
+\]
+Define the candidate orbit $\widehat x_n=(q_n,w_n,u_n,\Theta_n)$ by
+\[
+\widehat F(q,w,u,0)=(q+1,w,u,1),
+\]
+\[
+\widehat F(q,w,u,1)=(q,w,u+1,2),
+\]
+\[
+\widehat F(q,w,u,2)=\bigl(q,w+\one{q=m-1},u,3\bigr),
+\]
+\[
+\widehat F(q,w,u,\Theta)=(q,w,u,\Theta+1)
+\qquad (3\le \Theta\le m-1).
+\]
+\end{definition}
+
+On the section
+\[
+\Sigma:=\{\Theta=2\},
+\]
+this candidate orbit induces the odometer return map
+\[
+(q,w)\mapsto(q+1,\;w+\one{q=m-1}).
+\]
+Equivalently, with
+\[
+\eta(q,w):=q+m(w-1)-(m-1)\in\{0,\dots,m^2-1\},
+\]
+one has $\eta\mapsto \eta+1$.
+
+The only two phase-$1$ states whose direction-$2$ or direction-$1$ successor can
+reach $(q,w)=(m-1,m-1)$ are
+\[
+A:=(m-1,m-2,1),
+\qquad
+B:=(m-2,m-1,1).
+\]
+Their odometer indices are
+\[
+\eta(A)=m(m-3),
+\qquad
+\eta(B)=m(m-2)-1.
+\]
+So $A$ is encountered before $B$.
+
+\begin{lemma}[phase-$1$ source-residue invariant]\label{lem:phase1-rho}
+Along the candidate orbit, every phase-$1$ current state satisfies
+\[
+q\equiv u-\rho+1 \pmod m.
+\]
+In particular,
+\[
+u(A)\equiv \rho-2 \pmod m,
+\qquad
+u(B)\equiv \rho-3 \pmod m,
+\]
+where $u(A)$ and $u(B)$ denote the $u$-coordinates at those states.
+\end{lemma}
+
+\begin{proof}
+The first phase-$1$ state after entry is reached from
+\[
+(m-1,1,u_{\mathrm{source}},2)\to(m-1,2,u_{\mathrm{source}},3)
+\to\cdots\to(m-1,2,u_{\mathrm{source}},0)\to(0,2,u_{\mathrm{source}},1).
+\]
+There one has
+\[
+q=0,
+\qquad
+u=u_{\mathrm{source}}=\rho-1,
+\]
+so the claimed congruence holds.
+
+From one phase-$1$ state to the next, the phase-$1$ witness step increments
+$u$ by $1$, the later phase-$0$ witness step increments $q$ by $1$, and no
+other step changes either coordinate. Hence both sides of
+\[
+q\equiv u-\rho+1 \pmod m
+\]
+increase by $1$, so the congruence is preserved.
+Substituting $q(A)=m-1$ and $q(B)=m-2$ gives the formulas for $u(A)$ and
+$u(B)$.
+\end{proof}
+
+\begin{lemma}[phase-$1$ trigger criterion]\label{lem:trigger-criterion}
+Let $x$ be a phase-$1$ current state on the candidate orbit.
+An alternate step from $x$ lands in $H_{L1}$ if and only if one of the
+following holds:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.5em]
+\item $x=A=(m-1,m-2,1)$ and $u(x)\neq 2$, in which case direction $2$ lands in
+      $H_{L1}$;
+\item $x=B=(m-2,m-1,1)$ and $u(x)\neq 2$, in which case direction $1$ lands in
+      $H_{L1}$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+By Proposition~\ref{prop:trigger-family}, the successor must satisfy
+\[
+(q',w',\Theta')=(m-1,m-1,2),
+\qquad
+u'\neq 2.
+\]
+Only phase-$1$ states can step to layer $2$, and only directions $1$ and $2$
+change $q$ or $w$.
+So the only two ways to reach $(q',w')=(m-1,m-1)$ are:
+\begin{itemize}[leftmargin=2em]
+\item direction $2$ from $(q,w)=(m-1,m-2)$,
+\item direction $1$ from $(q,w)=(m-2,m-1)$.
+\end{itemize}
+Those are exactly $A$ and $B$.
+Directions $1$ and $2$ preserve $u$, so the extra condition is simply
+$u\neq 2$.
+\end{proof}
+
+\section{Universal first exits and pre-exit patch avoidance}
+
+\begin{proposition}[candidate first exits]\label{prop:candidate-first-exits}
+On the candidate orbit:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.5em]
+\item if $\rho\neq 4$ (regular family), the first exit to $H_{L1}$ occurs at
+      $A=(m-1,m-2,1)$ by direction $2$;
+\item if $\rho=4$ (exceptional family), the state $A$ does not exit and the
+      first exit to $H_{L1}$ occurs at $B=(m-2,m-1,1)$ by direction $1$.
+\end{enumerate}
+Equivalently,
+\[
+T_{\mathrm{reg}}=(m-1,m-2,1),
+\qquad
+T_{\mathrm{exc}}=(m-2,m-1,1).
+\]
+\end{proposition}
+
+\begin{proof}
+By Lemma~\ref{lem:trigger-criterion}, only the two phase-$1$ states $A$ and $B$
+can possibly trigger an exit to $H_{L1}$.
+Because $\eta(A)<\eta(B)$, state $A$ is always encountered first.
+
+At $A$, Lemma~\ref{lem:phase1-rho} gives
+\[
+ u(A)\equiv \rho-2 \pmod m.
+\]
+So $u(A)=2$ if and only if $\rho=4$.
+Hence:
+\begin{itemize}[leftmargin=2em]
+\item if $\rho\neq 4$, then $u(A)\neq 2$, so Lemma~\ref{lem:trigger-criterion}
+      gives an exit at $A$ by direction $2$, and because $A$ is encountered
+      first, this is the first exit;
+\item if $\rho=4$, then $u(A)=2$, so $A$ does not exit.
+\end{itemize}
+
+Now suppose $\rho=4$.
+Then Lemma~\ref{lem:phase1-rho} gives
+\[
+ u(B)\equiv \rho-3\equiv 1 \pmod m,
+\]
+so $u(B)\neq 2$.
+Lemma~\ref{lem:trigger-criterion} therefore gives an exit at $B$ by direction
+$1$.
+Since $A$ was the only earlier possible trigger and is blocked when $\rho=4$,
+this is the first exit.
+\end{proof}
+
+\begin{lemma}[only patch-table facts used]\label{lem:patch-signatures}
+For the pre-exit argument below, we use only the following coarse coordinate
+signatures of the six modified current classes in the mixed witness patch table:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.5em]
+\item the classes $R1,R2,R3,L2$ require $w=0$;
+\item the class $L3$ requires $w=1$;
+\item a pre-exit occurrence of $L1$ would require the branch to have already
+      reached the $w=m-1$ edge of the corridor.
+\end{enumerate}
+No finer information from the patch table is used.
+\end{lemma}
+
+\begin{lemma}[pre-exit patch avoidance on the candidate orbit]\label{lem:patch-avoidance}
+Let $N_f$ be the first-exit time of the candidate orbit in the chosen source
+family $f$.
+For every $0\le n<N_f$, the candidate state $\widehat x_n$ avoids all patched
+current classes.
+\end{lemma}
+
+\begin{proof}
+The value $w$ starts at $1$ and changes only by the increment
+\[
+w\mapsto w+1
+\]
+at phase $2$ with $q=m-1$.
+Hence $w$ never decreases, and $w=0$ never occurs before exit.
+By Lemma~\ref{lem:patch-signatures}(1), the classes $R1,R2,R3,L2$ are therefore
+impossible.
+
+The value $w=1$ occurs only at the entry state $(m-1,1,u_{\mathrm{source}},2)$,
+because the first phase-$2$ wrap immediately creates $w=2$ and thereafter $w$
+never decreases.
+So by Lemma~\ref{lem:patch-signatures}(2), the class $L3$ cannot occur after
+entry.
+Since the entry state itself is the alt-$2$ start state rather than a patched
+class, $L3$ is absent on the whole pre-exit segment.
+
+On a regular family, Proposition~\ref{prop:candidate-first-exits} says the
+branch exits already at $A=(m-1,m-2,1)$, before $w$ can ever reach $m-1$.
+So $L1$ is impossible there.
+
+On the exceptional family, the first creation of $w=m-1$ occurs at phase $3$
+from the state $(m-1,m-2,2)$.
+The next phase-$1$ state then has $(q,w)=(0,m-1)$, not $(m-1,m-1)$.
+The first later phase-$1$ state with $w=m-1$ that could also carry $q=m-1$
+would occur strictly after $B=(m-2,m-1,1)$, but
+Proposition~\ref{prop:candidate-first-exits} says the branch exits already at
+$B$.
+So $L1$ is impossible before exceptional exit as well.
+
+Thus no patched current class is encountered before first exit.
+\end{proof}
+
+\begin{theorem}[actual first exits and pre-exit $B$-region invariance]
+\label{thm:actual-first-exits}
+For each source family:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.5em]
+\item the actual active branch agrees with the candidate orbit up to first
+      exit;
+\item every pre-exit actual current state is $B$-labeled;
+\item the first exit to $H_{L1}$ occurs at the universal family-dependent
+      target
+      \[
+      T_{\mathrm{reg}}=(m-1,m-2,1)
+      \quad\text{or}\quad
+      T_{\mathrm{exc}}=(m-2,m-1,1),
+      \]
+      with regular families exiting at $T_{\mathrm{reg}}$ by direction $2$ and
+      the exceptional family exiting at $T_{\mathrm{exc}}$ by direction $1$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Fix a source family and let $N_f$ be the candidate first-exit time from
+Proposition~\ref{prop:candidate-first-exits}.
+We prove by induction on $n\le N_f$ that the actual state $x_n$ agrees with the
+candidate state $\widehat x_n$ in the full current coordinates
+$(q,w,u,\Theta)$.
+
+At $n=0$, both states are the same entry state
+\[
+E=(m-1,1,u_{\mathrm{source}},2).
+\]
+By Lemma~\ref{lem:patch-avoidance}, this state is not patched, hence it is
+$B$-labeled.
+
+Now assume $x_n=\widehat x_n$ for some $n<N_f$.
+Lemma~\ref{lem:patch-avoidance} says $\widehat x_n$ is not patched, so the
+actual state $x_n$ is $B$-labeled.
+Therefore its witness update is the unmodified mixed-witness update, which
+induces exactly the candidate step on $(q,w,u,\Theta)$: direction $1$ changes
+only $q$, direction $4$ changes only $u$, direction $2$ changes only $w$, and
+all other anchors leave $(q,w,u)$ fixed while increasing $\Theta$ by $1$.
+Hence
+\[
+(q,w,u,\Theta)(x_{n+1})=(q,w,u,\Theta)(\widehat x_{n+1}).
+\]
+So the actual and candidate branches agree for all $n\le N_f$, and every
+pre-exit actual state is $B$-labeled.
+
+For $n<N_f$, Proposition~\ref{prop:candidate-first-exits} and
+Lemma~\ref{lem:trigger-criterion} say that the candidate state
+$\widehat x_n$ does not exit to $H_{L1}$; because the trigger test depends only
+on the current coordinates $(q,w,u,\Theta)$, the actual state $x_n$ does not
+exit either.
+At time $N_f$, Proposition~\ref{prop:candidate-first-exits} gives an exit from
+$\widehat x_{N_f}$ at the stated universal target and direction, so the actual
+branch exits there as well.
+This proves all three claims.
+\end{proof}
+
+\begin{corollary}[what 098 removes]
+The theorem-level content of 062 is now inlined: no separate 062 support theorem
+is needed for the odd-$m$ D5 package.
+The old 033/062 block now survives inside the package only as the exact
+trigger-family lemma isolated in Proposition~\ref{prop:trigger-family} and the
+broader defect-template provenance behind it.
+\end{corollary}
+
+\section{Exact $m=5$ reference slice}
+
+\begin{proposition}[$m=5$ structural specialization]
+At $m=5$,
+\[
+H_{L1}=\{(4,4,u,2):u\neq 2\},
+\qquad
+T_{\mathrm{reg}}=(4,3,1),
+\qquad
+T_{\mathrm{exc}}=(3,4,1).
+\]
+So the two possible first-exit states are exactly
+\[
+A=(4,3,1),
+\qquad
+B=(3,4,1),
+\]
+and the exceptional family is the source residue class $\rho=4$.
+\end{proposition}
+
+\begin{proof}
+Substitute $m=5$ into Proposition~\ref{prop:trigger-family} and
+Proposition~\ref{prop:candidate-first-exits}.
+\end{proof}
+
+\section{Bottom line}
+
+After 098, the odd-$m$ D5 package no longer needs 062 as a separate imported
+support theorem. Together with 095--097, this leaves the compact concrete
+bridge package around 076 as the main remaining imported theorem layer.
+What survives of the old 033/062 block inside the package is only the exact
+trigger-family lemma now isolated in Proposition~\ref{prop:trigger-family} and
+its broader defect-template provenance. It is no longer a structural or
+dynamical bottleneck for the globalization proof chain.
+
+\end{document}

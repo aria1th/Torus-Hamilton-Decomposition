@@ -1,0 +1,164 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{booktabs}
+
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\Z}{\mathbb Z}
+
+\title{D5 intended quotient identification after 105:\\
+theorem-side quotient versus dynamic bridge}
+\author{}
+\date{March 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note records the right downstream statement of the D5 intended quotient
+question after the odd-$m$ marked-chain descent note `105`.
+
+The main point is negative before it is positive. The theorem-side intended
+quotient should not yet be frozen as literal raw state-space equality with the
+dynamic bridge $(\beta,q_0,\sigma)$ or $(\beta,\delta)$. The correct theorem
+target is still the exact deterministic quotient on the exact marked object
+that retains grouped base.
+
+What the new check `106` does show is sharper and usable: on the regenerated
+carry-jump-to-wrap state-chain object, the theorem-side key $(B,\beta)$
+determines the dynamic bridge state $(\beta,q_0,\sigma)$ exactly, while the
+dynamic bridge forgets source-residue bookkeeping and becomes equivalent to the
+theorem-side key only after adjoining $\rho$.
+\end{abstract}
+
+\section{Executive answer}
+
+The downstream intended quotient should be formulated as:
+\[
+Q_{\mathrm{int}}
+=
+\text{exact deterministic quotient on the exact marked object retaining grouped base.}
+\]
+
+The dynamic bridge
+\[
+Q_{\mathrm{dyn}}=(\beta,q_0,\sigma)\cong(\beta,\delta),\qquad \delta=q_0+m\sigma,
+\]
+is the right checked splice-compatible comparison target, but not yet the
+literal global definition of $Q_{\mathrm{int}}$.
+
+The regenerated comparison check on $m=13,15,17$ shows:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item $(B,\beta)$ determines $(\beta,q_0,\sigma)$ exactly;
+\item $(\beta,q_0,\sigma)$ is exact for current $\epsilon_4$, exact for the
+      short-corner detector, and deterministic on successor;
+\item $(\beta,q_0,\sigma)$ is not globally equal to $(B,\beta)$ because it
+      forgets source-residue bookkeeping;
+\item adjoining $\rho$ repairs that loss exactly:
+      \[
+      (B,\beta)\cong (\rho,\beta,q_0,\sigma)
+      \]
+      on the extracted exact marked chain object;
+\item adjoining only the family bit does not repair the loss.
+\end{enumerate}
+
+So the right statement is not ``the intended quotient is exactly
+$(\beta,\delta)$.'' The right statement is: the intended quotient factors to
+the dynamic bridge, and after adjoining $\rho$ the two parameterizations are
+equivalent on the exact marked object.
+
+\section{Checked comparison package}
+
+\begin{proposition}[checked comparison on regenerated chain objects]
+On the regenerated carry-jump-to-wrap state-chain object for
+\[
+m\in\{13,15,17\},
+\]
+the following hold.
+\begin{enumerate}[label=\textup{(\alph*)},leftmargin=2.5em]
+\item The map
+      \[
+      (B,\beta)\longmapsto (\beta,q_0,\sigma)
+      \]
+      is exact.
+\item The dynamic bridge $(\beta,q_0,\sigma)$ is exact for current
+      $\epsilon_4$, exact for the short-corner detector, and deterministic on
+      nonterminal successor.
+\item Every dynamic bridge bucket is ambiguous as a theorem-side state.
+\item The enriched bridge
+      \[
+      (\rho,\beta,q_0,\sigma)
+      \]
+      determines $(B,\beta)$ exactly.
+\item The weaker enrichment
+      \[
+      (\mathrm{family},\beta,q_0,\sigma)
+      \]
+      does not determine $(B,\beta)$ exactly.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+This is the content of the saved comparison script
+\texttt{torus\_nd\_d5\_intended\_quotient\_compare\_106.py} and its JSON
+outputs in \texttt{RoundY/checks/d5\_106\_intended\_quotient\_compare/}.
+\end{proof}
+
+\begin{remark}
+The ambiguity is systematic, not sporadic. For each checked modulus, the number
+of ambiguous dynamic buckets is exactly $m^3$, and the bucket sizes lie in
+\[
+\{m-5,\ m-4,\ m-3\}.
+\]
+So the dynamic bridge is really missing a whole source-residue bookkeeping
+layer.
+\end{remark}
+
+\section{What theorem should be proved next}
+
+The right theorem program is now short.
+
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item Prove symbolically that on the exact marked object, the descended
+      theorem-side data $(G,\beta)$ determines $(q_0,\sigma)$.
+\item Prove that the only additional bookkeeping forgotten by the dynamic
+      bridge is the source residue $\rho$.
+\item State the comparison theorem in the form
+      \[
+      Q_{\mathrm{int}}\cong (\rho,\beta,q_0,\sigma)
+      \quad\Longrightarrow\quad
+      Q_{\mathrm{int}}\twoheadrightarrow (\beta,q_0,\sigma)\cong(\beta,\delta).
+      \]
+\end{enumerate}
+
+This is the honest closure of full M3. It avoids the overstatement that the
+intended quotient has already been proved to be literally $(\beta,\delta)$ as a
+raw state space, while still capturing the exact checked relation that the
+proof package now supports.
+
+\section{Bottom line}
+
+The two parameterizations are not globally identical as currently stated.
+What is checked, and what now looks theorem-level plausible, is the sharper
+comparison:
+\[
+(B,\beta)\cong(\rho,\beta,q_0,\sigma)
+\quad\text{and hence}\quad
+(B,\beta)\twoheadrightarrow(\beta,q_0,\sigma)\cong(\beta,\delta).
+\]
+
+So the next D5 quotient theorem should be a comparison theorem with $\rho$, not
+a premature identity claim for bare $(\beta,\delta)$.
+
+\end{document}

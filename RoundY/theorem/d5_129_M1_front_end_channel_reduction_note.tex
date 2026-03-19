@@ -1,0 +1,311 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{xcolor}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue
+}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{placeholder}[theorem]{Placeholder}
+
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\HLone}{H_{L1}}
+
+\title{D5 129: the front-end channel reduction package for $M1$}
+\author{}
+\date{March 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note revisits the remaining theorem-side placeholder $M1$ from the
+revised consolidated manuscript.
+The main point is that the old wording ``channel reduction from the full
+odd-$m$, $d=5$ problem to the best-seed channel'' mixed two logically
+separate front-end tasks:
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2.5em]
+\item isolate the best endpoint seed; and
+\item for that seed, prove that the defect-template quotient leaves only one
+      unresolved channel.
+\end{enumerate}
+The second implication is already theorem-level once one accepts the promoted
+best-seed defect package of the existing RoundY front end.
+So inside the current accepted front-end package, $M1$ is closed.
+If one wants a fully first-principles manuscript-order proof, the remaining
+externality is now much smaller than the old placeholder: it is exactly the
+promotion of the front-end seed-isolation and defect-quotient theorems usually
+referred to as \textup{032} and \textup{033}.
+\end{abstract}
+
+\section{The old $M1$ placeholder and its real content}
+
+The revised consolidated manuscript leaves the following theorem-side
+placeholder open:
+\begin{quote}
+prove a channel reduction from the full odd-$m$, $d=5$ problem to the
+best-seed channel
+\[
+R1 \to \HLone.
+\]
+\end{quote}
+
+As stated, this hides two different front-end reductions.
+First one must know which endpoint seed is the correct live seed.
+Only after that does it make sense to ask which defect channels remain inside
+that seed.
+
+The existing RoundY record already separates those roles informally:
+\begin{enumerate}[label=\textup{(F\arabic*)},leftmargin=2.8em]
+\item the front-end seed isolation usually referred to as \textup{032}:
+      the best endpoint seed is
+      \[
+      L=[2,2,1], \qquad R=[1,4,4];
+      \]
+\item the best-seed defect quotient usually referred to as \textup{033}:
+      for that seed, the balanced Latin defect quotients to four overfull
+      families against four hole families, three channels repair directly, and
+      only one unresolved channel remains.
+\end{enumerate}
+
+The purpose of this note is to package this split honestly and to record the
+exact theorem that $M1$ already gets from the current front-end package.
+
+\section{Accepted front-end inputs}
+
+We write the best endpoint seed as
+\[
+L=[2,2,1], \qquad R=[1,4,4].
+\]
+
+\begin{definition}[front-end seed package]
+\label{def:F032}
+The \emph{front-end seed package} is the statement that in the odd-$m$, $d=5$
+endpoint-local problem, after the earlier tiny static repair branches are
+pruned, it is enough to work with the best endpoint seed
+\[
+L=[2,2,1], \qquad R=[1,4,4].
+\]
+We refer to this as the \emph{032 package}.
+\end{definition}
+
+\begin{definition}[best-seed defect package]
+\label{def:F033}
+The \emph{best-seed defect package} is the following theorem bundle for the
+seed $[2,2,1]/[1,4,4]$ at odd modulus $m$.
+\begin{enumerate}[label=\textup{(\alph*)},leftmargin=2.5em]
+\item Per color, the balanced Latin defect quotients to four overfull families
+      and four hole families.
+\item The changed source families are exactly
+      \[
+      L3,\ R1,\ R2,\ R3.
+      \]
+\item The hole families are exactly
+      \[
+      H_{L3},\ \HLone,\ H_{R2},\ H_{R3}.
+      \]
+\item The channels $L3$, $R2$, and $R3$ repair directly.
+\item The only unresolved channel is
+      \[
+      R1 \to \HLone.
+      \]
+\item The target hole family of that unresolved channel is exactly
+      \[
+      \HLone
+      =\{(q,w,u,\Theta)=(m-1,m-1,u,2): u\neq 2\}.
+      \]
+\end{enumerate}
+We refer to this as the \emph{033 package}.
+\end{definition}
+
+\begin{remark}
+Items \textup{(a)}--\textup{(f)} are exactly the front-end statements already
+frozen informally by the existing RoundY artifact and README layer:
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2.5em]
+\item the best endpoint seed is the seed $[2,2,1]/[1,4,4]$;
+\item its balanced Latin defect is $10m^2$ on the pilot range;
+\item per color the defect quotient has four overfull and four hole families;
+\item the direct repairs are $L3$, $R2$, and $R3$;
+\item the unique unresolved channel is $R1\to \HLone$;
+\item the hole family $\HLone$ has the exact formula above.
+\end{enumerate}
+The present note does not attempt a first-principles reconstruction of the
+front-end compute-backed proofs behind those statements; it packages what $M1$
+gets once those front-end statements are accepted.
+\end{remark}
+
+\section{The exact theorem $M1$ needs}
+
+The theorem-side graph manuscript does not need the whole front-end search
+history.
+It only needs the following reduction statement.
+
+\begin{theorem}[channel reduction from the accepted front-end package]
+\label{thm:M1-from-front-end}
+Assume the front-end seed package \textup{032}
+(Definition~\ref{def:F032}) and the best-seed defect package \textup{033}
+(Definition~\ref{def:F033}).
+Then every odd-$m$, $d=5$ instance is either already closed by an earlier
+front-end repair branch or reduces to the best-seed channel
+\[
+R1 \to \HLone.
+\]
+Moreover the target hole family of that channel is exactly
+\[
+\HLone
+=\{(q,w,u,\Theta)=(m-1,m-1,u,2): u\neq 2\}.
+\]
+\end{theorem}
+
+\begin{proof}
+By the front-end seed package \textup{032}, the full odd-$m$, $d=5$
+endpoint-local front end reduces to the single seed $[2,2,1]/[1,4,4]$.
+Inside that seed, the best-seed defect package \textup{033} says that the
+changed source families are exactly
+\[
+L3,\ R1,\ R2,\ R3,
+\]
+that the channels $L3$, $R2$, and $R3$ repair directly, and that the only
+unresolved channel is
+\[
+R1 \to \HLone.
+\]
+So after the earlier front-end repair branches and the direct repairs are
+removed, the unique remaining branch is the best-seed channel
+$R1\to \HLone$.
+The exact formula for the target hole family is part of the same
+\textup{033} package, so the reduction carries that formula as well.
+\end{proof}
+
+\begin{corollary}[the theorem-side content of $M1$]
+\label{cor:M1-closed-in-accepted-front-end-package}
+Inside the current accepted front-end package, $M1$ is closed.
+Equivalently, the graph-theoretic route may now begin with the best-seed
+channel
+\[
+R1 \to \HLone
+\]
+as a theorem-level starting point, provided the manuscript states explicitly
+that it is invoking the accepted front-end packages \textup{032} and
+\textup{033}.
+\end{corollary}
+
+\begin{proof}
+This is exactly Theorem~\ref{thm:M1-from-front-end}.
+\end{proof}
+
+\section{What is still external if one wants a fully independent manuscript}
+
+The previous theorem closes $M1$ only after one accepts the front-end packages
+\textup{032} and \textup{033} as theorem-level inputs.
+So the old single $M1$ placeholder can now be replaced by a much sharper pair
+of front-end placeholders.
+
+\begin{placeholder}[front-end seed isolation]
+\label{ph:032}
+Promote the best-endpoint-seed statement usually referred to as
+\textup{032} into a manuscript-order theorem with explicit odd-$m$ quantifier:
+prove that, after the earlier tiny static repair branches are pruned, the
+odd-$m$, $d=5$ endpoint-local front end reduces to the seed
+$[2,2,1]/[1,4,4]$.
+\end{placeholder}
+
+\begin{placeholder}[best-seed defect quotient]
+\label{ph:033}
+Promote the best-seed defect statement usually referred to as \textup{033} into
+one manuscript-order theorem with explicit odd-$m$ quantifier:
+prove that for the seed $[2,2,1]/[1,4,4]$, the defect quotient has exactly
+four changed source families and four hole families, that $L3$, $R2$, and $R3$
+repair directly, and that the unique unresolved channel is
+$R1\to \HLone$ with
+\[
+\HLone=
+\{(q,w,u,\Theta)=(m-1,m-1,u,2): u\neq 2\}.
+\]
+\end{placeholder}
+
+\begin{theorem}[the remaining first-principles content of $M1$]
+\label{thm:M1-equals-two-front-end-promotions}
+For a fully first-principles manuscript-order proof, the old $M1$ placeholder
+is equivalent to the conjunction of Placeholders~\ref{ph:032}
+and~\ref{ph:033}.
+No additional downstream channel-reduction argument remains once those two
+front-end promotions are supplied.
+\end{theorem}
+
+\begin{proof}
+If Placeholders~\ref{ph:032} and~\ref{ph:033} are proved, then
+Theorem~\ref{thm:M1-from-front-end} applies and yields the desired channel
+reduction.
+Conversely, any first-principles proof of the old $M1$ statement must identify
+which front-end seed is the live seed and must show that, within that seed, all
+channels other than $R1\to \HLone$ are already closed. Those are exactly the
+contents of Placeholders~\ref{ph:032} and~\ref{ph:033}.
+\end{proof}
+
+\section{Pilot verification already frozen by the saved defect tables}
+
+Although the present note does not rebuild the front-end defect quotient from
+scratch, the saved pilot tables still matter because they show that the exact
+front-end statement being packaged here is not vague.
+For the pilot moduli saved in the existing defect-template bundle, the defect
+summary records exactly the following theorem-shaped content.
+
+\begin{center}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+$m$ & direct repairs & unresolved channel & shortest unary lower bound \\
+\midrule
+$5$ & $L3,R2,R3$ & $R1\to \HLone$ & $50$ \\
+$7$ & $L3,R2,R3$ & $R1\to \HLone$ & $196$ \\
+$9$ & $L3,R2,R3$ & $R1\to \HLone$ & $486$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The value of this pilot table is not that it proves the odd-$m$ theorem by
+itself. The value is that it fixes the exact front-end statement that must be
+promoted: the target is not an exploratory search claim anymore, but the
+specific channel theorem isolated above.
+
+\section{Bottom line}
+
+The old $M1$ placeholder is now much sharper.
+
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.5em]
+\item Inside the current accepted front-end package, $M1$ is already closed.
+\item The actual theorem proved here is the explicit reduction
+      Theorem~\ref{thm:M1-from-front-end}.
+\item If one still wants a completely first-principles manuscript-order proof,
+      the remaining front-end externality is no longer a vague
+      ``channel-classification theorem'' but exactly the pair of front-end
+      promotions \textup{032} and \textup{033}.
+\end{enumerate}
+
+So after this note, the manuscript should no longer keep one large
+undifferentiated $M1$ placeholder.
+It should either:
+\begin{enumerate}[label=\textup{(\alph*)},leftmargin=2.5em]
+\item accept the current front-end packages and mark $M1$ closed; or
+\item replace the old $M1$ placeholder by the two explicit front-end
+      placeholders above.
+\end{enumerate}
+
+\end{document}

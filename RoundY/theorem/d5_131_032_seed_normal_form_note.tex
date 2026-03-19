@@ -1,0 +1,223 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{xcolor}
+
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{placeholder}[theorem]{Placeholder}
+
+\title{D5 131: what can be proved now about the front-end seed statement \textup{032}}
+\author{}
+\date{March 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note revisits the front-end seed-isolation statement usually called
+\textup{032}.
+The current accessible bundle still does not contain the original endpoint-word
+catalog from the old front-end artifact, so a completely first-principles proof
+of seed isolation is not yet available from the present files alone.
+What can be proved cleanly now is the following.
+Once the live seed class has been reduced to a single \emph{oriented
+bridge-type endpoint-word class}---one repeated neighbor on the left, one
+shared bridge symbol, and one repeated neighbor on the right---the numerical
+representative
+\[
+L=[2,2,1],\qquad R=[1,4,4]
+\]
+is forced by the standard front-end normalizations.
+So the real remaining burden behind \textup{032} is not a new odd-$m$ argument;
+it is the upstream finite endpoint-word classification that the live local seed
+class has exactly that bridge form.
+\end{abstract}
+
+\section{Scope}
+
+In the revised manuscript, the front-end input \textup{032} is the statement
+that, after the earlier tiny static repair branches are removed, the odd-$m$,
+$d=5$ endpoint-local front end reduces to the seed
+\[
+L=[2,2,1],\qquad R=[1,4,4].
+\]
+
+The present note does \emph{not} claim a full first-principles derivation of
+that statement from the raw endpoint-search artifacts.
+Those specific artifact files are not present in the current accessible bundle.
+Instead, the note isolates what can already be proved symbolically: the
+numerical form $[2,2,1]/[1,4,4]$ is only a \emph{normal form}.
+The actual mathematical content that still needs promotion upstream is the much
+smaller claim that the live endpoint seed class is a single oriented
+bridge-type class.
+
+\section{Abstract seed normal form}
+
+We work only with the direction alphabet
+\[
+\mathcal D=\{1,2,3,4\},
+\]
+viewed with its cyclic order
+\[
+1\to 2\to 3\to 4\to 1.
+\]
+The accepted front-end symmetries allow cyclic relabeling of the direction
+alphabet together with the usual left/right orientation normalization.
+
+\begin{definition}[oriented bridge-type endpoint seed]
+An \emph{oriented bridge-type endpoint seed} is a pair of length-$3$ words
+\[
+L=[\ell,\ell,b],\qquad R=[b,r,r]
+\]
+in the direction alphabet $\mathcal D$ such that:
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2.5em]
+\item $b$ is the shared bridge symbol between the left and right endpoint
+      words;
+\item $\ell$ is the distinguished repeated neighbor on the left side of the
+      bridge;
+\item $r$ is the distinguished repeated neighbor on the right side of the
+      bridge;
+\item after the standard orientation convention is fixed, $\ell$ is the
+      clockwise neighbor of $b$ and $r$ is the counterclockwise neighbor of
+      $b$.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}
+This definition is intentionally abstract.
+It captures exactly the part of the old front-end seed search that matters for
+manuscript packaging: once the live local seed class is known to have one
+shared bridge symbol and one repeated oriented neighbor on each side, the
+actual digits used to write that class are not additional theorem content.
+They are fixed by normalization.
+\end{remark}
+
+\begin{proposition}[normal-form lemma]
+\label{prop:seed-normal-form}
+Every oriented bridge-type endpoint seed is equivalent, under the accepted
+front-end relabeling and orientation normalizations, to the unique numerical
+representative
+\[
+L=[2,2,1],\qquad R=[1,4,4].
+\]
+\end{proposition}
+
+\begin{proof}
+Let
+\[
+L=[\ell,\ell,b],\qquad R=[b,r,r]
+\]
+be an oriented bridge-type seed.
+Apply the accepted cyclic relabeling so that the shared bridge symbol becomes
+\[
+b=1.
+\]
+After that relabeling, the left repeated symbol must be the clockwise neighbor
+of $1$ in the cyclic order on $\mathcal D$, hence
+\[
+\ell=2.
+\]
+Likewise the right repeated symbol must be the counterclockwise neighbor of $1$,
+hence
+\[
+r=4.
+\]
+Therefore the normalized seed is exactly
+\[
+L=[2,2,1],\qquad R=[1,4,4].
+\]
+Uniqueness is immediate because the normalization fixes the bridge symbol and
+then the orientation convention fixes which adjacent symbol is written on each
+side.
+\end{proof}
+
+\begin{corollary}[032 as a normal-form corollary]
+\label{cor:032-from-bridge-form}
+Assume that, after the earlier tiny static repair branches are pruned, the live
+odd-$m$, $d=5$ endpoint-local front end reduces to a single oriented
+bridge-type endpoint seed class.
+Then the seed statement usually written as \textup{032} follows:
+\[
+L=[2,2,1],\qquad R=[1,4,4].
+\]
+\end{corollary}
+
+\begin{proof}
+Apply Proposition~\ref{prop:seed-normal-form} to the unique surviving oriented
+bridge-type seed class.
+\end{proof}
+
+\section{What still remains to close 032 independently}
+
+The previous section proves the \emph{normal-form} part of \textup{032}.
+So the true remaining burden is smaller than the old wording
+``isolate the best seed.''
+It is enough to prove one upstream endpoint-word theorem.
+
+\begin{placeholder}[explicit endpoint-word shape theorem]
+\label{ph:shape}
+After the earlier tiny static repair branches are removed, prove that the live
+odd-$m$, $d=5$ endpoint-local front end reduces to a single oriented
+bridge-type endpoint seed class in the sense of Definition~2.1.
+Equivalently, prove that the unresolved local seed has exactly one shared bridge
+symbol and one repeated oriented neighbor on each side.
+\end{placeholder}
+
+\begin{theorem}[what is left of 032]
+\label{thm:032-reduced-placeholder}
+A fully first-principles proof of \textup{032} is equivalent to
+Placeholder~\ref{ph:shape} together with the already-proved normal-form lemma
+(Proposition~\ref{prop:seed-normal-form}).
+No additional odd-$m$ bookkeeping remains once the endpoint-word shape theorem
+is supplied.
+\end{theorem}
+
+\begin{proof}
+If Placeholder~\ref{ph:shape} holds, then
+Corollary~\ref{cor:032-from-bridge-form} gives the normalized seed
+$[2,2,1]/[1,4,4]$ immediately.
+Conversely, any honest first-principles proof of \textup{032} must determine
+what structural shape the live local seed class has before that seed can be
+written in normalized coordinates.
+That structural classification is exactly Placeholder~\ref{ph:shape}.
+\end{proof}
+
+\begin{remark}[practical consequence for the manuscript]
+The theorem-side burden behind \textup{032} is therefore smaller than it first
+appeared.
+The digits $[2,2,1]/[1,4,4]$ are not the hard part.
+The hard part is the upstream finite endpoint-word classification that the live
+seed class has the oriented bridge form.
+So, if later support for the explicit path-level endpoint words is added, there
+should be no separate heavy proof step left for \textup{032} itself.
+\end{remark}
+
+\section{Status}
+
+From the current accessible bundle one may now say the following precisely.
+
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.5em]
+\item The numerical representative of the best front-end seed is explained:
+      it is the canonical normal form of an oriented bridge-type seed class.
+\item The full first-principles content of \textup{032} has not yet been
+      completely internalized, because the needed endpoint-word shape theorem
+      is still external to the current bundle.
+\item Therefore \textup{032} should not yet be claimed as a fully proved
+      theorem inside the consolidated manuscript, but its remaining gap is now
+      sharply localized.
+\end{enumerate}
+
+\end{document}

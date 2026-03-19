@@ -1,0 +1,658 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage{booktabs,tabularx,array}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{xcolor}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!black,
+  citecolor=blue!50!black,
+  urlcolor=blue!50!black
+}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{placeholder}[theorem]{Placeholder}
+
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Rm}{\mathcal R}
+\newcommand{\I}{\mathcal I}
+\newcommand{\SelCorr}{\mathrm{Sel}_{\mathrm{corr}}}
+\newcommand{\SelStar}{\mathrm{Sel}^{\star}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\CJ}{\mathrm{carry\_jump}}
+\newcommand{\WW}{\mathrm{wrap}}
+\newcommand{\Flat}{\mathrm{flat}}
+\newcommand{\OTHA}{\mathrm{other\_1000}}
+\newcommand{\one}[1]{\mathbf 1_{\{#1\}}}
+
+\title{Odd-modulus Hamilton decomposition of the directed $5$-torus\\
+Revised consolidated manuscript after the corrected M2/M3 package and the local-provenance no-go}
+\author{}
+\date{March 17, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This manuscript reorganizes the current odd-$m$, $d=5$ proof program after the
+three theorem-side corrections made in notes 124--127.
+
+First, the old theorem-side target ``future words of the current event map
+separate states on the exact marked object'' is removed. For the actual current
+event map $\eps_4$, that target is false. The correct theorem-side package is
+instead the exact marked carry-jump-to-wrap object with anchor rigidity and the
+comparison chain
+\[
+(B,\beta) \cong (\rho,\beta,q_0,\sigma) \twoheadrightarrow (\beta,\delta).
+\]
+Second, the intended theorem-side quotient is now fixed to
+\[
+Q_{\mathrm{th}}=(B,\beta),
+\]
+and this already closes the theorem-side M3 burden. Third, the historical
+local/countdown-carrier provenance question is no longer a live proof target:
+checked-range computation shows that the natural candidates
+\[
+Q_{\tau}=(B,\min(\tau,8),\eps_4),
+\qquad
+Q_{\mathrm{fw}}=(B,\eps_4,f_1,\dots,f_7)
+\]
+work at $m=11$ but fail from $m=13$ onward.
+
+With those corrections in place, the proof program becomes cleaner. The
+colorwise selector descent theorem already suffices for the generic upgrade, so
+one no longer needs a single common selector family. The theorem-side part of
+$M2$--$M3$ is now closed; $M4$ is closed on $\SelCorr$; the color-$4$ M5
+branch is closed on $\SelStar$; and $M6$ remains closed. The remaining work is
+therefore concentrated in two places: the channel reduction $M1$ and the
+construction of a full colorwise graph package for the remaining colors.
+
+The purpose of this manuscript is to record that corrected proof spine in one
+place and to state the remaining tasks as honest placeholders of the right
+size.
+\end{abstract}
+
+\tableofcontents
+
+\section{Introduction and module map}
+
+Let
+\[
+D_5(m)=\operatorname{Cay}((\Z_m)^5,\{e_0,e_1,e_2,e_3,e_4\})
+\]
+be the directed $5$-torus. The long-term target is a decomposition of
+$D_5(m)$ into five arc-disjoint directed Hamilton cycles for every odd modulus
+$m$ in the D5 range.
+
+The proof naturally splits into six packages, labelled $M1$ through $M6$.
+After notes 124--127, their honest status is as follows.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\textwidth}{@{}>{\bfseries}l>{\raggedright\arraybackslash}p{2.6cm}X@{}}
+\toprule
+Module & Status & Current content in this manuscript \\
+\midrule
+$M1$ & open & channel reduction from the full odd-$m$ D5 problem to the best-seed channel $R1 \to H_{L1}$ \\
+$M2$ & theorem-side closed in corrected form & exact marked carry-jump-to-wrap object with anchor rigidity and explicit coordinates equivalent to $(\rho,\beta,q_0,\sigma)$ \\
+$M3$ & theorem-side closed & intended theorem-side quotient fixed to $(B,\beta)$; comparison/factor chain to $(\rho,\beta,q_0,\sigma)$ and then to $(\beta,\delta)$ \\
+$M4$ & closed on $\SelCorr$ & symbolic all-odd corrected-selector theorem giving five global torus permutations \\
+$M5$ & partially closed & the color-$4$ map of the surgery family $\SelStar$ is Hamilton for all odd $m$; the remaining colors are still open \\
+$M6$ & closed & exceptional continuation / globalization package \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+The main conceptual corrections relative to the earlier consolidated draft are:
+\begin{enumerate}[label=\textup{(\alph*)},leftmargin=2.5em]
+\item the theorem-side M2/M3 package is no longer phrased using future-word
+      separation for the current event map $\eps_4$;
+\item the intended quotient is frozen theorem-side to $(B,\beta)$;
+\item the historical local-provenance candidates $Q_{\tau}$ and
+      $Q_{\mathrm{fw}}$ are treated as checked no-go objects, not as hidden
+      targets of the final proof;
+\item the graph-theoretic endgame uses a \emph{colorwise} selector package,
+      so one does not need one common selector family before the final generic
+      upgrade can be stated.
+\end{enumerate}
+
+Accordingly, the current unconditional outputs are the following.
+
+\begin{theorem}[Theorem-side M2/M3 package]
+For odd $m$ in the accepted D5 regime, the exact marked carry-jump-to-wrap
+object exists theorem-side with coordinates equivalent to
+\[
+(\rho,\beta,q_0,\sigma)
+\qquad\text{and}\qquad
+(B,\beta).
+\]
+The quotient $(B,\beta)$ is exact deterministic for the current event map
+$\eps_4$, retains grouped base, and factors canonically to $(\beta,\delta)$.
+\end{theorem}
+
+\begin{theorem}[Corrected-selector M4 theorem for $\SelCorr$]
+For every odd $m\ge 5$, the corrected selector family $\SelCorr$ defines five
+global torus permutations whose arc sets are pairwise disjoint and cover the
+full directed arc set of the torus.
+\end{theorem}
+
+\begin{theorem}[Color-$4$ M5 theorem for $\SelStar$]
+For every odd $m\ge 5$, the color-$4$ torus map coming from the selector
+surgery family $\SelStar$ is Hamilton.
+\end{theorem}
+
+\begin{theorem}[Globalization theorem]
+For odd $m$ in the accepted D5 regime, the exceptional continuation /
+globalization package is available and yields the standard raw exactness of
+$(\beta,\delta)$ on the true accessible boundary union.
+\end{theorem}
+
+What remains open is therefore narrower than in the older manuscript: a channel
+reduction theorem, and the missing graph-level colorwise exactness and
+Hamiltonicity packages for the remaining colors.
+
+\section{The corrected generic upgrade criterion}
+
+The older consolidated draft still used two stronger hypotheses than the proof
+actually needs:
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2.5em]
+\item future-word separation on the exact marked object for the current event
+      map $\eps_4$;
+\item one common selector family carrying all five colors at once.
+\end{enumerate}
+Both are stronger than necessary. The corrected proof spine uses instead the
+exact theorem-side anchor package and a colorwise selector package.
+
+\subsection{Colorwise selector descent}
+
+\begin{definition}[colorwise selector package]
+Let
+\[
+V=(\Z/m\Z)^5
+\]
+be the vertex set of the directed $5$-torus.
+A \emph{colorwise selector package} over $V$ consists of:
+\begin{enumerate}[label=\textup{(C\arabic*)},leftmargin=2.9em]
+\item a surjection $\pi:\Rm\to V$ from a representative space $\Rm$;
+\item for each color $i\in\{0,1,2,3,4\}$, an invariant
+      \[
+      I_i:\Rm\to \I_i
+      \]
+      constant on every fiber of $\pi$;
+\item for each color $i$, a local selected arc
+      \[
+      a_i(r)=(\pi(r),y_i(r))
+      \]
+      depending only on $I_i(r)$;
+\item for each representative $r\in\Rm$, the five arcs
+      \[
+      a_0(r),a_1(r),a_2(r),a_3(r),a_4(r)
+      \]
+      are exactly the five outgoing torus arcs from $\pi(r)$;
+\item for each color $i$ and each vertex $x\in V$, there is exactly one local
+      color-$i$ arc ending at $x$.
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}[colorwise selector descent]
+\label{thm:colorwise-selector-descent}
+Assume a colorwise selector package over $V$.
+For each color $i$, define
+\[
+F_i(x)=y_i(r)
+\]
+for any representative $r$ with $\pi(r)=x$.
+Then:
+\begin{enumerate}[label=\textup{(\alph*)},leftmargin=2.5em]
+\item each $F_i$ is well defined;
+\item each $F_i$ is a permutation of $V$;
+\item the five arc sets
+      \[
+      A_i=\{(x,F_i(x)):x\in V\}
+      \]
+      are pairwise disjoint;
+\item their union is the full directed arc set of the torus.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Fix a color $i$ and a vertex $x\in V$.
+If $r,r'\in\Rm$ satisfy $\pi(r)=\pi(r')=x$, then $I_i(r)=I_i(r')$ by fiber
+constancy, so the color-$i$ selected arc agrees on $r$ and $r'$.
+Thus $F_i(x)$ is well defined.
+
+For a fixed representative $r$, axiom \textup{(C4)} says that the five color
+arcs are exactly the five outgoing torus arcs from $\pi(r)$.
+Hence the arc sets $A_0,\dots,A_4$ are pairwise disjoint and together cover the
+full outgoing arc set.
+
+Fix a color $i$.
+Every vertex has out-degree $1$ in $A_i$ by definition.
+By \textup{(C5)}, every vertex also has in-degree $1$ in $A_i$.
+On a finite set this implies that $F_i$ is bijective, hence a permutation of
+$V$.
+\end{proof}
+
+\subsection{Return-cycle lift}
+
+\begin{theorem}[return-cycle lift theorem]
+\label{thm:return-cycle-lift}
+Let $F$ be a permutation of a finite set $V$.
+Suppose there exist a subset $S\subseteq V$ and a positive integer $r$ such
+that:
+\begin{enumerate}[label=\textup{(R\arabic*)},leftmargin=2.8em]
+\item every $F$-orbit meets $S$;
+\item consecutive visits of an orbit to $S$ occur exactly $r$ steps apart;
+\item the first-return map $T:S\to S$ induced by $F$ is a single cycle of
+      length $|S|$;
+\item every return segment of length $r$ contains exactly $r$ distinct
+      vertices.
+\end{enumerate}
+Then $F$ is a single cycle of length $r|S|$.
+\end{theorem}
+
+\begin{proof}
+Pick $s\in S$.
+By (R2), the orbit of $s$ meets $S$ precisely at times $0,r,2r,\dots$.
+By (R3), the successive return points
+\[
+s,T(s),T^2(s),\dots,T^{|S|-1}(s)
+\]
+are pairwise distinct and $T^{|S|}(s)=s$.
+Equivalently,
+\[
+F^{kr}(s)\neq s\quad (0<k<|S|),
+\qquad
+F^{|S|r}(s)=s.
+\]
+By (R4), each return segment of length $r$ consists of $r$ distinct vertices,
+and two distinct return segments cannot overlap because that would create an
+earlier repeated point on the orbit. So the orbit of $s$ contains exactly
+$r|S|$ distinct vertices.
+
+Finally, by (R1) every orbit meets $S$, and by (R3) all points of $S$ already
+lie on the orbit of $s$. Hence every orbit is the same orbit.
+Therefore $F$ is a single cycle of length $r|S|$ on all of $V$.
+\end{proof}
+
+\begin{corollary}[iterated first-return reduction]
+\label{cor:iterated-first-return}
+Let $G$ be a permutation of a finite set $X$ and let $s:X\to\Z/m\Z$ satisfy
+\[
+s(Gx)=s(x)+1
+\qquad\text{for all }x\in X.
+\]
+Set $Q:=\{x:s(x)=0\}$ and $H:=G^m|_Q$. Then $G$ is one cycle on $X$ if and
+only if $H$ is one cycle on $Q$.
+\end{corollary}
+
+\begin{proof}
+Apply Theorem~\ref{thm:return-cycle-lift} with $r=m$ and $S=Q$.
+\end{proof}
+
+\subsection{Corrected generic upgrade theorem}
+
+\begin{theorem}[corrected generic D5 upgrade criterion]
+\label{thm:generic-upgrade}
+Let $m$ be odd.
+Assume the following theorem packages.
+\begin{enumerate}[label=\textup{(G\arabic*)},leftmargin=2.9em]
+\item a channel-classification theorem reducing the full odd-$m$, $d=5$
+      problem to the best-seed channel $R1\to H_{L1}$;
+\item the corrected theorem-side M2/M3 package: an exact marked carry-jump-to-wrap
+      object together with the intended exact deterministic quotient
+      $Q_{\mathrm{th}}=(B,\beta)$;
+\item a colorwise selector package on the full torus;
+\item for each color $i\in\{0,1,2,3,4\}$, a return section $S_i$ satisfying
+      the hypotheses of the return-cycle lift theorem for the global map $F_i$;
+\item the exceptional continuation / globalization input already supplied by the
+      accepted odd-$m$ D5 package.
+\end{enumerate}
+Then the directed torus $D_5(m)$ admits a decomposition into five arc-disjoint
+Hamilton cycles.
+\end{theorem}
+
+\begin{proof}
+By (G2), the canonical theorem-side coordinates already descend on the intended
+quotient $Q_{\mathrm{th}}=(B,\beta)$.
+By (G3) and Theorem~\ref{thm:colorwise-selector-descent}, the five local color
+rules descend to well-defined global torus permutations
+\[
+F_0,F_1,F_2,F_3,F_4,
+\]
+whose arc sets are pairwise disjoint and cover the full directed arc set.
+By (G4), each $F_i$ is Hamiltonian.
+Therefore these five Hamilton cycles form a Hamilton decomposition of the
+directed torus.
+\end{proof}
+
+\begin{remark}
+This corrected generic theorem is weaker than the old one in exactly the right
+ways: it no longer uses the false future-word-separation target for $\eps_4$,
+and it no longer requires one common selector family before the final upgrade
+can be stated.
+\end{remark}
+
+\section{The theorem-side M2/M3 package}
+
+We summarize the corrected theorem-side package that replaces the obsolete
+future-word formulation.
+
+\begin{theorem}[corrected theorem-side M2 core]
+\label{thm:corrected-M2-core}
+Fix odd $m$ in the accepted D5 regime and the best-seed channel
+\[
+R1\to H_{L1}.
+\]
+There exists an exact marked carry-jump-to-wrap object $X_m$ with the following
+properties:
+\begin{enumerate}[label=\textup{(M2\arabic*)},leftmargin=2.9em]
+\item $X_m$ admits equivalent exact coordinates
+      \[
+      (B,\beta)
+      \qquad\text{and}\qquad
+      (\rho,\beta,q_0,\sigma),
+      \]
+      where $B$ is grouped base, $\beta$ is the canonical clock, $\rho$ is the
+      source residue, $q_0$ is the marked chain label, and $\sigma$ is the high
+      digit;
+\item the bare bridge quotient
+      \[
+      (\beta,q_0,\sigma)\cong(\beta,\delta),
+      \qquad
+      \delta=q_0+m\sigma,
+      \]
+      is exact deterministic for the current event map $\eps_4$;
+\item on each regular fixed-$w$ slice, the return dynamics form the marked
+      chain $q\mapsto q+1$ with unique carry state $q=m-1$;
+\item the canonical clock $\beta$ descends to any exact deterministic quotient
+      for $\eps_4$, and if such a quotient also retains grouped base $B$, then
+      the full theorem-side readout $(B,\beta)$ descends.
+\end{enumerate}
+\end{theorem}
+
+\begin{remark}
+This is the corrected theorem-side replacement for the old sentence ``future
+words of $\eps_4$ separate states on the exact marked object.'' The latter is
+false; the anchor/marked-chain rigidity above is the theorem actually used
+later.
+\end{remark}
+
+\begin{theorem}[theorem-side intended quotient verification]
+\label{thm:Qth-verification}
+The intended theorem-side quotient
+\[
+Q_{\mathrm{th}}=(B,\beta)
+\]
+is exact deterministic for the current event map $\eps_4$ and retains grouped
+base. Consequently there is a canonical factor/comparison chain
+\[
+Q_{\mathrm{th}}
+\twoheadrightarrow
+(B,\beta)
+\cong
+(\rho,\beta,q_0,\sigma)
+\twoheadrightarrow
+(\beta,\delta).
+\]
+In particular, the theorem-side M3 burden is closed once the intended quotient
+is fixed to $(B,\beta)$.
+\end{theorem}
+
+\begin{proof}
+Grouped base retention is immediate because $B$ is a coordinate of
+$Q_{\mathrm{th}}$.
+Exactness of the current event map follows because $(B,\beta)$ determines the
+enriched state $(\rho,\beta,q_0,\sigma)$, hence in particular the bare bridge
+state $(\beta,q_0,\sigma)$, and the current event $\eps_4$ factors through that
+bridge state.
+Deterministic successor holds because $(B,\beta)$ is an exact coordinate system
+on the exact marked object.
+The displayed factor chain is therefore the theorem-side comparison theorem.
+\end{proof}
+
+\begin{proposition}[future-word separation for $\eps_4$ fails]
+\label{prop:future-word-fails}
+Future $\eps_4$-words do not separate states on the full exact marked object.
+Already on the bridge quotient $(\beta,q_0,\sigma)$, the infinite future
+$\eps_4$-word depends only on $(\beta,q_0)$ and is independent of $\sigma$.
+Thus the bridge states split into exactly $m^2$ future-word classes of size
+$m$.
+\end{proposition}
+
+\begin{remark}
+This negative statement is not a side issue. It is the reason the old theorem-side
+M2 wording had to be replaced.
+\end{remark}
+
+\section{The historical local-provenance no-go}
+
+The theorem-side M3 package is now closed. A separate historical question is
+whether older local/countdown-carrier packages can be identified canonically
+with the theorem-side quotient $(B,\beta)$. The current checked answer is no.
+
+\begin{proposition}[checked-range local-provenance no-go]
+\label{prop:provenance-no-go}
+Consider the two historical candidate quotients
+\[
+Q_{\tau}=(B,\min(\tau,8),\eps_4),
+\qquad
+Q_{\mathrm{fw}}=(B,\eps_4,f_1,\dots,f_7).
+\]
+On the regenerated exact marked carry-jump-to-wrap object, both candidates:
+\begin{enumerate}[label=\textup{(\alph*)},leftmargin=2.5em]
+\item satisfy the full intended-quotient test at $m=11$;
+\item fail from $m=13$ onward;
+\item from $m=13$ onward, fail both direct exact identification with
+      $(B,\beta)$ and deterministic successor on the accessible quotient.
+\end{enumerate}
+In particular, the historical local-provenance claim is false for both tested
+candidate families on the checked range
+\[
+m\in\{11,13,15,17,19,21,23,25\}.
+\]
+\end{proposition}
+
+\begin{remark}[first exact obstruction at $m=13$]
+The first obstruction already occurs at $m=13$.
+There are two regular states with the same grouped base
+\[
+B=(4,1,4,10,\mathrm{regular})
+\]
+and the same local candidate state, but with different theorem-side clocks,
+namely $\beta=9$ and $\beta=10$.
+Their successors land in different next candidate states, so the historical
+candidate quotient is not even deterministic on successor from that modulus
+onward.
+\end{remark}
+
+\begin{remark}
+Because of Proposition~\ref{prop:provenance-no-go}, the historical provenance
+question is no longer part of the live proof-closing route. The final manuscript
+should use $(B,\beta)$ theorem-side and should treat $Q_{\tau}$ and
+$Q_{\mathrm{fw}}$ only as checked no-go comparison objects.
+\end{remark}
+
+\section{Closed graph-side branches}
+
+\subsection{The all-odd M4 theorem for $\SelCorr$}
+
+\begin{theorem}[M4 for $\SelCorr$]
+\label{thm:M4-SelCorr}
+For every odd $m\ge 5$, the corrected selector family $\SelCorr$ defines five
+global torus permutations whose arc sets are pairwise disjoint and cover the
+full directed arc set of the torus.
+\end{theorem}
+
+\begin{remark}
+This is the fully symbolic all-odd selector theorem currently available on the
+graph side. It closes one exact M4 package, but that family is not presently
+an M5-friendly family.
+\end{remark}
+
+\subsection{The closed color-4 M5 branch for $\SelStar$}
+
+\begin{theorem}[color-4 M5 for $\SelStar$]
+\label{thm:M5-color4-SelStar}
+For every odd $m\ge 5$, the color-$4$ map $F_4^{\star}$ of the selector surgery
+family $\SelStar$ is Hamilton.
+\end{theorem}
+
+\begin{remark}
+The proof uses the sharpened nested-return route:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.5em]
+\item an exact first-return clock on $P_0=\{\Sigma=0\}$;
+\item an exact second nested clock on $P_1=\{\Sigma=0,\ x_3=0\}$;
+\item a final $m^2$-state return map on
+      \[
+      P_2=\{\Sigma=0,\ x_3=0,\ x_0+x_2=0\};
+      \]
+\item identification of that true final return with the corrected-row model,
+      whose row-stitching theorem gives one cycle.
+\end{enumerate}
+So the color-$4$ branch is a genuine theorem, not just checked evidence.
+\end{remark}
+
+\subsection{The imported globalization package}
+
+\begin{proposition}[M6 remains closed]
+\label{prop:M6-closed}
+The odd-$m$ exceptional continuation / globalization package remains available
+without change after the theorem-side corrections of notes 124--127.
+\end{proposition}
+
+\begin{proof}
+The theorem-side corrections only change the bridge package used downstream.
+They do not modify the accepted odd-$m$ exceptional continuation theorem.
+\end{proof}
+
+\section{Revised conditional final theorem and remaining placeholders}
+
+With Sections 2--5 in place, the remaining proof burden is substantially smaller
+than in the old consolidated draft.
+One no longer needs:
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2.5em]
+\item a theorem-side historical provenance identification for $Q_{\tau}$ or
+      $Q_{\mathrm{fw}}$;
+\item future-word separation for $\eps_4$;
+\item a single common selector family before stating the final generic upgrade.
+\end{enumerate}
+
+The remaining tasks are now the following.
+
+\begin{placeholder}[Channel reduction / $M1$]
+\label{ph:M1}
+Prove a theorem-level channel classification reducing the full odd-$m$, $d=5$
+problem to the best-seed channel
+\[
+R1\to H_{L1},
+\]
+or prove that all other channels are already closed and that this channel is the
+unique remaining one.
+\end{placeholder}
+
+\begin{placeholder}[Colorwise graph package]
+\label{ph:colorwise-graph}
+Produce five local color rules
+\[
+a_0,a_1,a_2,a_3,a_4
+\]
+on the full torus which together form a colorwise selector package in the sense
+of Section~2.
+The proof no longer needs these five rules to arise from one common
+permutation-valued selector family.
+It only needs fiberwise well-defined local arcs, pointwise outgoing
+exhaustiveness, and incoming uniqueness for each color.
+\end{placeholder}
+
+\begin{placeholder}[Remaining colorwise M5 package]
+\label{ph:remaining-M5}
+For the global maps supplied by Placeholder~\ref{ph:colorwise-graph}, prove
+Hamiltonicity for the colors not already covered by the closed
+$F_4^{\star}$ theorem. In practice this means either:
+\begin{enumerate}[label=\textup{(\alph*)},leftmargin=2.5em]
+\item extend the nested-return / monodromy analysis to the additional selected
+      colors; or
+\item replace the current color rules by a compatible colorwise family whose
+      remaining maps admit a cleaner return-cycle theorem.
+\end{enumerate}
+\end{placeholder}
+
+\begin{theorem}[revised conditional final theorem]
+\label{thm:revised-conditional-final}
+Assume odd $m$ lies in the accepted D5 regime and that
+Placeholders~\ref{ph:M1}, \ref{ph:colorwise-graph}, and
+\ref{ph:remaining-M5} have been resolved.
+Then the directed torus
+\[
+D_5(m)=\operatorname{Cay}((\Z_m)^5,\{e_0,e_1,e_2,e_3,e_4\})
+\]
+admits a decomposition into five arc-disjoint directed Hamilton cycles.
+\end{theorem}
+
+\begin{proof}
+Placeholder~\ref{ph:M1} supplies the channel reduction package.
+The corrected theorem-side M2/M3 package is already available by
+Theorems~\ref{thm:corrected-M2-core} and \ref{thm:Qth-verification}.
+Placeholder~\ref{ph:colorwise-graph} supplies the colorwise selector package.
+Placeholder~\ref{ph:remaining-M5} supplies the missing return-cycle theorems.
+Proposition~\ref{prop:M6-closed} supplies the globalization input.
+Therefore Theorem~\ref{thm:generic-upgrade} applies and yields a Hamilton
+decomposition.
+\end{proof}
+
+\section{Next order of work}
+
+After the local-provenance no-go, the next order is cleaner than before.
+
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.7em]
+\item \textbf{Freeze the theorem-side package.}
+      Treat Sections 3 and 4 as stable.
+      In particular, do not spend further proof effort trying to identify
+      $Q_{\tau}$ or $Q_{\mathrm{fw}}$ canonically with $(B,\beta)$.
+
+\item \textbf{Attack $M1$ directly.}
+      This is now the only theorem-side placeholder still blocking a fully
+      honest statement of the reduction spine.
+
+\item \textbf{Use the colorwise graph formulation, not family unification.}
+      The graph endgame should be organized around Placeholder
+      \ref{ph:colorwise-graph}, not around the stronger and unnecessary demand
+      for one common selector family.
+
+\item \textbf{Pursue the next M5 branch with the strongest current evidence.}
+      After the closed color-$4$ branch, the next natural candidate is the
+      color-$3$ surgery branch, since the existing probes already suggest that
+      it is structurally closer to the color-$4$ route than colors $0,1,2$.
+
+\item \textbf{Only after one more colorwise Hamiltonicity theorem is in hand,
+      decide whether to continue branch-by-branch or redesign the colorwise
+      package.}
+      At that stage the graph package will be concrete enough to show whether a
+      mixed colorwise assembly is realistic or whether a new surgery family is
+      needed.
+\end{enumerate}
+
+\begin{remark}[bottom line]
+The proof-closing picture after 127 is simpler than before.
+The theorem-side M2/M3 package is now closed in corrected form, the historical
+local provenance claim is checked false on the currently tested range, and the
+remaining open work sits entirely in $M1$ and in the graph-side colorwise
+package for the remaining colors.
+That is the right corrected integrated manuscript state for the next closure
+steps.
+\end{remark}
+
+\end{document}

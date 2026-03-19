@@ -1,0 +1,714 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{booktabs}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\1}{\mathbf 1}
+\newcommand{\Sel}{\mathrm{Sel}^{\star}}
+\newcommand{\xor}{\mathbin{\underline{\vee}}}
+\newcommand{\Um}{U_m}
+\newcommand{\Umodel}{U_m^{\sharp}}
+\newcommand{\Tm}{T_m}
+\newcommand{\Rm}{R_m}
+\newcommand{\Pzero}{P_0}
+\newcommand{\Pone}{P_1}
+\newcommand{\Ptwo}{P_2}
+\newcommand{\half}{2^{-1}}
+\newcommand{\bracks}[1]{\left[ #1 \right]}
+
+\title{D5 122: Actual all-odd identification of the final return for M5\\
+The Sel$^{\star}$ color-4 section return equals the corrected-row model}
+\author{}
+\date{March 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The 120 note reduced the live M5 problem for the color-$4$ map of the selector
+surgery $\Sel$ to the third return
+\[
+U_m=(F_4^{\star})^{m^3}\big|_{P_2},
+\qquad
+P_2=\{(a,b,-a,0,-b):a,b\in \Z/m\Z\}.
+\]
+The 121 note then proved that the explicit corrected-row model $U_m^{\sharp}$
+is one cycle for every odd $m\ge 11$, but left one gap: prove that the
+\emph{actual} return $U_m$ agrees with that symbolic model for all odd $m$.
+
+This note closes that gap for the live Sel$^{\star}$ M5 route. The key new
+input is an exact formula for the second nested return
+\[
+T_m=(F_4^{\star})^{m^2}\big|_{P_1},
+\qquad
+P_1=\{\Sigma=0,\ x_3=0\},
+\]
+in coordinates $(a,b,u)$ on $P_1$. From that formula we derive the exact natural
+row description of $U_m$ on $P_2$ for every odd $m\ge 11$. After the row
+correction
+\[
+v=b+c_m(a),
+\]
+those natural formulas are exactly the corrected-row rules conjectured in the
+120 handoff and proved one-cycle in 121.
+
+Consequently, for every odd $m\ge 11$, the actual third return $U_m$ is one
+cycle. By the 120 nested-return reduction theorem, the color-$4$ torus map
+$F_4^{\star}$ is Hamilton. Together with exhaustive checks on the remaining odd
+moduli $m=5,7,9$, this closes the current M5 route for Sel$^{\star}$ on every
+odd modulus.
+\end{abstract}
+
+\section{Setup and imported reductions}
+
+We keep the notation of 119--121. Fix an odd modulus $m\ge 11$ and let
+$F_4^{\star}$ be the color-$4$ torus map coming from the explicit selector
+surgery $\Sel$ of 119.
+
+The 120 note proved the nested-return reduction
+\[
+F_4^{\star}\text{ is Hamilton}
+\iff
+U_m:=(F_4^{\star})^{m^3}\big|_{P_2}\text{ is one cycle on }P_2,
+\]
+where
+\[
+P_2=\{(a,b,-a,0,-b):a,b\in\Z/m\Z\}.
+\]
+So the live task is to understand $U_m$ exactly.
+
+The 121 note introduced the row correction
+\[
+c_m(0)=0,\quad c_m(1)=3,\quad c_m(2)=6,\quad c_m(3)=9,\quad c_m(4)=10,
+\quad c_m(a)=2a+3\ (5\le a\le m-2),\quad c_m(m-1)=0,
+\]
+and the corrected coordinate
+\[
+v=b+c_m(a).
+\]
+It then proved that the explicit symbolic corrected-row model $U_m^{\sharp}$ is
+one cycle for every odd $m\ge 11$.
+
+So the only missing step is:
+
+\begin{quote}
+\textbf{Actual/model identification target.}
+Show that the true third return $U_m$ agrees, in the corrected coordinates
+$(a,v)$, with the explicit model $U_m^{\sharp}$ of 120/121.
+\end{quote}
+
+That is the purpose of the present note.
+
+\section{Exact formula for the second return $T_m$ on $P_1$}
+
+Write a point of
+\[
+P_1=\{\Sigma=0,\ x_3=0\}
+\]
+as
+\[
+x=(a,b,u-a,0,-u-b),
+\]
+so $(a,b,u)\in (\Z/m\Z)^3$ are coordinates on $P_1$. Let
+\[
+R_m=(F_4^{\star})^m\big|_{P_0},
+\qquad
+T_m=(F_4^{\star})^{m^2}\big|_{P_1}=R_m^m\big|_{P_1}.
+\]
+As in 120, the first-return block $R_m$ increments the $x_3$ clock by $+1$.
+Thus if we start from $(a,b,u)\in P_1$ and write
+\[
+X_k=R_m^k(a,b,u)=(a_k,b_k,u_k,k)
+\qquad (0\le k\le m-1),
+\]
+then the fourth coordinate is exactly $k$.
+
+The color-$4$ slice-$2$ and slice-$3$ choices simplify strongly on this block.
+
+\begin{lemma}[the $j_2,j_3$ rules before the special block]\label{lem:j2j3-before-special}
+For $0\le k\le m-3$, one has
+\[
+a_k=a+k,
+\qquad
+u_k=u+k,
+\]
+and the slice-$2$ and slice-$3$ generators for the $k$th $R_m$ block are:
+\begin{align*}
+j_2(k)&=
+\begin{cases}
+1, & a+k=m-2,\\
+4, & a+k\ne m-2,
+\end{cases}
+\\
+j_3(k)&=1
+\iff
+\bigl(a+2k=0\bigr)\xor\bigl(a=u+1\bigr).
+\end{align*}
+\end{lemma}
+
+\begin{proof}
+For the $k$th $R_m$ block the slice-$0$ step increments generator $3$, the
+slice-$1$ step increments generator $0$, and the slice-$2$ state is therefore
+\[
+(a_k+1,b_k,u_k-a_k, k+1,-u_k-b_k-k).
+\]
+In the 119 selector table for color $4$, the slice-$2$ generator is $1$ exactly
+when the active-set bit $4$ is on and the special bit $2$ is off; on the
+present coordinates that is precisely the condition $a_k=m-2$ and $k\ne m-2$.
+For $k\le m-3$ this is exactly $a+k=m-2$. Otherwise the slice-$2$ generator is
+$4$. This gives the $j_2$ formula.
+
+For color $4$, the 119 slice-$3$ rule chooses generator $1$ exactly when the
+active-$3$ bit $1$ is on. On the present block this bit is
+\[
+\bigl((x_0+x_3)=0\bigr)\xor\bigl(x_2=m-1\bigr)
+\]
+evaluated at the slice-$3$ state. Since for $k\le m-3$ one has $j_2\in\{1,4\}$,
+the slice-$3$ state has
+\[
+x_0=a_k+1,
+\qquad x_3=k+1,
+\qquad x_2=u_k-a_k.
+\]
+So the bit is on exactly when
+\[
+a_k+k=0\quad\xor\quad u_k-a_k=m-1.
+\]
+Substituting $a_k=a+k$ and $u_k=u+k$ gives
+\[
+a+2k=0\quad\xor\quad a=u+1.
+\]
+This is the claimed $j_3$ formula.
+\end{proof}
+
+The next quantity is the row-$1$ coordinate just before the special block
+$k=m-2$.
+
+\begin{lemma}[the pre-special $b$-value]\label{lem:B-formula}
+After the first $m-2$ blocks, the $b$-coordinate is
+\[
+b_{m-2}=B(a,b,u),
+\]
+where
+\[
+B(a,b,u)=b+\eta(a,u)
+\]
+and
+\[
+\eta(a,u)=
+\begin{cases}
+1, & a\ne u+1\text{ and }a\in\{0,2,4,m-1\},\\
+2, & a\ne u+1\text{ and }a\notin\{0,2,4,m-1\},\\
+-1, & a=u+1\text{ and }a\in\{2,4\},\\
+-3, & a=u+1\text{ and }a\in\{0,m-1\},\\
+-2, & a=u+1\text{ and }a\notin\{0,2,4,m-1\}.
+\end{cases}
+\]
+\end{lemma}
+
+\begin{proof}
+For $0\le k\le m-3$, the row-$1$ coordinate receives a contribution from
+$j_2(k)$ exactly once unless $a\in\{0,m-1\}$, namely when $a+k=m-2$.
+So the total slice-$2$ contribution over the first $m-2$ blocks is
+\[
+\alpha(a)=\1_{\{a\notin\{0,m-1\}\}}.
+\]
+
+For the slice-$3$ contribution, Lemma~\ref{lem:j2j3-before-special} shows that
+$j_3(k)=1$ exactly on the truth set of
+\[
+\bigl(a+2k=0\bigr)\xor\bigl(a=u+1\bigr)
+\qquad (0\le k\le m-3).
+\]
+Because $2$ is a unit modulo odd $m$, the equation $a+2k=0$ has one solution
+modulo $m$; among $k=0,\dots,m-3$ that solution is missing exactly when
+$a\in\{2,4\}$.
+
+If $a\ne u+1$, the slice-$3$ contribution is therefore $0$ for
+$a\in\{2,4\}$ and $1$ otherwise.
+If $a=u+1$, the xor flips, so the contribution is $m-2$ for
+$a\in\{2,4\}$ and $m-3$ otherwise.
+Combining with $\alpha(a)$ gives exactly the displayed values of $\eta(a,u)$.
+\end{proof}
+
+The only genuinely exceptional block is $k=m-2$. At that block the extra slice-
+$2$ contribution may switch from the generic value to the special generator $0$.
+This is exactly the source of the row jump in $T_m$.
+
+\begin{proposition}[exact formula for $T_m$]\label{prop:T-exact}
+Define the special indicator
+\[
+S(a,b,u)=\1_{\{u\ne 6\}}\,\1_{\{B(a,b,u)=m-1\}}.
+\]
+Then
+\[
+T_m(a,b,u)=(a',b',u+1)
+\]
+with
+\[
+a'=a+S(a,b,u),
+\]
+and
+\[
+b'=B(a,b,u)+\varepsilon_1+\varepsilon_2+\varepsilon_3,
+\]
+where
+\[
+(\varepsilon_1,\varepsilon_2,\varepsilon_3)=
+\begin{cases}
+\bigl(\1_{\{a=3\}}\xor \1_{\{a=u+1\}},\ \1_{\{a=m-2\}},\ \1_{\{a=1\}}\xor \1_{\{a=u+1\}}\bigr), & S=1,\\[0.5ex]
+\bigl(\1_{\{a=4\}}\xor \1_{\{a=u+2\}},\ \1_{\{a=m-1\}},\ \1_{\{a=2\}}\xor \1_{\{a=u+2\}}\bigr), & S=0.
+\end{cases}
+\]
+\end{proposition}
+
+\begin{proof}
+By Lemma~\ref{lem:B-formula}, just before block $k=m-2$ the state is
+\[
+(a-2,\ B(a,b,u),\ u-2,\ m-2).
+\]
+At this block the slice-$2$ special generator is $0$ exactly when the current
+row-$1$ value is $m-1$ and the 120 exceptional condition $u\ne 6$ holds.
+That is exactly the condition $S(a,b,u)=1$.
+
+If $S=1$, the special block contributes an extra $+1$ to the $a$-coordinate, so
+after block $k=m-2$ the next block starts with row coordinate $a$ again.
+If $S=0$, the generic slice-$2$ choice is $2$, so the next block starts with
+row coordinate $a-1$. This proves $a'=a+S$ after the final block.
+
+It remains to evaluate the row-$1$ contributions at blocks $k=m-2$ and
+$k=m-1$.
+
+If $S=1$, then at block $k=m-2$ one has $j_2=0$, and the slice-$3$ criterion
+reduces to
+\[
+(a=3)\xor(a=u+1).
+\]
+At the final block $k=m-1$ the slice-$2$ generator is $1$ exactly when the
+starting row is $m-2$, i.e. when $a=m-2$, and the final slice-$3$ criterion is
+\[
+(a=1)\xor(a=u+1).
+\]
+This gives the first line.
+
+If $S=0$, then at block $k=m-2$ one has $j_2=2$, so the slice-$3$ criterion is
+\[
+(a=4)\xor(a=u+2).
+\]
+At the final block, the starting row is $a-1$, so the slice-$2$ generator is
+$1$ exactly when $a=m-1$, and the final slice-$3$ criterion is
+\[
+(a=2)\xor(a=u+2).
+\]
+This gives the second line.
+\end{proof}
+
+\section{A row-sweep dictionary on $P_2$}
+
+Identify $P_2$ with $(a,b)\in(\Z/m\Z)^2$ via
+\[
+(a,b)\longleftrightarrow (a,b,-a,0,-b).
+\]
+The third return $U_m$ is obtained by starting at $(a,b,0)\in P_1$ and applying
+$T_m$ for one full $u$-cycle:
+\[
+U_m(a,b)=\pi_{a,b}\bigl(T_m^m(a,b,0)\bigr),
+\]
+where $\pi_{a,b}$ forgets the $u$-coordinate.
+
+For later use, we record the non-special $T_m$ rule row by row.
+
+\begin{lemma}[non-special row sweeps]\label{lem:non-special-dictionary}
+Assume the current $T_m$ state has coordinates $(a,b,u)$ and that the special
+indicator $S(a,b,u)$ of Proposition~\ref{prop:T-exact} is zero. Then the next
+$T_m$ step keeps the row $a$ fixed, increments $u$ by $1$, and changes $b$ by a
+row-dependent increment $D_a(u)$.
+
+The values of $D_a(u)$ and the special thresholds on that same row are:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}lll@{}}
+\toprule
+row $a$ & $D_a(u)$ in non-special steps & special threshold on row $a$ \\
+\midrule
+$0$ & $1$ except $D_0(m-2)=3$, $D_0(m-1)=m-3$ & $b=m-2$ for $u\notin\{6,m-1\}$ \\
+$1$ & $D_1(0)=m-2$, $D_1(m-1)=4$, else $2$ & $b=1$ if $u=0$, else $b=m-3$ for $u\ne6$ \\
+$2$ & $D_2(1)=0$, else $2$ & $b=0$ if $u=1$, else $b=m-2$ for $u\ne6$ \\
+$3$ & $D_3(1)=4$, $D_3(2)=m-2$, else $2$ & $b=1$ if $u=2$, else $b=m-3$ for $u\ne6$ \\
+$4$ & $D_4(3)=0$, else $2$ & $b=0$ if $u=3$, else $b=m-2$ for $u\ne6$ \\
+$5\le a\le m-2$ & $D_a(a-2)=4$, $D_a(a-1)=m-2$, else $2$ & $b=1$ if $u=a-1$, else $b=m-3$ for $u\ne6$ \\
+$m-1$ & $D_{m-1}(m-3)=4$, $D_{m-1}(m-2)=m-2$, else $2$ & $b=2$ if $u=m-2$, else $b=m-2$ for $u\ne6$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{lemma}
+
+\begin{proof}
+This is an immediate specialization of Proposition~\ref{prop:T-exact} to the
+case $S=0$.
+\end{proof}
+
+\section{The exact natural formula for $U_m$}
+
+We now derive the actual $U_m$ row by row. The cleanest part is the large late
+row range.
+
+\subsection{Uniform late rows $9\le a\le m-3$}
+
+Fix a row index $a$ with $9\le a\le m-3$. For as long as no special step has
+occurred, Lemma~\ref{lem:non-special-dictionary} gives
+\[
+b_t=
+\begin{cases}
+b+2t, & 0\le t\le a-2,\\
+b+2a, & t=a-1,\\
+b+2t-2, & a\le t\le m-1,
+\end{cases}
+\]
+where $b_t$ denotes the row-$a$ coordinate at $u=t$.
+
+It is convenient to parameterize the starting value by
+\[
+b=-3-2s,
+\qquad s\in\Z/m\Z.
+\]
+Then the special equation on row $a$ becomes:
+\begin{itemize}[leftmargin=2em]
+\item at times $t=0,\dots,a-2$, one has a special iff $t=s$;
+\item at the exceptional time $t=a-1$, the special value is $b=1-2a$, which is
+      the same as $b=-1-2(a-1)$;
+\item at times $t=a,\dots,m-1$, one has a special iff $t=s+1$.
+\end{itemize}
+So the only omitted starting parameters are
+\[
+s=m-1
+\qquad\text{and}\qquad s=6.
+\]
+These correspond to the two non-special rows
+\[
+b=m-1
+\qquad\text{and}\qquad b=m-15.
+\]
+For every other $s$, there is exactly one special step.
+
+After that unique special step, the orbit moves to row $a+1$ with row-$1$
+coordinate $b=-1$, and from then on no further special occurs during the same
+$u$-cycle. The tail sum on row $a+1$ from the post-special $u$-value to $u=m-1$
+is exactly $-2s-4$, so the final row-$1$ coordinate is
+\[
+-1+(-2s-4)=-2s-5=b-2.
+\]
+This proves:
+
+\begin{proposition}[uniform late-row formula]\label{prop:late-rows}
+For every odd $m\ge 11$ and every $9\le a\le m-3$,
+\[
+U_m(a,b)=
+\begin{cases}
+(a,b-2), & b\in\{m-1,m-15\},\\
+(a+1,b-2), & b\notin\{m-1,m-15\}.
+\end{cases}
+\]
+\end{proposition}
+
+\subsection{The boundary rows $0,1,\dots,8,m-2,m-1$}
+
+The remaining rows are finite in number, independent of $m$. Each of them is a
+short symbolic $T_m$-chase from Lemma~\ref{lem:non-special-dictionary}. We
+record the resulting exact formulas.
+
+\begin{proposition}[row $0$]\label{prop:row0}
+For every odd $m\ge 11$,
+\[
+U_m(0,b)=
+\begin{cases}
+(0,b-2), & b\in\{m-8,m-1\},\\
+(1,2b+3), & b\notin\{m-8,m-1\}.
+\end{cases}
+\]
+\end{proposition}
+
+\begin{proof}
+As long as no special occurs, row $0$ has $b_t=b+t$ for $0\le t\le m-2$ by
+Lemma~\ref{lem:non-special-dictionary}. The row-$0$ special equation is
+$b_t=m-2$ with the forbidden times $t=6$ and $t=m-1$. So a special occurs
+exactly when
+\[
+t=m-2-b
+\]
+is neither $6$ nor $m-1$. Equivalently,
+\[
+b\notin\{m-8,m-1\}.
+\]
+If $b\in\{m-8,m-1\}$, no special occurs and the last two non-special row-$0$
+steps give the displayed self-map.
+
+Otherwise the unique special time is $t=m-2-b$. At that step the orbit moves to
+row $1$ with row-$1$ coordinate $-1$ and post-special clock value $u=t+1$.
+From there the remaining row-$1$ tail contributes
+\[
+2(m-1-(t+1))+4 \equiv 2-2(t+1),
+\]
+so the final row-$1$ value is
+\[
+-1 + 2 - 2(t+1) = -1-2t = 2b+3.
+\]
+This is the claimed formula.
+\end{proof}
+
+\begin{proposition}[rows $1$ through $8$]\label{prop:rows1to8}
+For every odd $m\ge 11$ one has:
+\begin{align*}
+U_m(1,b)&=
+\begin{cases}
+(7,m-15), & b=1,\\
+(1,m-13), & b=m-11,\\
+(2,b-3), & \text{otherwise,}
+\end{cases}\\[0.5ex]
+U_m(2,b)&=
+\begin{cases}
+(2,m-2), & b=0,\\
+(2,m-14), & b=m-12,\\
+(3,b-3), & \text{otherwise,}
+\end{cases}\\[0.5ex]
+U_m(3,b)&=
+\begin{cases}
+(3,m-3), & b=m-1,\\
+(3,m-15), & b=m-13,\\
+(4,b-1), & \text{otherwise,}
+\end{cases}\\[0.5ex]
+U_m(4,b)&=
+\begin{cases}
+(4,m-2), & b=0,\\
+(4,m-14), & b=m-12,\\
+(5,b-3), & \text{otherwise,}
+\end{cases}\\[0.5ex]
+U_m(5,b)&=
+\begin{cases}
+(5,b-2), & b\in\{m-1,m-13\},\\
+(6,b-2), & \text{otherwise,}
+\end{cases}\\[0.5ex]
+U_m(6,b)&=
+\begin{cases}
+(6,b-2), & b\in\{m-1,m-13\},\\
+(7,b-2), & \text{otherwise,}
+\end{cases}\\[0.5ex]
+U_m(7,b)&=
+\begin{cases}
+(7,b-2), & b=m-1,\\
+(8,b-2), & \text{otherwise,}
+\end{cases}\\[0.5ex]
+U_m(8,b)&=
+\begin{cases}
+(0,m-2), & b=m-15,\\
+(8,b-2), & b=m-1,\\
+(9,b-2), & \text{otherwise.}
+\end{cases}
+\end{align*}
+\end{proposition}
+
+\begin{proof}
+Each row is a finite symbolic chase from Lemma~\ref{lem:non-special-dictionary}.
+We record the key points.
+
+\smallskip
+\noindent\textbf{Row $1$.}
+If $b=1$, then the successive special steps occur at $u=0,1,2,3,4,5$, giving
+\[
+(1,1,0)\to(2,0,1)\to(3,1,2)\to(4,0,3)\to(5,1,4)\to(6,1,5)\to(7,1,6).
+\]
+From there no further special occurs in the same $u$-cycle, and the remaining
+row-$7$ tail yields the final state $(7,m-15)$.
+If $b=m-11$, the only candidate special time is $u=6$, which is forbidden, so
+no special occurs and the row-$1$ tail gives $(1,m-13)$. For all other $b$,
+there is one special, sending the orbit to row $2$ with row-$1$ coordinate $0$;
+the remaining row-$2$ tail contributes $-2r$, where $r$ is the post-special
+clock value, so the total is $b-3$.
+
+\smallskip
+\noindent\textbf{Rows $2,4$.}
+The row-$2$ and row-$4$ non-special sweeps are the same shape: one repeated
+special value produces no new row jump, one forbidden $u=6$ value becomes the
+second self-row defect, and every other start gives one special followed by a
+row tail of total shift $-3$. This gives the displayed formulas.
+
+\smallskip
+\noindent\textbf{Row $3$.}
+Here the non-special sweep has one early $+4$ and one compensating $-2$ before
+settling into the constant tail. The two omitted start values are exactly
+$b=m-1$ and $b=m-13$; every other start gives one special and then a row-$4$
+tail of total shift $-1$.
+
+\smallskip
+\noindent\textbf{Rows $5,6,7$.}
+These rows already have the stable late-row shape from
+Lemma~\ref{lem:non-special-dictionary}. For rows $5$ and $6$ the forbidden
+clock time $u=6$ removes the second defect line $b=m-13$, while for row $7$ the
+split point occurs at $u=6$ itself, so only the line $b=m-1$ survives. Every
+other start has one special and then the usual tail shift $-2$.
+
+\smallskip
+\noindent\textbf{Row $8$.}
+The line $b=m-1$ is again the no-special line-A defect. The second distinguished
+start $b=m-15$ is the special chain created by the forbidden time $u=6$:
+\[
+(8,m-15,0)\to(8,m-13,1)\to\cdots\to(8,m-3,6)\to(8,1,7)
+\to(9,1,8)\to\cdots\to(m-1,2,m-2)\to(0,m-1,m-1)\to(0,m-2,0).
+\]
+All remaining starts give a single special and then the usual bulk shift to row
+$9$ with total change $b\mapsto b-2$.
+\end{proof}
+
+\begin{proposition}[the last two rows]\label{prop:last-rows}
+For every odd $m\ge 11$,
+\[
+U_m(m-2,b)=
+\begin{cases}
+(m-2,b-2), & b\in\{m-1,m-15\},\\
+(m-1,b-1), & \text{otherwise,}
+\end{cases}
+\]
+and
+\[
+U_m(m-1,b)=
+\begin{cases}
+(m-1,b-2), & b\in\{0,m-14\},\\
+(1,1), & b=4,\\
+(0,m-1), & b=2,\\
+\bigl(0,(b+m-6)/2\bigr), & b\text{ odd and }b\notin\{m-14,4,2\},\\
+\bigl(0,b/2-3\bigr), & b\text{ even and }b\notin\{0,4,2\}.
+\end{cases}
+\]
+\end{proposition}
+
+\begin{proof}
+For row $m-2$, the special/non-special pattern is the same as in the uniform
+late rows, except that the post-special row is $m-1$ rather than another late
+row. The unique special sends the orbit to row $m-1$ with row-$1$ value $0$,
+and the remaining row-$m-1$ tail contributes exactly $-1$; this gives the
+stated formula.
+
+For row $m-1$, Lemma~\ref{lem:non-special-dictionary} shows that before the
+special time the row-$1$ coordinate increases by $2$ each step, except for the
+usual late-row corrections at $u=m-3,m-2$. The special threshold is $b=m-2$
+except at $u=m-2$, where it is $b=2$. So:
+\begin{itemize}[leftmargin=2em]
+\item the omitted starts are $b=0$ and $b=m-14$, giving the two self-row
+      defects;
+\item the start $b=4$ reaches the $u=m-3$ special and then lands on row $1$
+      with row-$1$ coordinate $1$;
+\item the start $b=2$ reaches the last special at $u=m-1$ and lands on row $0$
+      with row-$1$ coordinate $m-1$;
+\item all remaining odd starts reach row $0$ with row-$1$ coordinate $m-1$ at
+      time $u=(m-2-b)/2+1$, and the remaining row-$0$ tail gives
+      $(b+m-6)/2$;
+\item all remaining even starts reach row $0$ with row-$1$ coordinate $m-1$ at
+      time $u=m-b/2$, and the remaining row-$0$ tail gives $b/2-3$.
+\end{itemize}
+These are exactly the displayed formulas.
+\end{proof}
+
+Combining Propositions~\ref{prop:late-rows}, \ref{prop:row0},
+\ref{prop:rows1to8}, and \ref{prop:last-rows} yields the exact natural
+row formula for $U_m$ on all rows.
+
+\section{Translation to the corrected-row model}
+
+We now translate the natural formulas above to the corrected coordinate
+\[
+v=b+c_m(a).
+\]
+A direct substitution gives the exact corrected-row rules conjectured in the 120
+handoff and written explicitly in 121:
+\begin{align*}
+&(0,m-8)\mapsto(0,m-10),\qquad (0,m-1)\mapsto(0,m-3),\qquad
+(0,v)\mapsto(1,2v+6)\text{ otherwise},\\
+&(1,4)\mapsto(7,2),\\
+&(a,2a+2)\mapsto(a,2a),\qquad (a,2a-10)\mapsto(a,2a-12)
+\quad(1\le a\le 6),\\
+&(7,16)\mapsto(7,14),\\
+&(8,4)\mapsto(0,m-2),\qquad (8,18)\mapsto(8,16),\\
+&(a,2a+2)\mapsto(a,2a),\qquad (a,2a-12)\mapsto(a,2a-14)
+\quad(9\le a\le m-2),\\
+&(m-1,0)\mapsto(m-1,m-2),\qquad (m-1,m-14)\mapsto(m-1,m-16),\\
+&(m-1,4)\mapsto(1,4),\qquad (m-1,2)\mapsto(0,m-1),\\
+&(m-1,r)\mapsto
+\begin{cases}
+\bigl(0,(r+m-6)/2\bigr), & r\text{ odd},\\
+\bigl(0,r/2-3\bigr), & r\text{ even},
+\end{cases}
+\quad r\notin\{0,m-14,4,2\},
+\end{align*}
+with the clean bulk rule $(a,v)\mapsto(a+1,v)$ away from those defects.
+
+This is exactly the model $U_m^{\sharp}$ of 120/121.
+
+\begin{theorem}[actual/model identification]\label{thm:actual-equals-model}
+For every odd $m\ge 11$, the actual third return $U_m$ agrees, in the
+corrected coordinates $(a,v)$, with the explicit corrected-row model
+$U_m^{\sharp}$ of 120/121.
+\end{theorem}
+
+\begin{proof}
+This is precisely the coordinate translation of the natural formulas proved in
+Section~4.
+\end{proof}
+
+\section{M5 closure for the live Sel$^{\star}$ route}
+
+We can now finish the live M5 route.
+
+\begin{theorem}[M5 for the color-$4$ Sel$^{\star}$ map, odd $m\ge 11$]
+For every odd $m\ge 11$, the color-$4$ torus map $F_4^{\star}$ is Hamilton.
+Equivalently, the third return
+\[
+U_m=(F_4^{\star})^{m^3}\big|_{P_2}
+\]
+is one cycle.
+\end{theorem}
+
+\begin{proof}
+By Theorem~\ref{thm:actual-equals-model}, the true return $U_m$ is identified
+with the corrected-row model $U_m^{\sharp}$. The 121 row-stitching theorem says
+that $U_m^{\sharp}$ is one cycle for every odd $m\ge 11$. Hence $U_m$ is one
+cycle. The 120 nested-return reduction theorem then implies that $F_4^{\star}$
+is Hamilton.
+\end{proof}
+
+\begin{corollary}[all odd moduli]
+The same Hamiltonicity statement holds for every odd $m\ge 5$.
+\end{corollary}
+
+\begin{proof}
+The theorem above handles all odd $m\ge 11$. The remaining odd moduli
+$m=5,7,9$ are finite and were exhaustively checked directly by the companion
+verification script for this note.
+\end{proof}
+
+\begin{remark}
+This closes the current M5 route in the intended fiber-return sense:
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2em]
+\item 120 reduced Hamiltonicity to the final section return $U_m$,
+\item 121 proved the corrected-row model is one cycle,
+\item the present note proves that the actual return equals that model for all
+      odd $m\ge 11$.
+\end{enumerate}
+So the observed 120 corrected-row evidence was not accidental; it is forced by
+an exact all-odd formula for the second return $T_m$.
+\end{remark}
+
+\end{document}

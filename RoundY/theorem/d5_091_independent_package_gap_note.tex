@@ -29,9 +29,11 @@ chain
 \]
 No new mathematical bottleneck is visible in that chain. What remains is to
 rewrite the imported inputs so that the final theorem no longer reads as proved
-only ``within the accepted package.'' The main missing item is one explicit
-chart-to-raw continuation theorem that packages the current use of
-\texttt{062} and \texttt{079} into a single proof object.
+only ``within the accepted package.'' The main missing item is now one compact
+concrete bridge theorem that replaces the still-imported \texttt{076} package
+in manuscript order. A one-pass readable downstream globalization package is
+now available in \texttt{099}, but it still leaves the standing theorem-package
+inputs explicit at the top.
 \end{abstract}
 
 \section{Purpose and exact current status}
@@ -65,9 +67,12 @@ union.
 \begin{remark}[Scope reminder]
 The theorem above is exactly the current accepted conclusion, but its proof is
 still distributed across imported notes. In particular, \texttt{076} remains a
-\emph{componentwise} concrete bridge theorem, \texttt{079} remains a
-\emph{chart/interface} theorem, and \texttt{083} becomes final only after
-those inputs are combined with \texttt{062}, \texttt{077}, and \texttt{081}.
+\emph{componentwise} concrete bridge theorem, and the accepted-chain proof
+still passes through \texttt{062}, \texttt{077}, \texttt{079}, \texttt{081},
+and \texttt{083}. In the cleaned package, the exact \texttt{079},
+\texttt{081}, \texttt{077}, and separate \texttt{062} roles are now supplied
+by the compact notes \texttt{095}--\texttt{098}, leaving \texttt{076} as the
+main imported theorem layer.
 \end{remark}
 
 \section{What an independent package should mean}
@@ -135,6 +140,14 @@ At present this content is mathematically sound but distributed across
 \texttt{033} and \texttt{062}. Independence asks for one theorem block, not a
 new proof idea.
 
+\begin{remark}[Update after 098]
+This structural block is now written explicitly in
+\texttt{theorem/d5\_098\_compact\_cleanup\_033\_062\_structural\_block.md}.
+The only remaining issue there is the broader defect-template provenance behind
+the trigger-family lemma, not a missing structural theorem for the odd-$m$
+globalization package.
+\end{remark}
+
 \subsection*{2. One explicit chart-to-raw continuation theorem}
 
 \begin{proposition}[Needed repackaging: actual exceptional continuation]
@@ -161,6 +174,12 @@ accepted notes rather than written as a single theorem object. This theorem is
 weaker than the final endpoint-class gluing theorem: it packages only the
 actual exceptional continuation, not the later tail-length or regular-union
 arguments that promote that continuation to global $\rho=\rho(\delta)$.
+\end{remark}
+
+\begin{remark}[Update after 095 and 098]
+The cleaned suite now has this role through the \texttt{095} chart/interface
+reproof together with the explicit structural block in \texttt{098}. So this is
+no longer the main missing item in the independent-package gap.
 \end{remark}
 
 \subsection*{3. One compact concrete bridge theorem}
@@ -204,6 +223,11 @@ The notions are already present in the chain, but they are spread across
 notes. An independent package should not force the reader to reconstruct them
 from context.
 
+\begin{remark}[Update after 092]
+The cleaned theorem suite now effectively contains this definition block, so
+this is no longer a serious remaining gap.
+\end{remark}
+
 \subsection*{5. Support files should become verification aids only}
 
 \begin{proposition}[Needed repackaging: move proof-critical content out of
@@ -225,14 +249,11 @@ Again, this is a packaging requirement, not evidence of a missing theorem idea.
 
 A compact independent package can be organized in the following order:
 \begin{enumerate}[label=\textup{\arabic*.},leftmargin=2.2em]
-\item one definition note collecting the final objects;
-\item one structural theorem note replacing the distributed \texttt{033 -> 062}
-block;
+\item the cleaned definition block already present in \texttt{092};
+\item the compact structural theorem note \texttt{098};
 \item one concrete bridge theorem note replacing the current promoted-support
 status of \texttt{076};
-\item the fixed-$\delta$ tail-length reduction;
-\item the regular-union theorem;
-\item the explicit chart-to-raw exceptional continuation theorem;
+\item the compact cleanup notes \texttt{097}, \texttt{096}, and \texttt{095};
 \item the final globalization theorem.
 \end{enumerate}
 
@@ -244,12 +265,13 @@ reconstruction from accepted imports.
 The shortest path from ``closed inside the accepted package'' to ``proved in a
 self-contained package'' is:
 \begin{enumerate}[label=\textup{\arabic*.},leftmargin=2.2em]
-\item write one self-contained \texttt{033 -> 062} structural theorem block;
-\item write one explicit theorem packaging raw exceptional first exit with the
-chart/interface continuation;
+\item keep \texttt{098} as the compact structural theorem block;
 \item compress \texttt{076} into one final concrete bridge theorem note;
-\item gather the final definitions in one manuscript-order theorem note;
-\item keep the JSON and CSV files as support only, not as implicit proof steps.
+\item keep the \texttt{095}--\texttt{097} cleanup notes as the stable compact
+support layers;
+\item keep the JSON and CSV files as support only, not as implicit proof steps;
+\item keep the broader \texttt{033} defect-template provenance explicit only
+where it is genuinely needed.
 \end{enumerate}
 
 If those five items are done, the phrase
@@ -266,10 +288,10 @@ proved in a self-contained odd-$m$ D5 theorem package.
 The remaining gap is no longer a theorem-search gap. It is a theorem-packaging
 gap:
 \begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.2em]
-\item one distributed structural block,
-\item one missing chart-to-raw composition theorem,
-\item one compact concrete bridge theorem statement, and
-\item one final definitions block.
+\item one compact concrete bridge theorem statement replacing \texttt{076}, and
+\item optionally, a first-principles proof of the broader \texttt{033}
+trigger-family classification beyond what \texttt{098} isolates for the
+globalization chain.
 \end{enumerate}
 
 So the right next work is theorem cleanup, not new theorem search.
