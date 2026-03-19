@@ -29,8 +29,9 @@ The repo is no longer just the original `d=3` manuscript bundle.
 - `RoundComposite/` contains the theorem-level composite-dimension product
   reduction and prime-to-composite closure note
 - `formal/` contains the Lean development, including a complete `d=4`
-  formalization, a complete `d=3` even Route E package, an active `d=3`
-  odometer rewrite, and conservative `d=5` extracted-model support
+  formalization, the completed `d=3` formal split
+  (`TorusD3Odd`, `TorusD3Even`, `TorusD3Odometer`), and conservative `d=5`
+  extracted-model support
 - `RoundY/` contains the closed odd-`m` D5 theorem package, the open even-`m`
   branch, and the current generalization / screening notes
 
@@ -230,15 +231,23 @@ The `formal/` tree now contains:
 
 - a complete `d=4` formalization;
 - a complete `d=3` even Route E package;
-- an active `d=3` odometer rewrite, with `Color2Full`, `Color1FullCaseI`,
-  `Color1FullCaseII`, and `Color0FullCaseI` complete, while
-  `Color0FullCaseII` is the current frontier;
+- the completed current `d=3` odometer rewrite:
+  `Color2Full`,
+  `Color1FullCaseI`,
+  `Color1FullCaseII`,
+  `Color0FullCaseI`,
+  `Color0FullCaseII`,
+  and
+  `Color0FullCaseIIModFour`;
+- the pre-existing odd-`m` `d=3` closure in `TorusD3Odd`, so small odd cases
+  such as `m = 3` are already covered there rather than needing a separate
+  odometer-side reproof;
 - the extracted-model / specification scaffolding for `d=5`.
 
-So the live formal scope question is no longer whether the color-1 odometer
-rewrite closes. It does. The active `d=3` Lean frontier is now the remaining
-upper-lane and dispatcher work in color-0 Case II, while `d=5` Lean remains a
-support/specification branch rather than the main research frontier.
+So the live formal scope question is no longer whether the current `d=3`
+odometer rewrite closes. It does. The remaining formal work is cleanup,
+presentation, and any future abstraction/refactor passes, while `d=5` Lean
+remains a support/specification branch rather than the main research frontier.
 
 ## Research progression
 

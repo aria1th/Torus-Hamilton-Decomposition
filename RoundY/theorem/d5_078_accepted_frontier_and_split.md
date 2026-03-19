@@ -2,6 +2,33 @@
 
 This note records the accepted post-`077` frontier for odd `m` in `d=5`.
 
+Historical note:
+
+- this is the correct record of the post-`077` split before the later cleanup
+  compression;
+- in the cleaned `092` package, the later compact notes `095`--`098` remove
+  `079`, `081`, and `077` as standalone support theorems and absorb the
+  separate `062` structural role, but they do not change the historical role
+  of the present post-`077` frontier note.
+- the later one-pass package note `099` then assembles the downstream odd-`m`
+  theorem flow into one read-through document on top of those cleaned layers,
+  without changing the historical role of the present post-`077` frontier note.
+- the later draft note `100` is only a graph-theoretic proof scaffold with
+  explicit `sorry` markers; it does not change the historical role of the
+  present post-`077` frontier note either.
+- the later filled-packet / rewrite notes `111–114` sharpen the downstream
+  graph-theoretic frontier by ruling out raw-row compression, solving bare
+  selector existence symbolically, and reducing the remaining D5-specific
+  selector problem to weighted defect-slice factorization on `Sigma=2,3`;
+  the executed `115` packet then confirms that the small-tier selector tables
+  are stable but the first natural slice-4 compression families are still
+  no-go; the later `116–118` package then proposes a corrected-selector
+  replacement and shifts the live downstream reading toward M5; the promoted
+  `119–122` notes then close the color-4 Sel* M5 route itself by a final-section
+  corrected-row model and all-odd identification; these later developments
+  still do not change the historical role of the present post-`077` frontier
+  note.
+
 It is the current compact statement of:
 
 - what is now accepted,
@@ -59,6 +86,17 @@ Accepted componentwise package:
 - uniform splice law,
 - uniform current-event readout,
 - orbit-segment description of the component boundary image.
+
+Later comparison note `106` clarifies how this concrete object should be read.
+The bare dynamic bridge `(beta,q,sigma)` / `(beta,delta)` is the right checked
+splice-compatible quotient, but it is not literally the same theorem-side state
+space as the grouped-base exact quotient on the marked object. On the checked
+comparison object, the sharp relation is
+
+`(B,beta) ~= (rho,beta,q,sigma) -> (beta,q,sigma)`,
+
+so the dynamic bridge forgets source-residue bookkeeping and only becomes
+equivalent after adjoining `rho`.
 
 ### 1.5 What `077` adds
 

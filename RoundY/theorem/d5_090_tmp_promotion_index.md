@@ -39,6 +39,24 @@ The following `tmp/` notes now have stable theorem-level replacements:
   -> `theorem/d5_095_compact_reproof_079_chart_interface_landing.md`
 - `tmp/d5_095_compact_reproof_079_chart_interface_landing.tex`
   -> `theorem/d5_095_compact_reproof_079_chart_interface_landing.tex`
+- `tmp/d5_096_compact_reproof_081_regular_closure.md`
+  -> `theorem/d5_096_compact_reproof_081_regular_closure.md`
+- `tmp/d5_096_compact_reproof_081_regular_closure.tex`
+  -> `theorem/d5_096_compact_reproof_081_regular_closure.tex`
+- `tmp/d5_097_compact_reproof_077_tail_length_reduction.md`
+  -> `theorem/d5_097_compact_reproof_077_tail_length_reduction.md`
+- `tmp/d5_097_compact_reproof_077_tail_length_reduction.tex`
+  -> `theorem/d5_097_compact_reproof_077_tail_length_reduction.tex`
+- `tmp/d5_098_compact_cleanup_033_062_structural_block.md`
+  -> `theorem/d5_098_compact_cleanup_033_062_structural_block.md`
+- `tmp/d5_098_compact_cleanup_033_062_structural_block.tex`
+  -> `theorem/d5_098_compact_cleanup_033_062_structural_block.tex`
+- `tmp/d5_121_M5_corrected_row_stitching_note.tex`
+  -> `theorem/d5_121_M5_corrected_row_stitching.tex`,
+     `theorem/d5_121_M5_corrected_row_stitching.md`
+- `tmp/d5_122_M5_all_odd_identification_note.tex`
+  -> `theorem/d5_122_M5_all_odd_identification.tex`,
+     `theorem/d5_122_M5_all_odd_identification.md`
 
 ## 2. Already promoted earlier
 

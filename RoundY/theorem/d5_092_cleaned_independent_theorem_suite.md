@@ -10,10 +10,10 @@ The statements are no longer split across the `033 -> 062 -> 076 -> 077 ->
 chart-to-raw composition step are written explicitly, and the final gluing
 argument is presented as one continuous proof.
 
-The note stays honest about support. The componentwise concrete bridge,
-fixed-`delta` tail-length reduction, chart/interface theorem, and regular
-continuation theorem are retained in their accepted theorem form rather than
-rederived here from the original compute-backed files.
+The note stays honest about support. The componentwise concrete bridge remains
+in accepted theorem form. The chart/interface, regular-continuation,
+tail-length, and compact structural roles are supplied by the cleanup notes
+`095`--`098` rather than rederived here from the original compute-backed files.
 
 ## 1. Scope and conventions
 
@@ -134,7 +134,8 @@ Write the candidate update as
 - `Fhat(q,w,u,2) = (q,w+1_{q=m-1},u,3)`,
 - `Fhat(q,w,u,Theta) = (q,w,u,Theta+1)` for `3 <= Theta <= m-1`.
 
-The exact trigger family is the promoted `033` formula, namely
+The exact trigger family is the compact trigger-family lemma later isolated in
+`098`, namely
 
 `H_L1 = {(m-1,m-1,u,2) : u != 2}`.
 
@@ -145,7 +146,7 @@ On the candidate orbit, every phase-`1` state satisfies
 
 `q = u - rho + 1 mod m`.
 
-This is the phase-`1` source-residue invariant of `062`: it holds at the first
+This is the phase-`1` source-residue invariant later packaged in `098`: it holds at the first
 phase-`1` state after entry, and from one phase-`1` state to the next both
 sides increment by `1`.
 
@@ -166,18 +167,19 @@ invariant gives
 so when `rho = 4` one has `u = 1`, hence `u != 2`, and the exit occurs there.
 Thus the candidate first exits are the universal targets stated above.
 
-The remaining `062` input is pre-exit patch avoidance: before the candidate
-first-exit time, the candidate orbit avoids the patched current classes. Hence
-all pre-exit actual states are `B`-labeled and therefore follow the same
-full-coordinate updates as the candidate orbit. So the actual active branch
-agrees with the candidate orbit up to first exit, and the same first-exit
-statement holds on the actual branch. `qed`
+The last localized structural ingredient is pre-exit patch avoidance, also
+written out explicitly in `098`: before the candidate first-exit time, the
+candidate orbit avoids the patched current classes. Hence all pre-exit actual
+states are `B`-labeled and therefore follow the same full-coordinate updates as
+the candidate orbit. So the actual active branch agrees with the candidate
+orbit up to first exit, and the same first-exit statement holds on the actual
+branch. `qed`
 
-## 4. Accepted support theorems in cleaned form
+## 4. Support theorems in cleaned form
 
 ### Proposition 4.1 (componentwise concrete bridge; accepted support theorem)
 
-On the unique `Theta = 2` state `(q,w,u,2)` of a full regular chain, define
+On the unique `Theta = 2` boundary state `(q,w,u,2)` of a full chain, define
 
 - `sigma = w + u - q - 1 mod m`,
 - `delta = q + m sigma`.
@@ -198,7 +200,7 @@ Then on each splice-connected accessible component:
 This is the promoted theorem content of `076`, rewritten as one compact bridge
 statement.
 
-### Proposition 4.2 (tail-length reduction; accepted support theorem)
+### Proposition 4.2 (tail-length reduction; compactly reproved support theorem)
 
 At fixed realized `delta`, two actual lifts can differ only by remaining
 full-chain tail length.
@@ -209,9 +211,10 @@ ambiguity is endpoint geometry.
 
 #### Proof status
 
-This is the promoted theorem content of `077`.
+This is the compact reproof content of `097`, replacing the old standalone
+`077` role in the cleaned suite.
 
-### Proposition 4.3 (chart/interface theorem; accepted support theorem)
+### Proposition 4.3 (chart/interface theorem; compactly reproved support theorem)
 
 The exceptional continuation is pinned in chart / chain-label coordinates to
 
@@ -224,9 +227,10 @@ where
 
 #### Proof status
 
-This is the promoted theorem content of `079`.
+This is the compact reproof content of `095`, replacing the old standalone
+`079` role in the cleaned suite.
 
-### Proposition 4.4 (regular continuation theorem; accepted support theorem)
+### Proposition 4.4 (regular continuation theorem; compactly reproved support theorem)
 
 Every regular realization of every realized `delta` continues on the true larger
 regular accessible union.
@@ -236,7 +240,8 @@ regular tail-length ambiguity.
 
 #### Proof status
 
-This is the promoted theorem content of `081`.
+This is the compact reproof content of `096`, replacing the old standalone
+`081` role in the cleaned suite.
 
 ## 5. The cleaned composition theorem
 
@@ -270,7 +275,7 @@ continuation. `qed`
 
 ### Corollary 5.2 (single-row globalization criterion)
 
-Assume the accepted support theorems of Section 4. Then the full raw
+Assume the support theorems of Section 4. Then the full raw
 globalization theorem is equivalent to one statement:
 
 > every actual lift of the exceptional cutoff row `delta = 3m-3` glues through
@@ -389,13 +394,13 @@ This note makes the following items explicit in one place:
 3. the single-row globalization criterion;
 4. the final gluing/globalization proof.
 
-The inputs still used in accepted-support form are exactly:
+The only theorem layer still used in accepted-support form is:
 
-- the componentwise concrete bridge package (`076`),
-- the fixed-`delta` tail-length reduction (`077`),
-- the chart/interface theorem (`079`),
-- the regular continuation theorem (`081`).
+- the componentwise concrete bridge package (`076`).
 
-So this note is now independent in theorem statement and proof order. It is not
-yet a full replacement for every raw compute-backed support file, and it does
-not claim to be one.
+The chart/interface, regular-continuation, tail-length, and structural roles
+are now supplied by the cleanup notes `095`--`098`.
+
+So this note is now very close to independent in theorem statement and proof
+order. It is not yet a full replacement for the compact bridge theorem around
+`076`, and it does not claim to be one.

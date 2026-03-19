@@ -34,20 +34,46 @@ If you need to continue the current Lean rewrite work, read in this order:
 4. `formal/TorusD3Odometer/Color1FullCaseII.lean`
 5. `formal/TorusD3Odometer/Color0FullCaseI.lean`
 6. `formal/TorusD3Odometer/Color0FullCaseII.lean`
+7. `formal/TorusD3Even/Color0.lean` if you need the mod-`4` color-`0`
+   Case-II splice source
 
 Current verified Lean state:
 
 - `formal/TorusD3Even/` is complete for the D3-even Route-E package.
+- `m = 3` does not need a separate reproof in the current formal split:
+  it is already covered by
+  `formal/TorusD3Odd/FullCycles.lean`
+  through the odd-branch theorems
+  `hasCycle_pairColorMap`,
+  `hasCycle_colorMap`,
+  and
+  `all_colors_haveCycle`
+  under `[Fact (Odd m)] [Fact (2 < m)]`.
 - `formal/TorusD3Odometer/Color2Full.lean` is a genuine full odometer rewrite.
 - `formal/TorusD3Odometer/Color1FullCaseI.lean` and
   `formal/TorusD3Odometer/Color1FullCaseII.lean` are both complete.
 - `formal/TorusD3Odometer/Color0FullCaseI.lean` is complete.
-- `formal/TorusD3Odometer/Color0FullCaseII.lean` is the active frontier.
-  Its mod-10 warm-up lanes `x = 1` and `x = 2` are complete, the safe
-  odd-generic subfamily `3 <= x <= m - 11` has a real first-return theorem,
-  and the full mod-10 even family `4 <= x <= m - 8`, `Even x`
-  is now closed through
-  `firstReturn_line_even_generic_caseII_mod_ten`.
+- `formal/TorusD3Odometer/Color0FullCaseII.lean` closes the full
+  color-`0`, Case-II, mod-`10` odometer rewrite through
+  `hreturn_line_case0_caseII_mod_ten`,
+  `hfirst_line_case0_caseII_mod_ten`,
+  `cycleOn_returnMap0CaseII_caseII_mod_ten`,
+  and
+  `cycleOn_fullMap0CaseII_caseII_mod_ten`.
+- `formal/TorusD3Odometer/Color0FullCaseIIModFour.lean` now closes the full
+  color-`0`, Case-II, mod-`4` odometer rewrite through
+  `hreturn_line_case0_caseII_mod_four`,
+  `hfirst_line_case0_caseII_mod_four`,
+  `cycleOn_returnMap0CaseII_caseII_mod_four`,
+  and
+  `cycleOn_fullMap0CaseII_caseII_mod_four`.
+- The full current D3 odometer rewrite is therefore complete and the root
+  target
+  `lake build TorusD3Odometer`
+  is green.
+- Read that odometer tree as the completed D3-even presentation layer.
+  It does not replace the pre-existing odd D3 closure; small odd cases such as
+  `m = 3` remain on the odd branch.
 
 Stable proof-engineering pattern for the odometer rewrite:
 
@@ -75,56 +101,15 @@ Stable proof-engineering pattern for the odometer rewrite:
 
 Current exact Lean frontier:
 
-- file: `formal/TorusD3Odometer/Color0FullCaseII.lean`
-- status:
-  mod-10 warm-up lanes `x = 1` and `x = 2` are done,
-  the safe odd-generic subfamily `3 <= x <= m - 11` is now closed through
-  `firstReturn_line_odd_generic_caseII_mod_ten_safe`,
-  the next upper odd special lane
-  `firstReturn_line_m_sub_five_caseII_mod_ten`
-  is now also closed on top of the repaired
-  `dir = 0` tail / point lemmas,
-  the trivial lane `x = 0` is closed,
-  the upper special lanes
-  `firstReturn_line_m_sub_four_caseII_mod_ten`
-  and
-  `firstReturn_line_m_sub_one_caseII_mod_ten`
-  are now closed,
-  and the full even generic family
-  `4 <= x <= m - 8`, `Even x`
-  is now closed through
-  `firstReturn_line_even_generic_caseII_mod_ten`
-  together with the boundary theorems
-  `firstReturn_line_m_sub_ten_caseII_mod_ten`
-  and
-  `firstReturn_line_m_sub_eight_caseII_mod_ten`,
-  and the root build is green
-- next missing block:
-  the remaining upper Case-II special lanes
-  `x = m - 6`, `x = m - 2`,
-  then the global Case-II `hreturn` dispatcher
-  and later the `hfirst` layer
-- expected next helper shape:
-  short explicit upper-tail lane packages on top of the existing
-  widened wrapped-upper-column lemmas ->
-  then the Case-II `hreturn` layer
-  The two safe widenings that already paid off are:
-  odd-column helpers from `x <= m - 4` to `x <= m - 2`,
-  and wrapped-upper-column helpers from `c >= 7` down to `c >= 1`.
-  A tempting further simplification was tested and rolled back:
-  dropping the oddness hypothesis from the wrapped-upper-column family is not
-  currently justified by the existing arithmetic proof, so do not treat that
-  helper as parity-free without a new dedicated argument.
-  That bounded helper experiment has now succeeded:
-  the right extra abstraction was a tiny fixed even-column tail package on
-  column `2`, plus the `Q`-point step
-  `returnMap0CaseIIXY_m_sub_one_m_sub_one`.
-  `formal/TorusD3Odometer/Color0FullCaseII.lean` now contains
-  `iterate_returnMap0CaseIIXY_two_column_to_zero`
-  and
-  `firstReturn_line_m_sub_three_caseII_mod_ten`.
-  The corrected endpoint is:
-  `x = m - 3` returns to `2`, not to `1`.
+- The proof content frontier is no longer a missing D3 odometer theorem.
+- The current optional work is cleanup / presentation:
+  - linter cleanup in `formal/TorusD3Odometer/`
+  - possible consolidation of duplicated mod-`10` / mod-`4` helper layers
+  - higher-level documentation of the completed odometer rewrite split
+    (`Color2Full`, `Color1FullCaseI`, `Color1FullCaseII`,
+    `Color0FullCaseI`, `Color0FullCaseII`, `Color0FullCaseIIModFour`)
+- If a new proof task is needed, the next natural one is not another missing
+  D3-even theorem but either cleanup or a new abstraction/refactor pass.
 
 ## Current D5 state
 

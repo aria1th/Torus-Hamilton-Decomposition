@@ -56,13 +56,24 @@ flowchart TD
 | Final theorem | raw global `(beta,delta)` exact inside accepted package | `[A]` | `theorem/d5_083_final_theorem_proof.md` |
 | Remaining work | dependency audit / final packaging | `[O]` | `theorem/d5_086_dependency_audit_and_generalization_gate.md` |
 
+## Cleanup update after `095`--`098`
+
+- `095` supplies the compact chart/interface statement used by the cleaned
+  `092` suite;
+- `096` supplies the compact regular-closure statement used there;
+- `097` supplies the compact tail-length reduction used there;
+- `098` supplies the compact structural block that absorbs the separate `062`
+  role;
+- the remaining live manuscript cleanup is now concentrated on the bridge
+  package around `076`.
+
 ## What the diagram says
 
 The theorem chain is no longer blocked at the exceptional row.
 
 The present bottleneck is organizational:
 
-1. recheck the imported accepted inputs, especially `033 -> 062` and `079`;
+1. recheck the remaining imported bridge layer around `076`;
 2. tighten the final manuscript-order chain if needed;
 3. only then treat D5 as ready for broader generalization.
 

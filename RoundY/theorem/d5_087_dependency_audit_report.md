@@ -26,11 +26,11 @@ The only issues are packaging and citation discipline:
 
 | Input | Role in final proof | Audit result | Action |
 |------|----------------------|--------------|--------|
-| `033 -> 062` | structural first-exit chain | sound, but `033` trigger formula was previously not isolated as a stable theorem note | promote and cite stable trigger note |
+| `033 -> 062` | structural first-exit chain | sound, and now compactly rewritten in `098` | use `098` for cleaned-package citations and keep `033` provenance explicit when needed |
 | `076` concrete bridge | componentwise odometer law and event readout | sound at stated scope | keep “componentwise” explicit in citations |
-| `077` tail-length reduction | converts endpoint ambiguity to tail-length ambiguity | sound and theorem-level | no change |
-| `079` interface theorem | pins chart/interface landing to `3m-3 -> 3m-2 -> 3m-1` | sound, but only as chart/interface theorem | cite together with `062` when deriving actual exceptional continuation |
-| `081` regular continuation | closes regular raw gluing | sound and theorem-level | no change |
+| `077` tail-length reduction | converts endpoint ambiguity to tail-length ambiguity | sound and theorem-level | use `097` for the cleaned-package compact reproof where appropriate |
+| `079` interface theorem | pins chart/interface landing to `3m-3 -> 3m-2 -> 3m-1` | sound, but only as chart/interface theorem | use `095` for the cleaned-package compact reproof where appropriate |
+| `081` regular continuation | closes regular raw gluing | sound and theorem-level | use `096` for the cleaned-package compact reproof where appropriate |
 | `082` exceptional-row reduction | reduces globalization to one clause | sound and theorem-level | no change |
 | `083` final proof | closes theorem in-package | sound relative to imported chain | no change |
 
@@ -56,6 +56,13 @@ note.
 That is now fixed by:
 
 - `theorem/d5_033_explicit_trigger_family.md`
+
+Update after `098`:
+
+- the cleaned package now has the compact structural block at
+  `theorem/d5_098_compact_cleanup_033_062_structural_block.md`;
+- so the old `033 -> 062` route remains important mainly as provenance for the
+  exact trigger-family classification, not as a live theorem-packaging gap.
 
 ### 2. `076` is safe, but only at its stated scope
 
@@ -118,6 +125,23 @@ The audit found no reason to reopen:
 Once the `062 + 079` pairing is cited correctly, the end of the chain is
 internally coherent.
 
+Update after `096`:
+
+- the exact regular-closure statement needed by the cleaned `092` suite is now
+  reproved directly in
+  `theorem/d5_096_compact_reproof_081_regular_closure.md`;
+- `081` remains the historical promoted support note, but it is no longer a
+  live selective reproof target.
+
+Update after `097/098`:
+
+- the tail-length role of `077` is now compactly reproved in
+  `theorem/d5_097_compact_reproof_077_tail_length_reduction.md`;
+- the separate `062` structural role is now compacted in
+  `theorem/d5_098_compact_cleanup_033_062_structural_block.md`;
+- so the main remaining manuscript cleanup target is the compact bridge theorem
+  around `076`.
+
 ## Practical conclusion
 
 The current D5 odd-`m` theorem package is stable enough to stop calling the
@@ -127,8 +151,8 @@ What still deserves work before broader generalization is not theorem search,
 but theorem cleanup:
 
 1. keep the new stable `033` trigger note in the citation chain;
-2. keep the scope of `076` explicit and use `095` for the compact chart landing
-   step where appropriate;
+2. keep the scope of `076` explicit and use `095`--`098` for the compact
+   chart / regular / tail-length / structural steps where appropriate;
 3. optionally rewrite the final D5 proof in one shorter manuscript-order note.
 
 ## Recommendation on next step

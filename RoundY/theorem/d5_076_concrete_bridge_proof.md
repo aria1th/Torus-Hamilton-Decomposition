@@ -8,7 +8,7 @@ It isolates the concrete facts needed to pass from the abstract bridge
 
 ## 1. Intrinsic boundary digits
 
-On the unique `Theta = 2` state `(q,w,u,2)` of a full regular chain, define
+On the unique `Theta = 2` boundary state `(q,w,u,2)` of a full chain, define
 
 `sigma = w + u - q - 1 mod m`
 
@@ -29,7 +29,8 @@ Under first return to the `Theta = 2` section,
 - `sigma' = sigma + 1_{q=m-1} mod m`,
 - hence `delta' = delta + 1 mod m^2`.
 
-So consecutive full regular chains always satisfy the odometer splice law
+So consecutive full chains on a splice-connected accessible component always
+satisfy the odometer splice law
 
 `delta -> delta+1`.
 

@@ -10,8 +10,8 @@ The answer is short:
 
 - `092` largely closes the manuscript-order packaging gap;
 - the remaining issue is not a new D5 bottleneck;
-- the only serious "reproof" targets are the support theorems still imported
-  as accepted theorem packages.
+- the only serious remaining "reproof" target is the support theorem still
+  imported in accepted form.
 
 ## 1. What `092` already fixes
 
@@ -35,28 +35,34 @@ are no longer the main gap.
 
 ## 2. Theorems still used in accepted-support form
 
-`092` itself states the remaining imported support clearly.
+`092` originally stated the remaining imported support clearly. After the
+`095`--`098` cleanup pass, the live imported support list for the cleaned suite
+is shorter still.
 
-These are:
+These are now:
 
-1. **componentwise concrete bridge package** from `076`;
-2. **fixed-`delta` tail-length reduction** from `077`;
-3. **chart/interface theorem** from `079`;
-4. **regular continuation theorem** from `081`.
+1. **componentwise concrete bridge package** from `076`.
 
-Those are the only theorems that still sit outside the fully inlined `092`
-suite.
-
-Update after `095`:
+Update after `095`--`098`:
 
 - the `079` chart/interface role is now compactly reproved in
   [d5_095_compact_reproof_079_chart_interface_landing.md](./d5_095_compact_reproof_079_chart_interface_landing.md);
-- so the live selective reproof set is now best read as `076`, `077`, `081`,
-  and the upstream `033/062` structural compression, rather than `079`.
+- the `081` regular-continuation role is now compactly reproved in
+  [d5_096_compact_reproof_081_regular_closure.md](./d5_096_compact_reproof_081_regular_closure.md);
+- the `077` tail-length role is now compactly reproved in
+  [d5_097_compact_reproof_077_tail_length_reduction.md](./d5_097_compact_reproof_077_tail_length_reduction.md);
+- the old `033/062` structural block is now compactly cleaned in
+  [d5_098_compact_cleanup_033_062_structural_block.md](./d5_098_compact_cleanup_033_062_structural_block.md);
+- the downstream globalization flow is now also assembled in one read-through
+  note at
+  [d5_099_one_pass_odd_m_globalization_package.md](./d5_099_one_pass_odd_m_globalization_package.md);
+- so the live selective reproof set is now best read as the compact bridge
+  theorem around `076`, with only optional first-principles `033` provenance
+  beyond that.
 
 ## 3. Which of these most deserve re-proving or inlining
 
-Not all four are equally urgent.
+Most of the earlier targets are now resolved; one live item remains.
 
 ### 3.1 Highest priority: `076`
 
@@ -93,63 +99,64 @@ What now counts as the adopted compact reproof:
 
 So `079` is no longer a main remaining reproof target.
 
-### 3.3 Active reproof track: `081`
+### 3.3 Reproved in compact form: `081`
 
 Why:
 
-- `081` is now conceptually clean and theorem-level;
-- it closes the regular sector and does not seem like a mathematical risk.
+- `081` was already conceptually clean and theorem-level;
+- it closes the regular sector and never looked like the fragile point in the
+  package.
 
-What would count as reproof:
+What now counts as the adopted compact reproof:
 
-- a shorter proposition proving regular continuation in the exact language of
-  `092`.
+- [d5_096_compact_reproof_081_regular_closure.md](./d5_096_compact_reproof_081_regular_closure.md)
+  proves the exact regular-closure statement used by `092` directly from the
+  frozen regular-window formulas and the promoted endpoint witness table.
 
-This is useful for manuscript cleanliness, but it is not the place where the
-package still feels fragile.
+So `081` is no longer a main remaining reproof target.
 
-### 3.4 Active reproof track: `077`
+### 3.4 Reproved in compact form: `077`
 
 Why:
 
-- `077` is already a conceptual reduction theorem:
-  fixed-`delta` ambiguity reduces to tail length.
-- Once totality is proved, the use of `077` inside `092` is very clean.
+- `077` was already a conceptual reduction theorem:
+  fixed-`delta` ambiguity reduces to tail length;
+- once totality is proved, its use inside `092` is very clean.
 
-What would count as reproof:
+What now counts as the adopted compact reproof:
 
-- a shorter proposition on endpoint ambiguity at fixed `delta`, stated directly
-  in the final definitions of `092`.
+- [d5_097_compact_reproof_077_tail_length_reduction.md](./d5_097_compact_reproof_077_tail_length_reduction.md)
+  proves directly that, at fixed realized `delta`, the padded future word and
+  endpoint class are determined exactly by tail length.
 
-This would improve compactness, but it is the least urgent of the four.
+So `077` is no longer a main remaining reproof target.
 
-## 4. One subtle additional item inside Section 3 of `092`
+## 4. Structural cleanup after 098
 
-Although `092` writes Theorem 3.1 as a continuous proof, it still explicitly
-uses one accepted `062` ingredient in proof form:
+The old localized `062` issue inside Section 3 of `092` was the pre-exit
+patch-avoidance clause.
 
-- pre-exit patch avoidance.
+Update after `098`:
 
-So if one wants to be very strict, the remaining upstream inlining target is:
+- [d5_098_compact_cleanup_033_062_structural_block.md](./d5_098_compact_cleanup_033_062_structural_block.md)
+  now writes that structural block out explicitly in compact theorem form;
+- so the remaining external issue there is only the broader defect-template
+  provenance behind the trigger-family lemma, not a missing structural theorem
+  for the odd-`m` globalization package itself.
 
-5. **the pre-exit patch-avoidance clause inside the structural first-exit
-   theorem**.
-
-This is not a new theorem search target. It is a compression target:
-
-- isolate the patch-avoidance lemma cleanly inside the structural block, or
-- keep citing `062` explicitly as the proof source for that clause.
+This is not a new theorem search target. It is now best treated as a solved
+cleanup item unless one insists on a full first-principles rebuild of the old
+`033` classification layer.
 
 ## 5. Recommended reproof order
 
 If the goal is a genuinely tighter independent package, the best order is now:
 
 1. compact reproof / inline version of `076`;
-2. isolate or inline the `062` pre-exit patch-avoidance clause in Theorem 3.1;
-3. compress `081`;
-4. compress `077`;
-5. if useful, rewrite Theorem 3.1 so the `033 -> 062` structural block is more
-   self-contained.
+2. if desired, keep `098` as the compact structural block and state its honest
+   dependency boundary on the old `033` artifact line;
+3. if useful, rewrite the bridge theorem and final theorem into one even
+   shorter manuscript package around `092`.
 
 This order matches both `087` and the structure of `092`.
 
@@ -166,14 +173,14 @@ few support theorems still imported by `092`.
 
 ## 7. Bottom line
 
-After `092`, the cleaned odd-`m` D5 package is close to independent.
+After `095`--`098`, the cleaned odd-`m` D5 package is close to independent.
 
 The main remaining reproof targets are now:
 
 1. `076` concrete componentwise bridge;
-2. the `062` pre-exit patch-avoidance clause used inside Theorem 3.1;
-3. the in-progress `081` and `077` compressions;
-4. the upstream `033/062` structural cleanup where needed.
+2. optional first-principles provenance for the old `033` trigger-family
+   classification beyond what `098` already isolates.
 
-`079` has effectively moved off this list because `095` now supplies the
-compact chart/interface reproof needed by the cleaned suite.
+`079`, `081`, `077`, and the separate `062` structural role have effectively
+moved off this list because `095`--`098` now supply the compact cleaned-package
+statements used by `092`.

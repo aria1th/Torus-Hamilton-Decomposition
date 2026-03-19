@@ -5,7 +5,7 @@ Hamilton decomposition of the directed `5`-torus
 `D_5(m) = Cay((Z_m)^5, {e_0, e_1, e_2, e_3, e_4})`.
 
 **Status:** `[C]` closed inside the accepted theorem package.  
-**Current frontier:** after the promoted `083` proof, the odd-`m` D5 theorem closes within the accepted `076–082` package. The live task is now a short dependency audit of the imported structural inputs, especially `033 -> 062`, the componentwise concrete bridge `076`, and the in-progress `077/081` compressions, before using D5 as a base for broader generalization.
+**Current frontier:** after the promoted `083` proof, the cleanup notes `095`--`098`, and the one-pass globalization package note `099`, the odd-`m` D5 globalization theorem can now be read straight through in one manuscript-order document. The active downstream graph-theoretic frontier has moved from the old raw-row / defect-correction phase into a corrected-selector plus return-cycle phase: `116` proposes an exact symbolic slice-4 transport field `F4sharp = (B2,B3,B4,Z,O,M)`, `117` proposes a direct corrected-selector theorem for odd `m >= 5`, `118` explains why that would shift the live burden from M4 to M5, `119` rules out the easiest low-complexity first-return factors for `Sel*`, and `120`--`122` close the color-4 Sel* M5 route on odd moduli by an explicit corrected-row final-section model. So the current graph-theoretic todo is best read as: stabilize and adopt the corrected-selector package from `116/117`, then integrate the now-closed color-4 M5 route and the remaining graph-level packages rather than reopening generic selector or return-map search.
 
 For the shortest dependency/progress picture, see
 [theorem/d5_086_dependency_flow_diagram.md](./theorem/d5_086_dependency_flow_diagram.md).
@@ -23,9 +23,72 @@ reproof targets, see
 and
 [theorem/d5_093_reproof_targets_after_092.md](./theorem/d5_093_reproof_targets_after_092.md).
 
-For the compact reproof that removes `079` as a standalone support theorem
-inside that cleaned package, see
-[theorem/d5_095_compact_reproof_079_chart_interface_landing.md](./theorem/d5_095_compact_reproof_079_chart_interface_landing.md).
+For the compact reproofs that remove `079`, `081`, and `077` as standalone
+support theorems inside that cleaned package, see
+[theorem/d5_095_compact_reproof_079_chart_interface_landing.md](./theorem/d5_095_compact_reproof_079_chart_interface_landing.md)
+and
+[theorem/d5_096_compact_reproof_081_regular_closure.md](./theorem/d5_096_compact_reproof_081_regular_closure.md)
+and
+[theorem/d5_097_compact_reproof_077_tail_length_reduction.md](./theorem/d5_097_compact_reproof_077_tail_length_reduction.md).
+
+For the compact cleanup that absorbs the separate `062` structural role and
+localizes the remaining `033` trigger-family input inside the cleaned package,
+see
+[theorem/d5_098_compact_cleanup_033_062_structural_block.md](./theorem/d5_098_compact_cleanup_033_062_structural_block.md).
+
+For a one-pass readable odd-`m` globalization package that states the standing
+inputs once and carries the downstream proofs in one place, see
+[theorem/d5_099_one_pass_odd_m_globalization_package.md](./theorem/d5_099_one_pass_odd_m_globalization_package.md).
+
+For a graph-theoretic Hamilton-decomposition proof draft with explicit `sorry`
+markers at the still-missing reduction / lifting / coverage steps, see
+[theorem/d5_100_graph_theoretic_hamilton_decomposition_proof_draft.md](./theorem/d5_100_graph_theoretic_hamilton_decomposition_proof_draft.md).
+
+For the quotient-identification note that explains why the downstream intended
+quotient should still be stated theorem-side, and how it compares to the
+dynamic bridge `(beta,q0,sigma)` / `(beta,delta)`, see
+[theorem/d5_106_intended_quotient_identification_and_comparison.md](./theorem/d5_106_intended_quotient_identification_and_comparison.md).
+
+For the filled raw M4 packet, the current compression gap note, and the
+request-ready graph-theoretic handoff after that extraction, see
+[theorem/d5_111_m4_filled_tables_and_compression_gap.md](./theorem/d5_111_m4_filled_tables_and_compression_gap.md)
+and
+[specs/d5_111_m4_external_request.md](./specs/d5_111_m4_external_request.md).
+The active tmp notes
+[`112`](../tmp/d5_112_selector_compression_no_go_note.tex),
+[`113`](../tmp/d5_113_rewrite_M4_selector_theorem.tex),
+and
+[`114`](../tmp/d5_114_defect_slice_factorization_note.tex)
+currently sharpen the graph-theoretic todo: `112` proves raw-row compression
+cannot close M4, `113` rewrites M4 into solved selector existence plus open
+D5 compatibility, and `114` identifies that D5 compatibility problem with a
+weighted defect-slice factorization on `Sigma=2,3`.
+The executed `115` follow-up is now summarized in
+[theorem/d5_115_tiered_selector_execution_summary.md](./theorem/d5_115_tiered_selector_execution_summary.md):
+it reproduces the shrunk selector packet, confirms the `m=9` pattern table on
+`m=11,13`, and shows that the first tested slice-4 intermediate families
+`(B_k for k in subset, Z, M)` with `subset ⊆ {0,1,2,3,4,5}` and the cyclic
+orbit quotient of `(fullpairs, Z, M)` are still no-go.
+The next-stage interpretation is summarized in
+[theorem/d5_118_corrected_selector_frontier_summary.md](./theorem/d5_118_corrected_selector_frontier_summary.md):
+
+- `116` proposes the exact symbolic slice-4 field `F4sharp = (B2,B3,B4,Z,O,M)`;
+- `117` proposes a direct corrected-selector theorem on the full torus;
+- `118` explains that if `117` is accepted then the live graph-level burden
+  shifts from M4 to M5.
+
+The promoted M5 follow-up is now:
+
+- [theorem/d5_119_selector_star_first_return_factor_probe.md](./theorem/d5_119_selector_star_first_return_factor_probe.md)
+- [theorem/d5_120_final_section_U_corrected_row_model.md](./theorem/d5_120_final_section_U_corrected_row_model.md)
+- [theorem/d5_121_M5_corrected_row_stitching.md](./theorem/d5_121_M5_corrected_row_stitching.md)
+- [theorem/d5_122_M5_all_odd_identification.md](./theorem/d5_122_M5_all_odd_identification.md)
+- [theorem/d5_123_M_route_status_after_122.md](./theorem/d5_123_M_route_status_after_122.md)
+
+These notes show that, conditional on adopting the corrected-selector route,
+the live color-4 Sel* M5 package is no longer open: `120` identifies the final
+section, `121` proves the corrected-row stitching theorem, and `122` proves the
+actual/model identification and closes the odd-`m` color-4 route.
 
 For the separate open even-`m` branch, see
 [theorem/d5_even_case_strategy_from_d3.md](./theorem/d5_even_case_strategy_from_d3.md)
@@ -86,6 +149,19 @@ first exit?”, or even the old exceptional-row gluing question. Inside the
 accepted package, the abstract bridge `(beta,rho)` is now globally realized by
 raw `(beta,delta)`. The remaining work is to audit the imported accepted
 inputs that the final proof uses, not to reopen the D5 bridge itself.
+
+Downstream of that accepted odd-`m` package, the graph-theoretic todo is now
+best split into three layers. The earlier `111–115` packet shows why naive raw
+selector compression fails and isolates the slice-4 transport bottleneck. The
+newer `116–118` packet then proposes a corrected-selector closure:
+`116` gives an explicit symbolic slice-4 transport field,
+`117` gives a candidate direct M4 theorem for all odd `m >= 5`,
+and `118` explains that, conditional on accepting `117`, the live graph-level
+burden should move to M5 for the corrected color maps. The promoted
+`119–122` chain then sharpens that again: the low-complexity first-return
+compression route is ruled out, the final-section return for color `4` is
+isolated, and the color-4 Sel* M5 route is closed on all odd moduli by the
+explicit corrected-row model and its all-odd identification.
 
 Separate from that closed odd-`m` line, the even-`m` case is now best viewed as
 a Route-E-style repair problem. The stable even-branch picture is:
@@ -156,13 +232,20 @@ For a reader who does not have the artifacts open, the current D5 picture is:
     lifts, not just on the reconstructed quotient.
 15. `081` closes the regular sector: every regular realization of every
     realized `delta` continues, so regular rows cannot launch a new endpoint
-    sheet. The remaining issue is already confined to the exceptional
-    interface.
+    sheet. The later compact note `096` repackages exactly that role for the
+    cleaned `092` suite. The remaining issue is already confined to the
+    exceptional interface.
 16. `081b/082` reduce the full raw globalization theorem to one exceptional
     actual-lift gluing lemma at
     `3m-2 -> 3m-1`.
 17. the promoted `083` final proof then closes that last step inside the
     accepted `076–082` package and yields raw global `(beta,delta)`.
+18. the cleanup notes `095`--`098` then repackage the `079/081/077` roles and
+    the separate `062` structural block for the cleaned suite.
+19. the one-pass package note `099` then folds those downstream arguments into
+    one read-through globalization document, leaving the explicit trigger-family,
+    bridge, regular-support inputs, and the final graph-level translation to
+    Hamilton decomposition as the remaining boundary.
 
 So the mathematical problem is now very narrow. The branch is no longer asking
 for a new witness or a broader search over tiny controllers. It is asking for
@@ -252,9 +335,10 @@ The recommended next work is:
 
 1. keep the theorem language safe at abstract `(beta,rho)` level while the
    final bridge identification is still open;
-2. audit the imported accepted inputs used by the promoted `083` proof,
-   especially `033 -> 062` and `076`, with `077/081` now in active
-   compression;
+2. audit and tighten the remaining imported theorem layer used by the cleaned
+   package, especially the componentwise bridge package `076`; the old
+   `079/081/077` and separate `062` cleanup tasks now have compact notes
+   `095`--`098`;
 3. rewrite the D5 theorem chain in the shortest final manuscript order if
    needed;
 4. add a small pilot generalization program before any broad odd-prime push:

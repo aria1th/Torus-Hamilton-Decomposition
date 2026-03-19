@@ -97,58 +97,65 @@ D5 obstruction is no longer:
 
 The actual current problem is now best split as:
 
-**theorem package:** the active best-seed branch is governed by a tiny
-phase/corner machine in `Theta = q+s+v+layer`, and `062` derives the
-universal first-exit targets directly from the explicit `H_{L1}` trigger law,
-so `B`-region invariance, the global phase scheduler, and the boundary reset
-laws all fall into one structural chain. After the `068` packaging pass, this
-side looks near-stable in shape and no longer seems like the main live
-research branch.
+**accepted odd-`m` theorem package:** the phase-corner / first-exit /
+globalization line through `083`, `095–099`, and `106` is no longer the main
+research bottleneck. The abstract bridge `(beta,rho)` is accepted globally,
+raw `(beta,delta)` is accepted inside the package, and the remaining issue on
+that line is packaging / provenance audit, not a new odd-`m` theorem gap.
 
-**exact reduction / realization:** the phase-corner theorem determines a
-canonical cyclic controller, now best seen in the `beta` gauge. `067` sharpens
-this further by observing that on the lifted active corridor the same clock
-already exists as `beta=-Theta`. `069–070` then make the next step precise:
-first identify the exact marked reduction object and the intended quotient on
-it. `071` sharpens it one more time: on each fixed regular slice the first
-exact object is already a marked length-`m` chain and the intended class
-already sees the full affine chain coordinate there. So the live issue is now
-the **exact bridge across chains**, namely whether the chain-dependent offset
-can be normalized so that current `epsilon4` and the canonical clock descend
-globally.
+**graph-theoretic selector frontier:** after bundle `111`, tmp notes
+`112–115`, and now tmp notes `116–118`, the old broad M4 question has split
+into an older no-go phase and a newer corrected-selector phase.
 
-**rigidity support:** exact reduction appears to force any
-exact realization to carry that same canonical clock on its accessible exact
-part, not merely some large hidden memory.
+- `111` shows the M4-style generator / predecessor / inverse tables can be
+  extracted on the actual `mixed_008` full torus, so the blocker is not data
+  extraction.
+- `112` shows exact compression of the present raw selector row cannot close
+  M4; the surviving plausible object is a transformed defect-corrected
+  selector, not a smaller quotient of the same row.
+- `113` proves that bare selector existence is already solved symbolically
+  (`M4a`) by the common-transport / sum-selector family; what remains is the
+  D5 compatibility half (`M4b`).
+- `114` identifies that D5 compatibility problem with a weighted pair of
+  1-factorizations on the defect slice graphs `G_2` and `G_3`, equivalently on
+  `Sigma=2,3`.
+- `115` confirms that the small-tier selector table is already stable, but the
+  first concrete slice-4 compression families still fail:
+  - all tested `(B_k for k in subset, Z, M)` with
+    `subset ⊆ {0,1,2,3,4,5}` are still nondeterministic on both `m = 9` and
+    `m = 11`;
+  - the cyclic orbit quotient of `(fullpairs, Z, M)` also fails badly.
+- `116` then proposes a concrete symbolic replacement for that bottleneck:
+  `F4sharp = (B2,B3,B4,Z,O,M)` transports exactly to
+  `F3 = (B2,B3,Z,M)`, with supporting checks rerun on `m = 5,7,9,11,13`.
+- `117` packages the corrected selector itself as a direct full-torus theorem
+  candidate for odd `m >= 5`.
+- `118` explains that, if `117` is accepted, M4 and M6 are no longer the live
+  graph-level burden and the next real graph package is M5 for the corrected
+  maps.
 
-**compute support:** validate the exact reduction object and the exact
-reduction data only: chain vs promoted cycle, accessible quotient on the
-union-of-chains object, abstract bridge `(beta,rho)` versus concrete coordinate
-model `(beta,q,sigma)` / `(beta,delta)`, offset normalization, and `(B,beta)`
-exactness / drift on larger moduli.
+**graph-theoretic return-cycle frontier:** the old generic M5 question has now
+split. Any selector depending only on `Sigma` has orbit length dividing `m^2`,
+so the symbolic sum-selector family from `113` cannot itself be Hamiltonian.
+But the promoted `119–122` chain closes the live color-4 Sel* M5 route:
+`119` rules out the easiest `m^3` first-return factors, `120` reduces the
+problem to the final section return `U_m`, `121` proves the corrected-row
+model is one `m^2`-cycle, and `122` identifies the actual return with that
+model for all odd `m >= 11` and closes the remaining small odd moduli
+`m=5,7,9` by direct check. So the remaining graph-level cycle problem is no
+longer “prove M5 somehow” for that branch; it is to integrate this closed
+color-4 route with the corrected-selector package and the rest of the graph
+proof.
 
-After the `075` bridge / realization / review round, the safest current
-formulation is:
+So the current top-level todo is:
 
-- theorem-level canonical bridge: abstract `(beta,rho)`;
-- strongest checked coordinate model: `(beta,q,sigma)` / `(beta,delta)`;
-- live missing link: prove or disprove the concrete identification
-  `rho ≅ (q,sigma) ≅ delta`, prove the splice law and current-event readout
-  uniformly, and settle the accessible image.
-
-After accepting the `076` bridge / realization / compute notes, the `077`
-Track A/B/C + review reduction, the `079` exceptional-splice follow-up, and the
-`081b/082` end-gluing reduction, the frontier can now be phrased as one single
-exceptional row:
-
-- abstract bridge `(beta,rho)` is accepted;
-- concrete bridge `(beta,delta)` is accepted componentwise;
-- the regular raw gluing problem is closed;
-- the old remaining question was whether the exceptional actual lift at
-  `3m-3` glues into the regular continuing class through `3m-2 -> 3m-1`;
-- the promoted `083` final proof closes that step inside the accepted package;
-- the live task is now a short dependency audit of the imported structural
-  inputs, not a new D5 bottleneck.
+1. review and stabilize the corrected-selector package from `116/117`
+   theorem-side;
+2. decide whether to adopt the `118` reading that M4 and M6 are already
+   closed in the needed sense;
+3. integrate the promoted `119–122` color-4 M5 route with that corrected
+   selector package, keeping any still-open upstream odd-`m` inputs and
+   non-color-4 graph packages explicit.
 
 The shortest current theorem map is:
 
@@ -177,6 +184,88 @@ The accepted-package vs independent-package gap note is:
 - [theorem/d5_092_cleaned_independent_theorem_suite.md](./theorem/d5_092_cleaned_independent_theorem_suite.md)
 - [theorem/d5_093_reproof_targets_after_092.md](./theorem/d5_093_reproof_targets_after_092.md)
 - [theorem/d5_095_compact_reproof_079_chart_interface_landing.md](./theorem/d5_095_compact_reproof_079_chart_interface_landing.md)
+- [theorem/d5_096_compact_reproof_081_regular_closure.md](./theorem/d5_096_compact_reproof_081_regular_closure.md)
+- [theorem/d5_097_compact_reproof_077_tail_length_reduction.md](./theorem/d5_097_compact_reproof_077_tail_length_reduction.md)
+- [theorem/d5_098_compact_cleanup_033_062_structural_block.md](./theorem/d5_098_compact_cleanup_033_062_structural_block.md)
+- [theorem/d5_099_one_pass_odd_m_globalization_package.md](./theorem/d5_099_one_pass_odd_m_globalization_package.md)
+- [theorem/d5_100_graph_theoretic_hamilton_decomposition_proof_draft.md](./theorem/d5_100_graph_theoretic_hamilton_decomposition_proof_draft.md)
+- [theorem/d5_106_intended_quotient_identification_and_comparison.md](./theorem/d5_106_intended_quotient_identification_and_comparison.md)
+- [theorem/d5_111_m4_filled_tables_and_compression_gap.md](./theorem/d5_111_m4_filled_tables_and_compression_gap.md)
+- [specs/d5_111_m4_external_request.md](./specs/d5_111_m4_external_request.md)
+- [../tmp/d5_112_selector_compression_no_go_note.tex](../tmp/d5_112_selector_compression_no_go_note.tex)
+- [../tmp/d5_113_rewrite_M4_selector_theorem.tex](../tmp/d5_113_rewrite_M4_selector_theorem.tex)
+- [../tmp/d5_114_defect_slice_factorization_note.tex](../tmp/d5_114_defect_slice_factorization_note.tex)
+- [theorem/d5_119_selector_star_first_return_factor_probe.md](./theorem/d5_119_selector_star_first_return_factor_probe.md)
+- [theorem/d5_120_final_section_U_corrected_row_model.md](./theorem/d5_120_final_section_U_corrected_row_model.md)
+- [theorem/d5_121_M5_corrected_row_stitching.md](./theorem/d5_121_M5_corrected_row_stitching.md)
+- [theorem/d5_122_M5_all_odd_identification.md](./theorem/d5_122_M5_all_odd_identification.md)
+- [theorem/d5_123_M_route_status_after_122.md](./theorem/d5_123_M_route_status_after_122.md)
+
+After `095`--`099`, the downstream odd-`m` globalization flow can be read in
+one pass. The remaining first-principles cleanup is concentrated on the explicit
+trigger-family provenance, the componentwise bridge package around `076`, the
+regular chart / endpoint support inputs, the channel-to-global reduction, and
+the final graph-level bridge to Hamilton decomposition, not on the old `077`
+or separate `033/062` support layers.
+
+The new `100` note is still only a graph-theoretic proof scaffold with explicit
+`sorry` markers. What changed after that draft is the shape of the downstream
+todo.
+
+The new `106` note fixes the current M3 bookkeeping language: the downstream
+intended quotient should still be stated as the exact deterministic quotient
+retaining grouped base, while `(beta,q0,sigma)` / `(beta,delta)` is the checked
+dynamic comparison target. The regenerated comparison check shows that
+`(B,beta)` factors exactly to `(beta,q0,sigma)` and becomes equivalent to it
+after adjoining the source residue `rho`.
+
+The new `111` packet, the active tmp notes `112–115`, and the later
+corrected-selector tmp notes `116–118` then sharpen the graph-theoretic
+frontier:
+
+- `111` shows that the M4-style tables can really be extracted on the
+  `mixed_008` full torus, but even raw coordinates fail outgoing permutation
+  coverage, so the blocker is not extraction;
+- `112` proves that exact compression of the current raw selector row cannot
+  close M4, and that the surviving plausible target is a defect-corrected
+  selector lift rather than a smaller quotient of the same row;
+- `113` rewrites M4 into:
+  - `M4a`: pure selector existence, now solved symbolically by the
+    common-transport / sum-selector theorem;
+  - `M4b`: the real D5 task, namely a D5-compatible transformed selector tied
+    to the witness / M3 / M5 package;
+- `114` reduces that D5-specific selector problem to a weighted pair of
+  1-factorizations on the defect slice graphs `G_2` and `G_3`, equivalently
+  on `Sigma=2,3`.
+- `115` executes the shrunk compute request:
+  it reproduces the selector packet, confirms the `m = 9` pattern assignment
+  on `m = 11,13`, and rules out the first natural slice-4 intermediate
+  families `(B_k for k in subset, Z, M)` with `subset ⊆ {0,1,2,3,4,5}` as well
+  as the cyclic orbit quotient of `(fullpairs, Z, M)`.
+- `116` proposes and checks the exact symbolic slice-4 transport field
+  `F4sharp = (B2,B3,B4,Z,O,M)`, removing the old `115` transport bottleneck.
+- `117` then proposes a direct corrected-selector theorem for odd `m >= 5`.
+- `118` repackages the downstream reading: if `117` is accepted, then M4 and
+  M6 are effectively closed and the next live graph package is M5.
+- `119` shows that the easiest low-complexity first-return factors for `Sel*`
+  are still only `m^4`, so the live color-4 route should move from a generic
+  `m^3` factor search to the final section.
+- `120` makes that sharp by reducing color-4 M5 to the final section
+  `U_m = (F_4^*)^(m^3)|P2` and extracting an explicit corrected-row model.
+- `121` proves that corrected-row model is one `m^2`-cycle for every odd
+  `m >= 11`.
+- `122` proves the actual/model identification and closes the color-4 Sel*
+  M5 route for all odd moduli.
+
+So the current graph-theoretic todo is no longer “prove M4 somehow” or
+“somehow prove M5 for color 4.” It is:
+
+1. review and stabilize the corrected-selector theorem package `116/117`;
+2. decide whether to adopt the `118` reformulation that M4 and M6 are already
+   closed in the needed sense;
+3. integrate the corrected selector with the promoted `120–122` color-4 M5
+   route, noting that any selector depending only on `Sigma` has orbit length
+   dividing `m^2` and therefore cannot itself be Hamiltonian on `V_m`.
 
 The separate open even-`m` strategy notes are:
 

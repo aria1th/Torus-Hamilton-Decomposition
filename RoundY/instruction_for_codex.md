@@ -41,22 +41,34 @@ Read in this order:
 29. [theorem/d5_092_cleaned_independent_theorem_suite.md](./theorem/d5_092_cleaned_independent_theorem_suite.md)
 30. [theorem/d5_093_reproof_targets_after_092.md](./theorem/d5_093_reproof_targets_after_092.md)
 31. [theorem/d5_095_compact_reproof_079_chart_interface_landing.md](./theorem/d5_095_compact_reproof_079_chart_interface_landing.md)
-32. [theorem/d5_even_case_strategy_from_d3.md](./theorem/d5_even_case_strategy_from_d3.md)
-33. [theorem/d5_even_m_parity_and_critical_row_program.md](./theorem/d5_even_m_parity_and_critical_row_program.md)
-34. [theorem/d5_033_explicit_trigger_family.md](./theorem/d5_033_explicit_trigger_family.md)
-35. [theorem/d5_084_theorem_name_map.md](./theorem/d5_084_theorem_name_map.md)
-36. [theorem/d5_090_tmp_promotion_index.md](./theorem/d5_090_tmp_promotion_index.md)
-37. [theorem/d5_094_tmp_remaining_priority_map.md](./theorem/d5_094_tmp_remaining_priority_map.md)
-38. [checks/d5_084_compute_evidence_index.md](./checks/d5_084_compute_evidence_index.md)
-39. [theorem/d5_075_threeway_handoff.md](./theorem/d5_075_threeway_handoff.md)
-40. [theorem/d5_075_bridge_theorem_request.md](./theorem/d5_075_bridge_theorem_request.md)
-41. [theorem/d5_075_realization_integration_request.md](./theorem/d5_075_realization_integration_request.md)
-42. [theorem/d5_075_compute_validation_request.md](./theorem/d5_075_compute_validation_request.md)
-43. [theorem/d5_075_reviewer_brief.md](./theorem/d5_075_reviewer_brief.md)
-44. [../DOCUMENT_FOR_EXTERNAL_REVIEW.md](../DOCUMENT_FOR_EXTERNAL_REVIEW.md)
+32. [theorem/d5_096_compact_reproof_081_regular_closure.md](./theorem/d5_096_compact_reproof_081_regular_closure.md)
+33. [theorem/d5_097_compact_reproof_077_tail_length_reduction.md](./theorem/d5_097_compact_reproof_077_tail_length_reduction.md)
+34. [theorem/d5_098_compact_cleanup_033_062_structural_block.md](./theorem/d5_098_compact_cleanup_033_062_structural_block.md)
+35. [theorem/d5_099_one_pass_odd_m_globalization_package.md](./theorem/d5_099_one_pass_odd_m_globalization_package.md)
+36. [theorem/d5_100_graph_theoretic_hamilton_decomposition_proof_draft.md](./theorem/d5_100_graph_theoretic_hamilton_decomposition_proof_draft.md)
+37. [theorem/d5_even_case_strategy_from_d3.md](./theorem/d5_even_case_strategy_from_d3.md)
+38. [theorem/d5_even_m_parity_and_critical_row_program.md](./theorem/d5_even_m_parity_and_critical_row_program.md)
+39. [theorem/d5_033_explicit_trigger_family.md](./theorem/d5_033_explicit_trigger_family.md)
+40. [theorem/d5_084_theorem_name_map.md](./theorem/d5_084_theorem_name_map.md)
+41. [theorem/d5_090_tmp_promotion_index.md](./theorem/d5_090_tmp_promotion_index.md)
+42. [theorem/d5_094_tmp_remaining_priority_map.md](./theorem/d5_094_tmp_remaining_priority_map.md)
+43. [checks/d5_084_compute_evidence_index.md](./checks/d5_084_compute_evidence_index.md)
+44. [theorem/d5_075_threeway_handoff.md](./theorem/d5_075_threeway_handoff.md)
+45. [theorem/d5_075_bridge_theorem_request.md](./theorem/d5_075_bridge_theorem_request.md)
+46. [theorem/d5_075_realization_integration_request.md](./theorem/d5_075_realization_integration_request.md)
+47. [theorem/d5_075_compute_validation_request.md](./theorem/d5_075_compute_validation_request.md)
+48. [theorem/d5_075_reviewer_brief.md](./theorem/d5_075_reviewer_brief.md)
+49. [../DOCUMENT_FOR_EXTERNAL_REVIEW.md](../DOCUMENT_FOR_EXTERNAL_REVIEW.md)
    Focus on `D23`, `D24`, `D25`, `D26`, `D27`, `D28`, `D29`, `D30`, `D31`,
-   `D32`, `D33`, `D34`, `D35`, `D37`, `D38`, `D40`, `D42`, `D45`.
-45. [autonomous/d5_autonomous_perturbation_note_v25.md](./autonomous/d5_autonomous_perturbation_note_v25.md)
+   `D32`, `D33`, `D34`, `D35`, `D37`, `D38`, `D40`, `D42`, `D45`, `D46`,
+   `D47`, `D48`, `D49`.
+50. [autonomous/d5_autonomous_perturbation_note_v25.md](./autonomous/d5_autonomous_perturbation_note_v25.md)
+51. [theorem/d5_106_intended_quotient_identification_and_comparison.md](./theorem/d5_106_intended_quotient_identification_and_comparison.md)
+52. [theorem/d5_111_m4_filled_tables_and_compression_gap.md](./theorem/d5_111_m4_filled_tables_and_compression_gap.md)
+53. [specs/d5_111_m4_external_request.md](./specs/d5_111_m4_external_request.md)
+54. [../tmp/d5_112_selector_compression_no_go_note.tex](../tmp/d5_112_selector_compression_no_go_note.tex)
+55. [../tmp/d5_113_rewrite_M4_selector_theorem.tex](../tmp/d5_113_rewrite_M4_selector_theorem.tex)
+56. [../tmp/d5_114_defect_slice_factorization_note.tex](../tmp/d5_114_defect_slice_factorization_note.tex)
 
 Then read the key artifact READMEs in this order:
 
@@ -153,6 +165,11 @@ These notes now spell out the actual top-level split:
   `(beta,rho)` unless the concrete identification with `(q,sigma)` /
   `delta` is actually proved; treat the odometer coordinates as the strongest
   checked model, not automatically as theorem data
+- intended quotient comparison:
+  after `105/106`, the honest M3 target is still the exact deterministic
+  quotient retaining grouped base; the checked comparison is
+  `(B,beta) ~= (rho,beta,q0,sigma)` on the exact marked chain object, so do not
+  flatten the theorem-side quotient prematurely to bare `(beta,delta)`
 - accepted `077` reduction:
   fixed-`delta` ambiguity is now reduced to tail length / terminal geometry;
   the live question is global component structure, not local bridge readout
@@ -178,17 +195,47 @@ The strongest current theorem-side draft after `062` is:
 trigger theorem, then recover `B`-region invariance, the global active phase
 scheduler, and the reset laws as one structural chain**
 
-The honest remaining frontier is then:
+The odd-`m` globalization theorem is now closed inside the accepted package.
+The honest remaining frontier is therefore downstream and graph-theoretic:
 
-**the phase-corner theorem determines a canonical cyclic controller
-(`beta` in the current constructive gauge). On the lifted active corridor that
-same clock already exists as `beta = -Theta`. The safest current theorem object
-is the abstract exact bridge `(beta,rho)`, while the strongest checked concrete
-model is the dynamic boundary odometer `(beta,q,sigma)` / `(beta,delta)`. The
-regular raw gluing problem is now closed, and the remaining live question is
-one exceptional-row theorem: does the exceptional actual lift at `3m-3`
-glue into the regular continuing class through `3m-2 -> 3m-1`, equivalently is
-there no hidden second endpoint sheet over `delta = 3m-1`?**
+**the theorem-side / globalization line is no longer the bottleneck. After
+`100`, `106`, the graph packet `111–118`, and the promoted M5 follow-up
+`119–122`, the live graph-theoretic split is now: the old raw-row M4 problem
+has been replaced by a corrected-selector package candidate (`116/117`), and
+the main downstream question is whether to accept that package and integrate
+the now-closed color-4 Sel* M5 route into the broader graph proof.**
+
+More concretely:
+
+- `111` shows the M4 tables can be extracted on the actual `mixed_008` full
+  torus, but even raw coordinates fail outgoing permutation coverage;
+- `112` shows exact compression of the current raw selector row cannot close
+  M4, so the remaining target is a transformed selector lift, not a quotient of
+  the same row;
+- `113` proves that bare selector existence is already solved by the
+  common-transport / sum-selector family, so the meaningful remaining work is
+  D5 compatibility rather than generic selector existence;
+- `114` identifies that D5 compatibility problem with a weighted pair of
+  defect-slice 1-factorizations on `G_2` and `G_3`, together with compression
+  of the completed defect rows to a compact exact field.
+- `115` executes the shrunk compute request:
+  the small-tier selector table is stable, but the first slice-4 intermediate
+  families `(B_k for k in subset, Z, M)` with `subset ⊆ {0,1,2,3,4,5}` and the
+  cyclic orbit quotient of `(fullpairs, Z, M)` are still no-go.
+- `116` proposes the exact symbolic slice-4 transport field
+  `F4sharp = (B2,B3,B4,Z,O,M)`.
+- `117` proposes a direct corrected-selector theorem for odd `m >= 5`.
+- `118` explains that if `117` is accepted then M4 and M6 are effectively
+  closed in the needed sense, and M5 becomes the live graph-level package.
+- `119` shows that the easiest first-return factor families for `Sel*` do not
+  give a genuine `m^3` compression and that the color-4 route should move to
+  the final section.
+- `120` reduces the color-4 Sel* M5 problem to the final section return `U_m`
+  and extracts the corrected-row coordinates.
+- `121` proves the corrected-row model is one `m^2`-cycle for every odd
+  `m >= 11`.
+- `122` proves the actual/model identification and closes the color-4 Sel* M5
+  route for all odd moduli.
 
 `R1 -> H_L1`
 

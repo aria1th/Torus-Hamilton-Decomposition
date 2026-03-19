@@ -10,9 +10,9 @@ chain
 
 No new mathematical bottleneck is visible in that chain. What remains is to
 rewrite the imported inputs so that the final theorem no longer reads as proved
-only “within the accepted package.” The main missing item is one explicit
-chart-to-raw continuation theorem that packages the current use of `062` and
-`079` into a single proof object.
+only “within the accepted package.” The main missing item is now one compact
+concrete bridge theorem that replaces the still-imported `076` package in
+manuscript order.
 
 Update:
 
@@ -20,8 +20,18 @@ Update:
   `theorem/d5_092_cleaned_independent_theorem_suite.md`;
 - the old standalone `079` chart/interface theorem is now compactly reproved by
   `theorem/d5_095_compact_reproof_079_chart_interface_landing.md`;
+- the old standalone `081` regular-closure role is now compactly reproved by
+  `theorem/d5_096_compact_reproof_081_regular_closure.md`;
+- the old standalone `077` tail-length role is now compactly reproved by
+  `theorem/d5_097_compact_reproof_077_tail_length_reduction.md`;
+- the old separate `062` structural role is now compactly cleaned in
+  `theorem/d5_098_compact_cleanup_033_062_structural_block.md`;
+- the downstream odd-`m` globalization flow can now also be read in one pass in
+  `theorem/d5_099_one_pass_odd_m_globalization_package.md`, with the standing
+  theorem-package inputs written explicitly at the top;
 - the remaining selective reproof targets after that cleanup are summarized in
-  `theorem/d5_093_reproof_targets_after_092.md`.
+  `theorem/d5_093_reproof_targets_after_092.md`, with the compact bridge
+  package around `076` as the main live item.
 
 ## 1. Purpose and exact current status
 
@@ -51,9 +61,11 @@ and lies in the regular continuing endpoint class there. Consequently:
 
 The theorem above is exactly the current accepted conclusion, but its proof is
 still distributed across imported notes. In particular, `076` remains a
-componentwise concrete bridge theorem, `079` remains a chart/interface
-theorem, and `083` becomes final only after those inputs are combined with
-`062`, `077`, and `081`.
+componentwise concrete bridge theorem, and the accepted-chain proof still
+passes through `062`, `077`, `079`, `081`, and `083`. In the cleaned package,
+the exact `079`, `081`, `077`, and separate `062` roles are now supplied by
+the compact notes `095`--`098`, leaving `076` as the main imported theorem
+layer.
 
 ## 2. What an independent package should mean
 
@@ -103,6 +115,14 @@ place:
 At present this content is mathematically sound but distributed across `033`
 and `062`. Independence asks for one theorem block, not a new proof idea.
 
+Update after `098`:
+
+- this structural block is now written explicitly in
+  `theorem/d5_098_compact_cleanup_033_062_structural_block.md`;
+- the only remaining issue there is the broader defect-template provenance
+  behind the trigger-family lemma, not a missing structural theorem for the
+  odd-`m` globalization package.
+
 ### 4.2 One explicit chart-to-raw continuation theorem
 
 An independent package should include one theorem that packages the current
@@ -119,6 +139,12 @@ accepted notes rather than written as a single theorem object. This theorem is
 weaker than the final endpoint-class gluing theorem: it packages only the
 actual exceptional continuation, not the later tail-length or regular-union
 arguments that promote that continuation to global `rho = rho(delta)`.
+
+Update after `095` and `098`:
+
+- the cleaned suite now has this role through the `095` chart/interface reproof
+  together with the explicit structural block in `098`;
+- so this is no longer the main missing item in the independent-package gap.
 
 ### 4.3 One compact concrete bridge theorem
 
@@ -151,6 +177,11 @@ These notions are already present in the chain, but they are spread across
 notes. An independent package should not force the reader to reconstruct them
 from context.
 
+Update after `092`:
+
+- the cleaned theorem suite now effectively contains this definition block;
+- so this is no longer a serious remaining gap.
+
 ### 4.5 Support files should become verification aids only
 
 The support files
@@ -168,14 +199,12 @@ Again, this is a packaging requirement, not evidence of a missing theorem idea.
 
 A compact independent package can be organized in the following order:
 
-1. one definition note collecting the final objects;
-2. one structural theorem note replacing the distributed `033 -> 062` block;
+1. the cleaned definition block already present in `092`;
+2. the compact structural theorem note `098`;
 3. one concrete bridge theorem note replacing the current promoted-support
    status of `076`;
-4. the fixed-`delta` tail-length reduction;
-5. the regular-union theorem;
-6. the explicit chart-to-raw exceptional continuation theorem;
-7. the final globalization theorem.
+4. the compact cleanup notes `097`, `096`, and `095`;
+5. the final globalization theorem.
 
 That order makes the final proof read as a forward argument rather than as a
 reconstruction from accepted imports.
@@ -185,12 +214,12 @@ reconstruction from accepted imports.
 The shortest path from “closed inside the accepted package” to “proved in a
 self-contained package” is:
 
-1. write one self-contained `033 -> 062` structural theorem block;
-2. write one explicit theorem packaging raw exceptional first exit with the
-   chart/interface continuation;
-3. compress `076` into one final concrete bridge theorem note;
-4. gather the final definitions in one manuscript-order theorem note;
-5. keep the JSON and CSV files as support only, not as implicit proof steps.
+1. keep `098` as the compact structural theorem block;
+2. compress `076` into one final concrete bridge theorem note;
+3. keep the `095`--`097` cleanup notes as the stable compact support layers;
+4. keep the JSON and CSV files as support only, not as implicit proof steps;
+5. keep the broader `033` defect-template provenance explicit only where it is
+   genuinely needed.
 
 If those five items are done, the phrase
 
@@ -205,9 +234,8 @@ should be replaceable by
 The remaining gap is no longer a theorem-search gap. It is a theorem-packaging
 gap:
 
-1. one distributed structural block,
-2. one missing chart-to-raw composition theorem,
-3. one compact concrete bridge theorem statement, and
-4. one final definitions block.
+1. one compact concrete bridge theorem statement replacing `076`, and
+2. optionally, a first-principles proof of the broader `033` trigger-family
+   classification beyond what `098` isolates for the globalization chain.
 
 So the right next work is theorem cleanup, not new theorem search.

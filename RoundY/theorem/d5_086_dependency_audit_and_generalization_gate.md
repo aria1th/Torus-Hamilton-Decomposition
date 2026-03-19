@@ -36,26 +36,26 @@ chain itself.
 
 The right audit list is short.
 
-### 2.1 `062` and its `033` dependency
+### 2.1 `033/062` structural block
 
 Why it matters:
 
-- `theorem/d5_first_exit_target_proof_062.md` is the structural first-exit
+- `theorem/d5_first_exit_target_proof_062.md` was the structural first-exit
   input used by the final proof.
-- `062` itself imports the explicit `H_{L1}` trigger formula, now isolated at
-  `theorem/d5_033_explicit_trigger_family.md`.
+- that structural role is now compacted in
+  `theorem/d5_098_compact_cleanup_033_062_structural_block.md`, which also
+  carries the exact trigger-family lemma later used in the cleaned package.
 
 Status:
 
-- accepted theorem input;
-- not a new gap;
-- still the most important upstream dependency to re-read if we want a
-  self-contained final manuscript chain.
+- no longer a live theorem-packaging gap in the cleaned chain;
+- still the main place to look only if we want first-principles provenance for
+  the trigger-family classification behind `098`.
 
 Recommended audit question:
 
-- does the `theorem/d5_033_explicit_trigger_family.md -> 062` route now read
-  as a complete theorem chain without any chart-only or artifact-only jump?
+- does the compact `098` structural block state the trigger-family input with
+  the right honest dependency boundary on the older `033` artifact line?
 
 ### 2.2 `079` chart/interface theorem
 
@@ -112,6 +112,18 @@ These no longer look like “accepted without proof” in a dangerous sense.
 - `081` regular raw continuation theorem
 - `083` final gluing theorem proof inside the accepted package
 
+Update after `095`--`098`:
+
+- the exact `092` chart/interface, regular-closure, tail-length, and compact
+  structural roles are now handled by
+  `theorem/d5_095_compact_reproof_079_chart_interface_landing.md`,
+  `theorem/d5_096_compact_reproof_081_regular_closure.md`,
+  `theorem/d5_097_compact_reproof_077_tail_length_reduction.md`,
+  and
+  `theorem/d5_098_compact_cleanup_033_062_structural_block.md`;
+- so the remaining live cleanup target is best read as the compact bridge
+  theorem around `076`.
+
 These are now best treated as internal theorem layers, not as open concerns.
 
 ## 4. Should we proceed to generalization?
@@ -129,7 +141,8 @@ The reason is simple:
 
 - the hard D5 theorem seems closed in-package;
 - but the current proof still relies on imported accepted notes spread across
-  `062`, `076`, `079`, `081`, and `083`;
+  `076` and `083`, with the old `077/079/081/062` roles now compacted in
+  `095`--`098`;
 - generalization work is much safer once those imports are repackaged into one
   tight final chain.
 
@@ -139,9 +152,11 @@ The reason is simple:
 
 Re-read and tighten:
 
-- `theorem/d5_first_exit_target_proof_062.md`
 - `theorem/d5_076_concrete_bridge_proof.md`
-- `theorem/d5_079_exceptional_interface_support.md`
+- `theorem/d5_095_compact_reproof_079_chart_interface_landing.md`
+- `theorem/d5_096_compact_reproof_081_regular_closure.md`
+- `theorem/d5_097_compact_reproof_077_tail_length_reduction.md`
+- `theorem/d5_098_compact_cleanup_033_062_structural_block.md`
 - `theorem/d5_083_final_theorem_proof.md`
 
 ### Action B. Final D5 theorem package

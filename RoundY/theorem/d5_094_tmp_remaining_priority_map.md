@@ -8,10 +8,38 @@ This note records the remaining `tmp/` files that still matter after the main
 - files that should remain provenance only,
 - and files that are outside the RoundY D5 theorem chain.
 
+## 0. Current active tmp frontier
+
+The active tmp frontier has moved beyond the old `076–083` promotion backlog.
+The main live tmp notes are now:
+
+- `tmp/d5_116_slice4_transport_formula_note.tex`
+- `tmp/d5_117_M4_corrected_selector_theorem.tex`
+- `tmp/d5_118_M4_G4prime_M6_note.tex`
+
+The later M5 notes `tmp/d5_121_M5_corrected_row_stitching_note.tex` and
+`tmp/d5_122_M5_all_odd_identification_note.tex` are no longer part of this
+active tmp frontier; they have now been promoted into stable RoundY theorem
+notes.
+
+These are not “promote now verbatim” files yet. Their current role is:
+
+- `116`: proposes the explicit exact slice-4 transport field
+  `F4sharp = (B2,B3,B4,Z,O,M)`;
+- `117`: proposes a direct corrected-selector theorem closing M4 on the full
+  torus for odd `m >= 5`;
+- `118`: repackages the downstream interpretation, arguing that if `117` is
+  accepted then M4 and M6 are no longer the live graph-level burden and M5 is
+  the next package.
+
+The earlier `112–115` notes remain important provenance for how the old raw-row
+and slice-4 bottlenecks were isolated and then replaced, but `116–118` are the
+current live graph-theoretic todo notes, not absorbed historical leftovers.
+
 ## 1. Promote now
 
-No urgent promotion remains from this shortlist. The two highest-value pending
-items from the previous pass have now been promoted:
+No urgent promotion remains from this shortlist. The latest high-value cleanup
+notes from the previous pass have now been promoted:
 
 - `tmp/d5_092_cleaned_independent_theorem_suite.tex`
   -> [d5_092_cleaned_independent_theorem_suite.tex](./d5_092_cleaned_independent_theorem_suite.tex)
@@ -19,6 +47,26 @@ items from the previous pass have now been promoted:
   -> [d5_095_compact_reproof_079_chart_interface_landing.md](./d5_095_compact_reproof_079_chart_interface_landing.md)
      and
      [d5_095_compact_reproof_079_chart_interface_landing.tex](./d5_095_compact_reproof_079_chart_interface_landing.tex)
+- `tmp/d5_096_compact_reproof_081_regular_closure.md/.tex`
+  -> [d5_096_compact_reproof_081_regular_closure.md](./d5_096_compact_reproof_081_regular_closure.md)
+     and
+     [d5_096_compact_reproof_081_regular_closure.tex](./d5_096_compact_reproof_081_regular_closure.tex)
+- `tmp/d5_097_compact_reproof_077_tail_length_reduction.md/.tex`
+  -> [d5_097_compact_reproof_077_tail_length_reduction.md](./d5_097_compact_reproof_077_tail_length_reduction.md)
+     and
+     [d5_097_compact_reproof_077_tail_length_reduction.tex](./d5_097_compact_reproof_077_tail_length_reduction.tex)
+- `tmp/d5_098_compact_cleanup_033_062_structural_block.md/.tex`
+  -> [d5_098_compact_cleanup_033_062_structural_block.md](./d5_098_compact_cleanup_033_062_structural_block.md)
+     and
+     [d5_098_compact_cleanup_033_062_structural_block.tex](./d5_098_compact_cleanup_033_062_structural_block.tex)
+- `tmp/d5_121_M5_corrected_row_stitching_note.tex`
+  -> [d5_121_M5_corrected_row_stitching.md](./d5_121_M5_corrected_row_stitching.md)
+     and
+     [d5_121_M5_corrected_row_stitching.tex](./d5_121_M5_corrected_row_stitching.tex)
+- `tmp/d5_122_M5_all_odd_identification_note.tex`
+  -> [d5_122_M5_all_odd_identification.md](./d5_122_M5_all_odd_identification.md)
+     and
+     [d5_122_M5_all_odd_identification.tex](./d5_122_M5_all_odd_identification.tex)
 
 ## 2. Important historical provenance, but already absorbed
 
