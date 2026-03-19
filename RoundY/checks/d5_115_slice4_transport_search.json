@@ -1,0 +1,523 @@
+{
+  "candidate_family": {
+    "target_slice": 4,
+    "pred_field": "B23ZM",
+    "field_shape": "(B_k for k in subset, Z, M)",
+    "k_pool": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "moduli_checked": [
+      9,
+      11
+    ]
+  },
+  "exact_subsets": [],
+  "best_candidates": [
+    {
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "m9": {
+        "state_count": 4292,
+        "nondet_pairs": 575,
+        "max_multiplicity": 2
+      },
+      "m11": {
+        "state_count": 5126,
+        "nondet_pairs": 840,
+        "max_multiplicity": 2
+      },
+      "total_nondet_pairs": 1415,
+      "total_state_count": 9418
+    },
+    {
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "m9": {
+        "state_count": 5511,
+        "nondet_pairs": 400,
+        "max_multiplicity": 2
+      },
+      "m11": {
+        "state_count": 7891,
+        "nondet_pairs": 1385,
+        "max_multiplicity": 2
+      },
+      "total_nondet_pairs": 1785,
+      "total_state_count": 13402
+    },
+    {
+      "subset": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "m9": {
+        "state_count": 3742,
+        "nondet_pairs": 835,
+        "max_multiplicity": 2
+      },
+      "m11": {
+        "state_count": 4326,
+        "nondet_pairs": 1150,
+        "max_multiplicity": 2
+      },
+      "total_nondet_pairs": 1985,
+      "total_state_count": 8068
+    },
+    {
+      "subset": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "m9": {
+        "state_count": 3282,
+        "nondet_pairs": 1020,
+        "max_multiplicity": 2
+      },
+      "m11": {
+        "state_count": 3721,
+        "nondet_pairs": 1450,
+        "max_multiplicity": 2
+      },
+      "total_nondet_pairs": 2470,
+      "total_state_count": 7003
+    },
+    {
+      "subset": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "m9": {
+        "state_count": 4907,
+        "nondet_pairs": 785,
+        "max_multiplicity": 2
+      },
+      "m11": {
+        "state_count": 6991,
+        "nondet_pairs": 1790,
+        "max_multiplicity": 2
+      },
+      "total_nondet_pairs": 2575,
+      "total_state_count": 11898
+    },
+    {
+      "subset": [
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "m9": {
+        "state_count": 4982,
+        "nondet_pairs": 860,
+        "max_multiplicity": 2
+      },
+      "m11": {
+        "state_count": 6721,
+        "nondet_pairs": 2105,
+        "max_multiplicity": 2
+      },
+      "total_nondet_pairs": 2965,
+      "total_state_count": 11703
+    },
+    {
+      "subset": [
+        2
+      ],
+      "m9": {
+        "state_count": 577,
+        "nondet_pairs": 1615,
+        "max_multiplicity": 98
+      },
+      "m11": {
+        "state_count": 581,
+        "nondet_pairs": 1615,
+        "max_multiplicity": 102
+      },
+      "total_nondet_pairs": 3230,
+      "total_state_count": 1158
+    },
+    {
+      "subset": [
+        2,
+        3,
+        4
+      ],
+      "m9": {
+        "state_count": 2722,
+        "nondet_pairs": 1440,
+        "max_multiplicity": 2
+      },
+      "m11": {
+        "state_count": 3071,
+        "nondet_pairs": 1850,
+        "max_multiplicity": 2
+      },
+      "total_nondet_pairs": 3290,
+      "total_state_count": 5793
+    },
+    {
+      "subset": [
+        0
+      ],
+      "m9": {
+        "state_count": 597,
+        "nondet_pairs": 1765,
+        "max_multiplicity": 126
+      },
+      "m11": {
+        "state_count": 601,
+        "nondet_pairs": 1765,
+        "max_multiplicity": 144
+      },
+      "total_nondet_pairs": 3530,
+      "total_state_count": 1198
+    },
+    {
+      "subset": [
+        1
+      ],
+      "m9": {
+        "state_count": 797,
+        "nondet_pairs": 1800,
+        "max_multiplicity": 152
+      },
+      "m11": {
+        "state_count": 801,
+        "nondet_pairs": 1825,
+        "max_multiplicity": 156
+      },
+      "total_nondet_pairs": 3625,
+      "total_state_count": 1598
+    },
+    {
+      "subset": [
+        3
+      ],
+      "m9": {
+        "state_count": 847,
+        "nondet_pairs": 1840,
+        "max_multiplicity": 39
+      },
+      "m11": {
+        "state_count": 851,
+        "nondet_pairs": 1840,
+        "max_multiplicity": 39
+      },
+      "total_nondet_pairs": 3680,
+      "total_state_count": 1698
+    },
+    {
+      "subset": [
+        5
+      ],
+      "m9": {
+        "state_count": 657,
+        "nondet_pairs": 1990,
+        "max_multiplicity": 148
+      },
+      "m11": {
+        "state_count": 591,
+        "nondet_pairs": 1930,
+        "max_multiplicity": 165
+      },
+      "total_nondet_pairs": 3920,
+      "total_state_count": 1248
+    },
+    {
+      "subset": [
+        1,
+        2
+      ],
+      "m9": {
+        "state_count": 1462,
+        "nondet_pairs": 2015,
+        "max_multiplicity": 98
+      },
+      "m11": {
+        "state_count": 1471,
+        "nondet_pairs": 2055,
+        "max_multiplicity": 102
+      },
+      "total_nondet_pairs": 4070,
+      "total_state_count": 2933
+    },
+    {
+      "subset": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "m9": {
+        "state_count": 4277,
+        "nondet_pairs": 1400,
+        "max_multiplicity": 2
+      },
+      "m11": {
+        "state_count": 5691,
+        "nondet_pairs": 2790,
+        "max_multiplicity": 2
+      },
+      "total_nondet_pairs": 4190,
+      "total_state_count": 9968
+    },
+    {
+      "subset": [
+        4
+      ],
+      "m9": {
+        "state_count": 727,
+        "nondet_pairs": 2055,
+        "max_multiplicity": 75
+      },
+      "m11": {
+        "state_count": 801,
+        "nondet_pairs": 2150,
+        "max_multiplicity": 75
+      },
+      "total_nondet_pairs": 4205,
+      "total_state_count": 1528
+    },
+    {
+      "subset": [
+        1,
+        3
+      ],
+      "m9": {
+        "state_count": 1412,
+        "nondet_pairs": 2255,
+        "max_multiplicity": 31
+      },
+      "m11": {
+        "state_count": 1421,
+        "nondet_pairs": 2315,
+        "max_multiplicity": 31
+      },
+      "total_nondet_pairs": 4570,
+      "total_state_count": 2833
+    },
+    {
+      "subset": [
+        0,
+        1,
+        2
+      ],
+      "m9": {
+        "state_count": 2567,
+        "nondet_pairs": 2285,
+        "max_multiplicity": 71
+      },
+      "m11": {
+        "state_count": 2631,
+        "nondet_pairs": 2415,
+        "max_multiplicity": 82
+      },
+      "total_nondet_pairs": 4700,
+      "total_state_count": 5198
+    },
+    {
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "m9": {
+        "state_count": 3257,
+        "nondet_pairs": 2065,
+        "max_multiplicity": 8
+      },
+      "m11": {
+        "state_count": 3411,
+        "nondet_pairs": 2750,
+        "max_multiplicity": 8
+      },
+      "total_nondet_pairs": 4815,
+      "total_state_count": 6668
+    },
+    {
+      "subset": [
+        2,
+        3
+      ],
+      "m9": {
+        "state_count": 1117,
+        "nondet_pairs": 2470,
+        "max_multiplicity": 8
+      },
+      "m11": {
+        "state_count": 1121,
+        "nondet_pairs": 2470,
+        "max_multiplicity": 8
+      },
+      "total_nondet_pairs": 4940,
+      "total_state_count": 2238
+    },
+    {
+      "subset": [
+        0,
+        2
+      ],
+      "m9": {
+        "state_count": 1462,
+        "nondet_pairs": 2535,
+        "max_multiplicity": 71
+      },
+      "m11": {
+        "state_count": 1471,
+        "nondet_pairs": 2605,
+        "max_multiplicity": 82
+      },
+      "total_nondet_pairs": 5140,
+      "total_state_count": 2933
+    }
+  ],
+  "distinguished_candidates": {
+    "2,3": {
+      "subset": [
+        2,
+        3
+      ],
+      "m9": {
+        "state_count": 1117,
+        "nondet_pairs": 2470,
+        "max_multiplicity": 8
+      },
+      "m11": {
+        "state_count": 1121,
+        "nondet_pairs": 2470,
+        "max_multiplicity": 8
+      },
+      "total_nondet_pairs": 4940,
+      "total_state_count": 2238
+    },
+    "2,3,4": {
+      "subset": [
+        2,
+        3,
+        4
+      ],
+      "m9": {
+        "state_count": 2722,
+        "nondet_pairs": 1440,
+        "max_multiplicity": 2
+      },
+      "m11": {
+        "state_count": 3071,
+        "nondet_pairs": 1850,
+        "max_multiplicity": 2
+      },
+      "total_nondet_pairs": 3290,
+      "total_state_count": 5793
+    },
+    "0,1,2,3,4": {
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "m9": {
+        "state_count": 4292,
+        "nondet_pairs": 575,
+        "max_multiplicity": 2
+      },
+      "m11": {
+        "state_count": 5126,
+        "nondet_pairs": 840,
+        "max_multiplicity": 2
+      },
+      "total_nondet_pairs": 1415,
+      "total_state_count": 9418
+    },
+    "0,1,2,3,4,5": {
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "m9": {
+        "state_count": 5511,
+        "nondet_pairs": 400,
+        "max_multiplicity": 2
+      },
+      "m11": {
+        "state_count": 7891,
+        "nondet_pairs": 1385,
+        "max_multiplicity": 2
+      },
+      "total_nondet_pairs": 1785,
+      "total_state_count": 13402
+    }
+  },
+  "baselines": {
+    "B23ZM": {
+      "m9": {
+        "state_count": 1117,
+        "nondet_pairs": 2470,
+        "max_multiplicity": 8
+      },
+      "m11": {
+        "state_count": 1121,
+        "nondet_pairs": 2470,
+        "max_multiplicity": 8
+      }
+    },
+    "fullpairsZM": {
+      "m9": {
+        "state_count": 6561,
+        "nondet_pairs": 0,
+        "max_multiplicity": 1
+      },
+      "m11": {
+        "state_count": 14641,
+        "nondet_pairs": 0,
+        "max_multiplicity": 1
+      }
+    },
+    "cyclic_fullpairsZM": {
+      "m9": {
+        "state_count": 1313,
+        "nondet_pairs": 6350,
+        "max_multiplicity": 5
+      },
+      "m11": {
+        "state_count": 2929,
+        "nondet_pairs": 13835,
+        "max_multiplicity": 5
+      }
+    }
+  },
+  "counts": {
+    "subset_count": 63,
+    "exact_subset_count": 0
+  }
+}

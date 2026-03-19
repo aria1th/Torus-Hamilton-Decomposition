@@ -1,0 +1,27 @@
+{
+  "task_id": "D5-LOCAL-PROVENANCE-COMPARE-127",
+  "checked_moduli": [
+    11,
+    13,
+    15,
+    17,
+    19,
+    21,
+    23,
+    25
+  ],
+  "all_q_tau_success_A": false,
+  "all_q_fw_success_A": false,
+  "all_q_tau_successor_exact": false,
+  "all_q_fw_successor_exact": false,
+  "all_q_tau_retain_B": true,
+  "all_q_fw_retain_B": true,
+  "first_q_tau_phase_fiber_gt_one": 13,
+  "first_q_fw_phase_fiber_gt_one": 13,
+  "main_result": "This run compares the historical countdown-carrier candidates Q_tau=(B,min(tau,8),epsilon4) and Q_fw=(B,epsilon4,f1,...,f7) directly against the theorem-side key (B,beta) on the regenerated carry-jump-to-wrap exact marked object.",
+  "runtime_seconds": 1481.8834835104644,
+  "environment": {
+    "python_version": "3.10.12",
+    "rich_version": "14.2.0"
+  }
+}

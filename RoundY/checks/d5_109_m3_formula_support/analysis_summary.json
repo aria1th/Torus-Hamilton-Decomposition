@@ -1,0 +1,20 @@
+{
+  "task_id": "D5-M3-FORMULA-SUPPORT-107",
+  "checked_moduli": [
+    13,
+    15,
+    17
+  ],
+  "all_q_formulas_exact": true,
+  "all_rho_formulas_exact": true,
+  "all_sigma_formulas_exact": true,
+  "all_u_reconstructions_exact": true,
+  "all_w_reconstructions_exact": true,
+  "all_two_source_collision_witnesses_present": true,
+  "main_result": "On the regenerated carry_jump-to-wrap state-chain object for m=13,15,17, the explicit formulas proposed in tmp/107 are exact: q is recovered from the phase-corner identity, rho and sigma are extracted exactly from (B,beta), and the raw current coordinates u and w are reconstructed exactly from (rho,beta,q0,sigma). The symbolic two-source collision pattern for bare (beta,q0,sigma) is also realized on every checked modulus.",
+  "runtime_seconds": 87.13905363343656,
+  "environment": {
+    "python_version": "3.10.12",
+    "rich_version": "14.2.0"
+  }
+}

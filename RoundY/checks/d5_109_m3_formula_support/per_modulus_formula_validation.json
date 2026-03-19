@@ -1,0 +1,263 @@
+{
+  "13": {
+    "m": 13,
+    "row_count": 20280,
+    "runtime_seconds": 9.273188840597868,
+    "q_formula_exact": true,
+    "rho_formula_exact": true,
+    "sigma_formula_exact": true,
+    "u_reconstruction_exact": true,
+    "w_reconstruction_exact": true,
+    "first_failures": {
+      "q_formula": null,
+      "rho_formula": null,
+      "sigma_formula": null,
+      "u_reconstruction": null,
+      "w_reconstruction": null
+    },
+    "beta_counts": {
+      "0": 1560,
+      "1": 1560,
+      "2": 1560,
+      "3": 1560,
+      "4": 1560,
+      "5": 1560,
+      "6": 1560,
+      "7": 1560,
+      "8": 1560,
+      "9": 1560,
+      "10": 1560,
+      "11": 1560,
+      "12": 1560
+    },
+    "two_source_collision_witness_present": true,
+    "two_source_collision_examples": [
+      {
+        "rho": 2,
+        "row": {
+          "m": 13,
+          "source_u": 1,
+          "rho": 2,
+          "family": "regular",
+          "trace_step": 350,
+          "B": [
+            5,
+            1,
+            6,
+            3,
+            "regular"
+          ],
+          "q": 0,
+          "w": 4,
+          "u": 1,
+          "beta": 12,
+          "q0": 0,
+          "sigma": 5,
+          "delta": 65,
+          "epsilon4": "carry_jump"
+        }
+      },
+      {
+        "rho": 3,
+        "row": {
+          "m": 13,
+          "source_u": 2,
+          "rho": 3,
+          "family": "regular",
+          "trace_step": 181,
+          "B": [
+            5,
+            2,
+            3,
+            6,
+            "regular"
+          ],
+          "q": 0,
+          "w": 3,
+          "u": 2,
+          "beta": 12,
+          "q0": 0,
+          "sigma": 5,
+          "delta": 65,
+          "epsilon4": "carry_jump"
+        }
+      }
+    ]
+  },
+  "15": {
+    "m": 15,
+    "row_count": 37800,
+    "runtime_seconds": 22.93022600002587,
+    "q_formula_exact": true,
+    "rho_formula_exact": true,
+    "sigma_formula_exact": true,
+    "u_reconstruction_exact": true,
+    "w_reconstruction_exact": true,
+    "first_failures": {
+      "q_formula": null,
+      "rho_formula": null,
+      "sigma_formula": null,
+      "u_reconstruction": null,
+      "w_reconstruction": null
+    },
+    "beta_counts": {
+      "0": 2520,
+      "1": 2520,
+      "2": 2520,
+      "3": 2520,
+      "4": 2520,
+      "5": 2520,
+      "6": 2520,
+      "7": 2520,
+      "8": 2520,
+      "9": 2520,
+      "10": 2520,
+      "11": 2520,
+      "12": 2520,
+      "13": 2520,
+      "14": 2520
+    },
+    "two_source_collision_witness_present": true,
+    "two_source_collision_examples": [
+      {
+        "rho": 2,
+        "row": {
+          "m": 15,
+          "source_u": 1,
+          "rho": 2,
+          "family": "regular",
+          "trace_step": 464,
+          "B": [
+            5,
+            1,
+            6,
+            5,
+            "regular"
+          ],
+          "q": 0,
+          "w": 4,
+          "u": 1,
+          "beta": 14,
+          "q0": 0,
+          "sigma": 5,
+          "delta": 75,
+          "epsilon4": "carry_jump"
+        }
+      },
+      {
+        "rho": 3,
+        "row": {
+          "m": 15,
+          "source_u": 2,
+          "rho": 3,
+          "family": "regular",
+          "trace_step": 239,
+          "B": [
+            5,
+            2,
+            3,
+            8,
+            "regular"
+          ],
+          "q": 0,
+          "w": 3,
+          "u": 2,
+          "beta": 14,
+          "q0": 0,
+          "sigma": 5,
+          "delta": 75,
+          "epsilon4": "carry_jump"
+        }
+      }
+    ]
+  },
+  "17": {
+    "m": 17,
+    "row_count": 64736,
+    "runtime_seconds": 54.88460551202297,
+    "q_formula_exact": true,
+    "rho_formula_exact": true,
+    "sigma_formula_exact": true,
+    "u_reconstruction_exact": true,
+    "w_reconstruction_exact": true,
+    "first_failures": {
+      "q_formula": null,
+      "rho_formula": null,
+      "sigma_formula": null,
+      "u_reconstruction": null,
+      "w_reconstruction": null
+    },
+    "beta_counts": {
+      "0": 3808,
+      "1": 3808,
+      "2": 3808,
+      "3": 3808,
+      "4": 3808,
+      "5": 3808,
+      "6": 3808,
+      "7": 3808,
+      "8": 3808,
+      "9": 3808,
+      "10": 3808,
+      "11": 3808,
+      "12": 3808,
+      "13": 3808,
+      "14": 3808,
+      "15": 3808,
+      "16": 3808
+    },
+    "two_source_collision_witness_present": true,
+    "two_source_collision_examples": [
+      {
+        "rho": 2,
+        "row": {
+          "m": 17,
+          "source_u": 1,
+          "rho": 2,
+          "family": "regular",
+          "trace_step": 594,
+          "B": [
+            5,
+            1,
+            6,
+            7,
+            "regular"
+          ],
+          "q": 0,
+          "w": 4,
+          "u": 1,
+          "beta": 16,
+          "q0": 0,
+          "sigma": 5,
+          "delta": 85,
+          "epsilon4": "carry_jump"
+        }
+      },
+      {
+        "rho": 3,
+        "row": {
+          "m": 17,
+          "source_u": 2,
+          "rho": 3,
+          "family": "regular",
+          "trace_step": 305,
+          "B": [
+            5,
+            2,
+            3,
+            10,
+            "regular"
+          ],
+          "q": 0,
+          "w": 3,
+          "u": 2,
+          "beta": 16,
+          "q0": 0,
+          "sigma": 5,
+          "delta": 85,
+          "epsilon4": "carry_jump"
+        }
+      }
+    ]
+  }
+}

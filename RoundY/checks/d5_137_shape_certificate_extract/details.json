@@ -1,0 +1,912 @@
+{
+  "summary": {
+    "task_id": "D5-SHAPE-CERTIFICATE-EXTRACT-137",
+    "raw_seed_count": 11,
+    "symmetry_reduced_class_count": 5,
+    "bridge_class_count": 1,
+    "bridge_class_ids": [
+      "C0"
+    ],
+    "canonical_bridge_pair": [
+      [
+        2,
+        2,
+        1
+      ],
+      [
+        1,
+        4,
+        4
+      ]
+    ],
+    "main_result": "Using the 030 candidate-pair artifact and the 032 ranking artifact, the 11 filtered seed pairs reduce to a small symmetry-class table. Exactly one symmetry class contains the canonical oriented bridge pair [2,2,1] / [1,4,4].",
+    "scope_note": "This extraction closes the finite class enumeration and bridge-class uniqueness step. It does not, by itself, assign manuscript-grade dispositions {closed,infeasible} to every nonbridge class.",
+    "environment": {
+      "python_version": "3.10.12",
+      "rich_version": "14.2.0"
+    }
+  },
+  "class_rows": [
+    {
+      "class_id": "C0",
+      "orbit_key": [
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          3,
+          3
+        ]
+      ],
+      "member_seed_ids": [
+        0,
+        3,
+        4,
+        8
+      ],
+      "member_pairs": [
+        {
+          "seed_id": 0,
+          "left_word": [
+            1,
+            2,
+            2
+          ],
+          "right_word": [
+            4,
+            4,
+            1
+          ],
+          "normalization_to_canonical": "reverse_both_words"
+        },
+        {
+          "seed_id": 3,
+          "left_word": [
+            1,
+            4,
+            4
+          ],
+          "right_word": [
+            2,
+            2,
+            1
+          ],
+          "normalization_to_canonical": "swap_left_right"
+        },
+        {
+          "seed_id": 4,
+          "left_word": [
+            2,
+            2,
+            1
+          ],
+          "right_word": [
+            1,
+            4,
+            4
+          ],
+          "normalization_to_canonical": "identity"
+        },
+        {
+          "seed_id": 8,
+          "left_word": [
+            4,
+            4,
+            1
+          ],
+          "right_word": [
+            1,
+            2,
+            2
+          ],
+          "normalization_to_canonical": "reverse_both_words -> swap_left_right"
+        }
+      ],
+      "left_shapes": [
+        "AAB",
+        "ABB"
+      ],
+      "right_shapes": [
+        "AAB",
+        "ABB"
+      ],
+      "shared_bridge_symbols": [
+        1
+      ],
+      "oriented_bridge_type": true,
+      "normalization_map": "cyclic relabel + accepted orientation normalization to [2,2,1] / [1,4,4]",
+      "best_ranked_member_seed_id": 4,
+      "best_ranked_member_pair": {
+        "left_word": [
+          2,
+          2,
+          1
+        ],
+        "right_word": [
+          1,
+          4,
+          4
+        ]
+      },
+      "best_ranked_member_total_excess": 1550,
+      "status_from_current_accessible_artifacts": "bridge"
+    },
+    {
+      "class_id": "C1",
+      "orbit_key": [
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          3,
+          2,
+          3
+        ]
+      ],
+      "member_seed_ids": [
+        2,
+        9
+      ],
+      "member_pairs": [
+        {
+          "seed_id": 2,
+          "left_word": [
+            1,
+            4,
+            4
+          ],
+          "right_word": [
+            2,
+            1,
+            2
+          ],
+          "normalization_to_canonical": null
+        },
+        {
+          "seed_id": 9,
+          "left_word": [
+            4,
+            4,
+            1
+          ],
+          "right_word": [
+            2,
+            1,
+            2
+          ],
+          "normalization_to_canonical": null
+        }
+      ],
+      "left_shapes": [
+        "AAB",
+        "ABB"
+      ],
+      "right_shapes": [
+        "ABA"
+      ],
+      "shared_bridge_symbols": [
+        1
+      ],
+      "oriented_bridge_type": false,
+      "normalization_map": null,
+      "best_ranked_member_seed_id": 2,
+      "best_ranked_member_pair": {
+        "left_word": [
+          1,
+          4,
+          4
+        ],
+        "right_word": [
+          2,
+          1,
+          2
+        ]
+      },
+      "best_ranked_member_total_excess": 2890,
+      "status_from_current_accessible_artifacts": "nonbridge_class_needing_disposition_witness"
+    },
+    {
+      "class_id": "C2",
+      "orbit_key": [
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          3,
+          3,
+          2
+        ]
+      ],
+      "member_seed_ids": [
+        1,
+        10
+      ],
+      "member_pairs": [
+        {
+          "seed_id": 1,
+          "left_word": [
+            1,
+            4,
+            4
+          ],
+          "right_word": [
+            1,
+            2,
+            2
+          ],
+          "normalization_to_canonical": null
+        },
+        {
+          "seed_id": 10,
+          "left_word": [
+            4,
+            4,
+            1
+          ],
+          "right_word": [
+            2,
+            2,
+            1
+          ],
+          "normalization_to_canonical": null
+        }
+      ],
+      "left_shapes": [
+        "AAB",
+        "ABB"
+      ],
+      "right_shapes": [
+        "AAB",
+        "ABB"
+      ],
+      "shared_bridge_symbols": [
+        1
+      ],
+      "oriented_bridge_type": false,
+      "normalization_map": null,
+      "best_ranked_member_seed_id": 10,
+      "best_ranked_member_pair": {
+        "left_word": [
+          4,
+          4,
+          1
+        ],
+        "right_word": [
+          2,
+          2,
+          1
+        ]
+      },
+      "best_ranked_member_total_excess": 2680,
+      "status_from_current_accessible_artifacts": "nonbridge_class_needing_disposition_witness"
+    },
+    {
+      "class_id": "C3",
+      "orbit_key": [
+        [
+          1,
+          1,
+          4
+        ],
+        [
+          3,
+          4,
+          3
+        ]
+      ],
+      "member_seed_ids": [
+        5,
+        7
+      ],
+      "member_pairs": [
+        {
+          "seed_id": 5,
+          "left_word": [
+            4,
+            1,
+            4
+          ],
+          "right_word": [
+            1,
+            2,
+            2
+          ],
+          "normalization_to_canonical": null
+        },
+        {
+          "seed_id": 7,
+          "left_word": [
+            4,
+            1,
+            4
+          ],
+          "right_word": [
+            2,
+            2,
+            1
+          ],
+          "normalization_to_canonical": null
+        }
+      ],
+      "left_shapes": [
+        "ABA"
+      ],
+      "right_shapes": [
+        "AAB",
+        "ABB"
+      ],
+      "shared_bridge_symbols": [
+        1
+      ],
+      "oriented_bridge_type": false,
+      "normalization_map": null,
+      "best_ranked_member_seed_id": 7,
+      "best_ranked_member_pair": {
+        "left_word": [
+          4,
+          1,
+          4
+        ],
+        "right_word": [
+          2,
+          2,
+          1
+        ]
+      },
+      "best_ranked_member_total_excess": 2115,
+      "status_from_current_accessible_artifacts": "nonbridge_class_needing_disposition_witness"
+    },
+    {
+      "class_id": "C4",
+      "orbit_key": [
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          3,
+          2,
+          3
+        ]
+      ],
+      "member_seed_ids": [
+        6
+      ],
+      "member_pairs": [
+        {
+          "seed_id": 6,
+          "left_word": [
+            4,
+            1,
+            4
+          ],
+          "right_word": [
+            2,
+            1,
+            2
+          ],
+          "normalization_to_canonical": null
+        }
+      ],
+      "left_shapes": [
+        "ABA"
+      ],
+      "right_shapes": [
+        "ABA"
+      ],
+      "shared_bridge_symbols": [
+        1
+      ],
+      "oriented_bridge_type": false,
+      "normalization_map": null,
+      "best_ranked_member_seed_id": 6,
+      "best_ranked_member_pair": {
+        "left_word": [
+          4,
+          1,
+          4
+        ],
+        "right_word": [
+          2,
+          1,
+          2
+        ]
+      },
+      "best_ranked_member_total_excess": 2785,
+      "status_from_current_accessible_artifacts": "nonbridge_class_needing_disposition_witness"
+    }
+  ],
+  "raw_seed_rows": [
+    {
+      "seed_id": 0,
+      "left_word": [
+        1,
+        2,
+        2
+      ],
+      "right_word": [
+        4,
+        4,
+        1
+      ],
+      "orientation": "left_plus_w__right_minus_w",
+      "left_shape": "ABB",
+      "right_shape": "AAB",
+      "shared_bridge_symbols": [
+        1
+      ],
+      "oriented_bridge_type": true,
+      "normalization_to_canonical": "reverse_both_words",
+      "orbit_key": [
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          3,
+          3
+        ]
+      ],
+      "total_excess_incoming": 2785,
+      "total_overfull_targets": 2785,
+      "best_bit_name": "pred_changed",
+      "best_bit_score": 2785,
+      "colliding_changed_labels": [
+        "L1",
+        "L2",
+        "L3",
+        "R2",
+        "R3"
+      ]
+    },
+    {
+      "seed_id": 1,
+      "left_word": [
+        1,
+        4,
+        4
+      ],
+      "right_word": [
+        1,
+        2,
+        2
+      ],
+      "orientation": "left_minus_w__right_plus_w",
+      "left_shape": "ABB",
+      "right_shape": "ABB",
+      "shared_bridge_symbols": [
+        1
+      ],
+      "oriented_bridge_type": false,
+      "normalization_to_canonical": null,
+      "orbit_key": [
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          3,
+          3,
+          2
+        ]
+      ],
+      "total_excess_incoming": 2890,
+      "total_overfull_targets": 2890,
+      "best_bit_name": "pred_changed",
+      "best_bit_score": 2890,
+      "colliding_changed_labels": [
+        "L1",
+        "L2",
+        "L3",
+        "R1",
+        "R2",
+        "R3"
+      ]
+    },
+    {
+      "seed_id": 2,
+      "left_word": [
+        1,
+        4,
+        4
+      ],
+      "right_word": [
+        2,
+        1,
+        2
+      ],
+      "orientation": "left_minus_w__right_plus_w",
+      "left_shape": "ABB",
+      "right_shape": "ABA",
+      "shared_bridge_symbols": [
+        1
+      ],
+      "oriented_bridge_type": false,
+      "normalization_to_canonical": null,
+      "orbit_key": [
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          3,
+          2,
+          3
+        ]
+      ],
+      "total_excess_incoming": 2890,
+      "total_overfull_targets": 2890,
+      "best_bit_name": "pred_changed",
+      "best_bit_score": 2890,
+      "colliding_changed_labels": [
+        "L1",
+        "L2",
+        "L3",
+        "R1",
+        "R2",
+        "R3"
+      ]
+    },
+    {
+      "seed_id": 3,
+      "left_word": [
+        1,
+        4,
+        4
+      ],
+      "right_word": [
+        2,
+        2,
+        1
+      ],
+      "orientation": "left_minus_w__right_plus_w",
+      "left_shape": "ABB",
+      "right_shape": "AAB",
+      "shared_bridge_symbols": [
+        1
+      ],
+      "oriented_bridge_type": true,
+      "normalization_to_canonical": "swap_left_right",
+      "orbit_key": [
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          3,
+          3
+        ]
+      ],
+      "total_excess_incoming": 2220,
+      "total_overfull_targets": 2220,
+      "best_bit_name": "pred_changed",
+      "best_bit_score": 2220,
+      "colliding_changed_labels": [
+        "L1",
+        "L2",
+        "L3",
+        "R1",
+        "R3"
+      ]
+    },
+    {
+      "seed_id": 4,
+      "left_word": [
+        2,
+        2,
+        1
+      ],
+      "right_word": [
+        1,
+        4,
+        4
+      ],
+      "orientation": "left_plus_w__right_minus_w",
+      "left_shape": "AAB",
+      "right_shape": "ABB",
+      "shared_bridge_symbols": [
+        1
+      ],
+      "oriented_bridge_type": true,
+      "normalization_to_canonical": "identity",
+      "orbit_key": [
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          3,
+          3
+        ]
+      ],
+      "total_excess_incoming": 1550,
+      "total_overfull_targets": 1550,
+      "best_bit_name": "pred_changed",
+      "best_bit_score": 1550,
+      "colliding_changed_labels": [
+        "L3",
+        "R1",
+        "R2",
+        "R3"
+      ]
+    },
+    {
+      "seed_id": 5,
+      "left_word": [
+        4,
+        1,
+        4
+      ],
+      "right_word": [
+        1,
+        2,
+        2
+      ],
+      "orientation": "left_minus_w__right_plus_w",
+      "left_shape": "ABA",
+      "right_shape": "ABB",
+      "shared_bridge_symbols": [
+        1
+      ],
+      "oriented_bridge_type": false,
+      "normalization_to_canonical": null,
+      "orbit_key": [
+        [
+          1,
+          1,
+          4
+        ],
+        [
+          3,
+          4,
+          3
+        ]
+      ],
+      "total_excess_incoming": 2785,
+      "total_overfull_targets": 2785,
+      "best_bit_name": "pred_changed",
+      "best_bit_score": 2785,
+      "colliding_changed_labels": [
+        "L2",
+        "L3",
+        "R1",
+        "R2",
+        "R3"
+      ]
+    },
+    {
+      "seed_id": 6,
+      "left_word": [
+        4,
+        1,
+        4
+      ],
+      "right_word": [
+        2,
+        1,
+        2
+      ],
+      "orientation": "left_minus_w__right_plus_w",
+      "left_shape": "ABA",
+      "right_shape": "ABA",
+      "shared_bridge_symbols": [
+        1
+      ],
+      "oriented_bridge_type": false,
+      "normalization_to_canonical": null,
+      "orbit_key": [
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          3,
+          2,
+          3
+        ]
+      ],
+      "total_excess_incoming": 2785,
+      "total_overfull_targets": 2785,
+      "best_bit_name": "pred_changed",
+      "best_bit_score": 2785,
+      "colliding_changed_labels": [
+        "L2",
+        "L3",
+        "R1",
+        "R2",
+        "R3"
+      ]
+    },
+    {
+      "seed_id": 7,
+      "left_word": [
+        4,
+        1,
+        4
+      ],
+      "right_word": [
+        2,
+        2,
+        1
+      ],
+      "orientation": "left_minus_w__right_plus_w",
+      "left_shape": "ABA",
+      "right_shape": "AAB",
+      "shared_bridge_symbols": [
+        1
+      ],
+      "oriented_bridge_type": false,
+      "normalization_to_canonical": null,
+      "orbit_key": [
+        [
+          1,
+          1,
+          4
+        ],
+        [
+          3,
+          4,
+          3
+        ]
+      ],
+      "total_excess_incoming": 2115,
+      "total_overfull_targets": 2115,
+      "best_bit_name": "pred_changed",
+      "best_bit_score": 2115,
+      "colliding_changed_labels": [
+        "L2",
+        "L3",
+        "R1",
+        "R3"
+      ]
+    },
+    {
+      "seed_id": 8,
+      "left_word": [
+        4,
+        4,
+        1
+      ],
+      "right_word": [
+        1,
+        2,
+        2
+      ],
+      "orientation": "left_minus_w__right_plus_w",
+      "left_shape": "AAB",
+      "right_shape": "ABB",
+      "shared_bridge_symbols": [
+        1
+      ],
+      "oriented_bridge_type": true,
+      "normalization_to_canonical": "reverse_both_words -> swap_left_right",
+      "orbit_key": [
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          3,
+          3
+        ]
+      ],
+      "total_excess_incoming": 3350,
+      "total_overfull_targets": 3350,
+      "best_bit_name": "pred_changed",
+      "best_bit_score": 3350,
+      "colliding_changed_labels": [
+        "L2",
+        "L3",
+        "R1",
+        "R2",
+        "R3"
+      ]
+    },
+    {
+      "seed_id": 9,
+      "left_word": [
+        4,
+        4,
+        1
+      ],
+      "right_word": [
+        2,
+        1,
+        2
+      ],
+      "orientation": "left_minus_w__right_plus_w",
+      "left_shape": "AAB",
+      "right_shape": "ABA",
+      "shared_bridge_symbols": [
+        1
+      ],
+      "oriented_bridge_type": false,
+      "normalization_to_canonical": null,
+      "orbit_key": [
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          3,
+          2,
+          3
+        ]
+      ],
+      "total_excess_incoming": 3350,
+      "total_overfull_targets": 3350,
+      "best_bit_name": "pred_changed",
+      "best_bit_score": 3350,
+      "colliding_changed_labels": [
+        "L2",
+        "L3",
+        "R1",
+        "R2",
+        "R3"
+      ]
+    },
+    {
+      "seed_id": 10,
+      "left_word": [
+        4,
+        4,
+        1
+      ],
+      "right_word": [
+        2,
+        2,
+        1
+      ],
+      "orientation": "left_minus_w__right_plus_w",
+      "left_shape": "AAB",
+      "right_shape": "AAB",
+      "shared_bridge_symbols": [
+        1
+      ],
+      "oriented_bridge_type": false,
+      "normalization_to_canonical": null,
+      "orbit_key": [
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          3,
+          3,
+          2
+        ]
+      ],
+      "total_excess_incoming": 2680,
+      "total_overfull_targets": 2680,
+      "best_bit_name": "pred_changed",
+      "best_bit_score": 2680,
+      "colliding_changed_labels": [
+        "L2",
+        "L3",
+        "R1",
+        "R3"
+      ]
+    }
+  ]
+}

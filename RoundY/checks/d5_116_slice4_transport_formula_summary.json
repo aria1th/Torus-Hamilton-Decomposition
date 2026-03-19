@@ -1,0 +1,87 @@
+{
+  "theorem_candidate": "F4=(B2,B3,B4,Z,O,M) transports exactly to F3=(B2,B3,Z,M) on slice Sigma=4",
+  "formula_checks": {
+    "5": {
+      "exact": true,
+      "state_count": 621
+    },
+    "7": {
+      "exact": true,
+      "state_count": 2112
+    },
+    "9": {
+      "exact": true,
+      "state_count": 3882
+    },
+    "11": {
+      "exact": true,
+      "state_count": 4661
+    },
+    "13": {
+      "exact": true,
+      "state_count": 4746
+    }
+  },
+  "ablation_checks": {
+    "F4": {
+      "5": {
+        "state_count": 621,
+        "nondet_pairs": 0,
+        "max_multiplicity": 1
+      },
+      "9": {
+        "state_count": 3882,
+        "nondet_pairs": 0,
+        "max_multiplicity": 1
+      }
+    },
+    "drop_O": {
+      "5": {
+        "state_count": 606,
+        "nondet_pairs": 20,
+        "max_multiplicity": 2
+      },
+      "9": {
+        "state_count": 2722,
+        "nondet_pairs": 1440,
+        "max_multiplicity": 2
+      }
+    },
+    "drop_B4": {
+      "5": {
+        "state_count": 606,
+        "nondet_pairs": 40,
+        "max_multiplicity": 2
+      },
+      "9": {
+        "state_count": 2107,
+        "nondet_pairs": 3085,
+        "max_multiplicity": 4
+      }
+    },
+    "drop_B2": {
+      "5": {
+        "state_count": 606,
+        "nondet_pairs": 45,
+        "max_multiplicity": 3
+      },
+      "9": {
+        "state_count": 3217,
+        "nondet_pairs": 1805,
+        "max_multiplicity": 6
+      }
+    },
+    "drop_B3": {
+      "5": {
+        "state_count": 621,
+        "nondet_pairs": 0,
+        "max_multiplicity": 1
+      },
+      "7": {
+        "state_count": 1891,
+        "nondet_pairs": 780,
+        "max_multiplicity": 7
+      }
+    }
+  }
+}

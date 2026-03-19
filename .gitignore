@@ -23,6 +23,8 @@ artifacts/*/data/rule_rows/
 RoundY/distribution/
 formal/TorusD3Draft/
 artifacts/d5_*/
+RoundY/checks/d5_111_m4_raw_coordinate_packet.json
+tmp/
 
 # Low-priority local drafts
 tex/d3torus_complete_m_ge_3_odometer_revision_v9_with_d4_patched.tex

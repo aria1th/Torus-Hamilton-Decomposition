@@ -1,0 +1,72 @@
+{
+  "task_id": "D5-M4-INVARIANT-AUTOMATON-PACKET-110",
+  "target": "finite-state selector criterion for M4",
+  "invariant_name": "beta_delta",
+  "normalization": {
+    "beta_modulus": "m",
+    "delta_modulus": "m^2",
+    "state_id_format": "m:<m>|beta:<beta>|delta:<delta>"
+  },
+  "required_sections": [
+    "state_catalog",
+    "generator_rows",
+    "predecessor_rows",
+    "inverse_rows",
+    "summary_checks",
+    "failure_witnesses"
+  ],
+  "per_modulus": {
+    "13": {
+      "state_count": 1,
+      "state_catalog": [
+        {
+          "state_id": "m:13|beta:0|delta:0",
+          "beta": 0,
+          "delta": 0,
+          "sample_vertex": [],
+          "notes": "Optional sample representative vertex or local witness data may be attached here."
+        }
+      ],
+      "generator_rows": [
+        {
+          "state_id": "m:13|beta:0|delta:0",
+          "generators_by_color": [0, 1, 2, 3, 4]
+        }
+      ],
+      "predecessor_rows": [
+        {
+          "state_id": "m:13|beta:0|delta:0",
+          "pred_state_ids_by_generator": [
+            "m:13|beta:0|delta:0",
+            "m:13|beta:0|delta:0",
+            "m:13|beta:0|delta:0",
+            "m:13|beta:0|delta:0",
+            "m:13|beta:0|delta:0"
+          ]
+        }
+      ],
+      "inverse_rows": [
+        {
+          "state_id": "m:13|beta:0|delta:0",
+          "incoming_generator_by_color": [0, 1, 2, 3, 4]
+        }
+      ],
+      "summary_checks": {
+        "generator_rows_are_permutations": true,
+        "predecessor_targets_realized": true,
+        "inverse_identity_unique_everywhere": true
+      },
+      "failure_witnesses": [],
+      "formula_candidates": {
+        "generator_readouts": [],
+        "predecessor_transports": [],
+        "inverse_identity": []
+      },
+      "formula_fit_summary": {
+        "generator_readouts_closed": false,
+        "predecessor_transports_closed": false,
+        "inverse_identity_closed": false
+      }
+    }
+  }
+}

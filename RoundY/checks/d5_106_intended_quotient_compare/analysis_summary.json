@@ -1,0 +1,18 @@
+{
+  "task_id": "D5-INTENDED-QUOTIENT-COMPARE-106",
+  "checked_moduli": [
+    13,
+    15,
+    17
+  ],
+  "all_dynamic_bridge_checks_exact": true,
+  "all_theorem_to_dynamic_maps_exact": true,
+  "all_rho_dynamic_recoveries_exact": true,
+  "main_result": "On the regenerated carry_jump-to-wrap state-chain object, the theorem-side key (B,beta) always determines the dynamic bridge key (beta,q0,sigma), while the reverse direction fails globally because the dynamic bridge forgets source-residue bookkeeping. Adding rho = source_u + 1 recovers the theorem-side key exactly on every checked modulus.",
+  "recommendation": "Use the intended quotient in M3 as the exact deterministic quotient that retains grouped base, and prove a comparison theorem to the dynamic bridge rather than claiming literal equality with (beta,delta). The checked data supports the stronger comparison (B,beta) ~= (rho,beta,q0,sigma) on the exact marked chain object.",
+  "runtime_seconds": 88.02403368987143,
+  "environment": {
+    "python_version": "3.10.12",
+    "rich_version": "14.2.0"
+  }
+}

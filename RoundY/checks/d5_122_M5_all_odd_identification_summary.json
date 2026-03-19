@@ -1,0 +1,300 @@
+{
+  "T_formula_checks": {
+    "11": {
+      "exact": true,
+      "sample_mismatches": [],
+      "states_checked": 1331
+    },
+    "13": {
+      "exact": true,
+      "sample_mismatches": [],
+      "states_checked": 2197
+    },
+    "15": {
+      "exact": true,
+      "sample_mismatches": [],
+      "states_checked": 3375
+    },
+    "17": {
+      "exact": true,
+      "sample_mismatches": [],
+      "states_checked": 4913
+    },
+    "19": {
+      "exact": true,
+      "sample_mismatches": [],
+      "states_checked": 6859
+    },
+    "21": {
+      "exact": true,
+      "sample_mismatches": [],
+      "states_checked": 9261
+    }
+  },
+  "U_formula_checks": {
+    "11": {
+      "actual_equals_T_formula": true,
+      "actual_equals_natural_formula": true,
+      "corrected_model_cycle_summary": {
+        "cycle_count": 1,
+        "distribution": {
+          "121": 1
+        },
+        "largest_cycle": 121,
+        "one_cycle": true
+      },
+      "corrected_rule_type_counts": {
+        "bulk": 82,
+        "line_A_same": 8,
+        "line_B_early_same": 6,
+        "line_B_late_same": 1,
+        "row0_same_m_minus_1": 1,
+        "row0_same_m_minus_8": 1,
+        "row0_to_row1_affine": 9,
+        "row1_special_to_row7": 1,
+        "row8_special_to_row0": 1,
+        "row_last_even_half_to_row0": 2,
+        "row_last_odd_half_to_row0": 5,
+        "row_last_same_m_minus_14": 1,
+        "row_last_same_zero": 1,
+        "row_last_special_to_row0_m_minus_1": 1,
+        "row_last_special_to_row1": 1
+      },
+      "natural_formula_equals_corrected_model": true,
+      "sample_mismatches_actual_vs_T": [],
+      "sample_mismatches_actual_vs_natural": [],
+      "sample_mismatches_natural_vs_model": [],
+      "states_checked": 121
+    },
+    "13": {
+      "actual_equals_T_formula": true,
+      "actual_equals_natural_formula": true,
+      "corrected_model_cycle_summary": {
+        "cycle_count": 1,
+        "distribution": {
+          "169": 1
+        },
+        "largest_cycle": 169,
+        "one_cycle": true
+      },
+      "corrected_rule_type_counts": {
+        "bulk": 122,
+        "line_A_same": 10,
+        "line_B_early_same": 6,
+        "line_B_late_same": 3,
+        "row0_same_m_minus_1": 1,
+        "row0_same_m_minus_8": 1,
+        "row0_to_row1_affine": 11,
+        "row1_special_to_row7": 1,
+        "row8_special_to_row0": 1,
+        "row_last_even_half_to_row0": 3,
+        "row_last_odd_half_to_row0": 6,
+        "row_last_same_m_minus_14": 1,
+        "row_last_same_zero": 1,
+        "row_last_special_to_row0_m_minus_1": 1,
+        "row_last_special_to_row1": 1
+      },
+      "natural_formula_equals_corrected_model": true,
+      "sample_mismatches_actual_vs_T": [],
+      "sample_mismatches_actual_vs_natural": [],
+      "sample_mismatches_natural_vs_model": [],
+      "states_checked": 169
+    },
+    "15": {
+      "actual_equals_T_formula": true,
+      "actual_equals_natural_formula": true,
+      "corrected_model_cycle_summary": {
+        "cycle_count": 1,
+        "distribution": {
+          "225": 1
+        },
+        "largest_cycle": 225,
+        "one_cycle": true
+      },
+      "corrected_rule_type_counts": {
+        "bulk": 170,
+        "line_A_same": 12,
+        "line_B_early_same": 6,
+        "line_B_late_same": 5,
+        "row0_same_m_minus_1": 1,
+        "row0_same_m_minus_8": 1,
+        "row0_to_row1_affine": 13,
+        "row1_special_to_row7": 1,
+        "row8_special_to_row0": 1,
+        "row_last_even_half_to_row0": 5,
+        "row_last_odd_half_to_row0": 6,
+        "row_last_same_m_minus_14": 1,
+        "row_last_same_zero": 1,
+        "row_last_special_to_row0_m_minus_1": 1,
+        "row_last_special_to_row1": 1
+      },
+      "natural_formula_equals_corrected_model": true,
+      "sample_mismatches_actual_vs_T": [],
+      "sample_mismatches_actual_vs_natural": [],
+      "sample_mismatches_natural_vs_model": [],
+      "states_checked": 225
+    },
+    "17": {
+      "actual_equals_T_formula": true,
+      "actual_equals_natural_formula": true,
+      "corrected_model_cycle_summary": {
+        "cycle_count": 1,
+        "distribution": {
+          "289": 1
+        },
+        "largest_cycle": 289,
+        "one_cycle": true
+      },
+      "corrected_rule_type_counts": {
+        "bulk": 226,
+        "line_A_same": 14,
+        "line_B_early_same": 6,
+        "line_B_late_same": 7,
+        "row0_same_m_minus_1": 1,
+        "row0_same_m_minus_8": 1,
+        "row0_to_row1_affine": 15,
+        "row1_special_to_row7": 1,
+        "row8_special_to_row0": 1,
+        "row_last_even_half_to_row0": 6,
+        "row_last_odd_half_to_row0": 7,
+        "row_last_same_m_minus_14": 1,
+        "row_last_same_zero": 1,
+        "row_last_special_to_row0_m_minus_1": 1,
+        "row_last_special_to_row1": 1
+      },
+      "natural_formula_equals_corrected_model": true,
+      "sample_mismatches_actual_vs_T": [],
+      "sample_mismatches_actual_vs_natural": [],
+      "sample_mismatches_natural_vs_model": [],
+      "states_checked": 289
+    },
+    "19": {
+      "actual_equals_T_formula": true,
+      "actual_equals_natural_formula": true,
+      "corrected_model_cycle_summary": {
+        "cycle_count": 1,
+        "distribution": {
+          "361": 1
+        },
+        "largest_cycle": 361,
+        "one_cycle": true
+      },
+      "corrected_rule_type_counts": {
+        "bulk": 290,
+        "line_A_same": 16,
+        "line_B_early_same": 6,
+        "line_B_late_same": 9,
+        "row0_same_m_minus_1": 1,
+        "row0_same_m_minus_8": 1,
+        "row0_to_row1_affine": 17,
+        "row1_special_to_row7": 1,
+        "row8_special_to_row0": 1,
+        "row_last_even_half_to_row0": 7,
+        "row_last_odd_half_to_row0": 8,
+        "row_last_same_m_minus_14": 1,
+        "row_last_same_zero": 1,
+        "row_last_special_to_row0_m_minus_1": 1,
+        "row_last_special_to_row1": 1
+      },
+      "natural_formula_equals_corrected_model": true,
+      "sample_mismatches_actual_vs_T": [],
+      "sample_mismatches_actual_vs_natural": [],
+      "sample_mismatches_natural_vs_model": [],
+      "states_checked": 361
+    },
+    "21": {
+      "actual_equals_T_formula": true,
+      "actual_equals_natural_formula": true,
+      "corrected_model_cycle_summary": {
+        "cycle_count": 1,
+        "distribution": {
+          "441": 1
+        },
+        "largest_cycle": 441,
+        "one_cycle": true
+      },
+      "corrected_rule_type_counts": {
+        "bulk": 362,
+        "line_A_same": 18,
+        "line_B_early_same": 6,
+        "line_B_late_same": 11,
+        "row0_same_m_minus_1": 1,
+        "row0_same_m_minus_8": 1,
+        "row0_to_row1_affine": 19,
+        "row1_special_to_row7": 1,
+        "row8_special_to_row0": 1,
+        "row_last_even_half_to_row0": 8,
+        "row_last_odd_half_to_row0": 9,
+        "row_last_same_m_minus_14": 1,
+        "row_last_same_zero": 1,
+        "row_last_special_to_row0_m_minus_1": 1,
+        "row_last_special_to_row1": 1
+      },
+      "natural_formula_equals_corrected_model": true,
+      "sample_mismatches_actual_vs_T": [],
+      "sample_mismatches_actual_vs_natural": [],
+      "sample_mismatches_natural_vs_model": [],
+      "states_checked": 441
+    }
+  },
+  "all_T_exact": true,
+  "all_U_actual_equals_T_formula": true,
+  "all_U_actual_equals_natural_formula": true,
+  "all_corrected_models_one_cycle": true,
+  "all_natural_equals_corrected_model": true,
+  "all_small_full_torus_hamilton": true,
+  "scope": {
+    "exact_T_moduli": [
+      11,
+      13,
+      15,
+      17,
+      19,
+      21
+    ],
+    "exact_U_moduli": [
+      11,
+      13,
+      15,
+      17,
+      19,
+      21
+    ],
+    "note": "RoundY/theorem/d5_122_M5_all_odd_identification.tex",
+    "selector": "Sel* color 4 from scripts/torus_nd_d5_selector_star_common_119.py",
+    "small_full_torus_moduli": [
+      5,
+      7,
+      9
+    ]
+  },
+  "small_full_torus_hamilton_checks": {
+    "5": {
+      "cycle_count": 1,
+      "distribution": {
+        "3125": 1
+      },
+      "hamilton": true,
+      "largest_cycle": 3125,
+      "state_count": 3125
+    },
+    "7": {
+      "cycle_count": 1,
+      "distribution": {
+        "16807": 1
+      },
+      "hamilton": true,
+      "largest_cycle": 16807,
+      "state_count": 16807
+    },
+    "9": {
+      "cycle_count": 1,
+      "distribution": {
+        "59049": 1
+      },
+      "hamilton": true,
+      "largest_cycle": 59049,
+      "state_count": 59049
+    }
+  }
+}

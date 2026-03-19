@@ -1,0 +1,136 @@
+{
+  "task_id": "D5-GRAPH-THEORETIC-GAP-EVIDENCE-101",
+  "source_note": "RoundY/theorem/d5_101_graph_theoretic_gap_evidence_map.md",
+  "graph_theorem_gaps": {
+    "channel_classification": {
+      "status": "theorem_packaging_missing_but_pilot_evidence_strong",
+      "target_statement": "all odd-m d=5 instances are already closed or reduce to the best-seed channel R1 -> H_L1",
+      "supporting_notes": [
+        "RoundY/theorem/d5_033_explicit_trigger_family.md",
+        "tmp/d5_100_graph_theoretic_hamilton_decomposition_proof_draft_conditional.tex"
+      ],
+      "supporting_artifacts": [
+        "artifacts/d5_defect_splice_transducer_033/data/analysis_summary.json",
+        "artifacts/d5_defect_splice_transducer_033/data/best_seed_defect_templates.json"
+      ],
+      "pilot_moduli": [5, 7, 9],
+      "observations": {
+        "direct_repair_result": "L3, R2, and R3 repair directly; only the R1 channel remains unresolved",
+        "unresolved_source_family_by_m": {
+          "5": "R1",
+          "7": "R1",
+          "9": "R1"
+        },
+        "best_seed_hole_family": "H_L1",
+        "unary_best_case_state_lower_bound_by_m": {
+          "5": 50,
+          "7": 196,
+          "9": 486
+        }
+      },
+      "remaining_gap": "promote the defect-template frontier conclusion to a stable theorem with explicit quantifier in m"
+    },
+    "graph_witness_descent": {
+      "status": "exact_invariant_side_strong_graph_selector_package_missing",
+      "target_statement": "globalization invariant I=(beta,delta) defines five global torus successor maps with disjoint outgoing coverage and unique incoming color arcs",
+      "supporting_notes": [
+        "RoundY/theorem/d5_076_concrete_bridge_proof.md",
+        "RoundY/theorem/d5_068_realization.md",
+        "RoundY/theorem/d5_099_one_pass_odd_m_globalization_package.md",
+        "tmp/d5_100_graph_theoretic_hamilton_decomposition_proof_draft_conditional.tex"
+      ],
+      "supporting_artifacts": [
+        "artifacts/d5_exact_reduction_support_068b/data/analysis_summary.json",
+        "artifacts/d5_exact_reduction_support_068b/data/accessible_quotient_on_chain.json",
+        "artifacts/d5_exact_reduction_support_068b/data/beta_exactness_extension.json",
+        "artifacts/d5_exact_reduction_support_068b/data/branch_support_extension.json",
+        "artifacts/d5_exact_reduction_support_068b/data/marked_chain_validation.json"
+      ],
+      "full_row_moduli": [13, 15, 17, 19, 21],
+      "branch_support_moduli": [31, 33, 35, 37, 39, 41],
+      "observations": {
+        "beta_drift_exact": true,
+        "readouts_exact": ["q", "c", "epsilon4", "tau", "next_tau", "next_B"],
+        "smaller_chain_quotients_fail_deterministic_successor": [
+          "next_dn",
+          "dn_plus_next_dn"
+        ],
+        "marked_chain_quotients_succeed": [
+          "B",
+          "B_next",
+          "B_next2"
+        ]
+      },
+      "remaining_gap": "define the representative space, projection to torus vertices, local arc selectors, and incoming uniqueness theorem"
+    },
+    "graph_return_cycle_lift": {
+      "status": "odometer_support_strong_full_torus_lift_missing",
+      "target_statement": "for each color factor, a section return is the full boundary odometer and each return segment has length m^3, yielding one orbit of length m^5",
+      "supporting_notes": [
+        "tmp/d5_100_graph_theoretic_hamilton_decomposition_proof_draft_conditional.tex",
+        "RoundY/theorem/d5_beta_clock_realization_lifted_phase_20260313_067.md",
+        "RoundY/d5_color3_skew_product_note_v1.md"
+      ],
+      "supporting_artifacts": [
+        "artifacts/d5_mixed_skew_odometer_normal_form_018/data/analysis_summary.json",
+        "artifacts/d5_mixed_skew_odometer_normal_form_018/data/saved_vs_direct_comparison.json",
+        "artifacts/d5_mixed_skew_odometer_normal_form_018/data/control_comparison.json",
+        "artifacts/d5_lifted_corridor_carrier_target_037/data/analysis_summary.json",
+        "artifacts/d5_lifted_corridor_carrier_target_037/data/raw_visibility_summary.json",
+        "artifacts/d5_lifted_corridor_carrier_target_037/data/carrier_target_summary.json"
+      ],
+      "saved_table_moduli": [5, 7, 9, 11, 13],
+      "direct_replay_moduli": [15, 17, 19],
+      "raw_corridor_moduli": [5, 7, 9, 11],
+      "observations": {
+        "grouped_return_formula": "U_red(s)=s+1",
+        "grouped_cocycle_formula": "phi(s)=2+1_{s=1}-2*1_{s=2}-1_{s=3} (mod m)",
+        "raw_corridor_phase_increments_by_one": true,
+        "lifted_beta_realization": "beta=-Theta on the exact lifted active corridor"
+      },
+      "remaining_gap": "construct the full-torus return section S_i, prove exact m^3 return spacing, and identify the section return with delta -> delta+1"
+    },
+    "inputs_A_to_E": {
+      "status": "A_C_and_most_of_D_have_stable_homes_B_is_mostly_absorbed_E_is_least_isolated",
+      "input_map": {
+        "A": {
+          "best_current_source": "RoundY/theorem/d5_033_explicit_trigger_family.md",
+          "supporting_artifact": "artifacts/d5_defect_splice_transducer_033/data/analysis_summary.json",
+          "status": "stable_citation_exists"
+        },
+        "B": {
+          "best_current_source": "RoundY/theorem/d5_098_compact_cleanup_033_062_structural_block.md",
+          "status": "mostly_internalized"
+        },
+        "C": {
+          "best_current_source": "RoundY/theorem/d5_076_concrete_bridge_proof.md",
+          "supporting_artifact": "artifacts/d5_exact_reduction_support_068b/data/analysis_summary.json",
+          "status": "stable_citation_exists"
+        },
+        "D": {
+          "best_current_sources": [
+            "RoundY/theorem/d5_095_compact_reproof_079_chart_interface_landing.md",
+            "RoundY/theorem/d5_096_compact_reproof_081_regular_closure.md",
+            "RoundY/checks/d5_077_compact_interval_summary.json",
+            "RoundY/checks/d5_081_regular_union_endpoint_table.csv"
+          ],
+          "status": "near_manuscript_order"
+        },
+        "E": {
+          "best_current_sources": [
+            "RoundY/theorem/d5_076_concrete_bridge_proof.md",
+            "RoundY/theorem/d5_092_cleaned_independent_theorem_suite.md",
+            "RoundY/theorem/d5_099_one_pass_odd_m_globalization_package.md"
+          ],
+          "status": "needs_short_standalone_lemma"
+        }
+      }
+    }
+  },
+  "recommended_order": [
+    "package the channel classification theorem",
+    "write the graph witness descent theorem package",
+    "write the graph return-cycle lift theorem package",
+    "promote a short standalone theorem for Input E"
+  ]
+}

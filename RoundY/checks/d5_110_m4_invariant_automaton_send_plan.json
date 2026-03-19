@@ -1,0 +1,24 @@
+{
+  "task_id": "D5-M4-INVARIANT-AUTOMATON-SEND-PLAN-110",
+  "status": "design_only",
+  "current_assessment": "Current evidence is not yet sufficient for M4 because the finite invariant-automaton tables are still missing.",
+  "required_packet_sections": [
+    "state_catalog",
+    "generator_rows",
+    "predecessor_rows",
+    "inverse_rows",
+    "summary_checks",
+    "failure_witnesses"
+  ],
+  "priority_checks": [
+    "each generator row is a permutation of {0,1,2,3,4}",
+    "each predecessor target is a realized invariant state",
+    "for each state and color there is a unique incoming generator j with g_c(P_j(I)) = j"
+  ],
+  "optional_sections": [
+    "sample_vertex witnesses",
+    "formula_candidates",
+    "formula_fit_summary"
+  ],
+  "main_result": "The next M4 evidence packet should be a finite invariant-automaton packet on the realized invariant state space, not a torus-level arc dump and not a Hamiltonicity packet."
+}

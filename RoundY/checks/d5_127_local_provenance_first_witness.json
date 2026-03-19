@@ -1,0 +1,728 @@
+{
+  "q_tau": {
+    "m": 13,
+    "first_successor_failure": {
+      "key": [
+        [
+          4,
+          1,
+          4,
+          11,
+          "regular"
+        ],
+        8,
+        "flat"
+      ],
+      "next_keys": [
+        [
+          [
+            4,
+            1,
+            4,
+            12,
+            "regular"
+          ],
+          7,
+          "flat"
+        ],
+        [
+          [
+            4,
+            1,
+            4,
+            12,
+            "regular"
+          ],
+          8,
+          "flat"
+        ]
+      ],
+      "rows": [
+        {
+          "m": 13,
+          "source_u": 1,
+          "family": "regular",
+          "trace_step": 172,
+          "B": [
+            4,
+            1,
+            4,
+            11,
+            "regular"
+          ],
+          "beta": 8,
+          "q0": 12,
+          "sigma": 3,
+          "epsilon4": "flat",
+          "tau": 8,
+          "future_binary_after_current_7": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "next_B": [
+            4,
+            1,
+            4,
+            12,
+            "regular"
+          ],
+          "next_beta": 7,
+          "next_q0": 12,
+          "next_sigma": 3,
+          "next_epsilon4": "flat"
+        },
+        {
+          "m": 13,
+          "source_u": 2,
+          "family": "regular",
+          "trace_step": 327,
+          "B": [
+            4,
+            1,
+            4,
+            11,
+            "regular"
+          ],
+          "beta": 9,
+          "q0": 11,
+          "sigma": 5,
+          "epsilon4": "flat",
+          "tau": 9,
+          "future_binary_after_current_7": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "next_B": [
+            4,
+            1,
+            4,
+            12,
+            "regular"
+          ],
+          "next_beta": 8,
+          "next_q0": 11,
+          "next_sigma": 5,
+          "next_epsilon4": "flat"
+        }
+      ]
+    },
+    "first_direct_collision": {
+      "key": [
+        [
+          4,
+          1,
+          4,
+          10,
+          "regular"
+        ],
+        8,
+        "flat"
+      ],
+      "values": [
+        [
+          [
+            4,
+            1,
+            4,
+            10,
+            "regular"
+          ],
+          10
+        ],
+        [
+          [
+            4,
+            1,
+            4,
+            10,
+            "regular"
+          ],
+          9
+        ]
+      ],
+      "rows": [
+        {
+          "m": 13,
+          "source_u": 1,
+          "family": "regular",
+          "trace_step": 171,
+          "B": [
+            4,
+            1,
+            4,
+            10,
+            "regular"
+          ],
+          "beta": 9,
+          "q0": 12,
+          "sigma": 3,
+          "epsilon4": "flat",
+          "tau": 9,
+          "future_binary_after_current_7": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "next_B": [
+            4,
+            1,
+            4,
+            11,
+            "regular"
+          ],
+          "next_beta": 8,
+          "next_q0": 12,
+          "next_sigma": 3,
+          "next_epsilon4": "flat"
+        },
+        {
+          "m": 13,
+          "source_u": 2,
+          "family": "regular",
+          "trace_step": 326,
+          "B": [
+            4,
+            1,
+            4,
+            10,
+            "regular"
+          ],
+          "beta": 10,
+          "q0": 11,
+          "sigma": 5,
+          "epsilon4": "flat",
+          "tau": 10,
+          "future_binary_after_current_7": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "next_B": [
+            4,
+            1,
+            4,
+            11,
+            "regular"
+          ],
+          "next_beta": 9,
+          "next_q0": 11,
+          "next_sigma": 5,
+          "next_epsilon4": "flat"
+        }
+      ]
+    },
+    "first_rq_ambiguous_bucket": {
+      "key": [
+        [
+          [
+            4,
+            1,
+            4,
+            10,
+            "regular"
+          ],
+          8,
+          "flat"
+        ],
+        null
+      ],
+      "fiber_size": 2,
+      "values": [
+        [
+          [
+            4,
+            1,
+            4,
+            10,
+            "regular"
+          ],
+          10
+        ],
+        [
+          [
+            4,
+            1,
+            4,
+            10,
+            "regular"
+          ],
+          9
+        ]
+      ],
+      "rows": [
+        {
+          "m": 13,
+          "source_u": 1,
+          "family": "regular",
+          "trace_step": 171,
+          "B": [
+            4,
+            1,
+            4,
+            10,
+            "regular"
+          ],
+          "beta": 9,
+          "q0": 12,
+          "sigma": 3,
+          "epsilon4": "flat",
+          "tau": 9,
+          "future_binary_after_current_7": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "next_B": [
+            4,
+            1,
+            4,
+            11,
+            "regular"
+          ],
+          "next_beta": 8,
+          "next_q0": 12,
+          "next_sigma": 3,
+          "next_epsilon4": "flat"
+        },
+        {
+          "m": 13,
+          "source_u": 2,
+          "family": "regular",
+          "trace_step": 326,
+          "B": [
+            4,
+            1,
+            4,
+            10,
+            "regular"
+          ],
+          "beta": 10,
+          "q0": 11,
+          "sigma": 5,
+          "epsilon4": "flat",
+          "tau": 10,
+          "future_binary_after_current_7": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "next_B": [
+            4,
+            1,
+            4,
+            11,
+            "regular"
+          ],
+          "next_beta": 9,
+          "next_q0": 11,
+          "next_sigma": 5,
+          "next_epsilon4": "flat"
+        }
+      ]
+    }
+  },
+  "q_fw": {
+    "m": 13,
+    "first_successor_failure": {
+      "key": [
+        [
+          4,
+          1,
+          4,
+          11,
+          "regular"
+        ],
+        "flat",
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "next_keys": [
+        [
+          [
+            4,
+            1,
+            4,
+            12,
+            "regular"
+          ],
+          "flat",
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          [
+            4,
+            1,
+            4,
+            12,
+            "regular"
+          ],
+          "flat",
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "rows": [
+        {
+          "m": 13,
+          "source_u": 1,
+          "family": "regular",
+          "trace_step": 172,
+          "B": [
+            4,
+            1,
+            4,
+            11,
+            "regular"
+          ],
+          "beta": 8,
+          "q0": 12,
+          "sigma": 3,
+          "epsilon4": "flat",
+          "tau": 8,
+          "future_binary_after_current_7": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "next_B": [
+            4,
+            1,
+            4,
+            12,
+            "regular"
+          ],
+          "next_beta": 7,
+          "next_q0": 12,
+          "next_sigma": 3,
+          "next_epsilon4": "flat"
+        },
+        {
+          "m": 13,
+          "source_u": 2,
+          "family": "regular",
+          "trace_step": 327,
+          "B": [
+            4,
+            1,
+            4,
+            11,
+            "regular"
+          ],
+          "beta": 9,
+          "q0": 11,
+          "sigma": 5,
+          "epsilon4": "flat",
+          "tau": 9,
+          "future_binary_after_current_7": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "next_B": [
+            4,
+            1,
+            4,
+            12,
+            "regular"
+          ],
+          "next_beta": 8,
+          "next_q0": 11,
+          "next_sigma": 5,
+          "next_epsilon4": "flat"
+        }
+      ]
+    },
+    "first_direct_collision": {
+      "key": [
+        [
+          4,
+          1,
+          4,
+          10,
+          "regular"
+        ],
+        "flat",
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "values": [
+        [
+          [
+            4,
+            1,
+            4,
+            10,
+            "regular"
+          ],
+          10
+        ],
+        [
+          [
+            4,
+            1,
+            4,
+            10,
+            "regular"
+          ],
+          9
+        ]
+      ],
+      "rows": [
+        {
+          "m": 13,
+          "source_u": 1,
+          "family": "regular",
+          "trace_step": 171,
+          "B": [
+            4,
+            1,
+            4,
+            10,
+            "regular"
+          ],
+          "beta": 9,
+          "q0": 12,
+          "sigma": 3,
+          "epsilon4": "flat",
+          "tau": 9,
+          "future_binary_after_current_7": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "next_B": [
+            4,
+            1,
+            4,
+            11,
+            "regular"
+          ],
+          "next_beta": 8,
+          "next_q0": 12,
+          "next_sigma": 3,
+          "next_epsilon4": "flat"
+        },
+        {
+          "m": 13,
+          "source_u": 2,
+          "family": "regular",
+          "trace_step": 326,
+          "B": [
+            4,
+            1,
+            4,
+            10,
+            "regular"
+          ],
+          "beta": 10,
+          "q0": 11,
+          "sigma": 5,
+          "epsilon4": "flat",
+          "tau": 10,
+          "future_binary_after_current_7": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "next_B": [
+            4,
+            1,
+            4,
+            11,
+            "regular"
+          ],
+          "next_beta": 9,
+          "next_q0": 11,
+          "next_sigma": 5,
+          "next_epsilon4": "flat"
+        }
+      ]
+    },
+    "first_rq_ambiguous_bucket": {
+      "key": [
+        [
+          [
+            4,
+            1,
+            4,
+            10,
+            "regular"
+          ],
+          "flat",
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        null
+      ],
+      "fiber_size": 2,
+      "values": [
+        [
+          [
+            4,
+            1,
+            4,
+            10,
+            "regular"
+          ],
+          10
+        ],
+        [
+          [
+            4,
+            1,
+            4,
+            10,
+            "regular"
+          ],
+          9
+        ]
+      ],
+      "rows": [
+        {
+          "m": 13,
+          "source_u": 1,
+          "family": "regular",
+          "trace_step": 171,
+          "B": [
+            4,
+            1,
+            4,
+            10,
+            "regular"
+          ],
+          "beta": 9,
+          "q0": 12,
+          "sigma": 3,
+          "epsilon4": "flat",
+          "tau": 9,
+          "future_binary_after_current_7": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "next_B": [
+            4,
+            1,
+            4,
+            11,
+            "regular"
+          ],
+          "next_beta": 8,
+          "next_q0": 12,
+          "next_sigma": 3,
+          "next_epsilon4": "flat"
+        },
+        {
+          "m": 13,
+          "source_u": 2,
+          "family": "regular",
+          "trace_step": 326,
+          "B": [
+            4,
+            1,
+            4,
+            10,
+            "regular"
+          ],
+          "beta": 10,
+          "q0": 11,
+          "sigma": 5,
+          "epsilon4": "flat",
+          "tau": 10,
+          "future_binary_after_current_7": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "next_B": [
+            4,
+            1,
+            4,
+            11,
+            "regular"
+          ],
+          "next_beta": 9,
+          "next_q0": 11,
+          "next_sigma": 5,
+          "next_epsilon4": "flat"
+        }
+      ]
+    }
+  }
+}

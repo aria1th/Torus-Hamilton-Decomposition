@@ -1,0 +1,6 @@
+class_id,member_seed_ids,left_shapes,right_shapes,shared_bridge_symbols,oriented_bridge_type,normalization_map,best_ranked_member_seed_id,best_ranked_member_pair_left,best_ranked_member_pair_right,best_ranked_member_total_excess,status_from_current_accessible_artifacts
+C0,"[0, 3, 4, 8]","[""AAB"", ""ABB""]","[""AAB"", ""ABB""]",[1],True,"cyclic relabel + accepted orientation normalization to [2,2,1] / [1,4,4]",4,"[2, 2, 1]","[1, 4, 4]",1550,bridge
+C1,"[2, 9]","[""AAB"", ""ABB""]","[""ABA""]",[1],False,,2,"[1, 4, 4]","[2, 1, 2]",2890,nonbridge_class_needing_disposition_witness
+C2,"[1, 10]","[""AAB"", ""ABB""]","[""AAB"", ""ABB""]",[1],False,,10,"[4, 4, 1]","[2, 2, 1]",2680,nonbridge_class_needing_disposition_witness
+C3,"[5, 7]","[""ABA""]","[""AAB"", ""ABB""]",[1],False,,7,"[4, 1, 4]","[2, 2, 1]",2115,nonbridge_class_needing_disposition_witness
+C4,[6],"[""ABA""]","[""ABA""]",[1],False,,6,"[4, 1, 4]","[2, 1, 2]",2785,nonbridge_class_needing_disposition_witness

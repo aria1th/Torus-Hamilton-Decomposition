@@ -1,0 +1,1420 @@
+{
+  "summary": {
+    "task_id": "D5-INTENDED-QUOTIENT-COMPARE-106",
+    "checked_moduli": [
+      13,
+      15,
+      17
+    ],
+    "all_dynamic_bridge_checks_exact": true,
+    "all_theorem_to_dynamic_maps_exact": true,
+    "all_rho_dynamic_recoveries_exact": true,
+    "main_result": "On the regenerated carry_jump-to-wrap state-chain object, the theorem-side key (B,beta) always determines the dynamic bridge key (beta,q0,sigma), while the reverse direction fails globally because the dynamic bridge forgets source-residue bookkeeping. Adding rho = source_u + 1 recovers the theorem-side key exactly on every checked modulus.",
+    "recommendation": "Use the intended quotient in M3 as the exact deterministic quotient that retains grouped base, and prove a comparison theorem to the dynamic bridge rather than claiming literal equality with (beta,delta). The checked data supports the stronger comparison (B,beta) ~= (rho,beta,q0,sigma) on the exact marked chain object.",
+    "runtime_seconds": 88.02403368987143,
+    "environment": {
+      "python_version": "3.10.12",
+      "rich_version": "14.2.0"
+    }
+  },
+  "per_modulus": {
+    "13": {
+      "m": 13,
+      "runtime_seconds": 9.574115820229053,
+      "branch_count": 12,
+      "chain_count": 1560,
+      "state_row_count": 20280,
+      "nonterminal_state_row_count": 18720,
+      "dynamic_bridge": {
+        "epsilon4_exactness": {
+          "is_exact": true,
+          "bucket_count": 2197,
+          "collision_bucket_count": 0,
+          "first_collision": null
+        },
+        "short_corner_exactness": {
+          "is_exact": true,
+          "bucket_count": 2028,
+          "collision_bucket_count": 0,
+          "first_collision": null
+        },
+        "successor_determinism": {
+          "is_deterministic": true,
+          "bucket_count": 2028,
+          "failure_bucket_count": 0,
+          "first_failure": null
+        }
+      },
+      "decorated_bridge": {
+        "epsilon4_exactness": {
+          "is_exact": true,
+          "bucket_count": 52,
+          "collision_bucket_count": 0,
+          "first_collision": null
+        },
+        "short_corner_exactness": {
+          "is_exact": true,
+          "bucket_count": 48,
+          "collision_bucket_count": 0,
+          "first_collision": null
+        },
+        "successor_determinism": {
+          "is_deterministic": true,
+          "bucket_count": 48,
+          "failure_bucket_count": 0,
+          "first_failure": null
+        }
+      },
+      "comparison": {
+        "theorem_to_dynamic": {
+          "is_exact": true,
+          "bucket_count": 20280,
+          "collision_bucket_count": 0,
+          "first_collision": null
+        },
+        "dynamic_to_theorem": {
+          "bucket_count": 2197,
+          "ambiguous_bucket_count": 2197,
+          "bucket_size_histogram": {
+            "8": 117,
+            "9": 1456,
+            "10": 624
+          },
+          "first_ambiguous_bucket": {
+            "key": [
+              12,
+              0,
+              3
+            ],
+            "value_count": 9,
+            "values": [
+              [
+                [
+                  3,
+                  1,
+                  2,
+                  9,
+                  "regular"
+                ],
+                12
+              ],
+              [
+                [
+                  3,
+                  10,
+                  12,
+                  12,
+                  "regular"
+                ],
+                12
+              ],
+              [
+                [
+                  3,
+                  11,
+                  9,
+                  2,
+                  "regular"
+                ],
+                12
+              ],
+              [
+                [
+                  3,
+                  12,
+                  6,
+                  5,
+                  "regular"
+                ],
+                12
+              ],
+              [
+                [
+                  3,
+                  5,
+                  1,
+                  10,
+                  "regular"
+                ],
+                12
+              ],
+              [
+                [
+                  3,
+                  6,
+                  11,
+                  0,
+                  "regular"
+                ],
+                12
+              ],
+              [
+                [
+                  3,
+                  7,
+                  8,
+                  3,
+                  "regular"
+                ],
+                12
+              ],
+              [
+                [
+                  3,
+                  8,
+                  5,
+                  6,
+                  "regular"
+                ],
+                12
+              ]
+            ],
+            "rows": [
+              {
+                "m": 13,
+                "source_u": 1,
+                "rho": 2,
+                "family": "regular",
+                "trace_step": 12,
+                "B": [
+                  3,
+                  1,
+                  2,
+                  9,
+                  "regular"
+                ],
+                "beta": 12,
+                "q0": 0,
+                "sigma": 3,
+                "delta": 39,
+                "a": 0,
+                "b": 0,
+                "epsilon4": "carry_jump",
+                "short_corner": 0
+              },
+              {
+                "m": 13,
+                "source_u": 5,
+                "rho": 6,
+                "family": "regular",
+                "trace_step": 1533,
+                "B": [
+                  3,
+                  5,
+                  1,
+                  10,
+                  "regular"
+                ],
+                "beta": 12,
+                "q0": 0,
+                "sigma": 3,
+                "delta": 39,
+                "a": 0,
+                "b": 0,
+                "epsilon4": "carry_jump",
+                "short_corner": 0
+              },
+              {
+                "m": 13,
+                "source_u": 6,
+                "rho": 7,
+                "family": "regular",
+                "trace_step": 1364,
+                "B": [
+                  3,
+                  6,
+                  11,
+                  0,
+                  "regular"
+                ],
+                "beta": 12,
+                "q0": 0,
+                "sigma": 3,
+                "delta": 39,
+                "a": 0,
+                "b": 0,
+                "epsilon4": "carry_jump",
+                "short_corner": 0
+              },
+              {
+                "m": 13,
+                "source_u": 7,
+                "rho": 8,
+                "family": "regular",
+                "trace_step": 1195,
+                "B": [
+                  3,
+                  7,
+                  8,
+                  3,
+                  "regular"
+                ],
+                "beta": 12,
+                "q0": 0,
+                "sigma": 3,
+                "delta": 39,
+                "a": 0,
+                "b": 0,
+                "epsilon4": "carry_jump",
+                "short_corner": 0
+              }
+            ]
+          }
+        },
+        "rho_dynamic_to_theorem": {
+          "is_exact": true,
+          "bucket_count": 20280,
+          "collision_bucket_count": 0,
+          "first_collision": null
+        },
+        "family_dynamic_to_theorem": {
+          "is_exact": false,
+          "bucket_count": 4030,
+          "collision_bucket_count": 2197,
+          "first_collision": {
+            "key": [
+              "regular",
+              12,
+              0,
+              3
+            ],
+            "values": [
+              [
+                [
+                  3,
+                  1,
+                  2,
+                  9,
+                  "regular"
+                ],
+                12
+              ],
+              [
+                [
+                  3,
+                  10,
+                  12,
+                  12,
+                  "regular"
+                ],
+                12
+              ],
+              [
+                [
+                  3,
+                  11,
+                  9,
+                  2,
+                  "regular"
+                ],
+                12
+              ],
+              [
+                [
+                  3,
+                  12,
+                  6,
+                  5,
+                  "regular"
+                ],
+                12
+              ],
+              [
+                [
+                  3,
+                  5,
+                  1,
+                  10,
+                  "regular"
+                ],
+                12
+              ],
+              [
+                [
+                  3,
+                  6,
+                  11,
+                  0,
+                  "regular"
+                ],
+                12
+              ],
+              [
+                [
+                  3,
+                  7,
+                  8,
+                  3,
+                  "regular"
+                ],
+                12
+              ],
+              [
+                [
+                  3,
+                  8,
+                  5,
+                  6,
+                  "regular"
+                ],
+                12
+              ],
+              [
+                [
+                  3,
+                  9,
+                  2,
+                  9,
+                  "regular"
+                ],
+                12
+              ]
+            ],
+            "rows": [
+              {
+                "m": 13,
+                "source_u": 1,
+                "rho": 2,
+                "family": "regular",
+                "trace_step": 12,
+                "B": [
+                  3,
+                  1,
+                  2,
+                  9,
+                  "regular"
+                ],
+                "beta": 12,
+                "q0": 0,
+                "sigma": 3,
+                "delta": 39,
+                "a": 0,
+                "b": 0,
+                "epsilon4": "carry_jump",
+                "short_corner": 0
+              },
+              {
+                "m": 13,
+                "source_u": 5,
+                "rho": 6,
+                "family": "regular",
+                "trace_step": 1533,
+                "B": [
+                  3,
+                  5,
+                  1,
+                  10,
+                  "regular"
+                ],
+                "beta": 12,
+                "q0": 0,
+                "sigma": 3,
+                "delta": 39,
+                "a": 0,
+                "b": 0,
+                "epsilon4": "carry_jump",
+                "short_corner": 0
+              },
+              {
+                "m": 13,
+                "source_u": 6,
+                "rho": 7,
+                "family": "regular",
+                "trace_step": 1364,
+                "B": [
+                  3,
+                  6,
+                  11,
+                  0,
+                  "regular"
+                ],
+                "beta": 12,
+                "q0": 0,
+                "sigma": 3,
+                "delta": 39,
+                "a": 0,
+                "b": 0,
+                "epsilon4": "carry_jump",
+                "short_corner": 0
+              },
+              {
+                "m": 13,
+                "source_u": 7,
+                "rho": 8,
+                "family": "regular",
+                "trace_step": 1195,
+                "B": [
+                  3,
+                  7,
+                  8,
+                  3,
+                  "regular"
+                ],
+                "beta": 12,
+                "q0": 0,
+                "sigma": 3,
+                "delta": 39,
+                "a": 0,
+                "b": 0,
+                "epsilon4": "carry_jump",
+                "short_corner": 0
+              }
+            ]
+          }
+        }
+      }
+    },
+    "15": {
+      "m": 15,
+      "runtime_seconds": 22.631030844524503,
+      "branch_count": 14,
+      "chain_count": 2520,
+      "state_row_count": 37800,
+      "nonterminal_state_row_count": 35280,
+      "dynamic_bridge": {
+        "epsilon4_exactness": {
+          "is_exact": true,
+          "bucket_count": 3375,
+          "collision_bucket_count": 0,
+          "first_collision": null
+        },
+        "short_corner_exactness": {
+          "is_exact": true,
+          "bucket_count": 3150,
+          "collision_bucket_count": 0,
+          "first_collision": null
+        },
+        "successor_determinism": {
+          "is_deterministic": true,
+          "bucket_count": 3150,
+          "failure_bucket_count": 0,
+          "first_failure": null
+        }
+      },
+      "decorated_bridge": {
+        "epsilon4_exactness": {
+          "is_exact": true,
+          "bucket_count": 60,
+          "collision_bucket_count": 0,
+          "first_collision": null
+        },
+        "short_corner_exactness": {
+          "is_exact": true,
+          "bucket_count": 56,
+          "collision_bucket_count": 0,
+          "first_collision": null
+        },
+        "successor_determinism": {
+          "is_deterministic": true,
+          "bucket_count": 56,
+          "failure_bucket_count": 0,
+          "first_failure": null
+        }
+      },
+      "comparison": {
+        "theorem_to_dynamic": {
+          "is_exact": true,
+          "bucket_count": 37800,
+          "collision_bucket_count": 0,
+          "first_collision": null
+        },
+        "dynamic_to_theorem": {
+          "bucket_count": 3375,
+          "ambiguous_bucket_count": 3375,
+          "bucket_size_histogram": {
+            "10": 165,
+            "11": 2370,
+            "12": 840
+          },
+          "first_ambiguous_bucket": {
+            "key": [
+              14,
+              0,
+              3
+            ],
+            "value_count": 11,
+            "values": [
+              [
+                [
+                  3,
+                  1,
+                  2,
+                  11,
+                  "regular"
+                ],
+                14
+              ],
+              [
+                [
+                  3,
+                  10,
+                  3,
+                  10,
+                  "regular"
+                ],
+                14
+              ],
+              [
+                [
+                  3,
+                  11,
+                  0,
+                  13,
+                  "regular"
+                ],
+                14
+              ],
+              [
+                [
+                  3,
+                  12,
+                  12,
+                  1,
+                  "regular"
+                ],
+                14
+              ],
+              [
+                [
+                  3,
+                  13,
+                  9,
+                  4,
+                  "regular"
+                ],
+                14
+              ],
+              [
+                [
+                  3,
+                  14,
+                  6,
+                  7,
+                  "regular"
+                ],
+                14
+              ],
+              [
+                [
+                  3,
+                  5,
+                  3,
+                  10,
+                  "regular"
+                ],
+                14
+              ],
+              [
+                [
+                  3,
+                  6,
+                  0,
+                  13,
+                  "regular"
+                ],
+                14
+              ]
+            ],
+            "rows": [
+              {
+                "m": 15,
+                "source_u": 1,
+                "rho": 2,
+                "family": "regular",
+                "trace_step": 14,
+                "B": [
+                  3,
+                  1,
+                  2,
+                  11,
+                  "regular"
+                ],
+                "beta": 14,
+                "q0": 0,
+                "sigma": 3,
+                "delta": 45,
+                "a": 0,
+                "b": 0,
+                "epsilon4": "carry_jump",
+                "short_corner": 0
+              },
+              {
+                "m": 15,
+                "source_u": 5,
+                "rho": 6,
+                "family": "regular",
+                "trace_step": 2489,
+                "B": [
+                  3,
+                  5,
+                  3,
+                  10,
+                  "regular"
+                ],
+                "beta": 14,
+                "q0": 0,
+                "sigma": 3,
+                "delta": 45,
+                "a": 0,
+                "b": 0,
+                "epsilon4": "carry_jump",
+                "short_corner": 0
+              },
+              {
+                "m": 15,
+                "source_u": 6,
+                "rho": 7,
+                "family": "regular",
+                "trace_step": 2264,
+                "B": [
+                  3,
+                  6,
+                  0,
+                  13,
+                  "regular"
+                ],
+                "beta": 14,
+                "q0": 0,
+                "sigma": 3,
+                "delta": 45,
+                "a": 0,
+                "b": 0,
+                "epsilon4": "carry_jump",
+                "short_corner": 0
+              },
+              {
+                "m": 15,
+                "source_u": 7,
+                "rho": 8,
+                "family": "regular",
+                "trace_step": 2039,
+                "B": [
+                  3,
+                  7,
+                  12,
+                  1,
+                  "regular"
+                ],
+                "beta": 14,
+                "q0": 0,
+                "sigma": 3,
+                "delta": 45,
+                "a": 0,
+                "b": 0,
+                "epsilon4": "carry_jump",
+                "short_corner": 0
+              }
+            ]
+          }
+        },
+        "rho_dynamic_to_theorem": {
+          "is_exact": true,
+          "bucket_count": 37800,
+          "collision_bucket_count": 0,
+          "first_collision": null
+        },
+        "family_dynamic_to_theorem": {
+          "is_exact": false,
+          "bucket_count": 6270,
+          "collision_bucket_count": 3375,
+          "first_collision": {
+            "key": [
+              "regular",
+              14,
+              0,
+              3
+            ],
+            "values": [
+              [
+                [
+                  3,
+                  1,
+                  2,
+                  11,
+                  "regular"
+                ],
+                14
+              ],
+              [
+                [
+                  3,
+                  10,
+                  3,
+                  10,
+                  "regular"
+                ],
+                14
+              ],
+              [
+                [
+                  3,
+                  11,
+                  0,
+                  13,
+                  "regular"
+                ],
+                14
+              ],
+              [
+                [
+                  3,
+                  12,
+                  12,
+                  1,
+                  "regular"
+                ],
+                14
+              ],
+              [
+                [
+                  3,
+                  13,
+                  9,
+                  4,
+                  "regular"
+                ],
+                14
+              ],
+              [
+                [
+                  3,
+                  14,
+                  6,
+                  7,
+                  "regular"
+                ],
+                14
+              ],
+              [
+                [
+                  3,
+                  5,
+                  3,
+                  10,
+                  "regular"
+                ],
+                14
+              ],
+              [
+                [
+                  3,
+                  6,
+                  0,
+                  13,
+                  "regular"
+                ],
+                14
+              ],
+              [
+                [
+                  3,
+                  7,
+                  12,
+                  1,
+                  "regular"
+                ],
+                14
+              ],
+              [
+                [
+                  3,
+                  8,
+                  9,
+                  4,
+                  "regular"
+                ],
+                14
+              ],
+              [
+                [
+                  3,
+                  9,
+                  6,
+                  7,
+                  "regular"
+                ],
+                14
+              ]
+            ],
+            "rows": [
+              {
+                "m": 15,
+                "source_u": 1,
+                "rho": 2,
+                "family": "regular",
+                "trace_step": 14,
+                "B": [
+                  3,
+                  1,
+                  2,
+                  11,
+                  "regular"
+                ],
+                "beta": 14,
+                "q0": 0,
+                "sigma": 3,
+                "delta": 45,
+                "a": 0,
+                "b": 0,
+                "epsilon4": "carry_jump",
+                "short_corner": 0
+              },
+              {
+                "m": 15,
+                "source_u": 5,
+                "rho": 6,
+                "family": "regular",
+                "trace_step": 2489,
+                "B": [
+                  3,
+                  5,
+                  3,
+                  10,
+                  "regular"
+                ],
+                "beta": 14,
+                "q0": 0,
+                "sigma": 3,
+                "delta": 45,
+                "a": 0,
+                "b": 0,
+                "epsilon4": "carry_jump",
+                "short_corner": 0
+              },
+              {
+                "m": 15,
+                "source_u": 6,
+                "rho": 7,
+                "family": "regular",
+                "trace_step": 2264,
+                "B": [
+                  3,
+                  6,
+                  0,
+                  13,
+                  "regular"
+                ],
+                "beta": 14,
+                "q0": 0,
+                "sigma": 3,
+                "delta": 45,
+                "a": 0,
+                "b": 0,
+                "epsilon4": "carry_jump",
+                "short_corner": 0
+              },
+              {
+                "m": 15,
+                "source_u": 7,
+                "rho": 8,
+                "family": "regular",
+                "trace_step": 2039,
+                "B": [
+                  3,
+                  7,
+                  12,
+                  1,
+                  "regular"
+                ],
+                "beta": 14,
+                "q0": 0,
+                "sigma": 3,
+                "delta": 45,
+                "a": 0,
+                "b": 0,
+                "epsilon4": "carry_jump",
+                "short_corner": 0
+              }
+            ]
+          }
+        }
+      }
+    },
+    "17": {
+      "m": 17,
+      "runtime_seconds": 54.821259796619415,
+      "branch_count": 16,
+      "chain_count": 3808,
+      "state_row_count": 64736,
+      "nonterminal_state_row_count": 60928,
+      "dynamic_bridge": {
+        "epsilon4_exactness": {
+          "is_exact": true,
+          "bucket_count": 4913,
+          "collision_bucket_count": 0,
+          "first_collision": null
+        },
+        "short_corner_exactness": {
+          "is_exact": true,
+          "bucket_count": 4624,
+          "collision_bucket_count": 0,
+          "first_collision": null
+        },
+        "successor_determinism": {
+          "is_deterministic": true,
+          "bucket_count": 4624,
+          "failure_bucket_count": 0,
+          "first_failure": null
+        }
+      },
+      "decorated_bridge": {
+        "epsilon4_exactness": {
+          "is_exact": true,
+          "bucket_count": 68,
+          "collision_bucket_count": 0,
+          "first_collision": null
+        },
+        "short_corner_exactness": {
+          "is_exact": true,
+          "bucket_count": 64,
+          "collision_bucket_count": 0,
+          "first_collision": null
+        },
+        "successor_determinism": {
+          "is_deterministic": true,
+          "bucket_count": 64,
+          "failure_bucket_count": 0,
+          "first_failure": null
+        }
+      },
+      "comparison": {
+        "theorem_to_dynamic": {
+          "is_exact": true,
+          "bucket_count": 64736,
+          "collision_bucket_count": 0,
+          "first_collision": null
+        },
+        "dynamic_to_theorem": {
+          "bucket_count": 4913,
+          "ambiguous_bucket_count": 4913,
+          "bucket_size_histogram": {
+            "12": 221,
+            "13": 3604,
+            "14": 1088
+          },
+          "first_ambiguous_bucket": {
+            "key": [
+              16,
+              0,
+              3
+            ],
+            "value_count": 13,
+            "values": [
+              [
+                [
+                  3,
+                  1,
+                  2,
+                  13,
+                  "regular"
+                ],
+                16
+              ],
+              [
+                [
+                  3,
+                  10,
+                  7,
+                  8,
+                  "regular"
+                ],
+                16
+              ],
+              [
+                [
+                  3,
+                  11,
+                  4,
+                  11,
+                  "regular"
+                ],
+                16
+              ],
+              [
+                [
+                  3,
+                  12,
+                  1,
+                  14,
+                  "regular"
+                ],
+                16
+              ],
+              [
+                [
+                  3,
+                  13,
+                  15,
+                  0,
+                  "regular"
+                ],
+                16
+              ],
+              [
+                [
+                  3,
+                  14,
+                  12,
+                  3,
+                  "regular"
+                ],
+                16
+              ],
+              [
+                [
+                  3,
+                  15,
+                  9,
+                  6,
+                  "regular"
+                ],
+                16
+              ],
+              [
+                [
+                  3,
+                  16,
+                  6,
+                  9,
+                  "regular"
+                ],
+                16
+              ]
+            ],
+            "rows": [
+              {
+                "m": 17,
+                "source_u": 1,
+                "rho": 2,
+                "family": "regular",
+                "trace_step": 16,
+                "B": [
+                  3,
+                  1,
+                  2,
+                  13,
+                  "regular"
+                ],
+                "beta": 16,
+                "q0": 0,
+                "sigma": 3,
+                "delta": 51,
+                "a": 0,
+                "b": 0,
+                "epsilon4": "carry_jump",
+                "short_corner": 0
+              },
+              {
+                "m": 17,
+                "source_u": 5,
+                "rho": 6,
+                "family": "regular",
+                "trace_step": 3773,
+                "B": [
+                  3,
+                  5,
+                  5,
+                  10,
+                  "regular"
+                ],
+                "beta": 16,
+                "q0": 0,
+                "sigma": 3,
+                "delta": 51,
+                "a": 0,
+                "b": 0,
+                "epsilon4": "carry_jump",
+                "short_corner": 0
+              },
+              {
+                "m": 17,
+                "source_u": 6,
+                "rho": 7,
+                "family": "regular",
+                "trace_step": 3484,
+                "B": [
+                  3,
+                  6,
+                  2,
+                  13,
+                  "regular"
+                ],
+                "beta": 16,
+                "q0": 0,
+                "sigma": 3,
+                "delta": 51,
+                "a": 0,
+                "b": 0,
+                "epsilon4": "carry_jump",
+                "short_corner": 0
+              },
+              {
+                "m": 17,
+                "source_u": 7,
+                "rho": 8,
+                "family": "regular",
+                "trace_step": 3195,
+                "B": [
+                  3,
+                  7,
+                  16,
+                  16,
+                  "regular"
+                ],
+                "beta": 16,
+                "q0": 0,
+                "sigma": 3,
+                "delta": 51,
+                "a": 0,
+                "b": 0,
+                "epsilon4": "carry_jump",
+                "short_corner": 0
+              }
+            ]
+          }
+        },
+        "rho_dynamic_to_theorem": {
+          "is_exact": true,
+          "bucket_count": 64736,
+          "collision_bucket_count": 0,
+          "first_collision": null
+        },
+        "family_dynamic_to_theorem": {
+          "is_exact": false,
+          "bucket_count": 9214,
+          "collision_bucket_count": 4913,
+          "first_collision": {
+            "key": [
+              "regular",
+              16,
+              0,
+              3
+            ],
+            "values": [
+              [
+                [
+                  3,
+                  1,
+                  2,
+                  13,
+                  "regular"
+                ],
+                16
+              ],
+              [
+                [
+                  3,
+                  10,
+                  7,
+                  8,
+                  "regular"
+                ],
+                16
+              ],
+              [
+                [
+                  3,
+                  11,
+                  4,
+                  11,
+                  "regular"
+                ],
+                16
+              ],
+              [
+                [
+                  3,
+                  12,
+                  1,
+                  14,
+                  "regular"
+                ],
+                16
+              ],
+              [
+                [
+                  3,
+                  13,
+                  15,
+                  0,
+                  "regular"
+                ],
+                16
+              ],
+              [
+                [
+                  3,
+                  14,
+                  12,
+                  3,
+                  "regular"
+                ],
+                16
+              ],
+              [
+                [
+                  3,
+                  15,
+                  9,
+                  6,
+                  "regular"
+                ],
+                16
+              ],
+              [
+                [
+                  3,
+                  16,
+                  6,
+                  9,
+                  "regular"
+                ],
+                16
+              ],
+              [
+                [
+                  3,
+                  5,
+                  5,
+                  10,
+                  "regular"
+                ],
+                16
+              ],
+              [
+                [
+                  3,
+                  6,
+                  2,
+                  13,
+                  "regular"
+                ],
+                16
+              ],
+              [
+                [
+                  3,
+                  7,
+                  16,
+                  16,
+                  "regular"
+                ],
+                16
+              ],
+              [
+                [
+                  3,
+                  8,
+                  13,
+                  2,
+                  "regular"
+                ],
+                16
+              ],
+              [
+                [
+                  3,
+                  9,
+                  10,
+                  5,
+                  "regular"
+                ],
+                16
+              ]
+            ],
+            "rows": [
+              {
+                "m": 17,
+                "source_u": 1,
+                "rho": 2,
+                "family": "regular",
+                "trace_step": 16,
+                "B": [
+                  3,
+                  1,
+                  2,
+                  13,
+                  "regular"
+                ],
+                "beta": 16,
+                "q0": 0,
+                "sigma": 3,
+                "delta": 51,
+                "a": 0,
+                "b": 0,
+                "epsilon4": "carry_jump",
+                "short_corner": 0
+              },
+              {
+                "m": 17,
+                "source_u": 5,
+                "rho": 6,
+                "family": "regular",
+                "trace_step": 3773,
+                "B": [
+                  3,
+                  5,
+                  5,
+                  10,
+                  "regular"
+                ],
+                "beta": 16,
+                "q0": 0,
+                "sigma": 3,
+                "delta": 51,
+                "a": 0,
+                "b": 0,
+                "epsilon4": "carry_jump",
+                "short_corner": 0
+              },
+              {
+                "m": 17,
+                "source_u": 6,
+                "rho": 7,
+                "family": "regular",
+                "trace_step": 3484,
+                "B": [
+                  3,
+                  6,
+                  2,
+                  13,
+                  "regular"
+                ],
+                "beta": 16,
+                "q0": 0,
+                "sigma": 3,
+                "delta": 51,
+                "a": 0,
+                "b": 0,
+                "epsilon4": "carry_jump",
+                "short_corner": 0
+              },
+              {
+                "m": 17,
+                "source_u": 7,
+                "rho": 8,
+                "family": "regular",
+                "trace_step": 3195,
+                "B": [
+                  3,
+                  7,
+                  16,
+                  16,
+                  "regular"
+                ],
+                "beta": 16,
+                "q0": 0,
+                "sigma": 3,
+                "delta": 51,
+                "a": 0,
+                "b": 0,
+                "epsilon4": "carry_jump",
+                "short_corner": 0
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

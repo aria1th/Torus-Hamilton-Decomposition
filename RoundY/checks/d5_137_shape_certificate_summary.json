@@ -1,0 +1,27 @@
+{
+  "task_id": "D5-SHAPE-CERTIFICATE-EXTRACT-137",
+  "raw_seed_count": 11,
+  "symmetry_reduced_class_count": 5,
+  "bridge_class_count": 1,
+  "bridge_class_ids": [
+    "C0"
+  ],
+  "canonical_bridge_pair": [
+    [
+      2,
+      2,
+      1
+    ],
+    [
+      1,
+      4,
+      4
+    ]
+  ],
+  "main_result": "Using the 030 candidate-pair artifact and the 032 ranking artifact, the 11 filtered seed pairs reduce to a small symmetry-class table. Exactly one symmetry class contains the canonical oriented bridge pair [2,2,1] / [1,4,4].",
+  "scope_note": "This extraction closes the finite class enumeration and bridge-class uniqueness step. It does not, by itself, assign manuscript-grade dispositions {closed,infeasible} to every nonbridge class.",
+  "environment": {
+    "python_version": "3.10.12",
+    "rich_version": "14.2.0"
+  }
+}
