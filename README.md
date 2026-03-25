@@ -134,12 +134,18 @@ mathematical treatment for all `m >= 3`, including:
 
 ## Main manuscript
 
-The latest manuscript versions are in `tex/`:
+The current main TeX document used for the D3 arXiv submission is:
+
+- `arxiv_uploads/2026-03-25_cases/d3_review_candidates/v8_d3_only/d3torus_complete_m_ge_3_odometer_revision_v8_rewrite.tex`
+  — current upload-ready D3-only source.
+
+Earlier working-lineage manuscript versions remain in `tex/`:
 
 - `d3torus_complete_m_ge_3_editorial_revision.tex` — original v1 source.
 - `d3torus_complete_m_ge_3_editorial_revision_reworked_forced_repair_v2.tex` —
   revised version with "deductive surgery" narrative.
-- The submission-ready candidate is `RoundX/d3torus_complete_m_ge_3_editorial_revision_v5.tex`.
+- `RoundX/d3torus_complete_m_ge_3_editorial_revision_v5.tex` —
+  older submission-era milestone from the D3/D4 branch.
 
 ## Supporting information
 
