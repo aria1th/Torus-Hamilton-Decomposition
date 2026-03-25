@@ -1,0 +1,5 @@
+# Minimal dependency note for the artifact bundle.
+# Python 3.10+ recommended.
+# Only route_e_even.py imports NumPy directly; the other scripts
+# depend on it indirectly through that module.
+numpy>=1.24

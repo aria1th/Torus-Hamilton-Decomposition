@@ -1,0 +1,13 @@
+./MANIFEST.txt
+./anc/ARTIFACTS_README_evenbundle_editorial_revision.md
+./anc/SuppInfo_manifest.md
+./anc/m4_cycle_lists.txt
+./anc/m4_witness.json
+./anc/requirements-artifacts.txt
+./anc/route_e_even.py
+./anc/routee_first_return_check.py
+./anc/routee_large_m_certificate.py
+./anc/routee_return_formula_tables_check.py
+./anc/run_even_artifact_suite.py
+./anc/verify_m4_witness.py
+./d3torus_complete_m_ge_3_odometer_revision_v8_rewrite.tex
