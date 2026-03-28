@@ -1,0 +1,746 @@
+
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{xurl}
+
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\urlstyle{same}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{background}[theorem]{Background input}
+\newtheorem{openproblem}[theorem]{Remaining task}
+
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\1}{\mathbf 1}
+\newcommand{\Hm}{H_m}
+\newcommand{\Bm}{B_m}
+\newcommand{\Hmx}{H_m^\times}
+\newcommand{\Um}{\mathcal U_m}
+\newcommand{\Em}{\widehat E_t}
+\newcommand{\Gt}{\widehat G_t}
+\newcommand{\Om}{\Omega_m}
+\newcommand{\Dt}{D_m^\circ}
+
+\title{Current theorem-order manuscript for the resonant \(d=5\) program:\\
+local closure, visibility theorems, and the remaining frontier}
+\author{}
+\date{March 27, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This manuscript consolidates the current \(d=5\) proof program into a single paper-style \LaTeX{} document.
+The purpose is \emph{not} to claim a finished proof for every resonant modulus.
+Instead, the goal is to state in one place exactly what is already at theorem order, what now follows as a clean corollary, and what remains open.
+
+The closed part of the program is the local symbolic machine for the promoted-plus one-line family
+\[
+P_m^+(t)=P_m^+\cup\{A_{t,3}\}, \qquad r=(m-1)/2,
+\]
+together with the corrected actual-entry reduction for the visibility problem
+\[
+\Hm \to \Bm.
+\]
+In the safe resonant regime \(m=3M\ge 27\) with \(5\nmid m\), the current theorem chain proves global visibility for the classes
+\[
+t=r-1,\qquad t=r,\qquad t=1,
+\]
+and also for the generic-late class when \(M\equiv 2 \pmod 5\).
+For the exactness problem, the already-proved double-top law further shows that \(\Omega_m\)-leak is available for
+\[
+t=r-1,\qquad t=1,\qquad \text{generic late},
+\]
+but \emph{not} for \(t=r\).
+Hence the proved exactness-ready families are currently \(t=r-1\), \(t=1\), and generic late with \(M\equiv 2 \pmod 5\), all conditional only on the remaining base-splice problem.
+
+The remaining frontier is now explicit:
+the unresolved generic-late arithmetic classes are \(M\equiv 1,3,4 \pmod 5\), the resonant base permutation \(B_m\) still needs a theorem-order single-cycle existence argument, and the branch \(5\mid m\) is not yet covered by the present global visibility theorems.
+\end{abstract}
+
+\tableofcontents
+
+\section{Purpose and status convention}
+
+The present document is a consolidation of the current \(d=5\) proof chain.
+It is written so that the reader does not have to reconstruct the argument from dozens of short notes.
+At the same time, it is important not to overstate the status.
+
+We therefore distinguish three levels.
+
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2.8em]
+\item \textbf{Theorem order.} A statement is already proved in the March 26--27 chain, with an explicit symbolic or arithmetic proof packet.
+\item \textbf{Derived corollary.} A statement is not yet written as a separate note, but it follows immediately by combining theorem-order ingredients that are already closed.
+\item \textbf{Frontier.} The statement is strongly audited or heuristically supported, but not yet promoted to a proof.
+\end{enumerate}
+
+The present manuscript records only theorem-order statements and derived corollaries as formal theorems.
+The frontier is isolated in the final section.
+
+\section{Global setting}
+
+\subsection{The ambient graph-theoretic problem}
+
+\begin{definition}[directed torus]
+For an odd modulus \(m>2\), let
+\[
+D_5(m)=\operatorname{Cay}\big((\Z/m\Z)^5,\{e_0,e_1,e_2,e_3,e_4\}\big).
+\]
+A Hamilton decomposition of \(D_5(m)\) is a partition of its arc set into five arc-disjoint directed Hamilton cycles.
+\end{definition}
+
+The older March 24--25 package already closes the nonresonant packet \(3\nmid m\), the small packets \(m=5,7,9\), and the front-end surgery reductions.
+The unresolved core is the resonant pure color-1 problem in the range \(m=3M\).
+The present paper is about that resonant core.
+
+\subsection{The promoted-plus one-line family}
+
+Fix \(m\) odd, \(3\mid m\), and write
+\[
+r=\frac{m-1}{2}.
+\]
+The control family is
+\[
+P_m^+
+=
+\{
+A_{1,4},\, C_{r,4},\, A_{1,3},\, C_{3,3},\, C_{r-1,3},\, A_{r,3},\, C_{r+1,3},\, A_{r+1,3}
+\}.
+\]
+For each \(t\in\{0,\dots,m-1\}\) define the one-line extension
+\[
+P_m^+(t)=P_m^+\cup\{A_{t,3}\}.
+\]
+
+The color-1 section return on the \(\Sigma=0\) section will be denoted by
+\[
+R_t=h_1^m\big|_{\Sigma=0},
+\]
+and \(R_*=R_{P_m^+}\) denotes the control return.
+
+\subsection{Section coordinates}
+
+A \(\Sigma=0\) section state will be written as
+\[
+z=(a,c,d,e),
+\]
+with the suppressed coordinate
+\[
+b \equiv 1-a-c-d-e \pmod m.
+\]
+The coordinates \(a,b,c,d,e\) are always read modulo \(m\).
+
+The visibility problem is studied on the set
+\[
+\Hm=\{(a,0,0,e): a,e\in \Z/m\Z\},
+\qquad
+\Bm=\{(a,0,0,0): a\in \Z/m\Z\},
+\]
+and we write
+\[
+\Hmx=\Hm\setminus \Bm.
+\]
+
+The compact coordinate on \(\Hmx\) is
+\[
+A=a-\1[e=m-1].
+\]
+
+\subsection{Auxiliary local sets}
+
+The local proof chain uses the following subsets of the section.
+
+\[
+\Um=\{(a,c,m-2,e): 0\le c\le m-3\}
+\]
+(the hinge strip),
+\[
+K_m=\{(a,m-2,m-2,e)\}
+\]
+(the corner),
+\[
+S_m^-=\{(a,c,m-1,e): e\le m-2,\ c\ne m-2\}
+\]
+(the top-side strip),
+\[
+C_m^{\mathrm{full}}=\{(a,m-2,m-1,e)\}
+\]
+(the full gate),
+\[
+\Dt=\{(a,c,m-1,m-1): c\ne m-2\}
+\]
+(the double-top interior),
+and
+\[
+\Om
+=
+\{(a,c,m-1,m-1):
+c\not\equiv 1 \pmod 3,\ 
+a\not\equiv 2c \pmod 3\}.
+\]
+
+\section{Baseline inputs already closed before the present pass}
+
+The current paper does not reprove the entire March 24--25 front-end and nonresonant package from scratch.
+Instead, it treats the following items as baseline inputs, and reorganizes the resonant core built on top of them.
+
+\begin{background}[already closed baseline package]
+The March 24--25 bundle supplies the following theorem-order inputs.
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item The nonresonant packet \(3\nmid m\) is closed.
+\item The small odd packets \(m=5,7,9\) and the required surgery reductions are closed.
+\item The width-1 section-return theorem and the promoted-collar control packet are available.
+\item The residual front-end reductions from the main odd-\(m\), \(d=5\) manuscript are available.
+\end{enumerate}
+\end{background}
+
+\begin{remark}
+The purpose of the present manuscript is to absorb the \emph{new} resonant proof chain into one theorem ledger and to make the remaining open tasks explicit.
+The March 24--25 baseline files are included in the archive accompanying this paper.
+\end{remark}
+
+\section{The local compact machine}
+
+This section records the parts of the resonant local theory that are now at theorem order.
+
+\subsection{Support localization and the lower strip}
+
+\begin{theorem}[support localization and lower-strip invisibility]
+For every \(t\in\{0,\dots,m-1\}\), the added row \(A_{t,3}\) is invisible on the whole strip \(d\le m-3\).
+Consequently, on that strip the one-block kinematics are independent of \(t\) and satisfy
+\[
+c' = c+1 \pmod m,
+\qquad
+d' = d+\1[c=m-2].
+\]
+In particular, if \(c=0\) and \(d\le m-3\), then the next return time to \(c=0\) is exactly \(m\) blocks.
+\end{theorem}
+
+\begin{proof}[Proof idea]
+The support-localization prefix lemma shows that the extra line \(A_{t,3}\) can only be seen after the orbit has reached the top/hinge active locus.
+Before that moment the one-line family and the control family coincide.
+The explicit width-1 lower-strip law therefore transfers from the control packet to all \(P_m^+(t)\), and the return time computation is then immediate from the deterministic \(c\)-advance.
+\end{proof}
+
+\subsection{The anomaly-free compact \(c=0\) return}
+
+\begin{theorem}[compact \(c=0\) return law]
+Let
+\[
+A=a-\1[e=m-1], \qquad
+\lambda_d(A)=3+\1[A=1-d]-\1[A=0]-2\1[A=2-d]-\1[A=3-d].
+\]
+Then for every \(t\), every \(0\le d\le m-3\), and every state with \(c=0\), the first return after \(m\) blocks is
+\[
+R_t^m(a,0,d,e)=(A+\kappa^+,0,d+1,e^+),
+\]
+where
+\[
+e^+=e+\lambda_d(A), \qquad
+\kappa^+=\1[e^+=m-1].
+\]
+Equivalently, the earlier low-band cocycle and the old top-band ``eight anomalies'' collapse into one anomaly-free compact law in the coordinate \(A\).
+\end{theorem}
+
+\begin{proof}[Proof idea]
+The lower-strip theorem gives a full \(m\)-block excursion with no visibility of \(A_{t,3}\).
+The old promoted-control low-band cocycle can therefore be upgraded to all one-line families.
+The compact coordinate \(A=a-\1[e=m-1]\) is exactly the coordinate in which the apparent top-band anomalies disappear, because \(A\) is conserved through the \(c=0\) cycle and the final correction is absorbed into \(\kappa^+\).
+\end{proof}
+
+\subsection{Hinge conveyor, corner burst, and actual first top hits}
+
+\begin{theorem}[hinge conveyor]
+On the hinge strip \(\Um\), the induced one-block map is \(t\)-independent away from four boundary fibres and has the conveyor form
+\[
+(a,c,m-2,e)\mapsto (a+1,c+1,m-2,e).
+\]
+Consequently every orbit in \(\Um\) reaches the corner \(K_m\) in finitely many blocks.
+\end{theorem}
+
+\begin{theorem}[corner state reached from \(\Hmx\)]
+Let
+\[
+z_0=(a_0,0,0,e_0)\in \Hmx,\qquad
+A=a_0-\1[e_0=m-1].
+\]
+Immediately before the top episode begins, the orbit reaches the corner state
+\[
+z_C=(a_C,m-2,m-2,e_C),
+\]
+with
+\[
+e_C=e_0+\sigma(A),\qquad
+a_C=A-2+\kappa_C,\qquad
+\kappa_C=\1[e_C=m-1],
+\]
+where
+\[
+\sigma(A)
+=
+m-6+\1[A=0]-\1[A=2]+\1[A=3]+2\1[A=4]-\1[A=m-1].
+\]
+Equivalently,
+\[
+\sigma(A)=
+\begin{cases}
+m-4,& A=4,\\
+m-5,& A\in\{0,3\},\\
+m-6,& A\notin\{0,2,3,4,m-1\},\\
+m-7,& A\in\{2,m-1\}.
+\end{cases}
+\]
+\end{theorem}
+
+\begin{theorem}[explicit actual-entry atlas]
+Let
+\[
+\Phi_t:\Hmx\to \Em
+\]
+be the first-top-hit map.
+For
+\[
+A=a_0-\1[e_0=m-1],\qquad
+\epsilon=e_0+\sigma(A),\qquad
+\kappa=\1[\epsilon=m-1],
+\]
+the actual first top hit \(\Phi_t(z_0)\) is given by Table~\ref{tab:actual-entry}.
+Moreover:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item \(\Em\) is supported on exactly two adjacent columns;
+\item the side column is generated by the single compact residue \(A=4\);
+\item the main-column row sizes are \(m-3,4,m-3\) at \(e=m-5,m-6,m-7\) and \(m-1\) elsewhere;
+\item \(\Phi_t:\Hmx\to \Em\) is bijective.
+\end{enumerate}
+\end{theorem}
+
+\begin{table}[t]
+\centering
+\caption{The actual-entry map \(\Phi_t\). The entries record \((a,c,e)\) at the first top hit.}
+\label{tab:actual-entry}
+\begin{tabular}{@{}p{0.20\textwidth}p{0.34\textwidth}p{0.34\textwidth}@{}}
+\toprule
+Class of \(t\) & Main branch \(A\ne 4\) & Anomaly branch \(A=4\) \\
+\midrule
+\(\{0,1,2\}\) & \((A,2,\epsilon)\) & \((5,1,\epsilon)\) \\
+\(\{3\}\) & \((A+1,1,\epsilon)\) & \((4,2,\epsilon)\) \\
+\(\{r-1\}\) & \((A-1,3,\epsilon)\) & \((4,2,\epsilon)\) \\
+\(\{r\}\) & \((A+\kappa,1,\epsilon)\) & \((5+\kappa,0,\epsilon)\) \\
+\(\{r+1\}\) & \((A+1,1,\epsilon)\) & \((6,0,\epsilon)\) \\
+generic late & \((A,3,\epsilon)\) & \((5,2,\epsilon)\) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Top-row laws and the double-top packet}
+
+\begin{theorem}[top-side transducer for \(t\ne 0\)]
+On the strip \(S_m^-\), the one-block map is a finite class-dependent transducer.
+Only the sigma-layers
+\[
+\{0,1,2,3,r-1,r,r+1,t\}
+\]
+can change the color-1 choice.
+For \(t\ne 0\), the resulting transducer is explicit and produces the five arithmetic classes already isolated in the earlier scans:
+\(t=1\), \(t=2\), \(t=r-1\), \(t\in\{3,r,r+1\}\), and generic late.
+\end{theorem}
+
+\begin{theorem}[the \(t=0\) global compact law]
+Let \(E\) denote the explicit top-row early-cascade map proved for \(t=0\).
+Then
+\[
+R_0 = E \quad\text{on }\{d=m-1\},
+\qquad
+R_0 = R_* \quad\text{on }\{d<m-1\}.
+\]
+Thus \(t=0\) is not a new global machine; it is an explicit top reset followed by the control continuation.
+\end{theorem}
+
+\begin{theorem}[double-top and \(\Omega_m\) law]
+On the double-top interior \(\Dt\), the control family has an explicit choice word, and the whole one-line family \(P_m^+(t)\) admits an exact class-by-class symbolic law.
+Restricted to the pocket \(\Om\), the behaviour is:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item \(t=0,2\): immediate exit from \(\Om\);
+\item \(t=1\): quarter-retention, hence eventual leak;
+\item \(t=r-1\): half-retention, hence eventual leak;
+\item \(t\in\{3,r,r+1\}\): \(\Om\) is invariant;
+\item generic late: quarter-retention, hence eventual leak.
+\end{enumerate}
+\end{theorem}
+
+\begin{remark}
+Theorem 4.7 is the key reason that \(t=r\) is visibility-closed but not yet an exactness-ready family: on \(\Om\) the branch \(t=r\) belongs to the invariant class.
+By contrast, \(t=1\), \(t=r-1\), and generic late are all \(\Om\)-leaking classes.
+\end{remark}
+
+\subsection{Corrected visibility reduction}
+
+\begin{theorem}[corrected actual-entry reduction]
+Let \(F_t:\Hm\to \Hm\) be the next-return map induced by \(R_t\).
+Then the visibility problem
+\[
+\Hm \to \Bm
+\]
+is equivalent to the acyclicity of the finite induced map
+\[
+\Gt:\Em\to \Em\cup \Bm.
+\]
+More precisely, \(F_t\) has a cycle disjoint from \(\Bm\) if and only if \(\Gt\) has a cycle disjoint from \(\Bm\).
+\end{theorem}
+
+\begin{proof}[Proof idea]
+Every non-base excursion from \(\Hm\) must pass through the corner and therefore through the actual first top-hit set \(\Em\).
+Theorem 4.5 identifies those entries explicitly and bijectively.
+After the top episode, the already-proved universal bridge brings the orbit either back to \(\Em\) or into \(\Bm\).
+Thus the full visibility problem is exactly the cycle problem for the compact induced map \(\Gt\).
+\end{proof}
+
+\section{Global visibility theorems}
+
+From this point on, the local mechanics are closed.
+The remaining work is arithmetic and lives on the reduced compact map \(\Gt\).
+
+\subsection{The already-closed classes \(t=r-1\) and \(t=r\)}
+
+\begin{theorem}[visibility for \(t=r-1\)]
+Assume
+\[
+m=3M\ge 27,\qquad 5\nmid m,\qquad t=r-1.
+\]
+Then the corrected actual-entry map \(\Gt\) is acyclic.
+Equivalently, every orbit of \(F_t\) in \(\Hm\) meets \(\Bm\).
+\end{theorem}
+
+\begin{proof}[Proof idea]
+The compact source law for \(t=r-1\) reduces the problem to a single \(A=0\) sweep.
+The ordinary source map has one sweep survivor set \(\{2,7,12,17\}\), which moves after one sweep to \(\{5,10,15,20\}\), and none of those values survives a second sweep.
+Hence the reduced source map has no non-base cycles, and therefore neither does \(\Gt\).
+\end{proof}
+
+\begin{theorem}[visibility for \(t=r\)]
+Assume
+\[
+m=3M\ge 27,\qquad 5\nmid m,\qquad t=r.
+\]
+Then the corrected actual-entry map \(\Gt\) is acyclic.
+Equivalently, every orbit of \(F_t\) in \(\Hm\) meets \(\Bm\).
+\end{theorem}
+
+\begin{proof}[Proof idea]
+The compact source law for \(t=r\) again reduces the problem to a one-dimensional arithmetic sweep.
+The active-source complement of the special window is exactly \(\{2,7,12\}\), and a full sweep shifts \(e\) by \(+3\).
+Those survivors therefore move to \(\{5,10,15\}\), and for \(m\ge 33\) they do not meet the interface values.
+The remaining case \(m=27\) is closed by an explicit short chain.
+Thus the reduced source map is acyclic.
+\end{proof}
+
+\subsection{Active-source laws for \(t=1\) and generic late}
+
+The next two results are the bridge from the local compact machine to the final arithmetic closure.
+
+\begin{theorem}[explicit compact source law for \(t=1\) and generic late]
+Assume
+\[
+m=3M\ge 27,\qquad 5\nmid m,
+\]
+and let \(t=1\) or let \(t\) be generic late
+\[
+t\notin \{0,1,2,3,r-1,r,r+1\}.
+\]
+Then the compact next-return on
+\[
+\Hmx=\{(A,e): A\in \Z/m\Z,\ e\in\{1,\dots,m-1\}\}
+\]
+has the following form.
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item On the ordinary branch \(e\ne s(A)\),
+\[
+e' = e+\rho(A),\qquad \rho(A)=m-5+\1[A=0]+2\1[A=4].
+\]
+\item If \(A\not\equiv 1 \pmod 3\), then \(A'=A\).
+\item On the active class \(A\equiv 1 \pmod 3\), the ordinary branch is an explicit permutation \(p_t\).
+\item On the special branch \(e=s(A)\), every state lands in \(\Bm\), except for the three interface outputs
+\[
+(m-1,1),\qquad (2,1),\qquad (3,m-1).
+\]
+\end{enumerate}
+\end{theorem}
+
+\begin{remark}
+This theorem is the point at which the old ``source law gap'' disappears.
+After it, the visibility problem is a cycle problem for an explicit one-dimensional map.
+\end{remark}
+
+\begin{theorem}[explicit active permutation theorem]
+Let
+\[
+j=j(A)\in \Z_M
+\]
+be the active coordinate defined by
+\[
+A+2+6j\equiv 0 \pmod m.
+\]
+Then on the active ordinary branch, both for \(t=1\) and for generic late, the active source permutation has the form
+\[
+j' = j-r(j)-1 \pmod M,
+\]
+where \(r(j)\) is an explicit piecewise-constant gate remainder.
+For \(t=1\) the remainder is controlled by \(M\bmod 4\); for generic late it is controlled by \(M\bmod 5\).
+Thus the active permutation is an explicit finite interval-translation map with a short anomaly window.
+\end{theorem}
+
+\subsection{The \(t=1\) cycle theorem}
+
+\begin{theorem}[the \(t=1\) active permutation cycle theorem]
+Assume
+\[
+m=3M\ge 27,\qquad 5\nmid m,\qquad t=1.
+\]
+Then the active permutation has the following cycle structure.
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item If \(M\not\equiv 1 \pmod 3\), then it is a single \(M\)-cycle.
+\item If \(M\equiv 1 \pmod 3\), write \(M=3q+1\). Then the cycle lengths are
+\[
+q,\qquad q,\qquad q+1.
+\]
+The unique cycle containing \(A=4\) is the one of length \(q+1\).
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}[Proof idea]
+The explicit \(j\)-map becomes a finite column automaton.
+When \(M=4q+1\), it is a height-4 column system plus one anomaly point; when \(M=4q+3\), it becomes a height-2 column system plus one anomaly point.
+In both cases the base motion is a translation on \(\Z_q\) or \(\Z_{2q+1}\), and the cycle count reduces to \(\gcd(3,\cdot)\).
+The anomaly contributes exactly one extra point to the unique base cycle containing \(A=4\).
+\end{proof}
+
+\begin{corollary}[visibility for \(t=1\)]
+Assume
+\[
+m=3M\ge 27,\qquad 5\nmid m,\qquad t=1.
+\]
+Then the corrected actual-entry map \(\Gt\) is acyclic.
+Equivalently,
+\[
+\Hm \to \Bm
+\]
+visibility holds for \(t=1\).
+\end{corollary}
+
+\begin{proof}
+The compact source law is Theorem 5.3.
+The active cycle decomposition is Theorem 5.5.
+The conditional arithmetic closure from the earlier visibility sweep note then becomes unconditional:
+fixed classes drift by \(-4\) or \(-5\) and therefore hit their special rows because \(5\nmid m\); interface states lie on those fixed classes and also terminate in base; and on each active cycle the one-sweep shift
+\[
+S_C=-5|C|+2\1[4\in C]
+\]
+has \(\gcd(S_C,m)\in\{1,3\}\), while the forbidden set meets every sweep orbit.
+Hence no non-base source cycle exists, and therefore \(\Gt\) is acyclic.
+\end{proof}
+
+\subsection{The generic-late class}
+
+\begin{theorem}[generic late, \(M\equiv 2\pmod 5\)]
+Assume
+\[
+m=3M\ge 27,\qquad 5\nmid m,
+\]
+and let \(t\) be generic late. Suppose
+\[
+M\equiv 2 \pmod 5,\qquad M=5q+2.
+\]
+Then the active permutation has the following cycle structure.
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item If \(3\nmid q\), then it is a single \(M\)-cycle.
+\item If \(3\mid q\), then the cycle lengths are
+\[
+Q,\qquad Q+1,\qquad Q+1,
+\qquad
+Q=\frac{M-2}{3}.
+\]
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}[Proof idea]
+In the congruence class \(M=5q+2\), the generic active map becomes a height-5 column automaton plus two anomaly points.
+On the base set one sees the translation \(b\mapsto b-3\) on \(\Z_q\), with exactly two edges replaced by two-step paths through the anomaly states.
+The cycle count is then again controlled by \(\gcd(3,q)\), and the two anomaly points are inserted on the residue-0 and residue-2 cycles.
+\end{proof}
+
+\begin{corollary}[generic-late visibility when \(M\equiv 2 \pmod 5\)]
+Assume
+\[
+m=3M\ge 27,\qquad 5\nmid m,
+\]
+let \(t\) be generic late, and suppose \(M\equiv 2 \pmod 5\).
+Then the corrected actual-entry map \(\Gt\) is acyclic.
+Equivalently,
+\[
+\Hm \to \Bm
+\]
+visibility holds for generic late in this congruence class.
+\end{corollary}
+
+\begin{proof}
+Combine the explicit compact source law (Theorem 5.3), the explicit active map (Theorem 5.4), the cycle theorem above, and the same one-sweep arithmetic closure used in the proof of Corollary 5.6.
+The fixed classes and interface states terminate because \(5\nmid m\), while each active-cycle sweep has no non-base cycles.
+\end{proof}
+
+\section{What the current theorem chain implies for exactness}
+
+The exactness problem is stronger than visibility because it also requires the double-top pocket to leak and the base permutation to splice.
+
+\begin{proposition}[local-global exactness criterion]
+Assume for a given class \(t\) that:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item the pocket \(\Om\) has no closed \(R_t\)-cycle (\(\Omega_m\)-leak);
+\item every non-pocket orbit meets \(\Hm\);
+\item every \(\Hm\)-cycle meets \(\Bm\) (visibility);
+\item the next-return permutation on \(\Bm\) is a single cycle (base splice).
+\end{enumerate}
+Then the full color-1 section return is exact, namely it consists of one cycle of length \(m^4\).
+\end{proposition}
+
+\begin{proof}
+Any section cycle either lies inside \(\Om\) or meets \(\Hm\).
+The first case is ruled out by \(\Omega\)-leak.
+The second case meets \(\Bm\) by visibility, and once the cycle meets \(\Bm\), the single-cycle assumption on the base next-return forces all such intersections to belong to one and the same global section cycle.
+Hence there is only one section cycle.
+\end{proof}
+
+\begin{corollary}[exactness-ready classes in the current theorem package]
+In the safe resonant regime \(m=3M\ge 27\), \(5\nmid m\), the present theorem chain reduces the pure color-1 exactness problem to the base-splice problem for the following classes:
+\[
+t=r-1,\qquad t=1,\qquad \text{generic late with } M\equiv 2 \pmod 5.
+\]
+By contrast, the class \(t=r\) is visibility-closed but \(\Omega_m\)-invariant, so it is not exactness-ready.
+\end{corollary}
+
+\begin{proof}
+Visibility is proved in Theorems 5.1, 5.2, Corollary 5.6, and Corollary 5.8.
+The double-top theorem shows \(\Omega\)-leak for \(t=r-1\), \(t=1\), and generic late, but not for \(t=r\).
+Apply Proposition 6.1.
+\end{proof}
+
+\begin{remark}
+The exact computational witnesses found earlier -- such as \((m,t)=(27,1)\), \((33,4)\), \((39,1)\), and the staged \(m=51\) cases -- fit exactly this picture: once leak and visibility are both in place, the only unresolved theorem-order burden is the single-cycle base splice.
+\end{remark}
+
+\section{What is still missing from a full resonant \(d=5\) proof}
+
+The present paper organizes the remaining work into a very short list.
+
+\begin{openproblem}[generic late, remaining mod-5 classes]
+For generic late, the arithmetic visibility theorem is still open in the congruence classes
+\[
+M\equiv 1,\ 3,\ 4 \pmod 5.
+\]
+The active source permutation is explicit in all three cases; what remains is the cycle theorem for the corresponding interval-translation maps.
+\end{openproblem}
+
+\begin{openproblem}[base single-cycle existence]
+In the exactness-ready classes
+\[
+t=r-1,\qquad t=1,\qquad \text{generic late with }M\equiv 2 \pmod 5,
+\]
+the remaining pure color-1 burden is to prove that the induced base permutation on \(\Bm\) has a single cycle, or to prove an equivalent splice certificate.
+This is the current splice problem.
+\end{openproblem}
+
+\begin{openproblem}[the branch \(5\mid m\)]
+All global visibility theorems in the present manuscript are proved in the safe regime \(5\nmid m\).
+Some top-row classes are known to have trapped cycles when \(5\mid m\), while \(t=1\) and \(t=r\) remain plausible candidates.
+A dedicated arithmetic source analysis is still needed there.
+\end{openproblem}
+
+\begin{openproblem}[final all-color assembly and \(d=\)prime]
+Once the remaining resonant pure color-1 splice problem is solved, the staged color \(0/2\) repairs and the broader \(d=\)prime architecture should be rewritten in the same compact-machine language.
+The present manuscript already indicates the likely template:
+support localization, compact return, actual-entry atlas, visibility, and splice.
+\end{openproblem}
+
+\section{A one-page theorem ledger}
+
+Table~\ref{tab:ledger} is the shortest honest summary of the current state.
+
+\begin{longtable}{@{}p{0.39\textwidth}p{0.22\textwidth}p{0.31\textwidth}@{}}
+\caption{Current theorem ledger for the resonant \(d=5\) core.}
+\label{tab:ledger}\\
+\toprule
+Item & Status & Role \\
+\midrule
+\endfirsthead
+\toprule
+Item & Status & Role \\
+\midrule
+\endhead
+Nonresonant packet \(3\nmid m\), small odd packet \(m=5,7,9\) & baseline input & already closed before the present pass \\
+Support localization and lower-strip kinematics & theorem order & removes \(t\)-dependence below the top two rows \\
+Compact \(c=0\) return law in the coordinate \(A=a-\1[e=m-1]\) & theorem order & unifies low-band and top-band return laws \\
+Hinge conveyor and corner state formula & theorem order & funnels every non-base excursion to one corner state \\
+Actual-entry atlas \(\Phi_t:\Hmx\to \Em\) & theorem order & turns visibility into a finite actual-entry problem \\
+Top-row transducer for \(t\ne 0\) & theorem order & closes the local top mechanics \\
+\(t=0\) global compact law & theorem order & shows \(t=0\) is explicit reset plus control continuation \\
+Double-top / \(\Omega_m\) law & theorem order & isolates leak versus invariant-wall classes \\
+Corrected visibility reduction \(\Gt:\Em\to \Em\cup\Bm\) & theorem order & finite model for \(\Hm\to\Bm\) \\
+Visibility for \(t=r-1\) & theorem order & arithmetic closure in a splice-safe class \\
+Visibility for \(t=r\) & theorem order & arithmetic closure in a non-leaking class \\
+Compact source law for \(t=1\) and generic late & theorem order & reduces global visibility to a 1D source map \\
+\(t=1\) active permutation cycle theorem & theorem order & closes the \(t=1\) active cycle count \\
+Generic late, \(M\equiv 2\pmod 5\) cycle theorem & theorem order & closes one full generic mod-5 branch \\
+Visibility for \(t=1\) & derived corollary & now unconditional by combining theorem-order ingredients \\
+Visibility for generic late, \(M\equiv 2\pmod 5\) & derived corollary & same \\
+Generic late, \(M\equiv 1,3,4\pmod 5\) & open & remaining visibility arithmetic frontier \\
+Base single-cycle existence on \(\Bm\) & open & remaining exactness obstruction in the closed visibility classes \\
+\(5\mid m\) resonant branch & open & outside the present safe-regime theorems \\
+\bottomrule
+\end{longtable}
+
+\section{Bottom line}
+
+The problem is no longer ``understand the whole \(m^4\)-state dynamics''.
+It has been reduced to the compact scheme
+\[
+\text{compact return}
+\longrightarrow
+\text{actual-entry atlas}
+\longrightarrow
+\text{finite visibility map}
+\longrightarrow
+\text{base splice}.
+\]
+
+What is already proved is substantial:
+
+\begin{itemize}[leftmargin=2.4em]
+\item the local compact machine is closed;
+\item visibility is proved for \(t=r-1\), \(t=r\), \(t=1\), and generic late with \(M\equiv 2\pmod 5\);
+\item exactness is therefore reduced to the base-splice problem in the three exactness-ready families \(t=r-1\), \(t=1\), and generic late with \(M\equiv 2\pmod 5\).
+\end{itemize}
+
+What remains is equally explicit:
+
+\begin{itemize}[leftmargin=2.4em]
+\item generic late mod-5 classes \(1,3,4\);
+\item the resonant base single-cycle theorem;
+\item the safe-to-\(5\mid m\) extension and the final all-color assembly.
+\end{itemize}
+
+That is the present theorem-order status of the \(d=5\) program.
+
+\end{document}

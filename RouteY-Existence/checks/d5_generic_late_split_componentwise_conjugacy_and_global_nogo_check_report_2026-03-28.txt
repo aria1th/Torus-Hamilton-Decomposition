@@ -1,0 +1,232 @@
+{
+  "head": [
+    {
+      "M": 11,
+      "class": 3,
+      "cycle_type_g": [
+        11
+      ],
+      "m": 33,
+      "single_cycle": true
+    },
+    {
+      "M": 23,
+      "class": 9,
+      "cycle_type_g": [
+        17,
+        3,
+        3
+      ],
+      "m": 69,
+      "single_cycle": false
+    },
+    {
+      "M": 41,
+      "class": 3,
+      "cycle_type_g": [
+        31,
+        5,
+        5
+      ],
+      "m": 123,
+      "single_cycle": false
+    },
+    {
+      "M": 53,
+      "class": 9,
+      "cycle_type_g": [
+        15,
+        15,
+        11,
+        3,
+        3,
+        3,
+        3
+      ],
+      "m": 159,
+      "single_cycle": false
+    },
+    {
+      "M": 71,
+      "class": 3,
+      "cycle_type_g": [
+        59,
+        6,
+        6
+      ],
+      "m": 213,
+      "single_cycle": false
+    },
+    {
+      "M": 83,
+      "class": 9,
+      "cycle_type_g": [
+        83
+      ],
+      "m": 249,
+      "single_cycle": true
+    },
+    {
+      "M": 101,
+      "class": 3,
+      "cycle_type_g": [
+        79,
+        8,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "m": 303,
+      "single_cycle": false
+    },
+    {
+      "M": 113,
+      "class": 9,
+      "cycle_type_g": [
+        52,
+        28,
+        7,
+        7,
+        7,
+        3,
+        3,
+        3,
+        3
+      ],
+      "m": 339,
+      "single_cycle": false
+    },
+    {
+      "M": 131,
+      "class": 3,
+      "cycle_type_g": [
+        93,
+        23,
+        15
+      ],
+      "m": 393,
+      "single_cycle": false
+    },
+    {
+      "M": 143,
+      "class": 9,
+      "cycle_type_g": [
+        69,
+        52,
+        22
+      ],
+      "m": 429,
+      "single_cycle": false
+    },
+    {
+      "M": 173,
+      "class": 9,
+      "cycle_type_g": [
+        59,
+        36,
+        29,
+        27,
+        22
+      ],
+      "m": 519,
+      "single_cycle": false
+    },
+    {
+      "M": 191,
+      "class": 3,
+      "cycle_type_g": [
+        129,
+        42,
+        20
+      ],
+      "m": 573,
+      "single_cycle": false
+    }
+  ],
+  "prime_counterexamples": [
+    {
+      "M": 23,
+      "class": 9,
+      "cycle_type_g": [
+        17,
+        3,
+        3
+      ],
+      "m": 69,
+      "single_cycle": false
+    },
+    {
+      "M": 41,
+      "class": 3,
+      "cycle_type_g": [
+        31,
+        5,
+        5
+      ],
+      "m": 123,
+      "single_cycle": false
+    }
+  ],
+  "scope": [
+    "33<=m<=1501",
+    "5\u2224m, 7\u2224M, m\u22613 or 9 (mod 15), M\u22612 (mod 3)",
+    "Uses the March 27 explicit reduced-base theorem and March 28 split first-special-hit theorem."
+  ],
+  "single_cycle_moduli": [
+    {
+      "M": 11,
+      "class": 3,
+      "cycle_type_g": [
+        11
+      ],
+      "m": 33,
+      "single_cycle": true
+    },
+    {
+      "M": 83,
+      "class": 9,
+      "cycle_type_g": [
+        83
+      ],
+      "m": 249,
+      "single_cycle": true
+    },
+    {
+      "M": 233,
+      "class": 9,
+      "cycle_type_g": [
+        233
+      ],
+      "m": 699,
+      "single_cycle": true
+    },
+    {
+      "M": 311,
+      "class": 3,
+      "cycle_type_g": [
+        311
+      ],
+      "m": 933,
+      "single_cycle": true
+    },
+    {
+      "M": 401,
+      "class": 3,
+      "cycle_type_g": [
+        401
+      ],
+      "m": 1203,
+      "single_cycle": true
+    }
+  ],
+  "summary": {
+    "non_single_count": 24,
+    "single_cycle_count": 5,
+    "total_moduli": 29
+  },
+  "title": "d=5 split-branch conjugacy attempt report"
+}

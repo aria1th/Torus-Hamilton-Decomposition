@@ -1,0 +1,17 @@
+d=5 generic-late reduced base machine 15r+3/15r+9 theorem check report
+=================================================================
+
+{
+  "N_failures": 0,
+  "g_failures": 0,
+  "seconds": 6.357310056686401,
+  "total_moduli": 33,
+  "total_states": 3407
+}
+
+Selected examples
+  m=33: delta_M=8, cycle_type_g=[11]
+  m=39: delta_M=4, cycle_type_g=[5, 4, 4]
+  m=93: delta_M=20, cycle_type_g=[19, 9, 3]
+  m=129: delta_M=10, cycle_type_g=[25, 16, 2]
+  m=219: delta_M=16, cycle_type_g=[39, 27, 7]

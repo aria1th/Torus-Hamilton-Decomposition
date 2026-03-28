@@ -1,0 +1,32 @@
+d=5 generic-late base-splice 7-split check report
+================================================
+
+{
+  "bad_fixed_point_failures": 0,
+  "good_drift_failures": 0,
+  "good_special_formula_failures": 0,
+  "num_bad_ms": 5,
+  "num_good_ms": 32,
+  "num_safe_ms": 37,
+  "raw_full_cases_all_match": true,
+  "raw_m147_selected_all_match": true
+}
+
+Bad-case examples
+  m=63, M=21, fixed_points=36, target_fixed_count=36, cycle_type_prefix=[10, 9, 8, 1, 1, 1, 1, 1]
+  m=147, M=49, fixed_points=84, target_fixed_count=84, cycle_type_prefix=[28, 25, 10, 1, 1, 1, 1, 1]
+  m=189, M=63, fixed_points=108, target_fixed_count=108, cycle_type_prefix=[81, 1, 1, 1, 1, 1, 1, 1]
+  m=231, M=77, fixed_points=132, target_fixed_count=132, cycle_type_prefix=[89, 5, 5, 1, 1, 1, 1, 1]
+  m=273, M=91, fixed_points=156, target_fixed_count=156, cycle_type_prefix=[72, 37, 8, 1, 1, 1, 1, 1]
+
+Selected raw exact full-map comparisons
+  m=33: same=True, cycle_type=[33], fixed_points=0, seconds=0.86
+  m=39: same=True, cycle_type=[15, 12, 12], fixed_points=0, seconds=1.93
+  m=51: same=True, cycle_type=[51], fixed_points=0, seconds=7.11
+  m=63: same=True, cycle_type=[10, 9, 8, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], fixed_points=36, seconds=20.65
+
+Selected raw exact state checks at m=147
+  a=0: symbolic=0, exact=0, exact_steps=3176523, seconds=9.73
+  a=1: symbolic=60, exact=60, exact_steps=1923196, seconds=5.64
+  a=4: symbolic=115, exact=115, exact_steps=1923195, seconds=5.61
+  a=7: symbolic=40, exact=40, exact_steps=10242892, seconds=31.95
