@@ -1,0 +1,378 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\title{D5 note: T3 repeated-end corner via four explicit collision families}
+\author{}
+\date{2026-03-21}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\eX}{e_0}
+\newcommand{\eQ}{e_1}
+\newcommand{\eW}{e_2}
+\newcommand{\eV}{e_3}
+\newcommand{\eU}{e_4}
+
+\begin{document}
+\maketitle
+
+\section*{Purpose}
+
+For the repeated-end corner
+\[
+T3:\qquad \sigma_{33}=[4,4,1]/[2,2,1],
+\]
+this note extracts the local collision lemma package directly from the surfaced
+2026-03-21 bundle.
+The point is to replace the earlier dossier statement
+``the checked collision families look clean'' by an actual theorem-facing proof.
+The output is twofold:
+\begin{enumerate}
+\item an explicit four-family collision theorem for the base row, valid for every
+odd modulus $m\ge 5$;
+\item an immediate corollary that the entire \emph{one-label} tiny-repair scope of
+artifact \texttt{032} (one-gate and one-bit repairs, with or without the bundled
+cocycle-defect toggles) is already impossible for this row.
+\end{enumerate}
+
+This does \emph{not} claim anything about richer multi-class repair transducers.
+It only internalizes the one-gate / one-bit slice of the tiny-repair background
+for the specific row $\sigma_{33}$.
+
+\section*{Coordinate conventions and surfaced background rule}
+
+Write a color-$0$ vertex as
+\[
+x=(x_0,q,w,v,u)\in (\mathbb Z/m\mathbb Z)^5,
+\]
+and set
+\[
+\ell(x)=x_0+q+w+v+u \pmod m,
+\qquad
+s(x)=w+u \pmod m.
+\]
+Let $\eX,\eQ,\eW,\eV,\eU$ denote the standard coordinate increments in the
+$(x_0,q,w,v,u)$ coordinates.
+Thus the surfaced bundle step maps are simply
+\[
+x\mapsto x+\eX,\ x+\eQ,\ x+\eW,\ x+\eV,\ x+\eU.
+\]
+
+The surfaced mixed background rule comes from
+\texttt{torus\_nd\_d5\_endpoint\_latin\_repair.py} via
+\texttt{\_mixed\_rule()}, which reads the simple witness with
+\begin{itemize}
+\item layer-$2$ table $(0,2)$,
+\item layer-$3$ mode tables $(0,3)$ and $(3,0)$,
+\item predecessor flag \texttt{pred\_sig1\_wu2}.
+\end{itemize}
+For color $0$, this means:
+\begin{enumerate}
+\item every layer-$1$ vertex moves by $\eU$;
+\item every layer-$2$ vertex with $q=m-1$ moves by $\eW$;
+\item every layer-$3$ vertex with $s\neq 2$ moves by
+\[
+\begin{cases}
+\eV, & q=m-1,\\
+\eX, & q\neq m-1.
+\end{cases}
+\]
+\end{enumerate}
+We will only use these slices, so the $s=2$ layer-$3$ cases are irrelevant here.
+Call this background row $F$.
+
+\section*{The $\sigma_{33}$ row and its six labelled source classes}
+
+Fix the representative seed $(w_0,s_0)=(0,0)$.
+For $m\ge 5$ define the two layer-$1$ endpoint families
+\[
+A:=\{x:\ \ell(x)=1,\ q=m-1,\ w=m-1,\ s(x)\neq 0\},
+\]
+\[
+B:=\{x:\ \ell(x)=1,\ q=m-1,\ w=0,\ s(x)\neq 0\}.
+\]
+The color-$0$ labelled source classes for
+\[
+\sigma_{33}=[4,4,1]/[2,2,1]
+\]
+are then exactly
+\[
+L1=A,
+\qquad
+R1=B,
+\qquad
+L2=A+\eU,
+\qquad
+R2=B+\eW,
+\qquad
+L3=A+2\eU,
+\qquad
+R3=B+2\eW.
+\]
+Equivalently, the six labelled classes are the following affine slices:
+\[
+\begin{array}{rcl}
+L1&=&\{\ell=1,\ q=m-1,\ w=m-1,\ s\neq 0\},\\
+L2&=&\{\ell=2,\ q=m-1,\ w=m-1,\ s\neq 1\},\\
+L3&=&\{\ell=3,\ q=m-1,\ w=m-1,\ s\neq 2\},\\
+R1&=&\{\ell=1,\ q=m-1,\ w=0,\ s\neq 0\},\\
+R2&=&\{\ell=2,\ q=m-1,\ w=1,\ s\neq 1\},\\
+R3&=&\{\ell=3,\ q=m-1,\ w=2,\ s\neq 2\}.
+\end{array}
+\]
+Each family has cardinality $m(m-1)$.
+Indeed, in $A$ and $B$ one may choose $(x_0,v)$ arbitrarily, then $u$ is forced by
+$\ell=1$, and the single forbidden value of $u$ coming from $s\neq 0$ excludes
+exactly one diagonal of size $m$ among the $m^2$ choices.
+Translation by $\eU$ or $\eW$ preserves cardinality.
+
+Let $G$ denote the color-$0$ row defined by $\sigma_{33}$.
+From the surfaced source-builder one reads immediately:
+\[
+G=F\text{ on }L1\cup R2,
+\]
+and on the remaining four classes
+\[
+G(x)=x+\eW\text{ on }R1,
+\qquad
+G(x)=x+\eU\text{ on }L2,
+\qquad
+G(x)=x+\eQ\text{ on }L3\cup R3.
+\]
+So the repeated-end corner differs from the background row only on
+\[
+R1,\ L2,\ L3,\ R3.
+\]
+
+\section*{The four explicit collision families}
+
+\begin{theorem}[four explicit color-$0$ collision families for $T3$]
+\label{thm:T3-four-families}
+Let $m\ge 5$ be odd.
+For the color-$0$ row $G$ of $\sigma_{33}=[4,4,1]/[2,2,1]$ at $(w_0,s_0)=(0,0)$,
+the only colliding changed labels are
+\[
+R1,\ L2,\ L3,\ R3,
+\]
+and each contributes exactly $m(m-1)$ background-vs-changed collisions.
+More precisely:
+\begin{center}
+\begin{tabular}{@{}llll@{}}
+\toprule
+changed source $x$ & background mate $y$ & common target $t$ & collision type \\
+\midrule
+$x\in R1$ & $y=x+\eW-\eU$ & $t=x+\eW$ & $(B,R1)$ \\
+$x\in L2$ & $y=x-\eW+\eU$ & $t=x+\eU$ & $(B,L2)$ \\
+$x\in L3$ & $y=x-\eX+\eQ$ & $t=x+\eQ$ & $(B,L3)$ \\
+$x\in R3$ & $y=x-\eX+\eQ$ & $t=x+\eQ$ & $(B,R3)$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+For every row in the table,
+\[
+G(x)=F(y)=t,
+\]
+with $y$ a genuine background source.
+The four target sets are pairwise disjoint, so color $0$ has exactly
+\[
+4m(m-1)
+\]
+overfull targets, namely $m(m-1)$ of each pair type
+\[
+(B,R1),\ (B,L2),\ (B,L3),\ (B,R3).
+\]
+By color rotation, the full five-color row has exactly
+\[
+20m(m-1)
+\]
+overfull targets.
+\end{theorem}
+
+\begin{proof}
+We treat the four families one by one.
+
+\smallskip
+\noindent\textbf{R1.}
+Take $x\in R1$.
+Then $x$ has layer $1$, $q=m-1$, $w=0$, and $s(x)\neq 0$.
+Since $G$ uses the right first-step direction $2$, we have
+\[
+G(x)=x+\eW.
+\]
+Set $y=x+\eW-\eU$.
+Then $y$ is still layer $1$, still has $q=m-1$, now has $w=1$, and hence is not in
+any changed source class.
+Because every layer-$1$ background source moves by $\eU$,
+\[
+F(y)=y+\eU=x+\eW=G(x).
+\]
+The target $t=x+\eW$ lies in the $R2$ slice $(\ell=2,q=m-1,w=1)$.
+Different $x\in R1$ give different $t$, so this produces exactly $|R1|=m(m-1)$
+collisions of type $(B,R1)$.
+
+\smallskip
+\noindent\textbf{L2.}
+Take $x\in L2$.
+Then $x$ has layer $2$, $q=m-1$, $w=m-1$, and $s(x)\neq 1$.
+Since $G$ uses the left second-step direction $4$, we have
+\[
+G(x)=x+\eU.
+\]
+Set $y=x-\eW+\eU$.
+Then $y$ is still layer $2$, still has $q=m-1$, now has $w=m-2$, and therefore is
+not in $L2$ or $R2$.
+For layer $2$ with $q=m-1$ the background row uses $\eW$, so
+\[
+F(y)=y+\eW=x+\eU=G(x).
+\]
+The target $t=x+\eU$ lies in the $L3$ slice $(\ell=3,q=m-1,w=m-1)$.
+Again the map $x\mapsto t$ is injective, so we get exactly $|L2|=m(m-1)$
+collisions of type $(B,L2)$.
+
+\smallskip
+\noindent\textbf{L3.}
+Take $x\in L3$.
+Then $x$ has layer $3$, $q=m-1$, $w=m-1$, and $s(x)\neq 2$.
+Since $G$ uses the third-step direction $1$, we have
+\[
+G(x)=x+\eQ.
+\]
+Set $y=x-\eX+\eQ$.
+Then $y$ is still layer $3$, has $q=0$, keeps the same $w$ and the same
+$s\neq 2$, so $y$ is not in any changed source class.
+On layer $3$ with $q\neq m-1$ and $s\neq 2$, the background row uses $\eX$.
+Hence
+\[
+F(y)=y+\eX=x+\eQ=G(x).
+\]
+The target $t=x+\eQ$ lies in layer $4$ with $(q,w)=(0,m-1)$.
+Therefore we obtain exactly $|L3|=m(m-1)$ collisions of type $(B,L3)$.
+
+\smallskip
+\noindent\textbf{R3.}
+Take $x\in R3$.
+Then $x$ has layer $3$, $q=m-1$, $w=2$, and $s(x)\neq 2$.
+Again $G(x)=x+\eQ$.
+Set $y=x-\eX+\eQ$.
+Then $y$ is still layer $3$, now has $q=0$, keeps the same $w=2$ and the same
+$s\neq 2$, so it is background.
+As above,
+\[
+F(y)=y+\eX=x+\eQ=G(x).
+\]
+The target now lies in layer $4$ with $(q,w)=(0,2)$, so this family is disjoint
+from the $(B,L3)$ family as soon as $m\ge 5$.
+Thus we obtain exactly $|R3|=m(m-1)$ collisions of type $(B,R3)$.
+
+\smallskip
+We have now constructed $4m(m-1)$ pairwise disjoint targets carrying the stated
+collision types.
+Since the background row $F$ is Latin, every overfull target of $G$ must involve
+at least one changed source, and the row differs from $F$ only on the four changed
+classes $R1,L2,L3,R3$.
+Moreover the changed-image sets found above are pairwise disjoint, so no target can
+contain two changed sources from different families.
+Therefore the listed collisions exhaust all color-$0$ overfull targets.
+Color rotation gives the same count on every color.
+\end{proof}
+
+\begin{corollary}[row-level obstruction for the repeated-end corner]
+For every odd $m\ge 5$, the repeated-end row
+\[
+\sigma_{33}=[4,4,1]/[2,2,1]
+\]
+is non-Latin already at the base row.
+\end{corollary}
+
+\begin{proof}
+Theorem~\ref{thm:T3-four-families} gives explicit overfull targets.
+\end{proof}
+
+\section*{One-gate and one-bit repairs are already impossible}
+
+Artifact \texttt{032} allows two one-label repair modes on top of the labelled row:
+\begin{enumerate}
+\item a one-gate repair, which reroutes every source in one chosen label class;
+\item a one-bit repair, which reroutes a selected bit-slice inside one chosen label
+class.
+\end{enumerate}
+It also allows optional cocycle-defect toggles on two omitted layer-$3$ slices.
+For $(w_0,s_0)=(0,0)$ these toggles touch only the slices
+\[
+O_L=\{\ell=3,\ q=m-1,\ w=0,\ s=2\},
+\qquad
+O_R=\{\ell=3,\ q=m-1,\ w=1,\ s=2\}.
+\]
+
+\begin{proposition}[the whole one-label repair scope fails for $T3$]
+\label{prop:T3-one-label-fails}
+Let $m\ge 5$ be odd.
+Take the repeated-end row $\sigma_{33}=[4,4,1]/[2,2,1]$ and apply any one-gate or
+one-bit repair from artifact \texttt{032}, with cocycle defect chosen from
+\texttt{none}, \texttt{left}, \texttt{right}, or \texttt{both}.
+The resulting row is still non-Latin.
+\end{proposition}
+
+\begin{proof}
+A one-gate or one-bit repair changes sources inside at most one label class.
+The cocycle-defect toggles change only the omitted slices $O_L$ and $O_R$.
+But the four collision families from
+Theorem~\ref{thm:T3-four-families} use labels
+\[
+R1,\ L2,\ L3,\ R3,
+\]
+with source slices
+\[
+R1:\ (\ell,w)=(1,0),
+\qquad
+L2:\ (\ell,w)=(2,m-1),
+\qquad
+L3:\ (\ell,w,s)=(3,m-1,\neq 2),
+\qquad
+R3:\ (\ell,w,s)=(3,2,\neq 2),
+\]
+and background mates lying in the slices
+\[
+(\ell,w)=(1,1),
+\qquad
+(\ell,w)=(2,m-2),
+\qquad
+(\ell,q,w,s)=(3,0,m-1,\neq 2),
+\qquad
+(\ell,q,w,s)=(3,0,2,\neq 2).
+\]
+None of these sources or background mates lies in $O_L$ or $O_R$.
+Therefore the cocycle-defect toggles do not touch them.
+A one-label repair can at most destroy the collision family attached to the chosen
+label, and it leaves the other three families unchanged.
+Hence after any such repair at least three explicit collision families survive, so
+the row remains non-Latin.
+\end{proof}
+
+\begin{remark}[scope]
+This proposition matches the negative one-gate / one-bit scan from the bundle, but
+it does \emph{not} eliminate richer multi-class repair mechanisms.
+So it should be read as:
+\begin{quote}
+for $T3$, the entire one-label tiny-repair branch is now theorem-level dead.
+\end{quote}
+If the ambient tiny-repair background $T0$ is later unpacked exactly as the same
+one-label repair scope, then $T3$ is fully closed.
+If $T0$ allows a richer repair class, then the present note closes only the one-label
+slice of that background.
+\end{remark}
+
+\begin{remark}[the exceptional modulus $m=3$]
+The proof is stated for $m\ge 5$ because at $m=3$ the slices with $w=2$ and
+$w=m-1$ coincide, and the clean four-family decomposition degenerates.
+The bundle computation does indeed show a different color-$0$ profile at $m=3$.
+Nothing in this note uses $m=3$.
+\end{remark}
+
+\end{document}

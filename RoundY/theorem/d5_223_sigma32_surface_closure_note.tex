@@ -1,0 +1,173 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\newcommand{\sig}[2]{\sigma_{#1#2}}
+\newcommand{\sigA}{\sig{2}{1}}
+\newcommand{\sigB}{\sig{2}{2}}
+\newcommand{\sigC}{\sig{2}{3}}
+\newcommand{\sigL}{\sig{1}{2}}
+\newcommand{\sigR}{\sig{3}{2}}
+\newcommand{\RhoR}{\rho_{R1}}
+\newcommand{\CR}{\mathcal R_C}
+
+\title{d5\_223: Surfaced-bundle closure of the \(\sigR\) side}
+\author{}
+\date{2026-03-21}
+
+\begin{document}
+\maketitle
+
+\paragraph{Purpose.}
+The previous note d5\_221 closed the dangerous centered-left target
+\[
+\sigC=[4,1,4]/[2,2,1].
+\]
+The present note closes the remaining centered-right target
+\[
+\sigR=[4,4,1]/[2,1,2]
+\]
+on the same surfaced-bundle semantics.  The key point is that, once the
+surviving immediate \(R1\)-branch out of
+\[
+\sigA=[4,1,4]/[1,2,2]
+\]
+is normalized on the right strip, the dangerous repeated-end option is exactly
+\(\sigR\), and on the common left family the actual two-step continuation is
+read off directly from the shared left word \([4,1,4]\).
+
+\paragraph{Setup.}
+Fix a modulus \(m>2\), color \(0\), and the standard normalization \(w_0=s_0=0\).
+Write \(\partial_i\) for the coordinate step adding \(+1\) in direction \(i\)
+modulo \(m\).  In the surfaced common module these coordinate steps commute.
+For the centered-right strip
+\[
+\CR=\{\sigL,\sigB,\sigR\}
+=\bigl\{[1,4,4]/[2,1,2],\ [4,1,4]/[2,1,2],\ [4,4,1]/[2,1,2]\bigr\},
+\]
+consider the common left source family
+\[
+S_L=\{x:\ \mathrm{layer}(x)=1,\ q(x)=m-1,\ w(x)=m-1,\ s(x)\neq 0\}.
+\]
+This is exactly the left source family produced by
+\texttt{\_build\_candidate} at \(w_0=s_0=0\).
+
+\begin{proposition}[left-side first and second steps on the common family]
+\label{prop:sigma32-left-two-step-formulas}
+For every \(x\in S_L\), the first two left-side steps of the relevant prototypes
+are:
+\begin{align*}
+\sigA:&\quad x\mapsto \partial_4(x)\mapsto \partial_1\partial_4(x),\\
+\sigL:&\quad x\mapsto \partial_1(x)\mapsto \partial_4\partial_1(x),\\
+\sigB:&\quad x\mapsto \partial_4(x)\mapsto \partial_1\partial_4(x),\\
+\sigR:&\quad x\mapsto \partial_4(x)\mapsto \partial_4^2(x).
+\end{align*}
+In particular, the actual left-side continuation of \(\sigA\) on \(S_L\)
+agrees immediately with \(\sigB\), differs immediately from \(\sigL\), and has
+second step different from \(\sigR\).
+\end{proposition}
+
+\begin{proof}
+This is the direct meaning of the left words in the surfaced builder
+\texttt{\_build\_candidate}.  The four relevant left words are
+\[
+\sigA:\ [4,1,4],\qquad
+\sigL:\ [1,4,4],\qquad
+\sigB:\ [4,1,4],\qquad
+\sigR:\ [4,4,1].
+\]
+So on the common left source family \(S_L\), the first left step is routed by
+those first letters, and the second left step is routed by the second letters.
+That gives the displayed formulas.  The last sentence is then immediate from
+those formulas.
+\end{proof}
+
+\begin{theorem}[\(\sigR\)-closure for every \(m>2\)]
+\label{thm:sigma32-closed-all-m-gt-2}
+For every modulus \(m>2\), the normalized surviving immediate \(R1\)-image out of
+\(\sigA\) does not realize the dangerous centered-right target
+\[
+\sigR=[4,4,1]/[2,1,2].
+\]
+More precisely, on the common left family \(S_L\), its actual two-step
+left continuation agrees with the centered core \(\sigB=[4,1,4]/[2,1,2]\)
+and differs from the repeated-end target \(\sigR\).
+\end{theorem}
+
+\begin{proof}
+By Proposition~\ref{prop:sigma32-left-two-step-formulas}, for every \(x\in S_L\)
+one has
+\[
+\sigA^2(x)=\partial_1\partial_4(x),
+\qquad
+\sigB^2(x)=\partial_1\partial_4(x),
+\qquad
+\sigR^2(x)=\partial_4^2(x).
+\]
+Thus the actual left-side two-step continuation of \(\sigA\) agrees with
+\(\sigB\).
+
+To distinguish it from \(\sigR\), note that every \(x\in S_L\) satisfies
+\(q(x)=m-1\).  Therefore
+\[
+\partial_1\partial_4(x): q=0,
+\qquad
+\partial_4^2(x): q=m-1.
+\]
+These are distinct for every \(m>2\).  Hence the normalized surviving immediate
+\(R1\)-image out of \(\sigA\) cannot realize \(\sigR\).
+\end{proof}
+
+\begin{remark}[the centered core and the companion are not threatened here]
+The same proposition also shows that on the common left family the actual first
+left step of \(\sigA\) differs from the \(\sigL=[1,4,4]/[2,1,2]\) prototype,
+so this note is not merely excluding \(\sigR\) by a weak second-step accident.
+At second-step level, \(\sigL\) and \(\sigB\) agree because
+\(\partial_4\partial_1=\partial_1\partial_4\), but the live raw burden after
+\(\sigC\)-closure was specifically the dangerous repeated-end target \(\sigR\),
+so that coincidence causes no problem.
+\end{remark}
+
+\begin{corollary}[the remaining raw target in \(T1\) is closed]
+Assume the background reduction from d5\_221, namely that after
+\(\sigC\)-closure the only live raw target inside \(T1\) is the normalized
+centered-right target \(\sigR\).  Then that remaining raw target is closed.
+Consequently, under the same background assumptions \((T0,T2,T3)\), the theorem
+object \(T1\) is now reduced to background cells rather than a live new local
+comparison.
+\end{corollary}
+
+\begin{proof}
+The theorem above closes the only remaining live raw target identified in
+that reduction.
+\end{proof}
+
+\paragraph{Checked-range certificate.}
+The companion computation in d5\_222 reruns the surfaced bundle checker on
+\(m=3,5,7,9,11,13,15,17\).  On that checked range the common left family has
+source count \(m(m-1)\), symmetry-reduced microcase count \(1\),
+relative immediate displacement
+\[
+(0,0,0,0,1),
+\]
+relative actual second displacement
+\[
+(0,1,0,0,1),
+\]
+and relative \(\sigR\)-second displacement
+\[
+(0,0,0,0,2).
+\]
+So the surfaced symbolic proof above is exactly consistent with the exact
+checked bundle computation.
+
+\end{document}

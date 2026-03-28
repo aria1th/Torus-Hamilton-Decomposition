@@ -1,0 +1,205 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+
+\title{d5\_245: a valid explicit baseline for \(G1\) and the reduced three-class splice target}
+\author{}
+\date{2026-03-22}
+
+\begin{document}
+\maketitle
+
+\section{Purpose}
+The remaining graph-side object \(G1\) was previously treated as a broad search
+for a corrected selector package.
+The goal of this note is to cut that search down to its actual core.
+We do two things:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item exhibit a completely explicit valid baseline package, proved directly for
+all moduli \(m>2\), and
+\item compare the surfaced mixed witness \texttt{mixed\_008} to that baseline at
+the finite coarse-class level.
+\end{enumerate}
+The outcome is that the mixed witness differs from the valid baseline on only
+three coarse classes, and exact coarse-class search shows that support-restricted
+repairs on only three or four colors cannot work.
+So the live content of \(G1\) is no longer a wide selector-family search: it is
+best read as a \emph{three-class full-color splice} problem.
+
+\section{An explicit valid baseline package}
+For \(x=(x_0,\dots,x_4)\in (\mathbb Z/m\mathbb Z)^5\), write
+\[
+\sigma(x):=x_0+x_1+x_2+x_3+x_4 \pmod m.
+\]
+For each color \(c\in\{0,1,2,3,4\}\), define
+\[
+B_c(x)=x+e_{d_c(x)},
+\]
+where
+\[
+d_c(x)=
+\begin{cases}
+ c+1 \pmod 5, & \sigma(x)=0,\\
+ c-1 \pmod 5, & \sigma(x)=1,\\
+ c, & \sigma(x)\notin\{0,1\}.
+\end{cases}
+\]
+Thus the package is:
+\begin{itemize}[leftmargin=2.4em]
+\item on exact sum layer \(0\): rotate the color by \(+1\),
+\item on exact sum layer \(1\): rotate the color by \(-1\),
+\item on all exact sum layers \(2,3,\dots,m-1\): use the color itself.
+\end{itemize}
+
+\begin{theorem}[explicit baseline package]
+\label{thm:explicit-baseline}
+For every modulus \(m>2\), the five maps \(B_0,\dots,B_4\) form a valid
+colorwise package:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item each \(B_c\) is a permutation of \((\mathbb Z/m\mathbb Z)^5\), and
+\item at every vertex the chosen outgoing directions are exactly
+      \(\{0,1,2,3,4\}\).
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+For the outgoing statement, fix \(x\).
+If \(\sigma(x)=0\), then the direction list is
+\[
+(c+1)_{c=0}^4=(1,2,3,4,0),
+\]
+which is a permutation of \(\{0,1,2,3,4\}\).
+If \(\sigma(x)=1\), the direction list is
+\[
+(c-1)_{c=0}^4=(4,0,1,2,3),
+\]
+and otherwise it is simply
+\[
+(c)_{c=0}^4=(0,1,2,3,4).
+\]
+So outgoing exhaustiveness is immediate.
+
+Fix a color \(c\).
+Partition the torus into exact sum slices
+\[
+S_t:=\{x:\sigma(x)=t\},\qquad t\in\mathbb Z/m\mathbb Z.
+\]
+Because every step adds one basis vector, \(B_c\) always sends \(S_t\) into
+\(S_{t+1}\).
+Moreover, on each exact slice \(S_t\), the chosen direction \(d_c(x)\) is
+constant: it depends only on whether \(t=0\), \(t=1\), or \(t\notin\{0,1\}\).
+Hence the restriction
+\[
+B_c\vert_{S_t}\colon S_t\to S_{t+1}
+\]
+is just translation by a fixed basis vector, so it is bijective.
+Since the exact sum slices partition the whole torus and each slice maps
+bijectively to the next slice, \(B_c\) is a permutation.
+\end{proof}
+
+\section{Coarse classes for the surfaced mixed witness}
+For the surfaced \texttt{mixed\_008} rule, the checked local feature rows collapse
+into the following coarse classes:
+\[
+L0,\ L1,\ L2^{(0)},\ L2^{(1)},\ L3^{(0,p=0)},\ L3^{(0,p=1)},\ L3^{(1,p=0)},\ L3^{(1,p=1)},\ L4+.
+\]
+Here the superscript on \(L2\) is the old-bit value, while the superscript on
+\(L3\) records the layer-3 old-bit \(s_3\in\{0,1\}\) and the simple predecessor
+flag \(p\in\{0,1\}\) for the mixed witness.
+
+The surfaced \texttt{mixed\_008} anchor table and the explicit baseline table are:
+\begin{center}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+coarse class & mixed\_008 anchor & baseline anchor \\
+\midrule
+\(L0\) & 1 & 1 \\
+\(L1\) & 4 & 4 \\
+\(L2^{(0)}\) & 0 & 0 \\
+\(L2^{(1)}\) & 2 & 0 \\
+\(L3^{(0,p=0)}\) & 0 & 0 \\
+\(L3^{(0,p=1)}\) & 3 & 0 \\
+\(L3^{(1,p=0)}\) & 3 & 0 \\
+\(L3^{(1,p=1)}\) & 0 & 0 \\
+\(L4+\) & 0 & 0 \\
+\bottomrule
+\end{tabular}
+\end{center}
+So the mixed witness differs from the valid baseline on exactly three coarse
+classes:
+\[
+L2^{(1)},\qquad L3^{(0,p=1)},\qquad L3^{(1,p=0)}.
+\]
+
+\begin{corollary}[three-class splice target]
+\label{cor:three-class-splice}
+At the coarse-class level, \(G1\) is not a general selector search anymore.
+It is the problem of splicing the closed mixed branch into the explicit valid
+baseline along exactly the three classes
+\[
+L2^{(1)},\ L3^{(0,p=1)},\ L3^{(1,p=0)}.
+\]
+\end{corollary}
+
+\section{Exact coarse-class support search}
+The surfaced mixed witness has a stable list of 60 bad outgoing direction
+patterns on checked moduli \(m=5,7,9,11,13\).
+A necessary support test on those 60 patterns shows that any repair support must
+have size at least three, and the only support triples that even pass this
+necessary test are the cyclic families
+\[
+\{0,1,2\},\ \{0,1,4\},\ \{0,3,4\},\ \{1,2,3\},\ \{2,3,4\}.
+\]
+However, exact CSP search on the full observed coarse-class carrier (141 class
+tuples from the checked moduli) gives a stronger result.
+
+\begin{proposition}[exact coarse-class search certificate]
+\label{prop:coarse-search}
+On the checked coarse-class carrier extracted from
+\(m=5,7,9,11,13\):
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item no support of size three admits a coarse-class outgoing-exhaustive
+      correction,
+\item no support of size four admits a coarse-class outgoing-exhaustive
+      correction,
+\item the explicit baseline of Theorem~\ref{thm:explicit-baseline} is a valid
+      full-support coarse-class solution.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+This is the exact checked content of the accompanying script
+\texttt{d5\_244\_G1\_coarse\_class\_baseline\_search.py}.
+The script enumerates the 141 coarse class tuples actually observed on the
+checked moduli, then solves the outgoing-exhaustiveness CSP for every support
+subset of sizes three and four.
+All such supports fail.
+It also checks directly, on \(m=3,5,7,9,11,13\), that the explicit baseline
+package of Theorem~\ref{thm:explicit-baseline} is outgoing-exhaustive and
+incoming-Latin.
+\end{proof}
+
+\section{Interpretation for the manuscript}
+This reduction materially changes how the remaining graph-side work should be
+read.
+The live task is not to keep searching over broad mode-switch families.
+Instead, one already has:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item a direct explicit valid baseline package \(B\),
+\item a surfaced closed mixed branch, and
+\item the knowledge that coarse repairs supported on only three or four colors
+      cannot work.
+\end{enumerate}
+So the natural next move is to combine this baseline with the finite-defect splice
+principle of \texttt{d5\_236}: identify the actual defect image of the closed
+mixed branch relative to the baseline, then certify the splice on those three
+coarse classes.
+
+\end{document}

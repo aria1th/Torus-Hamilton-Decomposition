@@ -1,0 +1,254 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+
+\title{d5\_240: Reverse-search reduction for the remaining graph-side target}
+\author{}
+\date{2026-03-22}
+
+\begin{document}
+\maketitle
+
+\section{Purpose}
+After the exhaustion of the surfaced mode-switch family, the honest graph-side
+route is to search from the smallest reduced target signature rather than from a
+wider local selector grammar.
+This note isolates that target at the reduced permutation level.
+The outcome is sharper than a heuristic: inside the exact diagonal/anti-diagonal
+one-row adjacent-transposition family, the \emph{only} base mechanism that
+produces a single orbit is the omitted-row defect, and once that base is fixed,
+a one-point cocycle defect already yields a single full grouped orbit for every
+odd modulus.
+
+\section{The reduced family}
+Fix an odd modulus $m>2$.
+For parameters
+\[
+ a\in\{+1,-1\},\qquad b,d\in\mathbb Z_m,
+\]
+write
+\[
+ g(s)=as+b.
+\]
+Define a map
+\[
+ T_{a,b,d,h}\colon \mathbb Z_m^2\to\mathbb Z_m^2,
+ \qquad (s,u)\mapsto (s+1,\tau_s(u)),
+\]
+where for $s\neq d$ the row permutation $\tau_s$ is the adjacent transposition
+swapping $g(s)$ and $g(s)+1$, and on the defect row $s=d$ one uses either
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2.5em]
+\item the identity map (the \emph{omitted-row defect}), written $h=\infty$, or
+\item the adjacent transposition swapping $h$ and $h+1$ for some $h\in\mathbb Z_m$.
+\end{enumerate}
+So this is exactly the moving adjacent-transposition family with one defect row.
+
+\section{Affine conjugacy to a canonical model}
+\begin{proposition}[canonical reduction]
+\label{prop:canonical-reduction}
+For every $a,b,d$ the affine change of variables
+\[
+ \Phi_{a,b,d}(s,u)=\bigl(a(s-d),\ u-(ad+b)\bigr)
+\]
+conjugates $T_{a,b,d,h}$ to a canonical map $T_{+,0,0,h'}$ with defect row $0$,
+where $h'=h-(ad+b)$ if $h\in\mathbb Z_m$, and $h'=\infty$ in the omitted-row
+case.
+\end{proposition}
+
+\begin{proof}
+The first coordinate sends the defect row $d$ to $0$.
+If $u=g(s)=as+b$, then under $\Phi_{a,b,d}$ one gets
+\[
+ u' = as+b-(ad+b)=a(s-d)=s'.
+\]
+So the active adjacent pair $\{g(s),g(s)+1\}$ is sent to $\{s',s'+1\}$.
+The same computation identifies the defect-row transposition with the canonical
+pair $\{h',h'+1\}$.
+Thus the whole family is conjugate to the canonical defect-row-$0$ model.
+\end{proof}
+
+Hence it suffices to study the canonical family on $\mathbb Z_m^2$ with defect
+row $0$ and baseline row transpositions
+\[
+ \tau_s=(s\ \ s+1)\qquad (s=1,\dots,m-1),
+\]
+where addition in the symbol list is modulo $m$.
+
+\section{The omitted-row defect is the unique single-orbit base mechanism}
+\begin{proposition}[omitted-row first return]
+\label{prop:omit-first-return}
+In the canonical omitted-row case $T_{+,0,0,\infty}$, the first-return map to
+row $0$ is the translation
+\[
+ R(u)=u-1\qquad (u\in\mathbb Z_m).
+\]
+Therefore $T_{+,0,0,\infty}$ has a single orbit of size $m^2$.
+\end{proposition}
+
+\begin{proof}
+One full return from row $0$ applies, in order, the adjacent transpositions
+\[
+ (1\ \ 2),\ (2\ \ 3),\ \dots,\ (m-2\ \ m-1),\ (m-1\ \ 0).
+\]
+So the first-return permutation is
+\[
+ R=(m-1\ \ 0)\cdots(2\ \ 3)(1\ \ 2).
+\]
+A direct evaluation gives $R(u)=u-1$ for every $u\in\mathbb Z_m$.
+Since $R$ is an $m$-cycle on row $0$ and the first coordinate advances by one at
+each step, the whole map on $\mathbb Z_m^2$ is a single orbit of size $m^2$.
+\end{proof}
+
+\begin{proposition}[shifted defect first return]
+\label{prop:shift-first-return}
+In the canonical shifted-defect case $T_{+,0,0,h}$ with $h\in\mathbb Z_m$, the
+first-return map to row $0$ is
+\[
+ R_h = R\circ(h\ \ h+1),
+\]
+where $R(u)=u-1$ is the omitted-row return map.
+It has cycle structure
+\[
+ [1,m-1].
+\]
+Hence $T_{+,0,0,h}$ has orbit decomposition
+\[
+ [m,\ m(m-1)]
+\]
+and in particular never has a single orbit.
+\end{proposition}
+
+\begin{proof}
+The defect-row transposition $(h\ \ h+1)$ is applied first, and then the same
+baseline return $R$ as in Proposition~\ref{prop:omit-first-return}.
+So the return map is exactly $R_h=R\circ(h\ \ h+1)$.
+By translation in $u$ it suffices to treat $h=0$.
+Then
+\[
+ R_0 = R\circ(0\ \ 1),
+\]
+so $0$ is fixed, while
+\[
+ 1\mapsto m-1\mapsto m-2\mapsto\cdots\mapsto 1
+\]
+forms one cycle of length $m-1$.
+The full map therefore has one orbit above the fixed return point and one orbit
+above the $(m-1)$-cycle, giving orbit sizes $m$ and $m(m-1)$.
+\end{proof}
+
+\begin{theorem}[exact reduced candidate reduction]
+\label{thm:reduced-candidate-reduction}
+Inside the exact diagonal/anti-diagonal one-row adjacent-transposition family
+$T_{a,b,d,h}$, the following are equivalent:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item $T_{a,b,d,h}$ has a single orbit on $\mathbb Z_m^2$;
+\item the defect row is omitted, i.e. $h=\infty$.
+\end{enumerate}
+So the omitted-row diagonal/anti-diagonal family is the unique single-orbit
+base target in this exact reduced class.
+\end{theorem}
+
+\begin{proof}
+By Proposition~\ref{prop:canonical-reduction}, everything reduces to the
+canonical cases $T_{+,0,0,\infty}$ and $T_{+,0,0,h}$.
+The omitted-row case is single-orbit by
+Proposition~\ref{prop:omit-first-return}.
+Every shifted-defect case splits into two orbits by
+Proposition~\ref{prop:shift-first-return}.
+\end{proof}
+
+\section{The smallest full grouped target}
+The reduced full grouped model is the skew product on
+$\mathbb Z_m^2\times\mathbb Z_m$:
+\[
+ \widehat T(x,v)=\bigl(T(x),\ v+\psi(x)\bigr).
+\]
+If $T$ has one base orbit $\mathcal O$ of length $m^2$, then the orbit structure
+of $\widehat T$ is controlled by the total cocycle sum on one base cycle.
+
+\begin{proposition}[single-cycle cocycle criterion]
+\label{prop:cocycle-criterion}
+Let $T$ be a permutation of a finite set $X$ with one orbit $\mathcal O$ of
+length $N$.
+Let $\psi\colon X\to\mathbb Z_m$, and define
+\[
+ \widehat T(x,v)=\bigl(T(x),\ v+\psi(x)\bigr).
+\]
+If the cycle sum
+\[
+ c=\sum_{x\in\mathcal O}\psi(x)
+\]
+is invertible modulo $m$, then $\widehat T$ has one orbit of size $Nm$.
+\end{proposition}
+
+\begin{proof}
+After $N$ steps the base coordinate returns and the fiber coordinate advances by
+$c$.
+If $c$ is invertible modulo $m$, repeated returns generate the whole fiber
+$\mathbb Z_m$.
+So every point on the unique base orbit lifts to one orbit of size $Nm$.
+\end{proof}
+
+\begin{corollary}[point and two-point defects]
+\label{cor:point-and-two-point}
+For the omitted-row base target $T_{a,b,d,\infty}$ on odd $m>2$:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item a one-point cocycle defect on one omitted-edge endpoint gives a single
+      full orbit of size $m^3$;
+\item a two-point cocycle defect on both omitted-edge endpoints also gives a
+      single full orbit of size $m^3$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+By affine conjugacy, reduce to the canonical omitted-row base.
+Then the omitted-edge endpoints are $(0,0)$ and $(0,1)$.
+A one-point defect has cycle sum $1$, and a two-point defect has cycle sum $2$.
+For odd $m$, both are invertible in $\mathbb Z_m$.
+Apply Proposition~\ref{prop:cocycle-criterion} together with
+Theorem~\ref{thm:reduced-candidate-reduction}.
+\end{proof}
+
+\section{What this does and does not close}
+This note still does \emph{not} realize the remaining graph-side theorem $G1$
+locally.
+What it does close is the reduced reverse-search question:
+\begin{quote}
+Inside the smallest exact diagonal/anti-diagonal one-row defect family, the
+only honest base target is the omitted-row adjacent-transposition model, and the
+smallest full grouped target is that base together with a one-point omitted-edge
+cocycle defect.
+\end{quote}
+So any remaining local search should be judged against that exact signature,
+not against a wider generic selector grammar.
+
+\section{Exact search sanity check}
+The companion script
+\texttt{d5\_239\_G1\_reduced\_omit\_target\_search.py}
+performs the exact finite search over all parameters
+\[
+ a\in\{\pm1\},\quad b\in\mathbb Z_m,\quad d\in\mathbb Z_m,
+\quad h\in\{\infty\}\cup\mathbb Z_m
+\]
+for checked odd moduli
+\[
+ m=3,5,7,9,11,13,15,17,19.
+\]
+It confirms:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item omission count $=2m^2$ exactly;
+\item shifted-defect single-orbit count $=0$ exactly;
+\item canonical omitted-row return cycle size $=[m]$;
+\item canonical shifted-defect return cycle size $=[1,m-1]$;
+\item canonical one-point and two-point cocycle defects both give one full
+      orbit of size $m^3$.
+\end{enumerate}
+This is only a sanity check; the main statements above are symbolic.
+
+\end{document}

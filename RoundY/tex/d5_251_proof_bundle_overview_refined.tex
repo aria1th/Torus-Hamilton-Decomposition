@@ -1,0 +1,132 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xurl}
+
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+\urlstyle{same}
+
+\title{D5 proof bundle overview\\refined March 2026 snapshot}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Purpose}
+
+This note organizes the refined proof bundle for the present
+\(T0\)--\(T4,G1,G2\) slice.
+In the current state of the bundle, the front-end theorem block and the
+selector-compatibility/transport block are closed, while the post-entry
+odometer packet and the final globalization packet are still treated as imported
+stable inputs.
+
+\section{What the bundle closes and what it still imports}
+
+\begin{enumerate}[leftmargin=2.6em]
+\item \textbf{Closed inside the bundle.}
+      The actual-needed tiny-repair core \(T0\), the front-end row theorems
+      \(T1,T2,T3\), the canonical entry theorem \(T4\), the graph-side
+      selector-compatibility theorem \(G1\), and the cyclic transport theorem
+      \(G2\).
+\item \textbf{Still imported rather than reproved.}
+      The post-entry odometer packet and the final graph-side/globalization
+      package used after the entry state has been identified.
+\end{enumerate}
+
+\section{Primary entry points}
+
+\begin{enumerate}[leftmargin=2.6em]
+\item Refined working manuscript:
+      \path{manuscript/d5_251_full_d5_working_manuscript_refined.tex}
+\item Previous bundle-ready manuscript snapshot:
+      \path{manuscript/d5_250_full_d5_working_manuscript_bundle_ready.tex}
+\item Review note for the present cleanup pass:
+      \path{overview/d5_251_bundle_review_and_polish_note.md}
+\item Compact status summaries:
+      \path{overview/d5_246_master_status_summary.md} and
+      \path{overview/d5_249_master_status_after_G1.md}
+\item Surfaced source bundle used in the surface proofs and reruns:
+      \path{external/roundy_d5_endpoint_return_model_bundle_20260321_update_197.tar}
+\end{enumerate}
+
+\section{Theorem-to-file map}
+
+\begin{description}[leftmargin=2.2cm,style=nextline]
+\item[T0 actual-needed core]
+      Main note:
+      \path{front_end/notes/d5_230_T0_actual_needed_all_odd_surface_proof_note.tex}.
+      Main checker:
+      \path{front_end/compute/d5_230_T0_needed_core_checker.py}.
+\item[T1 strip closure]
+      Main notes:
+      \path{front_end/notes/d5_220_sigma23_source_surface_all_m_gt2_closure_note.tex}
+      and
+      \path{front_end/notes/d5_223_sigma32_surface_closure_note.tex}.
+\item[T2 obstruction]
+      Main note:
+      \path{front_end/notes/d5_228_T2_centered_core_obstruction_note.tex}.
+      Small-case addendum:
+      \path{front_end/notes/d5_229_T2_T3_m3_small_case_note.md}.
+\item[T3 obstruction]
+      Main note:
+      \path{front_end/notes/d5_225_T3_four_collision_families_note.tex}.
+      Small-case addendum:
+      \path{front_end/notes/d5_229_T2_T3_m3_small_case_note.md}.
+\item[T4 canonical entry]
+      Main note:
+      \path{front_end/notes/d5_233_T4_canonical_entry_surface_proof_note.tex}.
+\item[G2 cyclic transport]
+      Main note:
+      \path{graph_side/notes/d5_234_graph_side_split_G2_closed_G1_remaining_note.tex}.
+\item[G1 explicit splice]
+      Main note:
+      \path{graph_side/notes/d5_247_G1_explicit_two_swap_splice_note.tex}.
+      Load-bearing precursors:
+      \path{graph_side/notes/d5_236_G1_finite_defect_splice_principle_note.tex}
+      and
+      \path{graph_side/notes/d5_245_G1_valid_layer_baseline_and_three_class_splice_note.tex}.
+\end{description}
+
+\section{Bundle layout}
+
+\begin{verbatim}
+d5_251_complete_proof_bundle/
+  README.md
+  MANIFEST.csv
+  manuscript/
+  front_end/
+    notes/
+    compute/
+  graph_side/
+    notes/
+    compute/
+  overview/
+  external/
+\end{verbatim}
+
+\section{Suggested reading order}
+
+\begin{enumerate}[leftmargin=2.6em]
+\item Read the refined manuscript first.
+\item Read the review note to see what changed in the present polishing pass.
+\item For front-end details, read T0, then the two T1 strip-closure notes,
+      then T2/T3, then T4.
+\item For graph-side details, read the finite-defect splice principle,
+      then the valid-baseline/three-class reduction, then the explicit G1 splice,
+      and finally the G2 transport note.
+\item Use the JSON/CSV files as exact certificates and replay checkpoints.
+\end{enumerate}
+
+\section{Compile note}
+
+The refined manuscript and this overview were both compiled in draft mode with
+multiple passes during the present cleanup pass so that cross-references are
+resolved in the saved compile report.
+
+\end{document}

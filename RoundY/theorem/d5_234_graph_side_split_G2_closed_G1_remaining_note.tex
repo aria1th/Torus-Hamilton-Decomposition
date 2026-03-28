@@ -1,0 +1,192 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\Zm}{\mathbb Z_m}
+\newcommand{\Xm}{X_m}
+\newcommand{\rhoc}[1]{\rho_{#1}}
+\newcommand{\SelCorr}{\mathrm{SelCorr}}
+\newcommand{\SelStar}{\mathrm{SelStar}}
+
+\title{d5\_234: Graph-side split --- \(G2\) closes by cyclic transport, while \(G1\) remains a genuine splice theorem}
+\author{}
+\date{2026-03-21}
+
+\begin{document}
+\maketitle
+
+\section{Purpose}
+The current manuscript leaves two graph-side frontier objects:
+\begin{itemize}[leftmargin=2.4em]
+\item \(G1\): colorwise selector-compatibility;
+\item \(G2\): remaining-color transfer.
+\end{itemize}
+This note separates them cleanly.
+The main conclusion is that \(G2\) is no longer an independent frontier theorem.
+It follows formally from cyclic color-equivariance once a \(G1\)-compatible colorwise package exists.
+By contrast, \(G1\) remains genuine: the surfaced mixed witness already gives
+colorwise permutations, but its naive cyclic package fails pointwise outgoing
+exhaustiveness at an explicit vertex for every odd \(m>2\).
+
+\section{Abstract cyclic transport theorem}
+Fix
+\[
+\Xm := (\Zm)^5.
+\]
+For \(c\in\mathbb Z/5\mathbb Z\), let \(\rhoc{c}:\Xm\to\Xm\) be the cyclic
+coordinate shift
+\[
+\bigl(\rhoc{c}(x)\bigr)_i := x_{i+c}
+\qquad (i\in\mathbb Z/5\mathbb Z).
+\]
+Suppose a color-relative local rule is given by:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item a local feature map \(F\) on the color-$0$ chart;
+\item a relative direction selector
+      \(a\colon \mathrm{Im}(F)\to\{0,1,2,3,4\}\);
+\item the color-$c$ absolute direction rule
+      \[
+      d_c(x) := a\bigl(F(\rhoc{c}x)\bigr)+c \pmod 5.
+      \]
+\end{enumerate}
+Define
+\[
+ g_c(x):=x+e_{d_c(x)}.
+\]
+
+\begin{proposition}[cyclic conjugacy of color-relative rules]
+\label{prop:cyclic-conjugacy}
+For every color \(c\),
+\[
+ g_c = \rho_{-c}\circ g_0\circ \rho_c.
+\]
+\end{proposition}
+
+\begin{proof}
+Fix \(x\in X_m\) and put \(y:=\rho_c x\).
+By definition,
+\[
+ g_0(y)=y+e_{a(F(y))}.
+\]
+Applying \(\rho_{-c}\) gives
+\[
+ \rho_{-c}g_0\rho_c(x)=x+e_{a(F(\rho_c x))+c}=x+e_{d_c(x)}=g_c(x).
+\]
+\end{proof}
+
+\begin{corollary}[graph-side transfer = conjugacy]
+\label{cor:G2-closed}
+Assume a \(G1\)-compatible colorwise package \(g_0,\dots,g_4\) is obtained from
+one color-relative local rule family.
+Then every conjugacy-invariant property of the closed color-$4$ branch transfers
+to every other color.
+In particular, permutation, cycle-structure, first-return, grouped-return,
+nested-return, and Hamilton-type properties transport from color $4$ to colors
+\(0,1,2,3\).
+Thus the manuscript object \(G2\) is not an additional frontier theorem; it is
+an immediate corollary of \(G1\) plus cyclic color-equivariance.
+\end{corollary}
+
+\begin{proof}
+By Proposition~\ref{prop:cyclic-conjugacy}, each \(g_c\) is conjugate to \(g_0\),
+and therefore also to \(g_4\).
+Every listed property is invariant under conjugation of the global map and under
+the corresponding transport of the chosen section/return coordinates.
+\end{proof}
+
+\section{Why \(G1\) is still genuine}
+The surfaced bundle contains an exact cyclic family coming from the canonical
+mixed witness \texttt{mixed\_008}, with payload
+\[
+(\texttt{layer2}=0/2,\ \texttt{pred\_sig1\_wu2},\ \texttt{layer3 modes }0/3,3/0).
+\]
+This family already satisfies colorwise incoming uniqueness, hence each color map
+is a torus permutation on the checked moduli.
+Nevertheless it does \emph{not} solve \(G1\), because pointwise outgoing
+exhaustiveness fails.
+
+\begin{proposition}[explicit failure of naive outgoing exhaustiveness]
+\label{prop:mixed008-fails-G1}
+For every odd \(m>2\), the naive cyclic package associated to the surfaced
+\texttt{mixed\_008} witness fails pointwise outgoing exhaustiveness at
+\[
+ x=(0,0,0,1,2)\in X_m.
+\]
+More precisely, the five chosen absolute directions at \(x\) are
+\[
+[3,1,0,3,4],
+\]
+so direction \(2\) is missing and direction \(3\) occurs twice.
+\end{proposition}
+
+\begin{proof}
+At the chosen vertex, all five relevant states lie in layer $3$.
+The layer-$3$ old bit is \(q=-1\), and because the color-relative
+\(q\)-coordinates at \(x\) are
+\[
+(0,0,1,2,0),
+\]
+all five old-bit values are $0$ when \(m>2\).
+Hence the mixed witness uses only the first entry of the active layer-$3$ mode:
+\begin{itemize}[leftmargin=2.4em]
+\item if the predecessor flag \(p=0\), mode \(0/3\) chooses relative direction \(0\);
+\item if the predecessor flag \(p=1\), mode \(3/0\) chooses relative direction \(3\).
+\end{itemize}
+For the flag \texttt{pred\_sig1\_wu2}, the predecessor in relative direction $1$
+changes only the color-relative \(q\)-coordinate, so the flag value is exactly
+\(1\) iff the color-relative sum \(w+u\) equals $2$.
+At the chosen vertex the color-relative pairs \((w,u)\) are
+\[
+(0,2),\ (1,0),\ (2,0),\ (0,0),\ (0,1),
+\]
+so the corresponding flag values are
+\[
+(1,0,1,0,0).
+\]
+Therefore the relative directions are
+\[
+(3,0,3,0,0).
+\]
+Adding the color index \(c\) modulo $5$ yields the absolute directions
+\[
+(3,1,0,3,4),
+\]
+exactly as claimed.
+These five directions do not exhaust \(\{0,1,2,3,4\}\).
+\end{proof}
+
+\begin{remark}
+So the mixed witness already gives the \emph{transport} side of the graph story
+(colorwise conjugacy and colorwise permutations), but not the \emph{selector}
+side.
+This is why \(G1\) cannot be replaced by a naive cyclic copy of the current
+mixed rule.
+A genuine splice/compatibility theorem is still needed.
+\end{remark}
+
+\section{Current honest graph-side bookkeeping}
+After the front-end cleanup and the present split, the graph side should be read
+as follows.
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item \textbf{Closed now:} \(G2\), in the precise sense of
+      Corollary~\ref{cor:G2-closed}.
+\item \textbf{Still live:} \(G1\), i.e.
+      the selector-compatibility/splice theorem that inserts the already closed
+      color-$4$ branch into a truly outgoing-exhaustive colorwise package.
+\item \textbf{Missing concrete data for full closure of \(G1\):}
+      an explicit surfaced model of the corrected selector baseline
+      \(\SelCorr\), together with the local defect certificate showing how the
+      color-$4$ branch \(\SelStar\) is spliced without breaking pointwise
+      outgoing exhaustiveness or colorwise incoming uniqueness.
+\end{enumerate}
+In particular, the open graph-side list should now shrink from \(G1,G2\) to
+just \(G1\).
+
+\end{document}

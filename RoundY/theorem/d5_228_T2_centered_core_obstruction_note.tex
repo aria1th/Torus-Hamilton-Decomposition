@@ -1,0 +1,375 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\title{D5 note: T2 centered-core obstruction via four full collision families and one tail}
+\author{}
+\date{2026-03-21}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\eX}{e_0}
+\newcommand{\eQ}{e_1}
+\newcommand{\eW}{e_2}
+\newcommand{\eV}{e_3}
+\newcommand{\eU}{e_4}
+
+\begin{document}
+\maketitle
+
+\section*{Purpose}
+
+This note closes the obstruction theorem
+\[
+T2:\qquad \sigma_{22}=[4,1,4]/[2,1,2]
+\]
+under the sharpened one-label tiny-repair background from d5\_226.
+The claim is not merely that checked computation looks negative.
+The point is that the surfaced 2026-03-21 bundle already exposes enough local
+structure to write explicit collision families by hand.
+
+The output is:
+\begin{enumerate}
+\item a row-level obstruction theorem for the base centered row $\sigma_{22}$,
+      valid for every odd modulus $m\ge 5$;
+\item an immediate corollary that the entire one-label tiny-repair scope of the
+      endpoint artifact \texttt{032} (one-gate and one-bit repairs, with optional
+      bundled cocycle-defect toggles) is already impossible for this row.
+\end{enumerate}
+
+Thus, if Background $T0$ is read exactly as the sharpened one-label repair scope,
+then $T2$ is closed.
+
+\section*{Coordinate conventions and the relevant background slices}
+
+Write a color-$0$ vertex as
+\[
+x=(x_0,q,w,v,u)\in (\mathbb Z/m\mathbb Z)^5,
+\]
+and set
+\[
+\ell(x)=x_0+q+w+v+u \pmod m,
+\qquad
+s(x)=w+u \pmod m.
+\]
+Let $\eX,\eQ,\eW,\eV,\eU$ denote the standard coordinate increments in the
+$(x_0,q,w,v,u)$ coordinates.
+
+Let $F$ be the surfaced mixed background row coming from
+\texttt{torus\_nd\_d5\_endpoint\_latin\_repair.py} via \texttt{\_mixed\_rule()}.
+For the present argument we only need the following slices, all of which are read
+from the surfaced tables $(0,2)$ on layer $2$ and $(0,3)/(3,0)$ on layer $3$:
+\begin{enumerate}
+\item every layer-$1$ source moves by $\eU$;
+\item every layer-$2$ source with $q=m-1$ moves by $\eW$, while every layer-$2$
+      source with $q\neq m-1$ moves by $\eX$;
+\item every layer-$3$ source with $q=0$ and $s\neq 2$ moves by $\eX$.
+\end{enumerate}
+The background row $F$ is Latin.
+
+\section*{The $\sigma_{22}$ row and its labelled source classes}
+
+Fix the representative seed $(w_0,s_0)=(0,0)$ and set
+\[
+A:=\{x:\ \ell(x)=1,\ q=m-1,\ w=m-1,\ s(x)\neq 0\},
+\]
+\[
+B:=\{x:\ \ell(x)=1,\ q=m-1,\ w=0,\ s(x)\neq 0\}.
+\]
+For
+\[
+\sigma_{22}=[4,1,4]/[2,1,2]
+\]
+the color-$0$ labelled source classes are
+\[
+L1=A,
+\qquad
+R1=B,
+\qquad
+L2=A+\eU,
+\qquad
+R2=B+\eW,
+\qquad
+L3=A+\eU+\eQ,
+\qquad
+R3=B+\eW+\eQ.
+\]
+Equivalently,
+\[
+\begin{array}{rcl}
+L1&=&\{\ell=1,\ q=m-1,\ w=m-1,\ s\neq 0\},\\
+R1&=&\{\ell=1,\ q=m-1,\ w=0,\ s\neq 0\},\\
+L2&=&\{\ell=2,\ q=m-1,\ w=m-1,\ s\neq 1\},\\
+R2&=&\{\ell=2,\ q=m-1,\ w=1,\ s\neq 1\},\\
+L3&=&\{\ell=3,\ q=0,\ w=m-1,\ s\neq 1\},\\
+R3&=&\{\ell=3,\ q=0,\ w=1,\ s\neq 1\}.
+\end{array}
+\]
+Each class has cardinality $m(m-1)$.
+
+Let $G$ denote the color-$0$ row defined by $\sigma_{22}$.
+From the surfaced builder one reads:
+\[
+G=F\text{ on }L1,
+\]
+and on the remaining classes
+\[
+G(x)=x+\eW\text{ on }R1,
+\qquad
+G(x)=x+\eQ\text{ on }L2\cup R2,
+\qquad
+G(x)=x+\eU\text{ on }L3,
+\qquad
+G(x)=x+\eW\text{ on }R3.
+\]
+So the centered row differs from the background only on
+\[
+R1,\ L2,\ R2,\ L3,\ R3.
+\]
+
+\section*{Explicit collision families}
+
+The key point is that one does not need the entire collision profile to obstruct
+Latinness.  It is enough to write down a few disjoint overfull target families.
+
+\begin{theorem}[explicit color-$0$ obstruction families for $T2$]
+\label{thm:T2-families}
+Let $m\ge 5$ be odd.
+For the color-$0$ row $G$ of $\sigma_{22}=[4,1,4]/[2,1,2]$ at $(w_0,s_0)=(0,0)$,
+there are five explicit background-vs-changed collision families:
+\begin{center}
+\begin{tabular}{@{}llll@{}}
+\toprule
+changed source $x$ & background mate $y$ & common target $t$ & count \\
+\midrule
+$x\in R1$ & $y=x+\eW-\eU$ & $t=x+\eW$ & $m(m-1)$ \\
+$x\in L2$ & $y=x-\eX+\eQ$ & $t=x+\eQ$ & $m(m-1)$ \\
+$x\in R2$ & $y=x-\eX+\eQ$ & $t=x+\eQ$ & $m(m-1)$ \\
+$x\in R3$ & $y=x-\eX+\eW$ & $t=x+\eW$ & $m(m-1)$ \\
+$x\in L3^0$ & $y=x-\eX+\eU$ & $t=x+\eU$ & $m$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+where
+\[
+L3^0:=\{x\in L3:\ s(x)=0\}.
+\]
+For every row of the table,
+\[
+G(x)=F(y)=t,
+\]
+with $y$ a genuine background source.
+The five target families are pairwise disjoint, so color $0$ already has at least
+\[
+4m(m-1)+m
+\]
+overfull targets.
+Hence the full five-color row is non-Latin.
+\end{theorem}
+
+\begin{proof}
+We treat the five families one by one.
+
+\smallskip
+\noindent\textbf{R1.}
+Take $x\in R1$.
+Then $x$ has layer $1$, $q=m-1$, $w=0$, and $s(x)\neq 0$.
+Since $G$ uses the first right-step direction $2$, we have
+\[
+G(x)=x+\eW.
+\]
+Set $y=x+\eW-\eU$.
+Then $y$ is still layer $1$, still has $q=m-1$, now has $w=1$, and therefore is
+not in $L1$ or $R1$.
+Every layer-$1$ background source moves by $\eU$, so
+\[
+F(y)=y+\eU=x+\eW=G(x).
+\]
+Different $x\in R1$ give different targets, hence this contributes $|R1|=m(m-1)$
+distinct overfull targets.
+
+\smallskip
+\noindent\textbf{L2.}
+Take $x\in L2$.
+Then $x$ has layer $2$, $q=m-1$, $w=m-1$, and $s(x)\neq 1$.
+Since $G$ uses the second left-step direction $1$, we have
+\[
+G(x)=x+\eQ.
+\]
+Set $y=x-\eX+\eQ$.
+Then $y$ is still layer $2$, now has $q=0$, still has $w=m-1$, and therefore is
+not in $L2$ or $R2$.
+For layer $2$ with $q\neq m-1$, the background row uses $\eX$, so
+\[
+F(y)=y+\eX=x+\eQ=G(x).
+\]
+Again $x\mapsto x+\eQ$ is injective on $L2$, so this gives $|L2|=m(m-1)$
+distinct overfull targets.
+
+\smallskip
+\noindent\textbf{R2.}
+Take $x\in R2$.
+Then $x$ has layer $2$, $q=m-1$, $w=1$, and $s(x)\neq 1$.
+Again $G(x)=x+\eQ$.
+Set $y=x-\eX+\eQ$.
+Then $y$ is still layer $2$, now has $q=0$, still has $w=1$, and is therefore
+background.
+As above,
+\[
+F(y)=y+\eX=x+\eQ=G(x).
+\]
+This contributes $|R2|=m(m-1)$ distinct overfull targets.
+
+\smallskip
+\noindent\textbf{R3.}
+Take $x\in R3$.
+Then $x$ has layer $3$, $q=0$, $w=1$, and $s(x)\neq 1$.
+Since $G$ uses the third right-step direction $2$, we have
+\[
+G(x)=x+\eW.
+\]
+Set $y=x-\eX+\eW$.
+Then $y$ is still layer $3$, still has $q=0$, now has $w=2$, and
+\[
+s(y)=s(x)+1\neq 2
+\]
+because $s(x)\neq 1$.
+Hence $y$ is a genuine background source on a layer-$3$, $q=0$, $s\neq 2$ slice,
+so the background rule uses $\eX$ and
+\[
+F(y)=y+\eX=x+\eW=G(x).
+\]
+This contributes $|R3|=m(m-1)$ distinct overfull targets.
+
+\smallskip
+\noindent\textbf{The $L3$ tail.}
+Take $x\in L3^0$, so $x\in L3$ and $s(x)=0$.
+Then $x$ has layer $3$, $q=0$, $w=m-1$, and $G(x)=x+\eU$.
+Set $y=x-\eX+\eU$.
+Then $y$ is still layer $3$, still has $q=0$, still has $w=m-1$, and
+\[
+s(y)=1.
+\]
+But the changed class $L3$ is exactly the slice with $q=0$, $w=m-1$, and
+$s\neq 1$.
+So $y$ is background.
+Since also $s(y)=1\neq 2$, the background row uses $\eX$ on $y$, hence
+\[
+F(y)=y+\eX=x+\eU=G(x).
+\]
+The set $L3^0$ has cardinality $m$: indeed $q=0$, $w=m-1$, and $s=0$ force $u=1$,
+while the layer equation leaves one free parameter pair $(x_0,v)$ modulo one linear
+constraint.
+So this gives $m$ distinct overfull targets.
+
+\smallskip
+Finally, the target families are disjoint by their layer and $(q,w,s)$ data:
+\[
+\begin{array}{rcl}
+R1&:& \ell=2,\ q=m-1,\ w=1,\\
+L2&:& \ell=3,\ q=0,\ w=m-1,\\
+R2&:& \ell=3,\ q=0,\ w=1,\\
+R3&:& \ell=4,\ q=0,\ w=2,\\
+L3^0&:& \ell=4,\ q=0,\ w=m-1,\ s=1.
+\end{array}
+\]
+For $m\ge 5$ these slices are pairwise distinct.
+Hence color $0$ has at least $4m(m-1)+m$ overfull targets, so the full row is
+non-Latin.
+\end{proof}
+
+\begin{corollary}[row-level obstruction for the centered core]
+For every odd $m\ge 5$, the centered row
+\[
+\sigma_{22}=[4,1,4]/[2,1,2]
+\]
+is non-Latin already at the base row.
+\end{corollary}
+
+\begin{proof}
+Theorem~\ref{thm:T2-families} exhibits explicit overfull targets.
+\end{proof}
+
+\section*{One-label tiny repair is already impossible}
+
+The endpoint artifact \texttt{032} allows two repair modes on top of the labelled
+row:
+\begin{enumerate}
+\item a \emph{one-gate} repair, rerouting every source in one chosen label class;
+\item a \emph{one-bit} repair, rerouting one chosen bit-slice inside one chosen
+      label class.
+\end{enumerate}
+It also allows optional cocycle-defect toggles on two omitted layer-$3$ slices.
+For $(w_0,s_0)=(0,0)$ these are
+\[
+O_L=\{\ell=3,\ q=m-1,\ w=0,\ s=2\},
+\qquad
+O_R=\{\ell=3,\ q=m-1,\ w=1,\ s=2\}.
+\]
+None of the explicit collision families above lies in these slices, and none of
+their background mates lies there either.
+
+\begin{proposition}[the one-label repair scope fails for $T2$]
+\label{prop:T2-one-label-fails}
+Let $m\ge 5$ be odd.
+Take the centered row $\sigma_{22}=[4,1,4]/[2,1,2]$ and apply any one-gate or
+one-bit repair from artifact \texttt{032}, with cocycle defect chosen from
+\texttt{none}, \texttt{left}, \texttt{right}, or \texttt{both}.
+The resulting row is still non-Latin.
+\end{proposition}
+
+\begin{proof}
+A one-gate or one-bit repair changes sources inside at most one label class.
+The cocycle-defect toggles change only the omitted slices $O_L$ and $O_R$, which
+are disjoint from the explicit collision families and from their background mates.
+Therefore the toggles do not touch the collisions from
+Theorem~\ref{thm:T2-families}.
+
+Among the explicit families, the four full families
+\[
+R1,\ L2,\ R2,\ R3
+\]
+live on four distinct labels.
+A one-label repair can destroy at most one of them.
+So after any one-label repair at least three full collision families survive.
+In particular at least one explicit overfull target remains, hence the repaired row
+is still non-Latin.
+\end{proof}
+
+\begin{remark}[scope and current status]
+This proposition matches the exhaustive one-gate / one-bit negative scan from the
+bundle, but the proof above does not use the full scan; it uses only the surfaced
+row semantics plus the sharpened scope convention from d5\_226.
+Therefore, once $T0$ is read as the one-label tiny-repair theorem, $T2$ is closed.
+What remains outside $T0$--$T3$ is no longer a centered-strip obstruction problem,
+but the later frontier package ($T4$, $G1$, $G2$).
+\end{remark}
+
+\begin{remark}[checked-range sanity certificate]
+The companion checker
+\texttt{d5\_228\_T2\_collision\_family\_checker.py} verifies the explicit family
+formulae against the surfaced bundle on the checked range
+\[
+m=5,7,9,11,13.
+\]
+It confirms the expected counts
+\[
+|R1|=|L2|=|R2|=|R3|=m(m-1),
+\qquad
+|L3^0|=m,
+\]
+and reproduces the observed color-$0$ collision profile
+\[
+(B,R1),\ (B,L2),\ (B,R2),\ (B,R3)\text{ with multiplicity }m(m-1),
+\qquad
+(B,L3)\text{ with multiplicity }m.
+\]
+The proof above is symbolic; the checker is only a sanity certificate.
+\end{remark}
+
+\end{document}

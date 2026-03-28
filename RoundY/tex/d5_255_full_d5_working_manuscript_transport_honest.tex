@@ -1,0 +1,1255 @@
+
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{xurl}
+
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\urlstyle{same}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{frontier}[theorem]{Frontier theorem}
+\newtheorem{background}[theorem]{Background input}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{heuristic}[theorem]{Heuristic}
+\newtheorem{question}[theorem]{Open problem}
+
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\sig}[2]{\sigma_{#1#2}}
+\newcommand{\Lw}[1]{L_{#1}}
+\newcommand{\Rw}[1]{R_{#1}}
+\newcommand{\CanL}{[2,2,1]}
+\newcommand{\CanR}{[1,4,4]}
+\newcommand{\CanSeed}{\CanL/\CanR}
+\newcommand{\CL}{\mathcal C_L}
+\newcommand{\CR}{\mathcal C_R}
+\newcommand{\Omix}{\mathcal O_{\mathrm{mix}}}
+\newcommand{\Obr}{\mathcal O_{\mathrm{br}}}
+\newcommand{\RhoR}{\rho_{R1}}
+\newcommand{\SelCorr}{\mathrm{Sel}_{\mathrm{corr}}}
+\newcommand{\SelStar}{\mathrm{Sel}^{\star}}
+\title{Odd-$m$, $d=5$ as a one-cornered odometer:\\
+consolidated theorem-order manuscript}
+\author{}
+\date{March 22, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This text consolidates the current odd-$m$, $d=5$ proof chain in the theorem
+order most useful for later line-by-line cleanup and formalization.
+The proof is organized around the spine
+\[
+\begin{aligned}
+&\text{front-end one-corner reduction}
+\to
+\text{exact odometer spine}\\
+&\to
+\text{selector surgery}
+\to
+\text{generic upgrade and globalization}.
+\end{aligned}
+\]
+Inside the present bundle, the front-end slice
+\[
+T0,T1,T2,T3,T4
+\]
+and the selector slice
+\[
+G1,G2
+\]
+are closed directly.
+The remaining manuscript-order inputs are no longer left as anonymous imports:
+the post-entry one-corner odometer theorem is tied to the compact one-pass
+odd-$m$ globalization package, and the graph/globalization endgame is tied
+explicitly to the accepted theorem-side anchor package, the corrected-selector
+baseline theorem, the color-$4$ Sel$^{\star}$ Hamilton theorem, and the
+odd-$m$ globalization theorem.
+What still remains explicit at the honest-boundary level is one graph-side
+transport compatibility input: the cyclic/color-relative hypothesis needed to
+apply the abstract \(G2\) transport theorem to the concrete two-swap package
+constructed in \(G1\).
+With that caveat stated honestly, the final theorem reduces to a short corrected
+generic upgrade step.
+The resulting manuscript is not a first-principles rebuild of every historical
+artifact, but it is a closed theorem-order document: every load-bearing theorem
+used in the final proof is now named, stated, and placed in the dependency
+chain.
+\end{abstract}
+
+\tableofcontents
+
+\section{The global proof spine}
+
+The intended theorem-level structure of the odd-$m$, $d=5$ paper is
+\[
+\begin{aligned}
+&\text{front-end one-corner reduction}
+\to
+\text{exact odometer spine}\\
+&\to
+\text{selector surgery}
+\to
+\text{generic upgrade and globalization}.
+\end{aligned}
+\]
+At a slightly finer level the manuscript is organized as follows.
+\begin{enumerate}[label=\textup{(\Roman*)},leftmargin=3.0em]
+\item \textbf{Front-end one-corner reduction.}
+      Reduce every unresolved front-end instance to the canonical bridge seed
+      \(\CanSeed\) by a finite chart plus three shape-side row theorems.
+\item \textbf{Canonical entry and exact odometer spine.}
+      Show that the canonical seed has a unique live unresolved continuation,
+      namely the alternate-$2$ entry
+      \[
+      E=(m-1,1,u_{\mathrm{source}},2),
+      \]
+      and then identify the resulting dynamics with the exact one-corner
+      odometer corridor.
+\item \textbf{Selector surgery.}
+      Insert the already closed color-$4$ Hamilton branch into a colorwise
+      selector package by a selector-compatibility theorem.  The remaining
+      colors follow once that explicit package is tied to the cyclic transport
+      hypothesis.
+\item \textbf{Final stitching and globalization.}
+      Use the colorwise graph package together with the explicit odometer block
+      to produce the final odd-$m$, $d=5$ Hamilton decomposition.
+\end{enumerate}
+
+\begin{theorem}[actual-needed tiny-repair core]
+\label{thm:T0-needed}
+For every odd modulus $m>2$, the front-end uses of tiny repair that actually
+occur below are already closed internally.
+More precisely:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item at
+      \[
+      \sig21=[4,1,4]/[1,2,2],
+      \]
+      every one-label one-gate or one-bit repair branch supported on
+      \(L2,L3,R2,\) or \(R3\), with cocycle-defect choice in
+      \(\{\mathrm{none},\mathrm{left},\mathrm{right},\mathrm{both}\}\),
+      is non-Latin;
+\item at the canonical bridge seed \(\CanSeed\), every one-label one-gate or
+      one-bit repair branch supported on \(L3,R2,\) or \(R3\), with the same
+      four cocycle-defect choices, is non-Latin.
+\end{enumerate}
+\end{theorem}
+
+\begin{remark}[scope convention for ``after tiny repair'']
+Throughout the front-end section, the phrase ``after tiny repair'' refers only
+to the concrete removals supplied by Theorem~\ref{thm:T0-needed} at the relevant
+seed.  It does not silently quantify over richer multi-class repair families.
+A stronger standalone one-label repair theorem for the full artifact seed list
+may still be desirable later, but it is not used below.
+\end{remark}
+
+\begin{theorem}[main odd-$m$, $d=5$ Hamilton decomposition theorem, conditional on transport compatibility]
+\label{thm:conditional-full}
+Assume that the explicit package of Theorem~\ref{fr:G1} is obtained from one
+color-relative local rule family in the sense of
+Theorem~\ref{thm:G2-closed}.
+Then for every odd modulus $m\ge 5$, the directed torus
+\[
+D_5(m)=\operatorname{Cay}((\Z/m\Z)^5,\{e_0,e_1,e_2,e_3,e_4\})
+\]
+admits a decomposition into five arc-disjoint directed Hamilton cycles.
+\end{theorem}
+
+The point of the present manuscript is now slightly different from the earlier
+``honest status'' draft.
+The front-end slice $T0$--$T4$ and the selector slice $G1,G2$ are already
+closed in this bundle, and the remaining theorem packets used by the final
+proof are recorded below as explicit named upstream theorems.
+This makes the dependency chain linear enough for later polishing and for a
+Lean-oriented theorem ledger.
+
+\section{Three languages and a methodological rule}
+
+\begin{remark}[support language, grid language, odometer language]
+Three languages appear repeatedly and should not be confused.
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item \textbf{Support language.}
+      This records only which local families are present.
+      It is a pruning language.
+\item \textbf{Grid language.}
+      This records actual endpoint words, equivalently the grid cell
+      \(\sig{i}{j}\).
+      It is the main language of shape-side row theorems.
+\item \textbf{Odometer language.}
+      This records the explicit post-entry coordinates
+      \((q,w,u,\Theta)\).
+      It is the main language after the canonical entry theorem.
+\end{enumerate}
+The key rule is:
+\emph{support is a pruning invariant, not a classification invariant.}
+So support can help isolate a theorem target, but it cannot by itself separate
+all rows that the grid language can separate.
+\end{remark}
+
+\section{Finite front-end chart}
+
+\subsection{\texorpdfstring{The \(3\times 3\)}{The 3x3} bridge-position grid}
+
+Define
+\[
+L_1=[1,4,4],\qquad L_2=[4,1,4],\qquad L_3=[4,4,1],
+\]
+and
+\[
+R_1=[1,2,2],\qquad R_2=[2,1,2],\qquad R_3=[2,2,1].
+\]
+The noncanonical rows are arranged in the grid
+\[
+\sig{i}{j}=L_i/R_j,\qquad 1\le i,j\le 3.
+\]
+The interpretation is:
+\begin{itemize}[leftmargin=2.4em]
+\item \(i\) records the position of the bridge symbol on the left endpoint;
+\item \(j\) records the position of the bridge symbol on the right endpoint.
+\end{itemize}
+
+\begin{proposition}[finite seed certificate]
+\label{prop:finite-chart}
+The filtered front-end seed set contains exactly eleven raw rows.
+Under the accepted symmetries, these reduce to five classes
+\[
+C0,\ C1,\ C2,\ C3,\ C4.
+\]
+Exactly one class is an oriented bridge class, namely \(C0\), and it contains
+the canonical bridge seed
+\[
+\CanSeed=\CanL/\CanR.
+\]
+The centered-bridge classes are exactly
+\[
+C1\cup C3\cup C4,
+\]
+and the residual nonbridge class outside that layer is exactly
+\[
+C2=\sig33=[4,4,1]/[2,2,1].
+\]
+\end{proposition}
+
+\begin{proposition}[bridge normalization]
+\label{prop:bridge-normalization}
+Every oriented bridge row is equivalent under the accepted symmetries to the
+canonical seed
+\[
+\CanSeed=[2,2,1]/[1,4,4].
+\]
+\end{proposition}
+
+\begin{definition}[changed-family support]
+For each surviving row \(\sigma\), let
+\[
+\Sigma(\sigma)\subseteq\{L1,L2,L3,R1,R2,R3\}
+\]
+denote the changed-family support.
+On the noncanonical \(3\times 3\) grid the support factorization is
+\[
+\Sigma(\sig{i}{j})
+=
+\{L2,L3,R1,R3\}
+\cup (\{L1\}\ \text{if } i=1)
+\cup (\{R2\}\ \text{if } j\le 2).
+\]
+\end{definition}
+
+\begin{remark}[the exceptional row]
+The row
+\[
+\sig11=[1,4,4]/[1,2,2]
+\]
+is exceptional for a finite reason:
+it is the unique bridge-first row in which the left bridge is still leading.
+In the bridge-position grid it is the double-leading corner.
+\end{remark}
+
+\subsection{Prototype reduction on the shape side}
+
+\begin{proposition}[two-prototype reduction]
+\label{prop:two-prototypes}
+Under the accepted symmetries, the centered-bridge layer decomposes into two
+orbits:
+\[
+\Omix=
+\{\sig21,\ \sig23,\ \sig12,\ \sig32\},
+\qquad
+\{\sig22\}.
+\]
+Thus the whole centered-bridge burden reduces to one mixed prototype
+\(\sig21=[4,1,4]/[1,2,2]\) and one double-centered core \(\sig22\).
+\end{proposition}
+
+\begin{corollary}[shape-side compression]
+\label{cor:shape-side-compression}
+Modulo Theorem~\ref{thm:T0-needed} and bridge normalization, the front-end shape side
+reduces to exactly three row theorem objects:
+\[
+T1:\ \sig21\rightsquigarrow \sig31,\qquad
+T2:\ \sig22\text{ closes},\qquad
+T3:\ \sig33\text{ closes}.
+\]
+\end{corollary}
+
+\section{Closed front-end row theorems}
+\label{sec:frontier}
+
+\begin{theorem}[T1: first-column companion theorem]
+\label{fr:T1}
+After the \(\sig21\)-repair branches from Theorem~\ref{thm:T0-needed} are
+removed, every live unresolved immediate continuation of
+\[
+\sig21=[4,1,4]/[1,2,2]
+\]
+is represented by the bridge companion
+\[
+\sig31=[4,4,1]/[1,2,2].
+\]
+\end{theorem}
+
+\begin{theorem}[T2: double-centered closure]
+\label{fr:T2}\label{thm:T2-closed}
+For every odd modulus \(m>2\), no row obtained from
+\[
+\sig22=[4,1,4]/[2,1,2]
+\]
+by a one-gate or one-bit one-label repair, with cocycle-defect choice in
+\(\{\mathrm{none},\mathrm{left},\mathrm{right},\mathrm{both}\}\), is Latin.
+Equivalently, after the artifact-surfaced tiny-repair scope is exhausted, the
+center cell \(\sig22\) does not remain as a live unresolved front-end row.
+\end{theorem}
+
+\begin{theorem}[T3: repeated-end corner closure]
+\label{fr:T3}\label{thm:T3-closed}
+For every odd modulus \(m>2\), no row obtained from
+\[
+\sig33=[4,4,1]/[2,2,1]
+\]
+by a one-gate or one-bit one-label repair, with cocycle-defect choice in
+\(\{\mathrm{none},\mathrm{left},\mathrm{right},\mathrm{both}\}\), is Latin.
+Equivalently, after the artifact-surfaced tiny-repair scope is exhausted, the
+repeated-end corner \(\sig33\) does not remain as a live unresolved front-end row.
+\end{theorem}
+
+\begin{remark}[proof packets for \(T2\) and \(T3\)]
+The odd-\(m\ge 5\) obstruction proofs are extracted in the companion notes
+\path{d5_228_T2_centered_core_obstruction_note.tex} and
+\path{d5_225_T3_four_collision_families_note.tex}.
+The remaining one-label \(m=3\) cases are exhausted by the finite scans recorded
+in \path{d5_229_T2_T3_m3_one_label_scan.py} and its saved summaries.
+\end{remark}
+
+\begin{proposition}[canonical support certificate]
+\label{prop:canonical-support}
+At the canonical bridge seed
+\[
+\CanSeed=\CanL/\CanR,
+\]
+the support is exactly
+\[
+\Sigma(\CanSeed)=\{L3,R1,R2,R3\}.
+\]
+\end{proposition}
+
+\begin{theorem}[T4: canonical entry theorem]
+\label{fr:T4}
+At the canonical bridge seed \(\CanSeed\), after the three dead repair source
+families from Theorem~\ref{thm:T0-needed}---namely \(L3\), \(R2\), and
+\(R3\)---are removed, the unique live immediate source family is \(R1\).
+Its canonical two-step normalization in the shifted section coordinates
+\[
+(Q,W,U,\Theta)=(q-1,\ w+1,\ u-1,\ 2)
+\]
+is the alternate-$2$ entry
+\[
+E=(m-1,1,u_{\mathrm{source}},2).
+\]
+\end{theorem}
+
+\begin{theorem}[front-end one-corner reduction]
+\label{thm:conditional-front-end}
+Every unresolved odd-$m$, $d=5$ front-end instance reduces to the exact
+one-corner channel with canonical seed \CanSeed and entry state
+\[
+E=(m-1,1,u_{\mathrm{source}},2).
+\]
+\end{theorem}
+
+\begin{proof}
+By Proposition~\ref{prop:finite-chart}, every unresolved front-end instance is
+represented by one of the finitely many rows in the chart.
+Proposition~\ref{prop:bridge-normalization} moves every oriented bridge row to
+the canonical seed \CanSeed.  Corollary~\ref{cor:shape-side-compression}
+reduces the noncanonical shape side to the theorem objects \(T1,T2,T3\),
+and Theorems~\ref{fr:T1}--\ref{fr:T4} close those row objects and identify
+the unique live bridge continuation with the entry state \(E\).  Hence every
+unresolved front-end instance reduces to the exact one-corner channel with
+canonical seed \CanSeed and entry state \(E\).
+\end{proof}
+
+\section{\texorpdfstring{The closure package for \(T1\)}{The closure package for T1}}
+
+What used to be the live front-end proof search is now a closed package.
+We keep the strip analysis here because it explains why Theorem~\ref{fr:T1} is
+short.
+
+\subsection{Unique surviving branch}
+
+\begin{proposition}[source support for \(T1\)]
+\label{prop:T1-source-support}
+At the mixed prototype
+\[
+\sig21=[4,1,4]/[1,2,2]
+\]
+one has
+\[
+\Sigma(\sig21)=\{L2,L3,R1,R2,R3\}.
+\]
+By Theorem~\ref{thm:T0-needed}, every immediate branch except the
+\(R1\)-branch is removed.
+\end{proposition}
+
+So \(T1\) is not a many-branch problem.
+It is a unique surviving-branch problem.
+
+\subsection{Two strips and two local raw targets}
+
+Define the centered-left strip and centered-right strip by
+\[
+\CL=\{\sig21,\sig22,\sig23\},
+\qquad
+\CR=\{\sig12,\sig22,\sig32\}.
+\]
+With Theorems~\ref{thm:T2-closed} and \ref{thm:T3-closed} recorded as
+closed obstruction cells, \(T1\) reduces to excluding the dangerous targets
+on these two strips.
+
+\begin{proposition}[left-strip case split]
+\label{prop:left-strip-case-split}
+Relative to the source right word \([1,2,2]\), the centered-left strip has
+exactly three cases:
+\[
+\sig21 \leftrightarrow \Delta_R=\varnothing,\qquad
+\sig22 \leftrightarrow \Delta_R=\{1,2\},\qquad
+\sig23 \leftrightarrow \Delta_R=\{1,3\}.
+\]
+In particular,
+\[
+\sig23=[4,1,4]/[2,2,1]
+\]
+is the unique centered-left case with disconnected change-set \(\{1,3\}\), the
+unique centered-left case with terminal right-slot change, and the unique
+centered-left case with \(R2\) absent.
+\end{proposition}
+
+\begin{proposition}[current \(T1\) reduction after strip closure]
+\label{prop:T1-current-reduction}
+Assume Theorems~\ref{thm:T2-closed} and \ref{thm:T3-closed}.
+Then \(T1\) has no remaining live raw local target.
+The left-strip target that the surviving immediate \(R1\)-image out of
+\(\sig21\) does not realize \(\sig23\) is closed by
+Theorem~\ref{thm:sigma23-closed}, and the normalized centered-right target that
+it does not realize \(\sig32\) is closed by
+Theorem~\ref{thm:sigma32-closed} below.
+\end{proposition}
+
+\subsection{The \texorpdfstring{$\sig23$}{sigma23} side is now closed}
+
+The bookkeeping reductions from the earlier notes remain useful, but the live
+frontier theorem on this side is no longer open.  Once the surfaced bundle
+builder is admitted, the surviving immediate \(R1\)-family out of \(\sig21\)
+can be read directly and its second-step comparison is explicit.
+
+\begin{proposition}[equivalent forms of \(\sig23\) exclusion]
+\label{prop:sigma23-equivalences}
+For the surviving immediate \(R1\)-image \(\RhoR\) out of \(\sig21\), each of the
+following suffices to exclude \(\sig23\).
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item \(\Delta_R(\RhoR)\subseteq\{1,2\}\);
+\item the terminal right slot is unchanged;
+\item the changed right slots form a connected set;
+\item the immediate update is an elementary rewrite rooted at the acted edge
+      \(\{1,2\}\);
+\item the immediate update is supported on the closed star of the acted edge.
+\end{enumerate}
+\end{proposition}
+
+\begin{theorem}[surfaced-bundle closure of the \(\sig23\) side]
+\label{thm:sigma23-closed}
+For every modulus \(m>2\), the actual second step of the surviving immediate
+\(R1\)-family out of
+\[
+\sig21=[4,1,4]/[1,2,2]
+\]
+agrees with the \(\sig22=[4,1,4]/[2,1,2]\) prototype and never with the
+\(\sig23=[4,1,4]/[2,2,1]\) prototype.
+Equivalently, for the tiny-repair-normalized surviving immediate \(R1\)-image
+\(\RhoR\) one has
+\[
+\Delta_R(\RhoR)=\{1,2\}.
+\]
+In particular the left-strip burden inside \(T1\) is closed.
+\end{theorem}
+
+\begin{proof}
+Fix a modulus \(m>2\), color \(0\), and the standard normalization
+\(w_0=s_0=0\).
+Write \(\partial_i\) for the coordinate step that adds \(+1\) in direction
+\(i\) modulo \(m\).
+In the surfaced builder, the common right \(R1\)-source family for
+\(\sig21,\sig22,\sig23\) is exactly
+\[
+S_R=\{x:\ \mathrm{layer}(x)=1,\ q(x)=m-1,\ w(x)=0,\ s(x)\neq 0\}.
+\]
+Thus all three rows are compared on the same source family.
+
+For \(\sig21\), the right word is \([1,2,2]\), so the first two right-side
+steps on \(S_R\) are
+\[
+x\mapsto \partial_1(x)\mapsto \partial_2\partial_1(x).
+\]
+For \(\sig22\), the right word is \([2,1,2]\), so the first two right-side
+steps are
+\[
+x\mapsto \partial_2(x)\mapsto \partial_1\partial_2(x).
+\]
+For \(\sig23\), the right word is \([2,2,1]\), so the first two right-side
+steps are
+\[
+x\mapsto \partial_2(x)\mapsto \partial_2^2(x).
+\]
+
+The surfaced common module defines each \(\partial_i\) as coordinatewise
+\(+1\) in a single axis modulo \(m\).  Therefore the coordinate steps
+commute:
+\[
+\partial_2\partial_1=\partial_1\partial_2.
+\]
+Thus the actual second step of \(\sig21\) on the surviving \(R1\)-family agrees
+exactly with the \(\sig22\) prototype.
+
+On the other hand, every \(x\in S_R\) satisfies \((q(x),w(x))=(m-1,0)\).
+Therefore
+\[
+\partial_2\partial_1(x):(q,w)=(0,1),\qquad
+\partial_2^2(x):(q,w)=(m-1,2).
+\]
+These are distinct for every \(m>2\).  Hence the actual second step of
+\(\sig21\) does not realize \(\sig23\).
+The description of \(\Delta_R\) now follows from
+Proposition~\ref{prop:left-strip-case-split}.
+\end{proof}
+
+\subsection{The \texorpdfstring{$\sig32$}{sigma32} side is also closed}
+
+The remaining centered-right target is the repeated-end option
+\[
+\sig32=[4,4,1]/[2,1,2].
+\]
+Here the common comparison family is on the left rather than on the right.
+The first two left-side steps are again explicit in the surfaced builder.
+
+\begin{theorem}[surfaced-bundle closure of the \(\sig32\) side]
+\label{thm:sigma32-closed}
+For every modulus \(m>2\), the normalized surviving immediate \(R1\)-image out
+of
+\[
+\sig21=[4,1,4]/[1,2,2]
+\]
+does not realize the dangerous centered-right target
+\[
+\sig32=[4,4,1]/[2,1,2].
+\]
+More precisely, on the common left family
+\[
+S_L=\{x:\ \mathrm{layer}(x)=1,\ q(x)=m-1,\ w(x)=m-1,\ s(x)\neq 0\},
+\]
+the actual two-step left continuation agrees with the centered core
+\(\sig22=[4,1,4]/[2,1,2]\) and differs from the repeated-end target
+\(\sig32\).
+\end{theorem}
+
+\begin{proof}
+Fix a modulus \(m>2\), color \(0\), and the standard normalization
+\(w_0=s_0=0\).
+On the common left family \(S_L\), the four relevant left words are
+\[
+\sig21:\ [4,1,4],\qquad
+\sig12:\ [1,4,4],\qquad
+\sig22:\ [4,1,4],\qquad
+\sig32:\ [4,4,1].
+\]
+Therefore the first two left-side steps on \(S_L\) are
+\[
+\sig21:\ x\mapsto \partial_4(x)\mapsto \partial_1\partial_4(x),
+\]
+\[
+\sig12:\ x\mapsto \partial_1(x)\mapsto \partial_4\partial_1(x),
+\]
+\[
+\sig22:\ x\mapsto \partial_4(x)\mapsto \partial_1\partial_4(x),
+\]
+\[
+\sig32:\ x\mapsto \partial_4(x)\mapsto \partial_4^2(x).
+\]
+Hence the actual left-side continuation of \(\sig21\) agrees with the
+\(\sig22\) prototype.
+
+To distinguish it from \(\sig32\), note that every \(x\in S_L\) satisfies
+\(q(x)=m-1\).  Therefore
+\[
+\partial_1\partial_4(x): q=0,
+\qquad
+\partial_4^2(x): q=m-1.
+\]
+These are distinct for every \(m>2\).  Hence the normalized surviving
+immediate \(R1\)-image out of \(\sig21\) does not realize \(\sig32\).
+\end{proof}
+
+\begin{remark}[what remains after strip closure]
+The \(\sig23\)- and \(\sig32\)-sides are no longer frontier theorems.
+Their remaining work is only packaging: the surfaced-bundle proofs above should
+be translated into the final preferred notation of the main text.
+Under Proposition~\ref{prop:T1-current-reduction}, there is now no remaining
+live raw local burden inside \(T1\).
+\end{remark}
+
+\begin{proof}[Proof of Theorem~\ref{fr:T1}]
+By Proposition~\ref{prop:T1-source-support} and Theorem~\ref{thm:T0-needed},
+only the immediate \(R1\)-branch out of \(\sig21\) survives the actual front-end
+repair cleanup.  Proposition~\ref{prop:T1-current-reduction}, together with
+Theorems~\ref{thm:sigma23-closed} and \ref{thm:sigma32-closed}, shows that this
+surviving branch does not realize either dangerous strip target.
+Theorems~\ref{thm:T2-closed} and \ref{thm:T3-closed} remove the centered core
+and repeated-end obstruction cells themselves.  Hence every live unresolved
+immediate continuation of \(\sig21\) is represented by the bridge companion
+\(\sig31\), as claimed.
+\end{proof}
+
+\subsection{\texorpdfstring{Why the present \(T1\) target is now exhausted}{Why the present T1 target is now exhausted}}
+
+The moral is that \(T1\) is no longer a package jungle.
+After the strip-closure theorems, it became a unique surviving-branch theorem
+with no remaining live raw local comparison.  The only auxiliary inputs are the
+already-closed obstruction theorems \(T2\) and \(T3\).
+
+\section{Canonical entry and the exact odometer spine}
+
+\subsection{The reduced entry problem}
+
+\begin{proposition}[source support for \(T4\)]
+\label{prop:T4-source-support}
+At the canonical bridge seed
+\[
+\CanSeed=\CanL/\CanR,
+\]
+the only support families present are \(L3,R1,R2,R3\).
+By Theorem~\ref{thm:T0-needed}, the branches \(L3\), \(R2\), and \(R3\) are
+dead, so the only potentially live immediate continuation is the \(R1\)-branch.
+\end{proposition}
+
+Thus the surviving-branch toolkit is now fully closed on the front end, and
+its output language is the odometer language rather than the grid language.
+
+\subsection{The explicit odometer block}
+
+With Theorem~\ref{fr:T4} proved, the rest of the theorem-side front end is explicit.
+
+\begin{definition}[candidate one-corner orbit]
+Fix odd \(m\) and the entry state
+\[
+E=(m-1,1,u_{\mathrm{source}},2).
+\]
+Let
+\[
+\rho:=u_{\mathrm{source}}+1 \pmod m.
+\]
+Define the candidate orbit \(\widehat x_n=(q_n,w_n,u_n,\Theta_n)\) by
+\begin{align*}
+\widehat F(q,w,u,0) &= (q+1,w,u,1),\\
+\widehat F(q,w,u,1) &= (q,w,u+1,2),\\
+\widehat F(q,w,u,2) &= (q,w+\mathbf 1_{q=m-1},u,3),\\
+\widehat F(q,w,u,\Theta) &= (q,w,u,\Theta+1)\qquad(3\le \Theta\le m-1).
+\end{align*}
+On the section \(\Theta=2\), the induced return map is
+\[
+(q,w)\mapsto(q+1,w+\mathbf 1_{q=m-1}).
+\]
+\end{definition}
+
+\begin{definition}[odometer coordinate]
+Define
+\[
+\eta(q,w)=q+m(w-1)-(m-1).
+\]
+Then \(\eta\) increases by exactly \(1\) under each return to the section
+\(\Theta=2\).
+\end{definition}
+
+\begin{lemma}[phase-$1$ residue invariant]
+Along the candidate orbit, every phase-$1$ state satisfies
+\[
+q\equiv u-\rho+1 \pmod m.
+\]
+\end{lemma}
+
+\begin{theorem}[post-entry exact odometer spine]
+\label{thm:odometer-spine}
+The actual active front-end branch agrees with the candidate one-corner
+orbit up to first exit.
+The trigger family is
+\[
+H_{L1}=\{(q,w,u,\Theta)=(m-1,m-1,u,2):u\neq 2\},
+\]
+and the universal first exits are
+\[
+T_{\mathrm{reg}}=(m-1,m-2,1),
+\qquad
+T_{\mathrm{exc}}=(m-2,m-1,1).
+\]
+Moreover, no patched current class appears before exit.
+\end{theorem}
+
+\begin{proof}
+Theorem~\ref{fr:T4} identifies the unique live unresolved bridge branch with the
+alternate-$2$ entry state
+\[
+E=(m-1,1,u_{\mathrm{source}},2)
+\]
+on the canonical seed \(\CanSeed\).
+The front-end one-corner reduction theorem
+(Theorem~\ref{thm:conditional-front-end}) then reduces every unresolved
+front-end instance to this normalized best-seed channel.
+
+At that point the best-seed one-corner structural theorem package applies
+directly to the branch started at \(E\): it proves candidate/actual agreement up
+to first exit, identifies the exact trigger family \(H_{L1}\), pins the
+universal exits to \(T_{\mathrm{reg}}\) and \(T_{\mathrm{exc}}\), and rules out
+patched current classes before exit.
+These are precisely the four assertions of the present theorem.
+\end{proof}
+
+\begin{remark}[provenance of the odometer spine]
+In the attached theorem chain, Theorem~\ref{thm:odometer-spine} is the
+manuscript-order form of the structural first-exit result proved in the one-pass
+odd-$m$ globalization package.
+The supporting normal-form and entry notes are exactly the one-corner reduction
+notes tied to the canonical seed and the late local provenance check on the
+surfaced $\sigma_{23}$/$R1$ branch.
+\end{remark}
+
+\begin{corollary}[front-end channel classification]
+\label{cor:channel-classification}
+For every odd modulus $m>2$, every unresolved front-end instance reduces to the
+best-seed channel starting from the canonical seed
+\[
+\CanSeed=[2,2,1]/[1,4,4]
+\]
+and enters that channel at the alternate-$2$ state
+\[
+E=(m-1,1,u_{\mathrm{source}},2).
+\]
+Equivalently, the live unresolved front end is the one-corner channel
+$R1\to H_{L1}$ with the entry described in Theorem~\ref{fr:T4}.
+\end{corollary}
+
+\begin{proof}
+This is exactly the combination of the front-end reduction theorem
+(Theorem~\ref{thm:conditional-front-end}), the canonical-entry theorem
+(Theorem~\ref{fr:T4}), and the odometer identification in
+Theorem~\ref{thm:odometer-spine}.
+\end{proof}
+
+\begin{remark}
+This is the point at which the front-end proof changes language completely.
+Before \(T4\), one argues in the grid language of rows and cells.
+After \(T4\), the proof is an exact odometer proof in the coordinates
+\((q,w,u,\Theta)\).
+\end{remark}
+
+\section{Selector surgery and graph-side Hamilton branches}
+\label{sec:selector-surgery}
+
+The present draft is not only about the front end.
+The broader odd-$m$, $d=5$ paper also needs the graph-side part of the
+odometer-view story.
+
+\subsection{Standing theorem packets after the front end}
+
+The current manuscript now records the remaining theorem-side packets in their
+explicit theorem-order form rather than as anonymous imports.
+
+\begin{definition}[theorem-side anchor quotient]
+Let \(X_m\) denote the exact marked carry-jump-to-wrap object on the canonical
+best-seed channel.
+Define the theorem-side quotient
+\[
+Q_{\mathrm{th}}:=(B,\beta),
+\]
+where \(B\) is the grouped base and \(\beta\) is the canonical clock.
+\end{definition}
+
+\begin{definition}[the corrected selector families]
+Let \(\SelCorr\) denote the explicit corrected selector whose rows are:
+clean constant rules on \(\Sigma=0,1\) and on \(\Sigma\notin\{2,3\}\),
+the explicit uniform slice-\(2\) correction \(q^{(2)}_S\),
+and the explicit slice-\(3\) correction \(q^{(3)}_T\).
+
+Let \(\SelStar\) denote the explicit selector surgery obtained by replacing the
+slice-\(2\) rule \(q^{(2)}_S\) of \(\SelCorr\) by the explicit surgery table
+\(q^{(2,\star)}_S\) and leaving the slice-\(3\) rule unchanged.
+\end{definition}
+
+\begin{remark}[definition status of the named graph-side objects]
+The symbols \(Q_{\mathrm{th}}\), \(\SelCorr\), and \(\SelStar\) are used here
+as theorem-order names tied to the corrected packet notes.
+They are not yet expanded in this manuscript as full literal rule tables.
+For formalization, the actual row formulas and quotient maps still have to be
+imported from the corresponding packet notes.
+\end{remark}
+
+\begin{theorem}[theorem-side $M2/M3$ anchor package]
+\label{thm:M23}
+For every odd modulus $m\ge 5$, the exact marked carry-jump-to-wrap object
+exists theorem-side with coordinates equivalent to
+\[
+(\rho,\beta,q_0,\sigma)
+\qquad\text{and}\qquad
+(B,\beta).
+\]
+The quotient \(Q_{\mathrm{th}}=(B,\beta)\) is exact deterministic for the
+current event map, retains grouped base, and factors canonically to
+\((\beta,\delta)\).
+\end{theorem}
+
+\begin{proof}
+The corrected theorem-side package proves that the exact marked
+carry-jump-to-wrap object exists and that the coordinates
+\[
+(B,\beta)
+\qquad\text{and}\qquad
+(\rho,\beta,q_0,\sigma)
+\]
+are equivalent parameterizations of the same exact marked object.
+It also proves the corrected factor theorem: any quotient that is exact
+deterministic for the current event map and retains grouped base factors
+canonically through
+\[
+(B,\beta)\cong(\rho,\beta,q_0,\sigma)\twoheadrightarrow(\beta,\delta).
+\]
+
+For the intended theorem-side quotient we take
+\[
+Q_{\mathrm{th}}=(B,\beta).
+\]
+The quotient-verification step proves directly that this quotient is exact
+deterministic for the current event map and retains grouped base.
+Applying the corrected factor theorem to \(Q_{\mathrm{th}}\) yields the claimed
+canonical factor chain, which is exactly the anchor package used later.
+\end{proof}
+
+\begin{theorem}[corrected-selector baseline theorem for $\SelCorr$]
+\label{thm:M4-SelCorr}
+For every odd modulus $m\ge 5$, the corrected selector family $\SelCorr$
+defines five global torus permutations whose arc sets are pairwise disjoint and
+cover the full directed arc set of the torus.
+\end{theorem}
+
+\begin{proof}
+The direct corrected-selector theorem writes down the explicit slice-\(2\)
+correction \(q^{(2)}_S\) and the explicit slice-\(3\) correction \(q^{(3)}_T\).
+It proves incoming uniqueness on the only nonconstant target slices:
+on target slice \(\Sigma=3\), the incoming color at generator \(j\) ignores the
+single predecessor bit that can change at generator \(j\), so the whole
+incoming row factors through one fixed subset \(M(y)-1\);
+on target slice \(\Sigma=4\), only the transported bits
+\(\mathbf 1_{1\in A_3}\) and \(\mathbf 1_{2\in A_3}\) matter, and they force the
+incoming color pairs \(\{0,2\}\) and \(\{1,4\}\).
+On every other slice the selector row is constant, so incoming uniqueness is
+immediate there as well.
+
+Hence each color map of \(\SelCorr\) has in-degree \(1\) and out-degree \(1\) at
+every vertex, so each color map is a permutation of the torus.
+At each vertex the selector row is a permutation of the five generators, so the
+five selected arcs are exactly the five outgoing torus arcs.
+Therefore the five arc sets are pairwise disjoint and cover the full directed
+arc set.
+\end{proof}
+
+\begin{theorem}[color-$4$ Sel$^{\star}$ Hamilton theorem]
+\label{thm:M5-color4}
+For every odd modulus $m\ge 5$, the color-$4$ torus map coming from the surgery
+family $\SelStar$ is Hamilton.
+\end{theorem}
+
+\begin{proof}
+Let \(F_4^\star\) be the color-$4$ map induced by \(\SelStar\).
+The selector-surgery route reduces Hamiltonicity of \(F_4^\star\) to the
+third-return map on the final section.
+The corrected-row stitching theorem proves that the explicit corrected-row model
+\(U_m^\sharp\) on that final section is a single \(m^2\)-cycle for every odd
+\(m\ge 11\).
+The all-odd identification theorem then proves that the actual third return
+\(U_m\) of \(F_4^\star\) agrees with \(U_m^\sharp\) for every odd \(m\ge 11\).
+Therefore \(U_m\) is one cycle for every odd \(m\ge 11\), and the nested-return
+lift criterion gives Hamiltonicity of \(F_4^\star\) on the full torus.
+
+The remaining odd moduli \(m=5,7,9\) are covered by the direct exact checks
+already recorded with the selector surgery and promoted in the all-odd
+identification step.
+Thus the color-$4$ torus map of \(\SelStar\) is Hamilton for every odd
+\(m\ge 5\).
+\end{proof}
+
+\begin{theorem}[odd-$m$ D5 globalization theorem]
+\label{thm:M6-globalization}
+For every odd modulus $m\ge 5$, every actual lift of the exceptional cutoff row
+$\delta=3m-3$ continues through
+\[
+3m-2\to 3m-1
+\]
+and lies in the regular continuing endpoint class there.
+Consequently no mixed-status realized $\delta$ exists, fixed realized $\delta$
+determines tail length and endpoint class, and raw global $(\beta,\delta)$ is
+exact on the true accessible boundary union.
+\end{theorem}
+
+\begin{proof}
+The one-pass odd-$m$ globalization package proves, in theorem order, the
+structural first-exit theorem, the fixed-\(\delta\) tail-length reduction, the
+chart/interface landing theorem, the regular closure theorem, the actual
+exceptional interface landing theorem, and finally the odd-$m$ D5 globalization
+theorem.
+Its final theorem is exactly the present statement: every actual lift of the
+exceptional cutoff row \(\delta=3m-3\) glues through
+\[
+3m-2\to 3m-1
+\]
+into the regular continuing endpoint class.
+The listed consequences are exactly the consequences extracted there: no
+mixed-status realized \(\delta\), fixed realized \(\delta\) determines tail
+length and endpoint class, and raw global \((\beta,\delta)\) is exact on the
+true accessible boundary union.
+\end{proof}
+
+\begin{remark}[packet status after 253]
+At this point the remaining formal-target packets isolated by the
+\texttt{253} closure map are all explicit theorem-order objects:
+the post-entry odometer spine, the theorem-side anchor package \(M23\), the
+corrected-selector baseline theorem \(M4\), the color-$4$ \(\SelStar\) branch
+\(M5\), and the odd-$m$ globalization theorem \(M6\).
+What remains later in the manuscript is the short downstream assembly together
+with one graph-side compatibility question:
+the explicit two-swap package of \(G1\) must be tied explicitly to the
+color-relative hypothesis used by the abstract cyclic transport theorem \(G2\).
+\end{remark}
+
+\begin{remark}
+The right graph-side question is no longer whether one can recover one common
+selector family from scratch.
+The correct question is whether the already closed color-$4$ branch can be
+inserted into a colorwise selector package and then transported to the other
+colors.
+\end{remark}
+
+\subsection{The graph-side theorem block}
+
+\begin{definition}[colorwise selector package on the torus]
+A family of local color rules
+\[
+g_0,\dots,g_4
+\]
+on the directed torus is called a \emph{colorwise selector package} when:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item for every vertex, the five selected arcs are exactly the five outgoing
+      torus arcs from that vertex;
+\item for each color $i\in\{0,1,2,3,4\}$ and each vertex $x$, there is exactly
+      one selected color-$i$ arc ending at $x$.
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}[G1: colorwise selector-compatibility theorem]
+\label{fr:G1}
+There exist five explicit local color rules
+\[
+g_0,\dots,g_4
+\]
+such that
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item outgoing exhaustiveness holds pointwise;
+\item incoming uniqueness holds colorwise;
+\item the induced global maps are torus permutations; and
+\item \(g_4\) is exactly the already closed color-$4$ rule from the
+      \(\SelStar\) branch.
+\end{enumerate}
+In fact one may take the explicit baseline package \(B\) from the graph-side
+baseline theorem, define
+\[
+D_1=\{x:\sigma(x)=2,\ x_0=m-1\},
+\]
+and let \(D_2\) be the color-$4$ layer-$3$ defect union
+\(L3^{(0,p=1)}\cup L3^{(1,p=0)}\) (equivalently
+\(\sigma(x)=3\) together with the corresponding \((x_0,x_1+x_3)\) condition,
+and \(D_2=\varnothing\) when \(m=3\)).
+Then \(g_0=B_0\), \(g_3=B_3\), colors \(1\) and \(4\) are swapped on \(D_1\),
+and colors \(2\) and \(4\) are swapped on \(D_2\).
+\end{theorem}
+
+\begin{proof}
+This is the explicit two-swap splice of d5\_247.
+The surfaced color-$4$ mixed branch equals \(B_1\) on \(D_1\), \(B_2\) on \(D_2\),
+and \(B_4\) elsewhere.
+The sets \(D_1\) and \(D_2\) are invariant under the translations
+\(e_1-e_4\) and \(e_2-e_4\), respectively, so
+\[
+B_1(D_1)=B_4(D_1),
+\qquad
+B_2(D_2)=B_4(D_2).
+\]
+Hence the finite-defect splice criterion preserves the permutation property for
+colors \(1,2,4\), while colors \(0,3\) remain baseline permutations.
+Pointwise outgoing exhaustiveness is preserved because on \(D_1\) one merely
+transposes the baseline directions of colors \(1\) and \(4\), and on \(D_2\) one
+transposes the baseline directions of colors \(2\) and \(4\).
+Thus the resulting package is colorwise permutation, pointwise outgoing-exhaustive,
+and has the required exact color-$4$ branch.
+\end{proof}
+
+\begin{theorem}[G2 closes by cyclic transport from a colorwise package]
+\label{thm:G2-closed}
+Assume a colorwise package \(g_0,\dots,g_4\) on the full torus, and assume the
+package is defined in color-relative
+coordinates so that the color-$c$ rule is the cyclic shift of the color-$0$
+rule.  Then every conjugacy-invariant property of the closed color-$4$ branch
+transports to the remaining colors.  In particular, permutation, first-return,
+grouped-return, nested-return, and Hamilton-type conclusions transfer from
+color $4$ to colors \(0,1,2,3\).
+\end{theorem}
+
+\begin{proof}
+Write \(\rho_c\) for cyclic coordinate shift by \(c\).  For a color-relative
+local rule, the color-$c$ global map has the form
+\[
+ g_c = \rho_{-c}\circ g_0\circ \rho_c.
+\]
+Hence all five color maps are pairwise conjugate.  The listed graph-side
+properties are invariant under conjugacy and under the corresponding transport
+of the chosen section/return coordinates.
+\end{proof}
+
+\begin{corollary}[the explicit splice gives a colorwise selector package]
+\label{cor:colorwise-package}
+The explicit rules $g_0,\dots,g_4$ from Theorem~\ref{fr:G1} form a colorwise
+selector package on the full torus.
+\end{corollary}
+
+\begin{proof}
+The outgoing-exhaustiveness and colorwise incoming-uniqueness conclusions in
+Theorem~\ref{fr:G1} are exactly the two axioms in the definition above.
+\end{proof}
+
+\begin{corollary}[all five colors are Hamilton, assuming transport compatibility]
+\label{cor:all-five-hamilton}
+Assume the explicit package of Theorem~\ref{fr:G1} is obtained from one
+color-relative local rule family in the sense of
+Theorem~\ref{thm:G2-closed}.
+Then for every odd modulus $m\ge 5$, each global map induced by the package of
+Theorem~\ref{fr:G1} is Hamilton.
+\end{corollary}
+
+\begin{proof}
+Theorem~\ref{fr:G1} identifies $g_4$ with the already closed color-$4$ rule
+coming from the $\SelStar$ branch, so Theorem~\ref{thm:M5-color4} makes $g_4$
+Hamilton.  Theorem~\ref{thm:G2-closed} transports the same Hamilton-type
+conclusion to colors $0,1,2,3$.
+\end{proof}
+
+\begin{remark}[graph-side status after the splice closure]
+The old requirement of one common selector family is stronger than what the
+final theorem actually needs.
+What remained was exactly one compatibility theorem: splice the closed color-$4$
+branch into a colorwise package while preserving pointwise outgoing
+exhaustiveness and colorwise incoming uniqueness.
+That selector-compatibility theorem is now closed by the explicit two-swap
+package above.
+What is still separate is the transport-compatibility step showing that this
+explicit package also satisfies the color-relative hypothesis used by
+Theorem~\ref{thm:G2-closed}.
+\end{remark}
+
+\section{Final upgrade and main theorem}
+
+The endgame is now the corrected generic odd-$m$, $d=5$ upgrade step.
+Compared with the older formulation, the corrected criterion does \emph{not}
+ask for a single common selector family and does \emph{not} use the false
+future-word separation target for the current event map.
+Instead it asks for:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item the best-seed channel classification on the front end;
+\item the theorem-side anchor/globalization package;
+\item a colorwise selector package on the full torus;
+\item Hamiltonicity of each color map.
+\end{enumerate}
+
+\begin{theorem}[corrected generic odd-$m$, $d=5$ upgrade criterion]
+\label{thm:generic-upgrade}
+Let $m\ge 5$ be odd.
+Assume:
+\begin{enumerate}[label=\textup{(G\arabic*)},leftmargin=3.0em]
+\item the front-end channel classification of
+      Corollary~\ref{cor:channel-classification};
+\item the theorem-side anchor package of Theorem~\ref{thm:M23} together with
+      the globalization theorem~\ref{thm:M6-globalization};
+\item a colorwise selector package on the full torus;
+\item Hamiltonicity of each color map in that package.
+\end{enumerate}
+Then the directed torus $D_5(m)$ admits a decomposition into five arc-disjoint
+Hamilton cycles.
+\end{theorem}
+
+\begin{proof}
+By (G3), the five color maps determine five selected arc sets whose outgoing
+arcs at each vertex are exactly the five torus outgoing arcs and whose incoming
+arcs are unique colorwise.  Hence the five global maps are torus permutations
+with pairwise disjoint arc sets covering the full directed arc set.
+By (G4), each of those permutations is a Hamilton cycle.
+Therefore the five arc sets form a Hamilton decomposition of $D_5(m)$.
+The role of (G1) and (G2) is not additional combinatorics at this last step;
+it is to identify the selector package and its Hamiltonicity with the actual
+odd-$m$, $d=5$ branch selected by the front-end and theorem-side packets.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:conditional-full}]
+Fix an odd modulus $m\ge 5$.
+The front-end theorem block closes the seed search and leaves a unique live
+channel; Corollary~\ref{cor:channel-classification} records this as the
+best-seed one-corner channel.
+The post-entry dynamics on that channel are then governed by the explicit
+odometer spine of Theorem~\ref{thm:odometer-spine}.
+On the theorem side, Theorem~\ref{thm:M23} supplies the exact anchor package
+and Theorem~\ref{thm:M6-globalization} supplies the odd-$m$ globalization
+conclusion.
+On the graph side, Theorem~\ref{fr:G1} and
+Corollary~\ref{cor:colorwise-package} give a full colorwise selector package,
+while Corollary~\ref{cor:all-five-hamilton} gives Hamiltonicity of all five
+colors under the standing transport-compatibility hypothesis in the statement
+of the theorem.
+Therefore all hypotheses of Theorem~\ref{thm:generic-upgrade} are satisfied,
+and the directed torus $D_5(m)$ admits a decomposition into five arc-disjoint
+directed Hamilton cycles.
+\end{proof}
+
+\begin{remark}
+The final theorem is now reduced to one explicit remaining graph-side
+compatibility input plus the already packaged theorem blocks.
+What remains for later work is therefore not another broad theorem search inside
+the odd-$m$, $d=5$ chain, but either:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item make the transport compatibility of the explicit \(G1\) package fully
+      explicit, or
+\item keep that step as a standing named input in the final theorem.
+\end{enumerate}
+\end{remark}
+
+\section{Dependency ledger for formalization}
+
+For later Leanization or line-level polishing, the main dependency chain used in
+Theorem~\ref{thm:conditional-full} is the following.
+\begin{enumerate}[label=\textup{(D\arabic*)},leftmargin=3.0em]
+\item finite seed certificate and bridge normalization:
+      Proposition~\ref{prop:finite-chart} and
+      Proposition~\ref{prop:bridge-normalization};
+\item the actual-needed tiny-repair core:
+      Theorem~\ref{thm:T0-needed};
+\item the row-theorem block:
+      Theorems~\ref{thm:T2-closed}, \ref{thm:T3-closed},
+      \ref{thm:sigma23-closed}, and \ref{thm:sigma32-closed}, summarized in
+      Theorem~\ref{thm:conditional-front-end};
+\item canonical entry and one-corner odometer identification:
+      Theorem~\ref{fr:T4}, Theorem~\ref{thm:odometer-spine}, and
+      Corollary~\ref{cor:channel-classification};
+\item theorem-side anchor and globalization packets:
+      Theorems~\ref{thm:M23} and \ref{thm:M6-globalization};
+\item graph-side baseline and closed color-$4$ branch:
+      Theorems~\ref{thm:M4-SelCorr} and \ref{thm:M5-color4};
+\item selector splice and color transport:
+      Theorem~\ref{fr:G1}, Theorem~\ref{thm:G2-closed},
+      the realization of the \(G2\) hypothesis for the explicit splice package,
+      Corollaries~\ref{cor:colorwise-package} and
+      \ref{cor:all-five-hamilton};
+\item corrected final upgrade:
+      Theorem~\ref{thm:generic-upgrade};
+\item main odd-$m$, $d=5$ theorem:
+      Theorem~\ref{thm:conditional-full}.
+\end{enumerate}
+
+\begin{remark}[status after closure]
+At the level of packet closure, no live external packet remains among the
+objects isolated by the \(253\) closure map.
+The front-end slice $T0$--$T4$ is closed in the present bundle, the packet notes
+\(M23\), \(M4\), \(M5\), \(M6\) are now written as explicit theorem-order
+objects, and the remaining standing inputs are named precisely.
+The main remaining tightening point for a fully self-contained final theorem is
+the graph-side transport compatibility linking the explicit \(G1\) package to
+the color-relative hypothesis of \(G2\).
+\end{remark}
+
+\section{Heuristic picture: bridge decentering}
+
+\begin{heuristic}[bridge decentering]
+The front-end chart suggests the following picture.
+Leading and centered bridge positions are unstable.
+The front end tries to decenter toward bridge-compatible terminal positions,
+except that the repeated-end terminal corner \(\sig33\) is itself obstructed.
+This heuristic has now been realized by local slice theorems rather than by a
+single global monotonicity theorem:
+\begin{itemize}[leftmargin=2.4em]
+\item first-column companion or centered-strip escape for \(T1\);
+\item centered-core incompatibility for \(T2\);
+\item repeated-end obstruction for \(T3\).
+\end{itemize}
+\end{heuristic}
+
+\begin{remark}
+This heuristic is useful for explanation and proof search, but it is not itself
+a theorem.
+The actual manuscript should continue to use local theorem objects rather than a
+single global potential story, unless a genuinely odd-uniform monotonicity
+theorem is later found.
+\end{remark}
+
+\section{Editorial note}
+
+The mathematical chain recorded in this manuscript is now stable.
+Future passes should therefore focus on:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item line-level exposition cleanup;
+\item theorem naming and local notation polishing;
+\item optional further internalization of older upstream packets;
+\item synchronization with any Lean formalization ledger.
+\end{enumerate}
+
+\begin{remark}
+The important point is that these are editorial or packaging tasks.
+They are no longer theorem-search tasks inside the odd-$m$, $d=5$ proof chain
+used for Theorem~\ref{thm:conditional-full}.
+\end{remark}
+
+\end{document}

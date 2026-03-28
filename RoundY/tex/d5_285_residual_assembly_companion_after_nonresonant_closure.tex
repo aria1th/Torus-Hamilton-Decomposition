@@ -1,0 +1,578 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{xurl}
+
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\urlstyle{same}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Open problem}
+
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\wdone}{\widehat{\mathfrak N}_m(0)}
+\newcommand{\wdthree}{\widehat{\mathfrak N}_m(1)}
+\newcommand{\Pm}{P_m}
+\newcommand{\SelStar}{\mathrm{Sel}^{\star}}
+\newcommand{\status}[1]{\textsc{#1}}
+
+\title{Companion research note for the residual assembly program\\
+after the nonresonant closure}
+\author{}
+\date{March 25, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note is meant to be read alongside the redefined theorem-order manuscript
+for odd-$m$, $d=5$.
+Its job is not to replace the paper, but to make the current proof status easy
+for another researcher to follow.
+The note records four things in one place:
+(1) the manuscript redefinition after the closure of the small odd and
+nonresonant residual packets;
+(2) the exact reduced-return laws that make the nonresonant closure believable
+and reusable;
+(3) the current resonant reduction tree, including the deterministic reductions
+from the checked $51$- and $69$-type branches to canonical pure color-$1$
+frontiers; and
+(4) the obstruction ladder that explains why the remaining resonant theorem is
+now concentrated on a double-top breaker problem plus a separate
+$B$-active/gate branch.
+Throughout, the note distinguishes carefully between theorem-level results,
+checked exact packets, and genuine frontiers.
+\end{abstract}
+
+\tableofcontents
+
+\section{Purpose and reading protocol}
+
+The redefined manuscript is now organized around the following theorem-order
+spine:
+\[
+\text{front end}
+\to
+\text{odometer spine}
+\to
+\text{selector surgery}
+\to
+\text{generic upgrade}.
+\]
+What changed is the location of the honest boundary.
+The paper no longer treats residual assembly as a single graph-side input for
+all odd moduli.
+Instead:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item the small odd moduli $m=5,7,9$ are closed explicitly;
+\item the nonresonant residual theorem for $3\nmid m$ is closed by the family
+      \(\Pm\);
+\item the only remaining external input is a \emph{resonant} residual theorem
+      for odd $m\ge 15$ with $3\mid m$.
+\end{enumerate}
+Accordingly, the updated paper should be read as a theorem-order proof spine,
+while the present note should be read as the companion packet that records the
+new exact reduced-return formulas, the case table, and the remaining resonant
+obstructions.
+
+\begin{remark}[how the paper and note divide labor]
+The paper keeps the load-bearing theorem chain short and legible.
+This note records the exact reduced maps and branchwise status that justify the
+promotion of the nonresonant closure and the narrowing of the resonant
+frontier.
+When a theorem in the paper is labeled by a short proof sketch or a companion
+pointer, the detailed formula or checked branch table lives here.
+\end{remark}
+
+\section{Redefinition of the manuscript spine}
+
+The most important editorial change is the redefinition of the old residual
+assembly background input.
+Table~\ref{tab:promotion-map} records the old role, the new role, and the
+current status.
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{p{0.24\linewidth}p{0.30\linewidth}p{0.17\linewidth}p{0.19\linewidth}}
+\toprule
+Old location / role & New role in the redefined manuscript & Status & Where the details now live \\
+\midrule
+Background 8.16: all odd residual assembly & Frontier theorem for the resonant range $m\ge 15$, $3\mid m$ only & \status{Frontier} & Updated paper, Section 8 \\
+Graph-side burden after color-$3$/color-$4$ closure & Split into small odd closure, nonresonant theorem, and resonant frontier & mixed & Updated paper, Section 8 + this note \\
+Final upgrade assumption (G3) & Resonant-only residual input & \status{Promoted} & Updated paper, Section 10 \\
+Methodological picture & Resonant-only obstruction ladder: width-1, width-3, gate branch & \status{Promoted} & Updated paper, Section 9 + Sections 5--6 here \\
+Residual proof packets for colors $0,1,2$ & Explicit theorem packets for small odd and nonresonant moduli & \status{Closed} & Section 3 here \\
+\bottomrule
+\end{tabular}
+\caption{Promotion map after the nonresonant closure.}
+\label{tab:promotion-map}
+\end{table}
+
+At the level of theorem dependence, the global statement is now:
+\[
+\text{main theorem}
+=
+\text{closed backbone}
++
+\text{closed nonresonant residual theorem}
++
+\text{open resonant residual theorem}.
+\]
+This is the central organizational fact behind the rewrite.
+
+\section{Closed residual packets outside resonance}
+
+\subsection{Small odd moduli}
+
+The small odd moduli are closed by explicit packages:
+\[
+\begin{aligned}
+&m=5:\quad \{(0,1,0,0),\ (0,2,1,0),\ (0,1,3,3)\},\\
+&m=7:\quad \{(0,1,0,0),\ (0,2,1,0),\ (0,1,3,3),\ (1,2,3,3)\},\\
+&m=9:\quad \{(0,1,4,4),\ (1,2,4,3)\}.
+\end{aligned}
+\]
+These are theorem-level closures: exact finite replay on the full torus shows
+that they preserve the frozen color-$3$/color-$4$ backbone and make the
+residual colors $0,1,2$ Hamilton.
+
+\subsection{The nonresonant family \texorpdfstring{$\Pm$}{Pm}}
+
+For odd $m\ge 9$ let
+\[
+\Pm:=\{(1,2,1,3),\ (1,2,1,4),\ (0,1,(m-1)/2,4)\}.
+\]
+This family is now the closed theorem-side package for all odd moduli with
+$3\nmid m$.
+The three colors are handled by three separate reduced-return packets.
+
+\paragraph{Color 1.}
+The color-$1$ torus map is fully classified.
+For $3\nmid m$ it is Hamilton.
+For $3\mid m$ it has full-torus cycle lengths
+\[
+\frac{m^4(m+1)}3,\quad \frac{m^4(m-1)}3,\quad \frac{m^4(m-2)}3,
+\quad \frac{m^4}3,\quad \frac{m^4}3.
+\]
+The proof descends through two exact clocks and an exact lower map
+\(U_1\), which is generically a translation
+\((a,c)\mapsto(a,c-4)\) and differs only on a finite defect frame.
+The nonresonant branch closes because the row-$4$ first-return permutation on
+that lower section is a single $m$-cycle with total return time $m^2$.
+
+\paragraph{Color 2.}
+Write
+\[
+U_2=T_2^m=h_2^{m^3}\big|_{\Sigma=0,\ x_3=0,\ x_4=0}
+\]
+in lower coordinates $(a,b)=(x_0,x_1)$.
+The exact lower law is
+\[
+U_2(a,b)=
+\begin{cases}
+(a-4,b+2), & b\in\{0,3,m-3\},\\
+(a-6,b+2), & b\in\{1,2\},\\
+(a-5,b+2), & \text{otherwise.}
+\end{cases}
+\]
+Since $b\mapsto b+2$ is a single $m$-cycle for odd $m$ and the total $a$-drift
+around one full $b$-cycle is
+\[
+3(-4)+2(-6)+(m-5)(-5)=-5m+1\equiv 1\pmod m,
+\]
+one gets a single $m^2$-cycle on the lower section and therefore a Hamilton
+full-torus map.
+
+\paragraph{Color 0.}
+The decisive object is the strip first-return
+\[
+F_0:S_0\to S_0,
+\qquad
+S_0=\{\Sigma=0,\ x_4=0,\ x_1=0\},
+\]
+with strip coordinates $(a,d)=(x_0,x_3)$.
+The exact law is
+\[
+F_0(a,d)=
+\begin{cases}
+(0,m-1), & (a,d)=(m-1,m-1),\\
+(a+4,0), & d=m-1,\ a\neq m-1,\\
+(a+1,m-2), & d=m-2,\ a=4,\\
+(a-4,m-1), & d=m-2,\ a\neq 4,\\
+(a+1,d), & d\le m-3,\ a+d=2,\\
+(a,d+1), & d\le m-3,\ a+d\neq 2.
+\end{cases}
+\]
+The return-time function is
+\[
+\tau_0(a,d)=
+\begin{cases}
+(m+1)/2,& (a,d)=(m-1,m-1),\\
+m+(m-1)/2,& (a,d)=(5,m-2),\\
+m,& \text{otherwise.}
+\end{cases}
+\]
+Every orbit reaches the top row $d=m-1$, the induced top-row first-return is
+exactly $a\mapsto a+1$, and therefore $F_0$ is a single $m^2$-cycle on $S_0$.
+Since the total time over the strip is $m^3$, the lifted section return is one
+$m^3$-cycle, hence color $0$ is Hamilton.
+
+\begin{proposition}[nonresonant residual theorem, packet form]
+For every odd modulus $m\ge 11$ with $3\nmid m$, the family $\Pm$ leaves the
+frozen color-$3$/color-$4$ backbone unchanged and makes colors $0,1,2$
+Hamilton.
+Consequently, together with the explicit closures at $m=5,7,9$, the entire
+residual assembly program is closed outside the resonant range.
+\end{proposition}
+
+\section{Visibility, quotient reduction, and arithmetic markers}
+
+The resonant search is no longer an unrestricted search over all row words.
+A fixed-color quotient theorem cuts down the effective state space.
+
+\subsection{Fixed-color quotients}
+
+For a single row word
+\[
+\pi\in S_3=\{\mathrm{id},A=(12),B=(02),C=(01),\rho=BA,\rho^{-1}=AB\},
+\]
+the effect on a fixed color $c\in\{0,1,2\}$ depends only on
+\(\pi^{-1}(c)\).
+Thus each color sees only three quotient classes.
+Writing the classes by the color they send into the observed color gives:
+\[
+Q_{0,0}=\{\mathrm{id},A\},\quad Q_{0,1}=\{C,\rho\},\quad Q_{0,2}=\{B,\rho^{-1}\},
+\]
+\[
+Q_{1,0}=\{C,\rho^{-1}\},\quad Q_{1,1}=\{\mathrm{id},B\},\quad Q_{1,2}=\{A,\rho\},
+\]
+\[
+Q_{2,0}=\{B,\rho\},\quad Q_{2,1}=\{A,\rho^{-1}\},\quad Q_{2,2}=\{\mathrm{id},C\}.
+\]
+This has two immediate consequences.
+
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item Same-row same-class changes are fake freedom for the observed color.
+\item The three basic transpositions have channel visibility laws:
+      \(A\) is invisible to color $0$, \(B\) is invisible to color $1$,
+      and \(C\) is invisible to color $2$.
+\end{enumerate}
+
+In particular, no nontrivial single-row word can change exactly one color while
+leaving the other two fixed.
+That is why the resonant repairs are inherently staged: one channel fixes the
+current bad color while collateral damage is passed to a second channel.
+
+\subsection{Arithmetic case table}
+
+The current resonant search is best organized by
+\((m\bmod 24,\ 5\mid m)\).
+Table~\ref{tab:resonant-cases} records the checked picture.
+
+\begin{longtable}{p{0.17\linewidth}p{0.10\linewidth}p{0.31\linewidth}p{0.15\linewidth}p{0.17\linewidth}}
+\toprule
+Arithmetic marker & Example & Current reading & Status & Next theorem \\
+\midrule
+\endfirsthead
+\toprule
+Arithmetic marker & Example & Current reading & Status & Next theorem \\
+\midrule
+\endhead
+$m\equiv 9,15\pmod{24}$, $5\nmid m$ & $39,57,63$ & bare sigma-core succeeds & \status{Checked} & no extra repair \\
+$m\equiv 3\pmod{24}$, $5\nmid m$ & $51$ & direct reduction to width-1 pure color-$1$ frontier & \status{Checked} & pure color-$1$ breaker \\
+$m\equiv 21\pmod{24}$, $5\nmid m$ & $69$ & staircase plus centered support enlargement to width-3 pure color-$1$ frontier & \status{Checked} & pure color-$1$ breaker \\
+$m\equiv 21\pmod{24}$, $5\mid m$ & $45$ & $B$-active wall-localized near-miss & \status{Checked} & gate theorem \\
+$m\equiv 3\pmod{24}$, $5\mid m$ & $75$ & hybrid branch: color-$0$ gain plus color-$1$ residue & \status{Checked} & hybrid gate theorem \\
+\bottomrule
+\caption{Current resonant case table.}
+\label{tab:resonant-cases}
+\end{longtable}
+
+The table should be read honestly.
+The arithmetic markers are strongly supported by exact checked packets, but the
+only theorem-level statements so far are the quotient/visibility laws and the
+obstruction packets described below.
+
+\section{Pure color-\texorpdfstring{$1$}{1} frontier}
+
+The pure color-$1$ frontier is the main place where the resonant theorem is
+currently concentrated.
+The checked $51$-type and $69$-type branches both reduce to canonical packages
+that are already simple enough to analyze by exact section returns.
+
+\subsection{Canonical width-1 and width-3 packages}
+
+The two canonical pure color-$1$ packages are:
+\[
+\wdone=
+\{A_{1,4},\,C_{r,4},\,A_{1,3},\,C_{3,3},\,A_{r,3}\},
+\]
+\[
+\wdthree=
+\{A_{1,4},\,C_{r,4},\,A_{1,3},\,C_{3,3},\,C_{r-1,3},\,A_{r,3},\,C_{r+1,3}\},
+\qquad r=(m-1)/2.
+\]
+Color-$1$ quotient reduction shows that the type-$0$ collar rows are represented
+canonically by $C$ rather than $\rho^{-1}$.
+Thus, for color $1$, these really are the only canonical width-$1$ and width-$3$
+models one needs to test.
+
+\subsection{Checked deterministic reductions from \texorpdfstring{$51$}{51} and \texorpdfstring{$69$}{69}}
+
+The current exact reductions are:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item \textbf{$51$-type.}
+      Starting from the sigma-core
+      \[
+      K_m=\{A_{1,4},\,C_{r,4},\,\rho_{1,3},\,C_{3,3}\},
+      \]
+      the checked sequence
+      \[
+      K_m\to K_m+A_{r,3}\to K_m+A_{r,3}+B_{1,3}
+      \]
+      leads to a package with exact profile
+      \[
+      [51^5,\ 342077451,\ 51^5]
+      \]
+      at $m=51$.
+      This is the width-$1$ pure color-$1$ normal form.
+\item \textbf{$69$-type.}
+      The checked sequence
+      \[
+      K_m\to C_{r-1,3}\to B_{3,3}\to A_{r+1,3}\to C_{r+1,3}\to A_{r,3}
+      \]
+      leads to a package with exact profile
+      \[
+      [69^5,\ 548867331,\ 69^5]
+      \]
+      at $m=69$.
+      This is the width-$3$ pure color-$1$ normal form.
+\end{enumerate}
+These reductions are \status{checked exact packets}, not all-$m$ theorems.
+Their value is that they show the pure color-$1$ frontier is not an ad hoc
+family zoo: it already has canonical width-$1$ and width-$3$ models.
+
+\subsection{Width-1 as an explicit obstruction model}
+
+The first theorem-level fact is negative.
+
+\begin{theorem}[width-1 top-row obstruction]
+Assume $3\mid m$ and consider the color-$1$ section return
+\[
+R^{\mathrm{wd1}}_{1,m}=h_1^m\big|_{\Sigma=0}
+\]
+for the package $\wdone$.
+For each $e\in\{0,\dots,m-2\}$ the sets
+\[
+S_{0,e}=\{(0,b,c,m-1,e):c\equiv 0\pmod3\},
+\qquad
+S_{2,e}=\{(0,b,c,m-1,e):c\equiv 2\pmod3\}
+\]
+are invariant and each carries a cycle of length $m/3$.
+Hence the width-$1$ pure color-$1$ frontier is not Hamilton.
+\end{theorem}
+
+\begin{proof}[Idea]
+On these sets the exact width-$1$ section return collapses to
+\[
+(0,b,c,m-1,e)\mapsto (0,b-3,c+3,m-1,e),
+\]
+so one sees an explicit top-row $+3$ resonance.
+This is why width $1$ should be viewed as an obstruction model rather than as a
+candidate solution.
+\end{proof}
+
+\subsection{Width-3 as a sparse collar correction}
+
+The next theorem-level fact explains why width $3$ is the natural next model.
+It is not a new species of dynamics.
+It is width $1$ plus a sparse correction.
+
+\begin{theorem}[exact width-3 collar correction]
+For the color-$1$ section returns of $\wdone$ and $\wdthree$ one has
+\[
+R^{\mathrm{wd3}}_{1,m}=R^{\mathrm{wd1}}_{1,m}+2\chi(e_0-e_1),
+\qquad
+\beta=\mathbf 1[c=m-2],\qquad
+\chi=\mathbf 1[d+\beta\equiv m-1].
+\]
+Thus width $3$ differs from width $1$ only by rerouting two $x_1$-steps into
+$x_0$-steps on the sparse collar blocks where $\chi=1$.
+\end{theorem}
+
+\begin{proof}[Idea]
+The only extra rows in width $3$ are $C_{r-1,3}$ and $C_{r+1,3}$.
+For color $1$ they are type-$0$ collar rows.
+They do not create a new bulk map; they only change where two collar steps are
+sent.
+\end{proof}
+
+A direct corollary is the top-collar transducer.
+On
+\[
+d=m-1,\qquad e\neq m-1,
+\]
+writing $w=a+c$, the interior dynamics is
+\[
+(w,c)\mapsto \bigl(w+5,\ c+3-\mathbf 1[w=1]\bigr).
+\]
+This explains the first role of the factor $5$.
+If $5\nmid m$, then $w\mapsto w+5$ sweeps all residues and every uninterrupted
+top-collar episode eventually exits.
+If $5\mid m$, unswept fibers remain.
+This is why the $B$-active branch is tied so strongly to divisibility by $5$.
+
+\subsection{The double-top obstruction}
+
+The transducer viewpoint also makes the next obstruction explicit.
+On the double-top plane
+\[
+d=e=m-1
+\]
+one gets a different sweep:
+\[
+(w,c)\mapsto \bigl(w+6,\ c+3-\mathbf 1[w=0]\bigr).
+\]
+Because every resonant modulus satisfies $3\mid m$, this leaves mod-$3$ fibers
+visible.
+
+\begin{theorem}[width-3 double-top obstruction]
+For every resonant modulus $3\mid m$, the width-$3$ package $\wdthree$ has
+invariant fibers
+\[
+\mathcal D_{\lambda,\mu}
+=
+\{(a,b,c,m-1,m-1): a+c\equiv \lambda\!\!\pmod3,\ c\equiv \mu\!\!\pmod3\},
+\]
+with $\lambda\in\{1,2\}$ and $\mu\in\{0,2\}$.
+Each carries a cycle of length $m/3$.
+Therefore width $3$ alone is not Hamilton either.
+\end{theorem}
+
+\begin{proof}[Idea]
+The $+6$ sweep preserves $w\bmod 3$.
+On the stated fibers no slip occurs, so the dynamics reduces again to a rigid
+$+3$ drift in the $c$-coordinate.
+\end{proof}
+
+\subsection{What the future breaker theorem must do}
+
+The pure color-$1$ frontier has therefore been compressed as far as possible by
+bulk/collar analysis.
+The remaining theorem must be a \emph{double-top breaker}.
+At a minimum it must do one of the following on the plane $d=e=m-1$:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item change $d$ or $e$ so that the double-top plane is no longer invariant;
+\item move $c$ into the exit class $c\equiv 1\pmod3$;
+\item create a new slip line on the classes that remain invisible to the
+      canonical width-$3$ transducer.
+\end{enumerate}
+This is the cleanest formulation of the current pure color-$1$ frontier.
+The open problem is not ``analyze width $3$ more'' but rather ``find and prove a
+uniform double-top breaker''.
+
+\section{The \texorpdfstring{$B$}{B}-active / gate branch}
+
+The second resonant family does not reduce to a pure color-$1$ problem.
+Its hallmark is that the $B$-channel has genuine color-$0$ leverage.
+This family currently contains the checked $45$- and $75$-type branches.
+
+\subsection{Why this branch is separate}
+
+The top-collar transducer already explains the first split.
+If $5\mid m$, then the $+5$ sweep on the top collar leaves unswept fibers.
+Thus width-$3$ collar thickening cannot be the whole story.
+A branch remains in which the next useful channel is no longer the
+color-$1$-visible repair used in the pure color-$1$ frontier, but rather the
+$B$-channel acting on color $0$.
+
+\paragraph{The checked $45$-type picture.}
+A same-support $B$-booster localizes color $0$ onto a thin wall and produces a
+wall-localized near-miss.
+The remaining question is a gate-destination theorem: how to redirect the wall
+without reopening the closed colors.
+
+\paragraph{The checked $75$-type picture.}
+A $B$-active move improves color $0$ but leaves a genuine color-$1$ residue.
+This is why the $75$-type branch should be viewed as hybrid rather than as a
+copy of the $45$-type case.
+
+At present these are still \status{checked exact packets} rather than theorem-level
+all-$m$ statements.
+The right theorem target is therefore not a single resonant repair theorem but a
+separate $B$-active / gate theorem.
+
+\section{Current theorem status and next theorem order}
+
+Table~\ref{tab:status-ledger} records the present theorem status in the terms
+most useful for further writing and proof search.
+
+\begin{longtable}{p{0.33\linewidth}p{0.16\linewidth}p{0.41\linewidth}}
+\toprule
+Object & Status & Meaning \\
+\midrule
+\endfirsthead
+\toprule
+Object & Status & Meaning \\
+\midrule
+\endhead
+Front-end slice $T0$--$T4$ & \status{Closed theorem} & Already part of the manuscript spine \\
+Color-$4$ branch for $\SelStar$ & \status{Closed theorem} & Hamilton for all $m>2$ \\
+Color-$3$ Route-E branch for $\SelStar$ & \status{Closed theorem} & Hamilton for all $m>2$ \\
+Small odd residual packages $m=5,7,9$ & \status{Closed theorem} & Explicit packages close the residual colors \\
+Nonresonant residual theorem for $\Pm$ & \status{Closed theorem} & Full closure for all odd $m\ge 11$ with $3\nmid m$ \\
+Fixed-color quotient / visibility laws & \status{Closed theorem} & Search channels are determined by visible colors \\
+$51$-type reduction to width-$1$ frontier & \status{Checked exact packet} & Pure color-$1$ normal form reached \\
+$69$-type reduction to width-$3$ frontier & \status{Checked exact packet} & Same-support staircase plus centered support enlargement \\
+Width-$1$ top-row obstruction & \status{Closed theorem} & Width $1$ is not Hamilton \\
+Width-$3$ exact collar correction & \status{Closed theorem} & Width $3$ equals width $1$ plus sparse collar rerouting \\
+Width-$3$ double-top obstruction & \status{Closed theorem} & Width $3$ is still not Hamilton by itself \\
+$45$/$75$ branch picture & \status{Checked exact packet} & $B$-active / gate family remains separate \\
+Resonant residual theorem & \status{Frontier} & Only remaining load-bearing input for the main theorem \\
+\bottomrule
+\caption{Current status ledger.}
+\label{tab:status-ledger}
+\end{longtable}
+
+Given this ledger, the most natural theorem order is:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item prove a uniform double-top breaker theorem for the pure color-$1$
+      frontier;
+\item prove a uniform $B$-active / gate theorem for the $45$/$75$-type branch;
+\item combine these into the resonant residual theorem;
+\item invoke the already rewritten final upgrade to obtain the unconditional
+      odd-$m$, $d=5$ Hamilton decomposition theorem.
+\end{enumerate}
+
+\begin{question}[most useful next local theorem]
+Among the remaining tasks, the most conceptually central one is the following:
+can one find a local resonant surgery which is visible on the double-top plane
+for the canonical width-$3$ pure color-$1$ frontier and provably destroys the
+mod-$3$ invariant fibers without reopening colors $0$ and $2$?
+A positive answer would collapse the pure color-$1$ frontier to a theorem and
+leave only the separate $B$-active / gate family.
+\end{question}
+
+\section*{Conclusion}
+
+The point of the rewrite is not merely that progress has been made.
+It is that the remaining problem is now sharply shaped.
+Another researcher reading the updated paper with the present note should see
+exactly where the honest boundary lies, exactly which packets are already
+stable, and exactly which two theorem families remain before the global odd-$m$,
+$d=5$ theorem becomes unconditional.
+
+\end{document}

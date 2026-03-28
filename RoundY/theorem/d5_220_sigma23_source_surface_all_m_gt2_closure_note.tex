@@ -1,0 +1,192 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\newcommand{\stepd}[1]{\partial_{#1}}
+\newcommand{\sig}{\sigma}
+
+\title{d5\_220: Surfaced-bundle closure of the \(\sigma_{23}\) frontier}
+\author{}
+\date{2026-03-21}
+
+\begin{document}
+\maketitle
+
+\paragraph{Purpose.}
+The uploaded bundle contains the previously missing source file
+\texttt{scripts/torus\_nd\_d5\_endpoint\_latin\_repair.py} together with the common mode-switch module
+\texttt{torus\_nd\_d5\_layer3\_mode\_switch\_common.py}.  Once these are surfaced, the
+\(\sigma_{21}\to\sigma_{23}\) frontier no longer requires a separate locality conjecture: the relevant
+second-step comparison can be read off directly from the builder.
+
+\paragraph{Scope.}
+This note proves the exact theorem implemented by the surfaced bundle builder for the three row prototypes
+\[
+\sigma_{21}=[4,1,4]/[1,2,2],\qquad
+\sigma_{22}=[4,1,4]/[2,1,2],\qquad
+\sigma_{23}=[4,1,4]/[2,2,1],
+\]
+with the standard choice \(w_0=s_0=0\).  The conclusion is stronger than the odd-only target: it holds for every
+modulus \(m>2\).
+
+\paragraph{Bundle semantics used.}
+Let \(m>2\).  In the surfaced common module, \texttt{precompute\_m} builds \texttt{step\_by\_dir[d]} by adding
+\(+1\) in coordinate direction \(d\) modulo \(m\).  We denote this map by \(\stepd{d}\).
+Thus the five coordinate steps commute:
+\[
+\stepd{i}\stepd{j}=\stepd{j}\stepd{i}\qquad (0\le i,j\le 4).
+\]
+In the surfaced endpoint builder, \texttt{\_prepare\_m} creates the layer-1 source families and \texttt{\_build\_candidate}
+creates the labeled rows by repeated application of \(\stepd{d}\) according to the chosen left/right words.
+
+\begin{lemma}[Exact right-source family]
+Fix color \(0\), \(w_0=0\), and \(s_0=0\).  The right \(R1\) source family used by all three prototypes is exactly
+\[
+S_R=\{x:\ \mathrm{layer}(x)=1,\ q(x)=m-1,\ w(x)=0,\ s(x)\neq 0\}.
+\]
+Equivalently, since \(s=w+u\) and \(w=0\),
+\[
+S_R=\{x:\ \mathrm{layer}(x)=1,\ q(x)=m-1,\ w(x)=0,\ u(x)\neq 0\}.
+\]
+Hence
+\[
+|S_R|=m(m-1).
+\]
+\end{lemma}
+
+\begin{proof}
+This is exactly the definition of \texttt{layer1\_sets[(w,s0)][0]} in \texttt{\_prepare\_m}: layer \(1\),
+\(q=m-1\), prescribed \(w\), and exclusion of the single value \(s=s_0\).  For \((w_0,s_0)=(0,0)\) the right family
+uses \(w=0\), so \(s=u\).  The free coordinates are \(v\in\mathbb Z/m\mathbb Z\) and \(u\in(\mathbb Z/m\mathbb Z)\setminus\{0\}\),
+which gives \(m(m-1)\) states.
+\end{proof}
+
+\begin{lemma}[No overlap conflicts for \(\sigma_{21},\sigma_{22},\sigma_{23}\)]
+For every \(m>2\), the three prototypes \(\sigma_{21},\sigma_{22},\sigma_{23}\) are built successfully by
+\texttt{\_build\_candidate}; in particular, the layer-2 and layer-3 overlap tests vanish.
+\end{lemma}
+
+\begin{proof}
+The left word is fixed as \([4,1,4]\), so for color \(0\) one has
+\[
+L2=\stepd{4}(S_L),\qquad L3=\stepd{1}(L2),
+\]
+where the left source family satisfies \(q=m-1\) and \(w=m-1\).  Therefore every point of \(L2\) has
+\((q,w)=(m-1,m-1)\), while every point of \(L3\) has \((q,w)=(0,m-1)\).
+
+For the right side one has:
+\begin{align*}
+\sigma_{21}:&\quad R2=\stepd{1}(S_R), && R3=\stepd{2}(R2),\\
+\sigma_{22}:&\quad R2=\stepd{2}(S_R), && R3=\stepd{1}(R2),\\
+\sigma_{23}:&\quad R2=\stepd{2}(S_R), && R3=\stepd{2}(R2).
+\end{align*}
+Since every source in \(S_R\) has \((q,w)=(m-1,0)\), this gives:
+\begin{align*}
+\sigma_{21}:&\quad R2:(q,w)=(0,0), && R3:(q,w)=(0,1),\\
+\sigma_{22}:&\quad R2:(q,w)=(m-1,1), && R3:(q,w)=(0,1),\\
+\sigma_{23}:&\quad R2:(q,w)=(m-1,1), && R3:(q,w)=(m-1,2).
+\end{align*}
+Thus \(L2\cap R2=\varnothing\) for all \(m>1\), and \(L3\cap R3=\varnothing\) for all \(m>2\).
+Therefore the builder never triggers its layer-2 or layer-3 conflict aborts on these three prototypes.
+\end{proof}
+
+\begin{lemma}[The rooted local pattern is constant]
+For every source \(x\in S_R\), the outgoing neighbor-label pattern of \(\sigma_{21}\) in directions
+\(0,1,2,3,4\) is exactly
+\[
+[B,R2,B,B,B].
+\]
+\end{lemma}
+
+\begin{proof}
+By construction, \(\stepd{1}(x)\in R2\), so direction \(1\) has label \(R2\).
+All other outgoing neighbors \(\stepd{d}(x)\) lie in layer \(2\), hence cannot belong to \(L1\) or \(R1\).
+They also fail the explicit \((q,w)\)-characterizations of \(L2\) and \(R2\):
+\begin{align*}
+\stepd{0}(x)&:(q,w)=(m-1,0),\\
+\stepd{2}(x)&:(q,w)=(m-1,1),\\
+\stepd{3}(x)&:(q,w)=(m-1,0),\\
+\stepd{4}(x)&:(q,w)=(m-1,0),
+\end{align*}
+whereas \(L2\) has \((q,w)=(m-1,m-1)\) and \(R2\) has \((q,w)=(0,0)\) for \(\sigma_{21}\).
+They cannot lie in \(L3\) or \(R3\) either because those are layer-3 sets.  Hence only direction \(1\) is occupied,
+as claimed.
+\end{proof}
+
+\begin{theorem}[Surfaced-bundle closure of the \(\sigma_{23}\) frontier]
+For every modulus \(m>2\), every \(\sigma_{21}\) immediate \(R1\) source satisfies
+\[
+\sigma_{21}^2(x)=\sigma_{22}^2(x)\neq \sigma_{23}^2(x).
+\]
+Equivalently, the actual second step of the \(\sigma_{21}\) immediate \(R1\) family always realizes the
+\(\sigma_{22}\) prototype and never the \(\sigma_{23}\) prototype.  In particular, the odd-modulus
+\(\sigma_{23}\) obstruction is closed.
+\end{theorem}
+
+\begin{proof}
+Fix \(x\in S_R\).
+
+For \(\sigma_{21}\), the right word is \([1,2,2]\).  Since \(x\in R1\), the first step is
+\[
+\sigma_{21}(x)=\stepd{1}(x).
+\]
+By the previous lemma this target lies in \(R2\), and \(R2\) is routed by direction \(2\).  Therefore
+\[
+\sigma_{21}^2(x)=\stepd{2}\stepd{1}(x).
+\]
+
+For \(\sigma_{22}\), the right word is \([2,1,2]\).  The first two right-side directions are therefore reversed:
+\[
+\sigma_{22}(x)=\stepd{2}(x),\qquad \sigma_{22}^2(x)=\stepd{1}\stepd{2}(x).
+\]
+Because the surfaced common module defines each \(\stepd{d}\) as coordinatewise \(+1\) in a single axis, the
+steps commute, so
+\[
+\sigma_{22}^2(x)=\stepd{1}\stepd{2}(x)=\stepd{2}\stepd{1}(x)=\sigma_{21}^2(x).
+\]
+
+For \(\sigma_{23}\), the right word is \([2,2,1]\), so
+\[
+\sigma_{23}(x)=\stepd{2}(x),\qquad \sigma_{23}^2(x)=\stepd{2}^2(x).
+\]
+Now every source in \(S_R\) has \((q,w)=(m-1,0)\).  Hence
+\[
+\sigma_{21}^2(x): (q,w)=(0,1),
+\qquad
+\sigma_{23}^2(x): (q,w)=(m-1,2).
+\]
+These are distinct for every \(m>2\).  Therefore
+\[
+\sigma_{21}^2(x)=\sigma_{22}^2(x)\neq \sigma_{23}^2(x),
+\]
+as required.
+\end{proof}
+
+\begin{remark}[What changed relative to the earlier frontier]
+Before the bundle was surfaced, the live burden was to identify the hidden immediate rule or to certify enough
+bounded locality to transfer the checked range to all odd \(m\).  After surfacing the builder, the relevant rule is
+no longer hidden: the second-step comparison is an explicit consequence of \texttt{\_prepare\_m},
+\texttt{\_build\_candidate}, and the commuting coordinate steps from \texttt{precompute\_m}.  The residual task is
+not \(\sigma_{23}\) itself, but only the manuscript-side translation of this surfaced-script proof into the preferred
+notation of the main text.
+\end{remark}
+
+\paragraph{Compute sanity check.}
+The companion rerun script \texttt{d5\_219\_sigma23\_bundle\_exact\_checker.py} checks the surfaced theorem on the explicit
+range
+\[
+m=3,5,7,9,11,13,15,17,19,
+\]
+and finds exactly one rooted microcase at each modulus, source count \(m(m-1)\), neighbor pattern
+\([B,R2,B,B,B]\), relative immediate displacement \((0,1,0,0,0)\), relative actual second displacement
+\((0,1,1,0,0)\), and persistent avoidance of \(\sigma_{23}\).
+
+\end{document}

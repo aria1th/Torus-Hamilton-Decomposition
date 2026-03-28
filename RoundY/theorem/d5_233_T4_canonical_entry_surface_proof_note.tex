@@ -1,0 +1,270 @@
+
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\newcommand{\CanSeed}{[2,2,1]/[1,4,4]}
+
+\title{d5\_233: T4 canonical entry from the surfaced canonical prefix and shifted section coordinates}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We close the canonical-entry theorem \(T4\) for the surfaced March 21 bundle
+semantics that already underlies the closed notes for \(T1,T2,T3\).
+At the canonical seed
+\[
+\CanSeed,
+\]
+the only live immediate source family after the actual-needed tiny-repair
+cleanup is \(R1\).
+We show that every such source has the uniform prefix
+\[
+\partial_1,\ \partial_4,\ \partial_4,
+\]
+and that after the fixed two-step prefix \(\partial_1\partial_4\), the
+standard shifted section coordinates of the explicit one-corner block send the
+branch to
+\[
+E=(m-1,1,u_{\mathrm{source}},2).
+\]
+This is exactly the manuscript's alternate-\(2\) entry.
+\end{abstract}
+
+\section{Setup}
+
+Fix an odd modulus \(m>2\) and the canonical bridge seed
+\[
+\CanSeed.
+\]
+In the surfaced endpoint builder this is the candidate with
+\[
+\texttt{left\_word}=(2,2,1),\qquad \texttt{right\_word}=(1,4,4),
+\]
+at the representative bridge parameters \(w_0=s_0=0\).
+
+The already closed actual-needed tiny-repair theorem removes the three dead
+repair source families \(L3,R2,R3\) at \(\CanSeed\).  So the only remaining
+front-end task is to identify the live \(R1\)-continuation.
+
+\section{The exact canonical \(R1\)-family}
+
+\begin{proposition}[canonical \(R1\) source formula]
+For color \(0\), the canonical \(R1\)-sources are exactly the vertices
+\[
+x=(x_0,m-1,0,v,u_{\mathrm{source}})
+\]
+such that
+\[
+u_{\mathrm{source}}\neq 0,
+\qquad
+x_0+v+u_{\mathrm{source}}\equiv 2 \pmod m.
+\]
+Hence the canonical \(R1\)-family has size \(m(m-1)\).
+\end{proposition}
+
+\begin{proof}
+In the surfaced builder, color-\(0\) \(R1\)-sources are the layer-\(1\)
+vertices in \texttt{layer1\_sets[(0,0)][0]}.  By construction, these are exactly
+the vertices with
+\[
+q=m-1,\qquad w=0,\qquad s=w+u\neq 0,
+\qquad x_0+q+w+v+u\equiv 1 \pmod m.
+\]
+Since \(w=0\) and \(q=m-1\), this is equivalent to
+\[
+u\neq 0,
+\qquad
+x_0+v+u\equiv 2 \pmod m.
+\]
+For each nonzero \(u\) and each \(x_0\), the congruence determines \(v\)
+uniquely, so the cardinality is \(m(m-1)\).
+\end{proof}
+
+\begin{proposition}[uniform canonical prefix]
+Let
+\[
+x=(x_0,m-1,0,v,u_{\mathrm{source}})
+\]
+be any canonical \(R1\)-source.
+Then the actual continuation under the surfaced canonical seed has the uniform
+prefix
+\[
+x \xrightarrow{\partial_1} x^{(1)} \xrightarrow{\partial_4} x^{(2)}
+\xrightarrow{\partial_4} x^{(3)},
+\]
+where
+\begin{align*}
+x^{(1)} &= (x_0,0,0,v,u_{\mathrm{source}}),\\
+x^{(2)} &= (x_0,0,0,v,u_{\mathrm{source}}+1),\\
+x^{(3)} &= (x_0,0,0,v,u_{\mathrm{source}}+2).
+\end{align*}
+Moreover \(x^{(1)}\) lies in the label class \(R2\), \(x^{(2)}\) lies in the
+label class \(R3\), and \(x^{(3)}\) is already background.
+\end{proposition}
+
+\begin{proof}
+For the canonical seed, the surfaced builder sets the first, second, and third
+right directions to
+\[
+1,\ 4,\ 4.
+\]
+So every \(R1\)-source first moves by \(\partial_1\), every resulting \(R2\)-site
+moves by \(\partial_4\), and every resulting \(R3\)-site again moves by
+\(\partial_4\).  Since \(\partial_1\) increments the \(q\)-coordinate and
+\(\partial_4\) increments the \(u\)-coordinate, the displayed formulas follow
+immediately.
+The label statements are exactly how \texttt{\_build\_candidate} constructs the
+three right layers.
+\end{proof}
+
+\section{Shifted section coordinates and the named entry}
+
+The post-entry one-corner block already uses the surfaced mixed witness reduced
+section.  In the surfaced mixed derivation, the reduced first return is written
+in the coordinates
+\[
+(q,s,u,v),\qquad s=w+u,
+\]
+with exact formula
+\[
+R(q,s,u,v)=\bigl(q+1,\ s+1+\mathbf 1_{q=m-2},\ u+1,\ v+\mathrm{dv}(q,s)\bigr).
+\]
+Since \(w=s-u\), this is equivalently the raw section return
+\[
+R_{\mathrm{sec}}(q,w,u,v)
+=
+\bigl(q+1,\ w+\mathbf 1_{q=m-2},\ u+1,\ v+\mathrm{dv}(q,w+u)\bigr).
+\]
+
+\begin{proposition}[shifted one-corner coordinates]
+Define shifted section coordinates by
+\[
+Q=q-1,\qquad W=w+1,\qquad U=u-1.
+\]
+Then the surfaced reduced section return becomes
+\[
+(Q,W,U)\longmapsto
+\bigl(Q+1,\ W+\mathbf 1_{Q=m-1},\ U+1\bigr).
+\]
+This is exactly the section map used by the explicit one-corner odometer block
+in the manuscript.
+\end{proposition}
+
+\begin{proof}
+Substitute \(q=Q+1\), \(w=W-1\), and \(u=U+1\) into the raw section return:
+\[
+q'=(Q+1)+1,
+\qquad
+w'=(W-1)+\mathbf 1_{Q=m-1},
+\qquad
+u'=(U+1)+1.
+\]
+After shifting back, this becomes
+\[
+Q'=Q+1,\qquad W'=W+\mathbf 1_{Q=m-1},\qquad U'=U+1.
+\]
+\end{proof}
+
+\begin{remark}[the suppressed cocycle coordinate]
+The front-end entry theorem only needs the \((Q,W,U,\Theta)\)-interface.
+The cocycle coordinate \(v\) remains present in the surfaced mixed witness and
+reappears later on the graph side, but it is not part of the front-end naming
+interface for the one-corner channel.
+\end{remark}
+
+\section{T4}
+
+\begin{theorem}[canonical entry theorem \(T4\)]
+For every odd modulus \(m>2\), at the canonical bridge seed
+\[
+\CanSeed,
+\]
+after the three dead repair source families \(L3,R2,R3\) are removed, the
+unique live immediate source family is \(R1\).
+Its canonical two-step normalization in the shifted section coordinates is the
+alternate-\(2\) entry
+\[
+E=(m-1,1,u_{\mathrm{source}},2).
+\]
+\end{theorem}
+
+\begin{proof}
+By the canonical support certificate, the only source families present at the
+canonical seed are
+\[
+L3,\ R1,\ R2,\ R3.
+\]
+By the actual-needed tiny-repair theorem, the families \(L3,R2,R3\) are dead.
+So the only live immediate source family is \(R1\).
+
+Now take any canonical \(R1\)-source
+\[
+x=(x_0,m-1,0,v,u_{\mathrm{source}}).
+\]
+By the uniform canonical prefix proposition, after the fixed two-step prefix
+\(\partial_1\partial_4\) the branch is at
+\[
+x^{(2)}=(x_0,0,0,v,u_{\mathrm{source}}+1).
+\]
+On the mixed section, this means
+\[
+q=0,\qquad w=0,\qquad u=u_{\mathrm{source}}+1.
+\]
+Applying the shifted coordinates gives
+\[
+Q=q-1=m-1,\qquad
+W=w+1=1,\qquad
+U=u-1=u_{\mathrm{source}}.
+\]
+By convention this is the phase-\(2\) interface of the one-corner block, so the
+named entry state is
+\[
+(Q,W,U,\Theta)=(m-1,1,u_{\mathrm{source}},2)=E.
+\]
+Since every live canonical source enters the same named interface in this way,
+the canonical live continuation is exactly the alternate-\(2\) entry.
+\end{proof}
+
+\begin{corollary}[front-end one-corner reduction]
+Every unresolved odd-\(m\), \(d=5\) front-end instance reduces to the exact
+one-corner channel with canonical seed \(\CanSeed\) and entry state
+\[
+E=(m-1,1,u_{\mathrm{source}},2).
+\]
+\end{corollary}
+
+\begin{proof}
+The earlier front-end reduction had already compressed every bridge case to the
+canonical seed.  Theorem \(T4\) identifies the only remaining live branch there.
+\end{proof}
+
+\begin{remark}[saved computational sanity check]
+The companion checker
+\texttt{d5\_232\_T4\_canonical\_entry\_checker.py} verifies on the exact surfaced
+bundle for
+\[
+m=3,5,7,9,11,13,15,17
+\]
+that:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item the canonical \(R1\)-family has size \(m(m-1)\);
+\item every source satisfies the explicit source formula;
+\item every source has the exact prefix \(\partial_1,\partial_4,\partial_4\);
+\item the two-step normalized entry is always
+      \(E=(m-1,1,u_{\mathrm{source}},2)\).
+\end{enumerate}
+This check is only a sanity certificate.  The proof above is symbolic.
+\end{remark}
+
+\end{document}

@@ -1,0 +1,212 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+
+\title{d5\_243: A periodic phase-carrier candidate family for the remaining graph-side search}
+\author{}
+\date{2026-03-22}
+
+\begin{document}
+\maketitle
+
+\section{Purpose}
+After the reverse reduction of \texttt{d5\_240}, the honest next question is not a
+wide selector sweep but the following targeted realization problem:
+\begin{quote}
+Can the reduced omitted-row adjacent-transposition base, together with a
+one-point cocycle defect, be realized by a small periodic local carrier?
+\end{quote}
+This note records the first clean answer.
+There is an explicit periodic phase-carrier realization of the reduced target,
+and on the checked small moduli no strictly smaller phase size survives inside
+this family.
+So the remaining graph-side search can be restricted further.
+
+\section{The periodic phase-carrier family}
+Fix an odd modulus $m>2$ and a positive integer $r$.
+Let
+\[
+ p=(p_0,\dots,p_{r-1}),
+ \qquad p_t\in \{\infty\}\cup \mathbb Z_m,
+\]
+be a row-pattern, and let $a\in\{+1,-1\}$.
+Define
+\[
+ T_{m,r,a,p}\colon \mathbb Z_m^2\to \mathbb Z_m^2,
+ \qquad (s,u)\mapsto (s+1,\tau_s(u)),
+\]
+where the row action is determined by the phase $t=s\bmod r$:
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2.7em]
+\item if $p_t=\infty$, then $\tau_s$ is the identity;
+\item if $p_t=\beta\in\mathbb Z_m$, then $\tau_s$ is the adjacent
+      transposition swapping
+      \[
+      a s+\beta \quad\text{and}\quad a s+\beta+1
+      \qquad (\bmod m).
+      \]
+\end{enumerate}
+This is the natural periodic-carrier extension of the reduced family isolated in
+\texttt{d5\_240}.
+The carrier size is $r$.
+
+\section{An explicit threshold candidate}
+Write $m=2k+1$ and set
+\[
+ r=k+1=\frac{m+1}{2}.
+\]
+Consider the canonical phase pattern
+\[
+ p^{\mathrm{can}}=(\underbrace{0,\dots,0}_{k\text{ entries}},\infty).
+\]
+So phase classes $0,1,\dots,k-1$ use the unshifted moving adjacent transposition
+and the last phase class is omitted.
+
+\begin{proposition}[explicit periodic candidate]
+\label{prop:explicit-periodic-candidate}
+For $m=2k+1$ and $r=k+1$, the periodic phase-carrier map
+\[
+T_{m,r,+1,p^{\mathrm{can}}}
+\]
+is exactly the canonical omitted-row adjacent-transposition base from
+\texttt{d5\_240} with defect row $k$.
+In particular, it has a single orbit of size $m^2$ on $\mathbb Z_m^2$.
+\end{proposition}
+
+\begin{proof}
+The rows are $s=0,1,\dots,2k$.
+Their phase classes modulo $r=k+1$ are
+\[
+0,1,\dots,k,0,1,\dots,k-1.
+\]
+Hence rows $0,1,\dots,k-1$ use the adjacent transpositions
+\[
+(0\ 1),(1\ 2),\dots,(k-1\ k),
+\]
+row $k$ is omitted, and rows $k+1,\dots,2k$ use
+\[
+(k+1\ k+2),\dots,(2k\ 0).
+\]
+Therefore the row actions are exactly the moving adjacent transpositions
+$(s\ \ s+1)$ for all rows $s\neq k$, with the single omitted row $s=k$.
+That is precisely the omitted-row model from \texttt{d5\_240}.
+The single-orbit conclusion follows from the base theorem proved there.
+\end{proof}
+
+\begin{corollary}[full grouped candidate]
+\label{cor:grouped-candidate}
+For the same explicit periodic candidate, a one-point cocycle defect yields a
+single grouped orbit of size $m^3$.
+\end{corollary}
+
+\begin{proof}
+By Proposition~\ref{prop:explicit-periodic-candidate}, the base has one orbit of
+size $m^2$.
+A one-point defect has total cocycle sum $1$, which is invertible modulo $m$.
+So the single-cycle cocycle criterion from \texttt{d5\_240} applies.
+\end{proof}
+
+\section{Exact small-period pruning on the checked range}
+The companion script
+\texttt{d5\_242\_G1\_periodic\_phase\_carrier\_search.py}
+performs an exact search over all phase patterns
+\[
+ p\in (\{\infty\}\cup\mathbb Z_m)^r,
+ \qquad a\in\{\pm1\},
+\]
+for checked odd moduli
+\[
+ m=3,5,7,9,11,
+\]
+and for every strictly smaller phase size
+\[
+ 1\le r\le \frac{m-1}{2}.
+\]
+It finds:
+\begin{quote}
+\emph{no single-orbit base candidates at all for any strictly smaller phase
+size.}
+\end{quote}
+Equivalently, on the checked range, the periodic-carrier family has no honest
+base realization below the threshold
+\[
+ r=\frac{m+1}{2}.
+\]
+
+\begin{remark}[what is exact here]
+This is not a heuristic search.
+For each checked pair $(m,r)$ the script exhausts the full finite family of all
+patterns $p$ and both signs $a=\pm1$, and tests the full first-return
+permutation on the row-zero coordinate.
+Since the global map always advances $s$ by one, a single base orbit on
+$\mathbb Z_m^2$ is equivalent to the first-return permutation being one
+$m$-cycle.
+\end{remark}
+
+\section{What the first surviving layer looks like}
+For the first surviving phase size
+\[
+ r=\frac{m+1}{2},
+\]
+the script also catalogs the exact survivor pool on the small moduli
+$m=3,5,7,9$.
+The observed counts are:
+\[
+6,\ 20,\ 84,\ 432.
+\]
+More importantly, every such checked survivor has:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item exactly one omitted phase slot;
+\item that omitted slot occurs at the final phase position in the canonical
+      phase ordering used by the search.
+\end{enumerate}
+Representative examples are:
+\[
+[0,\infty],
+\qquad
+[0,0,\infty],
+\qquad
+[0,0,0,\infty],
+\qquad
+[0,0,0,0,\infty].
+\]
+So the explicit threshold candidate is not an isolated accident; it sits inside
+an emerging exact survivor pool at the first possible carrier size.
+
+\section{Consequence for the remaining graph-side search}
+This still does \emph{not} close $G1$.
+What it does do is reduce the live local-search question further:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item any periodic realization attempt with carrier size strictly smaller than
+      $(m+1)/2$ is already dead on the checked range;
+\item there is a clean explicit threshold family that realizes the reduced
+      omitted-row base and the one-point grouped defect exactly;
+\item therefore the remaining live search should focus on how such a threshold
+      carrier, or an equivalent non-periodic arithmetic carrier, is embedded
+      into the actual selector-splice data behind $G1$.
+\end{enumerate}
+In particular, the graph-side search has moved beyond ``try another small local
+rule grammar''. The honest remaining content is now a realization problem for a
+carrier whose effective phase size grows with $m$, unless the manuscript splice
+data encode an equivalent arithmetic coordinate more directly.
+
+\section{Sanity checks recorded by the script}
+The same companion script also checks the explicit threshold candidate on
+\[
+ m=3,5,7,9,11,13,15,17,19.
+\]
+For all these moduli it confirms:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item the base orbit size is exactly $m^2$;
+\item the first-return permutation on row $0$ is one $m$-cycle;
+\item a one-point grouped cocycle defect gives one orbit of size $m^3$.
+\end{enumerate}
+So the explicit threshold candidate is not merely formal; it survives all
+checked odd moduli in direct exact computation.
+
+\end{document}

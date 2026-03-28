@@ -1,0 +1,279 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage{booktabs}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+
+\title{d5\_247: explicit two-swap splice closes \(G1\)}
+\author{}
+\date{2026-03-22}
+
+\begin{document}
+\maketitle
+
+\section{Purpose}
+The remaining graph-side object \(G1\) asked for a full colorwise package
+containing the already closed color-\(4\) branch.
+Earlier candidate searches showed that several narrow ans\"atze fail:
+naive cyclic copies fail, mode-switch families fail, and same-color coarse-class
+splices on support of size \(3\) or \(4\) fail.
+The point of the present note is that \(G1\) nevertheless has a simple explicit
+solution once one stops insisting that the non-color-\(4\) repairs depend only
+on their \emph{own} color-relative class.
+The correct package is a two-defect-set transposition of the valid baseline.
+
+\section{Baseline package}
+Write \(X_m=(\mathbb Z/m\mathbb Z)^5\), and for
+\(x=(x_0,x_1,x_2,x_3,x_4)\in X_m\) define
+\[
+\sigma(x):=x_0+x_1+x_2+x_3+x_4 \pmod m.
+\]
+For each color \(c\in\{0,1,2,3,4\}\), let \(B_c\colon X_m\to X_m\) be the
+explicit baseline package from d5\_245:
+\[
+B_c(x)=x+e_{d_c(x)},
+\qquad
+d_c(x)=
+\begin{cases}
+c+1 \pmod 5, & \sigma(x)=0,\\
+c-1 \pmod 5, & \sigma(x)=1,\\
+c, & \sigma(x)\notin\{0,1\}.
+\end{cases}
+\]
+This package is pointwise outgoing-exhaustive and colorwise permutation for every
+\(m>2\).
+
+\section{The color-\(4\) defect sets}
+The surfaced \texttt{mixed\_008} color-\(4\) rule differs from \(B_4\) on
+exactly two source families.
+
+\medskip
+\noindent\textbf{First defect set.}
+Define
+\[
+D_1:=\{x\in X_m:\ \sigma(x)=2,\ x_0=m-1\}.
+\]
+This is exactly the color-\(4\) class \(L2^{(1)}\), i.e.\ the layer-\(2\) old-bit
+\(1\) family for the surfaced mixed branch.
+On \(D_1\), the mixed rule uses direction \(1\) instead of the baseline
+direction \(4\).
+
+\medskip
+\noindent\textbf{Second defect set.}
+For \(m=3\), set \(D_2:=\varnothing\).
+For \(m\ge 5\), define
+\[
+D_2:=\bigl\{x\in X_m:\ \sigma(x)=3,\ 
+(x_0\neq m-1\ \wedge\ x_1+x_3=2)\ \vee\
+(x_0=m-1\ \wedge\ x_1+x_3\neq 2)\bigr\}.
+\]
+This is exactly the union of the surfaced color-\(4\) classes
+\[
+L3^{(0,p=1)}\ \cup\ L3^{(1,p=0)}.
+\]
+On \(D_2\), the mixed rule uses direction \(2\) instead of the baseline
+direction \(4\).
+
+\begin{proposition}[mixed color-\(4\) rule as a two-set swap]
+\label{prop:mixed-color4}
+For every odd \(m>2\), the surfaced \texttt{mixed\_008} color-\(4\) rule is
+\[
+\mathrm{SelStar}_4(x)=
+\begin{cases}
+x+e_1, & x\in D_1,\\
+x+e_2, & x\in D_2,\\
+B_4(x), & x\notin D_1\cup D_2.
+\end{cases}
+\]
+\end{proposition}
+
+\begin{proof}
+At layer \(0\) and layer \(1\), the surfaced mixed rule has the same anchors as
+the baseline, namely anchor \(1\) on \(L0\) and anchor \(4\) on \(L1\), so the
+absolute directions for color \(4\) are again \(0\) and \(3\), matching \(B_4\).
+At layers \(4+\), the anchor is again \(0\), so the absolute direction is \(4\),
+matching \(B_4\).
+
+At layer \(2\), the mixed table is \(0/2\): old-bit \(0\) keeps anchor \(0\)
+(direction \(4\)), while old-bit \(1\) takes anchor \(2\) (direction \(1\)).
+For color \(4\), the old bit is \(x_0=m-1\), so the exceptional set is exactly
+\(D_1\).
+
+At layer \(3\), the mixed tables are \(0/3\) on predecessor flag \(p=0\) and
+\(3/0\) on predecessor flag \(p=1\).  Therefore the absolute color-\(4\)
+direction changes from \(4\) to \(2\) exactly on the two classes
+\(L3^{(0,p=1)}\) and \(L3^{(1,p=0)}\).  For color \(4\), the old bit is
+\(x_0=m-1\), and the simple predecessor flag \(\texttt{pred\_sig1\_wu2}\) is
+equivalent to \(x_1+x_3=2\), because the predecessor in relative direction \(1\)
+changes the \(q=x_0\) coordinate only and leaves \(w=x_1\) and \(u=x_3\)
+unchanged.
+Thus the union of those two exceptional classes is exactly \(D_2\).
+\end{proof}
+
+\section{The explicit splice package}
+Define maps \(g_0,\dots,g_4\colon X_m\to X_m\) by
+\[
+g_0:=B_0,\qquad g_3:=B_3,
+\]
+and
+\[
+g_1(x)=
+\begin{cases}
+x+e_4, & x\in D_1,\\
+B_1(x), & x\notin D_1,
+\end{cases}
+\qquad
+g_2(x)=
+\begin{cases}
+x+e_4, & x\in D_2,\\
+B_2(x), & x\notin D_2,
+\end{cases}
+\]
+while
+\[
+g_4(x)=
+\begin{cases}
+x+e_1, & x\in D_1,\\
+x+e_2, & x\in D_2,\\
+B_4(x), & x\notin D_1\cup D_2.
+\end{cases}
+\]
+So relative to the baseline, color \(1\) and color \(4\) are swapped on \(D_1\),
+and color \(2\) and color \(4\) are swapped on \(D_2\).
+
+\section{Image-preserving identities}
+The construction is powered by two translation invariances.
+
+\begin{proposition}[defect-set invariance]
+\label{prop:defect-invariance}
+For every odd \(m>2\):
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item \(D_1\) is invariant under translation by \(e_1-e_4\);
+\item \(D_2\) is invariant under translation by \(e_2-e_4\).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+For \(D_1\), the defining conditions are \(\sigma(x)=2\) and \(x_0=m-1\).
+Translation by \(e_1-e_4\) preserves the total sum and does not touch \(x_0\),
+so it preserves \(D_1\).
+
+For \(D_2\), the defining conditions (when \(m\ge 5\)) are
+\(\sigma(x)=3\), a condition on \(x_0\), and a condition on
+\(x_1+x_3\).
+Translation by \(e_2-e_4\) preserves the total sum, leaves \(x_0\) fixed, and
+leaves \(x_1+x_3\) fixed.
+Hence it preserves \(D_2\).
+For \(m=3\), \(D_2=\varnothing\), so the statement is trivial.
+\end{proof}
+
+\begin{corollary}[image preservation]
+\label{cor:image-preserving}
+For every odd \(m>2\),
+\[
+B_1(D_1)=B_4(D_1),
+\qquad
+B_2(D_2)=B_4(D_2).
+\]
+\end{corollary}
+
+\begin{proof}
+If \(x\in D_1\), then by Proposition~\ref{prop:defect-invariance} also
+\(x+e_1-e_4\in D_1\), and
+\[
+B_4(x+e_1-e_4)=x+e_1=B_1(x).
+\]
+So \(B_1(D_1)\subseteq B_4(D_1)\).  The reverse inclusion is identical with
+\(e_4-e_1\).
+
+Likewise, if \(x\in D_2\), then \(x+e_2-e_4\in D_2\) and
+\[
+B_4(x+e_2-e_4)=x+e_2=B_2(x),
+\]
+which gives \(B_2(D_2)=B_4(D_2)\).
+\end{proof}
+
+\section{Closure of \(G1\)}
+\begin{theorem}[explicit two-swap splice]
+\label{thm:G1-closed}
+For every odd \(m>2\), the maps \(g_0,\dots,g_4\) defined above satisfy:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item outgoing exhaustiveness holds pointwise;
+\item each \(g_c\) is a permutation of \(X_m\);
+\item \(g_4\) is exactly the surfaced closed color-\(4\) rule
+      \(\mathrm{SelStar}_4=\texttt{mixed\_008}\).
+\end{enumerate}
+Hence the graph-side frontier theorem \(G1\) is closed.
+\end{theorem}
+
+\begin{proof}
+By Proposition~\ref{prop:mixed-color4}, item \textup{(3)} is immediate.
+
+For outgoing exhaustiveness, outside \(D_1\cup D_2\) the package equals the
+baseline package \(B\), so the property is unchanged.
+On \(D_1\), the only modification is the transposition of the color-\(1\) and
+color-\(4\) directions: \(B_1\) and \(B_4\) are exchanged, so the five outgoing
+directions remain \(\{0,1,2,3,4\}\).
+On \(D_2\), the same is true for the transposition of colors \(2\) and \(4\).
+Since \(D_1\cap D_2=\varnothing\) (they lie in different layers), item
+\textup{(1)} follows.
+
+For the permutation statement, \(g_0=B_0\) and \(g_3=B_3\) are already
+permutations.
+For \(g_1\), the defect set is \(D_1\), the modified defect map is \(B_4\), and
+Corollary~\ref{cor:image-preserving} gives
+\[
+g_1(D_1)=B_4(D_1)=B_1(D_1).
+\]
+Because \(B_4\vert_{D_1}\) is injective, the finite-defect splice principle
+implies that \(g_1\) is a permutation.
+Exactly the same argument, with \(D_2\), shows that \(g_2\) is a permutation.
+
+For \(g_4\), the defect set is \(D_1\cup D_2\), and
+\[
+g_4(D_1\cup D_2)=B_1(D_1)\cup B_2(D_2)=B_4(D_1)\cup B_4(D_2)=B_4(D_1\cup D_2),
+\]
+again by Corollary~\ref{cor:image-preserving}.
+Because \(D_1\) and \(D_2\) are disjoint and \(B_4\) is injective, the two image
+sets \(B_4(D_1)\) and \(B_4(D_2)\) are disjoint, so \(g_4\vert_{D_1\cup D_2}\)
+is injective.
+Thus \(g_4\) is a permutation as well.
+This proves item \textup{(2)}.
+\end{proof}
+
+\begin{remark}[why the earlier searches still mattered]
+The earlier no-go results were not wasted:
+they ruled out several \emph{too narrow} ans\"atze.
+In particular, same-color coarse-class repairs fail.
+The successful splice above is different: the correction for color \(1\) is
+driven by the color-\(4\) defect set \(D_1\), and the correction for color \(2\)
+is driven by the color-\(4\) defect set \(D_2\).
+So the winning package is still explicit and local, but it is not a same-color
+classwise splice.
+\end{remark}
+
+\section{Checked computational certificate}
+The accompanying checker \texttt{d5\_247\_G1\_explicit\_splice\_checker.py}
+verifies on checked odd moduli
+\[
+m=3,5,7,9,11,13
+\]
+that:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item the surfaced color-\(4\) defect sets agree with the coordinate formulas
+      for \(D_1\) and \(D_2\);
+\item the image-preserving identities
+      \(B_1(D_1)=B_4(D_1)\) and \(B_2(D_2)=B_4(D_2)\) hold exactly;
+\item the explicit package is outgoing-exhaustive and colorwise Latin; and
+\item the resulting color-\(4\) map agrees pointwise with the surfaced
+      \texttt{mixed\_008} rule.
+\end{enumerate}
+This computation is only a certificate; the proof above is symbolic and uniform
+for all odd \(m>2\).
+
+\end{document}

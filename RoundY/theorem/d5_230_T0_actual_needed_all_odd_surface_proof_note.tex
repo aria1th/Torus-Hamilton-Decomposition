@@ -1,0 +1,262 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{remark}{Remark}
+\title{D5 230: actual-needed $T0$ core proved uniformly for odd $m$ from the surfaced bundle semantics}
+\author{}
+\date{2026-03-21}
+\begin{document}
+\maketitle
+
+\section*{Purpose}
+The sharpened background $T0$ from \texttt{d5\_226} still names the full
+one-label tiny-repair theorem suggested by artifact \texttt{032}.  But inside the
+current front-end manuscript, only a much smaller slice is actually needed:
+\begin{itemize}
+\item at the mixed source
+\[
+\sigma_{21}=[4,1,4]/[1,2,2],
+\]
+remove the one-label tiny-repair branches in
+\[
+L2,\ L3,\ R2,\ R3;
+\]
+\item at the canonical bridge seed
+\[
+\Sigma_{\mathrm{can}}=[2,2,1]/[1,4,4],
+\]
+remove the one-label tiny-repair branches in
+\[
+L3,\ R2,\ R3.
+\]
+\end{itemize}
+
+The goal of this note is to prove exactly this \emph{actual-needed $T0$ core}
+for every odd $m>2$ with no remaining background dependency.
+The proof uses only the surfaced semantics of
+\texttt{torus\_nd\_d5\_endpoint\_latin\_repair.py} and the shared
+\texttt{mixed\_008} common module that was already admitted in the
+$\sigma_{23}$ and $\sigma_{32}$ closures.
+
+\section*{The repair scope to be killed}
+Artifact \texttt{032} allows exactly the following one-label tiny repairs.
+\begin{itemize}
+\item A \emph{one-gate} repair reroutes one chosen label class to one alternate
+absolute direction.
+\item A \emph{one-bit} repair reroutes one chosen bit-slice inside one chosen label
+class to one alternate absolute direction.
+\item A cocycle-defect toggle may additionally act in one of
+\[
+\{\mathrm{none},\mathrm{left},\mathrm{right},\mathrm{both}\}.
+\]
+\end{itemize}
+
+Crucially, in the surfaced builder the repair loop only modifies indices whose
+current label is exactly the chosen repair label, while the cocycle-defect loop
+acts only on the precomputed omitted-layer-$3$ sets.
+
+\section*{A universal surviving $R1$/background collision family}
+Throughout we work in the representative color-$0$ chart with
+\[
+(w_0,s_0)=(0,0).
+\]
+For the two seed rows relevant here, namely
+\[
+[2,2,1]/[1,4,4]
+\qquad\text{and}\qquad
+[4,1,4]/[1,2,2],
+\]
+the right first-step direction is the same:
+\[
+\text{right\_word}[0]=1.
+\]
+
+\begin{lemma}[universal $R1$/background family]
+\label{lem:universal-R1-family}
+Fix any modulus $m>2$.  Let
+\[
+\tau = L/R
+\]
+be any representative seed in the surfaced builder with
+\[
+(w_0,s_0)=(0,0),
+\qquad
+R_1\text{-direction}=1.
+\]
+Then the color-$0$ row of $\tau$ contains the explicit family
+\[
+\mathcal F_{R1}(m)
+=
+\Bigl\{
+(x,y,z):
+\begin{array}{l}
+ x=(x_0,m-1,0,v,u),\\
+ y=(x_0,0,0,v,u-1),\\
+ z=(x_0,0,0,v,u),\\
+ u\in\{1,\dots,m-1\},\\
+ x_0+v+u\equiv 2\pmod m
+\end{array}
+\Bigr\}
+\]
+of pairwise distinct collision triples with
+\[
+\mathrm{label}(x)=R1,
+\qquad
+\mathrm{label}(y)=B,
+\qquad
+x\mapsto z,
+\qquad
+y\mapsto z.
+\]
+In particular, the color-$0$ row is non-Latin.
+\end{lemma}
+
+\begin{proof}
+Because $u\neq 0$, the source
+\[
+x=(x_0,m-1,0,v,u)
+\]
+lies in the layer-$1$ set with
+\[
+q=m-1,
+\qquad
+w=0,
+\qquad
+s=w+u=u\neq 0.
+\]
+So in the builder notation it is a genuine $R1$ source.  Since the right first
+step is direction $1$, the builder sends $x$ to
+\[
+z=x+e_q=(x_0,0,0,v,u).
+\]
+
+Now consider
+\[
+y=(x_0,0,0,v,u-1).
+\]
+Its layer is
+\[
+x_0+0+0+v+(u-1)\equiv 1 \pmod m,
+\]
+so $y$ is a layer-$1$ source.  But $q(y)=0$, hence $y$ is not in any of the
+changed label classes $L1,R1,L2,R2,L3,R3$; therefore its builder label is $B$.
+
+The surfaced common module \texttt{anchor\_by\_feature} assigns anchor $4$ to every
+layer-$1$ background feature.  So the baseline row sends $y$ in direction $4$,
+that is,
+\[
+y\mapsto y+e_u=(x_0,0,0,v,u)=z.
+\]
+Thus $x$ and $y$ are distinct sources with the same image $z$.
+
+Finally, the number of such triples is exactly $m(m-1)$: choose arbitrary
+$x_0\in\mathbb Z_m$ and arbitrary nonzero $u\in\mathbb Z_m$, and then $v$ is forced by
+\[
+x_0+v+u\equiv 2 \pmod m.
+\]
+So the family is nonempty and explicit for every $m>2$.
+\end{proof}
+
+\section*{The actual-needed $T0$ core}
+Define the actual-needed repair-label sets by
+\[
+A_{\mathrm{can}}=\{L3,R2,R3\},
+\qquad
+A_{21}=\{L2,L3,R2,R3\}.
+\]
+
+\begin{theorem}[actual-needed $T0$ core, all odd $m$]
+\label{thm:T0-actual-needed-core}
+For every odd modulus $m>2$, the following holds.
+\begin{enumerate}
+\item At the canonical bridge seed
+\[
+\Sigma_{\mathrm{can}}=[2,2,1]/[1,4,4],
+\]
+any one-gate or one-bit repair supported on a label in $A_{\mathrm{can}}$, with any
+cocycle-defect choice in
+\[
+\{\mathrm{none},\mathrm{left},\mathrm{right},\mathrm{both}\},
+\]
+still leaves an explicit collision in color $0$ and is therefore non-Latin.
+
+\item At the mixed source
+\[
+\sigma_{21}=[4,1,4]/[1,2,2],
+\]
+any one-gate or one-bit repair supported on a label in $A_{21}$, with any
+cocycle-defect choice in the same four-element set, still leaves an explicit
+collision in color $0$ and is therefore non-Latin.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Both seed rows have right first-step direction $1$, so
+Lemma~\ref{lem:universal-R1-family} gives the full collision family
+$\mathcal F_{R1}(m)$ in color $0$.
+
+It remains to check that the allowed one-label tiny repairs in the statement do
+not alter this family.
+
+First, every repair label in $A_{\mathrm{can}}\cup A_{21}$ is different from $R1$.
+Hence the repair loop never modifies any $R1$ source $x$ from
+$\mathcal F_{R1}(m)$.
+
+Second, the background mate $y$ in Lemma~\ref{lem:universal-R1-family} has label
+$B$, so it is never touched by a one-gate or one-bit repair on a non-$B$ label.
+
+Third, the cocycle-defect toggle only acts on the precomputed omitted-layer-$3$
+left/right sets.  Both $x$ and $y$ lie in layer $1$, so neither source belongs to
+those omitted-layer-$3$ sets.  Therefore the cocycle-defect toggle does not alter
+$x\mapsto z$ or $y\mapsto z$.
+
+So for every repair listed in the theorem, the same two sources $x,y$ still map to
+$z$.  The color-$0$ row remains non-Latin, hence the repaired candidate is dead.
+\end{proof}
+
+\begin{corollary}[front-end consequence]
+\label{cor:no-remaining-T0-dependency}
+The only $T0$ content actually needed by the current front-end manuscript is now
+internalized.
+More precisely:
+\begin{itemize}
+\item at $\sigma_{21}$, every one-label tiny-repair branch in
+$L2,L3,R2,R3$ is closed uniformly for odd $m$;
+\item at the canonical bridge seed, every one-label tiny-repair branch in
+$L3,R2,R3$ is closed uniformly for odd $m$.
+\end{itemize}
+Therefore the present uses of ``after tiny repair'' inside $T1$ and $T4$ no longer
+need an external background theorem.
+\end{corollary}
+
+\begin{remark}
+This note proves the \emph{actual-needed} $T0$ slice, not the full stronger claim
+that every one-label repair across the entire seed list of artifact \texttt{032} has
+already been internalized theorem-by-theorem.
+For the current manuscript logic, however, the corollary is exactly the dependency
+that mattered.
+\end{remark}
+
+\section*{Sanity check on the surfaced bundle}
+A lightweight checker
+\texttt{d5\_230\_T0\_needed\_core\_checker.py} was also written.
+On the surfaced bundle it exhaustively tests the actual-needed candidate list for
+\[
+m=3,5,
+\]
+and confirms that every tested one-gate / one-bit / cocycle candidate still
+preserves the full universal $R1$/background collision family.
+The saved summary reports:
+\begin{itemize}
+\item canonical case: $2016$ checked candidates, all preserving the full family;
+\item $\sigma_{21}$ case: $2688$ checked candidates, all preserving the full family.
+\end{itemize}
+This is only a sanity check; Theorem~\ref{thm:T0-actual-needed-core} itself is the
+all-odd proof.
+
+\end{document}

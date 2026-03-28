@@ -1,0 +1,1958 @@
+
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{xurl}
+
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\urlstyle{same}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{frontier}[theorem]{Frontier theorem}
+\newtheorem{background}[theorem]{Background input}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{heuristic}[theorem]{Heuristic}
+\newtheorem{question}[theorem]{Open problem}
+
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\sig}[2]{\sigma_{#1#2}}
+\newcommand{\Lw}[1]{L_{#1}}
+\newcommand{\Rw}[1]{R_{#1}}
+\newcommand{\CanL}{[2,2,1]}
+\newcommand{\CanR}{[1,4,4]}
+\newcommand{\CanSeed}{\CanL/\CanR}
+\newcommand{\CL}{\mathcal C_L}
+\newcommand{\CR}{\mathcal C_R}
+\newcommand{\Omix}{\mathcal O_{\mathrm{mix}}}
+\newcommand{\Obr}{\mathcal O_{\mathrm{br}}}
+\newcommand{\RhoR}{\rho_{R1}}
+\newcommand{\SelCorr}{\mathrm{Sel}_{\mathrm{corr}}}
+\newcommand{\SelStar}{\mathrm{Sel}^{\star}}
+\newcommand{\Pzero}{P_0}
+\newcommand{\Ssec}{S_m}
+\newcommand{\Bzero}{B_0}
+\newcommand{\Tsharp}{T_m^{\sharp}}
+\title{Odd-$m$, $d=5$ as a one-cornered odometer:\\
+theorem-order manuscript after the nonresonant residual closure}
+\author{}
+\date{March 25, 2026}
+
+\begin{document}
+\maketitle
+
+
+\begin{abstract}
+This text consolidates the current odd-$m$, $d=5$ proof chain after the
+closure of the residual nonresonant packet.
+The proof is organized around the spine
+\[
+\begin{aligned}
+&\text{front-end one-corner reduction}
+\to
+\text{exact odometer spine}\\
+&\to
+\text{selector surgery}
+\to
+\text{generic upgrade and globalization}.
+\end{aligned}
+\]
+Inside the present bundle, the front-end slice
+\[
+T0,T1,T2,T3,T4
+\]
+is closed directly.
+The remaining manuscript-order inputs are no longer left as anonymous imports:
+the post-entry one-corner odometer theorem is tied to the compact one-pass
+odd-$m$ globalization package, and the graph/globalization endgame is tied
+explicitly to the accepted theorem-side anchor package, the corrected-selector
+baseline theorem, the color-$4$ Sel$^{\star}$ Hamilton theorem, the closed
+color-$3$ Sel$^{\star}$ Route-E theorem, the small odd residual packages, and
+the nonresonant residual theorem for the explicit family $P_m$.
+What remains open at the honest boundary is no longer a graph-side assembly
+input for all odd moduli, but only a resonant residual theorem for odd moduli
+with $3\mid m$.
+Methodologically, the active graph-side problem is therefore not a naive
+five-color search.
+After freezing the closed color-$3$/color-$4$ backbone, the unresolved burden
+is the resonant residual assembly problem on colors $0,1,2$.
+The companion research note prepared in parallel with this manuscript records
+the exact reduced-return packets for the nonresonant closure and the current
+resonant obstruction ladder.
+The resulting manuscript is intended to be read as a theorem-order proof spine:
+every currently load-bearing theorem is stated in one place, the residual
+nonresonant closure is promoted to theorem level, and the remaining resonant
+frontier is isolated explicitly.
+\end{abstract}
+
+\tableofcontents
+
+\section{The global proof spine}
+
+The intended theorem-level structure of the odd-$m$, $d=5$ paper is
+\[
+\begin{aligned}
+&\text{front-end one-corner reduction}
+\to
+\text{exact odometer spine}\\
+&\to
+\text{selector surgery}
+\to
+\text{generic upgrade and globalization}.
+\end{aligned}
+\]
+At a slightly finer level the manuscript is organized as follows.
+\begin{enumerate}[label=\textup{(\Roman*)},leftmargin=3.0em]
+\item \textbf{Front-end one-corner reduction.}
+      Reduce every unresolved front-end instance to the canonical bridge seed
+      \(\CanSeed\) by a finite chart plus three shape-side row theorems.
+\item \textbf{Canonical entry and exact odometer spine.}
+      Show that the canonical seed has a unique live unresolved continuation,
+      namely the alternate-$2$ entry
+      \[
+      E=(m-1,1,u_{\mathrm{source}},2),
+      \]
+      and then identify the resulting dynamics with the exact one-corner
+      odometer corridor.
+\item \textbf{Selector surgery.}
+      Close the graph side branchwise: the color-$4$ branch by the final-section
+      return package, and the color-$3$ branch by an explicit Route-E section
+      model together with actual/model identification.
+\item \textbf{Final stitching and globalization.}
+      Use the theorem-side anchor/globalization block together with the closed
+      small odd and nonresonant residual packets, plus one remaining resonant
+      residual input, to produce the final odd-$m$, $d=5$ Hamilton
+      decomposition.
+\end{enumerate}
+
+\begin{theorem}[actual-needed tiny-repair core]
+\label{thm:T0-needed}
+For every odd modulus $m>2$, the front-end uses of tiny repair that actually
+occur below are already closed internally.
+More precisely:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item at
+      \[
+      \sig21=[4,1,4]/[1,2,2],
+      \]
+      every one-label one-gate or one-bit repair branch supported on
+      \(L2,L3,R2,\) or \(R3\), with cocycle-defect choice in
+      \(\{\mathrm{none},\mathrm{left},\mathrm{right},\mathrm{both}\}\),
+      is non-Latin;
+\item at the canonical bridge seed \(\CanSeed\), every one-label one-gate or
+      one-bit repair branch supported on \(L3,R2,\) or \(R3\), with the same
+      four cocycle-defect choices, is non-Latin.
+\end{enumerate}
+\end{theorem}
+
+\begin{remark}[scope convention for ``after tiny repair'']
+Throughout the front-end section, the phrase ``after tiny repair'' refers only
+to the concrete removals supplied by Theorem~\ref{thm:T0-needed} at the relevant
+seed.  It does not silently quantify over richer multi-class repair families.
+A stronger standalone one-label repair theorem for the full artifact seed list
+may still be desirable later, but it is not used below.
+\end{remark}
+
+
+\begin{theorem}[main odd-$m$, $d=5$ Hamilton decomposition theorem, conditional on the remaining resonant input]
+\label{thm:conditional-full}
+Assume the resonant residual assembly input of
+Frontier~\ref{fr:resonant-residual-assembly}.
+Then for every odd modulus $m\ge 5$, the directed torus
+\[
+D_5(m)=\operatorname{Cay}((\Z/m\Z)^5,\{e_0,e_1,e_2,e_3,e_4\})
+\]
+admits a decomposition into five arc-disjoint directed Hamilton cycles.
+\end{theorem}
+
+\section{Graph-theoretic setup}
+
+\begin{definition}[directed torus]
+For \(m>2\), write
+\[
+D_5(m)=\operatorname{Cay}((\Z/m\Z)^5,\{e_0,e_1,e_2,e_3,e_4\}).
+\]
+Its vertices are the points of \((\Z/m\Z)^5\), and from each vertex \(x\) there
+are exactly five directed outgoing arcs
+\[
+x\to x+e_0,\ \dots,\ x\to x+e_4.
+\]
+\end{definition}
+
+\begin{definition}[Hamilton decomposition]
+A \emph{Hamilton decomposition} of \(D_5(m)\) is a partition of the full
+directed arc set into five pairwise arc-disjoint directed Hamilton cycles.
+\end{definition}
+
+The point of the present manuscript is now slightly different from the earlier
+``honest status'' draft.
+The front-end slice $T0$--$T4$ is already
+closed in this bundle, and the remaining theorem packets used by the final
+proof are recorded below as explicit named upstream theorems.
+This makes the dependency chain linear enough for later polishing and for a
+Lean-oriented theorem ledger.
+
+\section{Three languages and a methodological rule}
+
+\begin{remark}[support language, grid language, odometer language]
+Three languages appear repeatedly and should not be confused.
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item \textbf{Support language.}
+      This records only which local families are present.
+      It is a pruning language.
+\item \textbf{Grid language.}
+      This records actual endpoint words, equivalently the grid cell
+      \(\sig{i}{j}\).
+      It is the main language of shape-side row theorems.
+\item \textbf{Odometer language.}
+      This records the explicit post-entry coordinates
+      \((q,w,u,\Theta)\).
+      It is the main language after the canonical entry theorem.
+\end{enumerate}
+The key rule is:
+\emph{support is a pruning invariant, not a classification invariant.}
+So support can help isolate a theorem target, but it cannot by itself separate
+all rows that the grid language can separate.
+\end{remark}
+
+\section{Finite front-end chart}
+
+\subsection{\texorpdfstring{The \(3\times 3\)}{The 3x3} bridge-position grid}
+
+Define
+\[
+L_1=[1,4,4],\qquad L_2=[4,1,4],\qquad L_3=[4,4,1],
+\]
+and
+\[
+R_1=[1,2,2],\qquad R_2=[2,1,2],\qquad R_3=[2,2,1].
+\]
+The noncanonical rows are arranged in the grid
+\[
+\sig{i}{j}=L_i/R_j,\qquad 1\le i,j\le 3.
+\]
+The interpretation is:
+\begin{itemize}[leftmargin=2.4em]
+\item \(i\) records the position of the bridge symbol on the left endpoint;
+\item \(j\) records the position of the bridge symbol on the right endpoint.
+\end{itemize}
+
+\begin{proposition}[finite seed certificate]
+\label{prop:finite-chart}
+The filtered front-end seed set contains exactly eleven raw rows.
+Under the accepted symmetries, these reduce to five classes
+\[
+C0,\ C1,\ C2,\ C3,\ C4.
+\]
+Exactly one class is an oriented bridge class, namely \(C0\), and it contains
+the canonical bridge seed
+\[
+\CanSeed=\CanL/\CanR.
+\]
+The centered-bridge classes are exactly
+\[
+C1\cup C3\cup C4,
+\]
+and the residual nonbridge class outside that layer is exactly
+\[
+C2=\sig33=[4,4,1]/[2,2,1].
+\]
+\end{proposition}
+
+\begin{proposition}[bridge normalization]
+\label{prop:bridge-normalization}
+Every oriented bridge row is equivalent under the accepted symmetries to the
+canonical seed
+\[
+\CanSeed=[2,2,1]/[1,4,4].
+\]
+\end{proposition}
+
+\begin{definition}[changed-family support]
+For each surviving row \(\sigma\), let
+\[
+\Sigma(\sigma)\subseteq\{L1,L2,L3,R1,R2,R3\}
+\]
+denote the changed-family support.
+On the noncanonical \(3\times 3\) grid the support factorization is
+\[
+\Sigma(\sig{i}{j})
+=
+\{L2,L3,R1,R3\}
+\cup (\{L1\}\ \text{if } i=1)
+\cup (\{R2\}\ \text{if } j\le 2).
+\]
+\end{definition}
+
+\begin{remark}[the exceptional row]
+The row
+\[
+\sig11=[1,4,4]/[1,2,2]
+\]
+is exceptional for a finite reason:
+it is the unique bridge-first row in which the left bridge is still leading.
+In the bridge-position grid it is the double-leading corner.
+\end{remark}
+
+\subsection{Prototype reduction on the shape side}
+
+\begin{proposition}[two-prototype reduction]
+\label{prop:two-prototypes}
+Under the accepted symmetries, the centered-bridge layer decomposes into two
+orbits:
+\[
+\Omix=
+\{\sig21,\ \sig23,\ \sig12,\ \sig32\},
+\qquad
+\{\sig22\}.
+\]
+Thus the whole centered-bridge burden reduces to one mixed prototype
+\(\sig21=[4,1,4]/[1,2,2]\) and one double-centered core \(\sig22\).
+\end{proposition}
+
+\begin{corollary}[shape-side compression]
+\label{cor:shape-side-compression}
+Modulo Theorem~\ref{thm:T0-needed} and bridge normalization, the front-end shape side
+reduces to exactly three row theorem objects:
+\[
+T1:\ \sig21\rightsquigarrow \sig31,\qquad
+T2:\ \sig22\text{ closes},\qquad
+T3:\ \sig33\text{ closes}.
+\]
+\end{corollary}
+
+\section{Closed front-end row theorems}
+\label{sec:frontier}
+
+\begin{theorem}[T1: first-column companion theorem]
+\label{fr:T1}
+After the \(\sig21\)-repair branches from Theorem~\ref{thm:T0-needed} are
+removed, every live unresolved immediate continuation of
+\[
+\sig21=[4,1,4]/[1,2,2]
+\]
+is represented by the bridge companion
+\[
+\sig31=[4,4,1]/[1,2,2].
+\]
+\end{theorem}
+
+\begin{theorem}[T2: double-centered closure]
+\label{fr:T2}\label{thm:T2-closed}
+For every odd modulus \(m>2\), no row obtained from
+\[
+\sig22=[4,1,4]/[2,1,2]
+\]
+by a one-gate or one-bit one-label repair, with cocycle-defect choice in
+\(\{\mathrm{none},\mathrm{left},\mathrm{right},\mathrm{both}\}\), is Latin.
+Equivalently, after the artifact-surfaced tiny-repair scope is exhausted, the
+center cell \(\sig22\) does not remain as a live unresolved front-end row.
+\end{theorem}
+
+\begin{theorem}[T3: repeated-end corner closure]
+\label{fr:T3}\label{thm:T3-closed}
+For every odd modulus \(m>2\), no row obtained from
+\[
+\sig33=[4,4,1]/[2,2,1]
+\]
+by a one-gate or one-bit one-label repair, with cocycle-defect choice in
+\(\{\mathrm{none},\mathrm{left},\mathrm{right},\mathrm{both}\}\), is Latin.
+Equivalently, after the artifact-surfaced tiny-repair scope is exhausted, the
+repeated-end corner \(\sig33\) does not remain as a live unresolved front-end row.
+\end{theorem}
+
+\begin{remark}[proof packets for \(T2\) and \(T3\)]
+The odd-\(m\ge 5\) obstruction proofs are extracted in the companion notes
+\path{d5_228_T2_centered_core_obstruction_note.tex} and
+\path{d5_225_T3_four_collision_families_note.tex}.
+The remaining one-label \(m=3\) cases are exhausted by the finite scans recorded
+in \path{d5_229_T2_T3_m3_one_label_scan.py} and its saved summaries.
+\end{remark}
+
+\begin{proposition}[canonical support certificate]
+\label{prop:canonical-support}
+At the canonical bridge seed
+\[
+\CanSeed=\CanL/\CanR,
+\]
+the support is exactly
+\[
+\Sigma(\CanSeed)=\{L3,R1,R2,R3\}.
+\]
+\end{proposition}
+
+\begin{theorem}[T4: canonical entry theorem]
+\label{fr:T4}
+At the canonical bridge seed \(\CanSeed\), after the three dead repair source
+families from Theorem~\ref{thm:T0-needed}---namely \(L3\), \(R2\), and
+\(R3\)---are removed, the unique live immediate source family is \(R1\).
+Its canonical two-step normalization in the shifted section coordinates
+\[
+(Q,W,U,\Theta)=(q-1,\ w+1,\ u-1,\ 2)
+\]
+is the alternate-$2$ entry
+\[
+E=(m-1,1,u_{\mathrm{source}},2).
+\]
+\end{theorem}
+
+\begin{theorem}[front-end one-corner reduction]
+\label{thm:conditional-front-end}
+Every unresolved odd-$m$, $d=5$ front-end instance reduces to the exact
+one-corner channel with canonical seed \CanSeed and entry state
+\[
+E=(m-1,1,u_{\mathrm{source}},2).
+\]
+\end{theorem}
+
+\begin{proof}
+By Proposition~\ref{prop:finite-chart}, every unresolved front-end instance is
+represented by one of the finitely many rows in the chart.
+Proposition~\ref{prop:bridge-normalization} moves every oriented bridge row to
+the canonical seed \CanSeed.  Corollary~\ref{cor:shape-side-compression}
+reduces the noncanonical shape side to the theorem objects \(T1,T2,T3\),
+and Theorems~\ref{fr:T1}--\ref{fr:T4} close those row objects and identify
+the unique live bridge continuation with the entry state \(E\).  Hence every
+unresolved front-end instance reduces to the exact one-corner channel with
+canonical seed \CanSeed and entry state \(E\).
+\end{proof}
+
+\section{\texorpdfstring{The closure package for \(T1\)}{The closure package for T1}}
+
+What used to be the live front-end proof search is now a closed package.
+We keep the strip analysis here because it explains why Theorem~\ref{fr:T1} is
+short.
+
+\subsection{Unique surviving branch}
+
+\begin{proposition}[source support for \(T1\)]
+\label{prop:T1-source-support}
+At the mixed prototype
+\[
+\sig21=[4,1,4]/[1,2,2]
+\]
+one has
+\[
+\Sigma(\sig21)=\{L2,L3,R1,R2,R3\}.
+\]
+By Theorem~\ref{thm:T0-needed}, every immediate branch except the
+\(R1\)-branch is removed.
+\end{proposition}
+
+So \(T1\) is not a many-branch problem.
+It is a unique surviving-branch problem.
+
+\subsection{Two strips and two local raw targets}
+
+Define the centered-left strip and centered-right strip by
+\[
+\CL=\{\sig21,\sig22,\sig23\},
+\qquad
+\CR=\{\sig12,\sig22,\sig32\}.
+\]
+With Theorems~\ref{thm:T2-closed} and \ref{thm:T3-closed} recorded as
+closed obstruction cells, \(T1\) reduces to excluding the dangerous targets
+on these two strips.
+
+\begin{proposition}[left-strip case split]
+\label{prop:left-strip-case-split}
+Relative to the source right word \([1,2,2]\), the centered-left strip has
+exactly three cases:
+\[
+\sig21 \leftrightarrow \Delta_R=\varnothing,\qquad
+\sig22 \leftrightarrow \Delta_R=\{1,2\},\qquad
+\sig23 \leftrightarrow \Delta_R=\{1,3\}.
+\]
+In particular,
+\[
+\sig23=[4,1,4]/[2,2,1]
+\]
+is the unique centered-left case with disconnected change-set \(\{1,3\}\), the
+unique centered-left case with terminal right-slot change, and the unique
+centered-left case with \(R2\) absent.
+\end{proposition}
+
+\begin{proposition}[current \(T1\) reduction after strip closure]
+\label{prop:T1-current-reduction}
+Assume Theorems~\ref{thm:T2-closed} and \ref{thm:T3-closed}.
+Then \(T1\) has no remaining live raw local target.
+The left-strip target that the surviving immediate \(R1\)-image out of
+\(\sig21\) does not realize \(\sig23\) is closed by
+Theorem~\ref{thm:sigma23-closed}, and the normalized centered-right target that
+it does not realize \(\sig32\) is closed by
+Theorem~\ref{thm:sigma32-closed} below.
+\end{proposition}
+
+\subsection{The \texorpdfstring{$\sig23$}{sigma23} side is now closed}
+
+The bookkeeping reductions from the earlier notes remain useful, but the live
+frontier theorem on this side is no longer open.  Once the surfaced bundle
+builder is admitted, the surviving immediate \(R1\)-family out of \(\sig21\)
+can be read directly and its second-step comparison is explicit.
+
+\begin{proposition}[equivalent forms of \(\sig23\) exclusion]
+\label{prop:sigma23-equivalences}
+For the surviving immediate \(R1\)-image \(\RhoR\) out of \(\sig21\), each of the
+following suffices to exclude \(\sig23\).
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item \(\Delta_R(\RhoR)\subseteq\{1,2\}\);
+\item the terminal right slot is unchanged;
+\item the changed right slots form a connected set;
+\item the immediate update is an elementary rewrite rooted at the acted edge
+      \(\{1,2\}\);
+\item the immediate update is supported on the closed star of the acted edge.
+\end{enumerate}
+\end{proposition}
+
+\begin{theorem}[surfaced-bundle closure of the \(\sig23\) side]
+\label{thm:sigma23-closed}
+For every modulus \(m>2\), the actual second step of the surviving immediate
+\(R1\)-family out of
+\[
+\sig21=[4,1,4]/[1,2,2]
+\]
+agrees with the \(\sig22=[4,1,4]/[2,1,2]\) prototype and never with the
+\(\sig23=[4,1,4]/[2,2,1]\) prototype.
+Equivalently, for the tiny-repair-normalized surviving immediate \(R1\)-image
+\(\RhoR\) one has
+\[
+\Delta_R(\RhoR)=\{1,2\}.
+\]
+In particular the left-strip burden inside \(T1\) is closed.
+\end{theorem}
+
+\begin{proof}
+Fix a modulus \(m>2\), color \(0\), and the standard normalization
+\(w_0=s_0=0\).
+Write \(\partial_i\) for the coordinate step that adds \(+1\) in direction
+\(i\) modulo \(m\).
+In the surfaced builder, the common right \(R1\)-source family for
+\(\sig21,\sig22,\sig23\) is exactly
+\[
+S_R=\{x:\ \mathrm{layer}(x)=1,\ q(x)=m-1,\ w(x)=0,\ s(x)\neq 0\}.
+\]
+Thus all three rows are compared on the same source family.
+
+For \(\sig21\), the right word is \([1,2,2]\), so the first two right-side
+steps on \(S_R\) are
+\[
+x\mapsto \partial_1(x)\mapsto \partial_2\partial_1(x).
+\]
+For \(\sig22\), the right word is \([2,1,2]\), so the first two right-side
+steps are
+\[
+x\mapsto \partial_2(x)\mapsto \partial_1\partial_2(x).
+\]
+For \(\sig23\), the right word is \([2,2,1]\), so the first two right-side
+steps are
+\[
+x\mapsto \partial_2(x)\mapsto \partial_2^2(x).
+\]
+
+The surfaced common module defines each \(\partial_i\) as coordinatewise
+\(+1\) in a single axis modulo \(m\).  Therefore the coordinate steps
+commute:
+\[
+\partial_2\partial_1=\partial_1\partial_2.
+\]
+Thus the actual second step of \(\sig21\) on the surviving \(R1\)-family agrees
+exactly with the \(\sig22\) prototype.
+
+On the other hand, every \(x\in S_R\) satisfies \((q(x),w(x))=(m-1,0)\).
+Therefore
+\[
+\partial_2\partial_1(x):(q,w)=(0,1),\qquad
+\partial_2^2(x):(q,w)=(m-1,2).
+\]
+These are distinct for every \(m>2\).  Hence the actual second step of
+\(\sig21\) does not realize \(\sig23\).
+The description of \(\Delta_R\) now follows from
+Proposition~\ref{prop:left-strip-case-split}.
+\end{proof}
+
+\subsection{The \texorpdfstring{$\sig32$}{sigma32} side is also closed}
+
+The remaining centered-right target is the repeated-end option
+\[
+\sig32=[4,4,1]/[2,1,2].
+\]
+Here the common comparison family is on the left rather than on the right.
+The first two left-side steps are again explicit in the surfaced builder.
+
+\begin{theorem}[surfaced-bundle closure of the \(\sig32\) side]
+\label{thm:sigma32-closed}
+For every modulus \(m>2\), the normalized surviving immediate \(R1\)-image out
+of
+\[
+\sig21=[4,1,4]/[1,2,2]
+\]
+does not realize the dangerous centered-right target
+\[
+\sig32=[4,4,1]/[2,1,2].
+\]
+More precisely, on the common left family
+\[
+S_L=\{x:\ \mathrm{layer}(x)=1,\ q(x)=m-1,\ w(x)=m-1,\ s(x)\neq 0\},
+\]
+the actual two-step left continuation agrees with the centered core
+\(\sig22=[4,1,4]/[2,1,2]\) and differs from the repeated-end target
+\(\sig32\).
+\end{theorem}
+
+\begin{proof}
+Fix a modulus \(m>2\), color \(0\), and the standard normalization
+\(w_0=s_0=0\).
+On the common left family \(S_L\), the four relevant left words are
+\[
+\sig21:\ [4,1,4],\qquad
+\sig12:\ [1,4,4],\qquad
+\sig22:\ [4,1,4],\qquad
+\sig32:\ [4,4,1].
+\]
+Therefore the first two left-side steps on \(S_L\) are
+\[
+\sig21:\ x\mapsto \partial_4(x)\mapsto \partial_1\partial_4(x),
+\]
+\[
+\sig12:\ x\mapsto \partial_1(x)\mapsto \partial_4\partial_1(x),
+\]
+\[
+\sig22:\ x\mapsto \partial_4(x)\mapsto \partial_1\partial_4(x),
+\]
+\[
+\sig32:\ x\mapsto \partial_4(x)\mapsto \partial_4^2(x).
+\]
+Hence the actual left-side continuation of \(\sig21\) agrees with the
+\(\sig22\) prototype.
+
+To distinguish it from \(\sig32\), note that every \(x\in S_L\) satisfies
+\(q(x)=m-1\).  Therefore
+\[
+\partial_1\partial_4(x): q=0,
+\qquad
+\partial_4^2(x): q=m-1.
+\]
+These are distinct for every \(m>2\).  Hence the normalized surviving
+immediate \(R1\)-image out of \(\sig21\) does not realize \(\sig32\).
+\end{proof}
+
+\begin{remark}[what remains after strip closure]
+The \(\sig23\)- and \(\sig32\)-sides are no longer frontier theorems.
+Their remaining work is only packaging: the surfaced-bundle proofs above should
+be translated into the final preferred notation of the main text.
+Under Proposition~\ref{prop:T1-current-reduction}, there is now no remaining
+live raw local burden inside \(T1\).
+\end{remark}
+
+\begin{proof}[Proof of Theorem~\ref{fr:T1}]
+By Proposition~\ref{prop:T1-source-support} and Theorem~\ref{thm:T0-needed},
+only the immediate \(R1\)-branch out of \(\sig21\) survives the actual front-end
+repair cleanup.  Proposition~\ref{prop:T1-current-reduction}, together with
+Theorems~\ref{thm:sigma23-closed} and \ref{thm:sigma32-closed}, shows that this
+surviving branch does not realize either dangerous strip target.
+Theorems~\ref{thm:T2-closed} and \ref{thm:T3-closed} remove the centered core
+and repeated-end obstruction cells themselves.  Hence every live unresolved
+immediate continuation of \(\sig21\) is represented by the bridge companion
+\(\sig31\), as claimed.
+\end{proof}
+
+\subsection{\texorpdfstring{Why the present \(T1\) target is now exhausted}{Why the present T1 target is now exhausted}}
+
+The moral is that \(T1\) is no longer a package jungle.
+After the strip-closure theorems, it became a unique surviving-branch theorem
+with no remaining live raw local comparison.  The only auxiliary inputs are the
+already-closed obstruction theorems \(T2\) and \(T3\).
+
+\section{Canonical entry and the exact odometer spine}
+
+\subsection{The reduced entry problem}
+
+\begin{proposition}[source support for \(T4\)]
+\label{prop:T4-source-support}
+At the canonical bridge seed
+\[
+\CanSeed=\CanL/\CanR,
+\]
+the only support families present are \(L3,R1,R2,R3\).
+By Theorem~\ref{thm:T0-needed}, the branches \(L3\), \(R2\), and \(R3\) are
+dead, so the only potentially live immediate continuation is the \(R1\)-branch.
+\end{proposition}
+
+Thus the surviving-branch toolkit is now fully closed on the front end, and
+its output language is the odometer language rather than the grid language.
+
+\subsection{The explicit odometer block}
+
+With Theorem~\ref{fr:T4} proved, the rest of the theorem-side front end is explicit.
+
+\begin{definition}[candidate one-corner orbit]
+Fix odd \(m\) and the entry state
+\[
+E=(m-1,1,u_{\mathrm{source}},2).
+\]
+Let
+\[
+\rho:=u_{\mathrm{source}}+1 \pmod m.
+\]
+Define the candidate orbit \(\widehat x_n=(q_n,w_n,u_n,\Theta_n)\) by
+\begin{align*}
+\widehat F(q,w,u,0) &= (q+1,w,u,1),\\
+\widehat F(q,w,u,1) &= (q,w,u+1,2),\\
+\widehat F(q,w,u,2) &= (q,w+\mathbf 1_{q=m-1},u,3),\\
+\widehat F(q,w,u,\Theta) &= (q,w,u,\Theta+1)\qquad(3\le \Theta\le m-1).
+\end{align*}
+On the section \(\Theta=2\), the induced return map is
+\[
+(q,w)\mapsto(q+1,w+\mathbf 1_{q=m-1}).
+\]
+\end{definition}
+
+\begin{definition}[odometer coordinate]
+Define
+\[
+\eta(q,w)=q+m(w-1)-(m-1).
+\]
+Then \(\eta\) increases by exactly \(1\) under each return to the section
+\(\Theta=2\).
+\end{definition}
+
+\begin{lemma}[phase-$1$ residue invariant]
+Along the candidate orbit, every phase-$1$ state satisfies
+\[
+q\equiv u-\rho+1 \pmod m.
+\]
+\end{lemma}
+
+\begin{theorem}[post-entry exact odometer spine]
+\label{thm:odometer-spine}
+The actual active front-end branch agrees with the candidate one-corner
+orbit up to first exit.
+The trigger family is
+\[
+H_{L1}=\{(q,w,u,\Theta)=(m-1,m-1,u,2):u\neq 2\},
+\]
+and the universal first exits are
+\[
+T_{\mathrm{reg}}=(m-1,m-2,1),
+\qquad
+T_{\mathrm{exc}}=(m-2,m-1,1).
+\]
+Moreover, no patched current class appears before exit.
+\end{theorem}
+
+\begin{proof}
+Theorem~\ref{fr:T4} identifies the unique live unresolved bridge branch with the
+alternate-$2$ entry state
+\[
+E=(m-1,1,u_{\mathrm{source}},2)
+\]
+on the canonical seed \(\CanSeed\).
+The front-end one-corner reduction theorem
+(Theorem~\ref{thm:conditional-front-end}) then reduces every unresolved
+front-end instance to this normalized best-seed channel.
+
+At that point the best-seed one-corner structural theorem package applies
+directly to the branch started at \(E\): it proves candidate/actual agreement up
+to first exit, identifies the exact trigger family \(H_{L1}\), pins the
+universal exits to \(T_{\mathrm{reg}}\) and \(T_{\mathrm{exc}}\), and rules out
+patched current classes before exit.
+These are precisely the four assertions of the present theorem.
+\end{proof}
+
+\begin{remark}[provenance of the odometer spine]
+In the attached theorem chain, Theorem~\ref{thm:odometer-spine} is the
+manuscript-order form of the structural first-exit result proved in the one-pass
+odd-$m$ globalization package.
+The supporting normal-form and entry notes are exactly the one-corner reduction
+notes tied to the canonical seed and the late local provenance check on the
+surfaced $\sigma_{23}$/$R1$ branch.
+\end{remark}
+
+\begin{corollary}[front-end channel classification]
+\label{cor:channel-classification}
+For every odd modulus $m>2$, every unresolved front-end instance reduces to the
+best-seed channel starting from the canonical seed
+\[
+\CanSeed=[2,2,1]/[1,4,4]
+\]
+and enters that channel at the alternate-$2$ state
+\[
+E=(m-1,1,u_{\mathrm{source}},2).
+\]
+Equivalently, the live unresolved front end is the one-corner channel
+$R1\to H_{L1}$ with the entry described in Theorem~\ref{fr:T4}.
+\end{corollary}
+
+\begin{proof}
+This is exactly the combination of the front-end reduction theorem
+(Theorem~\ref{thm:conditional-front-end}), the canonical-entry theorem
+(Theorem~\ref{fr:T4}), and the odometer identification in
+Theorem~\ref{thm:odometer-spine}.
+\end{proof}
+
+\begin{remark}
+This is the point at which the front-end proof changes language completely.
+Before \(T4\), one argues in the grid language of rows and cells.
+After \(T4\), the proof is an exact odometer proof in the coordinates
+\((q,w,u,\Theta)\).
+\end{remark}
+
+\section{Selector surgery and graph-side Hamilton branches}
+\label{sec:selector-surgery}
+
+The present draft is not only about the front end.
+The broader odd-$m$, $d=5$ paper also needs the graph-side part of the
+odometer-view story.
+
+\subsection{Standing theorem packets after the front end}
+
+The current manuscript now records the remaining theorem-side packets in their
+explicit theorem-order form rather than as anonymous imports.
+
+\begin{definition}[theorem-side anchor quotient]
+Let \(X_m\) denote the exact marked carry-jump-to-wrap object on the canonical
+best-seed channel.
+For \(x\in X_m\), write
+\[
+B(x)=(s(x),u(x),v(x),\lambda(x),\mathrm{Fam}(x))
+\]
+for the grouped base and \(\beta(x)\) for the canonical clock.
+Define
+\[
+\pi_{\mathrm{th}}:X_m\to K_m,\qquad x\mapsto(B(x),\beta(x)),
+\]
+and write
+\[
+Q_{\mathrm{th}}:=K_m=\operatorname{im}(\pi_{\mathrm{th}}).
+\]
+\end{definition}
+
+\begin{definition}[the corrected selector families]
+Let \(q^{(2)}_S\), \(q^{(3)}_T\), and \(q^{(2,\star)}_S\) be the explicit row
+tables written in Appendix~\ref{app:selcorr} and
+Appendix~\ref{app:selstar}.
+
+The corrected selector \(\SelCorr\) is the global rule \(x\mapsto q_x\) on the
+torus with:
+\[
+q_x=
+\begin{cases}
+(j-1)_{j=0}^4, & \Sigma(x)=0,\\
+(j+1)_{j=0}^4, & \Sigma(x)=1,\\
+q^{(2)}_{A_2(x)}, & \Sigma(x)=2,\\
+q^{(3)}_{A_3(x)}, & \Sigma(x)=3,\\
+(j)_{j=0}^4, & \Sigma(x)\notin\{0,1,2,3\},
+\end{cases}
+\]
+where \(A_2(x)\) and \(A_3(x)\) are the active sets from
+Appendix~\ref{app:selcorr}.
+
+The selector surgery \(\SelStar\) is the global rule \(x\mapsto q_x^\star\)
+obtained by replacing the slice-\(2\) row \(q^{(2)}_{A_2(x)}\) of
+\(\SelCorr\) by \(q^{(2,\star)}_{A_2(x)}\) and leaving the slice-\(3\) rule
+\(q^{(3)}_{A_3(x)}\) unchanged:
+\[
+q^\star_x=
+\begin{cases}
+(j-1)_{j=0}^4, & \Sigma(x)=0,\\
+(j+1)_{j=0}^4, & \Sigma(x)=1,\\
+q^{(2,\star)}_{A_2(x)}, & \Sigma(x)=2,\\
+q^{(3)}_{A_3(x)}, & \Sigma(x)=3,\\
+(j)_{j=0}^4, & \Sigma(x)\notin\{0,1,2,3\}.
+\end{cases}
+\]
+\end{definition}
+
+\begin{remark}[definition status of the named graph-side objects]
+The main proof line continues to refer to the short names
+\(Q_{\mathrm{th}}\), \(\SelCorr\), and \(\SelStar\), but the manuscript no
+longer leaves them as opaque aliases.
+Appendix~\ref{app:qth} writes the theorem-side quotient literally, and
+Appendices~\ref{app:selcorr}--\ref{app:selstar} record the exact selector rows
+used in the graph-side packets.
+What still remains external is not the definition of these objects, but only
+the proof of the final resonant residual assembly input.
+\end{remark}
+
+\begin{theorem}[theorem-side $M2/M3$ anchor package]
+\label{thm:M23}
+For every odd modulus $m\ge 5$, the exact marked carry-jump-to-wrap object
+exists theorem-side with coordinates equivalent to
+\[
+(\rho,\beta,q_0,\sigma)
+\qquad\text{and}\qquad
+(B,\beta).
+\]
+The quotient \(Q_{\mathrm{th}}=(B,\beta)\) is exact deterministic for the
+current event map, retains grouped base, and factors canonically to
+\((\beta,\delta)\).
+\end{theorem}
+
+\begin{proof}
+The corrected theorem-side package proves that the exact marked
+carry-jump-to-wrap object exists and that the coordinates
+\[
+(B,\beta)
+\qquad\text{and}\qquad
+(\rho,\beta,q_0,\sigma)
+\]
+are equivalent parameterizations of the same exact marked object.
+It also proves the corrected factor theorem: any quotient that is exact
+deterministic for the current event map and retains grouped base factors
+canonically through
+\[
+(B,\beta)\cong(\rho,\beta,q_0,\sigma)\twoheadrightarrow(\beta,\delta).
+\]
+
+For the intended theorem-side quotient we take
+\[
+Q_{\mathrm{th}}=(B,\beta).
+\]
+The quotient-verification step proves directly that this quotient is exact
+deterministic for the current event map and retains grouped base.
+Applying the corrected factor theorem to \(Q_{\mathrm{th}}\) yields the claimed
+canonical factor chain, which is exactly the anchor package used later.
+\end{proof}
+
+\begin{theorem}[corrected-selector baseline theorem for $\SelCorr$]
+\label{thm:M4-SelCorr}
+For every odd modulus $m\ge 5$, the corrected selector family $\SelCorr$
+defines five global torus permutations whose arc sets are pairwise disjoint and
+cover the full directed arc set of the torus.
+\end{theorem}
+
+\begin{proof}
+The direct corrected-selector theorem writes down the explicit slice-\(2\)
+correction \(q^{(2)}_S\) and the explicit slice-\(3\) correction \(q^{(3)}_T\).
+It proves incoming uniqueness on the only nonconstant target slices:
+on target slice \(\Sigma=3\), the incoming color at generator \(j\) ignores the
+single predecessor bit that can change at generator \(j\), so the whole
+incoming row factors through one fixed subset \(M(y)-1\);
+on target slice \(\Sigma=4\), only the transported bits
+\(\mathbf 1_{1\in A_3}\) and \(\mathbf 1_{2\in A_3}\) matter, and they force the
+incoming color pairs \(\{0,2\}\) and \(\{1,4\}\).
+On every other slice the selector row is constant, so incoming uniqueness is
+immediate there as well.
+
+Hence each color map of \(\SelCorr\) has in-degree \(1\) and out-degree \(1\) at
+every vertex, so each color map is a permutation of the torus.
+At each vertex the selector row is a permutation of the five generators, so the
+five selected arcs are exactly the five outgoing torus arcs.
+Therefore the five arc sets are pairwise disjoint and cover the full directed
+arc set.
+\end{proof}
+
+\begin{theorem}[color-$4$ Sel$^{\star}$ Hamilton theorem]
+\label{thm:M5-color4}
+For every odd modulus $m\ge 5$, the color-$4$ torus map coming from the surgery
+family $\SelStar$ is Hamilton.
+\end{theorem}
+
+\begin{proof}
+Let \(F_4^\star\) be the color-$4$ map induced by \(\SelStar\).
+The selector-surgery route reduces Hamiltonicity of \(F_4^\star\) to the
+third-return map on the final section.
+The corrected-row stitching theorem proves that the explicit corrected-row model
+\(U_m^\sharp\) on that final section is a single \(m^2\)-cycle for every odd
+\(m\ge 11\).
+The all-odd identification theorem then proves that the actual third return
+\(U_m\) of \(F_4^\star\) agrees with \(U_m^\sharp\) for every odd \(m\ge 11\).
+Therefore \(U_m\) is one cycle for every odd \(m\ge 11\), and the nested-return
+lift criterion gives Hamiltonicity of \(F_4^\star\) on the full torus.
+
+The remaining odd moduli \(m=5,7,9\) are covered by the direct exact checks
+already recorded with the selector surgery and promoted in the all-odd
+identification step.
+Thus the color-$4$ torus map of \(\SelStar\) is Hamilton for every odd
+\(m\ge 5\).
+\end{proof}
+
+\begin{theorem}[odd-$m$ D5 globalization theorem]
+\label{thm:M6-globalization}
+For every odd modulus $m\ge 5$, every actual lift of the exceptional cutoff row
+$\delta=3m-3$ continues through
+\[
+3m-2\to 3m-1
+\]
+and lies in the regular continuing endpoint class there.
+Consequently no mixed-status realized $\delta$ exists, fixed realized $\delta$
+determines tail length and endpoint class, and raw global $(\beta,\delta)$ is
+exact on the true accessible boundary union.
+\end{theorem}
+
+\begin{proof}
+The one-pass odd-$m$ globalization package proves, in theorem order, the
+structural first-exit theorem, the fixed-\(\delta\) tail-length reduction, the
+chart/interface landing theorem, the regular closure theorem, the actual
+exceptional interface landing theorem, and finally the odd-$m$ D5 globalization
+theorem.
+Its final theorem is exactly the present statement: every actual lift of the
+exceptional cutoff row \(\delta=3m-3\) glues through
+\[
+3m-2\to 3m-1
+\]
+into the regular continuing endpoint class.
+The listed consequences are exactly the consequences extracted there: no
+mixed-status realized \(\delta\), fixed realized \(\delta\) determines tail
+length and endpoint class, and raw global \((\beta,\delta)\) is exact on the
+true accessible boundary union.
+\end{proof}
+
+\begin{remark}[packet status after the Route-E closure]
+At this point the remaining formal-target packets isolated by the older
+closure maps are explicit theorem-order objects:
+the post-entry odometer spine, the theorem-side anchor package \(M23\), the
+corrected-selector baseline theorem \(M4\), the color-$4$ \(\SelStar\) branch,
+the color-$3$ \(\SelStar\) Route-E branch, and the odd-$m$ globalization
+theorem \(M6\).
+What remains later in the manuscript is no longer cyclic transport.
+It is one remaining resonant residual theorem connecting the closed color-$3$ and
+color-$4$ branches to a full Hamilton package at the resonant moduli.
+\end{remark}
+
+\subsection{Historical package exactness}
+
+\begin{definition}[colorwise selector package on the torus]
+A family of local color rules
+\[
+g_0,\dots,g_4
+\]
+on the directed torus is called a \emph{colorwise selector package} when:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item for every vertex, the five selected arcs are exactly the five outgoing
+      torus arcs from that vertex;
+\item for each color $i\in\{0,1,2,3,4\}$ and each vertex $x$, there is exactly
+      one selected color-$i$ arc ending at $x$.
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}[historical package exactness theorem]
+\label{thm:G1-historical}
+There exist five explicit local color rules
+\[
+g_0,\dots,g_4
+\]
+such that
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item outgoing exhaustiveness holds pointwise;
+\item incoming uniqueness holds colorwise;
+\item the induced global maps are torus permutations; and
+\item \(g_4\) is exactly the already closed color-$4$ rule from the
+      \(\SelStar\) branch.
+\end{enumerate}
+In fact one may take the explicit baseline package \(B\) from the graph-side
+baseline theorem, define
+\[
+D_1=\{x:\sigma(x)=2,\ x_0=m-1\},
+\]
+and let \(D_2\) be the color-$4$ layer-$3$ defect union
+\(L3^{(0,p=1)}\cup L3^{(1,p=0)}\) (equivalently
+\(\sigma(x)=3\) together with the corresponding \((x_0,x_1+x_3)\) condition,
+and \(D_2=\varnothing\) when \(m=3\)).
+Then \(g_0=B_0\), \(g_3=B_3\), colors \(1\) and \(4\) are swapped on \(D_1\),
+and colors \(2\) and \(4\) are swapped on \(D_2\).
+\end{theorem}
+
+\begin{proof}
+This is the explicit two-swap splice of d5\_247.
+The surfaced color-$4$ mixed branch equals \(B_1\) on \(D_1\), \(B_2\) on \(D_2\),
+and \(B_4\) elsewhere.
+The sets \(D_1\) and \(D_2\) are invariant under the translations
+\(e_1-e_4\) and \(e_2-e_4\), respectively, so
+\[
+B_1(D_1)=B_4(D_1),
+\qquad
+B_2(D_2)=B_4(D_2).
+\]
+Hence the finite-defect splice criterion preserves the permutation property for
+colors \(1,2,4\), while colors \(0,3\) remain baseline permutations.
+Pointwise outgoing exhaustiveness is preserved because on \(D_1\) one merely
+transposes the baseline directions of colors \(1\) and \(4\), and on \(D_2\) one
+transposes the baseline directions of colors \(2\) and \(4\).
+Thus the resulting package is colorwise permutation, pointwise outgoing-exhaustive,
+and has the required exact color-$4$ branch.
+\end{proof}
+
+\begin{corollary}[the explicit splice gives a colorwise selector package]
+\label{cor:colorwise-package}
+The explicit rules $g_0,\dots,g_4$ from Theorem~\ref{thm:G1-historical} form a colorwise
+selector package on the full torus.
+\end{corollary}
+
+\begin{proof}
+The outgoing-exhaustiveness and colorwise incoming-uniqueness conclusions in
+Theorem~\ref{thm:G1-historical} are exactly the two axioms in the definition above.
+\end{proof}
+
+\begin{remark}[why the historical \(G1/G2\) route is not used]
+The package-exactness theorem above remains mathematically correct and useful as
+historical structure.
+What failed was the further transport step: the explicit package \(g_0,\dots,g_4\)
+is not the output of one color-relative local rule family, so the old cyclic
+transport route cannot supply Hamiltonicity of the remaining colors.
+For the current concrete package, the active graph-side line is instead the
+closed color-$4$ branch together with the new actual color-$3$ Route-E branch.
+\end{remark}
+
+\subsection{The actual color-\texorpdfstring{$3$}{3} Route-E branch}
+
+\begin{theorem}[actual color-$3$ \(P_0\) return formula]
+\label{thm:M5-color3-R}
+For every modulus \(m>2\), let
+\[
+\Pzero=\Bigl\{x\in(\Z/m\Z)^5:\ x_0+x_1+x_2+x_3+x_4=0\Bigr\},
+\qquad
+R_3^\star=(F_3^\star)^m\vert_{\Pzero},
+\]
+where \(F_3^\star\) is the color-$3$ torus map induced by \(\SelStar\).
+Then for every \(x=(x_0,x_1,x_2,x_3,x_4)\in \Pzero\),
+\[
+R_3^\star(x)=x+e_4+e_2+e_{d(x)}-3e_3,
+\]
+where \(d(x)\) is given by:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item if \(x_2=m-2\), \(x_3=m-1\), and \(x_4=m-2\), then \(d(x)=0\);
+\item else if \(x_2=m-2\), \(x_0=m-1\), and \(x_3\neq m-1\), then \(d(x)=4\);
+\item else if \(x_2=m-2\), then \(d(x)=1\);
+\item else if \(x_1=m-1\) and \(x_4=m-2\), then \(d(x)=0\);
+\item else \(d(x)=3\).
+\end{enumerate}
+In particular,
+\[
+x_2(R_3^\star(x))=x_2+1.
+\]
+\end{theorem}
+
+\begin{proof}
+Over the \(m\) steps defining \(R_3^\star\), the exact sum slice runs once
+through \(0,1,2,3,\dots,m-1\).
+For color \(3\), the contributions on slices \(0,1,3,\ge 4\) are fixed:
+\[
+\Sigma=0:\ 4,\qquad
+\Sigma=1:\ 2,\qquad
+\Sigma=3:\ 3,\qquad
+\Sigma\ge 4:\ 3.
+\]
+So the only nontrivial step is the unique \(\Sigma=2\) step.
+At that moment the state is \(x+e_4+e_2\), so the active-index test for the
+slice-\(2\) rule reads
+\[
+\begin{aligned}
+0&\iff x_1=m-1, &\qquad 1&\iff x_2=m-2,\\
+2&\iff x_3=m-1, &\qquad 3&\iff x_4=m-2,\\
+4&\iff x_0=m-1. &&
+\end{aligned}
+\]
+Reading the explicit \(q^{(2,\star)}\) table for color \(3\) gives exactly the
+five cases above.
+Adding this \(\Sigma=2\) contribution to the fixed contributions from the other
+slices yields the formula for \(R_3^\star(x)\).
+The \(x_2\)-clock statement is immediate because every case contributes exactly
+one \(e_2\).
+\end{proof}
+
+\begin{theorem}[actual color-$3$ section identification]
+\label{thm:M5-color3-ident}
+Fix \(m\ge 9\) and write
+\[
+\Ssec=\{x\in\Pzero:\ x_2=m-2\},
+\qquad
+T_m=(R_3^\star)^m\vert_{\Ssec}.
+\]
+On \(\Ssec\), use coordinates
+\[
+(a,b,e)=(x_0,x_1,x_4),
+\qquad
+c=x_3=2-a-b-e \pmod m.
+\]
+Then \(T_m\) is exactly the explicit five-branch model \(\Tsharp\):
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item if \(a=m-1\), \(c\neq m-1\), and \((b\neq m-1\ \text{or}\ e=m-3)\), then
+      \((a,b,e)\mapsto(a,b,e+1)\);
+\item if \(b=m-2\), \(e\neq m-2\), and \((a\neq m-1\ \text{or}\ e=6)\), then
+      \((a,b,e)\mapsto(a+1,b+1,e)\);
+\item if \(e=m-2\) and \(c=m-1\), then
+      \((a,b,e)\mapsto(a+1,b,e)\);
+\item if \(a=m-1\), \(b=m-1\), and \(e\notin\{5,m-3\}\), then
+      \((a,b,e)\mapsto(a+1,b,e+1)\);
+\item otherwise
+      \((a,b,e)\mapsto(a,b+1,e)\).
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Take \(x=(a,b,m-2,c,e)\in \Ssec\).
+By Theorem~\ref{thm:M5-color3-R}, the first \(R_3^\star\) step falls into one
+of three initial classes.
+
+If \(e=m-2\) and \(c=m-1\), the initial step is the special \(d(x)=0\) case, so
+after one \(R_3^\star\) step the state is
+\[
+(a+1,b,m-1,c-3,m-1).
+\]
+On the remaining \(m-1\) steps, the condition \(x_4=m-2\) never occurs, so no
+later special step can occur.  Therefore the orbit returns to \(\Ssec\) at
+\[
+(a+1,b,e),
+\]
+which is branch \textup{(3)}.
+
+If \(a=m-1\) and \(c\neq m-1\), the initial step is the special \(d(x)=4\)
+case, so after one \(R_3^\star\) step the state is
+\[
+(a,b,m-1,c-3,e+2).
+\]
+On the remaining \(m-1\) steps, the only possible nongeneric event is the
+later-special case \(x_1=m-1\) and \(x_4=m-2\).  Here \(x_1=b\) is fixed, while
+\(x_4\) starts at \(e+2\) and increases by \(1\) each time.  So a later-special
+step occurs exactly when \(b=m-1\) and \(e\neq m-3\).  Inside the present
+initial class, the condition \(c\neq m-1\) excludes exactly the exceptional
+value \(e=5\).  Hence:
+\begin{itemize}[leftmargin=2.4em]
+\item if \(b\neq m-1\) or \(e=m-3\), no later-special step occurs and the final
+      section image is \((a,b,e+1)\), giving branch \textup{(1)};
+\item if \(b=m-1\) and \(e\notin\{5,m-3\}\), one later-special step occurs and
+      the final section image is \((a+1,b,e+1)\), giving branch \textup{(4)}.
+\end{itemize}
+
+In every remaining case, the initial step is the generic \(d(x)=1\) case, so
+after one \(R_3^\star\) step the state is
+\[
+(a,b+1,m-1,c-3,e+1).
+\]
+Again the only possible nongeneric event later is \(x_1=m-1\) and \(x_4=m-2\).
+This happens exactly when \(b=m-2\) and \(e\neq m-2\).  Within the present
+initial class, the failure of the previous \(a=m-1,c\neq m-1\) branch is
+equivalent, when \(b=m-2\), to \((a\neq m-1\ \text{or}\ e=6)\).  Therefore:
+\begin{itemize}[leftmargin=2.4em]
+\item if \(b=m-2\), \(e\neq m-2\), and \((a\neq m-1\ \text{or}\ e=6)\), one
+      later-special step occurs and the final section image is
+      \((a+1,b+1,e)\), giving branch \textup{(2)};
+\item otherwise no later-special step occurs and the final section image is
+      \((a,b+1,e)\), giving branch \textup{(5)}.
+\end{itemize}
+
+These cases exhaust \(\Ssec\), so \(T_m=\Tsharp\).
+\end{proof}
+
+\begin{theorem}[color-$3$ Sel$^{\star}$ Hamilton theorem]
+\label{thm:M5-color3}
+For every modulus \(m>2\), the color-$3$ torus map \(F_3^\star\) induced by
+\(\SelStar\) is Hamilton.
+\end{theorem}
+
+\begin{proof}
+For \(m\ge 9\), Theorem~\ref{thm:M5-color3-R} gives an exact \(m\)-step section
+\(\Ssec\) for the \(\Pzero\)-return \(R_3^\star\), and
+Theorem~\ref{thm:M5-color3-ident} identifies the resulting section map with the
+explicit model \(\Tsharp\).
+By the section-model stitching theorem already closed in the Route-E packet,
+\(\Tsharp\) is one \(m^3\)-cycle.  Therefore \(T_m\), then \(R_3^\star\), and
+finally the full torus map \(F_3^\star\) are single cycles.
+
+For the small moduli \(m=3,4,5,6,7,8\), the direct replay checks on the full
+torus close Hamiltonicity individually.
+Thus \(F_3^\star\) is Hamilton for every \(m>2\).
+\end{proof}
+
+
+\begin{proposition}[explicit residual packages at the small odd moduli]
+\label{prop:residual-small-579}
+For the odd moduli $m=5,7,9$, the following selector packages leave the frozen
+color-$3$/color-$4$ backbone unchanged and make colors $0,1,2$ Hamilton:
+\begin{align*}
+&m=5:\quad \{(0,1,0,0),\ (0,2,1,0),\ (0,1,3,3)\},\\
+&m=7:\quad \{(0,1,0,0),\ (0,2,1,0),\ (0,1,3,3),\ (1,2,3,3)\},\\
+&m=9:\quad \{(0,1,4,4),\ (1,2,4,3)\}.
+\end{align*}
+\end{proposition}
+
+\begin{proof}
+Each listed surgery uses only transpositions among colors $0,1,2$, so colors
+$3$ and $4$ remain the frozen backbone colors.
+Exact finite replay on the full $m^5$-vertex torus shows that each of the five
+induced color maps is a single Hamilton cycle at the stated modulus.
+\end{proof}
+
+\begin{theorem}[exact color-$1$ classification for the family $P_m$]
+\label{thm:Pm-color1-classification}
+For odd $m\ge 9$, let
+\[
+P_m:=\{(1,2,1,3),\ (1,2,1,4),\ (0,1,(m-1)/2,4)\}.
+\]
+Then the induced color-$1$ torus map has the following classification.
+\begin{enumerate}[label=\textup{(\alph*)},leftmargin=2.8em]
+\item If $3\nmid m$, then the color-$1$ map of $P_m$ is Hamilton.
+\item If $3\mid m$, then the color-$1$ map of $P_m$ has full-torus cycle
+      lengths
+      \[
+      \frac{m^4(m+1)}3,\quad \frac{m^4(m-1)}3,\quad \frac{m^4(m-2)}3,
+      \quad \frac{m^4}3,\quad \frac{m^4}3,
+      \]
+      and in particular is not Hamilton.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}[Proof sketch / companion-note pointer]
+The exact $P_0$-return formula for color $1$ yields an exact clock
+$x_2\mapsto x_2+1$ on the first section, then an exact second clock
+$x_3\mapsto x_3+1$ on the next section.
+On the lower section, the reduced map admits an exact translation-plus-defect-frame formula.
+Its row-$4$ first-return map is then explicit, from which one obtains:
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=2.8em]
+\item a single $m^2$-cycle on the lower section when $3\nmid m$;
+\item five lower cycles of lengths
+      $m(m+1)/3$, $m(m-1)/3$, $m(m-2)/3$, $m/3$, $m/3$
+      when $3\mid m$.
+\end{enumerate}
+Lifting through the two exact clocks multiplies lower-cycle lengths by $m^3$,
+which gives the stated full-torus classification.
+The exact lower-map formulas are recorded in the companion research note.
+\end{proof}
+
+\begin{corollary}[uniform resonant no-go for $P_m$ on color $1$]
+\label{cor:Pm-color1-resonant-no-go}
+For every odd modulus $m\ge 9$ with $3\mid m$, the family $P_m$ cannot realize
+Frontier~\ref{fr:resonant-residual-assembly}.
+\end{corollary}
+
+\begin{proof}
+By Theorem~\ref{thm:Pm-color1-classification}, the color-$1$ map is not
+Hamilton whenever $3\mid m$.
+\end{proof}
+
+\begin{theorem}[nonresonant residual assembly for the family $P_m$]
+\label{thm:Pm-nonresidual}
+For every odd modulus $m\ge 11$ with $3\nmid m$, the family $P_m$ leaves the
+frozen color-$3$/color-$4$ backbone unchanged and induces Hamilton torus maps
+on colors $0,1,2$.
+\end{theorem}
+
+\begin{proof}[Proof sketch / companion-note pointer]
+Color $1$ is Hamilton by Theorem~\ref{thm:Pm-color1-classification}(a).
+For color $0$, the exact strip first-return law on
+\[
+S_0=\{\Sigma=0,\ x_4=0,\ x_1=0\}
+\]
+produces a single $m^2$-cycle and therefore, after lifting through the exact
+$x_4$-clock, a single $m^5$-cycle.
+For color $2$, the exact lower return on
+\[
+\{\Sigma=0,\ x_3=0,\ x_4=0\}
+\]
+has the form
+\[
+U_2(a,b)=
+\begin{cases}
+(a-4,b+2), & b\in\{0,3,m-3\},\\
+(a-6,b+2), & b\in\{1,2\},\\
+(a-5,b+2), & \text{otherwise,}
+\end{cases}
+\]
+so the $b\mapsto b+2$ clock and one-step net drift in $a$ give a single
+$m^2$-cycle and hence a Hamilton full-torus map.
+Detailed proofs and exact formulas for colors $0$ and $2$ are recorded in the
+companion research note.
+\end{proof}
+
+\begin{corollary}[residual assembly outside resonance]
+\label{cor:residual-outside-resonance}
+For every odd modulus $m\ge 5$ with either $m\in\{5,7,9\}$ or $3\nmid m$,
+there exists a selector package extending the frozen color-$3$/color-$4$
+backbone and making colors $0,1,2$ Hamilton.
+\end{corollary}
+
+\begin{proof}
+Combine Proposition~\ref{prop:residual-small-579} with
+Theorem~\ref{thm:Pm-nonresidual}.
+\end{proof}
+
+\begin{frontier}[remaining resonant residual assembly input]
+\label{fr:resonant-residual-assembly}
+\label{bg:five-color-assembly}
+For every odd modulus $m\ge 15$ with $3\mid m$, there exists a colorwise
+selector package
+\[
+h_0,\dots,h_4
+\]
+on the full torus such that:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item $h_3=F_3^\star$, the closed color-$3$ map of
+      Theorem~\ref{thm:M5-color3};
+\item $h_4=F_4^\star$, the closed color-$4$ map of
+      Theorem~\ref{thm:M5-color4};
+\item the remaining maps $h_0,h_1,h_2$ are Hamilton.
+\end{enumerate}
+\end{frontier}
+
+\begin{remark}[current graph-side honesty boundary]
+The only genuinely missing graph-side theorem is now the resonant residual
+assembly input of Frontier~\ref{fr:resonant-residual-assembly}.
+The small odd moduli and the full nonresonant branch are closed in theorem
+form above.
+\end{remark}
+
+\begin{remark}[companion-note packets for the residual closure]
+The companion research note written alongside the present manuscript records the
+exact reduced-return packets used in the new graph-side closures: the full
+color-$1$ lower-map classification for $P_m$, the exact strip and lower laws
+for nonresonant colors $0$ and $2$, and the current resonant obstruction
+ladder.
+The present text keeps only the theorem-order statements needed for the global
+proof spine.
+\end{remark}
+
+
+\section{Methodological picture of the remaining resonant assembly problem}
+\label{sec:methodological-picture}
+
+This section is explanatory and non-load-bearing.
+It records the current compressed research picture for
+Frontier~\ref{fr:resonant-residual-assembly}.
+No statement in this section is used later in the proof of
+Theorem~\ref{thm:conditional-full}; its role is to explain how the remaining
+resonant assembly problem should now be read.
+
+\begin{remark}[backbone-first compression]
+The graph-side problem is no longer a naive five-color search.
+The color-$4$ branch is closed by Theorem~\ref{thm:M5-color4}, the color-$3$
+branch is closed by Theorem~\ref{thm:M5-color3}, the small odd residual
+packages are closed by Proposition~\ref{prop:residual-small-579}, and the full
+nonresonant branch is closed by Theorem~\ref{thm:Pm-nonresidual}.
+Once those packets are frozen, the unresolved burden is the resonant residual
+assembly problem on colors $0,1,2$ recorded in
+Frontier~\ref{fr:resonant-residual-assembly}.
+The governing method is therefore:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item freeze the exact backbone first;
+\item identify the actual resonant obstruction on the residual colors;
+\item allow repairs only on thin defect supports;
+\item descend by return maps until exact clocks, transducers, and finite
+      normal forms appear.
+\end{enumerate}
+\end{remark}
+
+\begin{remark}[two remaining resonant families]
+The current resonant picture separates into two theorem-search families.
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item \textbf{Pure color-$1$ frontier.}
+      The checked $51$-type branch reaches this frontier directly, and the
+      checked $69$-type branch reaches it after a staircase reduction and one
+      centered support enlargement.
+\item \textbf{$B$-active / gate branch.}
+      The checked $45$-type branch and the checked $75$-type branch remain in a
+      separate family in which the $B$-channel acts on color $0$ and the open
+      problem is no longer a pure color-$1$ breaker but a gate-destination or
+      hybrid repair theorem.
+\end{enumerate}
+Thus the remaining resonant theorem is no longer monolithic even before one
+writes down any normal form.
+\end{remark}
+
+\begin{theorem}[width-$1$ pure color-$1$ obstruction]
+\label{thm:wd1-obstruction}
+Let
+\[
+\widehat{\mathfrak N}_m(0)=
+\{A_{1,4},\,C_{r,4},\,A_{1,3},\,C_{3,3},\,A_{r,3}\},
+\qquad r=(m-1)/2.
+\]
+Assume $3\mid m$ and let
+\[
+R^{\mathrm{wd1}}_{1,m}=h_1^m\big|_{\Sigma=0}
+\]
+be the color-$1$ section return.
+For each $e\in\{0,\dots,m-2\}$, the sets
+\[
+S_{0,e}:=\{(0,b,c,m-1,e): c\equiv 0 \pmod 3\},
+\qquad
+S_{2,e}:=\{(0,b,c,m-1,e): c\equiv 2 \pmod 3\},
+\]
+with $b\equiv 1-c-e\pmod m$, are $R^{\mathrm{wd1}}_{1,m}$-invariant and carry
+cycles of length $m/3$.
+In particular the canonical width-$1$ pure color-$1$ frontier is not Hamilton.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+On these sets one has $d=m-1$, $e\neq m-1$, $a=0$, and $c\not\equiv1\pmod3$.
+The exact width-$1$ section-return formula then collapses to
+\[
+R^{\mathrm{wd1}}_{1,m}(0,b,c,m-1,e)=(0,b-3,c+3,m-1,e),
+\]
+which gives the stated $m/3$-cycles.
+The full derivation is recorded in the companion research note.
+\end{proof}
+
+\begin{theorem}[width-$3$ exact collar correction]
+\label{thm:wd3-collar-correction}
+Let
+\[
+\widehat{\mathfrak N}_m(1)=
+\{A_{1,4},\,C_{r,4},\,A_{1,3},\,C_{3,3},\,C_{r-1,3},\,A_{r,3},\,C_{r+1,3}\},
+\qquad r=(m-1)/2.
+\]
+On $\Sigma=0$, the color-$1$ section return satisfies
+\[
+R^{\mathrm{wd3}}_{1,m}=R^{\mathrm{wd1}}_{1,m}+2\chi\,(e_0-e_1),
+\qquad
+\beta=\mathbf 1[c=m-2],\quad
+\chi=\mathbf 1[d+\beta\equiv m-1].
+\]
+Consequently, on the top collar $d=m-1$, $e\neq m-1$, and $c\neq m-2$, writing
+$w=a+c$, one has the exact transducer law
+\[
+(w,c)\longmapsto \bigl(w+5,\ c+3-\mathbf 1[w=1]\bigr).
+\]
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+The width-$3$ package differs from the width-$1$ package only by the two collar
+rows $C_{r-1,3}$ and $C_{r+1,3}$.
+For color $1$, those rows do not create a new bulk block map; they only reroute
+two $x_1$-steps into $x_0$-steps when the collar indicator $\chi$ is active.
+This gives the correction formula and the stated top-collar transducer.
+Detailed layer-by-layer derivations are recorded in the companion note.
+\end{proof}
+
+\begin{theorem}[width-$3$ double-top obstruction]
+\label{thm:wd3-doubletop-obstruction}
+In the canonical width-$3$ package of Theorem~\ref{thm:wd3-collar-correction},
+restrict to the double-top plane $d=e=m-1$ and write $w=a+c$.
+On the interior $c\neq m-2$ one has the exact transducer law
+\[
+(w,c)\longmapsto \bigl(w+6,\ c+3-\mathbf 1[w=0]\bigr).
+\]
+Hence, for every resonant modulus $3\mid m$, there are invariant fibers
+\[
+\mathcal D_{\lambda,\mu}
+=
+\{(a,b,c,m-1,m-1): a+c\equiv \lambda\!\!\pmod3,\ c\equiv \mu\!\!\pmod3\},
+\]
+with $\lambda\in\{1,2\}$ and $\mu\in\{0,2\}$, each carrying cycles of length
+$m/3$.
+In particular the canonical width-$3$ pure color-$1$ frontier is also not
+Hamilton by itself.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+On the double-top plane the exact width-$3$ section-return law simplifies to a
+$+6$ sweep in $w$ with a single slip line at $w=0$.
+Because $3\mid m$, the map $w\mapsto w+6$ preserves $w\bmod 3$, so the stated
+fibers are invariant and carry explicit $m/3$-cycles.
+The companion note records the full exact calculation.
+\end{proof}
+
+\begin{remark}[what the remaining resonant theorem must supply]
+The pure color-$1$ frontier therefore needs a \emph{double-top breaker}: a
+local resonant repair that is visible on the plane $d=e=m-1$ and destroys the
+mod-$3$ invariant fibers of Theorem~\ref{thm:wd3-doubletop-obstruction}.
+Separately, the $B$-active / gate branch still requires a uniform gate or
+hybrid repair theorem.
+The present resonant frontier is therefore already sharply localized even before
+one writes down the final repair package.
+\end{remark}
+
+\begin{question}[resonant residual assembly target]
+\label{q:resonant-target}
+Can one prove Frontier~\ref{fr:resonant-residual-assembly} by combining:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item a uniform double-top breaker theorem for the pure color-$1$ frontier, and
+\item a uniform $B$-active / gate theorem for the $45$/$75$-type branch?
+\end{enumerate}
+\end{question}
+
+\section{Final upgrade and main theorem}
+
+The endgame is now the corrected generic odd-$m$, $d=5$ upgrade step.
+Compared with the older formulation, the corrected criterion does \emph{not}
+ask for a single common selector family and does \emph{not} use the false
+future-word separation target for the current event map.
+At the present stage, the only graph-side hypothesis still external is the
+resonant residual assembly input.
+The small odd residual packages and the full nonresonant branch are already
+closed theorem-side inside the present manuscript.
+Instead the final step asks for:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item the best-seed channel classification on the front end;
+\item the theorem-side anchor/globalization package;
+\item the remaining resonant residual assembly input.
+\end{enumerate}
+
+\begin{theorem}[corrected generic odd-$m$, $d=5$ upgrade criterion]
+\label{thm:generic-upgrade}
+Let $m\ge 5$ be odd.
+Assume:
+\begin{enumerate}[label=\textup{(G\arabic*)},leftmargin=3.0em]
+\item the front-end channel classification of
+      Corollary~\ref{cor:channel-classification};
+\item the theorem-side anchor package of Theorem~\ref{thm:M23} together with
+      the globalization theorem~\ref{thm:M6-globalization};
+\item the resonant residual assembly input of
+      Frontier~\ref{fr:resonant-residual-assembly}.
+\end{enumerate}
+Then the directed torus $D_5(m)$ admits a decomposition into five arc-disjoint
+Hamilton cycles.
+\end{theorem}
+
+\begin{proof}
+By Proposition~\ref{prop:residual-small-579} and
+Theorem~\ref{thm:Pm-nonresidual}, the graph-side package is already closed when
+$m\in\{5,7,9\}$ or $3\nmid m$.
+In the remaining case $m\ge 15$ and $3\mid m$, assumption (G3) supplies the
+needed colorwise selector package extending the frozen color-$3$/color-$4$
+backbone.
+In every odd modulus, one therefore has five color maps whose outgoing arcs at
+each vertex are exactly the five torus outgoing arcs and whose incoming arcs
+are unique colorwise.
+Hence the five global maps are torus permutations with pairwise disjoint arc
+sets covering the full directed arc set.
+By the corresponding graph-side theorem packet in each case, each of those
+permutations is a Hamilton cycle.
+Therefore the five arc sets form a Hamilton decomposition of $D_5(m)$.
+The role of (G1) and (G2) is not additional combinatorics at this last step;
+it is to identify the selector package and its Hamiltonicity with the actual
+odd-$m$, $d=5$ branch selected by the front-end and theorem-side packets.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:conditional-full}]
+Apply Theorem~\ref{thm:generic-upgrade}.
+\end{proof}
+
+\begin{remark}
+The final theorem is now reduced to one explicit remaining graph-side theorem:
+the resonant residual assembly input of
+Frontier~\ref{fr:resonant-residual-assembly}.
+All small odd and nonresonant cases are already closed theorem-side in the
+present manuscript.
+\end{remark}
+
+
+\section{Dependency ledger for formalization}
+
+For later Leanization or line-level polishing, the main dependency chain used in
+Theorem~\ref{thm:conditional-full} is the following.
+\begin{enumerate}[label=\textup{(D\arabic*)},leftmargin=3.0em]
+\item finite seed certificate and bridge normalization:
+      Proposition~\ref{prop:finite-chart} and
+      Proposition~\ref{prop:bridge-normalization};
+\item the actual-needed tiny-repair core:
+      Theorem~\ref{thm:T0-needed};
+\item the row-theorem block:
+      Theorems~\ref{thm:T2-closed}, \ref{thm:T3-closed},
+      \ref{thm:sigma23-closed}, and \ref{thm:sigma32-closed}, summarized in
+      Theorem~\ref{thm:conditional-front-end};
+\item canonical entry and one-corner odometer identification:
+      Theorem~\ref{fr:T4}, Theorem~\ref{thm:odometer-spine}, and
+      Corollary~\ref{cor:channel-classification};
+\item theorem-side anchor and globalization packets:
+      Theorems~\ref{thm:M23} and \ref{thm:M6-globalization};
+\item graph-side baseline and closed Sel$^{\star}$ branches:
+      Theorems~\ref{thm:M4-SelCorr}, \ref{thm:M5-color4},
+      \ref{thm:M5-color3-R}, \ref{thm:M5-color3-ident}, and
+      \ref{thm:M5-color3};
+\item closed residual packets already internal to the manuscript:
+      Proposition~\ref{prop:residual-small-579},
+      Theorem~\ref{thm:Pm-color1-classification}, and
+      Theorem~\ref{thm:Pm-nonresidual};
+\item remaining resonant residual assembly input:
+      Frontier~\ref{fr:resonant-residual-assembly};
+\item corrected final upgrade:
+      Theorem~\ref{thm:generic-upgrade};
+\item main odd-$m$, $d=5$ theorem:
+      Theorem~\ref{thm:conditional-full}.
+\end{enumerate}
+
+\begin{remark}[status after closure]
+At the level of theorem-order packaging, the front-end slice $T0$--$T4$ is
+closed in the present bundle, the theorem-side and globalization packets are
+explicit theorem objects, the color-$4$ and color-$3$ Sel$^{\star}$ branches
+are closed, and the graph-side residual problem is closed for the small odd and
+full nonresonant ranges.
+The main remaining tightening point for a fully self-contained final theorem is
+the resonant residual assembly step recorded in
+Frontier~\ref{fr:resonant-residual-assembly}.
+\end{remark}
+
+\begin{remark}[non-load-bearing resonant obstruction packets]
+Theorems~\ref{thm:wd1-obstruction}, \ref{thm:wd3-collar-correction}, and
+\ref{thm:wd3-doubletop-obstruction} do not yet sit on the load-bearing path to
+Theorem~\ref{thm:conditional-full}.
+Their role is explanatory: they show exactly why the remaining resonant theorem
+is now concentrated on a double-top breaker problem on the pure color-$1$
+frontier, plus a separate $B$-active / gate branch.
+\end{remark}
+
+\section{Heuristic picture: bridge decentering}
+
+\begin{heuristic}[bridge decentering]
+The front-end chart suggests the following picture.
+Leading and centered bridge positions are unstable.
+The front end tries to decenter toward bridge-compatible terminal positions,
+except that the repeated-end terminal corner \(\sig33\) is itself obstructed.
+This heuristic has now been realized by local slice theorems rather than by a
+single global monotonicity theorem:
+\begin{itemize}[leftmargin=2.4em]
+\item first-column companion or centered-strip escape for \(T1\);
+\item centered-core incompatibility for \(T2\);
+\item repeated-end obstruction for \(T3\).
+\end{itemize}
+\end{heuristic}
+
+\begin{remark}
+This heuristic is useful for explanation and proof search, but it is not itself
+a theorem.
+The actual manuscript should continue to use local theorem objects rather than a
+single global potential story, unless a genuinely odd-uniform monotonicity
+theorem is later found.
+\end{remark}
+
+
+\section{Editorial and continuing-research note}
+
+The mathematical chain recorded in this manuscript now splits into three tracks.
+Future passes should therefore focus on:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item line-level exposition cleanup for the already closed front-end,
+      odometer, theorem-side anchor, color-$4$, color-$3$, small odd residual,
+      and nonresonant residual blocks;
+\item theorem naming, local notation polishing, and synchronization with the
+      companion research note and any formalization ledger;
+\item focused work on the single remaining graph-side theorem isolated in
+      Frontier~\ref{fr:resonant-residual-assembly}, using the resonant
+      obstruction ladder recorded in Section~\ref{sec:methodological-picture}.
+\end{enumerate}
+
+\begin{remark}[how the companion note should be read]
+The companion research note is intended to be read alongside the present
+manuscript.
+It records the exact reduced-return formulas omitted here for space, the case
+split leading from the $51$- and $69$-type branches to the pure color-$1$
+frontier, the current $45$/$75$-type gate picture, and the updated proof-status
+table for the whole residual assembly program.
+The important point is that the open theorem-search burden is now highly
+structured.
+The closed backbone and nonresonant blocks should be treated as stable
+manuscript objects, while new graph-side work should be concentrated on the
+resonant breaker problem rather than on another unrestricted selector search.
+\end{remark}
+
+\appendix
+
+\section{Literal theorem-side quotient}
+\label{app:qth}
+
+The theorem-side quotient used throughout the manuscript is the quotient
+\[
+Q_{\mathrm{th}}=\operatorname{im}(\pi_{\mathrm{th}})
+\]
+of the exact marked carry-jump-to-wrap object \(X_m\) by the map
+\[
+\pi_{\mathrm{th}}(x)=(B(x),\beta(x)).
+\]
+Here
+\[
+B(x)=(s(x),u(x),v(x),\lambda(x),\mathrm{Fam}(x))
+\]
+is the grouped base and \(\beta(x)\) is the canonical clock.
+This is the exact theorem-side key used in the corrected \(M2/M3\) package.
+
+The role of \(Q_{\mathrm{th}}\) in the manuscript is twofold.
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item It is exact deterministic for the current event map and retains grouped
+      base.
+\item It factors canonically through the dynamic bridge
+      \[
+      (B,\beta)\cong(\rho,\beta,q_0,\sigma)\twoheadrightarrow(\beta,\delta),
+      \qquad
+      \delta=q_0+m\sigma.
+      \]
+\end{enumerate}
+So the short name \(Q_{\mathrm{th}}\) in the body is not an extra hidden
+parameterization: it is literally the image of the grouped-base-plus-clock map.
+
+\section{Literal corrected selector \texorpdfstring{\(\SelCorr\)}{SelCorr}}
+\label{app:selcorr}
+
+Work on the torus \(V_m=(\Z/m\Z)^5\), write
+\[
+\Sigma(x)=x_0+x_1+x_2+x_3+x_4\pmod m,
+\]
+and define
+\[
+M(x)=\{i\in\{0,1,2,3,4\}:x_i=m-1\},
+\qquad
+B_2(x)=\{c:x_{c-1}+x_{c+2}\equiv 2\pmod m\},
+\]
+with indices read modulo \(5\).
+The active sets on the defect slices are
+\[
+A_2(x)=M(x)-1=\{c:x_{c+1}=m-1\},
+\qquad
+A_3(x)=B_2(x)\triangle(M(x)-1).
+\]
+
+For a subset \(S\subseteq\{0,1,2,3,4\}\), write \(a_i=\mathbf 1_{i\in S}\).
+The uniform slice-\(2\) correction row is
+\[
+q^{(2)}_S=(q^{(2)}_S(0),q^{(2)}_S(1),q^{(2)}_S(2),q^{(2)}_S(3),q^{(2)}_S(4)),
+\]
+where
+\[
+q^{(2)}_S(0)=
+\begin{cases}
+3,& a_3=1,\ a_1=0,\\
+2,& a_0=1,\\
+0,& \text{otherwise,}
+\end{cases}
+\qquad
+q^{(2)}_S(1)=
+\begin{cases}
+4,& a_4=1,\\
+3,& a_1=1,\\
+1,& \text{otherwise,}
+\end{cases}
+\]
+\[
+q^{(2)}_S(2)=
+\begin{cases}
+0,& a_0=1,\\
+1,& a_0=0,\ a_2=1,\ a_4=1,\\
+4,& a_0=0,\ a_2=1,\ a_4=0,\\
+2,& a_0=0,\ a_2=0,
+\end{cases}
+\]
+\[
+q^{(2)}_S(3)=
+\begin{cases}
+1,& a_1=1\ \text{and}\ (a_0=1\ \text{or}\ a_4=0),\\
+3,& a_1=1,\ a_0=0,\ a_4=1,\\
+3,& a_1=0,\ a_3=0,\\
+2,& a_1=0,\ a_3=1,\ a_0=1,\\
+0,& a_1=0,\ a_3=1,\ a_0=0,
+\end{cases}
+\]
+\[
+q^{(2)}_S(4)=
+\begin{cases}
+2,& a_0=0,\ a_2=1,\\
+3,& a_4=1,\ a_0=1,\ a_1=1,\\
+1,& a_4=1\ \text{and not in the previous case},\\
+4,& a_4=0\ \text{and not in the first case}.
+\end{cases}
+\]
+
+The uniform slice-\(3\) correction row is
+\[
+q^{(3)}_T=
+\bigl(
+2\ \text{if}\ 2\in T\ \text{else}\ 0,\ 
+4\ \text{if}\ 1\in T\ \text{else}\ 1,\ 
+0\ \text{if}\ 2\in T\ \text{else}\ 2,\ 
+3,\ 
+1\ \text{if}\ 1\in T\ \text{else}\ 4
+\bigr).
+\]
+
+Thus the corrected selector \(\SelCorr\) is literally the row field
+\[
+q_x=
+\begin{cases}
+(j-1)_{j=0}^4, & \Sigma(x)=0,\\
+(j+1)_{j=0}^4, & \Sigma(x)=1,\\
+q^{(2)}_{A_2(x)}, & \Sigma(x)=2,\\
+q^{(3)}_{A_3(x)}, & \Sigma(x)=3,\\
+(j)_{j=0}^4, & \Sigma(x)\notin\{0,1,2,3\}.
+\end{cases}
+\]
+If \(p_x=q_x^{-1}\), then the color-\(c\) torus map of \(\SelCorr\) is
+\[
+F_c^{\mathrm{corr}}(x)=x+e_{p_x(c)}.
+\]
+
+\section{Literal selector surgery \texorpdfstring{\(\SelStar\)}{SelStar}}
+\label{app:selstar}
+
+The selector surgery \(\SelStar\) keeps the slice-\(3\) rule \(q^{(3)}\) from
+Appendix~\ref{app:selcorr} and replaces only the slice-\(2\) row by the
+explicit \(32\)-case table \(q^{(2,\star)}_S\) below.
+
+\begin{center}
+\small
+\begin{longtable}{@{}ll@{}}
+\toprule
+$S$ & $q^{(2,\star)}_S$ \\
+\midrule
+\endfirsthead
+\toprule
+$S$ & $q^{(2,\star)}_S$ \\
+\midrule
+\endhead
+$\varnothing$ & $(0,1,2,3,4)$ \\
+$\{0\}$ & $(2,1,0,3,4)$ \\
+$\{1\}$ & $(0,3,2,1,4)$ \\
+$\{0,1\}$ & $(2,3,0,1,4)$ \\
+$\{2\}$ & $(0,1,4,3,2)$ \\
+$\{0,2\}$ & $(4,1,0,3,2)$ \\
+$\{1,2\}$ & $(0,3,4,1,2)$ \\
+$\{0,1,2\}$ & $(4,3,0,1,2)$ \\
+$\{3\}$ & $(0,1,2,3,4)$ \\
+$\{0,3\}$ & $(3,1,2,0,4)$ \\
+$\{1,3\}$ & $(0,3,2,1,4)$ \\
+$\{0,1,3\}$ & $(0,3,2,1,4)$ \\
+$\{2,3\}$ & $(0,1,4,3,2)$ \\
+$\{0,2,3\}$ & $(3,1,4,0,2)$ \\
+$\{1,2,3\}$ & $(3,0,4,1,2)$ \\
+$\{0,1,2,3\}$ & $(3,0,4,1,2)$ \\
+$\{4\}$ & $(0,4,2,3,1)$ \\
+$\{0,4\}$ & $(2,4,0,3,1)$ \\
+$\{1,4\}$ & $(0,4,2,1,3)$ \\
+$\{0,1,4\}$ & $(2,4,0,1,3)$ \\
+$\{2,4\}$ & $(0,1,4,3,2)$ \\
+$\{0,2,4\}$ & $(4,1,0,3,2)$ \\
+$\{1,2,4\}$ & $(0,3,4,1,2)$ \\
+$\{0,1,2,4\}$ & $(4,3,0,1,2)$ \\
+$\{3,4\}$ & $(0,4,2,3,1)$ \\
+$\{0,3,4\}$ & $(3,4,2,0,1)$ \\
+$\{1,3,4\}$ & $(0,4,2,1,3)$ \\
+$\{0,1,3,4\}$ & $(0,4,2,1,3)$ \\
+$\{2,3,4\}$ & $(0,1,4,3,2)$ \\
+$\{0,2,3,4\}$ & $(3,1,4,0,2)$ \\
+$\{1,2,3,4\}$ & $(3,0,4,1,2)$ \\
+$\{0,1,2,3,4\}$ & $(3,0,4,1,2)$ \\
+\bottomrule
+\end{longtable}
+\end{center}
+
+Therefore \(\SelStar\) is the literal row field
+\[
+q^\star_x=
+\begin{cases}
+(j-1)_{j=0}^4, & \Sigma(x)=0,\\
+(j+1)_{j=0}^4, & \Sigma(x)=1,\\
+q^{(2,\star)}_{A_2(x)}, & \Sigma(x)=2,\\
+q^{(3)}_{A_3(x)}, & \Sigma(x)=3,\\
+(j)_{j=0}^4, & \Sigma(x)\notin\{0,1,2,3\}.
+\end{cases}
+\]
+If \(p_x^\star=(q_x^\star)^{-1}\), then the color-\(c\) torus map of
+\(\SelStar\) is
+\[
+F_c^\star(x)=x+e_{p_x^\star(c)}.
+\]
+In particular, the maps \(F_3^\star\) and \(F_4^\star\) used in the body are
+fully specified inside this manuscript.
+
+\end{document}

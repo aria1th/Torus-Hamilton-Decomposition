@@ -1,0 +1,142 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+
+\title{d5\_236: A finite-defect splice principle for the remaining graph-side theorem \(G1\)}
+\author{}
+\date{2026-03-21}
+
+\begin{document}
+\maketitle
+
+\section{Purpose}
+After the graph-side split, the only live object is \(G1\): splice the already
+closed color-$4$ branch into a colorwise package while preserving
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item pointwise outgoing exhaustiveness, and
+\item colorwise incoming uniqueness.
+\end{enumerate}
+The present note packages the exact finite-defect theorem kernel needed for that
+step.
+It is deliberately coordinate-free.
+
+\section{The splice principle}
+Let \(X\) be a finite set.
+For each color \(c\in\{0,1,2,3,4\}\), let
+\[
+ f_c\colon X\to X
+\]
+be a permutation.
+Think of \((f_0,\dots,f_4)\) as the already valid baseline colorwise package.
+Let \(D\subseteq X\) be a defect set, and for each color let
+\[
+ g_c\colon X\to X
+\]
+be a modified map such that
+\[
+ g_c(x)=f_c(x)\qquad (x\notin D).
+\]
+
+\begin{proposition}[one-color finite-defect splice]
+\label{prop:one-color-splice}
+Fix one color \(c\).
+Assume:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item \(g_c\vert_D\) is injective;
+\item the defect image is preserved setwise:
+      \[
+      g_c(D)=f_c(D).
+      \]
+\end{enumerate}
+Then \(g_c\) is a permutation of \(X\).
+\end{proposition}
+
+\begin{proof}
+Because \(f_c\) is a permutation, its image on \(X\setminus D\) is exactly
+\[
+ f_c(X\setminus D)=X\setminus f_c(D).
+\]
+Since \(g_c=f_c\) on \(X\setminus D\), we also have
+\[
+ g_c(X\setminus D)=X\setminus f_c(D)=X\setminus g_c(D).
+\]
+Thus the images of \(D\) and \(X\setminus D\) under \(g_c\) are disjoint and
+cover all of \(X\).
+By injectivity on \(D\) and because \(g_c\) agrees with the permutation \(f_c\)
+on \(X\setminus D\), the map \(g_c\) is injective on each part and has disjoint
+images on the two parts.
+Hence \(g_c\) is bijective.
+\end{proof}
+
+\begin{corollary}[colorwise splice criterion]
+\label{cor:colorwise-splice}
+Suppose for every color \(c\) the hypotheses of
+Proposition~\ref{prop:one-color-splice} hold.
+Then every modified color map \(g_c\) is a permutation.
+So to preserve colorwise incoming uniqueness, one only needs a finite defect
+certificate on the images of the defect sets.
+\end{corollary}
+
+\section{Outgoing exhaustiveness is also a defect-local check}
+Assume in addition that the baseline package satisfies pointwise outgoing
+exhaustiveness:
+for every \(x\in X\), the five chosen outgoing directions form the full set
+\(\{0,1,2,3,4\}\).
+If the modified package agrees with the baseline outside a defect set \(D\),
+then pointwise outgoing exhaustiveness can fail only on \(D\).
+Therefore the two graph-side obligations split cleanly:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item \textbf{Permutation side:} verify the image-preserving splice condition of
+      Corollary~\ref{cor:colorwise-splice};
+\item \textbf{Selector side:} verify pointwise outgoing exhaustiveness on the
+      finite defect set \(D\).
+\end{enumerate}
+
+\begin{theorem}[finite-defect form of \(G1\)]
+\label{thm:G1-finite-defect}
+Let \((f_0,\dots,f_4)\) be a valid baseline colorwise package on a finite set
+\(X\), and let \((g_0,\dots,g_4)\) be a modified package that agrees with the
+baseline outside a defect set \(D\subseteq X\).
+Assume:
+\begin{enumerate}[label=\textup{(\arabic*)},leftmargin=2.8em]
+\item for each color \(c\), the modified defect map \(g_c\vert_D\) is injective;
+\item for each color \(c\), the defect image is preserved setwise:
+      \[
+      g_c(D)=f_c(D);
+      \]
+\item pointwise outgoing exhaustiveness holds for every \(x\in D\).
+\end{enumerate}
+Then \((g_0,\dots,g_4)\) is again a valid colorwise package:
+all five maps are permutations and outgoing exhaustiveness holds pointwise on
+all of \(X\).
+\end{theorem}
+
+\begin{proof}
+By Corollary~\ref{cor:colorwise-splice}, each \(g_c\) is a permutation.
+Outgoing exhaustiveness is unchanged on \(X\setminus D\) because the modified
+package agrees there with the baseline package.
+It holds on \(D\) by hypothesis.
+\end{proof}
+
+\section{Interpretation for the current manuscript}
+This theorem does \emph{not} yet close \(G1\) by itself, because the manuscript
+still needs the actual defect data relating the corrected selector baseline to
+the closed color-$4$ branch.
+But it identifies the exact theorem kernel that remains:
+\begin{itemize}[leftmargin=2.4em]
+\item surface the baseline package and the closed color-$4$ branch on a common
+      state space;
+\item identify the finite defect set where they differ;
+\item verify image-preserving splice for each color on that defect set;
+\item verify pointwise outgoing exhaustiveness on that same defect set.
+\end{itemize}
+So after the closure of \(G2\), the residual content of \(G1\) is a concrete
+finite-defect splice certificate.
+
+\end{document}
