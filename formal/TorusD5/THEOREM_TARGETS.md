@@ -11,9 +11,14 @@ The current preparation branch already proves the abstract model layer:
 - `formal/TorusD5/GroupedReturn.lean`
 - `formal/TorusD5/Cocycle.lean`
 - `formal/TorusD5/Specs.lean`
+- `formal/TorusD5/ExactQuotient.lean`
 
 The future witness proof should ideally land on the spec predicates in
 `Specs.lean`, rather than reproving all model lemmas again downstream.
+
+The theorem-side D5 bridge package should likewise land on the abstract
+quotient interfaces in `ExactQuotient.lean`, rather than baking witness data
+directly into the first abstraction layer.
 
 ## Intended proof landing points
 
@@ -43,6 +48,14 @@ For the future full-witness development, the clean targets are:
      `ProjectsToGroupedSkew`
    - then derive equality with `groupedSkew phi` via
      `eq_groupedSkew_of_projectsToGroupedSkew`
+
+5. Theorem-side bridge target:
+   - define the D5 current-event object on the intended marked quotient
+   - prove the theorem-side quotient is an exact deterministic quotient for
+     that event map
+   - prove the quotient retains grouped base
+   - prove the comparison/factor package toward the dynamic bridge
+     `(beta,q,sigma)` / `(beta,delta)`
 
 ## Why this boundary is useful
 

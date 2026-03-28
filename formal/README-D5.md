@@ -52,6 +52,10 @@ It currently contains:
   symbolic cocycle accumulation layer
 - `TorusD5/Specs.lean`
   theorem/specification interfaces for the extracted model
+- `TorusD5/ExactQuotient.lean`
+  abstract exact-deterministic-quotient interface for an event map,
+  future-word factorization through a quotient,
+  and the rigidity / coordinate-descent layer used by the theorem notes
 
 This branch does **not** yet formalize:
 
@@ -96,10 +100,25 @@ The next safe D5 Lean work should stay one layer behind the research frontier:
 1. keep the extracted-model and spec layer clean and buildable;
 2. formalize abstract bridge / realization interfaces against a deterministic
    quotient `Q` and current-event exactness hypotheses;
-3. if the concrete bridge stabilizes mathematically, add componentwise
+3. formalize grouped-base retention and the theorem-side comparison/factor
+   layer toward `(beta,q,sigma)` / `(beta,delta)`;
+4. if the concrete bridge stabilizes mathematically, add componentwise
    `(beta,q,sigma)` / `(beta,delta)` theorem interfaces;
-4. only formalize a raw global `(beta,delta)` theorem after the globalization
+5. only formalize a raw global `(beta,delta)` theorem after the globalization
    criterion is actually settled.
+
+## Current exact Lean gap
+
+What is missing now is not more extracted-model algebra.
+
+The next real proof obligations are:
+
+- the theorem-side current-event object for the D5 marked quotient;
+- grouped-base retention on that quotient;
+- the comparison/factor theorem from the theorem-side quotient to the dynamic
+  bridge `(beta,q,sigma)` / `(beta,delta)`;
+- only after that, the witness-side proofs that the actual D5 object satisfies
+  those interfaces.
 
 ## Post-closure priority
 

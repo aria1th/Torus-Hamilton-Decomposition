@@ -50,6 +50,13 @@ Current scope:
   - abstract predicates for the grouped-return base law
   - abstract predicates for grouped skew-product projection
   - extensional lemmas reducing those specs to exact map equality
+- Added abstract quotient/rigidity layer:
+  - `formal/TorusD5/ExactQuotient.lean`
+  - exact deterministic quotient interface for an event map
+  - future-word factorization through the quotient
+  - rigidity theorem:
+    if future words separate states, any exact deterministic quotient is injective
+  - unique coordinate descent to the quotient image
 - Added witness-target note:
   - `formal/TorusD5/THEOREM_TARGETS.md`
 - Added D5 Lean frontier documentation:
@@ -64,12 +71,23 @@ Current scope:
   bundle and the next branch is fixed.
 - Keep the witness side out of Lean until the exact section/coordinate
   parameterization target is fixed cleanly enough to avoid rework.
+- Shift the next Lean target from “more extracted model lemmas” to the
+  theorem-side bridge package:
+  exact deterministic quotient for the current event map,
+  grouped-base retention,
+  and comparison/factor statements toward `(beta,delta)`.
 
 ## Next safe targets
 
-1. Start the witness side only after fixing the exact section/coordinate
+1. Add the theorem-side D5 bridge interface:
+   exact deterministic quotient for the current event map,
+   grouped-base retention,
+   and abstract factor/comparison data.
+2. Add the D5-specific current-event bridge layer only after freezing the
+   exact event-map target (`epsilon4` / its formal Lean avatar).
+3. Start the witness side only after fixing the exact section/coordinate
    definitions that the witness proof must hit.
-2. Use `FullCoordinates.lean` to state the future section parameterization
+4. Use `FullCoordinates.lean` to state the future section parameterization
    theorem explicitly, but still stop short of encoding the full witness rule.
 
 ## Not started
@@ -77,6 +95,8 @@ Current scope:
 - Full Lean definition of the `mixed_008` witness rule.
 - Proof that the full witness induces the extracted first-return map.
 - Proof that the full witness induces the grouped-return base map.
+- The theorem-side componentwise/global bridge package around
+  exact deterministic quotients and grouped-base retention.
 - Any cocycle closed form, cohomology normalization, or one-defect normal form.
 - Any formalization of the cycle-only / monodromy-only / anti-compressive
   controls.
