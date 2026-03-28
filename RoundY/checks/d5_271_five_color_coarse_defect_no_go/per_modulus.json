@@ -1,0 +1,442 @@
+[
+  {
+    "class_count": 9,
+    "classes": [
+      "S0",
+      "S1",
+      "S2^0",
+      "S3^(0,0)",
+      "S4+",
+      "S3^(0,1)",
+      "S2^1",
+      "S3^(1,0)",
+      "S3^(1,1)"
+    ],
+    "first_zero_allowed_witness": {
+      "multiplicity": 4,
+      "predecessors": [
+        {
+          "class": "S2^1",
+          "direction": 0,
+          "fixed_color": null,
+          "remaining_dirs": [
+            0,
+            2,
+            4
+          ],
+          "sorted_index_of_direction": 0
+        },
+        {
+          "class": "S2^0",
+          "direction": 1,
+          "fixed_color": null,
+          "remaining_dirs": [
+            0,
+            1,
+            2
+          ],
+          "sorted_index_of_direction": 1
+        },
+        {
+          "class": "S2^0",
+          "direction": 2,
+          "fixed_color": null,
+          "remaining_dirs": [
+            0,
+            2,
+            3
+          ],
+          "sorted_index_of_direction": 1
+        },
+        {
+          "class": "S2^0",
+          "direction": 3,
+          "fixed_color": 3,
+          "remaining_dirs": [
+            0,
+            1,
+            4
+          ],
+          "sorted_index_of_direction": null
+        },
+        {
+          "class": "S2^0",
+          "direction": 4,
+          "fixed_color": 4,
+          "remaining_dirs": [
+            0,
+            1,
+            2
+          ],
+          "sorted_index_of_direction": null
+        }
+      ],
+      "target": [
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      "variable_classes": [
+        "S2^0",
+        "S2^1"
+      ]
+    },
+    "modulus": 5,
+    "unique_target_signatures": 161,
+    "zero_allowed_signature_count": 72
+  },
+  {
+    "class_count": 9,
+    "classes": [
+      "S0",
+      "S1",
+      "S2^0",
+      "S3^(0,0)",
+      "S4+",
+      "S3^(0,1)",
+      "S2^1",
+      "S3^(1,0)",
+      "S3^(1,1)"
+    ],
+    "first_zero_allowed_witness": {
+      "multiplicity": 6,
+      "predecessors": [
+        {
+          "class": "S2^1",
+          "direction": 0,
+          "fixed_color": null,
+          "remaining_dirs": [
+            0,
+            2,
+            4
+          ],
+          "sorted_index_of_direction": 0
+        },
+        {
+          "class": "S2^0",
+          "direction": 1,
+          "fixed_color": null,
+          "remaining_dirs": [
+            0,
+            1,
+            2
+          ],
+          "sorted_index_of_direction": 1
+        },
+        {
+          "class": "S2^0",
+          "direction": 2,
+          "fixed_color": null,
+          "remaining_dirs": [
+            0,
+            2,
+            3
+          ],
+          "sorted_index_of_direction": 1
+        },
+        {
+          "class": "S2^0",
+          "direction": 3,
+          "fixed_color": 3,
+          "remaining_dirs": [
+            0,
+            1,
+            4
+          ],
+          "sorted_index_of_direction": null
+        },
+        {
+          "class": "S2^0",
+          "direction": 4,
+          "fixed_color": 4,
+          "remaining_dirs": [
+            0,
+            1,
+            2
+          ],
+          "sorted_index_of_direction": null
+        }
+      ],
+      "target": [
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      "variable_classes": [
+        "S2^0",
+        "S2^1"
+      ]
+    },
+    "modulus": 7,
+    "unique_target_signatures": 164,
+    "zero_allowed_signature_count": 71
+  },
+  {
+    "class_count": 9,
+    "classes": [
+      "S0",
+      "S1",
+      "S2^0",
+      "S3^(0,0)",
+      "S4+",
+      "S3^(0,1)",
+      "S2^1",
+      "S3^(1,0)",
+      "S3^(1,1)"
+    ],
+    "first_zero_allowed_witness": {
+      "multiplicity": 8,
+      "predecessors": [
+        {
+          "class": "S2^1",
+          "direction": 0,
+          "fixed_color": null,
+          "remaining_dirs": [
+            0,
+            2,
+            4
+          ],
+          "sorted_index_of_direction": 0
+        },
+        {
+          "class": "S2^0",
+          "direction": 1,
+          "fixed_color": null,
+          "remaining_dirs": [
+            0,
+            1,
+            2
+          ],
+          "sorted_index_of_direction": 1
+        },
+        {
+          "class": "S2^0",
+          "direction": 2,
+          "fixed_color": null,
+          "remaining_dirs": [
+            0,
+            2,
+            3
+          ],
+          "sorted_index_of_direction": 1
+        },
+        {
+          "class": "S2^0",
+          "direction": 3,
+          "fixed_color": 3,
+          "remaining_dirs": [
+            0,
+            1,
+            4
+          ],
+          "sorted_index_of_direction": null
+        },
+        {
+          "class": "S2^0",
+          "direction": 4,
+          "fixed_color": 4,
+          "remaining_dirs": [
+            0,
+            1,
+            2
+          ],
+          "sorted_index_of_direction": null
+        }
+      ],
+      "target": [
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      "variable_classes": [
+        "S2^0",
+        "S2^1"
+      ]
+    },
+    "modulus": 9,
+    "unique_target_signatures": 180,
+    "zero_allowed_signature_count": 82
+  },
+  {
+    "class_count": 9,
+    "classes": [
+      "S0",
+      "S1",
+      "S2^0",
+      "S3^(0,0)",
+      "S4+",
+      "S3^(0,1)",
+      "S2^1",
+      "S3^(1,0)",
+      "S3^(1,1)"
+    ],
+    "first_zero_allowed_witness": {
+      "multiplicity": 10,
+      "predecessors": [
+        {
+          "class": "S2^1",
+          "direction": 0,
+          "fixed_color": null,
+          "remaining_dirs": [
+            0,
+            2,
+            4
+          ],
+          "sorted_index_of_direction": 0
+        },
+        {
+          "class": "S2^0",
+          "direction": 1,
+          "fixed_color": null,
+          "remaining_dirs": [
+            0,
+            1,
+            2
+          ],
+          "sorted_index_of_direction": 1
+        },
+        {
+          "class": "S2^0",
+          "direction": 2,
+          "fixed_color": null,
+          "remaining_dirs": [
+            0,
+            2,
+            3
+          ],
+          "sorted_index_of_direction": 1
+        },
+        {
+          "class": "S2^0",
+          "direction": 3,
+          "fixed_color": 3,
+          "remaining_dirs": [
+            0,
+            1,
+            4
+          ],
+          "sorted_index_of_direction": null
+        },
+        {
+          "class": "S2^0",
+          "direction": 4,
+          "fixed_color": 4,
+          "remaining_dirs": [
+            0,
+            1,
+            2
+          ],
+          "sorted_index_of_direction": null
+        }
+      ],
+      "target": [
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      "variable_classes": [
+        "S2^0",
+        "S2^1"
+      ]
+    },
+    "modulus": 11,
+    "unique_target_signatures": 180,
+    "zero_allowed_signature_count": 82
+  },
+  {
+    "class_count": 9,
+    "classes": [
+      "S0",
+      "S1",
+      "S2^0",
+      "S3^(0,0)",
+      "S4+",
+      "S3^(0,1)",
+      "S2^1",
+      "S3^(1,0)",
+      "S3^(1,1)"
+    ],
+    "first_zero_allowed_witness": {
+      "multiplicity": 12,
+      "predecessors": [
+        {
+          "class": "S2^1",
+          "direction": 0,
+          "fixed_color": null,
+          "remaining_dirs": [
+            0,
+            2,
+            4
+          ],
+          "sorted_index_of_direction": 0
+        },
+        {
+          "class": "S2^0",
+          "direction": 1,
+          "fixed_color": null,
+          "remaining_dirs": [
+            0,
+            1,
+            2
+          ],
+          "sorted_index_of_direction": 1
+        },
+        {
+          "class": "S2^0",
+          "direction": 2,
+          "fixed_color": null,
+          "remaining_dirs": [
+            0,
+            2,
+            3
+          ],
+          "sorted_index_of_direction": 1
+        },
+        {
+          "class": "S2^0",
+          "direction": 3,
+          "fixed_color": 3,
+          "remaining_dirs": [
+            0,
+            1,
+            4
+          ],
+          "sorted_index_of_direction": null
+        },
+        {
+          "class": "S2^0",
+          "direction": 4,
+          "fixed_color": 4,
+          "remaining_dirs": [
+            0,
+            1,
+            2
+          ],
+          "sorted_index_of_direction": null
+        }
+      ],
+      "target": [
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      "variable_classes": [
+        "S2^0",
+        "S2^1"
+      ]
+    },
+    "modulus": 13,
+    "unique_target_signatures": 180,
+    "zero_allowed_signature_count": 82
+  }
+]

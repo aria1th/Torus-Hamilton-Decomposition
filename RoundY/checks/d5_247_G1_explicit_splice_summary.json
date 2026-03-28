@@ -1,0 +1,112 @@
+{
+  "all_checked_ok": true,
+  "checked_m_values": [
+    3,
+    5,
+    7,
+    9,
+    11,
+    13
+  ],
+  "conclusion": "For every checked odd modulus m>2, the explicit two-swap splice package is outgoing-exhaustive, colorwise Latin, and agrees exactly with mixed_008 on color 4. The color-4 defect sets are the surface classes D1=L2s1 and D2=L3s30p1 \u222a L3s31p0, and the required image-preserving identities are B1(D1)=B4(D1) and B2(D2)=B4(D2).",
+  "construction": {
+    "D1": "color-4 class L2s1 = {sum=2, x0=m-1}",
+    "D2": "color-4 classes L3s30p1 or L3s31p0; for m>3 this is {sum=3 and ((x0!=m-1 & x1+x3=2) or (x0=m-1 & x1+x3!=2))}; for m=3 it is empty",
+    "baseline": "explicit layer baseline from d5_245",
+    "color4": "exact mixed_008 branch",
+    "splice": "swap colors 1 and 4 on D1, swap colors 2 and 4 on D2, leave colors 0 and 3 unchanged"
+  },
+  "per_m": {
+    "11": {
+      "D1_count": 1331,
+      "D1_image_e1_equals_e4": true,
+      "D2_count": 2420,
+      "D2_image_e2_equals_e4": true,
+      "baseline_color4_diff_count": 3751,
+      "colorwise_permutation_all": true,
+      "g4_matches_mixed_008": true,
+      "incoming_latin_all": true,
+      "m": 11,
+      "n": 161051,
+      "outgoing_bad_vertex_count": 0,
+      "surface_D1_equals_coordinate_D1": true,
+      "surface_D2_equals_coordinate_D2": true
+    },
+    "13": {
+      "D1_count": 2197,
+      "D1_image_e1_equals_e4": true,
+      "D2_count": 4056,
+      "D2_image_e2_equals_e4": true,
+      "baseline_color4_diff_count": 6253,
+      "colorwise_permutation_all": true,
+      "g4_matches_mixed_008": true,
+      "incoming_latin_all": true,
+      "m": 13,
+      "n": 371293,
+      "outgoing_bad_vertex_count": 0,
+      "surface_D1_equals_coordinate_D1": true,
+      "surface_D2_equals_coordinate_D2": true
+    },
+    "3": {
+      "D1_count": 27,
+      "D1_image_e1_equals_e4": true,
+      "D2_count": 0,
+      "D2_image_e2_equals_e4": true,
+      "baseline_color4_diff_count": 27,
+      "colorwise_permutation_all": true,
+      "g4_matches_mixed_008": true,
+      "incoming_latin_all": true,
+      "m": 3,
+      "n": 243,
+      "outgoing_bad_vertex_count": 0,
+      "surface_D1_equals_coordinate_D1": true,
+      "surface_D2_equals_coordinate_D2": true
+    },
+    "5": {
+      "D1_count": 125,
+      "D1_image_e1_equals_e4": true,
+      "D2_count": 200,
+      "D2_image_e2_equals_e4": true,
+      "baseline_color4_diff_count": 325,
+      "colorwise_permutation_all": true,
+      "g4_matches_mixed_008": true,
+      "incoming_latin_all": true,
+      "m": 5,
+      "n": 3125,
+      "outgoing_bad_vertex_count": 0,
+      "surface_D1_equals_coordinate_D1": true,
+      "surface_D2_equals_coordinate_D2": true
+    },
+    "7": {
+      "D1_count": 343,
+      "D1_image_e1_equals_e4": true,
+      "D2_count": 588,
+      "D2_image_e2_equals_e4": true,
+      "baseline_color4_diff_count": 931,
+      "colorwise_permutation_all": true,
+      "g4_matches_mixed_008": true,
+      "incoming_latin_all": true,
+      "m": 7,
+      "n": 16807,
+      "outgoing_bad_vertex_count": 0,
+      "surface_D1_equals_coordinate_D1": true,
+      "surface_D2_equals_coordinate_D2": true
+    },
+    "9": {
+      "D1_count": 729,
+      "D1_image_e1_equals_e4": true,
+      "D2_count": 1296,
+      "D2_image_e2_equals_e4": true,
+      "baseline_color4_diff_count": 2025,
+      "colorwise_permutation_all": true,
+      "g4_matches_mixed_008": true,
+      "incoming_latin_all": true,
+      "m": 9,
+      "n": 59049,
+      "outgoing_bad_vertex_count": 0,
+      "surface_D1_equals_coordinate_D1": true,
+      "surface_D2_equals_coordinate_D2": true
+    }
+  },
+  "task": "d5_247_G1_explicit_splice_checker"
+}

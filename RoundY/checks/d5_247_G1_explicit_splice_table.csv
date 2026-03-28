@@ -1,0 +1,7 @@
+m,n,D1_count,D2_count,surface_D1_equals_coordinate_D1,surface_D2_equals_coordinate_D2,D1_image_e1_equals_e4,D2_image_e2_equals_e4,outgoing_bad_vertex_count,incoming_latin_all,colorwise_permutation_all,g4_matches_mixed_008,baseline_color4_diff_count
+3,243,27,0,1,1,1,1,0,1,1,1,27
+5,3125,125,200,1,1,1,1,0,1,1,1,325
+7,16807,343,588,1,1,1,1,0,1,1,1,931
+9,59049,729,1296,1,1,1,1,0,1,1,1,2025
+11,161051,1331,2420,1,1,1,1,0,1,1,1,3751
+13,371293,2197,4056,1,1,1,1,0,1,1,1,6253

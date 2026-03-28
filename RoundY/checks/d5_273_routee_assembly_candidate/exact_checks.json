@@ -1,0 +1,27 @@
+[
+  {
+    "exact": true,
+    "failure_witness": null,
+    "modulus": 5
+  },
+  {
+    "exact": true,
+    "failure_witness": null,
+    "modulus": 7
+  },
+  {
+    "exact": true,
+    "failure_witness": null,
+    "modulus": 9
+  },
+  {
+    "exact": true,
+    "failure_witness": null,
+    "modulus": 11
+  },
+  {
+    "exact": true,
+    "failure_witness": null,
+    "modulus": 13
+  }
+]

@@ -1,0 +1,57 @@
+{
+  "high_level_conclusions": [
+    "The first mod-30 guided late promotions split cleanly: 183 central is a full exact B_m win, while 201 flank remains non-Hamilton with cycle lengths 103,57,41.",
+    "So the mod-30 atlas should still be read as a routing law for which family to promote first, not as a winner law.",
+    "The 3 mod 30 central-first lane is materially strengthened; the 21 mod 30 flank-first lane remains unresolved after the first promotion."
+  ],
+  "promotions": {
+    "183_central_pair": {
+      "cycle_lengths": [
+        183
+      ],
+      "family": "central_pair",
+      "is_permutation": true,
+      "m": 183,
+      "max_blocks_per_start": 24580835,
+      "short_cycle_witnesses": [],
+      "timing_sec": 408.02498,
+      "verdict": "exact_win",
+      "zero_blocks": 3683909,
+      "zero_target_a": 138
+    },
+    "201_flank_pair": {
+      "cycle_lengths": [
+        103,
+        57,
+        41
+      ],
+      "family": "flank_pair",
+      "is_permutation": true,
+      "m": 201,
+      "max_blocks_per_start": 14665604,
+      "short_cycle_witnesses": [
+        {
+          "a": 0,
+          "length": 103
+        },
+        {
+          "a": 10,
+          "length": 57
+        },
+        {
+          "a": 3,
+          "length": 41
+        }
+      ],
+      "timing_sec": 560.185099,
+      "verdict": "not_hamilton",
+      "zero_blocks": 3272300,
+      "zero_target_a": 80
+    }
+  },
+  "source_notes": [
+    "RoundY/theorem/d5_297_resonant_late_zero_return_atlas.md",
+    "RoundY/theorem/d5_298_resonant_late_mod30_routing_note.md"
+  ],
+  "task": "d5_299_resonant_late_first_exact_promotions"
+}

@@ -1,0 +1,20 @@
+{
+  "all_gate_checks_passed": false,
+  "checked_gate_moduli": [
+    11,
+    13
+  ],
+  "conclusion": "The best d5_277 refined-family rule improves the checked 7/9 behavior, but it does not yet close the large-odd exactness gate. The refined key set stabilizes by m=11, while the local exactness pattern count still grows from 514 to 552 to 560 across 7/9, 7/9/11, and 7/9/11/13.",
+  "key_counts": {
+    "5_7_9": 67,
+    "5_7_9_11": 67,
+    "5_7_9_11_13": 67
+  },
+  "pattern_counts": {
+    "7_9": 514,
+    "7_9_11": 552,
+    "7_9_11_13": 560
+  },
+  "source_rule": "best d5_277 refined-family rule",
+  "task": "d5_278_routee_refined_family_large_odd_gate"
+}

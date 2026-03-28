@@ -1,0 +1,15 @@
+{
+  "183": {
+    "central_pair": {
+      "cycle_lengths": [
+        183
+      ],
+      "is_permutation": true,
+      "max_blocks_per_start": 24580835,
+      "short_cycle_witnesses": [],
+      "timing_sec": 408.02498,
+      "zero_blocks": 3683909,
+      "zero_target_a": 138
+    }
+  }
+}

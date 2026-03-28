@@ -1,0 +1,21 @@
+{
+  "full_b_families": [
+    "central_pair"
+  ],
+  "full_b_moduli": [
+    183
+  ],
+  "high_level_conclusions": [],
+  "max_blocks": 50000000,
+  "protocol": "zero_state_calibration_plus_small_full_B_followup",
+  "source_tar": "/data/angel/repos/modulation-guidance/Torus-Hamilton-Decomposition/tmp/residual_proof_package_2026-03-25.tar",
+  "task": "d5_297_resonant_late_campaign",
+  "timing_sec": 408.026048,
+  "workers": 48,
+  "zero_families": [
+    "promoted_plus",
+    "central_pair",
+    "flank_pair"
+  ],
+  "zero_moduli": []
+}

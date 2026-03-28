@@ -1,0 +1,75 @@
+{
+  "task_id": "D5-SIGMA23-BUNDLE-EXACT-CHECKER-219",
+  "bundle_root": "/mnt/data/bundle197/roundy_d5_endpoint_return_model_bundle_20260321_update_197",
+  "checked_moduli": [
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19
+  ],
+  "all_source_counts_match_m_times_m_minus_1": true,
+  "all_microcase_counts_equal_one": true,
+  "all_second_steps_match_sigma22": true,
+  "all_second_steps_avoid_sigma23": true,
+  "all_neighbor_patterns_are_B_R2_B_B_B": true,
+  "all_actual_deltas_are_12": true,
+  "source_count_pattern": {
+    "3": 6,
+    "5": 20,
+    "7": 42,
+    "9": 72,
+    "11": 110,
+    "13": 156,
+    "15": 210,
+    "17": 272,
+    "19": 342
+  },
+  "microcase_count_pattern": {
+    "3": 1,
+    "5": 1,
+    "7": 1,
+    "9": 1,
+    "11": 1,
+    "13": 1,
+    "15": 1,
+    "17": 1,
+    "19": 1
+  },
+  "representative_relative_data": {
+    "relative_immediate_coords": [
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "relative_actual_second_coords": [
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    "relative_sigma23_second_coords": [
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    "neighbor_labels_by_direction": [
+      "B",
+      "R2",
+      "B",
+      "B",
+      "B"
+    ],
+    "count": 6
+  },
+  "main_result": "For every checked modulus, the surfaced bundle builder constructs sigma21/sigma22/sigma23 without overlap conflicts. Inside sigma21, the entire immediate R1 source family is one rooted microcase, every neighbor pattern is [B,R2,B,B,B], the actual second step has relative displacement (0,1,1,0,0), and it always agrees with sigma22 while differing from sigma23."
+}

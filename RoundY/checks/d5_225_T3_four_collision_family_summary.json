@@ -1,0 +1,686 @@
+{
+  "task_id": "D5-T3-FOUR-COLLISION-FAMILY-CHECK-225",
+  "bundle_root": "/mnt/data/bundle197",
+  "m_values": [
+    3,
+    5,
+    7,
+    9,
+    11
+  ],
+  "left_word": [
+    4,
+    4,
+    1
+  ],
+  "right_word": [
+    2,
+    2,
+    1
+  ],
+  "per_m": {
+    "3": {
+      "pair_counts_color0": {
+        "('B', 'R1')": 6,
+        "('L2', 'R2')": 6
+      },
+      "colliding_changed_labels_color0": [
+        "R1"
+      ],
+      "label_counts_color0": {
+        "B": 213,
+        "L1": 6,
+        "L2": 6,
+        "R1": 6,
+        "R2": 6,
+        "R3": 6
+      },
+      "formula_status": "exceptional m<5 profile recorded"
+    },
+    "5": {
+      "pair_counts_color0": {
+        "('B', 'L2')": 20,
+        "('B', 'L3')": 20,
+        "('B', 'R1')": 20,
+        "('B', 'R3')": 20
+      },
+      "colliding_changed_labels_color0": [
+        "L2",
+        "L3",
+        "R1",
+        "R3"
+      ],
+      "label_counts_color0": {
+        "B": 3005,
+        "L1": 20,
+        "L2": 20,
+        "L3": 20,
+        "R1": 20,
+        "R2": 20,
+        "R3": 20
+      },
+      "formula_status": "m>=5 theorem verified",
+      "four_family_verification": {
+        "verified": true,
+        "families": {
+          "R1": {
+            "source_count": 20,
+            "verified": true,
+            "sample": {
+              "source": {
+                "x0": 0,
+                "q": 4,
+                "w": 0,
+                "v": 0,
+                "u": 2,
+                "s": 2,
+                "layer": 1
+              },
+              "mate": {
+                "x0": 0,
+                "q": 4,
+                "w": 1,
+                "v": 0,
+                "u": 1,
+                "s": 2,
+                "layer": 1
+              },
+              "target": {
+                "x0": 0,
+                "q": 4,
+                "w": 1,
+                "v": 0,
+                "u": 2,
+                "s": 3,
+                "layer": 2
+              }
+            }
+          },
+          "L2": {
+            "source_count": 20,
+            "verified": true,
+            "sample": {
+              "source": {
+                "x0": 0,
+                "q": 4,
+                "w": 4,
+                "v": 0,
+                "u": 4,
+                "s": 3,
+                "layer": 2
+              },
+              "mate": {
+                "x0": 0,
+                "q": 4,
+                "w": 3,
+                "v": 0,
+                "u": 0,
+                "s": 3,
+                "layer": 2
+              },
+              "target": {
+                "x0": 0,
+                "q": 4,
+                "w": 4,
+                "v": 0,
+                "u": 0,
+                "s": 4,
+                "layer": 3
+              }
+            }
+          },
+          "L3": {
+            "source_count": 20,
+            "verified": true,
+            "sample": {
+              "source": {
+                "x0": 0,
+                "q": 4,
+                "w": 4,
+                "v": 0,
+                "u": 0,
+                "s": 4,
+                "layer": 3
+              },
+              "mate": {
+                "x0": 4,
+                "q": 0,
+                "w": 4,
+                "v": 0,
+                "u": 0,
+                "s": 4,
+                "layer": 3
+              },
+              "target": {
+                "x0": 0,
+                "q": 0,
+                "w": 4,
+                "v": 0,
+                "u": 0,
+                "s": 4,
+                "layer": 4
+              }
+            }
+          },
+          "R3": {
+            "source_count": 20,
+            "verified": true,
+            "sample": {
+              "source": {
+                "x0": 0,
+                "q": 4,
+                "w": 2,
+                "v": 0,
+                "u": 2,
+                "s": 4,
+                "layer": 3
+              },
+              "mate": {
+                "x0": 4,
+                "q": 0,
+                "w": 2,
+                "v": 0,
+                "u": 2,
+                "s": 4,
+                "layer": 3
+              },
+              "target": {
+                "x0": 0,
+                "q": 0,
+                "w": 2,
+                "v": 0,
+                "u": 2,
+                "s": 4,
+                "layer": 4
+              }
+            }
+          }
+        }
+      }
+    },
+    "7": {
+      "pair_counts_color0": {
+        "('B', 'L2')": 42,
+        "('B', 'L3')": 42,
+        "('B', 'R1')": 42,
+        "('B', 'R3')": 42
+      },
+      "colliding_changed_labels_color0": [
+        "L2",
+        "L3",
+        "R1",
+        "R3"
+      ],
+      "label_counts_color0": {
+        "B": 16555,
+        "L1": 42,
+        "L2": 42,
+        "L3": 42,
+        "R1": 42,
+        "R2": 42,
+        "R3": 42
+      },
+      "formula_status": "m>=5 theorem verified",
+      "four_family_verification": {
+        "verified": true,
+        "families": {
+          "R1": {
+            "source_count": 42,
+            "verified": true,
+            "sample": {
+              "source": {
+                "x0": 0,
+                "q": 6,
+                "w": 0,
+                "v": 0,
+                "u": 2,
+                "s": 2,
+                "layer": 1
+              },
+              "mate": {
+                "x0": 0,
+                "q": 6,
+                "w": 1,
+                "v": 0,
+                "u": 1,
+                "s": 2,
+                "layer": 1
+              },
+              "target": {
+                "x0": 0,
+                "q": 6,
+                "w": 1,
+                "v": 0,
+                "u": 2,
+                "s": 3,
+                "layer": 2
+              }
+            }
+          },
+          "L2": {
+            "source_count": 42,
+            "verified": true,
+            "sample": {
+              "source": {
+                "x0": 0,
+                "q": 6,
+                "w": 6,
+                "v": 0,
+                "u": 4,
+                "s": 3,
+                "layer": 2
+              },
+              "mate": {
+                "x0": 0,
+                "q": 6,
+                "w": 5,
+                "v": 0,
+                "u": 5,
+                "s": 3,
+                "layer": 2
+              },
+              "target": {
+                "x0": 0,
+                "q": 6,
+                "w": 6,
+                "v": 0,
+                "u": 5,
+                "s": 4,
+                "layer": 3
+              }
+            }
+          },
+          "L3": {
+            "source_count": 42,
+            "verified": true,
+            "sample": {
+              "source": {
+                "x0": 0,
+                "q": 6,
+                "w": 6,
+                "v": 0,
+                "u": 5,
+                "s": 4,
+                "layer": 3
+              },
+              "mate": {
+                "x0": 6,
+                "q": 0,
+                "w": 6,
+                "v": 0,
+                "u": 5,
+                "s": 4,
+                "layer": 3
+              },
+              "target": {
+                "x0": 0,
+                "q": 0,
+                "w": 6,
+                "v": 0,
+                "u": 5,
+                "s": 4,
+                "layer": 4
+              }
+            }
+          },
+          "R3": {
+            "source_count": 42,
+            "verified": true,
+            "sample": {
+              "source": {
+                "x0": 0,
+                "q": 6,
+                "w": 2,
+                "v": 0,
+                "u": 2,
+                "s": 4,
+                "layer": 3
+              },
+              "mate": {
+                "x0": 6,
+                "q": 0,
+                "w": 2,
+                "v": 0,
+                "u": 2,
+                "s": 4,
+                "layer": 3
+              },
+              "target": {
+                "x0": 0,
+                "q": 0,
+                "w": 2,
+                "v": 0,
+                "u": 2,
+                "s": 4,
+                "layer": 4
+              }
+            }
+          }
+        }
+      }
+    },
+    "9": {
+      "pair_counts_color0": {
+        "('B', 'L2')": 72,
+        "('B', 'L3')": 72,
+        "('B', 'R1')": 72,
+        "('B', 'R3')": 72
+      },
+      "colliding_changed_labels_color0": [
+        "L2",
+        "L3",
+        "R1",
+        "R3"
+      ],
+      "label_counts_color0": {
+        "B": 58617,
+        "L1": 72,
+        "L2": 72,
+        "L3": 72,
+        "R1": 72,
+        "R2": 72,
+        "R3": 72
+      },
+      "formula_status": "m>=5 theorem verified",
+      "four_family_verification": {
+        "verified": true,
+        "families": {
+          "R1": {
+            "source_count": 72,
+            "verified": true,
+            "sample": {
+              "source": {
+                "x0": 0,
+                "q": 8,
+                "w": 0,
+                "v": 0,
+                "u": 2,
+                "s": 2,
+                "layer": 1
+              },
+              "mate": {
+                "x0": 0,
+                "q": 8,
+                "w": 1,
+                "v": 0,
+                "u": 1,
+                "s": 2,
+                "layer": 1
+              },
+              "target": {
+                "x0": 0,
+                "q": 8,
+                "w": 1,
+                "v": 0,
+                "u": 2,
+                "s": 3,
+                "layer": 2
+              }
+            }
+          },
+          "L2": {
+            "source_count": 72,
+            "verified": true,
+            "sample": {
+              "source": {
+                "x0": 0,
+                "q": 8,
+                "w": 8,
+                "v": 0,
+                "u": 4,
+                "s": 3,
+                "layer": 2
+              },
+              "mate": {
+                "x0": 0,
+                "q": 8,
+                "w": 7,
+                "v": 0,
+                "u": 5,
+                "s": 3,
+                "layer": 2
+              },
+              "target": {
+                "x0": 0,
+                "q": 8,
+                "w": 8,
+                "v": 0,
+                "u": 5,
+                "s": 4,
+                "layer": 3
+              }
+            }
+          },
+          "L3": {
+            "source_count": 72,
+            "verified": true,
+            "sample": {
+              "source": {
+                "x0": 0,
+                "q": 8,
+                "w": 8,
+                "v": 0,
+                "u": 5,
+                "s": 4,
+                "layer": 3
+              },
+              "mate": {
+                "x0": 8,
+                "q": 0,
+                "w": 8,
+                "v": 0,
+                "u": 5,
+                "s": 4,
+                "layer": 3
+              },
+              "target": {
+                "x0": 0,
+                "q": 0,
+                "w": 8,
+                "v": 0,
+                "u": 5,
+                "s": 4,
+                "layer": 4
+              }
+            }
+          },
+          "R3": {
+            "source_count": 72,
+            "verified": true,
+            "sample": {
+              "source": {
+                "x0": 0,
+                "q": 8,
+                "w": 2,
+                "v": 0,
+                "u": 2,
+                "s": 4,
+                "layer": 3
+              },
+              "mate": {
+                "x0": 8,
+                "q": 0,
+                "w": 2,
+                "v": 0,
+                "u": 2,
+                "s": 4,
+                "layer": 3
+              },
+              "target": {
+                "x0": 0,
+                "q": 0,
+                "w": 2,
+                "v": 0,
+                "u": 2,
+                "s": 4,
+                "layer": 4
+              }
+            }
+          }
+        }
+      }
+    },
+    "11": {
+      "pair_counts_color0": {
+        "('B', 'L2')": 110,
+        "('B', 'L3')": 110,
+        "('B', 'R1')": 110,
+        "('B', 'R3')": 110
+      },
+      "colliding_changed_labels_color0": [
+        "L2",
+        "L3",
+        "R1",
+        "R3"
+      ],
+      "label_counts_color0": {
+        "B": 160391,
+        "L1": 110,
+        "L2": 110,
+        "L3": 110,
+        "R1": 110,
+        "R2": 110,
+        "R3": 110
+      },
+      "formula_status": "m>=5 theorem verified",
+      "four_family_verification": {
+        "verified": true,
+        "families": {
+          "R1": {
+            "source_count": 110,
+            "verified": true,
+            "sample": {
+              "source": {
+                "x0": 0,
+                "q": 10,
+                "w": 0,
+                "v": 0,
+                "u": 2,
+                "s": 2,
+                "layer": 1
+              },
+              "mate": {
+                "x0": 0,
+                "q": 10,
+                "w": 1,
+                "v": 0,
+                "u": 1,
+                "s": 2,
+                "layer": 1
+              },
+              "target": {
+                "x0": 0,
+                "q": 10,
+                "w": 1,
+                "v": 0,
+                "u": 2,
+                "s": 3,
+                "layer": 2
+              }
+            }
+          },
+          "L2": {
+            "source_count": 110,
+            "verified": true,
+            "sample": {
+              "source": {
+                "x0": 0,
+                "q": 10,
+                "w": 10,
+                "v": 0,
+                "u": 4,
+                "s": 3,
+                "layer": 2
+              },
+              "mate": {
+                "x0": 0,
+                "q": 10,
+                "w": 9,
+                "v": 0,
+                "u": 5,
+                "s": 3,
+                "layer": 2
+              },
+              "target": {
+                "x0": 0,
+                "q": 10,
+                "w": 10,
+                "v": 0,
+                "u": 5,
+                "s": 4,
+                "layer": 3
+              }
+            }
+          },
+          "L3": {
+            "source_count": 110,
+            "verified": true,
+            "sample": {
+              "source": {
+                "x0": 0,
+                "q": 10,
+                "w": 10,
+                "v": 0,
+                "u": 5,
+                "s": 4,
+                "layer": 3
+              },
+              "mate": {
+                "x0": 10,
+                "q": 0,
+                "w": 10,
+                "v": 0,
+                "u": 5,
+                "s": 4,
+                "layer": 3
+              },
+              "target": {
+                "x0": 0,
+                "q": 0,
+                "w": 10,
+                "v": 0,
+                "u": 5,
+                "s": 4,
+                "layer": 4
+              }
+            }
+          },
+          "R3": {
+            "source_count": 110,
+            "verified": true,
+            "sample": {
+              "source": {
+                "x0": 0,
+                "q": 10,
+                "w": 2,
+                "v": 0,
+                "u": 2,
+                "s": 4,
+                "layer": 3
+              },
+              "mate": {
+                "x0": 10,
+                "q": 0,
+                "w": 2,
+                "v": 0,
+                "u": 2,
+                "s": 4,
+                "layer": 3
+              },
+              "target": {
+                "x0": 0,
+                "q": 0,
+                "w": 2,
+                "v": 0,
+                "u": 2,
+                "s": 4,
+                "layer": 4
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "runtime_sec": 6.926847058000021
+}

@@ -1,0 +1,807 @@
+{
+  "10": {
+    "P0_size": 10000,
+    "R_case_counts": {
+      "later_generic": 8910,
+      "later_special": 90,
+      "section_A_start": 90,
+      "section_C_start": 10,
+      "section_G_start": 900
+    },
+    "R_formula_failures": [],
+    "R_formula_verified": true,
+    "S_size": 1000,
+    "m": 10,
+    "section_class_counts": {
+      "A": 82,
+      "B": 82,
+      "C": 10,
+      "D": 8,
+      "G": 818
+    },
+    "section_formula_failures": [],
+    "section_formula_verified": true,
+    "section_initial_class_counts": {
+      "A_start": 90,
+      "C_start": 10,
+      "G_start": 900
+    },
+    "section_later_special_counts": {
+      "with_later_special": 90,
+      "without_later_special": 910
+    },
+    "section_return_times": {
+      "10": 1000
+    }
+  },
+  "11": {
+    "P0_size": 14641,
+    "R_case_counts": {
+      "later_generic": 13200,
+      "later_special": 110,
+      "section_A_start": 110,
+      "section_C_start": 11,
+      "section_G_start": 1210
+    },
+    "R_formula_failures": [],
+    "R_formula_verified": true,
+    "S_size": 1331,
+    "m": 11,
+    "section_class_counts": {
+      "A": 101,
+      "B": 101,
+      "C": 11,
+      "D": 9,
+      "G": 1109
+    },
+    "section_formula_failures": [],
+    "section_formula_verified": true,
+    "section_initial_class_counts": {
+      "A_start": 110,
+      "C_start": 11,
+      "G_start": 1210
+    },
+    "section_later_special_counts": {
+      "with_later_special": 110,
+      "without_later_special": 1221
+    },
+    "section_return_times": {
+      "11": 1331
+    }
+  },
+  "12": {
+    "P0_size": 20736,
+    "R_case_counts": {
+      "later_generic": 18876,
+      "later_special": 132,
+      "section_A_start": 132,
+      "section_C_start": 12,
+      "section_G_start": 1584
+    },
+    "R_formula_failures": [],
+    "R_formula_verified": true,
+    "S_size": 1728,
+    "m": 12,
+    "section_class_counts": {
+      "A": 122,
+      "B": 122,
+      "C": 12,
+      "D": 10,
+      "G": 1462
+    },
+    "section_formula_failures": [],
+    "section_formula_verified": true,
+    "section_initial_class_counts": {
+      "A_start": 132,
+      "C_start": 12,
+      "G_start": 1584
+    },
+    "section_later_special_counts": {
+      "with_later_special": 132,
+      "without_later_special": 1596
+    },
+    "section_return_times": {
+      "12": 1728
+    }
+  },
+  "13": {
+    "P0_size": 28561,
+    "R_case_counts": {
+      "later_generic": 26208,
+      "later_special": 156,
+      "section_A_start": 156,
+      "section_C_start": 13,
+      "section_G_start": 2028
+    },
+    "R_formula_failures": [],
+    "R_formula_verified": true,
+    "S_size": 2197,
+    "m": 13,
+    "section_class_counts": {
+      "A": 145,
+      "B": 145,
+      "C": 13,
+      "D": 11,
+      "G": 1883
+    },
+    "section_formula_failures": [],
+    "section_formula_verified": true,
+    "section_initial_class_counts": {
+      "A_start": 156,
+      "C_start": 13,
+      "G_start": 2028
+    },
+    "section_later_special_counts": {
+      "with_later_special": 156,
+      "without_later_special": 2041
+    },
+    "section_return_times": {
+      "13": 2197
+    }
+  },
+  "14": {
+    "P0_size": 38416,
+    "R_case_counts": {
+      "later_generic": 35490,
+      "later_special": 182,
+      "section_A_start": 182,
+      "section_C_start": 14,
+      "section_G_start": 2548
+    },
+    "R_formula_failures": [],
+    "R_formula_verified": true,
+    "S_size": 2744,
+    "m": 14,
+    "section_class_counts": {
+      "A": 170,
+      "B": 170,
+      "C": 14,
+      "D": 12,
+      "G": 2378
+    },
+    "section_formula_failures": [],
+    "section_formula_verified": true,
+    "section_initial_class_counts": {
+      "A_start": 182,
+      "C_start": 14,
+      "G_start": 2548
+    },
+    "section_later_special_counts": {
+      "with_later_special": 182,
+      "without_later_special": 2562
+    },
+    "section_return_times": {
+      "14": 2744
+    }
+  },
+  "15": {
+    "P0_size": 50625,
+    "R_case_counts": {
+      "later_generic": 47040,
+      "later_special": 210,
+      "section_A_start": 210,
+      "section_C_start": 15,
+      "section_G_start": 3150
+    },
+    "R_formula_failures": [],
+    "R_formula_verified": true,
+    "S_size": 3375,
+    "m": 15,
+    "section_class_counts": {
+      "A": 197,
+      "B": 197,
+      "C": 15,
+      "D": 13,
+      "G": 2953
+    },
+    "section_formula_failures": [],
+    "section_formula_verified": true,
+    "section_initial_class_counts": {
+      "A_start": 210,
+      "C_start": 15,
+      "G_start": 3150
+    },
+    "section_later_special_counts": {
+      "with_later_special": 210,
+      "without_later_special": 3165
+    },
+    "section_return_times": {
+      "15": 3375
+    }
+  },
+  "16": {
+    "P0_size": 65536,
+    "R_case_counts": {
+      "later_generic": 61200,
+      "later_special": 240,
+      "section_A_start": 240,
+      "section_C_start": 16,
+      "section_G_start": 3840
+    },
+    "R_formula_failures": [],
+    "R_formula_verified": true,
+    "S_size": 4096,
+    "m": 16,
+    "section_class_counts": {
+      "A": 226,
+      "B": 226,
+      "C": 16,
+      "D": 14,
+      "G": 3614
+    },
+    "section_formula_failures": [],
+    "section_formula_verified": true,
+    "section_initial_class_counts": {
+      "A_start": 240,
+      "C_start": 16,
+      "G_start": 3840
+    },
+    "section_later_special_counts": {
+      "with_later_special": 240,
+      "without_later_special": 3856
+    },
+    "section_return_times": {
+      "16": 4096
+    }
+  },
+  "17": {
+    "P0_size": 83521,
+    "R_case_counts": {
+      "later_generic": 78336,
+      "later_special": 272,
+      "section_A_start": 272,
+      "section_C_start": 17,
+      "section_G_start": 4624
+    },
+    "R_formula_failures": [],
+    "R_formula_verified": true,
+    "S_size": 4913,
+    "m": 17,
+    "section_class_counts": {
+      "A": 257,
+      "B": 257,
+      "C": 17,
+      "D": 15,
+      "G": 4367
+    },
+    "section_formula_failures": [],
+    "section_formula_verified": true,
+    "section_initial_class_counts": {
+      "A_start": 272,
+      "C_start": 17,
+      "G_start": 4624
+    },
+    "section_later_special_counts": {
+      "with_later_special": 272,
+      "without_later_special": 4641
+    },
+    "section_return_times": {
+      "17": 4913
+    }
+  },
+  "18": {
+    "P0_size": 104976,
+    "R_case_counts": {
+      "later_generic": 98838,
+      "later_special": 306,
+      "section_A_start": 306,
+      "section_C_start": 18,
+      "section_G_start": 5508
+    },
+    "R_formula_failures": [],
+    "R_formula_verified": true,
+    "S_size": 5832,
+    "m": 18,
+    "section_class_counts": {
+      "A": 290,
+      "B": 290,
+      "C": 18,
+      "D": 16,
+      "G": 5218
+    },
+    "section_formula_failures": [],
+    "section_formula_verified": true,
+    "section_initial_class_counts": {
+      "A_start": 306,
+      "C_start": 18,
+      "G_start": 5508
+    },
+    "section_later_special_counts": {
+      "with_later_special": 306,
+      "without_later_special": 5526
+    },
+    "section_return_times": {
+      "18": 5832
+    }
+  },
+  "19": {
+    "P0_size": 130321,
+    "R_case_counts": {
+      "later_generic": 123120,
+      "later_special": 342,
+      "section_A_start": 342,
+      "section_C_start": 19,
+      "section_G_start": 6498
+    },
+    "R_formula_failures": [],
+    "R_formula_verified": true,
+    "S_size": 6859,
+    "m": 19,
+    "section_class_counts": {
+      "A": 325,
+      "B": 325,
+      "C": 19,
+      "D": 17,
+      "G": 6173
+    },
+    "section_formula_failures": [],
+    "section_formula_verified": true,
+    "section_initial_class_counts": {
+      "A_start": 342,
+      "C_start": 19,
+      "G_start": 6498
+    },
+    "section_later_special_counts": {
+      "with_later_special": 342,
+      "without_later_special": 6517
+    },
+    "section_return_times": {
+      "19": 6859
+    }
+  },
+  "20": {
+    "P0_size": 160000,
+    "R_case_counts": {
+      "later_generic": 151620,
+      "later_special": 380,
+      "section_A_start": 380,
+      "section_C_start": 20,
+      "section_G_start": 7600
+    },
+    "R_formula_failures": [],
+    "R_formula_verified": true,
+    "S_size": 8000,
+    "m": 20,
+    "section_class_counts": {
+      "A": 362,
+      "B": 362,
+      "C": 20,
+      "D": 18,
+      "G": 7238
+    },
+    "section_formula_failures": [],
+    "section_formula_verified": true,
+    "section_initial_class_counts": {
+      "A_start": 380,
+      "C_start": 20,
+      "G_start": 7600
+    },
+    "section_later_special_counts": {
+      "with_later_special": 380,
+      "without_later_special": 7620
+    },
+    "section_return_times": {
+      "20": 8000
+    }
+  },
+  "21": {
+    "P0_size": 194481,
+    "R_case_counts": {
+      "later_generic": 184800,
+      "later_special": 420,
+      "section_A_start": 420,
+      "section_C_start": 21,
+      "section_G_start": 8820
+    },
+    "R_formula_failures": [],
+    "R_formula_verified": true,
+    "S_size": 9261,
+    "m": 21,
+    "section_class_counts": {
+      "A": 401,
+      "B": 401,
+      "C": 21,
+      "D": 19,
+      "G": 8419
+    },
+    "section_formula_failures": [],
+    "section_formula_verified": true,
+    "section_initial_class_counts": {
+      "A_start": 420,
+      "C_start": 21,
+      "G_start": 8820
+    },
+    "section_later_special_counts": {
+      "with_later_special": 420,
+      "without_later_special": 8841
+    },
+    "section_return_times": {
+      "21": 9261
+    }
+  },
+  "22": {
+    "P0_size": 234256,
+    "R_case_counts": {
+      "later_generic": 223146,
+      "later_special": 462,
+      "section_A_start": 462,
+      "section_C_start": 22,
+      "section_G_start": 10164
+    },
+    "R_formula_failures": [],
+    "R_formula_verified": true,
+    "S_size": 10648,
+    "m": 22,
+    "section_class_counts": {
+      "A": 442,
+      "B": 442,
+      "C": 22,
+      "D": 20,
+      "G": 9722
+    },
+    "section_formula_failures": [],
+    "section_formula_verified": true,
+    "section_initial_class_counts": {
+      "A_start": 462,
+      "C_start": 22,
+      "G_start": 10164
+    },
+    "section_later_special_counts": {
+      "with_later_special": 462,
+      "without_later_special": 10186
+    },
+    "section_return_times": {
+      "22": 10648
+    }
+  },
+  "23": {
+    "P0_size": 279841,
+    "R_case_counts": {
+      "later_generic": 267168,
+      "later_special": 506,
+      "section_A_start": 506,
+      "section_C_start": 23,
+      "section_G_start": 11638
+    },
+    "R_formula_failures": [],
+    "R_formula_verified": true,
+    "S_size": 12167,
+    "m": 23,
+    "section_class_counts": {
+      "A": 485,
+      "B": 485,
+      "C": 23,
+      "D": 21,
+      "G": 11153
+    },
+    "section_formula_failures": [],
+    "section_formula_verified": true,
+    "section_initial_class_counts": {
+      "A_start": 506,
+      "C_start": 23,
+      "G_start": 11638
+    },
+    "section_later_special_counts": {
+      "with_later_special": 506,
+      "without_later_special": 11661
+    },
+    "section_return_times": {
+      "23": 12167
+    }
+  },
+  "24": {
+    "P0_size": 331776,
+    "R_case_counts": {
+      "later_generic": 317400,
+      "later_special": 552,
+      "section_A_start": 552,
+      "section_C_start": 24,
+      "section_G_start": 13248
+    },
+    "R_formula_failures": [],
+    "R_formula_verified": true,
+    "S_size": 13824,
+    "m": 24,
+    "section_class_counts": {
+      "A": 530,
+      "B": 530,
+      "C": 24,
+      "D": 22,
+      "G": 12718
+    },
+    "section_formula_failures": [],
+    "section_formula_verified": true,
+    "section_initial_class_counts": {
+      "A_start": 552,
+      "C_start": 24,
+      "G_start": 13248
+    },
+    "section_later_special_counts": {
+      "with_later_special": 552,
+      "without_later_special": 13272
+    },
+    "section_return_times": {
+      "24": 13824
+    }
+  },
+  "25": {
+    "P0_size": 390625,
+    "R_case_counts": {
+      "later_generic": 374400,
+      "later_special": 600,
+      "section_A_start": 600,
+      "section_C_start": 25,
+      "section_G_start": 15000
+    },
+    "R_formula_failures": [],
+    "R_formula_verified": true,
+    "S_size": 15625,
+    "m": 25,
+    "section_class_counts": {
+      "A": 577,
+      "B": 577,
+      "C": 25,
+      "D": 23,
+      "G": 14423
+    },
+    "section_formula_failures": [],
+    "section_formula_verified": true,
+    "section_initial_class_counts": {
+      "A_start": 600,
+      "C_start": 25,
+      "G_start": 15000
+    },
+    "section_later_special_counts": {
+      "with_later_special": 600,
+      "without_later_special": 15025
+    },
+    "section_return_times": {
+      "25": 15625
+    }
+  },
+  "3": {
+    "P0_size": 81,
+    "R_case_counts": {
+      "later_generic": 48,
+      "later_special": 6,
+      "section_A_start": 6,
+      "section_C_start": 3,
+      "section_G_start": 18
+    },
+    "R_formula_failures": [],
+    "R_formula_verified": true,
+    "S_size": 27,
+    "m": 3,
+    "section_class_counts": {
+      "A": 5,
+      "B": 5,
+      "C": 3,
+      "D": 1,
+      "G": 13
+    },
+    "section_formula_failures": [],
+    "section_formula_verified": true,
+    "section_initial_class_counts": {
+      "A_start": 6,
+      "C_start": 3,
+      "G_start": 18
+    },
+    "section_later_special_counts": {
+      "with_later_special": 6,
+      "without_later_special": 21
+    },
+    "section_return_times": {
+      "3": 27
+    }
+  },
+  "4": {
+    "P0_size": 256,
+    "R_case_counts": {
+      "later_generic": 180,
+      "later_special": 12,
+      "section_A_start": 12,
+      "section_C_start": 4,
+      "section_G_start": 48
+    },
+    "R_formula_failures": [],
+    "R_formula_verified": true,
+    "S_size": 64,
+    "m": 4,
+    "section_class_counts": {
+      "A": 9,
+      "B": 9,
+      "C": 4,
+      "D": 3,
+      "G": 39
+    },
+    "section_formula_failures": [],
+    "section_formula_verified": true,
+    "section_initial_class_counts": {
+      "A_start": 12,
+      "C_start": 4,
+      "G_start": 48
+    },
+    "section_later_special_counts": {
+      "with_later_special": 12,
+      "without_later_special": 52
+    },
+    "section_return_times": {
+      "4": 64
+    }
+  },
+  "5": {
+    "P0_size": 625,
+    "R_case_counts": {
+      "later_generic": 480,
+      "later_special": 20,
+      "section_A_start": 20,
+      "section_C_start": 5,
+      "section_G_start": 100
+    },
+    "R_formula_failures": [],
+    "R_formula_verified": true,
+    "S_size": 125,
+    "m": 5,
+    "section_class_counts": {
+      "A": 17,
+      "B": 17,
+      "C": 5,
+      "D": 3,
+      "G": 83
+    },
+    "section_formula_failures": [],
+    "section_formula_verified": true,
+    "section_initial_class_counts": {
+      "A_start": 20,
+      "C_start": 5,
+      "G_start": 100
+    },
+    "section_later_special_counts": {
+      "with_later_special": 20,
+      "without_later_special": 105
+    },
+    "section_return_times": {
+      "5": 125
+    }
+  },
+  "6": {
+    "P0_size": 1296,
+    "R_case_counts": {
+      "later_generic": 1050,
+      "later_special": 30,
+      "section_A_start": 30,
+      "section_C_start": 6,
+      "section_G_start": 180
+    },
+    "R_formula_failures": [],
+    "R_formula_verified": true,
+    "S_size": 216,
+    "m": 6,
+    "section_class_counts": {
+      "A": 26,
+      "B": 26,
+      "C": 6,
+      "D": 4,
+      "G": 154
+    },
+    "section_formula_failures": [],
+    "section_formula_verified": true,
+    "section_initial_class_counts": {
+      "A_start": 30,
+      "C_start": 6,
+      "G_start": 180
+    },
+    "section_later_special_counts": {
+      "with_later_special": 30,
+      "without_later_special": 186
+    },
+    "section_return_times": {
+      "6": 216
+    }
+  },
+  "7": {
+    "P0_size": 2401,
+    "R_case_counts": {
+      "later_generic": 2016,
+      "later_special": 42,
+      "section_A_start": 42,
+      "section_C_start": 7,
+      "section_G_start": 294
+    },
+    "R_formula_failures": [],
+    "R_formula_verified": true,
+    "S_size": 343,
+    "m": 7,
+    "section_class_counts": {
+      "A": 37,
+      "B": 37,
+      "C": 7,
+      "D": 5,
+      "G": 257
+    },
+    "section_formula_failures": [],
+    "section_formula_verified": true,
+    "section_initial_class_counts": {
+      "A_start": 42,
+      "C_start": 7,
+      "G_start": 294
+    },
+    "section_later_special_counts": {
+      "with_later_special": 42,
+      "without_later_special": 301
+    },
+    "section_return_times": {
+      "7": 343
+    }
+  },
+  "8": {
+    "P0_size": 4096,
+    "R_case_counts": {
+      "later_generic": 3528,
+      "later_special": 56,
+      "section_A_start": 56,
+      "section_C_start": 8,
+      "section_G_start": 448
+    },
+    "R_formula_failures": [],
+    "R_formula_verified": true,
+    "S_size": 512,
+    "m": 8,
+    "section_class_counts": {
+      "A": 49,
+      "B": 49,
+      "C": 8,
+      "D": 7,
+      "G": 399
+    },
+    "section_formula_failures": [],
+    "section_formula_verified": true,
+    "section_initial_class_counts": {
+      "A_start": 56,
+      "C_start": 8,
+      "G_start": 448
+    },
+    "section_later_special_counts": {
+      "with_later_special": 56,
+      "without_later_special": 456
+    },
+    "section_return_times": {
+      "8": 512
+    }
+  },
+  "9": {
+    "P0_size": 6561,
+    "R_case_counts": {
+      "later_generic": 5760,
+      "later_special": 72,
+      "section_A_start": 72,
+      "section_C_start": 9,
+      "section_G_start": 648
+    },
+    "R_formula_failures": [],
+    "R_formula_verified": true,
+    "S_size": 729,
+    "m": 9,
+    "section_class_counts": {
+      "A": 65,
+      "B": 65,
+      "C": 9,
+      "D": 7,
+      "G": 583
+    },
+    "section_formula_failures": [],
+    "section_formula_verified": true,
+    "section_initial_class_counts": {
+      "A_start": 72,
+      "C_start": 9,
+      "G_start": 648
+    },
+    "section_later_special_counts": {
+      "with_later_special": 72,
+      "without_later_special": 657
+    },
+    "section_return_times": {
+      "9": 729
+    }
+  }
+}

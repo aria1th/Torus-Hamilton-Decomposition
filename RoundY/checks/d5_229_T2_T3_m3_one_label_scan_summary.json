@@ -1,0 +1,45 @@
+{
+  "task_id": "D5-T2-T3-M3-ONE-LABEL-SCAN-229",
+  "bundle_root": "/mnt/data/bundlefull/roundy_d5_endpoint_return_model_bundle_20260321_update_197",
+  "m": 3,
+  "rows": {
+    "T2_sigma22": {
+      "latin_all_colors_base": false,
+      "overfull_targets_all_colors": 120,
+      "changed_label_counts_all_colors": {
+        "L2": 30,
+        "L3": 30,
+        "R1": 30,
+        "R2": 30,
+        "R3": 30
+      },
+      "pair_counts_color0": {
+        "('B', 'L2')": 6,
+        "('B', 'L3', 'R3')": 6,
+        "('B', 'R1')": 6,
+        "('B', 'R2')": 6
+      },
+      "one_gate_latin_count": 0,
+      "one_gate_total": 96,
+      "one_bit_latin_count": 0,
+      "one_bit_total": 1920
+    },
+    "T3_sigma33": {
+      "latin_all_colors_base": false,
+      "overfull_targets_all_colors": 60,
+      "changed_label_counts_all_colors": {
+        "L2": 30,
+        "R1": 30,
+        "R2": 30
+      },
+      "pair_counts_color0": {
+        "('B', 'R1')": 6,
+        "('L2', 'R2')": 6
+      },
+      "one_gate_latin_count": 0,
+      "one_gate_total": 96,
+      "one_bit_latin_count": 0,
+      "one_bit_total": 1920
+    }
+  }
+}

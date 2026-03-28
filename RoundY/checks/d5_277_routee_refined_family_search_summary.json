@@ -1,0 +1,48 @@
+{
+  "best_hamilton_counts": {
+    "5": 2,
+    "7": 3,
+    "9": 3
+  },
+  "best_nonhamilton_colors": {
+    "5": [
+      0,
+      1,
+      2
+    ],
+    "7": [
+      0,
+      1
+    ],
+    "9": [
+      0,
+      1
+    ]
+  },
+  "best_score": [
+    2,
+    8,
+    77273,
+    72169
+  ],
+  "conclusion": "The d5_276 defect markers can be injected directly into the finite exactness CSP. The resulting search tests whether the residual five-color assembly obstruction is already resolved by a tiny Route-E-style refinement of the d5_274 class family.",
+  "evaluation_moduli": [
+    5,
+    7,
+    9
+  ],
+  "family": "Refine d5_274 by adding the two d5_276 defect markers g_anchor = 1_{x2=m-1 and x0+2x1+x4=1 mod m} and m_bad = 1_{x4=m-1, x2!=m-1, 2x0+3x1=1 mod 3}.",
+  "key_count": 67,
+  "key_moduli": [
+    5,
+    7,
+    9
+  ],
+  "pattern_count": 514,
+  "search_moduli": [
+    7,
+    9
+  ],
+  "solution_limit": 200,
+  "task": "d5_277_routee_refined_family_search"
+}

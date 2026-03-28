@@ -1,0 +1,57 @@
+{
+  "task_id": "D5-T0-NEEDED-CORE-CHECKER-230",
+  "bundle_root": "/mnt/data/bundle_197/roundy_d5_endpoint_return_model_bundle_20260321_update_197",
+  "checked_m_values": [
+    3,
+    5
+  ],
+  "summary_by_case": {
+    "canonical_T4_needed_core": {
+      "candidate_count": 2016,
+      "checked_m_values": [
+        3,
+        5
+      ],
+      "target_labels": [
+        "L3",
+        "R2",
+        "R3"
+      ],
+      "all_candidates_build": true,
+      "all_candidates_preserve_full_R1_family": true,
+      "distinct_preserved_family_sizes": [
+        6,
+        20
+      ],
+      "distinct_expected_family_sizes": [
+        6,
+        20
+      ]
+    },
+    "sigma21_T1_needed_core": {
+      "candidate_count": 2688,
+      "checked_m_values": [
+        3,
+        5
+      ],
+      "target_labels": [
+        "L2",
+        "L3",
+        "R2",
+        "R3"
+      ],
+      "all_candidates_build": true,
+      "all_candidates_preserve_full_R1_family": true,
+      "distinct_preserved_family_sizes": [
+        6,
+        20
+      ],
+      "distinct_expected_family_sizes": [
+        6,
+        20
+      ]
+    }
+  },
+  "failure_count": 0,
+  "runtime_sec": 11.325732469558716
+}

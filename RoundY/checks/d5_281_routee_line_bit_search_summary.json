@@ -1,0 +1,60 @@
+{
+  "best_hamilton_counts": {
+    "11": 2,
+    "13": 2,
+    "7": 3,
+    "9": 2
+  },
+  "best_nonhamilton_colors": {
+    "11": [
+      0,
+      1,
+      2
+    ],
+    "13": [
+      0,
+      1,
+      2
+    ],
+    "7": [
+      0,
+      2
+    ],
+    "9": [
+      0,
+      1,
+      2
+    ]
+  },
+  "best_score": [
+    2,
+    9,
+    340453,
+    51678,
+    497650
+  ],
+  "conclusion": "The d5_280 line bit is compatible with exact families on the checked search moduli, but it is not by itself enough to finish the five-color assembly problem. In the best time-limited run, the Hamilton-color counts are 3 on m=7 and only 2 on m=9,11,13.",
+  "evaluation_moduli": [
+    7,
+    9,
+    11,
+    13
+  ],
+  "family": "Refine the d5_277/d5_279 Route-E family by adding the d5_280 line bit line7 = 1_{x3!=m-1, x4!=m-1, x0+3x1+x3+3x4=7 mod m} and the d5_279 one-point source bit U = 1_{x=(m-1,6,m-1,m-1,m-1)}.",
+  "key_count": 131,
+  "key_moduli": [
+    7,
+    9,
+    11,
+    13
+  ],
+  "max_seconds": 60.0,
+  "pattern_count": 2354,
+  "search_moduli": [
+    7,
+    9,
+    11
+  ],
+  "solution_limit": 10,
+  "task": "d5_281_routee_line_bit_search"
+}

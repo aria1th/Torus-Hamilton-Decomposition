@@ -1,0 +1,494 @@
+{
+  "family": "rowwise moving adjacent transposition on Z_m^2 with one defect row",
+  "moduli": [
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19
+  ],
+  "per_modulus": {
+    "11": {
+      "canonical_omit_first_return": {
+        "0": 10,
+        "1": 0,
+        "2": 1,
+        "3": 2,
+        "4": 3,
+        "5": 4,
+        "6": 5,
+        "7": 6,
+        "8": 7,
+        "9": 8,
+        "10": 9
+      },
+      "canonical_omit_first_return_cycle_sizes": [
+        11
+      ],
+      "canonical_point0_full_orbit_sizes": [
+        1331
+      ],
+      "canonical_point1_full_orbit_sizes": [
+        1331
+      ],
+      "canonical_shift0_first_return": {
+        "0": 0,
+        "1": 10,
+        "2": 1,
+        "3": 2,
+        "4": 3,
+        "5": 4,
+        "6": 5,
+        "7": 6,
+        "8": 7,
+        "9": 8,
+        "10": 9
+      },
+      "canonical_shift0_first_return_cycle_sizes": [
+        1,
+        10
+      ],
+      "canonical_two_point_full_orbit_sizes": [
+        1331
+      ],
+      "m": 11,
+      "omit_example": {
+        "a": 1,
+        "b": 0,
+        "defect_row": 0
+      },
+      "omit_single_base_orbit_count": 242,
+      "shifted_example": null,
+      "shifted_single_base_orbit_count": 0
+    },
+    "13": {
+      "canonical_omit_first_return": {
+        "0": 12,
+        "1": 0,
+        "2": 1,
+        "3": 2,
+        "4": 3,
+        "5": 4,
+        "6": 5,
+        "7": 6,
+        "8": 7,
+        "9": 8,
+        "10": 9,
+        "11": 10,
+        "12": 11
+      },
+      "canonical_omit_first_return_cycle_sizes": [
+        13
+      ],
+      "canonical_point0_full_orbit_sizes": [
+        2197
+      ],
+      "canonical_point1_full_orbit_sizes": [
+        2197
+      ],
+      "canonical_shift0_first_return": {
+        "0": 0,
+        "1": 12,
+        "2": 1,
+        "3": 2,
+        "4": 3,
+        "5": 4,
+        "6": 5,
+        "7": 6,
+        "8": 7,
+        "9": 8,
+        "10": 9,
+        "11": 10,
+        "12": 11
+      },
+      "canonical_shift0_first_return_cycle_sizes": [
+        1,
+        12
+      ],
+      "canonical_two_point_full_orbit_sizes": [
+        2197
+      ],
+      "m": 13,
+      "omit_example": {
+        "a": 1,
+        "b": 0,
+        "defect_row": 0
+      },
+      "omit_single_base_orbit_count": 338,
+      "shifted_example": null,
+      "shifted_single_base_orbit_count": 0
+    },
+    "15": {
+      "canonical_omit_first_return": {
+        "0": 14,
+        "1": 0,
+        "2": 1,
+        "3": 2,
+        "4": 3,
+        "5": 4,
+        "6": 5,
+        "7": 6,
+        "8": 7,
+        "9": 8,
+        "10": 9,
+        "11": 10,
+        "12": 11,
+        "13": 12,
+        "14": 13
+      },
+      "canonical_omit_first_return_cycle_sizes": [
+        15
+      ],
+      "canonical_point0_full_orbit_sizes": [
+        3375
+      ],
+      "canonical_point1_full_orbit_sizes": [
+        3375
+      ],
+      "canonical_shift0_first_return": {
+        "0": 0,
+        "1": 14,
+        "2": 1,
+        "3": 2,
+        "4": 3,
+        "5": 4,
+        "6": 5,
+        "7": 6,
+        "8": 7,
+        "9": 8,
+        "10": 9,
+        "11": 10,
+        "12": 11,
+        "13": 12,
+        "14": 13
+      },
+      "canonical_shift0_first_return_cycle_sizes": [
+        1,
+        14
+      ],
+      "canonical_two_point_full_orbit_sizes": [
+        3375
+      ],
+      "m": 15,
+      "omit_example": {
+        "a": 1,
+        "b": 0,
+        "defect_row": 0
+      },
+      "omit_single_base_orbit_count": 450,
+      "shifted_example": null,
+      "shifted_single_base_orbit_count": 0
+    },
+    "17": {
+      "canonical_omit_first_return": {
+        "0": 16,
+        "1": 0,
+        "2": 1,
+        "3": 2,
+        "4": 3,
+        "5": 4,
+        "6": 5,
+        "7": 6,
+        "8": 7,
+        "9": 8,
+        "10": 9,
+        "11": 10,
+        "12": 11,
+        "13": 12,
+        "14": 13,
+        "15": 14,
+        "16": 15
+      },
+      "canonical_omit_first_return_cycle_sizes": [
+        17
+      ],
+      "canonical_point0_full_orbit_sizes": [
+        4913
+      ],
+      "canonical_point1_full_orbit_sizes": [
+        4913
+      ],
+      "canonical_shift0_first_return": {
+        "0": 0,
+        "1": 16,
+        "2": 1,
+        "3": 2,
+        "4": 3,
+        "5": 4,
+        "6": 5,
+        "7": 6,
+        "8": 7,
+        "9": 8,
+        "10": 9,
+        "11": 10,
+        "12": 11,
+        "13": 12,
+        "14": 13,
+        "15": 14,
+        "16": 15
+      },
+      "canonical_shift0_first_return_cycle_sizes": [
+        1,
+        16
+      ],
+      "canonical_two_point_full_orbit_sizes": [
+        4913
+      ],
+      "m": 17,
+      "omit_example": {
+        "a": 1,
+        "b": 0,
+        "defect_row": 0
+      },
+      "omit_single_base_orbit_count": 578,
+      "shifted_example": null,
+      "shifted_single_base_orbit_count": 0
+    },
+    "19": {
+      "canonical_omit_first_return": {
+        "0": 18,
+        "1": 0,
+        "2": 1,
+        "3": 2,
+        "4": 3,
+        "5": 4,
+        "6": 5,
+        "7": 6,
+        "8": 7,
+        "9": 8,
+        "10": 9,
+        "11": 10,
+        "12": 11,
+        "13": 12,
+        "14": 13,
+        "15": 14,
+        "16": 15,
+        "17": 16,
+        "18": 17
+      },
+      "canonical_omit_first_return_cycle_sizes": [
+        19
+      ],
+      "canonical_point0_full_orbit_sizes": [
+        6859
+      ],
+      "canonical_point1_full_orbit_sizes": [
+        6859
+      ],
+      "canonical_shift0_first_return": {
+        "0": 0,
+        "1": 18,
+        "2": 1,
+        "3": 2,
+        "4": 3,
+        "5": 4,
+        "6": 5,
+        "7": 6,
+        "8": 7,
+        "9": 8,
+        "10": 9,
+        "11": 10,
+        "12": 11,
+        "13": 12,
+        "14": 13,
+        "15": 14,
+        "16": 15,
+        "17": 16,
+        "18": 17
+      },
+      "canonical_shift0_first_return_cycle_sizes": [
+        1,
+        18
+      ],
+      "canonical_two_point_full_orbit_sizes": [
+        6859
+      ],
+      "m": 19,
+      "omit_example": {
+        "a": 1,
+        "b": 0,
+        "defect_row": 0
+      },
+      "omit_single_base_orbit_count": 722,
+      "shifted_example": null,
+      "shifted_single_base_orbit_count": 0
+    },
+    "3": {
+      "canonical_omit_first_return": {
+        "0": 2,
+        "1": 0,
+        "2": 1
+      },
+      "canonical_omit_first_return_cycle_sizes": [
+        3
+      ],
+      "canonical_point0_full_orbit_sizes": [
+        27
+      ],
+      "canonical_point1_full_orbit_sizes": [
+        27
+      ],
+      "canonical_shift0_first_return": {
+        "0": 0,
+        "1": 2,
+        "2": 1
+      },
+      "canonical_shift0_first_return_cycle_sizes": [
+        1,
+        2
+      ],
+      "canonical_two_point_full_orbit_sizes": [
+        27
+      ],
+      "m": 3,
+      "omit_example": {
+        "a": 1,
+        "b": 0,
+        "defect_row": 0
+      },
+      "omit_single_base_orbit_count": 18,
+      "shifted_example": null,
+      "shifted_single_base_orbit_count": 0
+    },
+    "5": {
+      "canonical_omit_first_return": {
+        "0": 4,
+        "1": 0,
+        "2": 1,
+        "3": 2,
+        "4": 3
+      },
+      "canonical_omit_first_return_cycle_sizes": [
+        5
+      ],
+      "canonical_point0_full_orbit_sizes": [
+        125
+      ],
+      "canonical_point1_full_orbit_sizes": [
+        125
+      ],
+      "canonical_shift0_first_return": {
+        "0": 0,
+        "1": 4,
+        "2": 1,
+        "3": 2,
+        "4": 3
+      },
+      "canonical_shift0_first_return_cycle_sizes": [
+        1,
+        4
+      ],
+      "canonical_two_point_full_orbit_sizes": [
+        125
+      ],
+      "m": 5,
+      "omit_example": {
+        "a": 1,
+        "b": 0,
+        "defect_row": 0
+      },
+      "omit_single_base_orbit_count": 50,
+      "shifted_example": null,
+      "shifted_single_base_orbit_count": 0
+    },
+    "7": {
+      "canonical_omit_first_return": {
+        "0": 6,
+        "1": 0,
+        "2": 1,
+        "3": 2,
+        "4": 3,
+        "5": 4,
+        "6": 5
+      },
+      "canonical_omit_first_return_cycle_sizes": [
+        7
+      ],
+      "canonical_point0_full_orbit_sizes": [
+        343
+      ],
+      "canonical_point1_full_orbit_sizes": [
+        343
+      ],
+      "canonical_shift0_first_return": {
+        "0": 0,
+        "1": 6,
+        "2": 1,
+        "3": 2,
+        "4": 3,
+        "5": 4,
+        "6": 5
+      },
+      "canonical_shift0_first_return_cycle_sizes": [
+        1,
+        6
+      ],
+      "canonical_two_point_full_orbit_sizes": [
+        343
+      ],
+      "m": 7,
+      "omit_example": {
+        "a": 1,
+        "b": 0,
+        "defect_row": 0
+      },
+      "omit_single_base_orbit_count": 98,
+      "shifted_example": null,
+      "shifted_single_base_orbit_count": 0
+    },
+    "9": {
+      "canonical_omit_first_return": {
+        "0": 8,
+        "1": 0,
+        "2": 1,
+        "3": 2,
+        "4": 3,
+        "5": 4,
+        "6": 5,
+        "7": 6,
+        "8": 7
+      },
+      "canonical_omit_first_return_cycle_sizes": [
+        9
+      ],
+      "canonical_point0_full_orbit_sizes": [
+        729
+      ],
+      "canonical_point1_full_orbit_sizes": [
+        729
+      ],
+      "canonical_shift0_first_return": {
+        "0": 0,
+        "1": 8,
+        "2": 1,
+        "3": 2,
+        "4": 3,
+        "5": 4,
+        "6": 5,
+        "7": 6,
+        "8": 7
+      },
+      "canonical_shift0_first_return_cycle_sizes": [
+        1,
+        8
+      ],
+      "canonical_two_point_full_orbit_sizes": [
+        729
+      ],
+      "m": 9,
+      "omit_example": {
+        "a": 1,
+        "b": 0,
+        "defect_row": 0
+      },
+      "omit_single_base_orbit_count": 162,
+      "shifted_example": null,
+      "shifted_single_base_orbit_count": 0
+    }
+  },
+  "task": "d5_239_G1_reduced_omit_target_search"
+}

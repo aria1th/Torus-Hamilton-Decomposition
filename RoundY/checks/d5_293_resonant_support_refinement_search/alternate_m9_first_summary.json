@@ -1,0 +1,708 @@
+{
+  "best_score": [
+    -43,
+    6183,
+    -175,
+    12629
+  ],
+  "best_solution": {
+    "by_modulus": {
+      "15": {
+        "cycle_count": 175,
+        "largest_cycle": 12629,
+        "p0_return_histogram_color1": {
+          "1": 2,
+          "1109": 1,
+          "1149": 1,
+          "118": 1,
+          "124": 1,
+          "125": 2,
+          "12629": 1,
+          "127": 1,
+          "146": 1,
+          "15": 130,
+          "2013": 1,
+          "215": 6,
+          "25": 9,
+          "31": 1,
+          "310": 1,
+          "312": 1,
+          "325": 2,
+          "326": 1,
+          "561": 1,
+          "6222": 1,
+          "651": 1,
+          "667": 1,
+          "7": 1,
+          "72": 1,
+          "723": 1,
+          "8": 1,
+          "8441": 1,
+          "87": 1,
+          "906": 1,
+          "9519": 1
+        }
+      },
+      "9": {
+        "cycle_count": 43,
+        "largest_cycle": 6183,
+        "p0_return_histogram_color1": {
+          "6183": 1,
+          "9": 42
+        }
+      }
+    },
+    "rule": {
+      "S0|G0|M0|U0|L0|PC:double": [
+        0,
+        1,
+        2
+      ],
+      "S0|G0|M0|U0|L0|PC:hinge_double": [
+        0,
+        1,
+        2
+      ],
+      "S0|G0|M0|U0|L0|PC:hinge_top": [
+        0,
+        1,
+        2
+      ],
+      "S0|G0|M0|U0|L0|PC:top": [
+        0,
+        1,
+        2
+      ],
+      "S0|G0|M0|U0|L1|PC:hinge_top": [
+        0,
+        1,
+        2
+      ],
+      "S0|G0|M1|U0|L0|PC:double": [
+        0,
+        1,
+        2
+      ],
+      "S0|G0|M1|U0|L0|PC:hinge_double": [
+        0,
+        1,
+        2
+      ],
+      "S0|G0|M1|U0|L0|PC:hinge_top": [
+        0,
+        1,
+        2
+      ],
+      "S0|G0|M1|U0|L0|PC:top": [
+        0,
+        1,
+        2
+      ],
+      "S0|G0|M1|U0|L1|PC:hinge_top": [
+        0,
+        1,
+        2
+      ],
+      "S0|G1|M0|U0|L0|PC:double": [
+        0,
+        1,
+        2
+      ],
+      "S0|G1|M0|U0|L0|PC:top": [
+        0,
+        1,
+        2
+      ],
+      "S0|G1|M1|U0|L0|PC:top": [
+        0,
+        1,
+        2
+      ],
+      "S1|G0|M0|U0|L0|PC:double": [
+        2,
+        0,
+        1
+      ],
+      "S1|G0|M0|U0|L0|PC:hinge_double": [
+        2,
+        0,
+        1
+      ],
+      "S1|G0|M0|U0|L0|PC:hinge_top": [
+        2,
+        0,
+        1
+      ],
+      "S1|G0|M0|U0|L0|PC:top": [
+        2,
+        0,
+        1
+      ],
+      "S1|G0|M0|U0|L1|PC:hinge_top": [
+        2,
+        0,
+        1
+      ],
+      "S1|G0|M1|U0|L0|PC:double": [
+        2,
+        0,
+        1
+      ],
+      "S1|G0|M1|U0|L0|PC:hinge_double": [
+        2,
+        0,
+        1
+      ],
+      "S1|G0|M1|U0|L0|PC:hinge_top": [
+        2,
+        0,
+        1
+      ],
+      "S1|G0|M1|U0|L0|PC:top": [
+        2,
+        0,
+        1
+      ],
+      "S1|G1|M0|U0|L0|PC:double": [
+        2,
+        0,
+        1
+      ],
+      "S1|G1|M0|U0|L0|PC:top": [
+        2,
+        0,
+        1
+      ],
+      "S1|G1|M1|U0|L0|PC:top": [
+        2,
+        0,
+        1
+      ],
+      "S2({0,1,2,3,4})|G0|M0|U1|L0|PC:double": [
+        2,
+        1,
+        0
+      ],
+      "S2({0,1,2,3})|G0|M0|U0|L0|PC:double": [
+        0,
+        1,
+        2
+      ],
+      "S2({0,1,2,4})|G0|M0|U0|L0|PC:top": [
+        2,
+        1,
+        0
+      ],
+      "S2({0,1,2,4})|G0|M1|U0|L0|PC:top": [
+        2,
+        1,
+        0
+      ],
+      "S2({0,1,2})|G0|M0|U0|L0|PC:top": [
+        1,
+        0,
+        2
+      ],
+      "S2({0,1,2})|G0|M1|U0|L0|PC:top": [
+        1,
+        0,
+        2
+      ],
+      "S2({0,2,3,4})|G0|M0|U0|L0|PC:double": [
+        0,
+        2,
+        1
+      ],
+      "S2({0,2,3,4})|G0|M1|U0|L0|PC:double": [
+        0,
+        2,
+        1
+      ],
+      "S2({0,2,3})|G0|M0|U0|L0|PC:double": [
+        0,
+        1,
+        2
+      ],
+      "S2({0,2,3})|G0|M1|U0|L0|PC:double": [
+        0,
+        1,
+        2
+      ],
+      "S2({0,2,4})|G0|M0|U0|L0|PC:top": [
+        0,
+        2,
+        1
+      ],
+      "S2({0,2,4})|G0|M1|U0|L0|PC:top": [
+        0,
+        2,
+        1
+      ],
+      "S2({0,2})|G0|M0|U0|L0|PC:top": [
+        0,
+        1,
+        2
+      ],
+      "S2({0,2})|G0|M1|U0|L0|PC:top": [
+        0,
+        1,
+        2
+      ],
+      "S2({0,3,4})|G0|M1|U0|L0|PC:hinge_double": [
+        0,
+        2,
+        1
+      ],
+      "S2({0,3})|G0|M0|U0|L0|PC:hinge_double": [
+        1,
+        2,
+        0
+      ],
+      "S2({0,3})|G0|M1|U0|L0|PC:hinge_double": [
+        1,
+        2,
+        0
+      ],
+      "S2({0,4})|G0|M0|U0|L0|PC:hinge_top": [
+        1,
+        2,
+        0
+      ],
+      "S2({0,4})|G0|M0|U0|L1|PC:hinge_top": [
+        1,
+        2,
+        0
+      ],
+      "S2({0,4})|G0|M1|U0|L0|PC:hinge_top": [
+        0,
+        1,
+        2
+      ],
+      "S2({0})|G0|M0|U0|L0|PC:hinge_top": [
+        1,
+        2,
+        0
+      ],
+      "S2({0})|G0|M0|U0|L1|PC:hinge_top": [
+        1,
+        2,
+        0
+      ],
+      "S2({0})|G0|M1|U0|L0|PC:hinge_top": [
+        1,
+        2,
+        0
+      ],
+      "S2({0})|G0|M1|U0|L1|PC:hinge_top": [
+        0,
+        1,
+        2
+      ],
+      "S2({1,2,3,4})|G0|M0|U1|L0|PC:double": [
+        1,
+        2,
+        0
+      ],
+      "S2({1,2,3,4})|G1|M0|U1|L0|PC:double": [
+        1,
+        2,
+        0
+      ],
+      "S2({1,2,3})|G0|M0|U0|L0|PC:double": [
+        0,
+        2,
+        1
+      ],
+      "S2({1,2,3})|G1|M0|U0|L0|PC:double": [
+        0,
+        2,
+        1
+      ],
+      "S2({1,2,4})|G0|M0|U0|L0|PC:top": [
+        1,
+        2,
+        0
+      ],
+      "S2({1,2,4})|G0|M1|U0|L0|PC:top": [
+        1,
+        2,
+        0
+      ],
+      "S2({1,2,4})|G1|M0|U0|L0|PC:top": [
+        1,
+        2,
+        0
+      ],
+      "S2({1,2,4})|G1|M1|U0|L0|PC:top": [
+        0,
+        1,
+        2
+      ],
+      "S2({1,2})|G0|M0|U0|L0|PC:top": [
+        1,
+        2,
+        0
+      ],
+      "S2({1,2})|G0|M1|U0|L0|PC:top": [
+        1,
+        2,
+        0
+      ],
+      "S2({1,2})|G1|M0|U0|L0|PC:top": [
+        1,
+        2,
+        0
+      ],
+      "S2({1,2})|G1|M1|U0|L0|PC:top": [
+        1,
+        2,
+        0
+      ],
+      "S2({2,3,4})|G0|M0|U0|L0|PC:double": [
+        1,
+        0,
+        2
+      ],
+      "S2({2,3,4})|G0|M1|U0|L0|PC:double": [
+        1,
+        0,
+        2
+      ],
+      "S2({2,3})|G0|M0|U0|L0|PC:double": [
+        1,
+        0,
+        2
+      ],
+      "S2({2,3})|G0|M1|U0|L0|PC:double": [
+        1,
+        0,
+        2
+      ],
+      "S2({2,4})|G0|M0|U0|L0|PC:top": [
+        1,
+        0,
+        2
+      ],
+      "S2({2,4})|G0|M1|U0|L0|PC:top": [
+        1,
+        0,
+        2
+      ],
+      "S2({2})|G0|M0|U0|L0|PC:top": [
+        1,
+        0,
+        2
+      ],
+      "S2({2})|G0|M1|U0|L0|PC:top": [
+        1,
+        0,
+        2
+      ],
+      "S2({3,4})|G0|M0|U0|L0|PC:hinge_double": [
+        2,
+        0,
+        1
+      ],
+      "S2({3,4})|G0|M1|U0|L0|PC:hinge_double": [
+        0,
+        1,
+        2
+      ],
+      "S2({3})|G0|M0|U0|L0|PC:hinge_double": [
+        2,
+        0,
+        1
+      ],
+      "S2({3})|G0|M1|U0|L0|PC:hinge_double": [
+        2,
+        0,
+        1
+      ],
+      "S2({4})|G0|M0|U0|L0|PC:hinge_top": [
+        2,
+        0,
+        1
+      ],
+      "S2({4})|G0|M0|U0|L1|PC:hinge_top": [
+        2,
+        0,
+        1
+      ],
+      "S2({4})|G0|M1|U0|L0|PC:hinge_top": [
+        2,
+        0,
+        1
+      ],
+      "S2({})|G0|M0|U0|L0|PC:hinge_top": [
+        1,
+        0,
+        2
+      ],
+      "S2({})|G0|M0|U0|L1|PC:hinge_top": [
+        1,
+        0,
+        2
+      ],
+      "S2({})|G0|M1|U0|L0|PC:hinge_top": [
+        1,
+        0,
+        2
+      ],
+      "S2({})|G0|M1|U0|L1|PC:hinge_top": [
+        0,
+        1,
+        2
+      ],
+      "S3(0)|G0|M0|U0|L0|PC:double": [
+        2,
+        1,
+        0
+      ],
+      "S3(0)|G0|M0|U0|L0|PC:hinge_double": [
+        2,
+        0,
+        1
+      ],
+      "S3(0)|G0|M0|U0|L0|PC:hinge_top": [
+        2,
+        0,
+        1
+      ],
+      "S3(0)|G0|M0|U0|L0|PC:top": [
+        2,
+        1,
+        0
+      ],
+      "S3(0)|G0|M0|U0|L1|PC:hinge_top": [
+        2,
+        0,
+        1
+      ],
+      "S3(0)|G0|M1|U0|L0|PC:double": [
+        2,
+        1,
+        0
+      ],
+      "S3(0)|G0|M1|U0|L0|PC:hinge_double": [
+        2,
+        0,
+        1
+      ],
+      "S3(0)|G0|M1|U0|L0|PC:hinge_top": [
+        2,
+        0,
+        1
+      ],
+      "S3(0)|G0|M1|U0|L0|PC:top": [
+        2,
+        1,
+        0
+      ],
+      "S3(0)|G1|M0|U0|L0|PC:double": [
+        2,
+        1,
+        0
+      ],
+      "S3(0)|G1|M0|U0|L0|PC:top": [
+        2,
+        1,
+        0
+      ],
+      "S3(1)|G0|M0|U0|L0|PC:double": [
+        1,
+        2,
+        0
+      ],
+      "S3(1)|G0|M0|U0|L0|PC:hinge_double": [
+        1,
+        0,
+        2
+      ],
+      "S3(1)|G0|M0|U0|L0|PC:hinge_top": [
+        1,
+        0,
+        2
+      ],
+      "S3(1)|G0|M0|U0|L0|PC:top": [
+        1,
+        2,
+        0
+      ],
+      "S3(1)|G0|M1|U0|L0|PC:top": [
+        1,
+        2,
+        0
+      ],
+      "S3(1)|G1|M0|U0|L0|PC:double": [
+        1,
+        2,
+        0
+      ],
+      "S3(1)|G1|M0|U0|L0|PC:top": [
+        1,
+        2,
+        0
+      ],
+      "S3(1)|G1|M1|U0|L0|PC:top": [
+        1,
+        2,
+        0
+      ],
+      "S4+|G0|M0|U0|L0|PC:double": [
+        2,
+        0,
+        1
+      ],
+      "S4+|G0|M0|U0|L0|PC:hinge_double": [
+        2,
+        0,
+        1
+      ],
+      "S4+|G0|M0|U0|L0|PC:hinge_top": [
+        2,
+        1,
+        0
+      ],
+      "S4+|G0|M0|U0|L0|PC:top": [
+        2,
+        1,
+        0
+      ],
+      "S4+|G0|M0|U0|L1|PC:hinge_top": [
+        2,
+        1,
+        0
+      ],
+      "S4+|G0|M1|U0|L0|PC:double": [
+        2,
+        0,
+        1
+      ],
+      "S4+|G0|M1|U0|L0|PC:hinge_double": [
+        2,
+        0,
+        1
+      ],
+      "S4+|G0|M1|U0|L0|PC:hinge_top": [
+        2,
+        1,
+        0
+      ],
+      "S4+|G0|M1|U0|L0|PC:top": [
+        2,
+        1,
+        0
+      ],
+      "S4+|G0|M1|U0|L1|PC:hinge_top": [
+        2,
+        1,
+        0
+      ],
+      "S4+|G1|M0|U0|L0|PC:double": [
+        2,
+        0,
+        1
+      ],
+      "S4+|G1|M0|U0|L0|PC:top": [
+        2,
+        1,
+        0
+      ],
+      "S4+|G1|M1|U0|L0|PC:top": [
+        2,
+        1,
+        0
+      ]
+    },
+    "score": [
+      -43,
+      6183,
+      -175,
+      12629
+    ],
+    "solution_index": 12
+  },
+  "conclusion": "The resonant-support refinement search freezes the bulk rule and only varies promoted-collar-support classes. It should be read as a case-reduced search for candidates that improve the color-1 resonant P0 return, not as a final theorem.",
+  "control_p0_color1": {
+    "15": {
+      "cycle_count": 171,
+      "histogram": {
+        "15": 140,
+        "19127": 1,
+        "215": 7,
+        "25": 10,
+        "2638": 1,
+        "2926": 1,
+        "3096": 1,
+        "325": 1,
+        "326": 1,
+        "4849": 1,
+        "5545": 1,
+        "561": 1,
+        "7074": 1,
+        "72": 3,
+        "87": 1
+      },
+      "largest_cycle": 19127
+    },
+    "9": {
+      "cycle_count": 51,
+      "histogram": {
+        "522": 1,
+        "5548": 1,
+        "59": 1,
+        "9": 48
+      },
+      "largest_cycle": 5548
+    }
+  },
+  "evaluation_moduli": [
+    9,
+    15
+  ],
+  "family": "Start from the d5_281 best exact family and only allow changes on classes lying in a promoted-collar support surrogate (top, double-top, top hinge, double hinge).",
+  "key_count": 223,
+  "key_moduli": [
+    7,
+    9,
+    11,
+    13,
+    15
+  ],
+  "max_seconds": 60.0,
+  "pattern_count": 3689,
+  "promotion_exact": {
+    "13": {
+      "exact": false,
+      "failure_witness": {
+        "incoming_colors": [
+          1,
+          1,
+          2,
+          3,
+          4
+        ],
+        "target": [
+          11,
+          0,
+          11,
+          11,
+          9
+        ],
+        "type": "target_not_latin"
+      }
+    }
+  },
+  "promotion_moduli": [
+    13
+  ],
+  "search_moduli": [
+    7,
+    9,
+    11
+  ],
+  "solution_limit": 20,
+  "support_base_key_count": 80,
+  "support_key_count": 112,
+  "task": "d5_293_resonant_support_refinement_search"
+}

@@ -1,0 +1,18 @@
+{
+  "all_exact_checks_passed": true,
+  "conclusion": "There is a simple Route-E-style exact-family candidate beyond the old defect-bit splice coordinates. The displayed candidate is exact on checked odd moduli 5,7,9,11,13. Within this candidate, colors 3 and 4 remain Hamilton on the checked range, while colors 0,1,2 still require a separate Hamiltonicity analysis.",
+  "cycle_checked_moduli": [
+    5,
+    7,
+    9
+  ],
+  "exact_checked_moduli": [
+    5,
+    7,
+    9,
+    11,
+    13
+  ],
+  "family": "Fix Sel* colors 3 and 4. Assign colors 0,1,2 by one fixed permutation on S0, S1, S4+, the full slice-2 active-set class S2(A2), and the one-bit slice-3 class S3(1 in A3).",
+  "task": "d5_273_routee_assembly_candidate"
+}

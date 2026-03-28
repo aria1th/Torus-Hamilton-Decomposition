@@ -1,0 +1,553 @@
+{
+  "bad_dir_pattern_count": 60,
+  "bad_dir_patterns": [
+    [
+      0,
+      1,
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      4
+    ],
+    [
+      0,
+      1,
+      0,
+      3,
+      2
+    ],
+    [
+      0,
+      1,
+      0,
+      3,
+      4
+    ],
+    [
+      0,
+      1,
+      2,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      2,
+      0,
+      4
+    ],
+    [
+      0,
+      1,
+      2,
+      1,
+      2
+    ],
+    [
+      0,
+      1,
+      2,
+      1,
+      4
+    ],
+    [
+      0,
+      1,
+      2,
+      3,
+      1
+    ],
+    [
+      0,
+      1,
+      2,
+      3,
+      2
+    ],
+    [
+      0,
+      1,
+      4,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      4,
+      0,
+      4
+    ],
+    [
+      0,
+      1,
+      4,
+      3,
+      1
+    ],
+    [
+      0,
+      1,
+      4,
+      3,
+      4
+    ],
+    [
+      0,
+      3,
+      2,
+      0,
+      1
+    ],
+    [
+      0,
+      3,
+      2,
+      0,
+      4
+    ],
+    [
+      0,
+      3,
+      2,
+      3,
+      1
+    ],
+    [
+      0,
+      3,
+      2,
+      3,
+      4
+    ],
+    [
+      0,
+      3,
+      4,
+      0,
+      1
+    ],
+    [
+      0,
+      3,
+      4,
+      0,
+      4
+    ],
+    [
+      0,
+      3,
+      4,
+      3,
+      1
+    ],
+    [
+      0,
+      3,
+      4,
+      3,
+      4
+    ],
+    [
+      0,
+      4,
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      4,
+      0,
+      1,
+      4
+    ],
+    [
+      0,
+      4,
+      0,
+      3,
+      2
+    ],
+    [
+      0,
+      4,
+      0,
+      3,
+      4
+    ],
+    [
+      0,
+      4,
+      2,
+      1,
+      2
+    ],
+    [
+      0,
+      4,
+      2,
+      1,
+      4
+    ],
+    [
+      0,
+      4,
+      2,
+      3,
+      2
+    ],
+    [
+      0,
+      4,
+      2,
+      3,
+      4
+    ],
+    [
+      2,
+      1,
+      2,
+      0,
+      1
+    ],
+    [
+      2,
+      1,
+      2,
+      0,
+      4
+    ],
+    [
+      2,
+      1,
+      2,
+      3,
+      1
+    ],
+    [
+      2,
+      1,
+      2,
+      3,
+      4
+    ],
+    [
+      2,
+      1,
+      4,
+      0,
+      1
+    ],
+    [
+      2,
+      1,
+      4,
+      0,
+      4
+    ],
+    [
+      2,
+      1,
+      4,
+      3,
+      1
+    ],
+    [
+      2,
+      1,
+      4,
+      3,
+      4
+    ],
+    [
+      2,
+      3,
+      2,
+      0,
+      1
+    ],
+    [
+      2,
+      3,
+      2,
+      0,
+      4
+    ],
+    [
+      2,
+      3,
+      2,
+      3,
+      1
+    ],
+    [
+      2,
+      3,
+      2,
+      3,
+      4
+    ],
+    [
+      2,
+      3,
+      4,
+      0,
+      4
+    ],
+    [
+      2,
+      3,
+      4,
+      3,
+      1
+    ],
+    [
+      2,
+      3,
+      4,
+      3,
+      4
+    ],
+    [
+      3,
+      1,
+      0,
+      1,
+      2
+    ],
+    [
+      3,
+      1,
+      0,
+      1,
+      4
+    ],
+    [
+      3,
+      1,
+      0,
+      3,
+      2
+    ],
+    [
+      3,
+      1,
+      0,
+      3,
+      4
+    ],
+    [
+      3,
+      1,
+      2,
+      1,
+      2
+    ],
+    [
+      3,
+      1,
+      2,
+      1,
+      4
+    ],
+    [
+      3,
+      1,
+      2,
+      3,
+      2
+    ],
+    [
+      3,
+      1,
+      2,
+      3,
+      4
+    ],
+    [
+      3,
+      4,
+      0,
+      1,
+      4
+    ],
+    [
+      3,
+      4,
+      0,
+      3,
+      2
+    ],
+    [
+      3,
+      4,
+      0,
+      3,
+      4
+    ],
+    [
+      3,
+      4,
+      2,
+      1,
+      2
+    ],
+    [
+      3,
+      4,
+      2,
+      1,
+      4
+    ],
+    [
+      3,
+      4,
+      2,
+      3,
+      2
+    ],
+    [
+      3,
+      4,
+      2,
+      3,
+      4
+    ]
+  ],
+  "baseline_class_anchor": {
+    "L0": 1,
+    "L1": 4,
+    "L2s0": 0,
+    "L2s1": 0,
+    "L3s30p0": 0,
+    "L3s30p1": 0,
+    "L3s31p0": 0,
+    "L3s31p1": 0,
+    "L4+": 0
+  },
+  "baseline_per_m": {
+    "11": {
+      "incoming_latin": true,
+      "m": 11,
+      "outgoing_exhaustive": true
+    },
+    "13": {
+      "incoming_latin": true,
+      "m": 13,
+      "outgoing_exhaustive": true
+    },
+    "3": {
+      "incoming_latin": true,
+      "m": 3,
+      "outgoing_exhaustive": true
+    },
+    "5": {
+      "incoming_latin": true,
+      "m": 5,
+      "outgoing_exhaustive": true
+    },
+    "7": {
+      "incoming_latin": true,
+      "m": 7,
+      "outgoing_exhaustive": true
+    },
+    "9": {
+      "incoming_latin": true,
+      "m": 9,
+      "outgoing_exhaustive": true
+    }
+  },
+  "baseline_valid_all_checked": true,
+  "checked_m_values": [
+    3,
+    5,
+    7,
+    9,
+    11,
+    13
+  ],
+  "coarse_support_results": {
+    "size3": {
+      "[0, 1, 2]": false,
+      "[0, 1, 3]": false,
+      "[0, 1, 4]": false,
+      "[0, 2, 3]": false,
+      "[0, 2, 4]": false,
+      "[0, 3, 4]": false,
+      "[1, 2, 3]": false,
+      "[1, 2, 4]": false,
+      "[1, 3, 4]": false,
+      "[2, 3, 4]": false
+    },
+    "size4": {
+      "[0, 1, 2, 3]": false,
+      "[0, 1, 2, 4]": false,
+      "[0, 1, 3, 4]": false,
+      "[0, 2, 3, 4]": false,
+      "[1, 2, 3, 4]": false
+    }
+  },
+  "conclusion": "There is an explicit valid baseline package at the coarse-class level, given by anchors 1 on L0, 4 on L1, and 0 elsewhere. The mixed_008 rule differs from this baseline on exactly three coarse classes: L2s1, L3s30p1, and L3s31p0. Necessary support analysis on the 60 stable bad direction patterns shows that any repair support must have size at least 3, and the exact coarse-class CSP shows that no support of size 3 or 4 can restore outgoing exhaustiveness on all observed class tuples. Thus the remaining G1 task is best read as a three-class splice of the closed color-4 branch into an already valid baseline, not as a broad selector-family search.",
+  "current_class_anchor": {
+    "L0": 1,
+    "L1": 4,
+    "L2s0": 0,
+    "L2s1": 2,
+    "L3s30p0": 0,
+    "L3s30p1": 3,
+    "L3s31p0": 3,
+    "L3s31p1": 0,
+    "L4+": 0
+  },
+  "difference_class_count": 3,
+  "difference_classes": [
+    "L2s1",
+    "L3s30p1",
+    "L3s31p0"
+  ],
+  "necessary_min_support_size": 3,
+  "necessary_min_support_subsets": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      1,
+      4
+    ],
+    [
+      0,
+      3,
+      4
+    ],
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      2,
+      3,
+      4
+    ]
+  ],
+  "search_m_values": [
+    5,
+    7,
+    9,
+    11,
+    13
+  ],
+  "task": "d5_244_G1_coarse_class_baseline_search",
+  "witness": "mixed_008"
+}

@@ -1,0 +1,56 @@
+{
+  "scope": "odd-m d=5 closure task after the promoted 251 manuscript slice",
+  "closed_slice": [
+    "T0",
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "G1",
+    "G2"
+  ],
+  "remaining_imported_packets": [
+    {
+      "name": "post_entry_odometer_packet",
+      "current_role": "thm:odometer-spine in the refined 251 manuscript",
+      "needed_support": [
+        "RoundY/theorem/d5_233_T4_canonical_entry_surface_proof_note.tex",
+        "RoundY/theorem/d5_131_032_seed_normal_form_note.tex",
+        "RoundY/theorem/d5_137_shape_certificate_extraction.md",
+        "RoundY/theorem/d5_197_sigma23_r1_microstate_check.md",
+        "RoundY/theorem/d5_133_one_corner_front_end_reduction_note.tex"
+      ],
+      "acceptable_end_states": [
+        "internalize directly into the refined manuscript",
+        "freeze as an explicit imported theorem with a clean stable citation chain"
+      ]
+    },
+    {
+      "name": "final_graph_side_globalization_packet",
+      "current_role": "stable graph-side inputs plus packaged final stitching theorem in the refined 251 manuscript",
+      "needed_support": [
+        "RoundY/theorem/d5_234_graph_side_split_G2_closed_G1_remaining_note.tex",
+        "RoundY/theorem/d5_236_G1_finite_defect_splice_principle_note.tex",
+        "RoundY/theorem/d5_245_G1_valid_layer_baseline_and_three_class_splice_note.tex",
+        "RoundY/theorem/d5_247_G1_explicit_two_swap_splice_note.tex",
+        "RoundY/theorem/d5_082_frontier_and_theorem_map.md",
+        "RoundY/theorem/d5_083_gluing_flow_and_final_theorem.md",
+        "RoundY/theorem/d5_083_final_theorem_proof.md",
+        "RoundY/theorem/d5_099_one_pass_odd_m_globalization_package.md",
+        "RoundY/theorem/d5_121_M5_corrected_row_stitching.md",
+        "RoundY/theorem/d5_122_M5_all_odd_identification.md",
+        "RoundY/theorem/d5_123_M_route_status_after_122.md",
+        "RoundY/theorem/d5_130_revised_consolidated_manuscript_after_M1_review.tex"
+      ],
+      "acceptable_end_states": [
+        "internalize a short final stitching theorem into the refined manuscript",
+        "freeze as an explicit imported graph-side/globalization theorem chain"
+      ]
+    }
+  ],
+  "out_of_scope": [
+    "even-m d=5 branch",
+    "stronger standalone full-T0 over the full seed list",
+    "formal/Lean work"
+  ]
+}

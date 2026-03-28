@@ -1,0 +1,26 @@
+{
+  "11": {
+    "exact": true,
+    "failure_witness": null
+  },
+  "13": {
+    "exact": true,
+    "failure_witness": null
+  },
+  "15": {
+    "exact": true,
+    "failure_witness": null
+  },
+  "17": {
+    "exact": true,
+    "failure_witness": null
+  },
+  "7": {
+    "exact": true,
+    "failure_witness": null
+  },
+  "9": {
+    "exact": true,
+    "failure_witness": null
+  }
+}

@@ -1,0 +1,29 @@
+kind,m,r,survivor_count,example_pattern
+exact_small_period_search,3,1,0,
+exact_small_period_search,5,1,0,
+exact_small_period_search,5,2,0,
+exact_small_period_search,7,1,0,
+exact_small_period_search,7,2,0,
+exact_small_period_search,7,3,0,
+exact_small_period_search,9,1,0,
+exact_small_period_search,9,2,0,
+exact_small_period_search,9,3,0,
+exact_small_period_search,9,4,0,
+exact_small_period_search,11,1,0,
+exact_small_period_search,11,2,0,
+exact_small_period_search,11,3,0,
+exact_small_period_search,11,4,0,
+exact_small_period_search,11,5,0,
+minimal_phase_catalog_small,3,2,6,"{""a"": 1, ""pattern"": [0, null]}"
+minimal_phase_catalog_small,5,3,20,"{""a"": 1, ""pattern"": [0, 0, null]}"
+minimal_phase_catalog_small,7,4,84,"{""a"": 1, ""pattern"": [0, 0, 0, null]}"
+minimal_phase_catalog_small,9,5,432,"{""a"": 1, ""pattern"": [0, 0, 0, 0, null]}"
+explicit_candidate_check,3,2,1,"[0, null]"
+explicit_candidate_check,5,3,1,"[0, 0, null]"
+explicit_candidate_check,7,4,1,"[0, 0, 0, null]"
+explicit_candidate_check,9,5,1,"[0, 0, 0, 0, null]"
+explicit_candidate_check,11,6,1,"[0, 0, 0, 0, 0, null]"
+explicit_candidate_check,13,7,1,"[0, 0, 0, 0, 0, 0, null]"
+explicit_candidate_check,15,8,1,"[0, 0, 0, 0, 0, 0, 0, null]"
+explicit_candidate_check,17,9,1,"[0, 0, 0, 0, 0, 0, 0, 0, null]"
+explicit_candidate_check,19,10,1,"[0, 0, 0, 0, 0, 0, 0, 0, 0, null]"

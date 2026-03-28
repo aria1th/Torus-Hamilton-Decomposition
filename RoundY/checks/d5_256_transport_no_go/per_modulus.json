@@ -1,0 +1,678 @@
+{
+  "5": {
+    "m": 5,
+    "pulled_back_relative_dirs_at_y": [
+      0,
+      0,
+      2,
+      0,
+      3
+    ],
+    "direction_supports": {
+      "0": [
+        0,
+        1,
+        4
+      ],
+      "1": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "2": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "3": [
+        2,
+        3,
+        4
+      ],
+      "4": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "cycle_data": {
+      "0": {
+        "cycle_count": 125,
+        "largest_cycles": [
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "is_hamilton": false
+      },
+      "1": {
+        "cycle_count": 25,
+        "largest_cycles": [
+          125,
+          125,
+          125,
+          125,
+          125,
+          125,
+          125,
+          125,
+          125,
+          125
+        ],
+        "is_hamilton": false
+      },
+      "2": {
+        "cycle_count": 25,
+        "largest_cycles": [
+          125,
+          125,
+          125,
+          125,
+          125,
+          125,
+          125,
+          125,
+          125,
+          125
+        ],
+        "is_hamilton": false
+      },
+      "3": {
+        "cycle_count": 125,
+        "largest_cycles": [
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "is_hamilton": false
+      },
+      "4": {
+        "cycle_count": 5,
+        "largest_cycles": [
+          625,
+          625,
+          625,
+          625,
+          625
+        ],
+        "is_hamilton": false
+      }
+    },
+    "color_0_preserves": [
+      "x2",
+      "x3"
+    ],
+    "color_1_preserves": [
+      "x3"
+    ],
+    "color_2_preserves": [
+      "x0"
+    ],
+    "color_3_preserves": [
+      "x0",
+      "x1"
+    ]
+  },
+  "7": {
+    "m": 7,
+    "pulled_back_relative_dirs_at_y": [
+      0,
+      0,
+      2,
+      0,
+      3
+    ],
+    "direction_supports": {
+      "0": [
+        0,
+        1,
+        4
+      ],
+      "1": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "2": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "3": [
+        2,
+        3,
+        4
+      ],
+      "4": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "cycle_data": {
+      "0": {
+        "cycle_count": 343,
+        "largest_cycles": [
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49
+        ],
+        "is_hamilton": false
+      },
+      "1": {
+        "cycle_count": 49,
+        "largest_cycles": [
+          343,
+          343,
+          343,
+          343,
+          343,
+          343,
+          343,
+          343,
+          343,
+          343
+        ],
+        "is_hamilton": false
+      },
+      "2": {
+        "cycle_count": 49,
+        "largest_cycles": [
+          343,
+          343,
+          343,
+          343,
+          343,
+          343,
+          343,
+          343,
+          343,
+          343
+        ],
+        "is_hamilton": false
+      },
+      "3": {
+        "cycle_count": 343,
+        "largest_cycles": [
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49,
+          49
+        ],
+        "is_hamilton": false
+      },
+      "4": {
+        "cycle_count": 7,
+        "largest_cycles": [
+          2401,
+          2401,
+          2401,
+          2401,
+          2401,
+          2401,
+          2401
+        ],
+        "is_hamilton": false
+      }
+    },
+    "color_0_preserves": [
+      "x2",
+      "x3"
+    ],
+    "color_1_preserves": [
+      "x3"
+    ],
+    "color_2_preserves": [
+      "x0"
+    ],
+    "color_3_preserves": [
+      "x0",
+      "x1"
+    ]
+  },
+  "9": {
+    "m": 9,
+    "pulled_back_relative_dirs_at_y": [
+      0,
+      0,
+      2,
+      0,
+      3
+    ],
+    "direction_supports": {
+      "0": [
+        0,
+        1,
+        4
+      ],
+      "1": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "2": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "3": [
+        2,
+        3,
+        4
+      ],
+      "4": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "cycle_data": {
+      "0": {
+        "cycle_count": 729,
+        "largest_cycles": [
+          81,
+          81,
+          81,
+          81,
+          81,
+          81,
+          81,
+          81,
+          81,
+          81
+        ],
+        "is_hamilton": false
+      },
+      "1": {
+        "cycle_count": 81,
+        "largest_cycles": [
+          729,
+          729,
+          729,
+          729,
+          729,
+          729,
+          729,
+          729,
+          729,
+          729
+        ],
+        "is_hamilton": false
+      },
+      "2": {
+        "cycle_count": 81,
+        "largest_cycles": [
+          729,
+          729,
+          729,
+          729,
+          729,
+          729,
+          729,
+          729,
+          729,
+          729
+        ],
+        "is_hamilton": false
+      },
+      "3": {
+        "cycle_count": 729,
+        "largest_cycles": [
+          81,
+          81,
+          81,
+          81,
+          81,
+          81,
+          81,
+          81,
+          81,
+          81
+        ],
+        "is_hamilton": false
+      },
+      "4": {
+        "cycle_count": 9,
+        "largest_cycles": [
+          6561,
+          6561,
+          6561,
+          6561,
+          6561,
+          6561,
+          6561,
+          6561,
+          6561
+        ],
+        "is_hamilton": false
+      }
+    },
+    "color_0_preserves": [
+      "x2",
+      "x3"
+    ],
+    "color_1_preserves": [
+      "x3"
+    ],
+    "color_2_preserves": [
+      "x0"
+    ],
+    "color_3_preserves": [
+      "x0",
+      "x1"
+    ]
+  },
+  "11": {
+    "m": 11,
+    "pulled_back_relative_dirs_at_y": [
+      0,
+      0,
+      2,
+      0,
+      3
+    ],
+    "direction_supports": {
+      "0": [
+        0,
+        1,
+        4
+      ],
+      "1": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "2": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "3": [
+        2,
+        3,
+        4
+      ],
+      "4": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "cycle_data": {
+      "0": {
+        "cycle_count": 1331,
+        "largest_cycles": [
+          121,
+          121,
+          121,
+          121,
+          121,
+          121,
+          121,
+          121,
+          121,
+          121
+        ],
+        "is_hamilton": false
+      },
+      "1": {
+        "cycle_count": 121,
+        "largest_cycles": [
+          1331,
+          1331,
+          1331,
+          1331,
+          1331,
+          1331,
+          1331,
+          1331,
+          1331,
+          1331
+        ],
+        "is_hamilton": false
+      },
+      "2": {
+        "cycle_count": 121,
+        "largest_cycles": [
+          1331,
+          1331,
+          1331,
+          1331,
+          1331,
+          1331,
+          1331,
+          1331,
+          1331,
+          1331
+        ],
+        "is_hamilton": false
+      },
+      "3": {
+        "cycle_count": 1331,
+        "largest_cycles": [
+          121,
+          121,
+          121,
+          121,
+          121,
+          121,
+          121,
+          121,
+          121,
+          121
+        ],
+        "is_hamilton": false
+      },
+      "4": {
+        "cycle_count": 11,
+        "largest_cycles": [
+          14641,
+          14641,
+          14641,
+          14641,
+          14641,
+          14641,
+          14641,
+          14641,
+          14641,
+          14641
+        ],
+        "is_hamilton": false
+      }
+    },
+    "color_0_preserves": [
+      "x2",
+      "x3"
+    ],
+    "color_1_preserves": [
+      "x3"
+    ],
+    "color_2_preserves": [
+      "x0"
+    ],
+    "color_3_preserves": [
+      "x0",
+      "x1"
+    ]
+  },
+  "13": {
+    "m": 13,
+    "pulled_back_relative_dirs_at_y": [
+      0,
+      0,
+      2,
+      0,
+      3
+    ],
+    "direction_supports": {
+      "0": [
+        0,
+        1,
+        4
+      ],
+      "1": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "2": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "3": [
+        2,
+        3,
+        4
+      ],
+      "4": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "cycle_data": {
+      "0": {
+        "cycle_count": 2197,
+        "largest_cycles": [
+          169,
+          169,
+          169,
+          169,
+          169,
+          169,
+          169,
+          169,
+          169,
+          169
+        ],
+        "is_hamilton": false
+      },
+      "1": {
+        "cycle_count": 169,
+        "largest_cycles": [
+          2197,
+          2197,
+          2197,
+          2197,
+          2197,
+          2197,
+          2197,
+          2197,
+          2197,
+          2197
+        ],
+        "is_hamilton": false
+      },
+      "2": {
+        "cycle_count": 169,
+        "largest_cycles": [
+          2197,
+          2197,
+          2197,
+          2197,
+          2197,
+          2197,
+          2197,
+          2197,
+          2197,
+          2197
+        ],
+        "is_hamilton": false
+      },
+      "3": {
+        "cycle_count": 2197,
+        "largest_cycles": [
+          169,
+          169,
+          169,
+          169,
+          169,
+          169,
+          169,
+          169,
+          169,
+          169
+        ],
+        "is_hamilton": false
+      },
+      "4": {
+        "cycle_count": 13,
+        "largest_cycles": [
+          28561,
+          28561,
+          28561,
+          28561,
+          28561,
+          28561,
+          28561,
+          28561,
+          28561,
+          28561
+        ],
+        "is_hamilton": false
+      }
+    },
+    "color_0_preserves": [
+      "x2",
+      "x3"
+    ],
+    "color_1_preserves": [
+      "x3"
+    ],
+    "color_2_preserves": [
+      "x0"
+    ],
+    "color_3_preserves": [
+      "x0",
+      "x1"
+    ]
+  }
+}

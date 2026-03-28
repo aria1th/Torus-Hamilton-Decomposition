@@ -1,0 +1,23 @@
+{
+  "all_single_B_rows_inert": true,
+  "checked_moduli": [
+    21,
+    27,
+    33
+  ],
+  "conclusions": [
+    "On the checked resonant moduli, adding a single extra B_{s,3} row to the promoted-collar control is inert at the level of the reduced base permutation P_m for every tested row s.",
+    "On the checked resonant moduli, adding the opposite collar-row A move changes P_m nontrivially relative to the promoted-collar control.",
+    "In the checked range, the dual-collar A family already makes P_m a single cycle at m = 21.",
+    "Additional exact spot checks at m = 39, 51 show that dual-collar A continues to change P_m nontrivially beyond the smallest checked moduli."
+  ],
+  "dualA_spotcheck_moduli": [
+    39,
+    51
+  ],
+  "opposite_collar_A_changes_P_m": true,
+  "opposite_collar_A_changes_P_m_on_spotchecks": true,
+  "opposite_collar_A_solves_some_checked_modulus": true,
+  "source_tar": "/data/angel/repos/modulation-guidance/Torus-Hamilton-Decomposition/tmp/residual_proof_package_2026-03-25.tar",
+  "task": "d5_295_resonant_same_row_a_probe"
+}

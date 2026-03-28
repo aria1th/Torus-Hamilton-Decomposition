@@ -1,0 +1,6 @@
+m,formula_status,colliding_changed_labels_color0,pair_counts_color0,four_family_verified,R1_source_count,L2_source_count,L3_source_count,R3_source_count
+3,exceptional m<5 profile recorded,R1,"{""('B', 'R1')"": 6, ""('L2', 'R2')"": 6}",0,0,0,0,0
+5,m>=5 theorem verified,L2;L3;R1;R3,"{""('B', 'L2')"": 20, ""('B', 'L3')"": 20, ""('B', 'R1')"": 20, ""('B', 'R3')"": 20}",1,20,20,20,20
+7,m>=5 theorem verified,L2;L3;R1;R3,"{""('B', 'L2')"": 42, ""('B', 'L3')"": 42, ""('B', 'R1')"": 42, ""('B', 'R3')"": 42}",1,42,42,42,42
+9,m>=5 theorem verified,L2;L3;R1;R3,"{""('B', 'L2')"": 72, ""('B', 'L3')"": 72, ""('B', 'R1')"": 72, ""('B', 'R3')"": 72}",1,72,72,72,72
+11,m>=5 theorem verified,L2;L3;R1;R3,"{""('B', 'L2')"": 110, ""('B', 'L3')"": 110, ""('B', 'R1')"": 110, ""('B', 'R3')"": 110}",1,110,110,110,110

@@ -1,0 +1,17 @@
+{
+  "all_invariants_verified": true,
+  "conclusion": "For every checked modulus, the first return R_1^* preserves x_0-x_2 and the first return R_2^* preserves x_1-x_3 on P0. Therefore the current Sel* colors 1 and 2 cannot themselves be Hamilton assembly colors.",
+  "invariants": {
+    "1": "I_1(x) = x_0 - x_2 on P0",
+    "2": "I_2(x) = x_1 - x_3 on P0"
+  },
+  "moduli": [
+    5,
+    7,
+    9,
+    11,
+    13
+  ],
+  "selector": "Sel*",
+  "task": "d5_269_selstar_color12_return_invariants"
+}

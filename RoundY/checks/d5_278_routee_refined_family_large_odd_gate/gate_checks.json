@@ -1,0 +1,42 @@
+{
+  "11": {
+    "exact": false,
+    "failure_witness": {
+      "incoming_colors": [
+        1,
+        4,
+        2,
+        1,
+        3
+      ],
+      "target": [
+        10,
+        6,
+        10,
+        0,
+        10
+      ],
+      "type": "target_not_latin"
+    }
+  },
+  "13": {
+    "exact": false,
+    "failure_witness": {
+      "incoming_colors": [
+        1,
+        4,
+        2,
+        1,
+        3
+      ],
+      "target": [
+        12,
+        6,
+        12,
+        0,
+        12
+      ],
+      "type": "target_not_latin"
+    }
+  }
+}

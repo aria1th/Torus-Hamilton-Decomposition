@@ -1,0 +1,78 @@
+{
+  "task": "d5_234_G2_transport_checker",
+  "witness": "mixed_008",
+  "rule": {
+    "family": "simple",
+    "representative_old_bit_name": "q=-1",
+    "layer2_orientation": "0/2",
+    "layer2_table": {
+      "s0": 0,
+      "s1": 2
+    },
+    "layer3_mode_p0": {
+      "name": "0/3",
+      "table": {
+        "s0": 0,
+        "s1": 3
+      }
+    },
+    "layer3_mode_p1": {
+      "name": "3/0",
+      "table": {
+        "s0": 3,
+        "s1": 0
+      }
+    },
+    "effective_key": [
+      "simple",
+      "0/2",
+      "pred_sig1_wu2",
+      "0/3",
+      "3/0"
+    ],
+    "predecessor_flag_name": "pred_sig1_wu2",
+    "predecessor_flag_description": "1 iff the color-relative predecessor in direction 1 satisfies w+u=2."
+  },
+  "exact_m_values": [
+    5,
+    7,
+    9,
+    11,
+    13
+  ],
+  "all_incoming_latin": true,
+  "all_cyclic_conjugacy_exact": true,
+  "explicit_vertex": [
+    0,
+    0,
+    0,
+    1,
+    2
+  ],
+  "explicit_dirs_constant": true,
+  "explicit_dirs_value": [
+    3,
+    1,
+    0,
+    3,
+    4
+  ],
+  "explicit_outgoing_exhaustive_all": false,
+  "first_counterexample_constant": true,
+  "first_counterexample_vertex": [
+    0,
+    0,
+    0,
+    1,
+    2
+  ],
+  "first_counterexample_dirs_constant": true,
+  "first_counterexample_dirs": [
+    3,
+    1,
+    0,
+    3,
+    4
+  ],
+  "conclusion": "The surfaced mixed_008 family is exactly color-conjugate across colors and each color map is Latin/permutative, but the naive cyclic package fails pointwise outgoing exhaustiveness at the explicit vertex (0,0,0,1,2), so G2 closes while G1 remains a genuine splice/compatibility problem."
+}

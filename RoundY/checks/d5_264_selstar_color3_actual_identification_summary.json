@@ -1,0 +1,33 @@
+{
+  "all_P0_return_formulas_verified": true,
+  "all_section_formulas_verified": true,
+  "checked_moduli": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "color": 3,
+  "conclusion": "The actual Sel* color-3 first return R_3^* on P0 is given by one explicit piecewise-affine formula, and the actual m-step section return on S_m={x_2=m-2} agrees exactly with the explicit five-branch model from d5_261 throughout the checked range.",
+  "selector": "Sel*",
+  "task": "d5_264_selstar_color3_actual_identification"
+}

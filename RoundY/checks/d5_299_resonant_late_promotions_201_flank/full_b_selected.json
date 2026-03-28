@@ -1,0 +1,30 @@
+{
+  "201": {
+    "flank_pair": {
+      "cycle_lengths": [
+        103,
+        57,
+        41
+      ],
+      "is_permutation": true,
+      "max_blocks_per_start": 14665604,
+      "short_cycle_witnesses": [
+        {
+          "a": 0,
+          "length": 103
+        },
+        {
+          "a": 10,
+          "length": 57
+        },
+        {
+          "a": 3,
+          "length": 41
+        }
+      ],
+      "timing_sec": 560.185099,
+      "zero_blocks": 3272300,
+      "zero_target_a": 80
+    }
+  }
+}

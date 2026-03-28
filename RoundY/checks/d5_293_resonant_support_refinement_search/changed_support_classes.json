@@ -1,0 +1,535 @@
+[
+  {
+    "baseline_perm_012": [
+      1,
+      0,
+      2
+    ],
+    "class": "S2({})|G0|M1|U0|L1|PC:hinge_top",
+    "new_perm_012": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      2,
+      1,
+      0
+    ],
+    "class": "S2({0,2})|G0|M0|U0|L0|PC:top",
+    "new_perm_012": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      2,
+      1,
+      0
+    ],
+    "class": "S2({0,2})|G0|M1|U0|L0|PC:top",
+    "new_perm_012": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      2,
+      1,
+      0
+    ],
+    "class": "S2({0,2,3})|G0|M0|U0|L0|PC:double",
+    "new_perm_012": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      2,
+      1,
+      0
+    ],
+    "class": "S2({0,2,3})|G0|M1|U0|L0|PC:double",
+    "new_perm_012": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      1,
+      2,
+      0
+    ],
+    "class": "S2({0,4})|G0|M1|U0|L0|PC:hinge_top",
+    "new_perm_012": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      1,
+      2,
+      0
+    ],
+    "class": "S2({0})|G0|M1|U0|L1|PC:hinge_top",
+    "new_perm_012": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      1,
+      2,
+      0
+    ],
+    "class": "S2({1,2,4})|G1|M1|U0|L0|PC:top",
+    "new_perm_012": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      2,
+      0,
+      1
+    ],
+    "class": "S2({2,3})|G0|M0|U0|L0|PC:double",
+    "new_perm_012": [
+      1,
+      0,
+      2
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      2,
+      0,
+      1
+    ],
+    "class": "S2({2,3})|G0|M1|U0|L0|PC:double",
+    "new_perm_012": [
+      1,
+      0,
+      2
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      2,
+      0,
+      1
+    ],
+    "class": "S2({2})|G0|M0|U0|L0|PC:top",
+    "new_perm_012": [
+      1,
+      0,
+      2
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      2,
+      0,
+      1
+    ],
+    "class": "S2({2})|G0|M1|U0|L0|PC:top",
+    "new_perm_012": [
+      1,
+      0,
+      2
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      2,
+      0,
+      1
+    ],
+    "class": "S2({3,4})|G0|M1|U0|L0|PC:hinge_double",
+    "new_perm_012": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      2,
+      1,
+      0
+    ],
+    "class": "S3(0)|G0|M0|U0|L0|PC:top",
+    "new_perm_012": [
+      2,
+      0,
+      1
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      2,
+      1,
+      0
+    ],
+    "class": "S3(0)|G0|M0|U0|L0|PC:double",
+    "new_perm_012": [
+      2,
+      0,
+      1
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      2,
+      1,
+      0
+    ],
+    "class": "S3(0)|G0|M0|U0|L0|PC:hinge_top",
+    "new_perm_012": [
+      2,
+      0,
+      1
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      2,
+      1,
+      0
+    ],
+    "class": "S3(0)|G0|M0|U0|L0|PC:hinge_double",
+    "new_perm_012": [
+      2,
+      0,
+      1
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      2,
+      1,
+      0
+    ],
+    "class": "S3(0)|G0|M0|U0|L1|PC:hinge_top",
+    "new_perm_012": [
+      2,
+      0,
+      1
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      2,
+      1,
+      0
+    ],
+    "class": "S3(0)|G0|M1|U0|L0|PC:top",
+    "new_perm_012": [
+      2,
+      0,
+      1
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      2,
+      1,
+      0
+    ],
+    "class": "S3(0)|G0|M1|U0|L0|PC:double",
+    "new_perm_012": [
+      2,
+      0,
+      1
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      2,
+      1,
+      0
+    ],
+    "class": "S3(0)|G0|M1|U0|L0|PC:hinge_top",
+    "new_perm_012": [
+      2,
+      0,
+      1
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      2,
+      1,
+      0
+    ],
+    "class": "S3(0)|G0|M1|U0|L0|PC:hinge_double",
+    "new_perm_012": [
+      2,
+      0,
+      1
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      2,
+      1,
+      0
+    ],
+    "class": "S3(0)|G1|M0|U0|L0|PC:top",
+    "new_perm_012": [
+      2,
+      0,
+      1
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      2,
+      1,
+      0
+    ],
+    "class": "S3(0)|G1|M0|U0|L0|PC:double",
+    "new_perm_012": [
+      2,
+      0,
+      1
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      1,
+      2,
+      0
+    ],
+    "class": "S3(1)|G0|M0|U0|L0|PC:top",
+    "new_perm_012": [
+      1,
+      0,
+      2
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      1,
+      2,
+      0
+    ],
+    "class": "S3(1)|G0|M0|U0|L0|PC:double",
+    "new_perm_012": [
+      1,
+      0,
+      2
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      1,
+      2,
+      0
+    ],
+    "class": "S3(1)|G0|M0|U0|L0|PC:hinge_top",
+    "new_perm_012": [
+      1,
+      0,
+      2
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      1,
+      2,
+      0
+    ],
+    "class": "S3(1)|G0|M0|U0|L0|PC:hinge_double",
+    "new_perm_012": [
+      1,
+      0,
+      2
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      1,
+      2,
+      0
+    ],
+    "class": "S3(1)|G0|M1|U0|L0|PC:top",
+    "new_perm_012": [
+      1,
+      0,
+      2
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      1,
+      2,
+      0
+    ],
+    "class": "S3(1)|G1|M0|U0|L0|PC:top",
+    "new_perm_012": [
+      1,
+      0,
+      2
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      1,
+      2,
+      0
+    ],
+    "class": "S3(1)|G1|M0|U0|L0|PC:double",
+    "new_perm_012": [
+      1,
+      0,
+      2
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      1,
+      2,
+      0
+    ],
+    "class": "S3(1)|G1|M1|U0|L0|PC:top",
+    "new_perm_012": [
+      1,
+      0,
+      2
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      2,
+      1,
+      0
+    ],
+    "class": "S4+|G0|M0|U0|L0|PC:double",
+    "new_perm_012": [
+      2,
+      0,
+      1
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      2,
+      1,
+      0
+    ],
+    "class": "S4+|G0|M0|U0|L0|PC:hinge_top",
+    "new_perm_012": [
+      2,
+      0,
+      1
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      2,
+      1,
+      0
+    ],
+    "class": "S4+|G0|M0|U0|L0|PC:hinge_double",
+    "new_perm_012": [
+      2,
+      0,
+      1
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      2,
+      1,
+      0
+    ],
+    "class": "S4+|G0|M0|U0|L1|PC:hinge_top",
+    "new_perm_012": [
+      2,
+      0,
+      1
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      2,
+      1,
+      0
+    ],
+    "class": "S4+|G0|M1|U0|L0|PC:double",
+    "new_perm_012": [
+      2,
+      0,
+      1
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      2,
+      1,
+      0
+    ],
+    "class": "S4+|G0|M1|U0|L0|PC:hinge_top",
+    "new_perm_012": [
+      2,
+      0,
+      1
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      2,
+      1,
+      0
+    ],
+    "class": "S4+|G0|M1|U0|L0|PC:hinge_double",
+    "new_perm_012": [
+      2,
+      0,
+      1
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      2,
+      1,
+      0
+    ],
+    "class": "S4+|G0|M1|U0|L1|PC:hinge_top",
+    "new_perm_012": [
+      2,
+      0,
+      1
+    ]
+  },
+  {
+    "baseline_perm_012": [
+      2,
+      1,
+      0
+    ],
+    "class": "S4+|G1|M0|U0|L0|PC:double",
+    "new_perm_012": [
+      2,
+      0,
+      1
+    ]
+  }
+]

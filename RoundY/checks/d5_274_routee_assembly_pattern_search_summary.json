@@ -1,0 +1,49 @@
+{
+  "task": "d5_274_routee_assembly_pattern_search",
+  "family": "Fix Sel* colors 3 and 4. Assign colors 0,1,2 by one fixed permutation on S0, S1, S4+, the full slice-2 active-set class S2(A2), and the one-bit slice-3 class S3(1 in A3).",
+  "stable_local_exactness": {
+    "search_moduli": [
+      9
+    ],
+    "key_count": 36,
+    "pattern_count": 221,
+    "first_four_hamilton_solution_index": 87,
+    "evaluation_modulus": 5,
+    "hamilton_colors": [
+      0,
+      2,
+      3,
+      4
+    ],
+    "nonhamilton_colors": [
+      1
+    ]
+  },
+  "combined_7_9_search": {
+    "search_moduli": [
+      7,
+      9
+    ],
+    "evaluation_moduli": [
+      5,
+      7
+    ],
+    "key_count": 37,
+    "pattern_count": 226,
+    "solution_limit": 200,
+    "best_hamilton_counts": {
+      "5": 3,
+      "7": 4
+    },
+    "best_nonhamilton_colors": {
+      "5": [
+        1,
+        2
+      ],
+      "7": [
+        2
+      ]
+    }
+  },
+  "conclusion": "The simple S2(A2)+S3(one-bit) assembly family admits a finite local exactness compression. For odd m >= 9 the local exactness constraints stabilize to 221 patterns. Inside this family, a 4-Hamilton solution already appears in the stable search at m=5, and among the first 200 solutions of the combined 7/9 exact model the best rule has Hamilton-count profile m=5 -> 3, m=7 -> 4. So the remaining assembly problem has been reduced to a much narrower finite-pattern search plus one or two residual Hamilton closures, rather than an open-ended new-coordinate search."
+}

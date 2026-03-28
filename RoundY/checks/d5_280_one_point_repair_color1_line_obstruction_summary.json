@@ -1,0 +1,82 @@
+{
+  "checked_multiple_of_3_failures": {
+    "15": {
+      "a": 0,
+      "b": 0,
+      "expected": [
+        13,
+        8,
+        9,
+        0,
+        0
+      ],
+      "image": [
+        13,
+        7,
+        9,
+        0,
+        1
+      ],
+      "point": [
+        1,
+        7,
+        7,
+        0,
+        0
+      ],
+      "t": 7
+    },
+    "9": {
+      "a": 0,
+      "b": 0,
+      "expected": [
+        7,
+        6,
+        5,
+        0,
+        0
+      ],
+      "image": [
+        7,
+        5,
+        5,
+        0,
+        1
+      ],
+      "point": [
+        1,
+        5,
+        3,
+        0,
+        0
+      ],
+      "t": 5
+    }
+  },
+  "color": 1,
+  "conclusion": "For checked odd moduli not divisible by 3, the d5_279 repaired family's color-1 P0 return preserves an explicit (m-1)^2-family of affine lines and acts on each line by t -> t+1. Therefore the current repaired family still contains (m-1)^2 disjoint color-1 cycles of length m^2 on the full torus.",
+  "family": "d5_279 one-point repaired five-color family",
+  "full_short_m2_cycle_count": {
+    "11": 100,
+    "13": 144,
+    "17": 256,
+    "7": 36
+  },
+  "line_formula": "L_{a,b}(t) = (7-a-3b-3t, t, -7+2b+2t, a, b) on P0, with a,b in {0,...,m-2}",
+  "p0_short_m_cycle_count": {
+    "11": 100,
+    "13": 144,
+    "17": 256,
+    "19": 324,
+    "7": 36
+  },
+  "task": "d5_280_one_point_repair_color1_line_obstruction",
+  "verified_formula_on_nonmultiple_of_3_moduli": true,
+  "verified_nonmultiple_of_3_moduli": [
+    7,
+    11,
+    13,
+    17,
+    19
+  ]
+}

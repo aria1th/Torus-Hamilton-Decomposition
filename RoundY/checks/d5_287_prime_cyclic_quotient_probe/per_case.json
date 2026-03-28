@@ -1,0 +1,2270 @@
+{
+  "d3": {
+    "10": {
+      "P0_return_cycle_lengths": {
+        "0": [
+          100
+        ],
+        "1": [
+          100
+        ],
+        "2": [
+          100
+        ]
+      },
+      "full_family_covariance": [
+        {
+          "color_shift": 0,
+          "covariance_holds": false,
+          "first_witness": {
+            "color": 0,
+            "color_shift": 0,
+            "shift_then_color_image": [
+              0,
+              1,
+              0
+            ],
+            "shifted_image": [
+              1,
+              0,
+              0
+            ],
+            "state": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "color_shift": 1,
+          "covariance_holds": false,
+          "first_witness": {
+            "color": 0,
+            "color_shift": 1,
+            "shift_then_color_image": [
+              0,
+              4,
+              0
+            ],
+            "shifted_image": [
+              0,
+              3,
+              1
+            ],
+            "state": [
+              0,
+              0,
+              3
+            ]
+          }
+        },
+        {
+          "color_shift": 2,
+          "covariance_holds": false,
+          "first_witness": {
+            "color": 0,
+            "color_shift": 2,
+            "shift_then_color_image": [
+              0,
+              0,
+              1
+            ],
+            "shifted_image": [
+              1,
+              0,
+              0
+            ],
+            "state": [
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "full_free_orbit_quotient": {
+        "0": {
+          "deterministic_free_orbits": 0,
+          "first_witness": {
+            "image_orbit_representatives": [
+              [
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                1,
+                1
+              ]
+            ],
+            "orbit_representative": [
+              0,
+              0,
+              1
+            ]
+          },
+          "nondeterministic_free_orbits": 330
+        },
+        "1": {
+          "deterministic_free_orbits": 0,
+          "first_witness": {
+            "image_orbit_representatives": [
+              [
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                1,
+                1
+              ]
+            ],
+            "orbit_representative": [
+              0,
+              0,
+              1
+            ]
+          },
+          "nondeterministic_free_orbits": 330
+        },
+        "2": {
+          "deterministic_free_orbits": 0,
+          "first_witness": {
+            "image_orbit_representatives": [
+              [
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                1,
+                1
+              ]
+            ],
+            "orbit_representative": [
+              0,
+              0,
+              1
+            ]
+          },
+          "nondeterministic_free_orbits": 330
+        }
+      },
+      "m": 10,
+      "transversal_first_return_cycle_lengths": {
+        "0": [
+          10
+        ],
+        "1": [
+          10
+        ],
+        "2": [
+          10
+        ]
+      },
+      "transversal_return_time_sums": {
+        "0": 100,
+        "1": 100,
+        "2": 100
+      }
+    },
+    "6": {
+      "P0_return_cycle_lengths": {
+        "0": [
+          36
+        ],
+        "1": [
+          36
+        ],
+        "2": [
+          36
+        ]
+      },
+      "full_family_covariance": [
+        {
+          "color_shift": 0,
+          "covariance_holds": false,
+          "first_witness": {
+            "color": 0,
+            "color_shift": 0,
+            "shift_then_color_image": [
+              0,
+              1,
+              0
+            ],
+            "shifted_image": [
+              1,
+              0,
+              0
+            ],
+            "state": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "color_shift": 1,
+          "covariance_holds": false,
+          "first_witness": {
+            "color": 0,
+            "color_shift": 1,
+            "shift_then_color_image": [
+              0,
+              4,
+              0
+            ],
+            "shifted_image": [
+              0,
+              3,
+              1
+            ],
+            "state": [
+              0,
+              0,
+              3
+            ]
+          }
+        },
+        {
+          "color_shift": 2,
+          "covariance_holds": false,
+          "first_witness": {
+            "color": 0,
+            "color_shift": 2,
+            "shift_then_color_image": [
+              0,
+              0,
+              1
+            ],
+            "shifted_image": [
+              1,
+              0,
+              0
+            ],
+            "state": [
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "full_free_orbit_quotient": {
+        "0": {
+          "deterministic_free_orbits": 0,
+          "first_witness": {
+            "image_orbit_representatives": [
+              [
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                1,
+                1
+              ]
+            ],
+            "orbit_representative": [
+              0,
+              0,
+              1
+            ]
+          },
+          "nondeterministic_free_orbits": 70
+        },
+        "1": {
+          "deterministic_free_orbits": 2,
+          "first_witness": {
+            "image_orbit_representatives": [
+              [
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                1,
+                1
+              ]
+            ],
+            "orbit_representative": [
+              0,
+              0,
+              1
+            ]
+          },
+          "nondeterministic_free_orbits": 68
+        },
+        "2": {
+          "deterministic_free_orbits": 0,
+          "first_witness": {
+            "image_orbit_representatives": [
+              [
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                1,
+                1
+              ]
+            ],
+            "orbit_representative": [
+              0,
+              0,
+              1
+            ]
+          },
+          "nondeterministic_free_orbits": 70
+        }
+      },
+      "m": 6,
+      "transversal_first_return_cycle_lengths": {
+        "0": [
+          6
+        ],
+        "1": [
+          6
+        ],
+        "2": [
+          6
+        ]
+      },
+      "transversal_return_time_sums": {
+        "0": 36,
+        "1": 36,
+        "2": 36
+      }
+    },
+    "8": {
+      "P0_return_cycle_lengths": {
+        "0": [
+          64
+        ],
+        "1": [
+          64
+        ],
+        "2": [
+          64
+        ]
+      },
+      "full_family_covariance": [
+        {
+          "color_shift": 0,
+          "covariance_holds": false,
+          "first_witness": {
+            "color": 0,
+            "color_shift": 0,
+            "shift_then_color_image": [
+              0,
+              1,
+              0
+            ],
+            "shifted_image": [
+              1,
+              0,
+              0
+            ],
+            "state": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "color_shift": 1,
+          "covariance_holds": false,
+          "first_witness": {
+            "color": 0,
+            "color_shift": 1,
+            "shift_then_color_image": [
+              0,
+              4,
+              0
+            ],
+            "shifted_image": [
+              0,
+              3,
+              1
+            ],
+            "state": [
+              0,
+              0,
+              3
+            ]
+          }
+        },
+        {
+          "color_shift": 2,
+          "covariance_holds": false,
+          "first_witness": {
+            "color": 0,
+            "color_shift": 2,
+            "shift_then_color_image": [
+              0,
+              0,
+              1
+            ],
+            "shifted_image": [
+              1,
+              0,
+              0
+            ],
+            "state": [
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "full_free_orbit_quotient": {
+        "0": {
+          "deterministic_free_orbits": 0,
+          "first_witness": {
+            "image_orbit_representatives": [
+              [
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                1,
+                1
+              ]
+            ],
+            "orbit_representative": [
+              0,
+              0,
+              1
+            ]
+          },
+          "nondeterministic_free_orbits": 168
+        },
+        "1": {
+          "deterministic_free_orbits": 2,
+          "first_witness": {
+            "image_orbit_representatives": [
+              [
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                1,
+                1
+              ]
+            ],
+            "orbit_representative": [
+              0,
+              0,
+              1
+            ]
+          },
+          "nondeterministic_free_orbits": 166
+        },
+        "2": {
+          "deterministic_free_orbits": 0,
+          "first_witness": {
+            "image_orbit_representatives": [
+              [
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                1,
+                1
+              ]
+            ],
+            "orbit_representative": [
+              0,
+              0,
+              1
+            ]
+          },
+          "nondeterministic_free_orbits": 168
+        }
+      },
+      "m": 8,
+      "transversal_first_return_cycle_lengths": {
+        "0": [
+          8
+        ],
+        "1": [
+          8
+        ],
+        "2": [
+          8
+        ]
+      },
+      "transversal_return_time_sums": {
+        "0": 64,
+        "1": 64,
+        "2": 64
+      }
+    }
+  },
+  "d5": {
+    "11": {
+      "color3_P0_return_free_orbit_quotient": {
+        "deterministic_free_orbits": 0,
+        "first_witness": {
+          "image_orbit_representatives": [
+            [
+              0,
+              0,
+              0,
+              1,
+              10
+            ],
+            [
+              0,
+              0,
+              2,
+              8,
+              1
+            ],
+            [
+              0,
+              1,
+              0,
+              9,
+              1
+            ],
+            [
+              0,
+              1,
+              9,
+              2,
+              10
+            ],
+            [
+              1,
+              1,
+              10,
+              1,
+              9
+            ]
+          ],
+          "orbit_representative": [
+            0,
+            0,
+            0,
+            1,
+            10
+          ]
+        },
+        "nondeterministic_free_orbits": 2928
+      },
+      "color3_actual_identification": {
+        "P0_size": 14641,
+        "R_case_counts": {
+          "later_generic": 13200,
+          "later_special": 110,
+          "section_A_start": 110,
+          "section_C_start": 11,
+          "section_G_start": 1210
+        },
+        "R_formula_failures": [],
+        "R_formula_verified": true,
+        "S_size": 1331,
+        "m": 11,
+        "section_class_counts": {
+          "A": 101,
+          "B": 101,
+          "C": 11,
+          "D": 9,
+          "G": 1109
+        },
+        "section_formula_failures": [],
+        "section_formula_verified": true,
+        "section_initial_class_counts": {
+          "A_start": 110,
+          "C_start": 11,
+          "G_start": 1210
+        },
+        "section_later_special_counts": {
+          "with_later_special": 110,
+          "without_later_special": 1221
+        },
+        "section_return_times": {
+          "11": 1331
+        }
+      },
+      "color3_row_actual": {
+        "m": 11,
+        "row_model_formula_mismatches": [],
+        "row_model_formula_verified": true,
+        "row_return_cycle_counts": {
+          "121": 1
+        },
+        "row_return_is_single_cycle": true
+      },
+      "color3_row_model": {
+        "m": 11,
+        "row_model_cycle_counts": {
+          "121": 1
+        },
+        "row_model_is_single_cycle": true
+      },
+      "color3_section_model": {
+        "B0_half_open_segment_coverage": 1331,
+        "B0_half_open_segments_cover_all_states": true,
+        "B0_half_open_segments_disjoint": true,
+        "B0_return_cycle_counts": {
+          "121": 1
+        },
+        "B0_return_is_single_cycle": true,
+        "B0_return_matches_row_model": true,
+        "B0_return_row_model_mismatches": [],
+        "B0_return_time_counts": {
+          "1": 11,
+          "11": 91,
+          "12": 16,
+          "13": 1,
+          "42": 1,
+          "72": 1
+        },
+        "m": 11,
+        "section_model_cycle_counts": {
+          "1331": 1
+        },
+        "section_model_is_single_cycle": true
+      },
+      "full_family_covariance": [
+        {
+          "color_shift": 0,
+          "covariance_holds": false,
+          "first_witness": {
+            "color": 0,
+            "color_shift": 0,
+            "shift_then_color_image": [
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "shifted_image": [
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "state": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "color_shift": 1,
+          "covariance_holds": false,
+          "first_witness": {
+            "color": 0,
+            "color_shift": 1,
+            "shift_then_color_image": [
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "shifted_image": [
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "state": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "color_shift": 2,
+          "covariance_holds": false,
+          "first_witness": {
+            "color": 0,
+            "color_shift": 2,
+            "shift_then_color_image": [
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "shifted_image": [
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "state": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "color_shift": 3,
+          "covariance_holds": false,
+          "first_witness": {
+            "color": 0,
+            "color_shift": 3,
+            "shift_then_color_image": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "shifted_image": [
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "state": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "color_shift": 4,
+          "covariance_holds": false,
+          "first_witness": {
+            "color": 0,
+            "color_shift": 4,
+            "shift_then_color_image": [
+              0,
+              0,
+              4,
+              10,
+              0
+            ],
+            "shifted_image": [
+              0,
+              0,
+              3,
+              10,
+              1
+            ],
+            "state": [
+              0,
+              0,
+              0,
+              3,
+              10
+            ]
+          }
+        }
+      ],
+      "full_free_orbit_quotient": {
+        "0": {
+          "deterministic_free_orbits": 0,
+          "first_witness": {
+            "image_orbit_representatives": [
+              [
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                1
+              ]
+            ],
+            "orbit_representative": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "nondeterministic_free_orbits": 32208
+        },
+        "1": {
+          "deterministic_free_orbits": 0,
+          "first_witness": {
+            "image_orbit_representatives": [
+              [
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                1
+              ]
+            ],
+            "orbit_representative": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "nondeterministic_free_orbits": 32208
+        },
+        "2": {
+          "deterministic_free_orbits": 0,
+          "first_witness": {
+            "image_orbit_representatives": [
+              [
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                1
+              ]
+            ],
+            "orbit_representative": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "nondeterministic_free_orbits": 32208
+        },
+        "3": {
+          "deterministic_free_orbits": 0,
+          "first_witness": {
+            "image_orbit_representatives": [
+              [
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                1
+              ]
+            ],
+            "orbit_representative": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "nondeterministic_free_orbits": 32208
+        },
+        "4": {
+          "deterministic_free_orbits": 0,
+          "first_witness": {
+            "image_orbit_representatives": [
+              [
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                1
+              ]
+            ],
+            "orbit_representative": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "nondeterministic_free_orbits": 32208
+        }
+      },
+      "m": 11
+    },
+    "5": {
+      "color3_P0_return_free_orbit_quotient": {
+        "deterministic_free_orbits": 0,
+        "first_witness": {
+          "image_orbit_representatives": [
+            [
+              0,
+              0,
+              0,
+              1,
+              4
+            ],
+            [
+              0,
+              0,
+              2,
+              2,
+              1
+            ],
+            [
+              0,
+              1,
+              0,
+              3,
+              1
+            ],
+            [
+              0,
+              1,
+              3,
+              2,
+              4
+            ],
+            [
+              1,
+              1,
+              4,
+              1,
+              3
+            ]
+          ],
+          "orbit_representative": [
+            0,
+            0,
+            0,
+            1,
+            4
+          ]
+        },
+        "nondeterministic_free_orbits": 124
+      },
+      "color3_actual_identification": {
+        "P0_size": 625,
+        "R_case_counts": {
+          "later_generic": 480,
+          "later_special": 20,
+          "section_A_start": 20,
+          "section_C_start": 5,
+          "section_G_start": 100
+        },
+        "R_formula_failures": [],
+        "R_formula_verified": true,
+        "S_size": 125,
+        "m": 5,
+        "section_class_counts": {
+          "A": 17,
+          "B": 17,
+          "C": 5,
+          "D": 3,
+          "G": 83
+        },
+        "section_formula_failures": [],
+        "section_formula_verified": true,
+        "section_initial_class_counts": {
+          "A_start": 20,
+          "C_start": 5,
+          "G_start": 100
+        },
+        "section_later_special_counts": {
+          "with_later_special": 20,
+          "without_later_special": 105
+        },
+        "section_return_times": {
+          "5": 125
+        }
+      },
+      "full_family_covariance": [
+        {
+          "color_shift": 0,
+          "covariance_holds": false,
+          "first_witness": {
+            "color": 0,
+            "color_shift": 0,
+            "shift_then_color_image": [
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "shifted_image": [
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "state": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "color_shift": 1,
+          "covariance_holds": false,
+          "first_witness": {
+            "color": 0,
+            "color_shift": 1,
+            "shift_then_color_image": [
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "shifted_image": [
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "state": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "color_shift": 2,
+          "covariance_holds": false,
+          "first_witness": {
+            "color": 0,
+            "color_shift": 2,
+            "shift_then_color_image": [
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "shifted_image": [
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "state": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "color_shift": 3,
+          "covariance_holds": false,
+          "first_witness": {
+            "color": 0,
+            "color_shift": 3,
+            "shift_then_color_image": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "shifted_image": [
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "state": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "color_shift": 4,
+          "covariance_holds": false,
+          "first_witness": {
+            "color": 0,
+            "color_shift": 4,
+            "shift_then_color_image": [
+              0,
+              0,
+              4,
+              4,
+              0
+            ],
+            "shifted_image": [
+              0,
+              0,
+              3,
+              4,
+              1
+            ],
+            "state": [
+              0,
+              0,
+              0,
+              3,
+              4
+            ]
+          }
+        }
+      ],
+      "full_free_orbit_quotient": {
+        "0": {
+          "deterministic_free_orbits": 0,
+          "first_witness": {
+            "image_orbit_representatives": [
+              [
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                1
+              ]
+            ],
+            "orbit_representative": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "nondeterministic_free_orbits": 624
+        },
+        "1": {
+          "deterministic_free_orbits": 0,
+          "first_witness": {
+            "image_orbit_representatives": [
+              [
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                1
+              ]
+            ],
+            "orbit_representative": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "nondeterministic_free_orbits": 624
+        },
+        "2": {
+          "deterministic_free_orbits": 0,
+          "first_witness": {
+            "image_orbit_representatives": [
+              [
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                1
+              ]
+            ],
+            "orbit_representative": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "nondeterministic_free_orbits": 624
+        },
+        "3": {
+          "deterministic_free_orbits": 0,
+          "first_witness": {
+            "image_orbit_representatives": [
+              [
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                1
+              ]
+            ],
+            "orbit_representative": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "nondeterministic_free_orbits": 624
+        },
+        "4": {
+          "deterministic_free_orbits": 0,
+          "first_witness": {
+            "image_orbit_representatives": [
+              [
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                1
+              ]
+            ],
+            "orbit_representative": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "nondeterministic_free_orbits": 624
+        }
+      },
+      "m": 5
+    },
+    "7": {
+      "color3_P0_return_free_orbit_quotient": {
+        "deterministic_free_orbits": 0,
+        "first_witness": {
+          "image_orbit_representatives": [
+            [
+              0,
+              0,
+              0,
+              1,
+              6
+            ],
+            [
+              0,
+              0,
+              2,
+              4,
+              1
+            ],
+            [
+              0,
+              1,
+              0,
+              5,
+              1
+            ],
+            [
+              0,
+              1,
+              5,
+              2,
+              6
+            ],
+            [
+              1,
+              1,
+              6,
+              1,
+              5
+            ]
+          ],
+          "orbit_representative": [
+            0,
+            0,
+            0,
+            1,
+            6
+          ]
+        },
+        "nondeterministic_free_orbits": 480
+      },
+      "color3_actual_identification": {
+        "P0_size": 2401,
+        "R_case_counts": {
+          "later_generic": 2016,
+          "later_special": 42,
+          "section_A_start": 42,
+          "section_C_start": 7,
+          "section_G_start": 294
+        },
+        "R_formula_failures": [],
+        "R_formula_verified": true,
+        "S_size": 343,
+        "m": 7,
+        "section_class_counts": {
+          "A": 37,
+          "B": 37,
+          "C": 7,
+          "D": 5,
+          "G": 257
+        },
+        "section_formula_failures": [],
+        "section_formula_verified": true,
+        "section_initial_class_counts": {
+          "A_start": 42,
+          "C_start": 7,
+          "G_start": 294
+        },
+        "section_later_special_counts": {
+          "with_later_special": 42,
+          "without_later_special": 301
+        },
+        "section_return_times": {
+          "7": 343
+        }
+      },
+      "full_family_covariance": [
+        {
+          "color_shift": 0,
+          "covariance_holds": false,
+          "first_witness": {
+            "color": 0,
+            "color_shift": 0,
+            "shift_then_color_image": [
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "shifted_image": [
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "state": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "color_shift": 1,
+          "covariance_holds": false,
+          "first_witness": {
+            "color": 0,
+            "color_shift": 1,
+            "shift_then_color_image": [
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "shifted_image": [
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "state": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "color_shift": 2,
+          "covariance_holds": false,
+          "first_witness": {
+            "color": 0,
+            "color_shift": 2,
+            "shift_then_color_image": [
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "shifted_image": [
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "state": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "color_shift": 3,
+          "covariance_holds": false,
+          "first_witness": {
+            "color": 0,
+            "color_shift": 3,
+            "shift_then_color_image": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "shifted_image": [
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "state": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "color_shift": 4,
+          "covariance_holds": false,
+          "first_witness": {
+            "color": 0,
+            "color_shift": 4,
+            "shift_then_color_image": [
+              0,
+              0,
+              4,
+              6,
+              0
+            ],
+            "shifted_image": [
+              0,
+              0,
+              3,
+              6,
+              1
+            ],
+            "state": [
+              0,
+              0,
+              0,
+              3,
+              6
+            ]
+          }
+        }
+      ],
+      "full_free_orbit_quotient": {
+        "0": {
+          "deterministic_free_orbits": 0,
+          "first_witness": {
+            "image_orbit_representatives": [
+              [
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                1
+              ]
+            ],
+            "orbit_representative": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "nondeterministic_free_orbits": 3360
+        },
+        "1": {
+          "deterministic_free_orbits": 0,
+          "first_witness": {
+            "image_orbit_representatives": [
+              [
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                1
+              ]
+            ],
+            "orbit_representative": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "nondeterministic_free_orbits": 3360
+        },
+        "2": {
+          "deterministic_free_orbits": 0,
+          "first_witness": {
+            "image_orbit_representatives": [
+              [
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                1
+              ]
+            ],
+            "orbit_representative": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "nondeterministic_free_orbits": 3360
+        },
+        "3": {
+          "deterministic_free_orbits": 0,
+          "first_witness": {
+            "image_orbit_representatives": [
+              [
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                1
+              ]
+            ],
+            "orbit_representative": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "nondeterministic_free_orbits": 3360
+        },
+        "4": {
+          "deterministic_free_orbits": 0,
+          "first_witness": {
+            "image_orbit_representatives": [
+              [
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                1
+              ]
+            ],
+            "orbit_representative": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "nondeterministic_free_orbits": 3360
+        }
+      },
+      "m": 7
+    },
+    "9": {
+      "color3_P0_return_free_orbit_quotient": {
+        "deterministic_free_orbits": 0,
+        "first_witness": {
+          "image_orbit_representatives": [
+            [
+              0,
+              0,
+              0,
+              1,
+              8
+            ],
+            [
+              0,
+              0,
+              2,
+              6,
+              1
+            ],
+            [
+              0,
+              1,
+              0,
+              7,
+              1
+            ],
+            [
+              0,
+              1,
+              7,
+              2,
+              8
+            ],
+            [
+              1,
+              1,
+              8,
+              1,
+              7
+            ]
+          ],
+          "orbit_representative": [
+            0,
+            0,
+            0,
+            1,
+            8
+          ]
+        },
+        "nondeterministic_free_orbits": 1312
+      },
+      "color3_actual_identification": {
+        "P0_size": 6561,
+        "R_case_counts": {
+          "later_generic": 5760,
+          "later_special": 72,
+          "section_A_start": 72,
+          "section_C_start": 9,
+          "section_G_start": 648
+        },
+        "R_formula_failures": [],
+        "R_formula_verified": true,
+        "S_size": 729,
+        "m": 9,
+        "section_class_counts": {
+          "A": 65,
+          "B": 65,
+          "C": 9,
+          "D": 7,
+          "G": 583
+        },
+        "section_formula_failures": [],
+        "section_formula_verified": true,
+        "section_initial_class_counts": {
+          "A_start": 72,
+          "C_start": 9,
+          "G_start": 648
+        },
+        "section_later_special_counts": {
+          "with_later_special": 72,
+          "without_later_special": 657
+        },
+        "section_return_times": {
+          "9": 729
+        }
+      },
+      "color3_row_actual": {
+        "m": 9,
+        "row_model_formula_mismatches": [],
+        "row_model_formula_verified": true,
+        "row_return_cycle_counts": {
+          "81": 1
+        },
+        "row_return_is_single_cycle": true
+      },
+      "color3_row_model": {
+        "m": 9,
+        "row_model_cycle_counts": {
+          "81": 1
+        },
+        "row_model_is_single_cycle": true
+      },
+      "color3_section_model": {
+        "B0_half_open_segment_coverage": 729,
+        "B0_half_open_segments_cover_all_states": true,
+        "B0_half_open_segments_disjoint": true,
+        "B0_return_cycle_counts": {
+          "81": 1
+        },
+        "B0_return_is_single_cycle": true,
+        "B0_return_matches_row_model": true,
+        "B0_return_row_model_mismatches": [],
+        "B0_return_time_counts": {
+          "1": 9,
+          "10": 12,
+          "11": 1,
+          "18": 1,
+          "58": 1,
+          "9": 57
+        },
+        "m": 9,
+        "section_model_cycle_counts": {
+          "729": 1
+        },
+        "section_model_is_single_cycle": true
+      },
+      "full_family_covariance": [
+        {
+          "color_shift": 0,
+          "covariance_holds": false,
+          "first_witness": {
+            "color": 0,
+            "color_shift": 0,
+            "shift_then_color_image": [
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "shifted_image": [
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "state": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "color_shift": 1,
+          "covariance_holds": false,
+          "first_witness": {
+            "color": 0,
+            "color_shift": 1,
+            "shift_then_color_image": [
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "shifted_image": [
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "state": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "color_shift": 2,
+          "covariance_holds": false,
+          "first_witness": {
+            "color": 0,
+            "color_shift": 2,
+            "shift_then_color_image": [
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "shifted_image": [
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "state": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "color_shift": 3,
+          "covariance_holds": false,
+          "first_witness": {
+            "color": 0,
+            "color_shift": 3,
+            "shift_then_color_image": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "shifted_image": [
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "state": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "color_shift": 4,
+          "covariance_holds": false,
+          "first_witness": {
+            "color": 0,
+            "color_shift": 4,
+            "shift_then_color_image": [
+              0,
+              0,
+              4,
+              8,
+              0
+            ],
+            "shifted_image": [
+              0,
+              0,
+              3,
+              8,
+              1
+            ],
+            "state": [
+              0,
+              0,
+              0,
+              3,
+              8
+            ]
+          }
+        }
+      ],
+      "full_free_orbit_quotient": {
+        "0": {
+          "deterministic_free_orbits": 0,
+          "first_witness": {
+            "image_orbit_representatives": [
+              [
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                1
+              ]
+            ],
+            "orbit_representative": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "nondeterministic_free_orbits": 11808
+        },
+        "1": {
+          "deterministic_free_orbits": 0,
+          "first_witness": {
+            "image_orbit_representatives": [
+              [
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                1
+              ]
+            ],
+            "orbit_representative": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "nondeterministic_free_orbits": 11808
+        },
+        "2": {
+          "deterministic_free_orbits": 0,
+          "first_witness": {
+            "image_orbit_representatives": [
+              [
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                1
+              ]
+            ],
+            "orbit_representative": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "nondeterministic_free_orbits": 11808
+        },
+        "3": {
+          "deterministic_free_orbits": 0,
+          "first_witness": {
+            "image_orbit_representatives": [
+              [
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                1
+              ]
+            ],
+            "orbit_representative": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "nondeterministic_free_orbits": 11808
+        },
+        "4": {
+          "deterministic_free_orbits": 0,
+          "first_witness": {
+            "image_orbit_representatives": [
+              [
+                0,
+                0,
+                0,
+                0,
+                2
+              ],
+              [
+                0,
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                1
+              ]
+            ],
+            "orbit_representative": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "nondeterministic_free_orbits": 11808
+        }
+      },
+      "m": 9
+    }
+  }
+}

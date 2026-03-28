@@ -1,0 +1,31 @@
+{
+  "all_exact_checks_passed": true,
+  "color2_hamilton_checked_moduli": [
+    7,
+    9,
+    11,
+    13,
+    15,
+    17
+  ],
+  "conclusion": "A single source-family repair on top of the d5_277 refined family kills the recurring d5_278 witness family. On the checked odd range 7,9,11,13,15,17 the repaired family is exact, and color 2 is Hamilton throughout that checked range.",
+  "exact_checked_moduli": [
+    7,
+    9,
+    11,
+    13,
+    15,
+    17
+  ],
+  "repair": {
+    "override_perm_012": [
+      1,
+      2,
+      0
+    ],
+    "source_family": "(m-1, 6, m-1, m-1, m-1)",
+    "target_class": "S2({1,2,3,4})|G0|M0"
+  },
+  "source_rule": "best d5_277 refined-family rule",
+  "task": "d5_279_one_point_repair"
+}

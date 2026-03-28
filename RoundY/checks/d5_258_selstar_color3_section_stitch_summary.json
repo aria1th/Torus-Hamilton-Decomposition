@@ -1,0 +1,17 @@
+{
+  "all_candidate_section_formulas_verified": true,
+  "all_section_returns_exact": true,
+  "all_sections_single_cycle": true,
+  "checked_moduli": [
+    9,
+    11,
+    13,
+    15,
+    17,
+    19,
+    21
+  ],
+  "color": 3,
+  "selector": "Sel*",
+  "task": "d5_258_selstar_color3_section_stitch"
+}

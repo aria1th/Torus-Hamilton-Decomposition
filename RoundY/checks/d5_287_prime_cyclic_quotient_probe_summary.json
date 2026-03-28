@@ -1,0 +1,27 @@
+{
+  "all_checked_large_d5_row_models_single_cycle": true,
+  "all_checked_large_d5_section_models_single_cycle": true,
+  "all_d3_P0_returns_are_single_cycles": true,
+  "all_d3_full_covariance_shifts_fail": true,
+  "all_d3_full_free_orbit_quotients_have_nondeterministic_colors": true,
+  "all_d3_transversal_first_returns_are_m_cycles": true,
+  "all_d5_color3_P0_free_orbit_quotients_fail": true,
+  "all_d5_color3_actual_identifications_verified": true,
+  "all_d5_full_covariance_shifts_fail": true,
+  "all_d5_full_free_orbit_quotients_have_nondeterministic_colors": true,
+  "conclusion": "The naive full-torus cyclic quotient is not the right primary theorem object: it already fails in the closed D3 Route-E package and in the current D5 Sel* package. The useful cyclic/clock structure appears only after the existing return-ladder compression, on the proved transversal/section/row models.",
+  "d3_moduli": [
+    6,
+    8,
+    10
+  ],
+  "d5_moduli": [
+    5,
+    7,
+    9,
+    11
+  ],
+  "question": "Can one start from the full torus, quotient by cyclic coordinate rotation, and expect the fixed-color dynamics to descend cleanly in the already closed D3 and current D5 branches?",
+  "revised_direction": "For prime-p generalization, treat cyclic-quotient or voltage language as a late-stage description of an already extracted reduced return model. Do not start from a full-torus quotient-first program; keep the backbone-first, return-ladder, resonance-split, defect-localization strategy.",
+  "task": "d5_287_prime_cyclic_quotient_probe"
+}

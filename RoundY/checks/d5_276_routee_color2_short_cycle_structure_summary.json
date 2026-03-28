@@ -1,0 +1,20 @@
+{
+  "all_G_only_parameterizations_verified": true,
+  "all_G_only_short_counts_match": true,
+  "all_M_only_counts_match": true,
+  "all_M_only_parameterizations_verified": true,
+  "checked_moduli": [
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19,
+    21
+  ],
+  "conclusion": "For the combined-best d5_274 family, the non-Hamilton part of the color-2 P0 return is concentrated in explicit short-cycle families. A universal G-only family contributes (m-1)^2 short m-cycles and is parameterized by x2=m-1, x4!=m-1, and the invariant x0+2x1 != 1-x4. On checked moduli divisible by 3, there is an extra M-only family of (m-1)*(2m/3) short m-cycles on x4=m-1, x2!=m-1, parameterized by the invariant 2x0+3x1 avoiding the residue class 1 mod 3.",
+  "source_rule": "combined best exact rule from d5_274",
+  "task": "d5_276_routee_color2_short_cycle_structure"
+}

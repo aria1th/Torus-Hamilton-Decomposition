@@ -1,0 +1,52 @@
+{
+  "task": "d5_256_transport_no_go",
+  "checked_moduli": [
+    5,
+    7,
+    9,
+    11,
+    13
+  ],
+  "explicit_vertex_y": [
+    0,
+    0,
+    0,
+    1,
+    2
+  ],
+  "expected_pulled_back_relative_dirs": [
+    0,
+    0,
+    2,
+    0,
+    3
+  ],
+  "all_witness_dirs_match": true,
+  "expected_direction_supports": {
+    "0": [
+      0,
+      1,
+      4
+    ],
+    "1": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "2": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "3": [
+      2,
+      3,
+      4
+    ]
+  },
+  "all_supports_match": true,
+  "all_noncolor4_nonhamilton": true,
+  "conclusion": "The explicit two-swap package from d5_247 is not transport-compatible in the G2 sense. At y=(0,0,0,1,2) the pulled-back relative directions are [0,0,2,0,3], so the package is not one common color-relative family. Moreover colors 0,1,2,3 use restricted direction supports and are non-Hamilton on all checked odd moduli."
+}

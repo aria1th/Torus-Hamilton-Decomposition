@@ -1,0 +1,239 @@
+{
+  "task_id": "D5-T2-COLLISION-FAMILY-CHECK-228",
+  "bundle_root": "/mnt/data/bundlefull/roundy_d5_endpoint_return_model_bundle_20260321_update_197",
+  "m_values": [
+    5,
+    7,
+    9,
+    11,
+    13
+  ],
+  "per_m": {
+    "5": {
+      "label_sizes_color0": {
+        "L1": 20,
+        "R1": 20,
+        "L2": 20,
+        "R2": 20,
+        "L3": 20,
+        "R3": 20
+      },
+      "families": {
+        "R1": {
+          "count": 20,
+          "ok": true,
+          "bad_examples": []
+        },
+        "L2": {
+          "count": 20,
+          "ok": true,
+          "bad_examples": []
+        },
+        "R2": {
+          "count": 20,
+          "ok": true,
+          "bad_examples": []
+        },
+        "R3": {
+          "count": 20,
+          "ok": true,
+          "bad_examples": []
+        },
+        "L3_tail": {
+          "count": 5,
+          "ok": true,
+          "bad_examples": []
+        }
+      },
+      "pair_counts_color0": {
+        "('B', 'L2')": 20,
+        "('B', 'L3')": 5,
+        "('B', 'R1')": 20,
+        "('B', 'R2')": 20,
+        "('B', 'R3')": 20
+      },
+      "all_formula_checks_ok": true
+    },
+    "7": {
+      "label_sizes_color0": {
+        "L1": 42,
+        "R1": 42,
+        "L2": 42,
+        "R2": 42,
+        "L3": 42,
+        "R3": 42
+      },
+      "families": {
+        "R1": {
+          "count": 42,
+          "ok": true,
+          "bad_examples": []
+        },
+        "L2": {
+          "count": 42,
+          "ok": true,
+          "bad_examples": []
+        },
+        "R2": {
+          "count": 42,
+          "ok": true,
+          "bad_examples": []
+        },
+        "R3": {
+          "count": 42,
+          "ok": true,
+          "bad_examples": []
+        },
+        "L3_tail": {
+          "count": 7,
+          "ok": true,
+          "bad_examples": []
+        }
+      },
+      "pair_counts_color0": {
+        "('B', 'L2')": 42,
+        "('B', 'L3')": 7,
+        "('B', 'R1')": 42,
+        "('B', 'R2')": 42,
+        "('B', 'R3')": 42
+      },
+      "all_formula_checks_ok": true
+    },
+    "9": {
+      "label_sizes_color0": {
+        "L1": 72,
+        "R1": 72,
+        "L2": 72,
+        "R2": 72,
+        "L3": 72,
+        "R3": 72
+      },
+      "families": {
+        "R1": {
+          "count": 72,
+          "ok": true,
+          "bad_examples": []
+        },
+        "L2": {
+          "count": 72,
+          "ok": true,
+          "bad_examples": []
+        },
+        "R2": {
+          "count": 72,
+          "ok": true,
+          "bad_examples": []
+        },
+        "R3": {
+          "count": 72,
+          "ok": true,
+          "bad_examples": []
+        },
+        "L3_tail": {
+          "count": 9,
+          "ok": true,
+          "bad_examples": []
+        }
+      },
+      "pair_counts_color0": {
+        "('B', 'L2')": 72,
+        "('B', 'L3')": 9,
+        "('B', 'R1')": 72,
+        "('B', 'R2')": 72,
+        "('B', 'R3')": 72
+      },
+      "all_formula_checks_ok": true
+    },
+    "11": {
+      "label_sizes_color0": {
+        "L1": 110,
+        "R1": 110,
+        "L2": 110,
+        "R2": 110,
+        "L3": 110,
+        "R3": 110
+      },
+      "families": {
+        "R1": {
+          "count": 110,
+          "ok": true,
+          "bad_examples": []
+        },
+        "L2": {
+          "count": 110,
+          "ok": true,
+          "bad_examples": []
+        },
+        "R2": {
+          "count": 110,
+          "ok": true,
+          "bad_examples": []
+        },
+        "R3": {
+          "count": 110,
+          "ok": true,
+          "bad_examples": []
+        },
+        "L3_tail": {
+          "count": 11,
+          "ok": true,
+          "bad_examples": []
+        }
+      },
+      "pair_counts_color0": {
+        "('B', 'L2')": 110,
+        "('B', 'L3')": 11,
+        "('B', 'R1')": 110,
+        "('B', 'R2')": 110,
+        "('B', 'R3')": 110
+      },
+      "all_formula_checks_ok": true
+    },
+    "13": {
+      "label_sizes_color0": {
+        "L1": 156,
+        "R1": 156,
+        "L2": 156,
+        "R2": 156,
+        "L3": 156,
+        "R3": 156
+      },
+      "families": {
+        "R1": {
+          "count": 156,
+          "ok": true,
+          "bad_examples": []
+        },
+        "L2": {
+          "count": 156,
+          "ok": true,
+          "bad_examples": []
+        },
+        "R2": {
+          "count": 156,
+          "ok": true,
+          "bad_examples": []
+        },
+        "R3": {
+          "count": 156,
+          "ok": true,
+          "bad_examples": []
+        },
+        "L3_tail": {
+          "count": 13,
+          "ok": true,
+          "bad_examples": []
+        }
+      },
+      "pair_counts_color0": {
+        "('B', 'L2')": 156,
+        "('B', 'L3')": 13,
+        "('B', 'R1')": 156,
+        "('B', 'R2')": 156,
+        "('B', 'R3')": 156
+      },
+      "all_formula_checks_ok": true
+    }
+  },
+  "all_formula_checks_ok": true
+}

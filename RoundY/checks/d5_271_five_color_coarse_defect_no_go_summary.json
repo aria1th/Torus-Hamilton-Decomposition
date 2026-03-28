@@ -1,0 +1,20 @@
+{
+  "all_moduli_have_local_obstruction": true,
+  "checked_moduli": [
+    5,
+    7,
+    9,
+    11,
+    13
+  ],
+  "conclusion": "The historical defect-bit coarse family is already locally impossible. For every checked odd modulus, at least one target local signature has zero allowed class-permutation assignments, so no exact five-color completion in this family exists.",
+  "family": "Fix Sel* colors 3 and 4. For colors 0,1,2, assign the three remaining directions by one fixed permutation on each historical coarse class S0, S1, S2^(0), S2^(1), S3^(0,0), S3^(0,1), S3^(1,0), S3^(1,1), S4+.",
+  "first_common_witness_target": [
+    0,
+    0,
+    0,
+    0,
+    3
+  ],
+  "task": "d5_271_five_color_coarse_defect_no_go"
+}

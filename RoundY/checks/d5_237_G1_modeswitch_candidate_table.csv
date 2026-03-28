@@ -1,0 +1,27 @@
+kind,colors,count_or_exists
+pair_count_m5,"[0, 1]",4284
+pair_count_m5,"[0, 2]",0
+pair_count_m5,"[0, 3]",0
+pair_count_m5,"[0, 4]",4284
+pair_count_m5,"[1, 2]",4284
+pair_count_m5,"[1, 3]",0
+pair_count_m5,"[1, 4]",0
+pair_count_m5,"[2, 3]",4284
+pair_count_m5,"[2, 4]",0
+pair_count_m5,"[3, 4]",4284
+triple_exists_m5,"[0, 1, 2]",0
+triple_exists_m5,"[0, 1, 3]",0
+triple_exists_m5,"[0, 1, 4]",0
+triple_exists_m5,"[0, 2, 3]",0
+triple_exists_m5,"[0, 2, 4]",0
+triple_exists_m5,"[0, 3, 4]",0
+triple_exists_m5,"[1, 2, 3]",0
+triple_exists_m5,"[1, 2, 4]",0
+triple_exists_m5,"[1, 3, 4]",0
+triple_exists_m5,"[2, 3, 4]",0
+latin_anchor_count_m5,all,102
+single_rule_outgoing_exhaustive_count_m5,all,0
+best_single_rule_defect_m5,all,420
+"sanity_m7_adjacent_pair_[0,1]_exists","[0,1]",1
+"sanity_m7_nonadjacent_pair_[0,2]_exists","[0,2]",0
+"sanity_m7_triple_[0,1,2]_exists","[0,1,2]",0

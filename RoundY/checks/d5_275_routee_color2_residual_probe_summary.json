@@ -1,0 +1,79 @@
+{
+  "all_exact_checks_passed": true,
+  "color1_cycle_histograms": {
+    "11": {
+      "1383": 1,
+      "1636": 1,
+      "52": 1,
+      "5745": 1,
+      "5825": 1
+    },
+    "13": {
+      "2305": 1,
+      "2772": 1,
+      "6943": 1,
+      "7124": 1,
+      "9417": 1
+    },
+    "5": {
+      "128": 1,
+      "129": 1,
+      "154": 1,
+      "167": 1,
+      "47": 1
+    },
+    "7": {
+      "2401": 1
+    },
+    "9": {
+      "1540": 1,
+      "4268": 1,
+      "753": 1
+    }
+  },
+  "color2_branch_vectors_stable": true,
+  "color2_cycle_histograms": {
+    "11": {
+      "11": 100,
+      "13541": 1
+    },
+    "13": {
+      "13": 144,
+      "26689": 1
+    },
+    "5": {
+      "268": 2,
+      "5": 16,
+      "9": 1
+    },
+    "7": {
+      "181": 1,
+      "1968": 1,
+      "7": 36
+    },
+    "9": {
+      "5553": 1,
+      "9": 112
+    }
+  },
+  "color2_no_linear_invariant_by_branch_support": true,
+  "conclusion": "The combined-best d5_274 family is exact on the checked odd range 5,7,9,11,13. Inside that family, color 2 is the cleanest residual Route-E target: its P0 first return has a stable five-branch affine displacement support, the three smallest branches are localized on the coordinate surfaces x3=m-2, x4=m-1, x0=m-1, and there is no nontrivial 4-coordinate linear invariant forced by the five branch vectors.",
+  "exact_checked_moduli": [
+    5,
+    7,
+    9,
+    11,
+    13
+  ],
+  "profile_checked_moduli": [
+    5,
+    7,
+    9,
+    11,
+    13
+  ],
+  "small_branch_surface_localization_verified": true,
+  "source_rule": "combined best exact rule from d5_274",
+  "source_rule_json": "/data/angel/repos/modulation-guidance/Torus-Hamilton-Decomposition/RoundY/checks/d5_274_routee_assembly_pattern_search/combined_search.json",
+  "task": "d5_275_routee_color2_residual_probe"
+}

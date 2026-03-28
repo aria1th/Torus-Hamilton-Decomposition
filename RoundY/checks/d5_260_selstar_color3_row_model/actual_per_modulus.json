@@ -1,0 +1,197 @@
+{
+  "10": {
+    "m": 10,
+    "row_model_formula_mismatches": [],
+    "row_model_formula_verified": true,
+    "row_return_cycle_counts": {
+      "100": 1
+    },
+    "row_return_is_single_cycle": true
+  },
+  "11": {
+    "m": 11,
+    "row_model_formula_mismatches": [],
+    "row_model_formula_verified": true,
+    "row_return_cycle_counts": {
+      "121": 1
+    },
+    "row_return_is_single_cycle": true
+  },
+  "12": {
+    "m": 12,
+    "row_model_formula_mismatches": [],
+    "row_model_formula_verified": true,
+    "row_return_cycle_counts": {
+      "144": 1
+    },
+    "row_return_is_single_cycle": true
+  },
+  "13": {
+    "m": 13,
+    "row_model_formula_mismatches": [],
+    "row_model_formula_verified": true,
+    "row_return_cycle_counts": {
+      "169": 1
+    },
+    "row_return_is_single_cycle": true
+  },
+  "14": {
+    "m": 14,
+    "row_model_formula_mismatches": [],
+    "row_model_formula_verified": true,
+    "row_return_cycle_counts": {
+      "196": 1
+    },
+    "row_return_is_single_cycle": true
+  },
+  "15": {
+    "m": 15,
+    "row_model_formula_mismatches": [],
+    "row_model_formula_verified": true,
+    "row_return_cycle_counts": {
+      "225": 1
+    },
+    "row_return_is_single_cycle": true
+  },
+  "16": {
+    "m": 16,
+    "row_model_formula_mismatches": [],
+    "row_model_formula_verified": true,
+    "row_return_cycle_counts": {
+      "256": 1
+    },
+    "row_return_is_single_cycle": true
+  },
+  "17": {
+    "m": 17,
+    "row_model_formula_mismatches": [],
+    "row_model_formula_verified": true,
+    "row_return_cycle_counts": {
+      "289": 1
+    },
+    "row_return_is_single_cycle": true
+  },
+  "18": {
+    "m": 18,
+    "row_model_formula_mismatches": [],
+    "row_model_formula_verified": true,
+    "row_return_cycle_counts": {
+      "324": 1
+    },
+    "row_return_is_single_cycle": true
+  },
+  "19": {
+    "m": 19,
+    "row_model_formula_mismatches": [],
+    "row_model_formula_verified": true,
+    "row_return_cycle_counts": {
+      "361": 1
+    },
+    "row_return_is_single_cycle": true
+  },
+  "20": {
+    "m": 20,
+    "row_model_formula_mismatches": [],
+    "row_model_formula_verified": true,
+    "row_return_cycle_counts": {
+      "400": 1
+    },
+    "row_return_is_single_cycle": true
+  },
+  "21": {
+    "m": 21,
+    "row_model_formula_mismatches": [],
+    "row_model_formula_verified": true,
+    "row_return_cycle_counts": {
+      "441": 1
+    },
+    "row_return_is_single_cycle": true
+  },
+  "22": {
+    "m": 22,
+    "row_model_formula_mismatches": [],
+    "row_model_formula_verified": true,
+    "row_return_cycle_counts": {
+      "484": 1
+    },
+    "row_return_is_single_cycle": true
+  },
+  "23": {
+    "m": 23,
+    "row_model_formula_mismatches": [],
+    "row_model_formula_verified": true,
+    "row_return_cycle_counts": {
+      "529": 1
+    },
+    "row_return_is_single_cycle": true
+  },
+  "24": {
+    "m": 24,
+    "row_model_formula_mismatches": [],
+    "row_model_formula_verified": true,
+    "row_return_cycle_counts": {
+      "576": 1
+    },
+    "row_return_is_single_cycle": true
+  },
+  "25": {
+    "m": 25,
+    "row_model_formula_mismatches": [],
+    "row_model_formula_verified": true,
+    "row_return_cycle_counts": {
+      "625": 1
+    },
+    "row_return_is_single_cycle": true
+  },
+  "3": {
+    "m": 3,
+    "row_return_cycle_counts": {
+      "9": 1
+    },
+    "row_return_is_single_cycle": true
+  },
+  "4": {
+    "m": 4,
+    "row_return_cycle_counts": {
+      "16": 1
+    },
+    "row_return_is_single_cycle": true
+  },
+  "5": {
+    "m": 5,
+    "row_return_cycle_counts": {
+      "25": 1
+    },
+    "row_return_is_single_cycle": true
+  },
+  "6": {
+    "m": 6,
+    "row_return_cycle_counts": {
+      "36": 1
+    },
+    "row_return_is_single_cycle": true
+  },
+  "7": {
+    "m": 7,
+    "row_return_cycle_counts": {
+      "49": 1
+    },
+    "row_return_is_single_cycle": true
+  },
+  "8": {
+    "m": 8,
+    "row_return_cycle_counts": {
+      "64": 1
+    },
+    "row_return_is_single_cycle": true
+  },
+  "9": {
+    "m": 9,
+    "row_model_formula_mismatches": [],
+    "row_model_formula_verified": true,
+    "row_return_cycle_counts": {
+      "81": 1
+    },
+    "row_return_is_single_cycle": true
+  }
+}

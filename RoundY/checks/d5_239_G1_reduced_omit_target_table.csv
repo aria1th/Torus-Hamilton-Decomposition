@@ -1,0 +1,10 @@
+m,omit_single_base_orbit_count,shifted_single_base_orbit_count,canonical_omit_first_return_cycle_sizes,canonical_shift0_first_return_cycle_sizes,canonical_point0_full_orbit_sizes,canonical_point1_full_orbit_sizes,canonical_two_point_full_orbit_sizes
+3,18,0,[3],"[1, 2]",[27],[27],[27]
+5,50,0,[5],"[1, 4]",[125],[125],[125]
+7,98,0,[7],"[1, 6]",[343],[343],[343]
+9,162,0,[9],"[1, 8]",[729],[729],[729]
+11,242,0,[11],"[1, 10]",[1331],[1331],[1331]
+13,338,0,[13],"[1, 12]",[2197],[2197],[2197]
+15,450,0,[15],"[1, 14]",[3375],[3375],[3375]
+17,578,0,[17],"[1, 16]",[4913],[4913],[4913]
+19,722,0,[19],"[1, 18]",[6859],[6859],[6859]

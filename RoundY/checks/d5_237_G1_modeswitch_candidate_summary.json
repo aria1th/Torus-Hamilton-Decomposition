@@ -1,0 +1,79 @@
+{
+  "task": "d5_237_G1_modeswitch_candidate_search",
+  "bundle": "/mnt/data/bundle197/roundy_d5_endpoint_return_model_bundle_20260321_update_197",
+  "family_scope": {
+    "simple_rule_count": 200,
+    "exact_signature_rule_count": 81930,
+    "all_rule_count": 82130
+  },
+  "latin_counts_by_m": {
+    "simple": {
+      "5": 80,
+      "7": 80,
+      "9": 80
+    },
+    "exact_signature": {
+      "5": 142,
+      "7": 142,
+      "9": 142
+    },
+    "all": {
+      "5": 222,
+      "7": 222,
+      "9": 222
+    }
+  },
+  "latin_anchor_count_m5": 102,
+  "single_rule_outgoing_exhaustive_count_m5": 0,
+  "best_single_rule_defect_m5": {
+    "defect_count": 420,
+    "rule_key": "('constant', '0/2', '3/3')",
+    "family": "simple",
+    "first_bad_vertex": [
+      0,
+      0,
+      0,
+      3,
+      4
+    ],
+    "first_bad_dirs": [
+      0,
+      1,
+      2,
+      0,
+      4
+    ]
+  },
+  "pair_counts_m5": {
+    "[0, 1]": 4284,
+    "[0, 2]": 0,
+    "[0, 3]": 0,
+    "[0, 4]": 4284,
+    "[1, 2]": 4284,
+    "[1, 3]": 0,
+    "[1, 4]": 0,
+    "[2, 3]": 4284,
+    "[2, 4]": 0,
+    "[3, 4]": 4284
+  },
+  "triple_exists_m5": {
+    "[0, 1, 2]": false,
+    "[0, 1, 3]": false,
+    "[0, 1, 4]": false,
+    "[0, 2, 3]": false,
+    "[0, 2, 4]": false,
+    "[0, 3, 4]": false,
+    "[1, 2, 3]": false,
+    "[1, 2, 4]": false,
+    "[1, 3, 4]": false,
+    "[2, 3, 4]": false
+  },
+  "max_color_subset_size_m5": 2,
+  "adjacent_pairs_only_m5": true,
+  "sanity_m7": {
+    "adjacent_pair_[0,1]_exists": true,
+    "nonadjacent_pair_[0,2]_exists": false,
+    "triple_[0,1,2]_exists": false
+  },
+  "conclusion": "Inside the surfaced mode-switch family, outgoing-disjoint color packages on m=5 exist for at most two colors, and the only surviving pairs are cyclic-adjacent pairs. No three-color subset survives, hence no four-color baseline and no five-color G1 package can be built from this family. Therefore any honest closure of G1 must use genuinely different SelCorr/SelStar defect-splice data rather than a search inside the surfaced mode-switch rules."
+}

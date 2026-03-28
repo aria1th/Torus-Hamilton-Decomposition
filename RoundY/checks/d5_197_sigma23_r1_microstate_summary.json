@@ -1,0 +1,39 @@
+{
+  "task_id": "D5-SIGMA23-R1-MICROSTATE-CHECK-197",
+  "checked_moduli": [
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17
+  ],
+  "all_second_steps_match_sigma22": true,
+  "all_second_steps_avoid_sigma23": true,
+  "all_inferred_delta_is_12": true,
+  "all_slot3_unchanged": true,
+  "microcase_count_pattern": {
+    "5": 1,
+    "7": 1,
+    "9": 1,
+    "11": 1,
+    "13": 1,
+    "15": 1,
+    "17": 1
+  },
+  "source_count_pattern": {
+    "5": 20,
+    "7": 42,
+    "9": 72,
+    "11": 110,
+    "13": 156,
+    "15": 210,
+    "17": 272
+  },
+  "main_result": "For every checked odd modulus, the sigma21 immediate R1 source family collapses to a single rooted translation class. Its actual two-step continuation matches the sigma22 prototype and never the sigma23 prototype, so every checked case has image right word [2,1,2], delta [1,2], and unchanged slot 3.",
+  "environment": {
+    "python_version": "3.10.12",
+    "rich_version": "14.2.0"
+  }
+}

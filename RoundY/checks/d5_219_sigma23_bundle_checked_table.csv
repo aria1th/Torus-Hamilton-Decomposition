@@ -1,0 +1,10 @@
+m,n,source_count,source_count_matches_m_times_m_minus_1,symmetry_reduced_microcase_count,all_second_steps_match_sigma22,all_second_steps_avoid_sigma23,all_neighbor_patterns_are_B_R2_B_B_B,all_actual_deltas_are_12,relative_immediate_coords,relative_actual_second_coords,relative_sigma23_second_coords,neighbor_labels_by_direction
+3,243,6,True,1,True,True,True,True,"[0, 1, 0, 0, 0]","[0, 1, 1, 0, 0]","[0, 0, 2, 0, 0]","[""B"", ""R2"", ""B"", ""B"", ""B""]"
+5,3125,20,True,1,True,True,True,True,"[0, 1, 0, 0, 0]","[0, 1, 1, 0, 0]","[0, 0, 2, 0, 0]","[""B"", ""R2"", ""B"", ""B"", ""B""]"
+7,16807,42,True,1,True,True,True,True,"[0, 1, 0, 0, 0]","[0, 1, 1, 0, 0]","[0, 0, 2, 0, 0]","[""B"", ""R2"", ""B"", ""B"", ""B""]"
+9,59049,72,True,1,True,True,True,True,"[0, 1, 0, 0, 0]","[0, 1, 1, 0, 0]","[0, 0, 2, 0, 0]","[""B"", ""R2"", ""B"", ""B"", ""B""]"
+11,161051,110,True,1,True,True,True,True,"[0, 1, 0, 0, 0]","[0, 1, 1, 0, 0]","[0, 0, 2, 0, 0]","[""B"", ""R2"", ""B"", ""B"", ""B""]"
+13,371293,156,True,1,True,True,True,True,"[0, 1, 0, 0, 0]","[0, 1, 1, 0, 0]","[0, 0, 2, 0, 0]","[""B"", ""R2"", ""B"", ""B"", ""B""]"
+15,759375,210,True,1,True,True,True,True,"[0, 1, 0, 0, 0]","[0, 1, 1, 0, 0]","[0, 0, 2, 0, 0]","[""B"", ""R2"", ""B"", ""B"", ""B""]"
+17,1419857,272,True,1,True,True,True,True,"[0, 1, 0, 0, 0]","[0, 1, 1, 0, 0]","[0, 0, 2, 0, 0]","[""B"", ""R2"", ""B"", ""B"", ""B""]"
+19,2476099,342,True,1,True,True,True,True,"[0, 1, 0, 0, 0]","[0, 1, 1, 0, 0]","[0, 0, 2, 0, 0]","[""B"", ""R2"", ""B"", ""B"", ""B""]"

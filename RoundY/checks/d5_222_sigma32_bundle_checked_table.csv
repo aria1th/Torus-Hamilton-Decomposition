@@ -1,0 +1,9 @@
+m,source_count,source_count_matches_m_times_m_minus_1,symmetry_reduced_microcase_count,all_first_steps_match_sigma22,all_first_steps_avoid_sigma12,all_second_steps_match_sigma22,all_second_steps_match_sigma12,all_second_steps_avoid_sigma32,relative_immediate_coords,relative_actual_second_coords,relative_sigma12_second_coords,relative_sigma32_second_coords
+3,6,True,1,True,True,True,True,True,"[0, 0, 0, 0, 1]","[0, 1, 0, 0, 1]","[0, 1, 0, 0, 1]","[0, 0, 0, 0, 2]"
+5,20,True,1,True,True,True,True,True,"[0, 0, 0, 0, 1]","[0, 1, 0, 0, 1]","[0, 1, 0, 0, 1]","[0, 0, 0, 0, 2]"
+7,42,True,1,True,True,True,True,True,"[0, 0, 0, 0, 1]","[0, 1, 0, 0, 1]","[0, 1, 0, 0, 1]","[0, 0, 0, 0, 2]"
+9,72,True,1,True,True,True,True,True,"[0, 0, 0, 0, 1]","[0, 1, 0, 0, 1]","[0, 1, 0, 0, 1]","[0, 0, 0, 0, 2]"
+11,110,True,1,True,True,True,True,True,"[0, 0, 0, 0, 1]","[0, 1, 0, 0, 1]","[0, 1, 0, 0, 1]","[0, 0, 0, 0, 2]"
+13,156,True,1,True,True,True,True,True,"[0, 0, 0, 0, 1]","[0, 1, 0, 0, 1]","[0, 1, 0, 0, 1]","[0, 0, 0, 0, 2]"
+15,210,True,1,True,True,True,True,True,"[0, 0, 0, 0, 1]","[0, 1, 0, 0, 1]","[0, 1, 0, 0, 1]","[0, 0, 0, 0, 2]"
+17,272,True,1,True,True,True,True,True,"[0, 0, 0, 0, 1]","[0, 1, 0, 0, 1]","[0, 1, 0, 0, 1]","[0, 0, 0, 0, 2]"

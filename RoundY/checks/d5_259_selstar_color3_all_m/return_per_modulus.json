@@ -1,0 +1,80 @@
+{
+  "10": {
+    "R_cycle_counts": {
+      "10000": 1
+    },
+    "R_is_single_cycle": true
+  },
+  "11": {
+    "R_cycle_counts": {
+      "14641": 1
+    },
+    "R_is_single_cycle": true
+  },
+  "12": {
+    "R_cycle_counts": {
+      "20736": 1
+    },
+    "R_is_single_cycle": true
+  },
+  "13": {
+    "R_cycle_counts": {
+      "28561": 1
+    },
+    "R_is_single_cycle": true
+  },
+  "14": {
+    "R_cycle_counts": {
+      "38416": 1
+    },
+    "R_is_single_cycle": true
+  },
+  "2": {
+    "R_cycle_counts": {
+      "2": 8
+    },
+    "R_is_single_cycle": false
+  },
+  "3": {
+    "R_cycle_counts": {
+      "81": 1
+    },
+    "R_is_single_cycle": true
+  },
+  "4": {
+    "R_cycle_counts": {
+      "256": 1
+    },
+    "R_is_single_cycle": true
+  },
+  "5": {
+    "R_cycle_counts": {
+      "625": 1
+    },
+    "R_is_single_cycle": true
+  },
+  "6": {
+    "R_cycle_counts": {
+      "1296": 1
+    },
+    "R_is_single_cycle": true
+  },
+  "7": {
+    "R_cycle_counts": {
+      "2401": 1
+    },
+    "R_is_single_cycle": true
+  },
+  "8": {
+    "R_cycle_counts": {
+      "4096": 1
+    },
+    "R_is_single_cycle": true
+  },
+  "9": {
+    "R_cycle_counts": {
+      "6561": 1
+    },
+    "R_is_single_cycle": true
+  }
+}

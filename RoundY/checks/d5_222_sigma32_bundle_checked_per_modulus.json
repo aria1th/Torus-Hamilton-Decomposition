@@ -1,0 +1,5052 @@
+{
+  "rows": [
+    {
+      "m": 3,
+      "n": 243,
+      "source_count": 6,
+      "source_count_matches_m_times_m_minus_1": true,
+      "all_first_steps_match_sigma22": true,
+      "all_first_steps_avoid_sigma12": true,
+      "all_second_steps_match_sigma22": true,
+      "all_second_steps_match_sigma12": true,
+      "all_second_steps_avoid_sigma32": true,
+      "candidate_overlap_sizes": {
+        "sigma21_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma21_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma12_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma12_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma22_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma22_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma32_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma32_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "representative_relative_data": {
+        "relative_immediate_coords": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "relative_actual_second_coords": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "relative_sigma12_second_coords": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "relative_sigma32_second_coords": [
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "counts": {
+          "immediate": 6,
+          "actual_second": 6,
+          "sigma12_second": 6,
+          "sigma32_second": 6
+        }
+      },
+      "neighbor_patterns": [
+        {
+          "labels": [
+            "B",
+            "B",
+            "B",
+            "B",
+            "L2"
+          ],
+          "count": 3
+        },
+        {
+          "labels": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ],
+          "count": 3
+        }
+      ],
+      "symmetry_reduced_microcase_count": 1,
+      "bad_sigma22_first_examples": [],
+      "bad_sigma12_first_examples": [],
+      "bad_sigma22_second_examples": [],
+      "bad_sigma12_second_examples": [],
+      "bad_sigma32_second_examples": [],
+      "examples": [
+        {
+          "source_index": 72,
+          "source_payload": {
+            "x0": 0,
+            "q": 2,
+            "w": 2,
+            "v": 0,
+            "u": 0,
+            "s": 2,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 2,
+            "w": 2,
+            "v": 0,
+            "u": 1,
+            "s": 0,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 2,
+            "v": 0,
+            "u": 1,
+            "s": 0,
+            "layer": 0
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 2,
+            "v": 0,
+            "u": 1,
+            "s": 0,
+            "layer": 0
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 2,
+            "v": 0,
+            "u": 1,
+            "s": 0,
+            "layer": 0
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 2,
+            "w": 2,
+            "v": 0,
+            "u": 2,
+            "s": 1,
+            "layer": 0
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 77,
+          "source_payload": {
+            "x0": 0,
+            "q": 2,
+            "w": 2,
+            "v": 1,
+            "u": 2,
+            "s": 1,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 2,
+            "w": 2,
+            "v": 1,
+            "u": 0,
+            "s": 2,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 2,
+            "v": 1,
+            "u": 0,
+            "s": 2,
+            "layer": 0
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 2,
+            "v": 1,
+            "u": 0,
+            "s": 2,
+            "layer": 0
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 2,
+            "v": 1,
+            "u": 0,
+            "s": 2,
+            "layer": 0
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 2,
+            "w": 2,
+            "v": 1,
+            "u": 1,
+            "s": 0,
+            "layer": 0
+          },
+          "neighbor_labels_by_direction": [
+            "B",
+            "B",
+            "B",
+            "B",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 155,
+          "source_payload": {
+            "x0": 1,
+            "q": 2,
+            "w": 2,
+            "v": 0,
+            "u": 2,
+            "s": 1,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 1,
+            "q": 2,
+            "w": 2,
+            "v": 0,
+            "u": 0,
+            "s": 2,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 1,
+            "q": 0,
+            "w": 2,
+            "v": 0,
+            "u": 0,
+            "s": 2,
+            "layer": 0
+          },
+          "sigma12_second_payload": {
+            "x0": 1,
+            "q": 0,
+            "w": 2,
+            "v": 0,
+            "u": 0,
+            "s": 2,
+            "layer": 0
+          },
+          "sigma22_second_payload": {
+            "x0": 1,
+            "q": 0,
+            "w": 2,
+            "v": 0,
+            "u": 0,
+            "s": 2,
+            "layer": 0
+          },
+          "sigma32_second_payload": {
+            "x0": 1,
+            "q": 2,
+            "w": 2,
+            "v": 0,
+            "u": 1,
+            "s": 0,
+            "layer": 0
+          },
+          "neighbor_labels_by_direction": [
+            "B",
+            "B",
+            "B",
+            "B",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 159,
+          "source_payload": {
+            "x0": 1,
+            "q": 2,
+            "w": 2,
+            "v": 2,
+            "u": 0,
+            "s": 2,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 1,
+            "q": 2,
+            "w": 2,
+            "v": 2,
+            "u": 1,
+            "s": 0,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 1,
+            "q": 0,
+            "w": 2,
+            "v": 2,
+            "u": 1,
+            "s": 0,
+            "layer": 0
+          },
+          "sigma12_second_payload": {
+            "x0": 1,
+            "q": 0,
+            "w": 2,
+            "v": 2,
+            "u": 1,
+            "s": 0,
+            "layer": 0
+          },
+          "sigma22_second_payload": {
+            "x0": 1,
+            "q": 0,
+            "w": 2,
+            "v": 2,
+            "u": 1,
+            "s": 0,
+            "layer": 0
+          },
+          "sigma32_second_payload": {
+            "x0": 1,
+            "q": 2,
+            "w": 2,
+            "v": 2,
+            "u": 2,
+            "s": 1,
+            "layer": 0
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 237,
+          "source_payload": {
+            "x0": 2,
+            "q": 2,
+            "w": 2,
+            "v": 1,
+            "u": 0,
+            "s": 2,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 2,
+            "q": 2,
+            "w": 2,
+            "v": 1,
+            "u": 1,
+            "s": 0,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 2,
+            "q": 0,
+            "w": 2,
+            "v": 1,
+            "u": 1,
+            "s": 0,
+            "layer": 0
+          },
+          "sigma12_second_payload": {
+            "x0": 2,
+            "q": 0,
+            "w": 2,
+            "v": 1,
+            "u": 1,
+            "s": 0,
+            "layer": 0
+          },
+          "sigma22_second_payload": {
+            "x0": 2,
+            "q": 0,
+            "w": 2,
+            "v": 1,
+            "u": 1,
+            "s": 0,
+            "layer": 0
+          },
+          "sigma32_second_payload": {
+            "x0": 2,
+            "q": 2,
+            "w": 2,
+            "v": 1,
+            "u": 2,
+            "s": 1,
+            "layer": 0
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 242,
+          "source_payload": {
+            "x0": 2,
+            "q": 2,
+            "w": 2,
+            "v": 2,
+            "u": 2,
+            "s": 1,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 2,
+            "q": 2,
+            "w": 2,
+            "v": 2,
+            "u": 0,
+            "s": 2,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 2,
+            "q": 0,
+            "w": 2,
+            "v": 2,
+            "u": 0,
+            "s": 2,
+            "layer": 0
+          },
+          "sigma12_second_payload": {
+            "x0": 2,
+            "q": 0,
+            "w": 2,
+            "v": 2,
+            "u": 0,
+            "s": 2,
+            "layer": 0
+          },
+          "sigma22_second_payload": {
+            "x0": 2,
+            "q": 0,
+            "w": 2,
+            "v": 2,
+            "u": 0,
+            "s": 2,
+            "layer": 0
+          },
+          "sigma32_second_payload": {
+            "x0": 2,
+            "q": 2,
+            "w": 2,
+            "v": 2,
+            "u": 1,
+            "s": 0,
+            "layer": 0
+          },
+          "neighbor_labels_by_direction": [
+            "B",
+            "B",
+            "B",
+            "B",
+            "L2"
+          ]
+        }
+      ]
+    },
+    {
+      "m": 5,
+      "n": 3125,
+      "source_count": 20,
+      "source_count_matches_m_times_m_minus_1": true,
+      "all_first_steps_match_sigma22": true,
+      "all_first_steps_avoid_sigma12": true,
+      "all_second_steps_match_sigma22": true,
+      "all_second_steps_match_sigma12": true,
+      "all_second_steps_avoid_sigma32": true,
+      "candidate_overlap_sizes": {
+        "sigma21_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma21_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma12_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma12_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma22_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma22_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma32_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma32_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "representative_relative_data": {
+        "relative_immediate_coords": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "relative_actual_second_coords": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "relative_sigma12_second_coords": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "relative_sigma32_second_coords": [
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "counts": {
+          "immediate": 20,
+          "actual_second": 20,
+          "sigma12_second": 20,
+          "sigma32_second": 20
+        }
+      },
+      "neighbor_patterns": [
+        {
+          "labels": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ],
+          "count": 15
+        },
+        {
+          "labels": [
+            "B",
+            "B",
+            "B",
+            "B",
+            "L2"
+          ],
+          "count": 5
+        }
+      ],
+      "symmetry_reduced_microcase_count": 1,
+      "bad_sigma22_first_examples": [],
+      "bad_sigma12_first_examples": [],
+      "bad_sigma22_second_examples": [],
+      "bad_sigma12_second_examples": [],
+      "bad_sigma32_second_examples": [],
+      "examples": [
+        {
+          "source_index": 603,
+          "source_payload": {
+            "x0": 0,
+            "q": 4,
+            "w": 4,
+            "v": 0,
+            "u": 3,
+            "s": 2,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 4,
+            "w": 4,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 4,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 4,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 4,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 4,
+            "w": 4,
+            "v": 0,
+            "u": 0,
+            "s": 4,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 607,
+          "source_payload": {
+            "x0": 0,
+            "q": 4,
+            "w": 4,
+            "v": 1,
+            "u": 2,
+            "s": 1,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 4,
+            "w": 4,
+            "v": 1,
+            "u": 3,
+            "s": 2,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 4,
+            "v": 1,
+            "u": 3,
+            "s": 2,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 4,
+            "v": 1,
+            "u": 3,
+            "s": 2,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 4,
+            "v": 1,
+            "u": 3,
+            "s": 2,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 4,
+            "w": 4,
+            "v": 1,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "B",
+            "B",
+            "B",
+            "B",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 615,
+          "source_payload": {
+            "x0": 0,
+            "q": 4,
+            "w": 4,
+            "v": 3,
+            "u": 0,
+            "s": 4,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 4,
+            "w": 4,
+            "v": 3,
+            "u": 1,
+            "s": 0,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 4,
+            "v": 3,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 4,
+            "v": 3,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 4,
+            "v": 3,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 4,
+            "w": 4,
+            "v": 3,
+            "u": 2,
+            "s": 1,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 624,
+          "source_payload": {
+            "x0": 0,
+            "q": 4,
+            "w": 4,
+            "v": 4,
+            "u": 4,
+            "s": 3,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 4,
+            "w": 4,
+            "v": 4,
+            "u": 0,
+            "s": 4,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 4,
+            "v": 4,
+            "u": 0,
+            "s": 4,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 4,
+            "v": 4,
+            "u": 0,
+            "s": 4,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 4,
+            "v": 4,
+            "u": 0,
+            "s": 4,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 4,
+            "w": 4,
+            "v": 4,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 1227,
+          "source_payload": {
+            "x0": 1,
+            "q": 4,
+            "w": 4,
+            "v": 0,
+            "u": 2,
+            "s": 1,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 1,
+            "q": 4,
+            "w": 4,
+            "v": 0,
+            "u": 3,
+            "s": 2,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 1,
+            "q": 0,
+            "w": 4,
+            "v": 0,
+            "u": 3,
+            "s": 2,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 1,
+            "q": 0,
+            "w": 4,
+            "v": 0,
+            "u": 3,
+            "s": 2,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 1,
+            "q": 0,
+            "w": 4,
+            "v": 0,
+            "u": 3,
+            "s": 2,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 1,
+            "q": 4,
+            "w": 4,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "B",
+            "B",
+            "B",
+            "B",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 1235,
+          "source_payload": {
+            "x0": 1,
+            "q": 4,
+            "w": 4,
+            "v": 2,
+            "u": 0,
+            "s": 4,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 1,
+            "q": 4,
+            "w": 4,
+            "v": 2,
+            "u": 1,
+            "s": 0,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 1,
+            "q": 0,
+            "w": 4,
+            "v": 2,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 1,
+            "q": 0,
+            "w": 4,
+            "v": 2,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 1,
+            "q": 0,
+            "w": 4,
+            "v": 2,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 1,
+            "q": 4,
+            "w": 4,
+            "v": 2,
+            "u": 2,
+            "s": 1,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 1244,
+          "source_payload": {
+            "x0": 1,
+            "q": 4,
+            "w": 4,
+            "v": 3,
+            "u": 4,
+            "s": 3,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 1,
+            "q": 4,
+            "w": 4,
+            "v": 3,
+            "u": 0,
+            "s": 4,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 1,
+            "q": 0,
+            "w": 4,
+            "v": 3,
+            "u": 0,
+            "s": 4,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 1,
+            "q": 0,
+            "w": 4,
+            "v": 3,
+            "u": 0,
+            "s": 4,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 1,
+            "q": 0,
+            "w": 4,
+            "v": 3,
+            "u": 0,
+            "s": 4,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 1,
+            "q": 4,
+            "w": 4,
+            "v": 3,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 1248,
+          "source_payload": {
+            "x0": 1,
+            "q": 4,
+            "w": 4,
+            "v": 4,
+            "u": 3,
+            "s": 2,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 1,
+            "q": 4,
+            "w": 4,
+            "v": 4,
+            "u": 4,
+            "s": 3,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 1,
+            "q": 0,
+            "w": 4,
+            "v": 4,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 1,
+            "q": 0,
+            "w": 4,
+            "v": 4,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 1,
+            "q": 0,
+            "w": 4,
+            "v": 4,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 1,
+            "q": 4,
+            "w": 4,
+            "v": 4,
+            "u": 0,
+            "s": 4,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        }
+      ]
+    },
+    {
+      "m": 7,
+      "n": 16807,
+      "source_count": 42,
+      "source_count_matches_m_times_m_minus_1": true,
+      "all_first_steps_match_sigma22": true,
+      "all_first_steps_avoid_sigma12": true,
+      "all_second_steps_match_sigma22": true,
+      "all_second_steps_match_sigma12": true,
+      "all_second_steps_avoid_sigma32": true,
+      "candidate_overlap_sizes": {
+        "sigma21_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma21_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma12_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma12_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma22_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma22_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma32_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma32_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "representative_relative_data": {
+        "relative_immediate_coords": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "relative_actual_second_coords": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "relative_sigma12_second_coords": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "relative_sigma32_second_coords": [
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "counts": {
+          "immediate": 42,
+          "actual_second": 42,
+          "sigma12_second": 42,
+          "sigma32_second": 42
+        }
+      },
+      "neighbor_patterns": [
+        {
+          "labels": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ],
+          "count": 35
+        },
+        {
+          "labels": [
+            "B",
+            "B",
+            "B",
+            "B",
+            "L2"
+          ],
+          "count": 7
+        }
+      ],
+      "symmetry_reduced_microcase_count": 1,
+      "bad_sigma22_first_examples": [],
+      "bad_sigma12_first_examples": [],
+      "bad_sigma22_second_examples": [],
+      "bad_sigma12_second_examples": [],
+      "bad_sigma32_second_examples": [],
+      "examples": [
+        {
+          "source_index": 2355,
+          "source_payload": {
+            "x0": 0,
+            "q": 6,
+            "w": 6,
+            "v": 0,
+            "u": 3,
+            "s": 2,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 6,
+            "w": 6,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 6,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 6,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 6,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 6,
+            "w": 6,
+            "v": 0,
+            "u": 5,
+            "s": 4,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 2361,
+          "source_payload": {
+            "x0": 0,
+            "q": 6,
+            "w": 6,
+            "v": 1,
+            "u": 2,
+            "s": 1,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 6,
+            "w": 6,
+            "v": 1,
+            "u": 3,
+            "s": 2,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 6,
+            "v": 1,
+            "u": 3,
+            "s": 2,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 6,
+            "v": 1,
+            "u": 3,
+            "s": 2,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 6,
+            "v": 1,
+            "u": 3,
+            "s": 2,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 6,
+            "w": 6,
+            "v": 1,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "B",
+            "B",
+            "B",
+            "B",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 2373,
+          "source_payload": {
+            "x0": 0,
+            "q": 6,
+            "w": 6,
+            "v": 3,
+            "u": 0,
+            "s": 6,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 6,
+            "w": 6,
+            "v": 3,
+            "u": 1,
+            "s": 0,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 6,
+            "v": 3,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 6,
+            "v": 3,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 6,
+            "v": 3,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 6,
+            "w": 6,
+            "v": 3,
+            "u": 2,
+            "s": 1,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 2386,
+          "source_payload": {
+            "x0": 0,
+            "q": 6,
+            "w": 6,
+            "v": 4,
+            "u": 6,
+            "s": 5,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 6,
+            "w": 6,
+            "v": 4,
+            "u": 0,
+            "s": 6,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 6,
+            "v": 4,
+            "u": 0,
+            "s": 6,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 6,
+            "v": 4,
+            "u": 0,
+            "s": 6,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 6,
+            "v": 4,
+            "u": 0,
+            "s": 6,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 6,
+            "w": 6,
+            "v": 4,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 2392,
+          "source_payload": {
+            "x0": 0,
+            "q": 6,
+            "w": 6,
+            "v": 5,
+            "u": 5,
+            "s": 4,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 6,
+            "w": 6,
+            "v": 5,
+            "u": 6,
+            "s": 5,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 6,
+            "v": 5,
+            "u": 6,
+            "s": 5,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 6,
+            "v": 5,
+            "u": 6,
+            "s": 5,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 6,
+            "v": 5,
+            "u": 6,
+            "s": 5,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 6,
+            "w": 6,
+            "v": 5,
+            "u": 0,
+            "s": 6,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 2398,
+          "source_payload": {
+            "x0": 0,
+            "q": 6,
+            "w": 6,
+            "v": 6,
+            "u": 4,
+            "s": 3,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 6,
+            "w": 6,
+            "v": 6,
+            "u": 5,
+            "s": 4,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 6,
+            "v": 6,
+            "u": 5,
+            "s": 4,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 6,
+            "v": 6,
+            "u": 5,
+            "s": 4,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 6,
+            "v": 6,
+            "u": 5,
+            "s": 4,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 6,
+            "w": 6,
+            "v": 6,
+            "u": 6,
+            "s": 5,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 4755,
+          "source_payload": {
+            "x0": 1,
+            "q": 6,
+            "w": 6,
+            "v": 0,
+            "u": 2,
+            "s": 1,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 1,
+            "q": 6,
+            "w": 6,
+            "v": 0,
+            "u": 3,
+            "s": 2,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 1,
+            "q": 0,
+            "w": 6,
+            "v": 0,
+            "u": 3,
+            "s": 2,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 1,
+            "q": 0,
+            "w": 6,
+            "v": 0,
+            "u": 3,
+            "s": 2,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 1,
+            "q": 0,
+            "w": 6,
+            "v": 0,
+            "u": 3,
+            "s": 2,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 1,
+            "q": 6,
+            "w": 6,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "B",
+            "B",
+            "B",
+            "B",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 4767,
+          "source_payload": {
+            "x0": 1,
+            "q": 6,
+            "w": 6,
+            "v": 2,
+            "u": 0,
+            "s": 6,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 1,
+            "q": 6,
+            "w": 6,
+            "v": 2,
+            "u": 1,
+            "s": 0,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 1,
+            "q": 0,
+            "w": 6,
+            "v": 2,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 1,
+            "q": 0,
+            "w": 6,
+            "v": 2,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 1,
+            "q": 0,
+            "w": 6,
+            "v": 2,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 1,
+            "q": 6,
+            "w": 6,
+            "v": 2,
+            "u": 2,
+            "s": 1,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        }
+      ]
+    },
+    {
+      "m": 9,
+      "n": 59049,
+      "source_count": 72,
+      "source_count_matches_m_times_m_minus_1": true,
+      "all_first_steps_match_sigma22": true,
+      "all_first_steps_avoid_sigma12": true,
+      "all_second_steps_match_sigma22": true,
+      "all_second_steps_match_sigma12": true,
+      "all_second_steps_avoid_sigma32": true,
+      "candidate_overlap_sizes": {
+        "sigma21_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma21_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma12_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma12_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma22_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma22_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma32_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma32_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "representative_relative_data": {
+        "relative_immediate_coords": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "relative_actual_second_coords": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "relative_sigma12_second_coords": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "relative_sigma32_second_coords": [
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "counts": {
+          "immediate": 72,
+          "actual_second": 72,
+          "sigma12_second": 72,
+          "sigma32_second": 72
+        }
+      },
+      "neighbor_patterns": [
+        {
+          "labels": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ],
+          "count": 63
+        },
+        {
+          "labels": [
+            "B",
+            "B",
+            "B",
+            "B",
+            "L2"
+          ],
+          "count": 9
+        }
+      ],
+      "symmetry_reduced_microcase_count": 1,
+      "bad_sigma22_first_examples": [],
+      "bad_sigma12_first_examples": [],
+      "bad_sigma22_second_examples": [],
+      "bad_sigma12_second_examples": [],
+      "bad_sigma32_second_examples": [],
+      "examples": [
+        {
+          "source_index": 6483,
+          "source_payload": {
+            "x0": 0,
+            "q": 8,
+            "w": 8,
+            "v": 0,
+            "u": 3,
+            "s": 2,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 8,
+            "w": 8,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 8,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 8,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 8,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 8,
+            "w": 8,
+            "v": 0,
+            "u": 5,
+            "s": 4,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 6491,
+          "source_payload": {
+            "x0": 0,
+            "q": 8,
+            "w": 8,
+            "v": 1,
+            "u": 2,
+            "s": 1,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 8,
+            "w": 8,
+            "v": 1,
+            "u": 3,
+            "s": 2,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 8,
+            "v": 1,
+            "u": 3,
+            "s": 2,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 8,
+            "v": 1,
+            "u": 3,
+            "s": 2,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 8,
+            "v": 1,
+            "u": 3,
+            "s": 2,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 8,
+            "w": 8,
+            "v": 1,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "B",
+            "B",
+            "B",
+            "B",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 6507,
+          "source_payload": {
+            "x0": 0,
+            "q": 8,
+            "w": 8,
+            "v": 3,
+            "u": 0,
+            "s": 8,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 8,
+            "w": 8,
+            "v": 3,
+            "u": 1,
+            "s": 0,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 8,
+            "v": 3,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 8,
+            "v": 3,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 8,
+            "v": 3,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 8,
+            "w": 8,
+            "v": 3,
+            "u": 2,
+            "s": 1,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 6524,
+          "source_payload": {
+            "x0": 0,
+            "q": 8,
+            "w": 8,
+            "v": 4,
+            "u": 8,
+            "s": 7,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 8,
+            "w": 8,
+            "v": 4,
+            "u": 0,
+            "s": 8,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 8,
+            "v": 4,
+            "u": 0,
+            "s": 8,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 8,
+            "v": 4,
+            "u": 0,
+            "s": 8,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 8,
+            "v": 4,
+            "u": 0,
+            "s": 8,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 8,
+            "w": 8,
+            "v": 4,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 6532,
+          "source_payload": {
+            "x0": 0,
+            "q": 8,
+            "w": 8,
+            "v": 5,
+            "u": 7,
+            "s": 6,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 8,
+            "w": 8,
+            "v": 5,
+            "u": 8,
+            "s": 7,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 8,
+            "v": 5,
+            "u": 8,
+            "s": 7,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 8,
+            "v": 5,
+            "u": 8,
+            "s": 7,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 8,
+            "v": 5,
+            "u": 8,
+            "s": 7,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 8,
+            "w": 8,
+            "v": 5,
+            "u": 0,
+            "s": 8,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 6540,
+          "source_payload": {
+            "x0": 0,
+            "q": 8,
+            "w": 8,
+            "v": 6,
+            "u": 6,
+            "s": 5,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 8,
+            "w": 8,
+            "v": 6,
+            "u": 7,
+            "s": 6,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 8,
+            "v": 6,
+            "u": 7,
+            "s": 6,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 8,
+            "v": 6,
+            "u": 7,
+            "s": 6,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 8,
+            "v": 6,
+            "u": 7,
+            "s": 6,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 8,
+            "w": 8,
+            "v": 6,
+            "u": 8,
+            "s": 7,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 6548,
+          "source_payload": {
+            "x0": 0,
+            "q": 8,
+            "w": 8,
+            "v": 7,
+            "u": 5,
+            "s": 4,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 8,
+            "w": 8,
+            "v": 7,
+            "u": 6,
+            "s": 5,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 8,
+            "v": 7,
+            "u": 6,
+            "s": 5,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 8,
+            "v": 7,
+            "u": 6,
+            "s": 5,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 8,
+            "v": 7,
+            "u": 6,
+            "s": 5,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 8,
+            "w": 8,
+            "v": 7,
+            "u": 7,
+            "s": 6,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 6556,
+          "source_payload": {
+            "x0": 0,
+            "q": 8,
+            "w": 8,
+            "v": 8,
+            "u": 4,
+            "s": 3,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 8,
+            "w": 8,
+            "v": 8,
+            "u": 5,
+            "s": 4,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 8,
+            "v": 8,
+            "u": 5,
+            "s": 4,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 8,
+            "v": 8,
+            "u": 5,
+            "s": 4,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 8,
+            "v": 8,
+            "u": 5,
+            "s": 4,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 8,
+            "w": 8,
+            "v": 8,
+            "u": 6,
+            "s": 5,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        }
+      ]
+    },
+    {
+      "m": 11,
+      "n": 161051,
+      "source_count": 110,
+      "source_count_matches_m_times_m_minus_1": true,
+      "all_first_steps_match_sigma22": true,
+      "all_first_steps_avoid_sigma12": true,
+      "all_second_steps_match_sigma22": true,
+      "all_second_steps_match_sigma12": true,
+      "all_second_steps_avoid_sigma32": true,
+      "candidate_overlap_sizes": {
+        "sigma21_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma21_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma12_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma12_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma22_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma22_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma32_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma32_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "representative_relative_data": {
+        "relative_immediate_coords": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "relative_actual_second_coords": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "relative_sigma12_second_coords": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "relative_sigma32_second_coords": [
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "counts": {
+          "immediate": 110,
+          "actual_second": 110,
+          "sigma12_second": 110,
+          "sigma32_second": 110
+        }
+      },
+      "neighbor_patterns": [
+        {
+          "labels": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ],
+          "count": 99
+        },
+        {
+          "labels": [
+            "B",
+            "B",
+            "B",
+            "B",
+            "L2"
+          ],
+          "count": 11
+        }
+      ],
+      "symmetry_reduced_microcase_count": 1,
+      "bad_sigma22_first_examples": [],
+      "bad_sigma12_first_examples": [],
+      "bad_sigma22_second_examples": [],
+      "bad_sigma12_second_examples": [],
+      "bad_sigma32_second_examples": [],
+      "examples": [
+        {
+          "source_index": 14523,
+          "source_payload": {
+            "x0": 0,
+            "q": 10,
+            "w": 10,
+            "v": 0,
+            "u": 3,
+            "s": 2,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 10,
+            "w": 10,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 10,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 10,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 10,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 10,
+            "w": 10,
+            "v": 0,
+            "u": 5,
+            "s": 4,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 14533,
+          "source_payload": {
+            "x0": 0,
+            "q": 10,
+            "w": 10,
+            "v": 1,
+            "u": 2,
+            "s": 1,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 10,
+            "w": 10,
+            "v": 1,
+            "u": 3,
+            "s": 2,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 10,
+            "v": 1,
+            "u": 3,
+            "s": 2,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 10,
+            "v": 1,
+            "u": 3,
+            "s": 2,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 10,
+            "v": 1,
+            "u": 3,
+            "s": 2,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 10,
+            "w": 10,
+            "v": 1,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "B",
+            "B",
+            "B",
+            "B",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 14553,
+          "source_payload": {
+            "x0": 0,
+            "q": 10,
+            "w": 10,
+            "v": 3,
+            "u": 0,
+            "s": 10,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 10,
+            "w": 10,
+            "v": 3,
+            "u": 1,
+            "s": 0,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 10,
+            "v": 3,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 10,
+            "v": 3,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 10,
+            "v": 3,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 10,
+            "w": 10,
+            "v": 3,
+            "u": 2,
+            "s": 1,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 14574,
+          "source_payload": {
+            "x0": 0,
+            "q": 10,
+            "w": 10,
+            "v": 4,
+            "u": 10,
+            "s": 9,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 10,
+            "w": 10,
+            "v": 4,
+            "u": 0,
+            "s": 10,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 10,
+            "v": 4,
+            "u": 0,
+            "s": 10,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 10,
+            "v": 4,
+            "u": 0,
+            "s": 10,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 10,
+            "v": 4,
+            "u": 0,
+            "s": 10,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 10,
+            "w": 10,
+            "v": 4,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 14584,
+          "source_payload": {
+            "x0": 0,
+            "q": 10,
+            "w": 10,
+            "v": 5,
+            "u": 9,
+            "s": 8,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 10,
+            "w": 10,
+            "v": 5,
+            "u": 10,
+            "s": 9,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 10,
+            "v": 5,
+            "u": 10,
+            "s": 9,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 10,
+            "v": 5,
+            "u": 10,
+            "s": 9,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 10,
+            "v": 5,
+            "u": 10,
+            "s": 9,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 10,
+            "w": 10,
+            "v": 5,
+            "u": 0,
+            "s": 10,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 14594,
+          "source_payload": {
+            "x0": 0,
+            "q": 10,
+            "w": 10,
+            "v": 6,
+            "u": 8,
+            "s": 7,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 10,
+            "w": 10,
+            "v": 6,
+            "u": 9,
+            "s": 8,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 10,
+            "v": 6,
+            "u": 9,
+            "s": 8,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 10,
+            "v": 6,
+            "u": 9,
+            "s": 8,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 10,
+            "v": 6,
+            "u": 9,
+            "s": 8,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 10,
+            "w": 10,
+            "v": 6,
+            "u": 10,
+            "s": 9,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 14604,
+          "source_payload": {
+            "x0": 0,
+            "q": 10,
+            "w": 10,
+            "v": 7,
+            "u": 7,
+            "s": 6,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 10,
+            "w": 10,
+            "v": 7,
+            "u": 8,
+            "s": 7,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 10,
+            "v": 7,
+            "u": 8,
+            "s": 7,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 10,
+            "v": 7,
+            "u": 8,
+            "s": 7,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 10,
+            "v": 7,
+            "u": 8,
+            "s": 7,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 10,
+            "w": 10,
+            "v": 7,
+            "u": 9,
+            "s": 8,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 14614,
+          "source_payload": {
+            "x0": 0,
+            "q": 10,
+            "w": 10,
+            "v": 8,
+            "u": 6,
+            "s": 5,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 10,
+            "w": 10,
+            "v": 8,
+            "u": 7,
+            "s": 6,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 10,
+            "v": 8,
+            "u": 7,
+            "s": 6,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 10,
+            "v": 8,
+            "u": 7,
+            "s": 6,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 10,
+            "v": 8,
+            "u": 7,
+            "s": 6,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 10,
+            "w": 10,
+            "v": 8,
+            "u": 8,
+            "s": 7,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        }
+      ]
+    },
+    {
+      "m": 13,
+      "n": 371293,
+      "source_count": 156,
+      "source_count_matches_m_times_m_minus_1": true,
+      "all_first_steps_match_sigma22": true,
+      "all_first_steps_avoid_sigma12": true,
+      "all_second_steps_match_sigma22": true,
+      "all_second_steps_match_sigma12": true,
+      "all_second_steps_avoid_sigma32": true,
+      "candidate_overlap_sizes": {
+        "sigma21_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma21_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma12_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma12_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma22_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma22_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma32_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma32_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "representative_relative_data": {
+        "relative_immediate_coords": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "relative_actual_second_coords": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "relative_sigma12_second_coords": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "relative_sigma32_second_coords": [
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "counts": {
+          "immediate": 156,
+          "actual_second": 156,
+          "sigma12_second": 156,
+          "sigma32_second": 156
+        }
+      },
+      "neighbor_patterns": [
+        {
+          "labels": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ],
+          "count": 143
+        },
+        {
+          "labels": [
+            "B",
+            "B",
+            "B",
+            "B",
+            "L2"
+          ],
+          "count": 13
+        }
+      ],
+      "symmetry_reduced_microcase_count": 1,
+      "bad_sigma22_first_examples": [],
+      "bad_sigma12_first_examples": [],
+      "bad_sigma22_second_examples": [],
+      "bad_sigma12_second_examples": [],
+      "bad_sigma32_second_examples": [],
+      "examples": [
+        {
+          "source_index": 28395,
+          "source_payload": {
+            "x0": 0,
+            "q": 12,
+            "w": 12,
+            "v": 0,
+            "u": 3,
+            "s": 2,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 12,
+            "w": 12,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 12,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 12,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 12,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 12,
+            "w": 12,
+            "v": 0,
+            "u": 5,
+            "s": 4,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 28407,
+          "source_payload": {
+            "x0": 0,
+            "q": 12,
+            "w": 12,
+            "v": 1,
+            "u": 2,
+            "s": 1,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 12,
+            "w": 12,
+            "v": 1,
+            "u": 3,
+            "s": 2,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 12,
+            "v": 1,
+            "u": 3,
+            "s": 2,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 12,
+            "v": 1,
+            "u": 3,
+            "s": 2,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 12,
+            "v": 1,
+            "u": 3,
+            "s": 2,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 12,
+            "w": 12,
+            "v": 1,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "B",
+            "B",
+            "B",
+            "B",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 28431,
+          "source_payload": {
+            "x0": 0,
+            "q": 12,
+            "w": 12,
+            "v": 3,
+            "u": 0,
+            "s": 12,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 12,
+            "w": 12,
+            "v": 3,
+            "u": 1,
+            "s": 0,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 12,
+            "v": 3,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 12,
+            "v": 3,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 12,
+            "v": 3,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 12,
+            "w": 12,
+            "v": 3,
+            "u": 2,
+            "s": 1,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 28456,
+          "source_payload": {
+            "x0": 0,
+            "q": 12,
+            "w": 12,
+            "v": 4,
+            "u": 12,
+            "s": 11,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 12,
+            "w": 12,
+            "v": 4,
+            "u": 0,
+            "s": 12,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 12,
+            "v": 4,
+            "u": 0,
+            "s": 12,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 12,
+            "v": 4,
+            "u": 0,
+            "s": 12,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 12,
+            "v": 4,
+            "u": 0,
+            "s": 12,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 12,
+            "w": 12,
+            "v": 4,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 28468,
+          "source_payload": {
+            "x0": 0,
+            "q": 12,
+            "w": 12,
+            "v": 5,
+            "u": 11,
+            "s": 10,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 12,
+            "w": 12,
+            "v": 5,
+            "u": 12,
+            "s": 11,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 12,
+            "v": 5,
+            "u": 12,
+            "s": 11,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 12,
+            "v": 5,
+            "u": 12,
+            "s": 11,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 12,
+            "v": 5,
+            "u": 12,
+            "s": 11,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 12,
+            "w": 12,
+            "v": 5,
+            "u": 0,
+            "s": 12,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 28480,
+          "source_payload": {
+            "x0": 0,
+            "q": 12,
+            "w": 12,
+            "v": 6,
+            "u": 10,
+            "s": 9,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 12,
+            "w": 12,
+            "v": 6,
+            "u": 11,
+            "s": 10,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 12,
+            "v": 6,
+            "u": 11,
+            "s": 10,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 12,
+            "v": 6,
+            "u": 11,
+            "s": 10,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 12,
+            "v": 6,
+            "u": 11,
+            "s": 10,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 12,
+            "w": 12,
+            "v": 6,
+            "u": 12,
+            "s": 11,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 28492,
+          "source_payload": {
+            "x0": 0,
+            "q": 12,
+            "w": 12,
+            "v": 7,
+            "u": 9,
+            "s": 8,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 12,
+            "w": 12,
+            "v": 7,
+            "u": 10,
+            "s": 9,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 12,
+            "v": 7,
+            "u": 10,
+            "s": 9,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 12,
+            "v": 7,
+            "u": 10,
+            "s": 9,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 12,
+            "v": 7,
+            "u": 10,
+            "s": 9,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 12,
+            "w": 12,
+            "v": 7,
+            "u": 11,
+            "s": 10,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 28504,
+          "source_payload": {
+            "x0": 0,
+            "q": 12,
+            "w": 12,
+            "v": 8,
+            "u": 8,
+            "s": 7,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 12,
+            "w": 12,
+            "v": 8,
+            "u": 9,
+            "s": 8,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 12,
+            "v": 8,
+            "u": 9,
+            "s": 8,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 12,
+            "v": 8,
+            "u": 9,
+            "s": 8,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 12,
+            "v": 8,
+            "u": 9,
+            "s": 8,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 12,
+            "w": 12,
+            "v": 8,
+            "u": 10,
+            "s": 9,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        }
+      ]
+    },
+    {
+      "m": 15,
+      "n": 759375,
+      "source_count": 210,
+      "source_count_matches_m_times_m_minus_1": true,
+      "all_first_steps_match_sigma22": true,
+      "all_first_steps_avoid_sigma12": true,
+      "all_second_steps_match_sigma22": true,
+      "all_second_steps_match_sigma12": true,
+      "all_second_steps_avoid_sigma32": true,
+      "candidate_overlap_sizes": {
+        "sigma21_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma21_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma12_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma12_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma22_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma22_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma32_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma32_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "representative_relative_data": {
+        "relative_immediate_coords": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "relative_actual_second_coords": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "relative_sigma12_second_coords": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "relative_sigma32_second_coords": [
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "counts": {
+          "immediate": 210,
+          "actual_second": 210,
+          "sigma12_second": 210,
+          "sigma32_second": 210
+        }
+      },
+      "neighbor_patterns": [
+        {
+          "labels": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ],
+          "count": 195
+        },
+        {
+          "labels": [
+            "B",
+            "B",
+            "B",
+            "B",
+            "L2"
+          ],
+          "count": 15
+        }
+      ],
+      "symmetry_reduced_microcase_count": 1,
+      "bad_sigma22_first_examples": [],
+      "bad_sigma12_first_examples": [],
+      "bad_sigma22_second_examples": [],
+      "bad_sigma12_second_examples": [],
+      "bad_sigma32_second_examples": [],
+      "examples": [
+        {
+          "source_index": 50403,
+          "source_payload": {
+            "x0": 0,
+            "q": 14,
+            "w": 14,
+            "v": 0,
+            "u": 3,
+            "s": 2,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 14,
+            "w": 14,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 14,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 14,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 14,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 14,
+            "w": 14,
+            "v": 0,
+            "u": 5,
+            "s": 4,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 50417,
+          "source_payload": {
+            "x0": 0,
+            "q": 14,
+            "w": 14,
+            "v": 1,
+            "u": 2,
+            "s": 1,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 14,
+            "w": 14,
+            "v": 1,
+            "u": 3,
+            "s": 2,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 14,
+            "v": 1,
+            "u": 3,
+            "s": 2,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 14,
+            "v": 1,
+            "u": 3,
+            "s": 2,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 14,
+            "v": 1,
+            "u": 3,
+            "s": 2,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 14,
+            "w": 14,
+            "v": 1,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "B",
+            "B",
+            "B",
+            "B",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 50445,
+          "source_payload": {
+            "x0": 0,
+            "q": 14,
+            "w": 14,
+            "v": 3,
+            "u": 0,
+            "s": 14,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 14,
+            "w": 14,
+            "v": 3,
+            "u": 1,
+            "s": 0,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 14,
+            "v": 3,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 14,
+            "v": 3,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 14,
+            "v": 3,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 14,
+            "w": 14,
+            "v": 3,
+            "u": 2,
+            "s": 1,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 50474,
+          "source_payload": {
+            "x0": 0,
+            "q": 14,
+            "w": 14,
+            "v": 4,
+            "u": 14,
+            "s": 13,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 14,
+            "w": 14,
+            "v": 4,
+            "u": 0,
+            "s": 14,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 14,
+            "v": 4,
+            "u": 0,
+            "s": 14,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 14,
+            "v": 4,
+            "u": 0,
+            "s": 14,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 14,
+            "v": 4,
+            "u": 0,
+            "s": 14,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 14,
+            "w": 14,
+            "v": 4,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 50488,
+          "source_payload": {
+            "x0": 0,
+            "q": 14,
+            "w": 14,
+            "v": 5,
+            "u": 13,
+            "s": 12,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 14,
+            "w": 14,
+            "v": 5,
+            "u": 14,
+            "s": 13,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 14,
+            "v": 5,
+            "u": 14,
+            "s": 13,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 14,
+            "v": 5,
+            "u": 14,
+            "s": 13,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 14,
+            "v": 5,
+            "u": 14,
+            "s": 13,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 14,
+            "w": 14,
+            "v": 5,
+            "u": 0,
+            "s": 14,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 50502,
+          "source_payload": {
+            "x0": 0,
+            "q": 14,
+            "w": 14,
+            "v": 6,
+            "u": 12,
+            "s": 11,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 14,
+            "w": 14,
+            "v": 6,
+            "u": 13,
+            "s": 12,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 14,
+            "v": 6,
+            "u": 13,
+            "s": 12,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 14,
+            "v": 6,
+            "u": 13,
+            "s": 12,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 14,
+            "v": 6,
+            "u": 13,
+            "s": 12,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 14,
+            "w": 14,
+            "v": 6,
+            "u": 14,
+            "s": 13,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 50516,
+          "source_payload": {
+            "x0": 0,
+            "q": 14,
+            "w": 14,
+            "v": 7,
+            "u": 11,
+            "s": 10,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 14,
+            "w": 14,
+            "v": 7,
+            "u": 12,
+            "s": 11,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 14,
+            "v": 7,
+            "u": 12,
+            "s": 11,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 14,
+            "v": 7,
+            "u": 12,
+            "s": 11,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 14,
+            "v": 7,
+            "u": 12,
+            "s": 11,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 14,
+            "w": 14,
+            "v": 7,
+            "u": 13,
+            "s": 12,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 50530,
+          "source_payload": {
+            "x0": 0,
+            "q": 14,
+            "w": 14,
+            "v": 8,
+            "u": 10,
+            "s": 9,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 14,
+            "w": 14,
+            "v": 8,
+            "u": 11,
+            "s": 10,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 14,
+            "v": 8,
+            "u": 11,
+            "s": 10,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 14,
+            "v": 8,
+            "u": 11,
+            "s": 10,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 14,
+            "v": 8,
+            "u": 11,
+            "s": 10,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 14,
+            "w": 14,
+            "v": 8,
+            "u": 12,
+            "s": 11,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        }
+      ]
+    },
+    {
+      "m": 17,
+      "n": 1419857,
+      "source_count": 272,
+      "source_count_matches_m_times_m_minus_1": true,
+      "all_first_steps_match_sigma22": true,
+      "all_first_steps_avoid_sigma12": true,
+      "all_second_steps_match_sigma22": true,
+      "all_second_steps_match_sigma12": true,
+      "all_second_steps_avoid_sigma32": true,
+      "candidate_overlap_sizes": {
+        "sigma21_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma21_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma12_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma12_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma22_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma22_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma32_layer2": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sigma32_layer3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "representative_relative_data": {
+        "relative_immediate_coords": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "relative_actual_second_coords": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "relative_sigma12_second_coords": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "relative_sigma32_second_coords": [
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "counts": {
+          "immediate": 272,
+          "actual_second": 272,
+          "sigma12_second": 272,
+          "sigma32_second": 272
+        }
+      },
+      "neighbor_patterns": [
+        {
+          "labels": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ],
+          "count": 255
+        },
+        {
+          "labels": [
+            "B",
+            "B",
+            "B",
+            "B",
+            "L2"
+          ],
+          "count": 17
+        }
+      ],
+      "symmetry_reduced_microcase_count": 1,
+      "bad_sigma22_first_examples": [],
+      "bad_sigma12_first_examples": [],
+      "bad_sigma22_second_examples": [],
+      "bad_sigma12_second_examples": [],
+      "bad_sigma32_second_examples": [],
+      "examples": [
+        {
+          "source_index": 83235,
+          "source_payload": {
+            "x0": 0,
+            "q": 16,
+            "w": 16,
+            "v": 0,
+            "u": 3,
+            "s": 2,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 16,
+            "w": 16,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 16,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 16,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 16,
+            "v": 0,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 16,
+            "w": 16,
+            "v": 0,
+            "u": 5,
+            "s": 4,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 83251,
+          "source_payload": {
+            "x0": 0,
+            "q": 16,
+            "w": 16,
+            "v": 1,
+            "u": 2,
+            "s": 1,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 16,
+            "w": 16,
+            "v": 1,
+            "u": 3,
+            "s": 2,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 16,
+            "v": 1,
+            "u": 3,
+            "s": 2,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 16,
+            "v": 1,
+            "u": 3,
+            "s": 2,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 16,
+            "v": 1,
+            "u": 3,
+            "s": 2,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 16,
+            "w": 16,
+            "v": 1,
+            "u": 4,
+            "s": 3,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "B",
+            "B",
+            "B",
+            "B",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 83283,
+          "source_payload": {
+            "x0": 0,
+            "q": 16,
+            "w": 16,
+            "v": 3,
+            "u": 0,
+            "s": 16,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 16,
+            "w": 16,
+            "v": 3,
+            "u": 1,
+            "s": 0,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 16,
+            "v": 3,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 16,
+            "v": 3,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 16,
+            "v": 3,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 16,
+            "w": 16,
+            "v": 3,
+            "u": 2,
+            "s": 1,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 83316,
+          "source_payload": {
+            "x0": 0,
+            "q": 16,
+            "w": 16,
+            "v": 4,
+            "u": 16,
+            "s": 15,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 16,
+            "w": 16,
+            "v": 4,
+            "u": 0,
+            "s": 16,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 16,
+            "v": 4,
+            "u": 0,
+            "s": 16,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 16,
+            "v": 4,
+            "u": 0,
+            "s": 16,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 16,
+            "v": 4,
+            "u": 0,
+            "s": 16,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 16,
+            "w": 16,
+            "v": 4,
+            "u": 1,
+            "s": 0,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 83332,
+          "source_payload": {
+            "x0": 0,
+            "q": 16,
+            "w": 16,
+            "v": 5,
+            "u": 15,
+            "s": 14,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 16,
+            "w": 16,
+            "v": 5,
+            "u": 16,
+            "s": 15,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 16,
+            "v": 5,
+            "u": 16,
+            "s": 15,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 16,
+            "v": 5,
+            "u": 16,
+            "s": 15,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 16,
+            "v": 5,
+            "u": 16,
+            "s": 15,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 16,
+            "w": 16,
+            "v": 5,
+            "u": 0,
+            "s": 16,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 83348,
+          "source_payload": {
+            "x0": 0,
+            "q": 16,
+            "w": 16,
+            "v": 6,
+            "u": 14,
+            "s": 13,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 16,
+            "w": 16,
+            "v": 6,
+            "u": 15,
+            "s": 14,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 16,
+            "v": 6,
+            "u": 15,
+            "s": 14,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 16,
+            "v": 6,
+            "u": 15,
+            "s": 14,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 16,
+            "v": 6,
+            "u": 15,
+            "s": 14,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 16,
+            "w": 16,
+            "v": 6,
+            "u": 16,
+            "s": 15,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 83364,
+          "source_payload": {
+            "x0": 0,
+            "q": 16,
+            "w": 16,
+            "v": 7,
+            "u": 13,
+            "s": 12,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 16,
+            "w": 16,
+            "v": 7,
+            "u": 14,
+            "s": 13,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 16,
+            "v": 7,
+            "u": 14,
+            "s": 13,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 16,
+            "v": 7,
+            "u": 14,
+            "s": 13,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 16,
+            "v": 7,
+            "u": 14,
+            "s": 13,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 16,
+            "w": 16,
+            "v": 7,
+            "u": 15,
+            "s": 14,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        },
+        {
+          "source_index": 83380,
+          "source_payload": {
+            "x0": 0,
+            "q": 16,
+            "w": 16,
+            "v": 8,
+            "u": 12,
+            "s": 11,
+            "layer": 1
+          },
+          "actual_immediate_payload": {
+            "x0": 0,
+            "q": 16,
+            "w": 16,
+            "v": 8,
+            "u": 13,
+            "s": 12,
+            "layer": 2
+          },
+          "actual_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 16,
+            "v": 8,
+            "u": 13,
+            "s": 12,
+            "layer": 3
+          },
+          "sigma12_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 16,
+            "v": 8,
+            "u": 13,
+            "s": 12,
+            "layer": 3
+          },
+          "sigma22_second_payload": {
+            "x0": 0,
+            "q": 0,
+            "w": 16,
+            "v": 8,
+            "u": 13,
+            "s": 12,
+            "layer": 3
+          },
+          "sigma32_second_payload": {
+            "x0": 0,
+            "q": 16,
+            "w": 16,
+            "v": 8,
+            "u": 14,
+            "s": 13,
+            "layer": 3
+          },
+          "neighbor_labels_by_direction": [
+            "L2",
+            "B",
+            "B",
+            "L2",
+            "L2"
+          ]
+        }
+      ]
+    }
+  ]
+}

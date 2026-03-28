@@ -1,0 +1,12 @@
+{
+  "conclusion": "The smallest slice-class-only leftover-ordering family has no exact completion already at m=5.",
+  "exact_rule_count": 0,
+  "family": "For each slice class Sigma=0,1,2,3,4+, assign colors 0,1,2 to the three remaining directions by one fixed permutation of their sorted order.",
+  "modulus": 5,
+  "rule_count": 7776,
+  "selector_fixed_colors": {
+    "3": "Sel* color 3",
+    "4": "Sel* color 4"
+  },
+  "task": "d5_270_five_color_slice_ordering_search"
+}

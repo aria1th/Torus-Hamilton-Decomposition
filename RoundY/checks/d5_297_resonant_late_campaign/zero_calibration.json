@@ -1,0 +1,394 @@
+{
+  "171": {
+    "central_pair": {
+      "B_zero": {
+        "blocks": 4006094,
+        "target_a": 129
+      },
+      "H_zero": {
+        "blocks": 29113,
+        "target_a": 44,
+        "target_e": 167
+      },
+      "family": "central_pair",
+      "m": 171,
+      "timing_sec": {
+        "B_zero": 21.21921,
+        "H_zero": 0.166632,
+        "total": 21.385842
+      }
+    },
+    "flank_pair": {
+      "B_zero": {
+        "blocks": 2017475,
+        "target_a": 68
+      },
+      "H_zero": {
+        "blocks": 29113,
+        "target_a": 1,
+        "target_e": 167
+      },
+      "family": "flank_pair",
+      "m": 171,
+      "timing_sec": {
+        "B_zero": 11.129535,
+        "H_zero": 0.142354,
+        "total": 11.27189
+      }
+    },
+    "promoted_plus": {
+      "B_zero": {
+        "blocks": 6023526,
+        "target_a": 84
+      },
+      "H_zero": {
+        "blocks": 29113,
+        "target_a": 44,
+        "target_e": 167
+      },
+      "family": "promoted_plus",
+      "m": 171,
+      "timing_sec": {
+        "B_zero": 31.272474,
+        "H_zero": 0.157003,
+        "total": 31.429476
+      }
+    }
+  },
+  "177": {
+    "central_pair": {
+      "B_zero": {
+        "blocks": 2224421,
+        "target_a": 45
+      },
+      "H_zero": {
+        "blocks": 31285,
+        "target_a": 134,
+        "target_e": 173
+      },
+      "family": "central_pair",
+      "m": 177,
+      "timing_sec": {
+        "B_zero": 12.444443,
+        "H_zero": 0.162052,
+        "total": 12.606494
+      }
+    },
+    "flank_pair": {
+      "B_zero": {
+        "blocks": 1127720,
+        "target_a": 35
+      },
+      "H_zero": {
+        "blocks": 31285,
+        "target_a": 1,
+        "target_e": 173
+      },
+      "family": "flank_pair",
+      "m": 177,
+      "timing_sec": {
+        "B_zero": 6.234926,
+        "H_zero": 0.177377,
+        "total": 6.412304
+      }
+    },
+    "promoted_plus": {
+      "B_zero": {
+        "blocks": 14473936,
+        "target_a": 44
+      },
+      "H_zero": {
+        "blocks": 31285,
+        "target_a": 134,
+        "target_e": 173
+      },
+      "family": "promoted_plus",
+      "m": 177,
+      "timing_sec": {
+        "B_zero": 76.82401,
+        "H_zero": 0.189631,
+        "total": 77.013641
+      }
+    }
+  },
+  "183": {
+    "central_pair": {
+      "B_zero": {
+        "blocks": 3683909,
+        "target_a": 138
+      },
+      "H_zero": {
+        "blocks": 33535,
+        "target_a": 47,
+        "target_e": 179
+      },
+      "family": "central_pair",
+      "m": 183,
+      "timing_sec": {
+        "B_zero": 21.028585,
+        "H_zero": 0.172965,
+        "total": 21.20155
+      }
+    },
+    "flank_pair": {
+      "B_zero": {
+        "blocks": 4922828,
+        "target_a": 146
+      },
+      "H_zero": {
+        "blocks": 33352,
+        "target_a": 1,
+        "target_e": 179
+      },
+      "family": "flank_pair",
+      "m": 183,
+      "timing_sec": {
+        "B_zero": 27.485967,
+        "H_zero": 0.180731,
+        "total": 27.666698
+      }
+    },
+    "promoted_plus": {
+      "B_zero": {
+        "blocks": 4922782,
+        "target_a": 44
+      },
+      "H_zero": {
+        "blocks": 33535,
+        "target_a": 47,
+        "target_e": 179
+      },
+      "family": "promoted_plus",
+      "m": 183,
+      "timing_sec": {
+        "B_zero": 27.672113,
+        "H_zero": 0.172347,
+        "total": 27.84446
+      }
+    }
+  },
+  "189": {
+    "central_pair": {
+      "B_zero": {
+        "blocks": 4072222,
+        "target_a": 140
+      },
+      "H_zero": {
+        "blocks": 35863,
+        "target_a": 143,
+        "target_e": 185
+      },
+      "family": "central_pair",
+      "m": 189,
+      "timing_sec": {
+        "B_zero": 23.169011,
+        "H_zero": 0.202218,
+        "total": 23.371229
+      }
+    },
+    "flank_pair": {
+      "B_zero": {
+        "blocks": 4072175,
+        "target_a": 113
+      },
+      "H_zero": {
+        "blocks": 35674,
+        "target_a": 1,
+        "target_e": 185
+      },
+      "family": "flank_pair",
+      "m": 189,
+      "timing_sec": {
+        "B_zero": 23.120237,
+        "H_zero": 0.188853,
+        "total": 23.30909
+      }
+    },
+    "promoted_plus": {
+      "B_zero": {
+        "blocks": 4072222,
+        "target_a": 140
+      },
+      "H_zero": {
+        "blocks": 35863,
+        "target_a": 143,
+        "target_e": 185
+      },
+      "family": "promoted_plus",
+      "m": 189,
+      "timing_sec": {
+        "B_zero": 23.341944,
+        "H_zero": 0.24039,
+        "total": 23.582334
+      }
+    }
+  },
+  "201": {
+    "central_pair": {
+      "B_zero": {
+        "blocks": 6504752,
+        "target_a": 51
+      },
+      "H_zero": {
+        "blocks": 40351,
+        "target_a": 152,
+        "target_e": 197
+      },
+      "family": "central_pair",
+      "m": 201,
+      "timing_sec": {
+        "B_zero": 38.873255,
+        "H_zero": 0.237431,
+        "total": 39.110685
+      }
+    },
+    "flank_pair": {
+      "B_zero": {
+        "blocks": 3272300,
+        "target_a": 80
+      },
+      "H_zero": {
+        "blocks": 40351,
+        "target_a": 1,
+        "target_e": 197
+      },
+      "family": "flank_pair",
+      "m": 201,
+      "timing_sec": {
+        "B_zero": 19.883658,
+        "H_zero": 0.224487,
+        "total": 20.108145
+      }
+    },
+    "promoted_plus": {
+      "B_zero": {
+        "blocks": 9776901,
+        "target_a": 99
+      },
+      "H_zero": {
+        "blocks": 40351,
+        "target_a": 152,
+        "target_e": 197
+      },
+      "family": "promoted_plus",
+      "m": 201,
+      "timing_sec": {
+        "B_zero": 58.573184,
+        "H_zero": 0.239697,
+        "total": 58.812881
+      }
+    }
+  },
+  "207": {
+    "central_pair": {
+      "B_zero": {
+        "blocks": 3556643,
+        "target_a": 156
+      },
+      "H_zero": {
+        "blocks": 42901,
+        "target_a": 53,
+        "target_e": 203
+      },
+      "family": "central_pair",
+      "m": 207,
+      "timing_sec": {
+        "B_zero": 22.413477,
+        "H_zero": 0.257034,
+        "total": 22.67051
+      }
+    },
+    "flank_pair": {
+      "B_zero": {
+        "blocks": 1799513,
+        "target_a": 41
+      },
+      "H_zero": {
+        "blocks": 42694,
+        "target_a": 1,
+        "target_e": 203
+      },
+      "family": "flank_pair",
+      "m": 207,
+      "timing_sec": {
+        "B_zero": 11.509335,
+        "H_zero": 0.287909,
+        "total": 11.797244
+      }
+    },
+    "promoted_plus": {
+      "B_zero": {
+        "blocks": 23138491,
+        "target_a": 155
+      },
+      "H_zero": {
+        "blocks": 42901,
+        "target_a": 53,
+        "target_e": 203
+      },
+      "family": "promoted_plus",
+      "m": 207,
+      "timing_sec": {
+        "B_zero": 138.936365,
+        "H_zero": 0.256062,
+        "total": 139.192427
+      }
+    }
+  },
+  "213": {
+    "central_pair": {
+      "B_zero": {
+        "blocks": 5807264,
+        "target_a": 54
+      },
+      "H_zero": {
+        "blocks": 45316,
+        "target_a": 161,
+        "target_e": 209
+      },
+      "family": "central_pair",
+      "m": 213,
+      "timing_sec": {
+        "B_zero": 36.965241,
+        "H_zero": 0.26718,
+        "total": 37.232421
+      }
+    },
+    "flank_pair": {
+      "B_zero": {
+        "blocks": 7758035,
+        "target_a": 170
+      },
+      "H_zero": {
+        "blocks": 45316,
+        "target_a": 1,
+        "target_e": 209
+      },
+      "family": "flank_pair",
+      "m": 213,
+      "timing_sec": {
+        "B_zero": 48.485054,
+        "H_zero": 0.268042,
+        "total": 48.753097
+      }
+    },
+    "promoted_plus": {
+      "B_zero": {
+        "blocks": 7758088,
+        "target_a": 158
+      },
+      "H_zero": {
+        "blocks": 45316,
+        "target_a": 161,
+        "target_e": 209
+      },
+      "family": "promoted_plus",
+      "m": 213,
+      "timing_sec": {
+        "B_zero": 48.340161,
+        "H_zero": 0.267614,
+        "total": 48.607775
+      }
+    }
+  }
+}
