@@ -28,6 +28,114 @@ Historical note:
   corrected-row model and all-odd identification; these later developments
   still do not change the historical role of the present post-`077` frontier
   note.
+- the later promoted `219–251` manuscript bundle then closes the present
+  front-end theorem block `T0--T4` and the graph-side selector block `G1,G2`
+  as a separate manuscript-order slice, while still treating the post-entry
+  odometer packet and the final graph-side/globalization packet as imported
+  stable inputs; this again does not change the historical role of the present
+  post-`077` frontier note.
+- the later formal-target notes `252–255` then isolate the remaining
+  internalization targets, close the packet layer `odometer/M23/M4/M5/M6` at
+  theorem order, and finally sharpen the honest manuscript boundary by noting
+  that the explicit `G1` package still needs a separate compatibility theorem
+  before the abstract `G2` transport theorem can be applied unconditionally;
+  this again does not change the historical role of the present post-`077`
+  frontier note.
+- the later `256–266` line then shows that the old explicit `G1 -> G2`
+  transport route is actually a no-go for the current concrete package,
+  closes the replacement `Sel*` color-`3` Route-E branch itself
+  through actual-model identification and the final Hamilton theorem,
+  while the later obstruction notes `269–271` then show that the remaining
+  five-color assembly theorem cannot live in the raw `Sel*` colors `1,2`,
+  cannot live in a slice-class-only leftover completion family, and cannot live
+  in the old `245/247` defect-bit coarse family either; the later compressed
+  search note `274` then shows that the next simple family
+  `S2(A2) + S3(1 in A3)` reduces exactness to a finite pattern CSP and already
+  yields near-assembly solutions; the follow-up residual probe `275` then shows
+  that, inside the combined best `274` family, color `2` is the cleanest
+  remaining Route-E target; the next note `276` then isolates the explicit
+  short-cycle structure of that residual color-`2` return, while the refined
+  family notes `277–278` show that these defect markers do improve the finite
+  exactness family but still leave one further local distinction to isolate;
+  the later note `279` then shows that this missing distinction is at least
+  sharply localized: a one-point class-guarded repair already restores checked
+  exactness through `m=17` and closes checked color `2`; the later note `280`
+  then shows that the repaired family still has an explicit residual color-`1`
+  affine line obstruction for odd `m` with `3 \nmid m`, and the follow-up note
+  `281` shows that exposing that line relation directly to the exactness CSP is
+  still not by itself enough to close the remaining colors;
+  this again does not change the historical role of the present post-`077`
+  frontier note.
+- the later `284–286` working memo promotion then narrows the best current
+  downstream read again: small odd residual packets and the nonresonant packet
+  are treated as closed working blocks, and the live remaining burden is
+  recorded as a resonant residual program rather than as one undifferentiated
+  all-odd assembly theorem; this again does not change the historical role of
+  the present post-`077` frontier note.
+- the later probe note `287` then checks the tempting prime-dimension
+  cyclic-quotient / voltage viewpoint directly against the closed D3 Route-E
+  package and the current D5 Sel* package, and concludes that naive
+  full-torus quotient-first language is not the right primary theorem object;
+  rather, such language only becomes plausible after the existing return-ladder
+  compression has already exposed the correct reduced model; this again does
+  not change the historical role of the present post-`077` frontier note.
+- the later priority note `288` then records the current best next-fragment
+  choice after the `0326` frontier split: if one closes one further
+  mathematically useful piece now, it should first come from the pure
+  color-`1` resonant branch before the separate `B`-active / gate theorem or
+  any new D3-side theorem fragment; the later note `289` then sharpens this
+  once more by promoting the base-section reduction / no-go picture for the
+  current promoted-collar package and moving the next positive target down to
+  the induced base permutation on `B_m`; the later audit note `290` then
+  separates theorem-level background, checked exact packet, and genuine open
+  frontier more explicitly; the later campaign note `291` and reusable request
+  template `292` then fix the operational next-step read as a branchwise
+  compute campaign, with pure color-`1` families judged by whether they change
+  the reduced base permutation `P_m` and `B`-active families judged by whether
+  they realize a genuine wall/gate splice; the later package-alignment note
+  `294` then adds one more narrowing after inspection of the `2026-03-25`
+  residual proof bundle: for the pure color-`1`, `5 ∤ m` branch, the best
+  explicit next-family candidates are now promoted-collar / collar-row
+  refinements rather than broad support-surrogate families; the later probe
+  `295` then sharpens this once more by showing that on checked resonant
+  moduli every one-row `B_{s,3}` refinement of the promoted-collar baseline is
+  inert on the reduced base permutation `P_m`, while the opposite collar-row
+  `A` move is the first refinement that changes `P_m` and already closes the
+  base permutation at `m=21`; so the active explicit-family read becomes
+  “dual-collar `A` first, then compensation”, while the `B`-active / gate
+  branch remains separate; the later direction note `296` then folds in the
+  `resonant_row3_*` research notes and sharpens the search order once more:
+  the best current next direction is to treat the resonant pure color-`1`
+  problem as a residue-sensitive visible-row seed problem before escalating to
+  new support outside the current 7-row grid or to `k=4`; the later exact
+  atlas note `297` then adds the first stable late 2-line zero-return table
+  with the corrected toggle encoding and shows that this later branch is
+  residue-sensitive already at the cheap exact level: `B_m` first-return cost
+  is strongly family-sensitive while `H_m` stays cheap and largely rigid, so
+  the next full `B_m` promotions should be chosen selectively rather than as a
+  single uniform late sweep; the later routing note `298` then combines that
+  atlas with the earlier exact late ledger and promotes the best current
+  campaign map: treat the late branch as a two-family atlas with tentative
+  mod-`30` routing, and take `183` central and `201` flank as the first new
+  exact promotions; the later promotion note `299` then executes that pair and
+  sharpens the interpretation once more: `183` central is a full exact late
+  `B_m` win, while `201` flank still splits into cycle lengths `103,57,41`, so
+  the mod-`30` routing law should currently be read as a family-promotion law,
+  not yet as a winner law; the later master hinge note `300` then closes the
+  full first-hinge classification on all of `H_m` by one effective-phase law
+  `J_0`, including the previously missing initial side-top slice; the follow-up
+  status note `301` then records the next shift in the resonant pure
+  color-`1` burden: lower-to-hinge classification is now closed, and the live
+  theorem-side burden has moved up to double-top phase-exit and `H_m -> B_m`
+  stitching; the later core-chain note `302` and global status note `303` then
+  repackage this promoted resonant bundle into a shorter theorem-order map and
+  a shorter whole-branch status split; this again does not change the
+  historical role of the present post-`077` frontier note.
+- the later note `304` then promotes the March 28 consolidated support archive
+  into a separate curated parallel layer `RouteY-Existence`, intended for the
+  existence/seam-surgery reading of the resonant residual program rather than
+  as a replacement for the canonical RoundY frontier; this again does not
+  change the historical role of the present post-`077` frontier note.
 
 It is the current compact statement of:
 

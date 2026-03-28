@@ -17,6 +17,22 @@ exact quotient compares to the dynamic bridge `(beta,q0,sigma)` /
 `(beta,delta)`, see
 `theorem/d5_106_intended_quotient_identification_and_comparison.md`.
 
+For the current promoted manuscript-order proof slice after the `251` bundle,
+see:
+
+- `theorem/d5_249_master_status_after_G1.md`
+- `theorem/d5_251_bundle_review_and_polish_note.md`
+- `tex/d5_251_full_d5_working_manuscript_refined.tex`
+
+For the current `0326` working frontier promotion after the later residual
+search split, see:
+
+- `theorem/d5_284_current_working_frontier_after_nonresonant_closure.md`
+- `theorem/d5_285_residual_assembly_companion_memo.md`
+- `tex/d5_284_full_d5_working_manuscript_after_nonresonant_closure.tex`
+- `tex/d5_285_residual_assembly_companion_after_nonresonant_closure.tex`
+- `theorem/d5_286_promoted_collar_complete_local_dynamics.md`
+
 ## 1. Current status in one sentence
 
 For odd `m` in `d=5`, the global safe bridge `(beta,rho)` is accepted, the
@@ -183,54 +199,53 @@ What remains is no longer a D5 bottleneck but an audit question:
   `099` package inputs, and the final graph-level translation from globalization
   to Hamilton decomposition are packaged tightly enough for a final
   manuscript-order proof chain.
+- in the promoted `251` manuscript-order slice, how much of the imported
+  post-entry odometer packet and the imported final graph-side/globalization
+  packet should be internalized directly into the main manuscript.
 
 Main proof references:
 
 - `theorem/d5_086_dependency_audit_and_generalization_gate.md`
 
-### 3.4 Downstream graph-theoretic frontier after `111–122`
+### 3.4 Downstream manuscript package after `219–251`
 
 Separate from the accepted odd-`m` globalization package, the downstream
-graph-theoretic frontier is now sharper than the old “finish M4 / M5” wording.
+graph/manuscript line has now advanced beyond the earlier `111–122` frontier
+discussion.
 
-- `111` fills the raw M4-style tables on the actual `mixed_008` full torus and
-  shows the blocker is not extraction.
-- `112` proves that exact compression of the current raw selector row cannot
-  close M4 while preserving that row as output.
-- `113` rewrites M4 into:
-  - a solved symbolic selector-existence half (`M4a`);
-  - and a still-open D5 compatibility half (`M4b`).
-- `114` then identifies `M4b` with a weighted pair of 1-factorizations on the
-  defect slice graphs `G_2` and `G_3`, equivalently on `Sigma=2,3`.
-- `115` executes the shrunk compute request:
-  it reproduces the pattern-only selector packet, confirms transfer of the
-  `m = 9` pattern assignment to `m = 11,13`, and shows that the first natural
-  slice-4 intermediate families `(B_k for k in subset, Z, M)` with
-  `subset ⊆ {0,1,2,3,4,5}` and the cyclic orbit quotient of
-  `(fullpairs, Z, M)` are still no-go.
-- `116` then proposes the explicit symbolic slice-4 transport field
-  `F4sharp = (B2,B3,B4,Z,O,M)` and backs it with exact checks and ablations.
-- `117` proposes a direct corrected-selector theorem for odd `m >= 5`.
-- `118` gives the downstream interpretation:
-  if `117` is accepted, then M4 and M6 are no longer the live graph-level
-  burden, and M5 becomes the next package for the corrected maps.
-- `119` then shows that the easiest low-complexity first-return factors for
-  `Sel*` are still only `m^4`, so the live color-4 route should move from a
-  generic `m^3` factor search to the final section return.
-- `120` makes that sharp by reducing color-4 M5 to the final section
-  `U_m = (F_4^*)^(m^3)|P2` and extracting an explicit corrected-row model.
-- `121` proves that corrected-row model is one `m^2`-cycle for every odd
-  `m >= 11`.
-- `122` proves the actual/model identification and closes the live color-4
-  Sel* M5 route for all odd moduli.
+- the promoted `219–233` front-end packet closes the present theorem block
+  `T0--T4`;
+- the promoted `236/245/247` graph-side packet closes `G1` by an explicit
+  two-defect-set splice of the valid baseline package;
+- the promoted `234` transport note closes `G2` from `G1` by cyclic conjugacy;
+- the short status note `249` records that no live theorem object remains
+  inside the present `T0--T4, G1, G2` slice;
+- the refined manuscript package `251` then presents that closed slice
+  honestly, while leaving two blocks imported rather than reproved:
+  the post-entry odometer packet and the final graph-side/globalization packet.
 
-So the current downstream todo is:
+So the current downstream todo is no longer “finish M4 / M5” inside this slice.
+It is:
 
-- review and stabilize the corrected-selector theorem package `116/117`;
-- decide whether to adopt the `118` reading that M4 and M6 are already closed
-  in the needed sense;
-- then integrate the promoted `119–122` color-4 M5 route with any adopted
-  corrected-selector package and the remaining graph-level proof.
+- keep the promoted `T0--T4, G1, G2` slice fixed;
+- decide how much of the imported post-entry odometer packet to internalize
+  into the refined manuscript;
+- decide how much of the imported final graph-side/globalization packet to
+  internalize into the refined manuscript;
+- keep the newly promoted scripts/checks/overview synchronized with that
+  manuscript-order presentation.
+
+Later residual notes then sharpen the downstream read again:
+
+- `256–266` close the actual color-`3` Route-E branch;
+- `269–281` narrow the remaining residual assembly problem by successive
+  obstruction notes and repaired-family refinements;
+- `284–286` then promote the current working memo that treats small odd packets
+  and the nonresonant packet as closed working blocks and records the live
+  downstream burden as a resonant residual program.
+
+This does not change the accepted `076–083` theorem package itself.
+It changes only the best current downstream organizational read.
 
 ## 4. Final theorem now in force
 

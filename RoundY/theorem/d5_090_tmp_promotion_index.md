@@ -11,6 +11,28 @@ reference.
 
 The following `tmp/` notes now have stable theorem-level replacements:
 
+- `tmp/d5_251_complete_proof_bundle.tar`
+  -> promoted bundle contents:
+     `theorem/d5_220_sigma23_source_surface_all_m_gt2_closure_note.tex`,
+     `theorem/d5_223_sigma32_surface_closure_note.tex`,
+     `theorem/d5_225_T3_four_collision_families_note.tex`,
+     `theorem/d5_228_T2_centered_core_obstruction_note.tex`,
+     `theorem/d5_229_T2_T3_m3_small_case_note.md`,
+     `theorem/d5_230_T0_actual_needed_all_odd_surface_proof_note.tex`,
+     `theorem/d5_233_T4_canonical_entry_surface_proof_note.tex`,
+     `theorem/d5_234_graph_side_split_G2_closed_G1_remaining_note.tex`,
+     `theorem/d5_236_G1_finite_defect_splice_principle_note.tex`,
+     `theorem/d5_240_G1_reverse_search_reduced_target_note.tex`,
+     `theorem/d5_243_G1_periodic_phase_carrier_candidate_note.tex`,
+     `theorem/d5_245_G1_valid_layer_baseline_and_three_class_splice_note.tex`,
+     `theorem/d5_247_G1_explicit_two_swap_splice_note.tex`,
+     `theorem/d5_249_master_status_after_G1.md`,
+     `theorem/d5_251_bundle_review_and_polish_note.md`,
+     `theorem/d5_251_manifest_summary.md`,
+     `tex/d5_251_full_d5_working_manuscript_refined.tex`,
+     and
+     `tex/d5_251_proof_bundle_overview_refined.tex`,
+     together with their promoted `scripts/` and `RoundY/checks/` support files
 - `tmp/077_d5_trackA_analysis_note.md`
   -> `theorem/d5_078_global_component_structure.md`
 - `tmp/d5_078_rA.md`
@@ -57,6 +79,18 @@ The following `tmp/` notes now have stable theorem-level replacements:
 - `tmp/d5_122_M5_all_odd_identification_note.tex`
   -> `theorem/d5_122_M5_all_odd_identification.tex`,
      `theorem/d5_122_M5_all_odd_identification.md`
+- `tmp/d5_255_full_d5_working_manuscript_transport_honest.tex`
+  -> `tex/d5_255_full_d5_working_manuscript_transport_honest.tex`
+- `tmp/d5_255_formal_target_closure_tightening_note.md`
+  -> `theorem/d5_255_transport_honesty_boundary.md`
+- `tmp/d5_main_method_update_redefined_2026-03-25.tex`
+  -> `tex/d5_284_full_d5_working_manuscript_after_nonresonant_closure.tex`
+- `tmp/residual_assembly_companion_note_2026-03-25.tex`
+  -> `tex/d5_285_residual_assembly_companion_after_nonresonant_closure.tex`
+- `tmp/resonant_promoted_collar_complete_local_dynamics_2026-03-25.md`
+  -> `theorem/d5_286_promoted_collar_complete_local_dynamics.md`
+- `tmp/resonant_promoted_collar_complete_local_dynamics_2026-03-25.tex`
+  -> `tex/d5_286_promoted_collar_complete_local_dynamics.tex`
 
 ## 2. Already promoted earlier
 

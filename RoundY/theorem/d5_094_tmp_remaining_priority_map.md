@@ -1,193 +1,145 @@
 # D5 094 Remaining tmp Priority Map
 
-This note records the remaining `tmp/` files that still matter after the main
-`076–083` promotion pass. The point is to separate:
+This note records which `tmp/` files still matter after the `251` bundle
+promotion.
 
-- files that should now be promoted,
-- files whose mathematical content is already absorbed into stable notes,
-- files that should remain provenance only,
-- and files that are outside the RoundY D5 theorem chain.
+The point is to separate:
+
+- material that has now been promoted;
+- material that still matters as live provenance or auxiliary support;
+- and material that should stay outside the stable RoundY theorem chain.
 
 ## 0. Current active tmp frontier
 
-The active tmp frontier has moved beyond the old `076–083` promotion backlog.
-The main live tmp notes are now:
+There is no longer a live theorem frontier inside the promoted
+`T0--T4, G1, G2` slice.
 
-- `tmp/d5_116_slice4_transport_formula_note.tex`
-- `tmp/d5_117_M4_corrected_selector_theorem.tex`
-- `tmp/d5_118_M4_G4prime_M6_note.tex`
+The `251` bundle has now been promoted into stable RoundY locations, so the old
+“current tmp frontier” language for `116–118` is no longer the right top-level
+description.
 
-The later M5 notes `tmp/d5_121_M5_corrected_row_stitching_note.tex` and
-`tmp/d5_122_M5_all_odd_identification_note.tex` are no longer part of this
-active tmp frontier; they have now been promoted into stable RoundY theorem
-notes.
+The actual remaining non-stable work is not a single tmp theorem note. It is
+the manuscript-side treatment of:
 
-These are not “promote now verbatim” files yet. Their current role is:
+- the post-entry odometer packet;
+- the final graph-side/globalization packet;
+- and, after the later `255` honesty review, the explicit graph-side transport
+  compatibility step linking the concrete `G1` package to abstract `G2`.
 
-- `116`: proposes the explicit exact slice-4 transport field
-  `F4sharp = (B2,B3,B4,Z,O,M)`;
-- `117`: proposes a direct corrected-selector theorem closing M4 on the full
-  torus for odd `m >= 5`;
-- `118`: repackages the downstream interpretation, arguing that if `117` is
-  accepted then M4 and M6 are no longer the live graph-level burden and M5 is
-  the next package.
+So the current tmp role is mostly auxiliary/provenance, not primary theorem
+status.
 
-The earlier `112–115` notes remain important provenance for how the old raw-row
-and slice-4 bottlenecks were isolated and then replaced, but `116–118` are the
-current live graph-theoretic todo notes, not absorbed historical leftovers.
+Historical update:
+the later `0326` memo layer is no longer `tmp`-only. Its current stable
+promotions are:
 
-## 1. Promote now
+- `tex/d5_284_full_d5_working_manuscript_after_nonresonant_closure.tex`
+- `theorem/d5_284_current_working_frontier_after_nonresonant_closure.md`
+- `tex/d5_285_residual_assembly_companion_after_nonresonant_closure.tex`
+- `theorem/d5_285_residual_assembly_companion_memo.md`
+- `theorem/d5_286_promoted_collar_complete_local_dynamics.md`
+- `tex/d5_286_promoted_collar_complete_local_dynamics.tex`
 
-No urgent promotion remains from this shortlist. The latest high-value cleanup
-notes from the previous pass have now been promoted:
+These should now be cited first when discussing the current residual frontier.
 
-- `tmp/d5_092_cleaned_independent_theorem_suite.tex`
-  -> [d5_092_cleaned_independent_theorem_suite.tex](./d5_092_cleaned_independent_theorem_suite.tex)
-- `tmp/d5_095_compact_reproof_079_chart_interface_landing.md/.tex`
-  -> [d5_095_compact_reproof_079_chart_interface_landing.md](./d5_095_compact_reproof_079_chart_interface_landing.md)
-     and
-     [d5_095_compact_reproof_079_chart_interface_landing.tex](./d5_095_compact_reproof_079_chart_interface_landing.tex)
-- `tmp/d5_096_compact_reproof_081_regular_closure.md/.tex`
-  -> [d5_096_compact_reproof_081_regular_closure.md](./d5_096_compact_reproof_081_regular_closure.md)
-     and
-     [d5_096_compact_reproof_081_regular_closure.tex](./d5_096_compact_reproof_081_regular_closure.tex)
-- `tmp/d5_097_compact_reproof_077_tail_length_reduction.md/.tex`
-  -> [d5_097_compact_reproof_077_tail_length_reduction.md](./d5_097_compact_reproof_077_tail_length_reduction.md)
-     and
-     [d5_097_compact_reproof_077_tail_length_reduction.tex](./d5_097_compact_reproof_077_tail_length_reduction.tex)
-- `tmp/d5_098_compact_cleanup_033_062_structural_block.md/.tex`
-  -> [d5_098_compact_cleanup_033_062_structural_block.md](./d5_098_compact_cleanup_033_062_structural_block.md)
-     and
-     [d5_098_compact_cleanup_033_062_structural_block.tex](./d5_098_compact_cleanup_033_062_structural_block.tex)
-- `tmp/d5_121_M5_corrected_row_stitching_note.tex`
-  -> [d5_121_M5_corrected_row_stitching.md](./d5_121_M5_corrected_row_stitching.md)
-     and
-     [d5_121_M5_corrected_row_stitching.tex](./d5_121_M5_corrected_row_stitching.tex)
-- `tmp/d5_122_M5_all_odd_identification_note.tex`
-  -> [d5_122_M5_all_odd_identification.md](./d5_122_M5_all_odd_identification.md)
-     and
-     [d5_122_M5_all_odd_identification.tex](./d5_122_M5_all_odd_identification.tex)
+## 1. Newly promoted from tmp/bundled material
 
-## 2. Important historical provenance, but already absorbed
+The following late tmp/bundled material is now promoted and should be cited in
+its stable RoundY location instead:
 
-These files are still mathematically meaningful, but their substance is already
-represented by later stable notes. They should be documented and cited only as
-provenance, not promoted again verbatim.
+- the `251` bundle front-end notes `220`, `223`, `225`, `228`, `229`, `230`,
+  `233`
+- the `251` bundle graph-side notes `234`, `236`, `240`, `243`, `245`, `247`
+- the bundle status/overview notes `249`, `251`
+- the refined manuscript and refined overview under `RoundY/tex/`
+- the matching scripts and saved checks now under `scripts/` and
+  `RoundY/checks/`
+- the earlier `121/122` M5 notes, already promoted in the previous pass
 
-- `tmp/d5_076_track_c_compute.md`
+## 2. Still useful tmp provenance / auxiliary support
+
+These files are still useful, but they are no longer the main canonical entry
+point.
+
+- `tmp/d5_123_odd_m_d5_consolidated_manuscript.tex`
+  Importance: `high`
+  Role:
+  Earlier large conditional manuscript integrating the `M1--M6` language.
+  Useful for provenance and for understanding the imported-block boundary, but
+  superseded as the main stable manuscript by the promoted `251` TeX files.
+
+- `tmp/d5_124_M1_M6_proof_closure_draft.tex`
   Importance: `medium`
-  What it adds:
-  Early concrete-bridge compute framing, especially the exact nature of
-  fixed-`delta` ambiguity on proxy unions.
-  Stable replacement:
-  [d5_077_tail_length_and_actual_union.md](./d5_077_tail_length_and_actual_union.md),
-  [d5_078_large_modulus_regular_union_support.md](./d5_078_large_modulus_regular_union_support.md),
-  and
-  [d5_082_frontier_and_theorem_map.md](./d5_082_frontier_and_theorem_map.md).
+  Role:
+  Bookkeeping draft for what was open versus closed in the `M1--M6` split.
 
-- `tmp/077_d5_trackC_work_20260314.md`
+- `tmp/d5_125_corrected_M2_M3_anchor_package_note.tex`
   Importance: `medium`
-  What it adds:
-  The first clear statement that repeated `delta` ambiguity looked terminal-only
-  on the actual frozen anchors and that the real missing object was the splice
-  graph / component decomposition.
-  Stable replacement:
-  [d5_077_tail_length_and_actual_union.md](./d5_077_tail_length_and_actual_union.md)
-  and
-  [d5_078_endpoint_compatibility_criterion.md](./d5_078_endpoint_compatibility_criterion.md).
+  Role:
+  Odometer-side anchor package support for the front-end / quotient story.
 
-- `tmp/d5_091_independent_package_gap_note_rewrite_20260314.md`
+- `tmp/d5_126_intended_quotient_verification_note.tex`
   Importance: `medium`
-  What it adds:
-  The best drafting source for the gap note that separates an accepted package
-  from a fully independent theorem package.
-  Stable replacement:
-  [d5_091_independent_package_gap_note.md](./d5_091_independent_package_gap_note.md).
+  Role:
+  Theorem-side verification note for the intended quotient and local
+  provenance questions.
 
-- `tmp/d5_091_independent_package_gap_note_rewrite_20260314.tex`
+- `tmp/d5_255_from_d5_254_transport_honesty.patch.diff`
+  Importance: `low`
+  Role:
+  Review provenance for the final honesty tightening from the `254`
+  packet-closure manuscript to the transport-conditional `255` copy.
+
+- `tmp/d5_133_one_corner_front_end_reduction_note (2).tex`
   Importance: `medium`
-  What it adds:
-  TeX source for the same independent-package gap note.
-  Stable replacement:
-  [d5_091_independent_package_gap_note.tex](./d5_091_independent_package_gap_note.tex).
+  Role:
+  One-corner/front-end reduction support relevant to the odometer-side import.
 
-## 3. Stable note already exists; tmp should not be cited
-
-These files are already fully promoted or intentionally summarized elsewhere.
-
-- `tmp/d5_076_bridge_main.md`
-- `tmp/d5_076_realization_trackB.md`
-- `tmp/d5_076_concrete_bridge_proof.md`
-- `tmp/d5_078_rA.md`
-- `tmp/d5_078_rB.md`
-- `tmp/d5_078_rC.md`
-- `tmp/d5_078_rD.md`
-- `tmp/d5_080_a.md`
-- `tmp/d5_081_4.2.md`
-- `tmp/d5_081_5.0.md`
-- `tmp/d5_081_6.0_rC_targeted_compute.md`
-- `tmp/d5_081b_082_actual_lift_end_gluing_reduction.md`
-- `tmp/d5_083_final_theorem_proof.md`
-- `tmp/d5_092_cleaned_independent_theorem_suite.md`
-
-Use the stable RoundY theorem copy instead.
-
-## 4. Duplicates or intermediate proof variants
-
-These are useful for provenance but should not be promoted again.
-
-- `tmp/scratches/d5_083_proof_note.md`
-  Importance: `low`
-  Status:
-  Intermediate reduction note. Final role is absorbed by
-  [d5_083_gluing_flow_and_final_theorem.md](./d5_083_gluing_flow_and_final_theorem.md)
-  and
-  [d5_083_final_theorem_proof.md](./d5_083_final_theorem_proof.md).
-
-- `tmp/scratches/d5_083_final_proof_a.md`
-  Importance: `low`
-  Status:
-  Attractive intermediate variant, but not the canonical final proof.
-
-- `tmp/scratches/d5_083_final_gluing_theorem_proof.md`
-  Importance: `low`
-  Status:
-  Parallel proof variant; final theorem now cited through the promoted `083`
-  theorem note.
-
-- `tmp/scratches/d5_073_duplicate_handoff.md`
-  Importance: `low`
-  Status:
-  Duplicate handoff.
-
-- `tmp/scratches/d5_response_061.b.md`
-  Importance: `low`
-  Status:
-  Scratch response, not a theorem note.
-
-## 5. Outside the RoundY D5 theorem chain
-
-These should stay outside the D5 promotion pipeline.
-
-- `tmp/scratches/square_product_hamilton_lift.tex`
+- `tmp/d5_134_shape_theorem_and_odometer_roadmap (1).md`
+- `tmp/d5_134_shape_theorem_and_odometer_roadmap (2).md`
+- `tmp/d5_135_seed_certificate_table (1).md`
+- `tmp/d5_136_shape_theorem_compute_attempt_and_job_request.md`
   Importance: `medium`
-  Status:
-  A real theorem note, but it is a general square-product lift for Hamilton
-  decompositions, not a RoundY D5 bridge/globalization note. If adopted, it
-  should be promoted under a broader top-level theorem area, not folded into
-  the D5 odd-`m` chain.
+  Role:
+  Shape-theorem / certificate / odometer-roadmap support that may still matter
+  when internalizing the imported odometer packet.
 
-- `tmp/scratches/test_dispatch.lean`
-  Importance: `low`
-  Status:
-  Formal scratch file, not part of the stable RoundY theorem notes.
+- `tmp/d5_195_sigma23_case_report.md`
+- `tmp/d5_196_sigma23_R1_microstate_compute_request.md`
+  Importance: `medium`
+  Role:
+  Late local microstate provenance support behind the surfaced front-end notes.
 
-## 6. Recommended citation rule
+These should be used as support or provenance, not as the first citation when a
+stable RoundY note now exists.
 
-For any argument already represented in a stable RoundY theorem note:
+## 3. Stable note already exists; tmp should not be cited first
 
-- cite the stable note first;
-- mention the `tmp/` source only if provenance matters; and
-- do not mix `tmp/` and stable references in the same theorem dependency chain
-  unless the stable note explicitly says a distinct argument still lives only in
-  the original.
+For the following material, cite the stable RoundY note first:
+
+- all promoted `076–083` notes
+- the compact cleanup/reproof line `091–099`
+- the quotient/manuscript bridge line `106`, `121`, `122`
+- the honesty-boundary / independence line `255`, `256`
+- the promoted `251` slice `220`, `223`, `225`, `228`, `229`, `230`, `233`,
+  `234`, `236`, `240`, `243`, `245`, `247`, `249`, `251`
+
+## 4. Outside the RoundY D5 theorem chain
+
+These should stay outside the stable RoundY D5 theorem chain unless the user
+explicitly requests a separate promotion:
+
+- scratch Lean/test files in `tmp/scratches/`
+- unrelated general Hamilton-lift notes such as
+  `tmp/scratches/square_product_hamilton_lift.tex`
+- old bundle patch diffs kept only as provenance of manuscript editing
+
+## 5. Recommended citation rule
+
+Use this rule:
+
+1. cite the stable RoundY theorem/check/tex copy first;
+2. cite a `tmp/` file only if provenance or an unpromoted auxiliary argument
+   matters;
+3. do not mix a stable promoted theorem chain with stale tmp citations unless
+   the stable note explicitly says the argument still lives only in tmp.

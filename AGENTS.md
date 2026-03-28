@@ -115,61 +115,124 @@ Current exact Lean frontier:
 
 For D5, the canonical current handoff is:
 
-- `RoundY/theorem/d5_082_frontier_and_theorem_map.md`
-- `RoundY/theorem/d5_083_gluing_flow_and_final_theorem.md`
-- `RoundY/theorem/d5_083_final_theorem_proof.md`
-- `RoundY/theorem/d5_086_dependency_audit_and_generalization_gate.md`
+- `RoundY/README.md`
+- `RoundY/current-frontier-and-approach.md`
+- `RoundY/theorem/d5_284_current_working_frontier_after_nonresonant_closure.md`
+- `RoundY/tex/d5_284_full_d5_working_manuscript_after_nonresonant_closure.tex`
+- `RoundY/theorem/d5_285_residual_assembly_companion_memo.md`
+- `RoundY/tex/d5_285_residual_assembly_companion_after_nonresonant_closure.tex`
+- `RoundY/theorem/d5_286_promoted_collar_complete_local_dynamics.md`
 
 The active top-level split is:
 
 1. **Theorem package**
-   Phase-corner theorem, countdown/reset corollaries, structural spine
-   `033 -> 062 -> 059`.
-2. **Bridge theorem**
-   Safest theorem object: abstract `(beta,rho)`.
-   Best checked model: dynamic boundary odometer `(beta,q,sigma)` /
-   `(beta,delta)`.
-3. **Realization integration**
-   Integrate corner-time descent with the final bridge object, keeping the
-   theorem/checked-support boundary explicit.
-4. **Compute validation**
-   Validate the concrete bridge identification and accessible exact reduction
-   object only. No generic search.
+   The accepted odd-`m` globalization package remains closed.
+   The stable background is still `076–099`, with `082/099/106/121/122` the
+   shortest theorem-side references.
+2. **Promoted manuscript layer**
+   The front-end one-corner slice `T0--T4` is closed.
+   The graph-side color-`4` and color-`3` branches are closed.
+   The current manuscript-order working packet is `284/285/286`.
+3. **Current live frontier**
+   The branch now treats:
+   - small odd residual packets as closed working blocks;
+   - the nonresonant residual packet for odd `m >= 11` with `3 ∤ m` as closed
+     at working-theorem level;
+   - and the remaining burden as a resonant residual program for odd
+     `m >= 15` with `3 | m`.
+- the current assumption audit is in
+  `RoundY/theorem/d5_290_current_assumption_and_gap_audit.md`;
+- the current residual compute campaign split is in
+  `RoundY/theorem/d5_291_residual_compute_campaign_conclusion.md`;
+- the reusable request/manifest template is in
+  `RoundY/specs/d5_292_residual_compute_request_template.md`.
+- the current tar-alignment / explicit-family narrowing is in
+  `RoundY/theorem/d5_294_residual_package_alignment_after_tar.md`;
+- the current promoted-collar follow-up probe is in
+  `RoundY/theorem/d5_295_promoted_collar_dualA_vs_singleB_probe.md`.
+- the current row-3 / visible-grid direction synthesis is in
+  `RoundY/theorem/d5_296_resonant_row3_direction_after_visible_grid.md`.
+- the current late 2-line zero-return atlas is in
+  `RoundY/theorem/d5_297_resonant_late_zero_return_atlas.md`.
+- the integrated late routing/campaign note is in
+  `RoundY/theorem/d5_298_resonant_late_mod30_routing_note.md`.
+- the first executed late exact-promotion note is in
+  `RoundY/theorem/d5_299_resonant_late_first_exact_promotions.md`.
+- the new master `H_m` hinge-profile theorem is in
+  `RoundY/theorem/d5_300_resonant_Hm_master_hinge_profile_theorem.md`.
+- the resulting resonant pure color-`1` proof-state synthesis is in
+  `RoundY/theorem/d5_301_resonant_pure_color1_proof_state_after_Hm_master_profile.md`.
+- the short theorem-order map of that promoted resonant stack is in
+  `RoundY/theorem/d5_302_resonant_pure_color1_core_chain.md`.
+- the short global D5 status overview is in
+  `RoundY/theorem/d5_303_current_d5_proof_status_overview.md`.
+- the short whole-branch status note after promoting the parallel existence
+  layer is in
+  `RoundY/theorem/d5_305_current_d5_status_with_routey_existence.md`.
+- the parallel existence/seam-surgery layer extracted from the March 28
+  support archive is now in `RouteY-Existence/README.md`; treat it as a
+  parallel arithmetic/existence lane, not as a replacement for the canonical
+  current RoundY frontier.
+4. **Independent work**
+   Documentation, internalization, literal definitions, citation cleanup,
+   bundle cleanup, and manuscript readability work can proceed without waiting
+   for the final resonant theorem phrasing to settle.
 
-After the promoted `083` proof, the odd-`m` D5 theorem closes inside the
-accepted `076–082` package.
+The live task is no longer broad five-color search.
+It is:
 
-The live task is now a short dependency audit:
-
-- recheck `033 -> 062`,
-- recheck the `079` chart/interface usage,
-- and only then treat D5 as the base for broader generalization.
+- keep the `284/285/286` layer readable and authoritative;
+- isolate the remaining resonant residual input cleanly;
+- and keep the independence/documentation queue moving in parallel.
 
 ## Read this first for D5 work
 
 1. `RoundY/README.md`
 2. `RoundY/current-frontier-and-approach.md`
-3. `RoundY/theorem/d5_082_frontier_and_theorem_map.md`
-4. `RoundY/instruction_for_codex.md`
+3. `RoundY/theorem/d5_284_current_working_frontier_after_nonresonant_closure.md`
+4. `RoundY/tex/d5_284_full_d5_working_manuscript_after_nonresonant_closure.tex`
+5. `RoundY/theorem/d5_285_residual_assembly_companion_memo.md`
+6. `RoundY/tex/d5_285_residual_assembly_companion_after_nonresonant_closure.tex`
+7. `RoundY/theorem/d5_286_promoted_collar_complete_local_dynamics.md`
+8. `RoundY/instruction_for_codex.md`
+9. `RoundY/theorem/d5_290_current_assumption_and_gap_audit.md`
+10. `RoundY/theorem/d5_291_residual_compute_campaign_conclusion.md`
+11. `RoundY/specs/d5_292_residual_compute_request_template.md`
+12. `RoundY/theorem/d5_294_residual_package_alignment_after_tar.md`
+13. `RoundY/theorem/d5_295_promoted_collar_dualA_vs_singleB_probe.md`
+14. `RoundY/theorem/d5_296_resonant_row3_direction_after_visible_grid.md`
+15. `RoundY/theorem/d5_297_resonant_late_zero_return_atlas.md`
+16. `RoundY/theorem/d5_298_resonant_late_mod30_routing_note.md`
+17. `RoundY/theorem/d5_299_resonant_late_first_exact_promotions.md`
+18. `RoundY/theorem/d5_300_resonant_Hm_master_hinge_profile_theorem.md`
+19. `RoundY/theorem/d5_301_resonant_pure_color1_proof_state_after_Hm_master_profile.md`
+20. `RoundY/theorem/d5_302_resonant_pure_color1_core_chain.md`
+21. `RoundY/theorem/d5_303_current_d5_proof_status_overview.md`
+22. `RoundY/theorem/d5_304_routey_existence_parallel_layer.md`
+23. `RoundY/theorem/d5_305_current_d5_status_with_routey_existence.md`
+24. `RouteY-Existence/README.md`
 
 Then read the specific theorem or artifact note directly relevant to the task.
 
 ## What is in bounds for D5
 
-- theorem-side packaging around the phase-corner theorem
-- bridge-theorem reasoning for the abstract bridge `(beta,rho)` and its
-  concrete odometer model `(beta,q,sigma)` / `(beta,delta)`
-- realization reasoning around the canonical `beta` clock
+- theorem-side packaging around the accepted odd-`m` globalization package
+- manuscript-order packaging around the current `284/285/286` layer
+- resonant residual reasoning in the current width-`1` / width-`3` /
+  promoted-collar / double-top / `B`-active-gate language
+- documentation, internalization, and promotion work for the current frontier
 - compute support for:
-  - actual-union globalization
-  - abstract-vs-concrete bridge validation
-  - component / tail-length ambiguity at fixed realized `delta`
+  - exact packet replay
+  - residual-branch validation
+  - reader-facing bundle / memo cleanup
 
 ## What is out of bounds unless explicitly requested
 
 - reopening broad witness search
 - reopening generic tiny-controller families
-- replacing the theorem package with new ad hoc coordinates
+- reverting the top-level read back to a generic all-odd five-color assembly
+  search without explicit new evidence
+- replacing the accepted theorem package with new ad hoc coordinates
 - moving the active focus back from `071` to older pre-compression branches
 - stepping on the current Lean/formalization branch
 
