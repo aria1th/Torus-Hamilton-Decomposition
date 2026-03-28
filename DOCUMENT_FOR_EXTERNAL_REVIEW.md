@@ -3573,3 +3573,458 @@ Observed outcome:
 Practical consequence:
 - the next compute should move beyond the first `B_k`-subset / cyclic-orbit
   families, not back to the old large weighted search.
+
+## D51) D5 next mathematical closure target after the 0326 frontier split
+
+**Decision:** Prioritize the D5 pure color-`1` uniform double-top breaker
+theorem before the separate `B`-active / gate theorem and before any new D3
+theorem-facing fragment.
+
+Options:
+1. Use the next effort on a D3-facing fragment:
+   arXiv cleanup, finite-defect abstraction, or presentation packaging.
+2. Target the D5 pure color-`1` double-top breaker theorem first.
+3. Target the D5 separate `B`-active / gate theorem first.
+4. Try to package both resonant branches at once as one broad final theorem.
+
+Recommendation:
+- Option 2.
+- The current D5 packet already isolates the pure color-`1` branch to the
+  width-`1` / width-`3` / promoted-collar / double-top ladder.
+- The obstruction theorems are already in place:
+  width-`1` fails, width-`3` fails, and the promoted-collar local audit is
+  complete.
+- So the double-top breaker is the smallest positive theorem still sitting
+  directly on the main resonant proof path.
+- Closing it would improve the frontier in the cleanest possible way:
+  one of the two remaining resonant branches would become a closed packet,
+  leaving only the separate `B`-active / gate family.
+- By comparison, the `B`-active / gate branch is more branch-specific and less
+  canonical, while a new D3 fragment would improve exposition or portability
+  more than the actual open mathematics.
+
+Risks / mitigations:
+- The pure color-`1` branch may still hide one more local repair mechanism ->
+  keep the target theorem narrow: break the mod-`3` fibers on the double-top
+  plane first, then reassess global closure.
+- The gate branch might turn out to be easier experimentally ->
+  record the priority as a current default, not as a ban on switching if the
+  next exact packet shows otherwise.
+- A too-ambitious formulation could recreate the old monolithic resonant
+  theorem problem -> require any proposed repair to be stated first as an
+  explicit double-top plane theorem.
+
+Open questions:
+- What is the smallest local resonant repair on `d = e = m - 1` that destroys
+  the current mod-`3` invariant fibers while staying compatible with the solved
+  bulk and promoted-collar dynamics?
+- Does the resulting repaired pure color-`1` packet become Hamilton directly,
+  or only reduce to one last finite gate object?
+- After that closure, does the `B`-active / gate branch remain genuinely
+  independent, or does it partially collapse into the same repair language?
+
+Rollout / acceptance:
+- Record the priority decision in the stable RoundY frontier docs.
+- Treat the next intended mathematical fragment as:
+  “uniform double-top breaker theorem for the pure color-`1` resonant
+  frontier.”
+- Only after that target is either closed or ruled out, reassess whether the
+  next target should be the separate gate theorem or a D3-facing cleanup note.
+
+## D52) D5 next closure target after the promoted-collar base-section reduction
+
+**Decision:** Refine `D51`: the immediate next closable mathematical piece is
+not yet a positive double-top breaker theorem, but the promoted-collar
+base-section reduction / no-go theorem; only after that should the next
+positive repair target be stated as a theorem about changing the induced base
+permutation.
+
+Options:
+1. Keep `D51` unchanged and continue to treat the next target as a direct
+   uniform double-top breaker theorem.
+2. Replace the immediate target by a promoted-collar base-section reduction /
+   no-go theorem, then target the next repair on the reduced base permutation.
+3. Skip the no-go reduction and move directly to the separate `B`-active /
+   gate theorem.
+
+Recommendation:
+- Option 2.
+- The new exact memo shows that the promoted-collar pure color-`1` branch
+  already reduces to an exact induced map on `H_m = {c=0,d=0}`.
+- On checked resonant moduli, that induced map is not a single cycle, and its
+  cycle decomposition is already visible on the base subset
+  `B_m = {c=0,d=0,e=0}`.
+- So the present promoted-collar family should now be treated as a reduced
+  no-go packet, not as the final breaker candidate itself.
+- This sharpens the next positive question:
+  the next repair must change the induced base permutation `P_m`, not merely
+  “fix the double-top plane” in an unspecified way.
+
+Risks / mitigations:
+- A checked no-go could still fail to become a clean all-`m` theorem ->
+  state the immediate theorem target as a reduction theorem first, with the
+  no-go conclusion phrased conservatively if needed.
+- The base subset observation may remain only checked-data level ->
+  separate the theorem-level `H_m` reduction from the stronger `B_m`
+  reduction if necessary.
+- The gate branch could overtake the pure color-`1` branch in usefulness ->
+  keep the decision explicitly revisable if the next exact packet contradicts
+  the present reduction picture.
+
+Open questions:
+- Can the `H_m` reduction be proved uniformly for all resonant odd `m >= 15`?
+- Can the `B_m` reduction also be proved uniformly, or is it presently only a
+  checked exact phenomenon?
+- What is the smallest new local surgery that changes the induced permutation
+  on `B_m`?
+
+Rollout / acceptance:
+- Promote the base-section memo into a stable RoundY note with the checked
+  cycle data recorded.
+- Update the current-priority note and frontier docs so the next mathematical
+  fragment is stated as the base-section reduction / no-go theorem.
+- Treat the next positive repair search as a search over changes to the base
+  permutation `P_m`.
+
+## D53) D5 pure color-1 next explicit family after the promoted-collar no-go
+
+**Decision:** After the promoted-collar base-section reduction, the next
+explicit pure color-`1` family should be read as “opposite collar-row `A`
+first, then compensation”, not “single `B` compensator first”.
+
+Options:
+1. Keep reading the next narrow family as a generic one-row `B` compensator on
+   top of the promoted-collar baseline.
+2. Treat the next explicit axis as opposite collar-row `A`, and only then look
+   for further compensation.
+3. Reopen the broader `A+B` / `C+B` family language without first separating
+   which one-row moves are actually visible on the reduced base permutation.
+
+Recommendation:
+- Option 2.
+- The new exact probe `295` shows that on checked resonant moduli
+  `m = 21,27,33`, every one-row `B_{s,3}` refinement of the promoted-collar
+  baseline is inert at the level of the reduced base permutation `P_m`.
+- By contrast, the opposite collar-row `A` move changes `P_m` nontrivially on
+  every checked modulus and already makes `P_m` a single cycle at `m = 21`.
+- So the first meaningful positive axis is no longer “promoted collar plus
+  generic B”; it is “dual-collar A”, with any later compensator treated as a
+  second-stage move.
+
+Risks / mitigations:
+- Checked `21/27/33` could still be misleading for larger resonant moduli ->
+  phrase this as the current best explicit-family read, not yet as an all-`m`
+  theorem.
+- Dual-collar `A` changes `P_m` but does not yet close `27/33` ->
+  keep the conclusion modest: it identifies the first live axis, not the final
+  repair.
+- Later compensation may still require `B` or `C+B` language ->
+  retain those as second-stage comparison families rather than deleting them
+  from the program.
+
+Open questions:
+- Does dual-collar `A` continue to change `P_m` in the same structured way on
+  larger checked resonant moduli such as `39,51,69`?
+- After dual-collar `A`, what is the smallest extra support that changes the
+  residual obstruction on `P_m` again?
+- Can the dual-collar `A` effect be expressed as a clean theorem on the
+  reduced base permutation, rather than only as a checked exact packet?
+
+Rollout / acceptance:
+- Promote the exact probe into a stable RoundY note with saved JSON outputs.
+- Update the canonical RoundY docs so the current explicit-family read becomes
+  “dual-collar `A` first, then compensation”.
+- Keep the `B`-active / gate branch separate from this pure color-`1` family
+  ordering.
+
+## D54) D5 next resonant direction after the row-3 visible-grid notes
+
+**Decision:** The next default direction is residue-sensitive visible-row seed
+selection, not immediate escalation to new support outside the current 7-row
+grid and not immediate `k=4` migration.
+
+Options:
+1. Treat the current failure of uniform one-line stabilizers as evidence that
+   new visible support outside the present row-`3` 7-row grid is needed next.
+2. Move directly to `k=4` because the row-`3` visible-grid program now looks
+   exhausted.
+3. Read the new row-3 exact notes as evidence that the remaining problem is
+   first a residue-sensitive seed-selection problem inside the current visible
+   row geometry, and only then a possible new-support or `k=4` problem.
+
+Recommendation:
+- Option 3.
+- The row-3 splicer is structurally real but nonuniform: it works on checked
+  `39,51,63,69` but fails at `57`.
+- The exact visible-row grid on the discrimination pair `51/57` already shows
+  disjoint preferred visible rows, which is direct evidence for arithmetic
+  seed-splitting.
+- The new row-3 note also proves that `B` is exact spectator for pure color 1,
+  so immediate `A+B`/`C+B` escalation is not the right first interpretation of
+  the pure color-`1` obstruction.
+- Combined with `295`, the present read is: choose the visible seed first,
+  then worry about donor-aware compensation.
+
+Risks / mitigations:
+- Residue-sensitive seed selection could fragment too early ->
+  keep the first split coarse and driven only by exact checked discrimination
+  pairs such as `51/57`.
+- New support outside the 7-row grid may still be needed soon ->
+  retain that as the immediate fallback if seed-splitting inside the current
+  geometry stalls.
+- `k=4` could still become necessary for donor-aware closure ->
+  keep it as a later branch, not as the default first move.
+
+Open questions:
+- What is the cleanest arithmetic split of the resonant pure color-`1`
+  seeds that matches the current exact data?
+- Can one phrase a theorem packet with different visible seeds for `51`-type
+  and `57`-type behavior while keeping one common reduced-return framework?
+- After fixing the seed by residue class, what is the smallest donor-aware
+  compensator that remains live?
+
+Rollout / acceptance:
+- Promote a short synthesis note combining `289–295` with the
+  `tmp/resonant_row3_*` notes.
+- Update the canonical RoundY docs so the next direction reads:
+  residue-sensitive seed first; new support outside the grid second; `k=4`
+  later.
+- Keep the `B`-active / gate branch separate from that pure color-`1`
+  ordering.
+
+## D55) D5 late resonant exact zero-return atlas and promotion order
+
+**Decision:** Treat the corrected late 2-line zero-return atlas as the current
+cheap exact selector for which late family to promote next, and keep the next
+full `B_m` decompositions selective rather than uniform.
+
+Options:
+1. Keep speaking about the late branch as if one universal 2-line family were
+   still the main working hypothesis.
+2. Treat the corrected late 2-line branch as an exact late atlas with one
+   family-sensitive cheap calibration object, but still push full `B_m`
+   decompositions broadly and uniformly.
+3. Use the corrected exact zero-state atlas as the current promotion filter:
+   `B_m` first-return depth is family-sensitive and `H_m` remains cheap, so the
+   late branch should be read as a residue-sensitive two-family atlas and the
+   next full `B_m` computations should be chosen selectively.
+
+Recommendation:
+- Option 3.
+- The corrected toggle encoding reproduces the schematic calibration values at
+  `177/183/189` exactly.
+- The extended checked atlas on `171,177,183,189,201,207,213` shows:
+  - flank-favored cheap exact calibrations at `171,177,201,207`;
+  - central-favored cheap exact calibrations at `183,213`;
+  - and an almost degenerate crossover at `189`.
+- The `H_m` first return stays cheap and largely rigid across the same range,
+  which confirms that `B_m` is the real cost object.
+- This makes a broad uniform late full-`B_m` sweep the wrong default.
+
+Risks / mitigations:
+- Zero-state `B_m` depth is not itself the final winner score ->
+  treat it only as a promotion filter, not as a theorem-level defect count.
+- Some moduli may still invert the apparent cheap exact preference at the full
+  cycle level ->
+  keep `171/177` as the first full-`B_m` anchor moduli before extrapolating.
+- The late branch could still require a third family later ->
+  preserve the atlas language so a third family can be inserted without
+  rewriting the whole campaign.
+
+Open questions:
+- What are the full `B_m` cycle types at `171` and `177` for the central and
+  flank families?
+- Does the zero-return atlas correlate with the later full defect picture at
+  `183,201,207,213`?
+- Can the late resonant theorem be phrased directly in terms of an atlas of
+  residue-sensitive seed families plus a finite set of promoted full-`B_m`
+  anchors?
+
+Rollout / acceptance:
+- Save the exact zero-return atlas and corrected runner as stable RoundY
+  artifacts.
+- Update the canonical RoundY docs so `297` is read as the current late
+  promotion-order note.
+- Use the next full `B_m` budget first on `171/177`, then on the late moduli
+  favored by the cheap exact atlas.
+
+## D56) D5 late first exact promotions: routing law versus winner law
+
+**Decision:** Read the current late mod-`30` atlas as a law for which family
+to promote first, not yet as a law for which family already wins.
+
+Options:
+1. Treat the `298` routing note as if it already predicted exact winners.
+2. Treat the first executed promotion pair as merely anecdotal and keep the old
+   routing note unchanged in practice.
+3. Use the first executed exact pair to sharpen the interpretation:
+   `183` central is a full exact `B_m` win, while `201` flank still fails with
+   cycle lengths `103,57,41`; so the routing note selects the first family to
+   promote, but full winner status still has to be checked.
+
+Recommendation:
+- Option 3.
+- `183` central materially strengthens the `3 mod 30` central-first lane by
+  adding a new late exact win.
+- `201` flank shows that the `21 mod 30` drift/flank lane is not yet closed by
+  the first promoted family, even when that family is atlas-favored at the
+  cheap exact level.
+- This keeps the atlas useful while preventing overstatement.
+
+Risks / mitigations:
+- The new split could make the campaign map look less clean ->
+  keep `298` as the routing note and `299` as the first exact promotion note,
+  rather than collapsing them.
+- One might overreact to the `201` failure and discard flank-first routing ->
+  avoid that; the result only says flank-first is not yet a winner law.
+- The next late jobs could become unfocused again ->
+  keep the next comparisons narrow: `213` central, `207` flank, and
+  `201` as the first drift-lane comparison modulus.
+
+Open questions:
+- Does `213` central confirm the central-first lane at the next `3 mod 30`
+  anchor?
+- Does `207` flank behave like a true flank-lane repair or like another
+  routing-only near miss?
+- On the `21 mod 30` drift lane, what is the smallest second exact step after
+  flank-first seeding?
+
+Rollout / acceptance:
+- Save the first exact-promotion outputs as stable RoundY checks.
+- Add a short RoundY theorem note recording the `183` win and `201` failure.
+- Update the canonical frontier docs so the late atlas is read as a promotion
+  law, not yet as a winner law.
+
+## D57) D5 resonant pure color-1 lower-to-hinge classification is now closed
+
+**Decision:** Promote the new `H_m` master hinge-profile theorem and update the
+frontier so the remaining burden is stated above the lower-to-hinge layer.
+
+Options:
+1. Keep the resonant pure color-`1` status phrased as if the initial side-top
+   slice and the full `H_m` first-hinge classification were still missing.
+2. Treat the new `H_m` hinge-profile result as an isolated local note but leave
+   the frontier docs unchanged.
+3. Promote the result and update the working read: the full first hinge on
+   `H_m` is now classified by one effective-phase law `J_0`, so the live
+   theorem-side burden moves up to double-top phase-exit and `H_m -> B_m`
+   stitching.
+
+Recommendation:
+- Option 3.
+- The new theorem unifies the old base-line and non-side-top hinge profiles and
+  closes the initial side-top slice as a corollary.
+- This removes one of the most obvious remaining “missing local sector” gaps.
+- It also clarifies that the frontier is no longer lower classification but
+  post-hinge dynamics.
+
+Risks / mitigations:
+- The theorem uses imported exact facts from the current resonant note stack ->
+  keep the stable note honest about scope and keep the support bundle around.
+- One could overread this as closing the late branch ->
+  avoid that; the note only closes the first hinge on `H_m`, not the double-top
+  exit or the `B_m` winner law.
+- The current compute campaign could drift back toward lower classification ->
+  use this update specifically to narrow the next theorem target upward.
+
+Open questions:
+- What is the cleanest theorem-level double-top phase-exit law on the explicit
+  double-hinge graph?
+- How should that `H_m` classification be stitched back down to the induced
+  `B_m` winner/defect ledger?
+- How much of the late central/flank arithmetic picture can be explained once
+  that post-hinge theorem is in place?
+
+Rollout / acceptance:
+- Promote one stable theorem note for the `H_m` master hinge profile.
+- Promote one stable status note explaining the new frontier shift.
+- Update the canonical RoundY read-first docs so the lower-to-hinge closure is
+  part of the current working picture.
+
+## D58) D5 resonant pure color-1 bundle promoted into stable theorem-order map
+
+**Decision:** Treat the `2026-03-26` resonant pure color-`1` bundle as a
+promoted support chain and expose it through short stable RoundY notes rather
+than leaving it as a raw `tmp/` bundle.
+
+Options:
+1. Leave the bundle as provenance only and keep asking new readers to reconstruct
+   the theorem chain from `tmp/`.
+2. Copy every bundled note into stable RoundY one-for-one.
+3. Promote the parts that materially change the current frontier, and add short
+   stable synthesis notes that map the proof-carrying chain and the global D5
+   status cleanly.
+
+Recommendation:
+- Option 3.
+- `300` closes the full `H_m` first-hinge classification.
+- `301` records the resulting frontier shift.
+- `302` gives a short theorem-order map of the promoted resonant pure
+  color-`1` stack.
+- `303` gives the shortest honest global D5 status split.
+
+Risks / mitigations:
+- A one-to-one promotion of every tmp note would create too much stable clutter ->
+  keep the stable layer concise and theorem-order.
+- A pure summary could hide provenance ->
+  keep the promoted notes explicit about what remains checked-exact and what
+  remains open.
+- Readers may still miss the older historical ladder ->
+  keep the current docs pointing back to `267–299` as the narrowing ladder.
+
+Open questions:
+- Which post-hinge theorem should be promoted next after the `H_m` master
+  profile?
+- How much of the late central/flank arithmetic picture can be elevated from
+  checked-exact to theorem-level without another broad search branch?
+
+Rollout / acceptance:
+- Add stable notes for the `H_m` master theorem, the updated resonant proof
+  state, the resonant core chain, and the global D5 status split.
+- Update the canonical RoundY docs and AGENTS handoff accordingly.
+
+## D59) Promote the March 28 support archive into a parallel RouteY-Existence layer
+
+**Decision:** Treat `tmp/d5_consolidated_support_archive_2026-03-28_v3.tar` as
+rich enough to justify a stable curated extraction, but keep it explicitly
+parallel to the canonical RoundY frontier rather than merging it into the main
+proof read.
+
+Options:
+1. Leave the archive only as a raw tarball and rely on ad hoc reading.
+2. Merge its arithmetic/existence notes directly into the canonical RoundY
+   frontier.
+3. Create a separate curated `RouteY-Existence` layer containing the
+   proof-carrying status docs, manuscript snapshot, core existence notes, core
+   generic-late arithmetic chain, and selected checks/scripts.
+
+Recommendation:
+- Option 3.
+- The archive already has its own honest status docs and reading order.
+- Its central value is not “new canonical D5 frontier” but a parallel
+  existence/seam-surgery interpretation of the resonant residual problem.
+- Keeping it separate avoids blurring the current main RoundY packet
+  `284/285/286` plus `299–303`.
+
+Risks / mitigations:
+- Readers could mistake the existence layer for the new main proof frontier ->
+  mark it explicitly as parallel in `README`, `instruction_for_codex`, and
+  `AGENTS.md`.
+- Copying the whole archive would create clutter ->
+  extract only the proof-carrying spine plus selected reports and scripts.
+- The old manuscript snapshot could be overread as authoritative ->
+  keep the relationship to current RoundY explicit and keep the main current
+  status note separate.
+
+Open questions:
+- Should the generic-late seam-surgery lane eventually merge back into the
+  main resonant residual theorem package, or remain a parallel support
+  program?
+- Which parts of the existence lane should next be promoted from checked
+  arithmetic into theorem-order statements in RoundY itself?
+
+Rollout / acceptance:
+- Add `RouteY-Existence/README.md` and extract the curated archive spine.
+- Add a short RoundY note recording the parallel-layer promotion.
+- Add a short whole-branch status note explaining how the main RoundY frontier
+  and the new existence layer now fit together.
