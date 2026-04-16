@@ -82,7 +82,8 @@ def groupedStateOfPoint (x : Point m) : GroupedCoord m :=
 
 theorem slicePoint_coordOfSlicePoint {x : Point m} (hS : S x = 0) :
     slicePoint (m := m) (coordOfSlicePoint (m := m) x) = x := by
-  ext i <;> fin_cases i
+  ext i
+  fin_cases i
   · have h0 :
         (-x 1 - x 2 - x 3 - x 4 : ZMod m) = x 0 := by
         calc

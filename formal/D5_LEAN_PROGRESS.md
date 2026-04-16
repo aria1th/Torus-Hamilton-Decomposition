@@ -9,6 +9,12 @@ Current scope:
 - avoid committing to any unreviewed closed form for the grouped cocycle
 - prepare the exact theorem boundaries that later witness proofs should target
 
+Companion tracking docs:
+
+- `TorusD5/memory.md`
+- `TorusD5/d5-plan.md`
+- `TorusD5/result_report_2026-04-05.md`
+
 ## Done
 
 - Added a standalone `TorusD5` Lean library entry in `formal/lakefile.toml`.
@@ -57,6 +63,16 @@ Current scope:
   - rigidity theorem:
     if future words separate states, any exact deterministic quotient is injective
   - unique coordinate descent to the quotient image
+- Added theorem-side symbolic scaffold:
+  - `formal/TorusD5/Core/Objects.lean`
+  - `formal/TorusD5/Core/Interfaces.lean`
+  - `formal/TorusD5/Canonical/Residual/HmCore.lean`
+  - `formal/TorusD5/Common/M15r9/TheoremFloor.lean`
+  - `formal/TorusD5/Common/M15r9/StablePacket.lean`
+  - `formal/TorusD5/Common/M15r9/SeedCases.lean`
+  - `formal/TorusD5/Certificates.lean`
+  - `formal/TorusD5/Gaps.lean`
+  - theorem/certificate/frontier separation now exists in code, not only in docs
 - Added witness-target note:
   - `formal/TorusD5/THEOREM_TARGETS.md`
 - Added D5 Lean frontier documentation:
@@ -76,6 +92,10 @@ Current scope:
   exact deterministic quotient for the current event map,
   grouped-base retention,
   and comparison/factor statements toward `(beta,delta)`.
+- Keep `R_re` / `R_q` abstract until the exact theorem-side carrier boundary is
+  frozen cleanly enough to avoid a false identification.
+- Tighten the common-branch predicate before importing odd-common theorems:
+  plain `m = 15r + 9` is too weak to encode oddness by itself.
 
 ## Next safe targets
 

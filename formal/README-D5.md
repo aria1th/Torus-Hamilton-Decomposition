@@ -6,6 +6,9 @@ frontier.
 Current implementation status for the Lean support branch is tracked in:
 
 - `D5_LEAN_PROGRESS.md`
+- `TorusD5/memory.md`
+- `TorusD5/d5-plan.md`
+- `TorusD5/result_report_2026-04-05.md`
 
 For the current research-facing D5 frontier, read these first:
 
