@@ -1,4 +1,5 @@
 import TorusD3Odometer.Basic
+import Shared.ReturnLift
 import TorusD4.Lifts
 import Mathlib.Dynamics.PeriodicPts.Defs
 
@@ -13,12 +14,8 @@ theorem iterate_add_mul_slicePoint
     (t r : ℕ) (a : α) :
     (F^[m * t + r]) (slicePoint q0 a) =
       (F^[r]) (slicePoint q0 ((T^[t]) a)) := by
-  calc
-    (F^[m * t + r]) (slicePoint q0 a)
-        = (F^[r]) (((F^[m * t]) (slicePoint q0 a))) := by
-            simpa [Nat.add_comm] using Function.iterate_add_apply F r (m * t) (slicePoint q0 a)
-    _ = (F^[r]) (slicePoint q0 ((T^[t]) a)) := by
-          rw [iterate_mul_slicePoint (m := m) (F := F) (T := T) (q0 := q0) hreturn t a]
+  exact Shared.iterate_add_mul_slicePoint
+    (m := m) (F := F) (T := T) (q0 := q0) hreturn t r a
 
 theorem cycleOn_full_of_cycleOn_slice
     [Fact (0 < m)] [NeZero m]

@@ -31,3 +31,6 @@ name = "TorusD5"
 
 [[lean_lib]]
 name = "RoundComposite"
+
+[[lean_lib]]
+name = "Shared"
