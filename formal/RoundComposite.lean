@@ -95,4 +95,27 @@ theorem uniform_product_of_prime_list
         (fun e he => (hps e he).pos)
         (fun e he => hPrime (hps e he))
 
+def PrimeFactorList (d : Nat) : Prop :=
+  ∃ ps : List Nat, ps ≠ [] ∧ ps.prod = d ∧
+    ∀ p, p ∈ ps -> Nat.Prime p
+
+theorem uniform_of_prime_factor_list
+    (hExp : PointwiseCompositeExpansion Solved)
+    (hPrime : PrimeBaseSolved Solved)
+    {d : Nat} (hfactor : PrimeFactorList d) :
+    UniformSolved Solved d := by
+  rcases hfactor with ⟨ps, hne, hprod, hps⟩
+  rw [← hprod]
+  exact uniform_product_of_prime_list Solved hExp hPrime hne hps
+
+def PrimeFactorReduction : Prop :=
+  ∀ {d : Nat}, PrimeFactorList d -> UniformSolved Solved d
+
+theorem prime_factor_reduction_of_pointwise
+    (hExp : PointwiseCompositeExpansion Solved)
+    (hPrime : PrimeBaseSolved Solved) :
+    PrimeFactorReduction Solved := by
+  intro d hfactor
+  exact uniform_of_prime_factor_list Solved hExp hPrime hfactor
+
 end RoundComposite
