@@ -45,4 +45,54 @@ theorem uniform_product_of_two_primes
   exact uniform_mul_of_pointwise Solved hExp hp.pos hq.pos
     (hPrime hp) (hPrime hq)
 
+theorem list_prod_pos_of_all_pos :
+    ∀ {ds : List Nat}, (∀ d, d ∈ ds -> 0 < d) -> 0 < ds.prod
+  | [], _ => by
+      simp
+  | d :: ds, hpos => by
+      have hd : 0 < d := hpos d (by simp)
+      have hds : 0 < ds.prod :=
+        list_prod_pos_of_all_pos
+          (fun e he => hpos e (by simp [he]))
+      simpa using Nat.mul_pos hd hds
+
+theorem uniform_prod_cons_of_pointwise
+    (hExp : PointwiseCompositeExpansion Solved) :
+    ∀ {d : Nat} {ds : List Nat},
+      (∀ e, e ∈ d :: ds -> 0 < e) ->
+      (∀ e, e ∈ d :: ds -> UniformSolved Solved e) ->
+      UniformSolved Solved (d :: ds).prod
+  | d, [], _hpos, hsol => by
+      simpa using hsol d (by simp)
+  | d, e :: es, hpos, hsol => by
+      have hdpos : 0 < d := hpos d (by simp)
+      have htailPos : ∀ x, x ∈ e :: es -> 0 < x := by
+        intro x hx
+        exact hpos x (by simp [hx])
+      have htailSol : ∀ x, x ∈ e :: es -> UniformSolved Solved x := by
+        intro x hx
+        exact hsol x (by simp [hx])
+      have htail :
+          UniformSolved Solved (e :: es).prod :=
+        uniform_prod_cons_of_pointwise hExp htailPos htailSol
+      have htailProdPos : 0 < (e :: es).prod :=
+        list_prod_pos_of_all_pos htailPos
+      simpa using
+        uniform_mul_of_pointwise Solved hExp hdpos htailProdPos
+          (hsol d (by simp)) htail
+
+theorem uniform_product_of_prime_list
+    (hExp : PointwiseCompositeExpansion Solved)
+    (hPrime : PrimeBaseSolved Solved)
+    {ps : List Nat} (hne : ps ≠ [])
+    (hps : ∀ p, p ∈ ps -> Nat.Prime p) :
+    UniformSolved Solved ps.prod := by
+  cases ps with
+  | nil =>
+      exact (hne rfl).elim
+  | cons p ps =>
+      exact uniform_prod_cons_of_pointwise Solved hExp
+        (fun e he => (hps e he).pos)
+        (fun e he => hPrime (hps e he))
+
 end RoundComposite
